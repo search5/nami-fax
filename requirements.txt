@@ -9,5 +9,5 @@ MarkupSafe==1.0
 mccabe==0.6.1
 pylint==1.8.1
 six==1.11.0
-Werkzeug==0.13
+Werkzeug==0.15.3
 wrapt==1.10.11
