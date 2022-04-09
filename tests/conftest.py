@@ -9,9 +9,9 @@ import pytest
 import transaction
 import webtest
 
-from minafax import main
-from minafax import models
-from minafax.models.meta import Base
+from namifax import main
+from namifax import models
+from namifax.models.meta import Base
 
 
 def pytest_addoption(parser):

@@ -1,6 +1,6 @@
-from minafax import models
-from minafax.views.default import my_view
-from minafax.views.notfound import notfound_view
+from namifax import models
+from namifax.views.default import my_view
+from namifax.views.notfound import notfound_view
 
 
 def test_my_view_failure(app_request):
@@ -15,7 +15,7 @@ def test_my_view_success(app_request, dbsession):
     info = my_view(app_request)
     assert app_request.response.status_int == 200
     assert info['one'].name == 'one'
-    assert info['project'] == 'Mina Fax'
+    assert info['project'] == 'nami-fax'
 
 def test_notfound_view(app_request):
     info = notfound_view(app_request)

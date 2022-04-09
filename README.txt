@@ -1,4 +1,4 @@
-Mina Fax
+nami-fax
 ========
 
 Getting Started
@@ -7,7 +7,7 @@ Getting Started
 - Change directory into your newly created project if not already there. Your
   current directory should be the same as this README.txt file and setup.py.
 
-    cd minafax
+    cd namifax
 
 - Create a Python virtual environment, if not already created.
 
@@ -33,7 +33,7 @@ Getting Started
 
 - Load default data into the database using a script.
 
-    env/bin/initialize_minafax_db development.ini
+    env/bin/initialize_namifax_db development.ini
 
 - Run your project's tests.
 
