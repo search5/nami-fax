@@ -12,8 +12,19 @@ def setup_models(dbsession):
     Add or update models / fixtures in the database.
 
     """
-    model = models.mymodel.MyModel(name='one', value=1)
-    dbsession.add(model)
+    #model = models.mymodel.MyModel(name='one', value=1)
+    #dbsession.add(model)
+
+    """
+    INSERT INTO UserAccount SET name='AvantFAX Admin', username='admin', password='5f4dcc3b5aa765d61d8327deb882cf99', wasreset=TRUE, email='root@localhost', is_admin = TRUE, language = 'en', acc_enabled = TRUE, any_modem = TRUE, superuser = TRUE;
+    INSERT INTO UserPasswords SET uid=1, pwdhash='5f4dcc3b5aa765d61d8327deb882cf99';
+
+    INSERT INTO AddressBook SET company = 'XXXXXXX';
+    INSERT INTO AddressBookFAX SET abook_id = 1, faxnumber = 'XXXXXXX';
+
+    INSERT INTO CoverPages SET title='Generic A4', file='cover.ps';
+    INSERT INTO CoverPages SET title='Generic Letter', file='cover-letter.ps';
+    INSERT INTO CoverPages SET title='Generic HTML', file='coverpage.html';"""
 
 
 def parse_args(argv):
