@@ -15,25 +15,25 @@ def setup_models(dbsession):
     #model = models.mymodel.MyModel(name='one', value=1)
     #dbsession.add(model)
 
-    """
-    INSERT INTO UserAccount SET name='AvantFAX Admin', username='admin', password='5f4dcc3b5aa765d61d8327deb882cf99', wasreset=TRUE, email='root@localhost', is_admin = TRUE, language = 'en', acc_enabled = TRUE, any_modem = TRUE, superuser = TRUE;
-    INSERT INTO UserPasswords SET uid=1, pwdhash='5f4dcc3b5aa765d61d8327deb882cf99';
+    model = models.UserAccountModel(name='AvantFAX Admin', username='admin', password='5f4dcc3b5aa765d61d8327deb882cf99', wasreset=True, email='root@localhost', is_admin=True, language = 'en', acc_enabled=True, any_modem=True, superuse0r=True)
+    dbsession.add(model)
+    
+    model = models.UserPasswordsModel(uid=1, pwdhash='5f4dcc3b5aa765d61d8327deb882cf99')
+    dbsession.add(model)
 
-    INSERT INTO AddressBook SET company = 'XXXXXXX';
-    INSERT INTO AddressBookFAX SET abook_id = 1, faxnumber = 'XXXXXXX';
+    model = models.AddressBookModel(company='XXXXXXX')
+    dbsession.add(model)
 
-    INSERT INTO CoverPages SET title='Generic A4', file='cover.ps';
-    INSERT INTO CoverPages SET title='Generic Letter', file='cover-letter.ps';
-    INSERT INTO CoverPages SET title='Generic HTML', file='coverpage.html';"""
+    model = models.AddressBookFAXModel(abook_id = 1, faxnumber='XXXXXXX')
+    dbsession.add(model)
 
+    model1 = models.CoverPagesModel(title='Generic A4', file='cover.ps')
+    model2 = models.CoverPagesModel(title='Generic Letter', file='cover-letter.ps')
+    model3 = models.CoverPagesModel(title='Generic HTML', file='coverpage.html')
 
-def parse_args(argv):
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        'config_uri',
-        help='Configuration file, e.g., development.ini',
-    )
-    return parser.parse_args(argv[1:])
+    dbsession.add(model1)
+    dbsession.add(model2)
+    dbsession.add(model3)
 
 
 def main(argv=sys.argv):

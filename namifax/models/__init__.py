@@ -6,6 +6,19 @@ import zope.sqlalchemy
 # Import or define all models here to ensure they are attached to the
 # ``Base.metadata`` prior to any initialization routines.
 from .distrolist import DistroListModel
+from .addressbook import AddressBookModel
+from .addressbookemail import AddressBookEmailModel
+from .addressbookfax import AddressBookFAXModel
+from .barcoderoute import BarcodeRouteModel
+from .coverpages import CoverPagesModel
+from .didroute import DIDRouteModel
+from .dynconf import DynConfModel
+from .faxarchive import FaxArchiveModel
+from .faxcategory import FaxCategoryModel
+from .modems import ModemsModel
+from .syslog import SysLogModel
+from .useraccount import UserAccountModel
+from .userpasswords import UserPasswordsModel
 
 # Run ``configure_mappers`` after defining all of the models to ensure
 # all relationships can be setup.
