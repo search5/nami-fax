@@ -21,6 +21,18 @@
       <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
       <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
     <![endif]-->
+    <script src="{{ request.static_url('namifax:static/vendor/vue/vue.global.prod.js') }}"></script>
+    <script src="{{ request.static_url('namifax:static/vendor/vue-router/vue-router.global.prod.js') }}"></script>
+    <script src="{{ request.static_url('namifax:static/vendor/vuex/vuex.global.prod.js') }}"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "{{ request.static_url('namifax:static/vendor/vue/vue.esm-browser.prod.min.js') }}",
+          "vuex": "{{ request.static_url('namifax:static/vendor/vuex/vuex.esm-browser.prod.min.js') }}",
+          "vue-router: "{{ request.static_url('namifax:static/vendor/vue-router/vue-router.esm-browser.min.js') }}"
+        }
+      }
+    </script>
   </head>
 
   <body>
