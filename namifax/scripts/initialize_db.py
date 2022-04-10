@@ -12,28 +12,40 @@ def setup_models(dbsession):
     Add or update models / fixtures in the database.
 
     """
-    #model = models.mymodel.MyModel(name='one', value=1)
-    #dbsession.add(model)
+    model_new_record = []
 
-    model = models.UserAccountModel(name='AvantFAX Admin', username='admin', password='5f4dcc3b5aa765d61d8327deb882cf99', wasreset=True, email='root@localhost', is_admin=True, language = 'en', acc_enabled=True, any_modem=True, superuse0r=True)
-    dbsession.add(model)
+    model = models.UserAccountModel(name='NamiFAX Admin',
+                                    username='admin',
+                                    password='5f4dcc3b5aa765d61d8327deb882cf99',
+                                    wasreset=True,
+                                    email='root@localhost',
+                                    is_admin=True, 
+                                    language = 'ko',
+                                    acc_enabled=True,
+                                    any_modem=True,
+                                    superuse0r=True)
+    model_new_record.add(model)
     
     model = models.UserPasswordsModel(uid=1, pwdhash='5f4dcc3b5aa765d61d8327deb882cf99')
-    dbsession.add(model)
+    model_new_record.add(model)
 
     model = models.AddressBookModel(company='XXXXXXX')
-    dbsession.add(model)
+    model_new_record.add(model)
 
     model = models.AddressBookFAXModel(abook_id = 1, faxnumber='XXXXXXX')
-    dbsession.add(model)
+    model_new_record.add(model)
 
     model1 = models.CoverPagesModel(title='Generic A4', file='cover.ps')
-    model2 = models.CoverPagesModel(title='Generic Letter', file='cover-letter.ps')
-    model3 = models.CoverPagesModel(title='Generic HTML', file='coverpage.html')
+    model_new_record.add(model)
+    
+    model = models.CoverPagesModel(title='Generic Letter', file='cover-letter.ps')
+    model_new_record.add(model)
+    
+    model = models.CoverPagesModel(title='Generic HTML', file='coverpage.html')
+    model_new_record.add(model)
 
-    dbsession.add(model1)
-    dbsession.add(model2)
-    dbsession.add(model3)
+    for item in model_new_record:
+        dbsession.add(item)
 
 
 def main(argv=sys.argv):
