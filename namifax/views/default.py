@@ -7,12 +7,12 @@ from .. import models
 
 @view_config(route_name='home', renderer='namifax:templates/mytemplate.jinja2')
 def my_view(request):
-    try:
-        query = request.dbsession.query(models.MyModel)
-        one = query.filter(models.MyModel.name == 'one').one()
-    except SQLAlchemyError:
-        return Response(db_err_msg, content_type='text/plain', status=500)
-    return {'one': one, 'project': 'nami-fax'}
+    # try:
+    #     query = request.dbsession.query(models.MyModel)
+    #     one = query.filter(models.MyModel.name == 'one').one()
+    # except SQLAlchemyError:
+    #     return Response(db_err_msg, content_type='text/plain', status=500)
+    return {'one': "one", 'project': 'nami-fax'}
 
 
 db_err_msg = """\

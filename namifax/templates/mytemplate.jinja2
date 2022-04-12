@@ -2,19 +2,22 @@
 
 {% block content %}
 <div class="content" id="app">
-  <h1><span class="font-semi-bold">Pyramid</span> <span class="smaller">{{ message }}</span></h1>
+  <h1><span class="font-semi-bold">Pyramid</span> <span class="smaller">${ message }</span></h1>
   <p class="lead">Welcome to <span class="font-normal">{{project}}</span>, a&nbsp;Pyramid application generated&nbsp;by<br><span class="font-normal">Cookiecutter</span>.</p>
 </div>
 
 <script type="module">
   import { createApp } from 'vue'
-
+  
   createApp({
+    compilerOptions: {
+    delimiters: ["${", "}"]
+  },
     data() {
       return {
         message: 'Hello Vue!'
       }
     }
-  }).mount('#app')
+  }).mount('div#app')
 </script>
 {% endblock content %}
