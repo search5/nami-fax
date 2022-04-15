@@ -42,3 +42,5 @@ Getting Started
 - Run your project.
 
     env/bin/pserve development.ini
+
+https://pypi.org/project/pyramid-jwt/

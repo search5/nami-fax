@@ -3,15 +3,19 @@
   * (c) 2022 Eduardo San Martin Morote
   * @license MIT
   */
-import { getCurrentInstance, inject, onUnmounted, onDeactivated, onActivated, computed, unref, watchEffect, defineComponent, reactive, h, provide, ref, watch, shallowRef, nextTick } from 'vue';
-//import { setupDevtoolsPlugin } from '@vue/devtools-api';
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var vue = require('vue');
+require('@vue/devtools-api');
 
 const hasSymbol = typeof Symbol === 'function' && typeof Symbol.toStringTag === 'symbol';
 const PolySymbol = (name) => 
 // vr = vue router
 hasSymbol
-    ? Symbol('[vue-router]: ' + name )
-    : ('[vue-router]: ' ) + name;
+    ? Symbol(name)
+    : ('_vr_') + name;
 // rvlm = Router View Location Matched
 /**
  * RouteRecord being rendered by the closest ancestor Router View. Used for
@@ -20,35 +24,35 @@ hasSymbol
  *
  * @internal
  */
-const matchedRouteKey = /*#__PURE__*/ PolySymbol('router view location matched' );
+const matchedRouteKey = /*#__PURE__*/ PolySymbol('rvlm');
 /**
  * Allows overriding the router view depth to control which component in
  * `matched` is rendered. rvd stands for Router View Depth
  *
  * @internal
  */
-const viewDepthKey = /*#__PURE__*/ PolySymbol('router view depth' );
+const viewDepthKey = /*#__PURE__*/ PolySymbol('rvd');
 /**
  * Allows overriding the router instance returned by `useRouter` in tests. r
  * stands for router
  *
  * @internal
  */
-const routerKey = /*#__PURE__*/ PolySymbol('router' );
+const routerKey = /*#__PURE__*/ PolySymbol('r');
 /**
  * Allows overriding the current route returned by `useRoute` in tests. rl
  * stands for route location
  *
  * @internal
  */
-const routeLocationKey = /*#__PURE__*/ PolySymbol('route location' );
+const routeLocationKey = /*#__PURE__*/ PolySymbol('rl');
 /**
  * Allows overriding the current route used by router-view. Internally this is
  * used when the `route` prop is passed.
  *
  * @internal
  */
-const routerViewLocationKey = /*#__PURE__*/ PolySymbol('router view location' );
+const routerViewLocationKey = /*#__PURE__*/ PolySymbol('rvl');
 
 const isBrowser = typeof window !== 'undefined';
 
@@ -65,12 +69,6 @@ function applyToParams(fn, params) {
     return newParams;
 }
 const noop = () => { };
-
-function warn(msg) {
-    // avoid using ...args as it breaks in older Edge builds
-    const args = Array.from(arguments).slice(1);
-    console.warn.apply(console, ['[Vue Router warn]: ' + msg].concat(args));
-}
 
 const TRAILING_SLASH_RE = /\/$/;
 const removeTrailingSlash = (path) => path.replace(TRAILING_SLASH_RE, '');
@@ -199,10 +197,6 @@ function isEquivalentArray(a, b) {
 function resolveRelativePath(to, from) {
     if (to.startsWith('/'))
         return to;
-    if (!from.startsWith('/')) {
-        warn(`Cannot resolve a relative location without an absolute path. Trying to resolve "${to}" from "${from}". It should look like "/${from}".`);
-        return to;
-    }
     if (!to)
         return from;
     const fromSegments = from.split('/');
@@ -296,51 +290,12 @@ function scrollToPosition(position) {
     if ('el' in position) {
         const positionEl = position.el;
         const isIdSelector = typeof positionEl === 'string' && positionEl.startsWith('#');
-        /**
-         * `id`s can accept pretty much any characters, including CSS combinators
-         * like `>` or `~`. It's still possible to retrieve elements using
-         * `document.getElementById('~')` but it needs to be escaped when using
-         * `document.querySelector('#\\~')` for it to be valid. The only
-         * requirements for `id`s are them to be unique on the page and to not be
-         * empty (`id=""`). Because of that, when passing an id selector, it should
-         * be properly escaped for it to work with `querySelector`. We could check
-         * for the id selector to be simple (no CSS combinators `+ >~`) but that
-         * would make things inconsistent since they are valid characters for an
-         * `id` but would need to be escaped when using `querySelector`, breaking
-         * their usage and ending up in no selector returned. Selectors need to be
-         * escaped:
-         *
-         * - `#1-thing` becomes `#\31 -thing`
-         * - `#with~symbols` becomes `#with\\~symbols`
-         *
-         * - More information about  the topic can be found at
-         *   https://mathiasbynens.be/notes/html5-id-class.
-         * - Practical example: https://mathiasbynens.be/demo/html5-id
-         */
-        if (typeof position.el === 'string') {
-            if (!isIdSelector || !document.getElementById(position.el.slice(1))) {
-                try {
-                    const foundEl = document.querySelector(position.el);
-                    if (isIdSelector && foundEl) {
-                        warn(`The selector "${position.el}" should be passed as "el: document.querySelector('${position.el}')" because it starts with "#".`);
-                        // return to avoid other warnings
-                        return;
-                    }
-                }
-                catch (err) {
-                    warn(`The selector "${position.el}" is invalid. If you are using an id selector, make sure to escape it. You can find more information about escaping characters in selectors at https://mathiasbynens.be/notes/css-escapes or use CSS.escape (https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape).`);
-                    // return to avoid other warnings
-                    return;
-                }
-            }
-        }
         const el = typeof positionEl === 'string'
             ? isIdSelector
                 ? document.getElementById(positionEl.slice(1))
                 : document.querySelector(positionEl)
             : positionEl;
         if (!el) {
-            warn(`Couldn't find element using selector "${position.el}" returned by scrollBehavior.`);
             return;
         }
         scrollToOptions = getElementPosition(el, position);
@@ -542,7 +497,7 @@ function useHistoryStateNavigation(base) {
         }
         catch (err) {
             {
-                warn('Error with push/replace State', err);
+                console.error(err);
             }
             // Force the navigation, this also resets the call count
             location[replace ? 'replace' : 'assign'](url);
@@ -566,11 +521,6 @@ function useHistoryStateNavigation(base) {
             forward: to,
             scroll: computeScrollPosition(),
         });
-        if (!history.state) {
-            warn(`history.state seems to have been manually replaced without preserving the necessary values. Make sure to preserve existing history state if you are manually calling history.replaceState:\n\n` +
-                `history.replaceState(history.state, '', url)\n\n` +
-                `You can find more information at https://next.router.vuejs.org/guide/migration/#usage-of-history-state.`);
-        }
         changeLocation(currentState.current, currentState, true);
         const state = assign({}, buildState(currentLocation.value, to, null), { position: currentState.position + 1 }, data);
         changeLocation(to, state, false);
@@ -734,9 +684,6 @@ function createWebHashHistory(base) {
     // allow the user to provide a `#` in the middle: `/base/#/app`
     if (!base.includes('#'))
         base += '#';
-    if (!base.endsWith('#/') && !base.endsWith('#')) {
-        warn(`A hash base must end with a "#":\n"${base}" should be "${base.replace(/#.*$/, '#')}".`);
-    }
     return createWebHistory(base);
 }
 
@@ -774,12 +721,12 @@ const START_LOCATION_NORMALIZED = {
     redirectedFrom: undefined,
 };
 
-const NavigationFailureSymbol = /*#__PURE__*/ PolySymbol('navigation failure' );
+const NavigationFailureSymbol = /*#__PURE__*/ PolySymbol('nf');
 /**
  * Enumeration with all possible types for navigation failures. Can be passed to
  * {@link isNavigationFailure} to check for specific failures.
  */
-var NavigationFailureType;
+exports.NavigationFailureType = void 0;
 (function (NavigationFailureType) {
     /**
      * An aborted navigation is a navigation that failed because a navigation
@@ -796,7 +743,7 @@ var NavigationFailureType;
      * initiated while already being at the exact same location.
      */
     NavigationFailureType[NavigationFailureType["duplicated"] = 16] = "duplicated";
-})(NavigationFailureType || (NavigationFailureType = {}));
+})(exports.NavigationFailureType || (exports.NavigationFailureType = {}));
 // DEV only debug messages
 const ErrorTypeMessages = {
     [1 /* MATCHER_NOT_FOUND */]({ location, currentLocation }) {
@@ -1083,8 +1030,7 @@ function tokenizePath(path) {
     if (path === '/')
         return [[ROOT_TOKEN]];
     if (!path.startsWith('/')) {
-        throw new Error(`Route paths should start with a "/": "${path}" should be "/${path}".`
-            );
+        throw new Error(`Invalid path "${path}"`);
     }
     // if (tokenCache.has(path)) return tokenCache.get(path)!
     function crash(message) {
@@ -1222,15 +1168,6 @@ function tokenizePath(path) {
 
 function createRouteRecordMatcher(record, parent, options) {
     const parser = tokensToParser(tokenizePath(record.path), options);
-    // warn against params with the same name
-    {
-        const existingKeys = new Set();
-        for (const key of parser.keys) {
-            if (existingKeys.has(key.name))
-                warn(`Found duplicated params with name "${key.name}" for path "${record.path}". Only the last one will be available on "$route.params".`);
-            existingKeys.add(key.name);
-        }
-    }
     const matcher = assign(parser, {
         record,
         parent,
@@ -1306,21 +1243,12 @@ function createRouterMatcher(routes, globalOptions) {
                 normalizedRecord.path =
                     parent.record.path + (path && connectingSlash + path);
             }
-            if (normalizedRecord.path === '*') {
-                throw new Error('Catch all routes ("*") must now be defined using a param with a custom regexp.\n' +
-                    'See more at https://next.router.vuejs.org/guide/migration/#removed-star-or-catch-all-routes.');
-            }
             // create the object before hand so it can be passed to children
             matcher = createRouteRecordMatcher(normalizedRecord, parent, options);
-            if (parent && path[0] === '/')
-                checkMissingParamsInAbsolutePath(matcher, parent);
             // if we are an alias we must tell the original record that we exist
             // so we can be removed
             if (originalRecord) {
                 originalRecord.alias.push(matcher);
-                {
-                    checkSameParams(originalRecord, matcher);
-                }
             }
             else {
                 // otherwise, the first record is the original and others are aliases
@@ -1417,9 +1345,6 @@ function createRouterMatcher(routes, globalOptions) {
             // no need to resolve the path with the matcher as it was provided
             // this also allows the user to control the encoding
             path = location.path;
-            if (!path.startsWith('/')) {
-                warn(`The Matcher cannot resolve relative paths but received "${path}". Unless you directly called \`matcher.resolve("${path}")\`, this is probably a bug in vue-router. Please open an issue at https://new-issue.vuejs.org/?repo=vuejs/router.`);
-            }
             matcher = matchers.find(m => m.re.test(path));
             // matcher should have a value after the loop
             if (matcher) {
@@ -1544,33 +1469,6 @@ function mergeOptions(defaults, partialOptions) {
         options[key] = key in partialOptions ? partialOptions[key] : defaults[key];
     }
     return options;
-}
-function isSameParam(a, b) {
-    return (a.name === b.name &&
-        a.optional === b.optional &&
-        a.repeatable === b.repeatable);
-}
-/**
- * Check if a path and its alias have the same required params
- *
- * @param a - original record
- * @param b - alias record
- */
-function checkSameParams(a, b) {
-    for (const key of a.keys) {
-        if (!key.optional && !b.keys.find(isSameParam.bind(null, key)))
-            return warn(`Alias "${b.record.path}" and the original record: "${a.record.path}" should have the exact same param named "${key.name}"`);
-    }
-    for (const key of b.keys) {
-        if (!key.optional && !a.keys.find(isSameParam.bind(null, key)))
-            return warn(`Alias "${b.record.path}" and the original record: "${a.record.path}" should have the exact same param named "${key.name}"`);
-    }
-}
-function checkMissingParamsInAbsolutePath(record, parent) {
-    for (const key of parent.keys) {
-        if (!record.keys.find(isSameParam.bind(null, key)))
-            return warn(`Absolute path "${record.record.path}" should have the exact same param named "${key.name}" as its parent "${parent.record.path}".`);
-    }
 }
 function isRecordChildOf(record, parent) {
     return parent.children.some(child => child === record || isRecordChildOf(record, child));
@@ -1707,7 +1605,6 @@ function decode(text) {
         return decodeURIComponent('' + text);
     }
     catch (err) {
-        warn(`Error decoding "${text}". Using original value`);
     }
     return '' + text;
 }
@@ -1838,9 +1735,9 @@ function registerGuard(record, name, guard) {
     const removeFromList = () => {
         record[name].delete(guard);
     };
-    onUnmounted(removeFromList);
-    onDeactivated(removeFromList);
-    onActivated(() => {
+    vue.onUnmounted(removeFromList);
+    vue.onDeactivated(removeFromList);
+    vue.onActivated(() => {
         record[name].add(guard);
     });
     record[name].add(guard);
@@ -1853,15 +1750,10 @@ function registerGuard(record, name, guard) {
  * @param leaveGuard - {@link NavigationGuard}
  */
 function onBeforeRouteLeave(leaveGuard) {
-    if (!getCurrentInstance()) {
-        warn('getCurrentInstance() returned null. onBeforeRouteLeave() must be called at the top of a setup function');
-        return;
-    }
-    const activeRecord = inject(matchedRouteKey, 
+    const activeRecord = vue.inject(matchedRouteKey, 
     // to avoid warning
     {}).value;
     if (!activeRecord) {
-        warn('No active route record was found when calling `onBeforeRouteLeave()`. Make sure you call this function inside of a component child of <router-view>. Maybe you called it inside of App.vue?');
         return;
     }
     registerGuard(activeRecord, 'leaveGuards', leaveGuard);
@@ -1874,15 +1766,10 @@ function onBeforeRouteLeave(leaveGuard) {
  * @param updateGuard - {@link NavigationGuard}
  */
 function onBeforeRouteUpdate(updateGuard) {
-    if (!getCurrentInstance()) {
-        warn('getCurrentInstance() returned null. onBeforeRouteUpdate() must be called at the top of a setup function');
-        return;
-    }
-    const activeRecord = inject(matchedRouteKey, 
+    const activeRecord = vue.inject(matchedRouteKey, 
     // to avoid warning
     {}).value;
     if (!activeRecord) {
-        warn('No active route record was found when calling `onBeforeRouteUpdate()`. Make sure you call this function inside of a component child of <router-view>. Maybe you called it inside of App.vue?');
         return;
     }
     registerGuard(activeRecord, 'updateGuards', updateGuard);
@@ -1918,82 +1805,18 @@ function guardToPromiseFn(guard, to, from, record, name) {
             }
         };
         // wrapping with Promise.resolve allows it to work with both async and sync guards
-        const guardReturn = guard.call(record && record.instances[name], to, from, canOnlyBeCalledOnce(next, to, from) );
+        const guardReturn = guard.call(record && record.instances[name], to, from, next);
         let guardCall = Promise.resolve(guardReturn);
         if (guard.length < 3)
             guardCall = guardCall.then(next);
-        if (guard.length > 2) {
-            const message = `The "next" callback was never called inside of ${guard.name ? '"' + guard.name + '"' : ''}:\n${guard.toString()}\n. If you are returning a value instead of calling "next", make sure to remove the "next" parameter from your function.`;
-            if (typeof guardReturn === 'object' && 'then' in guardReturn) {
-                guardCall = guardCall.then(resolvedValue => {
-                    // @ts-expect-error: _called is added at canOnlyBeCalledOnce
-                    if (!next._called) {
-                        warn(message);
-                        return Promise.reject(new Error('Invalid navigation guard'));
-                    }
-                    return resolvedValue;
-                });
-                // TODO: test me!
-            }
-            else if (guardReturn !== undefined) {
-                // @ts-expect-error: _called is added at canOnlyBeCalledOnce
-                if (!next._called) {
-                    warn(message);
-                    reject(new Error('Invalid navigation guard'));
-                    return;
-                }
-            }
-        }
         guardCall.catch(err => reject(err));
     });
-}
-function canOnlyBeCalledOnce(next, to, from) {
-    let called = 0;
-    return function () {
-        if (called++ === 1)
-            warn(`The "next" callback was called more than once in one navigation guard when going from "${from.fullPath}" to "${to.fullPath}". It should be called exactly one time in each navigation guard. This will fail in production.`);
-        // @ts-expect-error: we put it in the original one because it's easier to check
-        next._called = true;
-        if (called === 1)
-            next.apply(null, arguments);
-    };
 }
 function extractComponentsGuards(matched, guardType, to, from) {
     const guards = [];
     for (const record of matched) {
         for (const name in record.components) {
             let rawComponent = record.components[name];
-            {
-                if (!rawComponent ||
-                    (typeof rawComponent !== 'object' &&
-                        typeof rawComponent !== 'function')) {
-                    warn(`Component "${name}" in record with path "${record.path}" is not` +
-                        ` a valid component. Received "${String(rawComponent)}".`);
-                    // throw to ensure we stop here but warn to ensure the message isn't
-                    // missed by the user
-                    throw new Error('Invalid route component');
-                }
-                else if ('then' in rawComponent) {
-                    // warn if user wrote import('/component.vue') instead of () =>
-                    // import('./component.vue')
-                    warn(`Component "${name}" in record with path "${record.path}" is a ` +
-                        `Promise instead of a function that returns a Promise. Did you ` +
-                        `write "import('./MyPage.vue')" instead of ` +
-                        `"() => import('./MyPage.vue')" ? This will break in ` +
-                        `production if not fixed.`);
-                    const promise = rawComponent;
-                    rawComponent = () => promise;
-                }
-                else if (rawComponent.__asyncLoader &&
-                    // warn only once per component
-                    !rawComponent.__warnedDefineAsync) {
-                    rawComponent.__warnedDefineAsync = true;
-                    warn(`Component "${name}" in record with path "${record.path}" is defined ` +
-                        `using "defineAsyncComponent()". ` +
-                        `Write "() => import('./MyPage.vue')" instead of ` +
-                        `"defineAsyncComponent(() => import('./MyPage.vue'))".`);
-                }
-            }
             // skip update and leave guards if the route component is not mounted
             if (guardType !== 'beforeRouteEnter' && !record.instances[name])
                 continue;
@@ -2006,10 +1829,6 @@ function extractComponentsGuards(matched, guardType, to, from) {
             else {
                 // start requesting the chunk already
                 let componentPromise = rawComponent();
-                if (!('catch' in componentPromise)) {
-                    warn(`Component "${name}" in record with path "${record.path}" is a function that does not return a Promise. If you were passing a functional component, make sure to add a "displayName" to the component. This will break in production if not fixed.`);
-                    componentPromise = Promise.resolve(componentPromise);
-                }
                 guards.push(() => componentPromise.then(resolved => {
                     if (!resolved)
                         return Promise.reject(new Error(`Couldn't resolve component "${name}" at "${record.path}"`));
@@ -2043,10 +1862,10 @@ function isRouteComponent(component) {
 // TODO: we could allow currentRoute as a prop to expose `isActive` and
 // `isExactActive` behavior should go through an RFC
 function useLink(props) {
-    const router = inject(routerKey);
-    const currentRoute = inject(routeLocationKey);
-    const route = computed(() => router.resolve(unref(props.to)));
-    const activeRecordIndex = computed(() => {
+    const router = vue.inject(routerKey);
+    const currentRoute = vue.inject(routeLocationKey);
+    const route = vue.computed(() => router.resolve(vue.unref(props.to)));
+    const activeRecordIndex = vue.computed(() => {
         const { matched } = route.value;
         const { length } = matched;
         const routeMatched = matched[length - 1];
@@ -2070,48 +1889,28 @@ function useLink(props) {
             ? currentMatched.findIndex(isSameRouteRecord.bind(null, matched[length - 2]))
             : index);
     });
-    const isActive = computed(() => activeRecordIndex.value > -1 &&
+    const isActive = vue.computed(() => activeRecordIndex.value > -1 &&
         includesParams(currentRoute.params, route.value.params));
-    const isExactActive = computed(() => activeRecordIndex.value > -1 &&
+    const isExactActive = vue.computed(() => activeRecordIndex.value > -1 &&
         activeRecordIndex.value === currentRoute.matched.length - 1 &&
         isSameRouteLocationParams(currentRoute.params, route.value.params));
     function navigate(e = {}) {
         if (guardEvent(e)) {
-            return router[unref(props.replace) ? 'replace' : 'push'](unref(props.to)
+            return router[vue.unref(props.replace) ? 'replace' : 'push'](vue.unref(props.to)
             // avoid uncaught errors are they are logged anyway
             ).catch(noop);
         }
         return Promise.resolve();
     }
-    // devtools only
-    if (isBrowser) {
-        const instance = getCurrentInstance();
-        if (instance) {
-            const linkContextDevtools = {
-                route: route.value,
-                isActive: isActive.value,
-                isExactActive: isExactActive.value,
-            };
-            // @ts-expect-error: this is internal
-            instance.__vrl_devtools = instance.__vrl_devtools || [];
-            // @ts-expect-error: this is internal
-            instance.__vrl_devtools.push(linkContextDevtools);
-            watchEffect(() => {
-                linkContextDevtools.route = route.value;
-                linkContextDevtools.isActive = isActive.value;
-                linkContextDevtools.isExactActive = isExactActive.value;
-            }, { flush: 'post' });
-        }
-    }
     return {
         route,
-        href: computed(() => route.value.href),
+        href: vue.computed(() => route.value.href),
         isActive,
         isExactActive,
         navigate,
     };
 }
-const RouterLinkImpl = /*#__PURE__*/ defineComponent({
+const RouterLinkImpl = /*#__PURE__*/ vue.defineComponent({
     name: 'RouterLink',
     props: {
         to: {
@@ -2130,9 +1929,9 @@ const RouterLinkImpl = /*#__PURE__*/ defineComponent({
     },
     useLink,
     setup(props, { slots }) {
-        const link = reactive(useLink(props));
-        const { options } = inject(routerKey);
-        const elClass = computed(() => ({
+        const link = vue.reactive(useLink(props));
+        const { options } = vue.inject(routerKey);
+        const elClass = vue.computed(() => ({
             [getLinkClass(props.activeClass, options.linkActiveClass, 'router-link-active')]: link.isActive,
             // [getLinkClass(
             //   props.inactiveClass,
@@ -2145,7 +1944,7 @@ const RouterLinkImpl = /*#__PURE__*/ defineComponent({
             const children = slots.default && slots.default(link);
             return props.custom
                 ? children
-                : h('a', {
+                : vue.h('a', {
                     'aria-current': link.isExactActive
                         ? props.ariaCurrentValue
                         : null,
@@ -2223,7 +2022,7 @@ const getLinkClass = (propClass, globalClass, defaultClass) => propClass != null
         ? globalClass
         : defaultClass;
 
-const RouterViewImpl = /*#__PURE__*/ defineComponent({
+const RouterViewImpl = /*#__PURE__*/ vue.defineComponent({
     name: 'RouterView',
     // #674 we manually inherit them
     inheritAttrs: false,
@@ -2235,18 +2034,17 @@ const RouterViewImpl = /*#__PURE__*/ defineComponent({
         route: Object,
     },
     setup(props, { attrs, slots }) {
-        warnDeprecatedUsage();
-        const injectedRoute = inject(routerViewLocationKey);
-        const routeToDisplay = computed(() => props.route || injectedRoute.value);
-        const depth = inject(viewDepthKey, 0);
-        const matchedRouteRef = computed(() => routeToDisplay.value.matched[depth]);
-        provide(viewDepthKey, depth + 1);
-        provide(matchedRouteKey, matchedRouteRef);
-        provide(routerViewLocationKey, routeToDisplay);
-        const viewRef = ref();
+        const injectedRoute = vue.inject(routerViewLocationKey);
+        const routeToDisplay = vue.computed(() => props.route || injectedRoute.value);
+        const depth = vue.inject(viewDepthKey, 0);
+        const matchedRouteRef = vue.computed(() => routeToDisplay.value.matched[depth]);
+        vue.provide(viewDepthKey, depth + 1);
+        vue.provide(matchedRouteKey, matchedRouteRef);
+        vue.provide(routerViewLocationKey, routeToDisplay);
+        const viewRef = vue.ref();
         // watch at the same time the component instance, the route record we are
         // rendering, and the name
-        watch(() => [viewRef.value, matchedRouteRef.value, props.name], ([instance, to, name], [oldInstance, from, oldName]) => {
+        vue.watch(() => [viewRef.value, matchedRouteRef.value, props.name], ([instance, to, name], [oldInstance, from, oldName]) => {
             // copy reused instances
             if (to) {
                 // this will update the instance for new instances as well as reused
@@ -2301,27 +2099,10 @@ const RouterViewImpl = /*#__PURE__*/ defineComponent({
                     matchedRoute.instances[currentName] = null;
                 }
             };
-            const component = h(ViewComponent, assign({}, routeProps, attrs, {
+            const component = vue.h(ViewComponent, assign({}, routeProps, attrs, {
                 onVnodeUnmounted,
                 ref: viewRef,
             }));
-            if (isBrowser &&
-                component.ref) {
-                // TODO: can display if it's an alias, its props
-                const info = {
-                    depth,
-                    name: matchedRoute.name,
-                    path: matchedRoute.path,
-                    meta: matchedRoute.meta,
-                };
-                const internalInstances = Array.isArray(component.ref)
-                    ? component.ref.map(r => r.i)
-                    : [component.ref.i];
-                internalInstances.forEach(instance => {
-                    // @ts-expect-error
-                    instance.__vrv_devtools = info;
-                });
-            }
             return (
             // pass the vnode to the slot as a prop.
             // h and <component :is="..."> both accept vnodes
@@ -2342,254 +2123,6 @@ function normalizeSlot(slot, data) {
  * Component to display the current route the user is at.
  */
 const RouterView = RouterViewImpl;
-// warn against deprecated usage with <transition> & <keep-alive>
-// due to functional component being no longer eager in Vue 3
-function warnDeprecatedUsage() {
-    const instance = getCurrentInstance();
-    const parentName = instance.parent && instance.parent.type.name;
-    if (parentName &&
-        (parentName === 'KeepAlive' || parentName.includes('Transition'))) {
-        const comp = parentName === 'KeepAlive' ? 'keep-alive' : 'transition';
-        warn(`<router-view> can no longer be used directly inside <transition> or <keep-alive>.\n` +
-            `Use slot props instead:\n\n` +
-            `<router-view v-slot="{ Component }">\n` +
-            `  <${comp}>\n` +
-            `    <component :is="Component" />\n` +
-            `  </${comp}>\n` +
-            `</router-view>`);
-    }
-}
-
-function formatRouteLocation(routeLocation, tooltip) {
-    const copy = assign({}, routeLocation, {
-        // remove variables that can contain vue instances
-        matched: routeLocation.matched.map(matched => omit(matched, ['instances', 'children', 'aliasOf'])),
-    });
-    return {
-        _custom: {
-            type: null,
-            readOnly: true,
-            display: routeLocation.fullPath,
-            tooltip,
-            value: copy,
-        },
-    };
-}
-function formatDisplay(display) {
-    return {
-        _custom: {
-            display,
-        },
-    };
-}
-// to support multiple router instances
-let routerId = 0;
-function addDevtools(app, router, matcher) {
-    // Take over router.beforeEach and afterEach
-    // make sure we are not registering the devtool twice
-    if (router.__hasDevtools)
-        return;
-    router.__hasDevtools = true;
-    // increment to support multiple router instances
-    const id = routerId++;
-
-}
-function modifierForKey(key) {
-    if (key.optional) {
-        return key.repeatable ? '*' : '?';
-    }
-    else {
-        return key.repeatable ? '+' : '';
-    }
-}
-function formatRouteRecordMatcherForStateInspector(route) {
-    const { record } = route;
-    const fields = [
-        { editable: false, key: 'path', value: record.path },
-    ];
-    if (record.name != null) {
-        fields.push({
-            editable: false,
-            key: 'name',
-            value: record.name,
-        });
-    }
-    fields.push({ editable: false, key: 'regexp', value: route.re });
-    if (route.keys.length) {
-        fields.push({
-            editable: false,
-            key: 'keys',
-            value: {
-                _custom: {
-                    type: null,
-                    readOnly: true,
-                    display: route.keys
-                        .map(key => `${key.name}${modifierForKey(key)}`)
-                        .join(' '),
-                    tooltip: 'Param keys',
-                    value: route.keys,
-                },
-            },
-        });
-    }
-    if (record.redirect != null) {
-        fields.push({
-            editable: false,
-            key: 'redirect',
-            value: record.redirect,
-        });
-    }
-    if (route.alias.length) {
-        fields.push({
-            editable: false,
-            key: 'aliases',
-            value: route.alias.map(alias => alias.record.path),
-        });
-    }
-    fields.push({
-        key: 'score',
-        editable: false,
-        value: {
-            _custom: {
-                type: null,
-                readOnly: true,
-                display: route.score.map(score => score.join(', ')).join(' | '),
-                tooltip: 'Score used to sort routes',
-                value: route.score,
-            },
-        },
-    });
-    return fields;
-}
-/**
- * Extracted from tailwind palette
- */
-const PINK_500 = 0xec4899;
-const BLUE_600 = 0x2563eb;
-const LIME_500 = 0x84cc16;
-const CYAN_400 = 0x22d3ee;
-const ORANGE_400 = 0xfb923c;
-// const GRAY_100 = 0xf4f4f5
-const DARK = 0x666666;
-function formatRouteRecordForInspector(route) {
-    const tags = [];
-    const { record } = route;
-    if (record.name != null) {
-        tags.push({
-            label: String(record.name),
-            textColor: 0,
-            backgroundColor: CYAN_400,
-        });
-    }
-    if (record.aliasOf) {
-        tags.push({
-            label: 'alias',
-            textColor: 0,
-            backgroundColor: ORANGE_400,
-        });
-    }
-    if (route.__vd_match) {
-        tags.push({
-            label: 'matches',
-            textColor: 0,
-            backgroundColor: PINK_500,
-        });
-    }
-    if (route.__vd_exactActive) {
-        tags.push({
-            label: 'exact',
-            textColor: 0,
-            backgroundColor: LIME_500,
-        });
-    }
-    if (route.__vd_active) {
-        tags.push({
-            label: 'active',
-            textColor: 0,
-            backgroundColor: BLUE_600,
-        });
-    }
-    if (record.redirect) {
-        tags.push({
-            label: 'redirect: ' +
-                (typeof record.redirect === 'string' ? record.redirect : 'Object'),
-            textColor: 0xffffff,
-            backgroundColor: DARK,
-        });
-    }
-    // add an id to be able to select it. Using the `path` is not possible because
-    // empty path children would collide with their parents
-    let id = record.__vd_id;
-    if (id == null) {
-        id = String(routeRecordId++);
-        record.__vd_id = id;
-    }
-    return {
-        id,
-        label: record.path,
-        tags,
-        children: route.children.map(formatRouteRecordForInspector),
-    };
-}
-//  incremental id for route records and inspector state
-let routeRecordId = 0;
-const EXTRACT_REGEXP_RE = /^\/(.*)\/([a-z]*)$/;
-function markRouteRecordActive(route, currentRoute) {
-    // no route will be active if matched is empty
-    // reset the matching state
-    const isExactActive = currentRoute.matched.length &&
-        isSameRouteRecord(currentRoute.matched[currentRoute.matched.length - 1], route.record);
-    route.__vd_exactActive = route.__vd_active = isExactActive;
-    if (!isExactActive) {
-        route.__vd_active = currentRoute.matched.some(match => isSameRouteRecord(match, route.record));
-    }
-    route.children.forEach(childRoute => markRouteRecordActive(childRoute, currentRoute));
-}
-function resetMatchStateOnRouteRecord(route) {
-    route.__vd_match = false;
-    route.children.forEach(resetMatchStateOnRouteRecord);
-}
-function isRouteMatching(route, filter) {
-    const found = String(route.re).match(EXTRACT_REGEXP_RE);
-    route.__vd_match = false;
-    if (!found || found.length < 3) {
-        return false;
-    }
-    // use a regexp without $ at the end to match nested routes better
-    const nonEndingRE = new RegExp(found[1].replace(/\$$/, ''), found[2]);
-    if (nonEndingRE.test(filter)) {
-        // mark children as matches
-        route.children.forEach(child => isRouteMatching(child, filter));
-        // exception case: `/`
-        if (route.record.path !== '/' || filter === '/') {
-            route.__vd_match = route.re.test(filter);
-            return true;
-        }
-        // hide the / route
-        return false;
-    }
-    const path = route.record.path.toLowerCase();
-    const decodedPath = decode(path);
-    // also allow partial matching on the path
-    if (!filter.startsWith('/') &&
-        (decodedPath.includes(filter) || path.includes(filter)))
-        return true;
-    if (decodedPath.startsWith(filter) || path.startsWith(filter))
-        return true;
-    if (route.record.name && String(route.record.name).includes(filter))
-        return true;
-    return route.children.some(child => isRouteMatching(child, filter));
-}
-function omit(obj, keys) {
-    const ret = {};
-    for (const key in obj) {
-        if (!keys.includes(key)) {
-            // @ts-expect-error
-            ret[key] = obj[key];
-        }
-    }
-    return ret;
-}
 
 /**
  * Creates a Router instance that can be used by a Vue app.
@@ -2601,13 +2134,10 @@ function createRouter(options) {
     const parseQuery$1 = options.parseQuery || parseQuery;
     const stringifyQuery$1 = options.stringifyQuery || stringifyQuery;
     const routerHistory = options.history;
-    if (!routerHistory)
-        throw new Error('Provide the "history" option when calling "createRouter()":' +
-            ' https://next.router.vuejs.org/api/#history.');
     const beforeGuards = useCallbacks();
     const beforeResolveGuards = useCallbacks();
     const afterGuards = useCallbacks();
-    const currentRoute = shallowRef(START_LOCATION_NORMALIZED);
+    const currentRoute = vue.shallowRef(START_LOCATION_NORMALIZED);
     let pendingLocation = START_LOCATION_NORMALIZED;
     // leave the scrollRestoration if no scrollBehavior is provided
     if (isBrowser && options.scrollBehavior && 'scrollRestoration' in history) {
@@ -2635,9 +2165,6 @@ function createRouter(options) {
         if (recordMatcher) {
             matcher.removeRoute(recordMatcher);
         }
-        else {
-            warn(`Cannot remove non-existent route "${String(name)}"`);
-        }
     }
     function getRoutes() {
         return matcher.getRoutes().map(routeMatcher => routeMatcher.record);
@@ -2653,13 +2180,6 @@ function createRouter(options) {
             const locationNormalized = parseURL(parseQuery$1, rawLocation, currentLocation.path);
             const matchedRoute = matcher.resolve({ path: locationNormalized.path }, currentLocation);
             const href = routerHistory.createHref(locationNormalized.fullPath);
-            {
-                if (href.startsWith('//'))
-                    warn(`Location "${rawLocation}" resolved to "${href}". A resolved location cannot start with multiple slashes.`);
-                else if (!matchedRoute.matched.length) {
-                    warn(`No match found for location with path "${rawLocation}"`);
-                }
-            }
             // locationNormalized is always a new object
             return assign(locationNormalized, matchedRoute, {
                 params: decodeParams(matchedRoute.params),
@@ -2671,14 +2191,6 @@ function createRouter(options) {
         let matcherLocation;
         // path could be relative in object as well
         if ('path' in rawLocation) {
-            if ('params' in rawLocation &&
-                !('name' in rawLocation) &&
-                // @ts-expect-error: the type is never
-                Object.keys(rawLocation.params).length) {
-                warn(`Path "${
-                // @ts-expect-error: the type is never
-                rawLocation.path}" was passed with params but they will be ignored. Use a named route alongside params instead.`);
-            }
             matcherLocation = assign({}, rawLocation, {
                 path: parseURL(parseQuery$1, rawLocation.path, currentLocation.path).path,
             });
@@ -2701,9 +2213,6 @@ function createRouter(options) {
         }
         const matchedRoute = matcher.resolve(matcherLocation, currentLocation);
         const hash = rawLocation.hash || '';
-        if (hash && !hash.startsWith('#')) {
-            warn(`A \`hash\` should always start with the character "#". Replace "${hash}" with "#${hash}".`);
-        }
         // decoding them) the matcher might have merged current location params so
         // we need to run the decoding again
         matchedRoute.params = normalizeParams(decodeParams(matchedRoute.params));
@@ -2712,14 +2221,6 @@ function createRouter(options) {
             path: matchedRoute.path,
         }));
         const href = routerHistory.createHref(fullPath);
-        {
-            if (href.startsWith('//')) {
-                warn(`Location "${rawLocation}" resolved to "${href}". A resolved location cannot start with multiple slashes.`);
-            }
-            else if (!matchedRoute.matched.length) {
-                warn(`No match found for location with path "${'path' in rawLocation ? rawLocation.path : rawLocation}"`);
-            }
-        }
         return assign({
             fullPath,
             // keep the hash encoded so fullPath is effectively path + encodedQuery +
@@ -2773,11 +2274,6 @@ function createRouter(options) {
                 // the router parse them again
                 newTargetLocation.params = {};
             }
-            if (!('path' in newTargetLocation) &&
-                !('name' in newTargetLocation)) {
-                warn(`Invalid redirect found:\n${JSON.stringify(newTargetLocation, null, 2)}\n when navigating to "${to.fullPath}". A redirect must contain a name or path. This will break in production.`);
-                throw new Error('Invalid redirect');
-            }
             return assign({
                 query: to.query,
                 hash: to.hash,
@@ -2827,18 +2323,6 @@ function createRouter(options) {
             .then((failure) => {
             if (failure) {
                 if (isNavigationFailure(failure, 2 /* NAVIGATION_GUARD_REDIRECT */)) {
-                    if (// we are redirecting to the same location we were already at
-                        isSameRouteLocation(stringifyQuery$1, resolve(failure.to), toLocation) &&
-                        // and we have done it a couple of times
-                        redirectedFrom &&
-                        // @ts-expect-error: added only in dev
-                        (redirectedFrom._count = redirectedFrom._count
-                            ? // @ts-expect-error
-                                redirectedFrom._count + 1
-                            : 1) > 10) {
-                        warn(`Detected an infinite redirection in a navigation guard when going from "${from.fullPath}" to "${toLocation.fullPath}". Aborting to avoid a Stack Overflow. This will break in production if not fixed.`);
-                        return Promise.reject(new Error('Infinite redirect in navigation guard'));
-                    }
                     return pushWithRedirect(
                     // keep options
                     assign(locationAsObject(failure.to), {
@@ -3084,9 +2568,6 @@ function createRouter(options) {
             list.forEach(handler => handler(error, to, from));
         }
         else {
-            {
-                warn('uncaught error during route navigation:');
-            }
             console.error(error);
         }
         return Promise.reject(error);
@@ -3120,7 +2601,7 @@ function createRouter(options) {
                 history.state &&
                 history.state.scroll) ||
             null;
-        return nextTick()
+        return vue.nextTick()
             .then(() => scrollBehavior(to, from, scrollPosition))
             .then(position => position && scrollToPosition(position))
             .catch(err => triggerError(err, to, from));
@@ -3153,7 +2634,7 @@ function createRouter(options) {
             app.config.globalProperties.$router = router;
             Object.defineProperty(app.config.globalProperties, '$route', {
                 enumerable: true,
-                get: () => unref(currentRoute),
+                get: () => vue.unref(currentRoute),
             });
             // this initial navigation is only necessary on client, on server it doesn't
             // make sense because it will create an extra unnecessary navigation and could
@@ -3166,16 +2647,15 @@ function createRouter(options) {
                 // see above
                 started = true;
                 push(routerHistory.location).catch(err => {
-                    warn('Unexpected error when starting the router:', err);
                 });
             }
             const reactiveRoute = {};
             for (const key in START_LOCATION_NORMALIZED) {
                 // @ts-expect-error: the key matches
-                reactiveRoute[key] = computed(() => currentRoute.value[key]);
+                reactiveRoute[key] = vue.computed(() => currentRoute.value[key]);
             }
             app.provide(routerKey, router);
-            app.provide(routeLocationKey, reactive(reactiveRoute));
+            app.provide(routeLocationKey, vue.reactive(reactiveRoute));
             app.provide(routerViewLocationKey, currentRoute);
             const unmountApp = app.unmount;
             installedApps.add(app);
@@ -3192,9 +2672,6 @@ function createRouter(options) {
                 }
                 unmountApp();
             };
-            if (isBrowser) {
-                addDevtools(app, router, matcher);
-            }
         },
     };
     return router;
@@ -3231,14 +2708,34 @@ function extractChangingRecords(to, from) {
  * templates.
  */
 function useRouter() {
-    return inject(routerKey);
+    return vue.inject(routerKey);
 }
 /**
  * Returns the current route location. Equivalent to using `$route` inside
  * templates.
  */
 function useRoute() {
-    return inject(routeLocationKey);
+    return vue.inject(routeLocationKey);
 }
 
-export { NavigationFailureType, RouterLink, RouterView, START_LOCATION_NORMALIZED as START_LOCATION, createMemoryHistory, createRouter, createRouterMatcher, createWebHashHistory, createWebHistory, isNavigationFailure, matchedRouteKey, onBeforeRouteLeave, onBeforeRouteUpdate, parseQuery, routeLocationKey, routerKey, routerViewLocationKey, stringifyQuery, useLink, useRoute, useRouter, viewDepthKey };
+exports.RouterLink = RouterLink;
+exports.RouterView = RouterView;
+exports.START_LOCATION = START_LOCATION_NORMALIZED;
+exports.createMemoryHistory = createMemoryHistory;
+exports.createRouter = createRouter;
+exports.createRouterMatcher = createRouterMatcher;
+exports.createWebHashHistory = createWebHashHistory;
+exports.createWebHistory = createWebHistory;
+exports.isNavigationFailure = isNavigationFailure;
+exports.matchedRouteKey = matchedRouteKey;
+exports.onBeforeRouteLeave = onBeforeRouteLeave;
+exports.onBeforeRouteUpdate = onBeforeRouteUpdate;
+exports.parseQuery = parseQuery;
+exports.routeLocationKey = routeLocationKey;
+exports.routerKey = routerKey;
+exports.routerViewLocationKey = routerViewLocationKey;
+exports.stringifyQuery = stringifyQuery;
+exports.useLink = useLink;
+exports.useRoute = useRoute;
+exports.useRouter = useRouter;
+exports.viewDepthKey = viewDepthKey;

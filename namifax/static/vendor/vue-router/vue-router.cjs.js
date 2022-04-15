@@ -3,8 +3,12 @@
   * (c) 2022 Eduardo San Martin Morote
   * @license MIT
   */
-import { getCurrentInstance, inject, onUnmounted, onDeactivated, onActivated, computed, unref, watchEffect, defineComponent, reactive, h, provide, ref, watch, shallowRef, nextTick } from 'vue';
-//import { setupDevtoolsPlugin } from '@vue/devtools-api';
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var vue = require('vue');
+var devtoolsApi = require('@vue/devtools-api');
 
 const hasSymbol = typeof Symbol === 'function' && typeof Symbol.toStringTag === 'symbol';
 const PolySymbol = (name) => 
@@ -779,7 +783,7 @@ const NavigationFailureSymbol = /*#__PURE__*/ PolySymbol('navigation failure' );
  * Enumeration with all possible types for navigation failures. Can be passed to
  * {@link isNavigationFailure} to check for specific failures.
  */
-var NavigationFailureType;
+exports.NavigationFailureType = void 0;
 (function (NavigationFailureType) {
     /**
      * An aborted navigation is a navigation that failed because a navigation
@@ -796,7 +800,7 @@ var NavigationFailureType;
      * initiated while already being at the exact same location.
      */
     NavigationFailureType[NavigationFailureType["duplicated"] = 16] = "duplicated";
-})(NavigationFailureType || (NavigationFailureType = {}));
+})(exports.NavigationFailureType || (exports.NavigationFailureType = {}));
 // DEV only debug messages
 const ErrorTypeMessages = {
     [1 /* MATCHER_NOT_FOUND */]({ location, currentLocation }) {
@@ -1838,9 +1842,9 @@ function registerGuard(record, name, guard) {
     const removeFromList = () => {
         record[name].delete(guard);
     };
-    onUnmounted(removeFromList);
-    onDeactivated(removeFromList);
-    onActivated(() => {
+    vue.onUnmounted(removeFromList);
+    vue.onDeactivated(removeFromList);
+    vue.onActivated(() => {
         record[name].add(guard);
     });
     record[name].add(guard);
@@ -1853,11 +1857,11 @@ function registerGuard(record, name, guard) {
  * @param leaveGuard - {@link NavigationGuard}
  */
 function onBeforeRouteLeave(leaveGuard) {
-    if (!getCurrentInstance()) {
+    if (!vue.getCurrentInstance()) {
         warn('getCurrentInstance() returned null. onBeforeRouteLeave() must be called at the top of a setup function');
         return;
     }
-    const activeRecord = inject(matchedRouteKey, 
+    const activeRecord = vue.inject(matchedRouteKey, 
     // to avoid warning
     {}).value;
     if (!activeRecord) {
@@ -1874,11 +1878,11 @@ function onBeforeRouteLeave(leaveGuard) {
  * @param updateGuard - {@link NavigationGuard}
  */
 function onBeforeRouteUpdate(updateGuard) {
-    if (!getCurrentInstance()) {
+    if (!vue.getCurrentInstance()) {
         warn('getCurrentInstance() returned null. onBeforeRouteUpdate() must be called at the top of a setup function');
         return;
     }
-    const activeRecord = inject(matchedRouteKey, 
+    const activeRecord = vue.inject(matchedRouteKey, 
     // to avoid warning
     {}).value;
     if (!activeRecord) {
@@ -2043,10 +2047,10 @@ function isRouteComponent(component) {
 // TODO: we could allow currentRoute as a prop to expose `isActive` and
 // `isExactActive` behavior should go through an RFC
 function useLink(props) {
-    const router = inject(routerKey);
-    const currentRoute = inject(routeLocationKey);
-    const route = computed(() => router.resolve(unref(props.to)));
-    const activeRecordIndex = computed(() => {
+    const router = vue.inject(routerKey);
+    const currentRoute = vue.inject(routeLocationKey);
+    const route = vue.computed(() => router.resolve(vue.unref(props.to)));
+    const activeRecordIndex = vue.computed(() => {
         const { matched } = route.value;
         const { length } = matched;
         const routeMatched = matched[length - 1];
@@ -2070,14 +2074,14 @@ function useLink(props) {
             ? currentMatched.findIndex(isSameRouteRecord.bind(null, matched[length - 2]))
             : index);
     });
-    const isActive = computed(() => activeRecordIndex.value > -1 &&
+    const isActive = vue.computed(() => activeRecordIndex.value > -1 &&
         includesParams(currentRoute.params, route.value.params));
-    const isExactActive = computed(() => activeRecordIndex.value > -1 &&
+    const isExactActive = vue.computed(() => activeRecordIndex.value > -1 &&
         activeRecordIndex.value === currentRoute.matched.length - 1 &&
         isSameRouteLocationParams(currentRoute.params, route.value.params));
     function navigate(e = {}) {
         if (guardEvent(e)) {
-            return router[unref(props.replace) ? 'replace' : 'push'](unref(props.to)
+            return router[vue.unref(props.replace) ? 'replace' : 'push'](vue.unref(props.to)
             // avoid uncaught errors are they are logged anyway
             ).catch(noop);
         }
@@ -2085,7 +2089,7 @@ function useLink(props) {
     }
     // devtools only
     if (isBrowser) {
-        const instance = getCurrentInstance();
+        const instance = vue.getCurrentInstance();
         if (instance) {
             const linkContextDevtools = {
                 route: route.value,
@@ -2096,7 +2100,7 @@ function useLink(props) {
             instance.__vrl_devtools = instance.__vrl_devtools || [];
             // @ts-expect-error: this is internal
             instance.__vrl_devtools.push(linkContextDevtools);
-            watchEffect(() => {
+            vue.watchEffect(() => {
                 linkContextDevtools.route = route.value;
                 linkContextDevtools.isActive = isActive.value;
                 linkContextDevtools.isExactActive = isExactActive.value;
@@ -2105,13 +2109,13 @@ function useLink(props) {
     }
     return {
         route,
-        href: computed(() => route.value.href),
+        href: vue.computed(() => route.value.href),
         isActive,
         isExactActive,
         navigate,
     };
 }
-const RouterLinkImpl = /*#__PURE__*/ defineComponent({
+const RouterLinkImpl = /*#__PURE__*/ vue.defineComponent({
     name: 'RouterLink',
     props: {
         to: {
@@ -2130,9 +2134,9 @@ const RouterLinkImpl = /*#__PURE__*/ defineComponent({
     },
     useLink,
     setup(props, { slots }) {
-        const link = reactive(useLink(props));
-        const { options } = inject(routerKey);
-        const elClass = computed(() => ({
+        const link = vue.reactive(useLink(props));
+        const { options } = vue.inject(routerKey);
+        const elClass = vue.computed(() => ({
             [getLinkClass(props.activeClass, options.linkActiveClass, 'router-link-active')]: link.isActive,
             // [getLinkClass(
             //   props.inactiveClass,
@@ -2145,7 +2149,7 @@ const RouterLinkImpl = /*#__PURE__*/ defineComponent({
             const children = slots.default && slots.default(link);
             return props.custom
                 ? children
-                : h('a', {
+                : vue.h('a', {
                     'aria-current': link.isExactActive
                         ? props.ariaCurrentValue
                         : null,
@@ -2223,7 +2227,7 @@ const getLinkClass = (propClass, globalClass, defaultClass) => propClass != null
         ? globalClass
         : defaultClass;
 
-const RouterViewImpl = /*#__PURE__*/ defineComponent({
+const RouterViewImpl = /*#__PURE__*/ vue.defineComponent({
     name: 'RouterView',
     // #674 we manually inherit them
     inheritAttrs: false,
@@ -2236,17 +2240,17 @@ const RouterViewImpl = /*#__PURE__*/ defineComponent({
     },
     setup(props, { attrs, slots }) {
         warnDeprecatedUsage();
-        const injectedRoute = inject(routerViewLocationKey);
-        const routeToDisplay = computed(() => props.route || injectedRoute.value);
-        const depth = inject(viewDepthKey, 0);
-        const matchedRouteRef = computed(() => routeToDisplay.value.matched[depth]);
-        provide(viewDepthKey, depth + 1);
-        provide(matchedRouteKey, matchedRouteRef);
-        provide(routerViewLocationKey, routeToDisplay);
-        const viewRef = ref();
+        const injectedRoute = vue.inject(routerViewLocationKey);
+        const routeToDisplay = vue.computed(() => props.route || injectedRoute.value);
+        const depth = vue.inject(viewDepthKey, 0);
+        const matchedRouteRef = vue.computed(() => routeToDisplay.value.matched[depth]);
+        vue.provide(viewDepthKey, depth + 1);
+        vue.provide(matchedRouteKey, matchedRouteRef);
+        vue.provide(routerViewLocationKey, routeToDisplay);
+        const viewRef = vue.ref();
         // watch at the same time the component instance, the route record we are
         // rendering, and the name
-        watch(() => [viewRef.value, matchedRouteRef.value, props.name], ([instance, to, name], [oldInstance, from, oldName]) => {
+        vue.watch(() => [viewRef.value, matchedRouteRef.value, props.name], ([instance, to, name], [oldInstance, from, oldName]) => {
             // copy reused instances
             if (to) {
                 // this will update the instance for new instances as well as reused
@@ -2301,7 +2305,7 @@ const RouterViewImpl = /*#__PURE__*/ defineComponent({
                     matchedRoute.instances[currentName] = null;
                 }
             };
-            const component = h(ViewComponent, assign({}, routeProps, attrs, {
+            const component = vue.h(ViewComponent, assign({}, routeProps, attrs, {
                 onVnodeUnmounted,
                 ref: viewRef,
             }));
@@ -2345,7 +2349,7 @@ const RouterView = RouterViewImpl;
 // warn against deprecated usage with <transition> & <keep-alive>
 // due to functional component being no longer eager in Vue 3
 function warnDeprecatedUsage() {
-    const instance = getCurrentInstance();
+    const instance = vue.getCurrentInstance();
     const parentName = instance.parent && instance.parent.type.name;
     if (parentName &&
         (parentName === 'KeepAlive' || parentName.includes('Transition'))) {
@@ -2392,7 +2396,202 @@ function addDevtools(app, router, matcher) {
     router.__hasDevtools = true;
     // increment to support multiple router instances
     const id = routerId++;
-
+    devtoolsApi.setupDevtoolsPlugin({
+        id: 'org.vuejs.router' + (id ? '.' + id : ''),
+        label: 'Vue Router',
+        packageName: 'vue-router',
+        homepage: 'https://router.vuejs.org',
+        logo: 'https://router.vuejs.org/logo.png',
+        componentStateTypes: ['Routing'],
+        app,
+    }, api => {
+        // display state added by the router
+        api.on.inspectComponent((payload, ctx) => {
+            if (payload.instanceData) {
+                payload.instanceData.state.push({
+                    type: 'Routing',
+                    key: '$route',
+                    editable: false,
+                    value: formatRouteLocation(router.currentRoute.value, 'Current Route'),
+                });
+            }
+        });
+        // mark router-link as active and display tags on router views
+        api.on.visitComponentTree(({ treeNode: node, componentInstance }) => {
+            if (componentInstance.__vrv_devtools) {
+                const info = componentInstance.__vrv_devtools;
+                node.tags.push({
+                    label: (info.name ? `${info.name.toString()}: ` : '') + info.path,
+                    textColor: 0,
+                    tooltip: 'This component is rendered by &lt;router-view&gt;',
+                    backgroundColor: PINK_500,
+                });
+            }
+            // if multiple useLink are used
+            if (Array.isArray(componentInstance.__vrl_devtools)) {
+                componentInstance.__devtoolsApi = api;
+                componentInstance.__vrl_devtools.forEach(devtoolsData => {
+                    let backgroundColor = ORANGE_400;
+                    let tooltip = '';
+                    if (devtoolsData.isExactActive) {
+                        backgroundColor = LIME_500;
+                        tooltip = 'This is exactly active';
+                    }
+                    else if (devtoolsData.isActive) {
+                        backgroundColor = BLUE_600;
+                        tooltip = 'This link is active';
+                    }
+                    node.tags.push({
+                        label: devtoolsData.route.path,
+                        textColor: 0,
+                        tooltip,
+                        backgroundColor,
+                    });
+                });
+            }
+        });
+        vue.watch(router.currentRoute, () => {
+            // refresh active state
+            refreshRoutesView();
+            api.notifyComponentUpdate();
+            api.sendInspectorTree(routerInspectorId);
+            api.sendInspectorState(routerInspectorId);
+        });
+        const navigationsLayerId = 'router:navigations:' + id;
+        api.addTimelineLayer({
+            id: navigationsLayerId,
+            label: `Router${id ? ' ' + id : ''} Navigations`,
+            color: 0x40a8c4,
+        });
+        // const errorsLayerId = 'router:errors'
+        // api.addTimelineLayer({
+        //   id: errorsLayerId,
+        //   label: 'Router Errors',
+        //   color: 0xea5455,
+        // })
+        router.onError((error, to) => {
+            api.addTimelineEvent({
+                layerId: navigationsLayerId,
+                event: {
+                    title: 'Error during Navigation',
+                    subtitle: to.fullPath,
+                    logType: 'error',
+                    time: api.now(),
+                    data: { error },
+                    groupId: to.meta.__navigationId,
+                },
+            });
+        });
+        // attached to `meta` and used to group events
+        let navigationId = 0;
+        router.beforeEach((to, from) => {
+            const data = {
+                guard: formatDisplay('beforeEach'),
+                from: formatRouteLocation(from, 'Current Location during this navigation'),
+                to: formatRouteLocation(to, 'Target location'),
+            };
+            // Used to group navigations together, hide from devtools
+            Object.defineProperty(to.meta, '__navigationId', {
+                value: navigationId++,
+            });
+            api.addTimelineEvent({
+                layerId: navigationsLayerId,
+                event: {
+                    time: api.now(),
+                    title: 'Start of navigation',
+                    subtitle: to.fullPath,
+                    data,
+                    groupId: to.meta.__navigationId,
+                },
+            });
+        });
+        router.afterEach((to, from, failure) => {
+            const data = {
+                guard: formatDisplay('afterEach'),
+            };
+            if (failure) {
+                data.failure = {
+                    _custom: {
+                        type: Error,
+                        readOnly: true,
+                        display: failure ? failure.message : '',
+                        tooltip: 'Navigation Failure',
+                        value: failure,
+                    },
+                };
+                data.status = formatDisplay('❌');
+            }
+            else {
+                data.status = formatDisplay('✅');
+            }
+            // we set here to have the right order
+            data.from = formatRouteLocation(from, 'Current Location during this navigation');
+            data.to = formatRouteLocation(to, 'Target location');
+            api.addTimelineEvent({
+                layerId: navigationsLayerId,
+                event: {
+                    title: 'End of navigation',
+                    subtitle: to.fullPath,
+                    time: api.now(),
+                    data,
+                    logType: failure ? 'warning' : 'default',
+                    groupId: to.meta.__navigationId,
+                },
+            });
+        });
+        /**
+         * Inspector of Existing routes
+         */
+        const routerInspectorId = 'router-inspector:' + id;
+        api.addInspector({
+            id: routerInspectorId,
+            label: 'Routes' + (id ? ' ' + id : ''),
+            icon: 'book',
+            treeFilterPlaceholder: 'Search routes',
+        });
+        function refreshRoutesView() {
+            // the routes view isn't active
+            if (!activeRoutesPayload)
+                return;
+            const payload = activeRoutesPayload;
+            // children routes will appear as nested
+            let routes = matcher.getRoutes().filter(route => !route.parent);
+            // reset match state to false
+            routes.forEach(resetMatchStateOnRouteRecord);
+            // apply a match state if there is a payload
+            if (payload.filter) {
+                routes = routes.filter(route => 
+                // save matches state based on the payload
+                isRouteMatching(route, payload.filter.toLowerCase()));
+            }
+            // mark active routes
+            routes.forEach(route => markRouteRecordActive(route, router.currentRoute.value));
+            payload.rootNodes = routes.map(formatRouteRecordForInspector);
+        }
+        let activeRoutesPayload;
+        api.on.getInspectorTree(payload => {
+            activeRoutesPayload = payload;
+            if (payload.app === app && payload.inspectorId === routerInspectorId) {
+                refreshRoutesView();
+            }
+        });
+        /**
+         * Display information about the currently selected route record
+         */
+        api.on.getInspectorState(payload => {
+            if (payload.app === app && payload.inspectorId === routerInspectorId) {
+                const routes = matcher.getRoutes();
+                const route = routes.find(route => route.record.__vd_id === payload.nodeId);
+                if (route) {
+                    payload.state = {
+                        options: formatRouteRecordMatcherForStateInspector(route),
+                    };
+                }
+            }
+        });
+        api.sendInspectorTree(routerInspectorId);
+        api.sendInspectorState(routerInspectorId);
+    });
 }
 function modifierForKey(key) {
     if (key.optional) {
@@ -2607,7 +2806,7 @@ function createRouter(options) {
     const beforeGuards = useCallbacks();
     const beforeResolveGuards = useCallbacks();
     const afterGuards = useCallbacks();
-    const currentRoute = shallowRef(START_LOCATION_NORMALIZED);
+    const currentRoute = vue.shallowRef(START_LOCATION_NORMALIZED);
     let pendingLocation = START_LOCATION_NORMALIZED;
     // leave the scrollRestoration if no scrollBehavior is provided
     if (isBrowser && options.scrollBehavior && 'scrollRestoration' in history) {
@@ -3120,7 +3319,7 @@ function createRouter(options) {
                 history.state &&
                 history.state.scroll) ||
             null;
-        return nextTick()
+        return vue.nextTick()
             .then(() => scrollBehavior(to, from, scrollPosition))
             .then(position => position && scrollToPosition(position))
             .catch(err => triggerError(err, to, from));
@@ -3153,7 +3352,7 @@ function createRouter(options) {
             app.config.globalProperties.$router = router;
             Object.defineProperty(app.config.globalProperties, '$route', {
                 enumerable: true,
-                get: () => unref(currentRoute),
+                get: () => vue.unref(currentRoute),
             });
             // this initial navigation is only necessary on client, on server it doesn't
             // make sense because it will create an extra unnecessary navigation and could
@@ -3172,10 +3371,10 @@ function createRouter(options) {
             const reactiveRoute = {};
             for (const key in START_LOCATION_NORMALIZED) {
                 // @ts-expect-error: the key matches
-                reactiveRoute[key] = computed(() => currentRoute.value[key]);
+                reactiveRoute[key] = vue.computed(() => currentRoute.value[key]);
             }
             app.provide(routerKey, router);
-            app.provide(routeLocationKey, reactive(reactiveRoute));
+            app.provide(routeLocationKey, vue.reactive(reactiveRoute));
             app.provide(routerViewLocationKey, currentRoute);
             const unmountApp = app.unmount;
             installedApps.add(app);
@@ -3231,14 +3430,34 @@ function extractChangingRecords(to, from) {
  * templates.
  */
 function useRouter() {
-    return inject(routerKey);
+    return vue.inject(routerKey);
 }
 /**
  * Returns the current route location. Equivalent to using `$route` inside
  * templates.
  */
 function useRoute() {
-    return inject(routeLocationKey);
+    return vue.inject(routeLocationKey);
 }
 
-export { NavigationFailureType, RouterLink, RouterView, START_LOCATION_NORMALIZED as START_LOCATION, createMemoryHistory, createRouter, createRouterMatcher, createWebHashHistory, createWebHistory, isNavigationFailure, matchedRouteKey, onBeforeRouteLeave, onBeforeRouteUpdate, parseQuery, routeLocationKey, routerKey, routerViewLocationKey, stringifyQuery, useLink, useRoute, useRouter, viewDepthKey };
+exports.RouterLink = RouterLink;
+exports.RouterView = RouterView;
+exports.START_LOCATION = START_LOCATION_NORMALIZED;
+exports.createMemoryHistory = createMemoryHistory;
+exports.createRouter = createRouter;
+exports.createRouterMatcher = createRouterMatcher;
+exports.createWebHashHistory = createWebHashHistory;
+exports.createWebHistory = createWebHistory;
+exports.isNavigationFailure = isNavigationFailure;
+exports.matchedRouteKey = matchedRouteKey;
+exports.onBeforeRouteLeave = onBeforeRouteLeave;
+exports.onBeforeRouteUpdate = onBeforeRouteUpdate;
+exports.parseQuery = parseQuery;
+exports.routeLocationKey = routeLocationKey;
+exports.routerKey = routerKey;
+exports.routerViewLocationKey = routerViewLocationKey;
+exports.stringifyQuery = stringifyQuery;
+exports.useLink = useLink;
+exports.useRoute = useRoute;
+exports.useRouter = useRouter;
+exports.viewDepthKey = viewDepthKey;

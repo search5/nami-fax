@@ -2,22 +2,18 @@
 
 {% block content %}
 <div class="content" id="app">
-  <h1><span class="font-semi-bold">Pyramid</span> <span class="smaller">${ message }</span></h1>
-  <p class="lead">Welcome to <span class="font-normal">{{project}}</span>, a&nbsp;Pyramid application generated&nbsp;by<br><span class="font-normal">Cookiecutter</span>.</p>
+  <h1>Hello App!</h1>
+  <p>
+    <!-- use the router-link component for navigation. -->
+    <!-- specify the link by passing the `to` prop. -->
+    <!-- `<router-link>` will render an `<a>` tag with the correct `href` attribute -->
+    <router-link to="/">Go to Home</router-link>
+    <router-link to="/about">Go to About</router-link>
+  </p>
+  <!-- route outlet -->
+  <!-- component matched by the route will render here -->
+  <router-view></router-view>
 </div>
 
-<script type="module">
-  import { createApp } from 'vue'
-  
-  createApp({
-    compilerOptions: {
-    delimiters: ["${", "}"]
-  },
-    data() {
-      return {
-        message: 'Hello Vue!'
-      }
-    }
-  }).mount('div#app')
-</script>
+<script type="module" src="{{ request.static_url('namifax:static/namifax/main.js') }}"></script>
 {% endblock content %}

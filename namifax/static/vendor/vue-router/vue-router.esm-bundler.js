@@ -4,14 +4,14 @@
   * @license MIT
   */
 import { getCurrentInstance, inject, onUnmounted, onDeactivated, onActivated, computed, unref, watchEffect, defineComponent, reactive, h, provide, ref, watch, shallowRef, nextTick } from 'vue';
-//import { setupDevtoolsPlugin } from '@vue/devtools-api';
+import { setupDevtoolsPlugin } from '@vue/devtools-api';
 
 const hasSymbol = typeof Symbol === 'function' && typeof Symbol.toStringTag === 'symbol';
 const PolySymbol = (name) => 
 // vr = vue router
 hasSymbol
-    ? Symbol('[vue-router]: ' + name )
-    : ('[vue-router]: ' ) + name;
+    ? Symbol((process.env.NODE_ENV !== 'production') ? '[vue-router]: ' + name : name)
+    : ((process.env.NODE_ENV !== 'production') ? '[vue-router]: ' : '_vr_') + name;
 // rvlm = Router View Location Matched
 /**
  * RouteRecord being rendered by the closest ancestor Router View. Used for
@@ -20,35 +20,35 @@ hasSymbol
  *
  * @internal
  */
-const matchedRouteKey = /*#__PURE__*/ PolySymbol('router view location matched' );
+const matchedRouteKey = /*#__PURE__*/ PolySymbol((process.env.NODE_ENV !== 'production') ? 'router view location matched' : 'rvlm');
 /**
  * Allows overriding the router view depth to control which component in
  * `matched` is rendered. rvd stands for Router View Depth
  *
  * @internal
  */
-const viewDepthKey = /*#__PURE__*/ PolySymbol('router view depth' );
+const viewDepthKey = /*#__PURE__*/ PolySymbol((process.env.NODE_ENV !== 'production') ? 'router view depth' : 'rvd');
 /**
  * Allows overriding the router instance returned by `useRouter` in tests. r
  * stands for router
  *
  * @internal
  */
-const routerKey = /*#__PURE__*/ PolySymbol('router' );
+const routerKey = /*#__PURE__*/ PolySymbol((process.env.NODE_ENV !== 'production') ? 'router' : 'r');
 /**
  * Allows overriding the current route returned by `useRoute` in tests. rl
  * stands for route location
  *
  * @internal
  */
-const routeLocationKey = /*#__PURE__*/ PolySymbol('route location' );
+const routeLocationKey = /*#__PURE__*/ PolySymbol((process.env.NODE_ENV !== 'production') ? 'route location' : 'rl');
 /**
  * Allows overriding the current route used by router-view. Internally this is
  * used when the `route` prop is passed.
  *
  * @internal
  */
-const routerViewLocationKey = /*#__PURE__*/ PolySymbol('router view location' );
+const routerViewLocationKey = /*#__PURE__*/ PolySymbol((process.env.NODE_ENV !== 'production') ? 'router view location' : 'rvl');
 
 const isBrowser = typeof window !== 'undefined';
 
@@ -199,7 +199,7 @@ function isEquivalentArray(a, b) {
 function resolveRelativePath(to, from) {
     if (to.startsWith('/'))
         return to;
-    if (!from.startsWith('/')) {
+    if ((process.env.NODE_ENV !== 'production') && !from.startsWith('/')) {
         warn(`Cannot resolve a relative location without an absolute path. Trying to resolve "${to}" from "${from}". It should look like "/${from}".`);
         return to;
     }
@@ -317,7 +317,7 @@ function scrollToPosition(position) {
          *   https://mathiasbynens.be/notes/html5-id-class.
          * - Practical example: https://mathiasbynens.be/demo/html5-id
          */
-        if (typeof position.el === 'string') {
+        if ((process.env.NODE_ENV !== 'production') && typeof position.el === 'string') {
             if (!isIdSelector || !document.getElementById(position.el.slice(1))) {
                 try {
                     const foundEl = document.querySelector(position.el);
@@ -340,7 +340,8 @@ function scrollToPosition(position) {
                 : document.querySelector(positionEl)
             : positionEl;
         if (!el) {
-            warn(`Couldn't find element using selector "${position.el}" returned by scrollBehavior.`);
+            (process.env.NODE_ENV !== 'production') &&
+                warn(`Couldn't find element using selector "${position.el}" returned by scrollBehavior.`);
             return;
         }
         scrollToOptions = getElementPosition(el, position);
@@ -541,8 +542,11 @@ function useHistoryStateNavigation(base) {
             historyState.value = state;
         }
         catch (err) {
-            {
+            if ((process.env.NODE_ENV !== 'production')) {
                 warn('Error with push/replace State', err);
+            }
+            else {
+                console.error(err);
             }
             // Force the navigation, this also resets the call count
             location[replace ? 'replace' : 'assign'](url);
@@ -566,7 +570,7 @@ function useHistoryStateNavigation(base) {
             forward: to,
             scroll: computeScrollPosition(),
         });
-        if (!history.state) {
+        if ((process.env.NODE_ENV !== 'production') && !history.state) {
             warn(`history.state seems to have been manually replaced without preserving the necessary values. Make sure to preserve existing history state if you are manually calling history.replaceState:\n\n` +
                 `history.replaceState(history.state, '', url)\n\n` +
                 `You can find more information at https://next.router.vuejs.org/guide/migration/#usage-of-history-state.`);
@@ -734,7 +738,7 @@ function createWebHashHistory(base) {
     // allow the user to provide a `#` in the middle: `/base/#/app`
     if (!base.includes('#'))
         base += '#';
-    if (!base.endsWith('#/') && !base.endsWith('#')) {
+    if ((process.env.NODE_ENV !== 'production') && !base.endsWith('#/') && !base.endsWith('#')) {
         warn(`A hash base must end with a "#":\n"${base}" should be "${base.replace(/#.*$/, '#')}".`);
     }
     return createWebHistory(base);
@@ -774,7 +778,7 @@ const START_LOCATION_NORMALIZED = {
     redirectedFrom: undefined,
 };
 
-const NavigationFailureSymbol = /*#__PURE__*/ PolySymbol('navigation failure' );
+const NavigationFailureSymbol = /*#__PURE__*/ PolySymbol((process.env.NODE_ENV !== 'production') ? 'navigation failure' : 'nf');
 /**
  * Enumeration with all possible types for navigation failures. Can be passed to
  * {@link isNavigationFailure} to check for specific failures.
@@ -819,8 +823,14 @@ const ErrorTypeMessages = {
 };
 function createRouterError(type, params) {
     // keep full error messages in cjs versions
-    {
+    if ((process.env.NODE_ENV !== 'production') || !true) {
         return assign(new Error(ErrorTypeMessages[type](params)), {
+            type,
+            [NavigationFailureSymbol]: true,
+        }, params);
+    }
+    else {
+        return assign(new Error(), {
             type,
             [NavigationFailureSymbol]: true,
         }, params);
@@ -1083,8 +1093,9 @@ function tokenizePath(path) {
     if (path === '/')
         return [[ROOT_TOKEN]];
     if (!path.startsWith('/')) {
-        throw new Error(`Route paths should start with a "/": "${path}" should be "/${path}".`
-            );
+        throw new Error((process.env.NODE_ENV !== 'production')
+            ? `Route paths should start with a "/": "${path}" should be "/${path}".`
+            : `Invalid path "${path}"`);
     }
     // if (tokenCache.has(path)) return tokenCache.get(path)!
     function crash(message) {
@@ -1223,7 +1234,7 @@ function tokenizePath(path) {
 function createRouteRecordMatcher(record, parent, options) {
     const parser = tokensToParser(tokenizePath(record.path), options);
     // warn against params with the same name
-    {
+    if ((process.env.NODE_ENV !== 'production')) {
         const existingKeys = new Set();
         for (const key of parser.keys) {
             if (existingKeys.has(key.name))
@@ -1306,19 +1317,19 @@ function createRouterMatcher(routes, globalOptions) {
                 normalizedRecord.path =
                     parent.record.path + (path && connectingSlash + path);
             }
-            if (normalizedRecord.path === '*') {
+            if ((process.env.NODE_ENV !== 'production') && normalizedRecord.path === '*') {
                 throw new Error('Catch all routes ("*") must now be defined using a param with a custom regexp.\n' +
                     'See more at https://next.router.vuejs.org/guide/migration/#removed-star-or-catch-all-routes.');
             }
             // create the object before hand so it can be passed to children
             matcher = createRouteRecordMatcher(normalizedRecord, parent, options);
-            if (parent && path[0] === '/')
+            if ((process.env.NODE_ENV !== 'production') && parent && path[0] === '/')
                 checkMissingParamsInAbsolutePath(matcher, parent);
             // if we are an alias we must tell the original record that we exist
             // so we can be removed
             if (originalRecord) {
                 originalRecord.alias.push(matcher);
-                {
+                if ((process.env.NODE_ENV !== 'production')) {
                     checkSameParams(originalRecord, matcher);
                 }
             }
@@ -1417,7 +1428,7 @@ function createRouterMatcher(routes, globalOptions) {
             // no need to resolve the path with the matcher as it was provided
             // this also allows the user to control the encoding
             path = location.path;
-            if (!path.startsWith('/')) {
+            if ((process.env.NODE_ENV !== 'production') && !path.startsWith('/')) {
                 warn(`The Matcher cannot resolve relative paths but received "${path}". Unless you directly called \`matcher.resolve("${path}")\`, this is probably a bug in vue-router. Please open an issue at https://new-issue.vuejs.org/?repo=vuejs/router.`);
             }
             matcher = matchers.find(m => m.re.test(path));
@@ -1707,7 +1718,7 @@ function decode(text) {
         return decodeURIComponent('' + text);
     }
     catch (err) {
-        warn(`Error decoding "${text}". Using original value`);
+        (process.env.NODE_ENV !== 'production') && warn(`Error decoding "${text}". Using original value`);
     }
     return '' + text;
 }
@@ -1853,7 +1864,7 @@ function registerGuard(record, name, guard) {
  * @param leaveGuard - {@link NavigationGuard}
  */
 function onBeforeRouteLeave(leaveGuard) {
-    if (!getCurrentInstance()) {
+    if ((process.env.NODE_ENV !== 'production') && !getCurrentInstance()) {
         warn('getCurrentInstance() returned null. onBeforeRouteLeave() must be called at the top of a setup function');
         return;
     }
@@ -1861,7 +1872,8 @@ function onBeforeRouteLeave(leaveGuard) {
     // to avoid warning
     {}).value;
     if (!activeRecord) {
-        warn('No active route record was found when calling `onBeforeRouteLeave()`. Make sure you call this function inside of a component child of <router-view>. Maybe you called it inside of App.vue?');
+        (process.env.NODE_ENV !== 'production') &&
+            warn('No active route record was found when calling `onBeforeRouteLeave()`. Make sure you call this function inside of a component child of <router-view>. Maybe you called it inside of App.vue?');
         return;
     }
     registerGuard(activeRecord, 'leaveGuards', leaveGuard);
@@ -1874,7 +1886,7 @@ function onBeforeRouteLeave(leaveGuard) {
  * @param updateGuard - {@link NavigationGuard}
  */
 function onBeforeRouteUpdate(updateGuard) {
-    if (!getCurrentInstance()) {
+    if ((process.env.NODE_ENV !== 'production') && !getCurrentInstance()) {
         warn('getCurrentInstance() returned null. onBeforeRouteUpdate() must be called at the top of a setup function');
         return;
     }
@@ -1882,7 +1894,8 @@ function onBeforeRouteUpdate(updateGuard) {
     // to avoid warning
     {}).value;
     if (!activeRecord) {
-        warn('No active route record was found when calling `onBeforeRouteUpdate()`. Make sure you call this function inside of a component child of <router-view>. Maybe you called it inside of App.vue?');
+        (process.env.NODE_ENV !== 'production') &&
+            warn('No active route record was found when calling `onBeforeRouteUpdate()`. Make sure you call this function inside of a component child of <router-view>. Maybe you called it inside of App.vue?');
         return;
     }
     registerGuard(activeRecord, 'updateGuards', updateGuard);
@@ -1918,11 +1931,11 @@ function guardToPromiseFn(guard, to, from, record, name) {
             }
         };
         // wrapping with Promise.resolve allows it to work with both async and sync guards
-        const guardReturn = guard.call(record && record.instances[name], to, from, canOnlyBeCalledOnce(next, to, from) );
+        const guardReturn = guard.call(record && record.instances[name], to, from, (process.env.NODE_ENV !== 'production') ? canOnlyBeCalledOnce(next, to, from) : next);
         let guardCall = Promise.resolve(guardReturn);
         if (guard.length < 3)
             guardCall = guardCall.then(next);
-        if (guard.length > 2) {
+        if ((process.env.NODE_ENV !== 'production') && guard.length > 2) {
             const message = `The "next" callback was never called inside of ${guard.name ? '"' + guard.name + '"' : ''}:\n${guard.toString()}\n. If you are returning a value instead of calling "next", make sure to remove the "next" parameter from your function.`;
             if (typeof guardReturn === 'object' && 'then' in guardReturn) {
                 guardCall = guardCall.then(resolvedValue => {
@@ -1963,7 +1976,7 @@ function extractComponentsGuards(matched, guardType, to, from) {
     for (const record of matched) {
         for (const name in record.components) {
             let rawComponent = record.components[name];
-            {
+            if ((process.env.NODE_ENV !== 'production')) {
                 if (!rawComponent ||
                     (typeof rawComponent !== 'object' &&
                         typeof rawComponent !== 'function')) {
@@ -2006,7 +2019,7 @@ function extractComponentsGuards(matched, guardType, to, from) {
             else {
                 // start requesting the chunk already
                 let componentPromise = rawComponent();
-                if (!('catch' in componentPromise)) {
+                if ((process.env.NODE_ENV !== 'production') && !('catch' in componentPromise)) {
                     warn(`Component "${name}" in record with path "${record.path}" is a function that does not return a Promise. If you were passing a functional component, make sure to add a "displayName" to the component. This will break in production if not fixed.`);
                     componentPromise = Promise.resolve(componentPromise);
                 }
@@ -2084,7 +2097,7 @@ function useLink(props) {
         return Promise.resolve();
     }
     // devtools only
-    if (isBrowser) {
+    if (((process.env.NODE_ENV !== 'production') || __VUE_PROD_DEVTOOLS__) && isBrowser) {
         const instance = getCurrentInstance();
         if (instance) {
             const linkContextDevtools = {
@@ -2235,7 +2248,7 @@ const RouterViewImpl = /*#__PURE__*/ defineComponent({
         route: Object,
     },
     setup(props, { attrs, slots }) {
-        warnDeprecatedUsage();
+        (process.env.NODE_ENV !== 'production') && warnDeprecatedUsage();
         const injectedRoute = inject(routerViewLocationKey);
         const routeToDisplay = computed(() => props.route || injectedRoute.value);
         const depth = inject(viewDepthKey, 0);
@@ -2305,7 +2318,8 @@ const RouterViewImpl = /*#__PURE__*/ defineComponent({
                 onVnodeUnmounted,
                 ref: viewRef,
             }));
-            if (isBrowser &&
+            if (((process.env.NODE_ENV !== 'production') || __VUE_PROD_DEVTOOLS__) &&
+                isBrowser &&
                 component.ref) {
                 // TODO: can display if it's an alias, its props
                 const info = {
@@ -2392,7 +2406,202 @@ function addDevtools(app, router, matcher) {
     router.__hasDevtools = true;
     // increment to support multiple router instances
     const id = routerId++;
-
+    setupDevtoolsPlugin({
+        id: 'org.vuejs.router' + (id ? '.' + id : ''),
+        label: 'Vue Router',
+        packageName: 'vue-router',
+        homepage: 'https://router.vuejs.org',
+        logo: 'https://router.vuejs.org/logo.png',
+        componentStateTypes: ['Routing'],
+        app,
+    }, api => {
+        // display state added by the router
+        api.on.inspectComponent((payload, ctx) => {
+            if (payload.instanceData) {
+                payload.instanceData.state.push({
+                    type: 'Routing',
+                    key: '$route',
+                    editable: false,
+                    value: formatRouteLocation(router.currentRoute.value, 'Current Route'),
+                });
+            }
+        });
+        // mark router-link as active and display tags on router views
+        api.on.visitComponentTree(({ treeNode: node, componentInstance }) => {
+            if (componentInstance.__vrv_devtools) {
+                const info = componentInstance.__vrv_devtools;
+                node.tags.push({
+                    label: (info.name ? `${info.name.toString()}: ` : '') + info.path,
+                    textColor: 0,
+                    tooltip: 'This component is rendered by &lt;router-view&gt;',
+                    backgroundColor: PINK_500,
+                });
+            }
+            // if multiple useLink are used
+            if (Array.isArray(componentInstance.__vrl_devtools)) {
+                componentInstance.__devtoolsApi = api;
+                componentInstance.__vrl_devtools.forEach(devtoolsData => {
+                    let backgroundColor = ORANGE_400;
+                    let tooltip = '';
+                    if (devtoolsData.isExactActive) {
+                        backgroundColor = LIME_500;
+                        tooltip = 'This is exactly active';
+                    }
+                    else if (devtoolsData.isActive) {
+                        backgroundColor = BLUE_600;
+                        tooltip = 'This link is active';
+                    }
+                    node.tags.push({
+                        label: devtoolsData.route.path,
+                        textColor: 0,
+                        tooltip,
+                        backgroundColor,
+                    });
+                });
+            }
+        });
+        watch(router.currentRoute, () => {
+            // refresh active state
+            refreshRoutesView();
+            api.notifyComponentUpdate();
+            api.sendInspectorTree(routerInspectorId);
+            api.sendInspectorState(routerInspectorId);
+        });
+        const navigationsLayerId = 'router:navigations:' + id;
+        api.addTimelineLayer({
+            id: navigationsLayerId,
+            label: `Router${id ? ' ' + id : ''} Navigations`,
+            color: 0x40a8c4,
+        });
+        // const errorsLayerId = 'router:errors'
+        // api.addTimelineLayer({
+        //   id: errorsLayerId,
+        //   label: 'Router Errors',
+        //   color: 0xea5455,
+        // })
+        router.onError((error, to) => {
+            api.addTimelineEvent({
+                layerId: navigationsLayerId,
+                event: {
+                    title: 'Error during Navigation',
+                    subtitle: to.fullPath,
+                    logType: 'error',
+                    time: api.now(),
+                    data: { error },
+                    groupId: to.meta.__navigationId,
+                },
+            });
+        });
+        // attached to `meta` and used to group events
+        let navigationId = 0;
+        router.beforeEach((to, from) => {
+            const data = {
+                guard: formatDisplay('beforeEach'),
+                from: formatRouteLocation(from, 'Current Location during this navigation'),
+                to: formatRouteLocation(to, 'Target location'),
+            };
+            // Used to group navigations together, hide from devtools
+            Object.defineProperty(to.meta, '__navigationId', {
+                value: navigationId++,
+            });
+            api.addTimelineEvent({
+                layerId: navigationsLayerId,
+                event: {
+                    time: api.now(),
+                    title: 'Start of navigation',
+                    subtitle: to.fullPath,
+                    data,
+                    groupId: to.meta.__navigationId,
+                },
+            });
+        });
+        router.afterEach((to, from, failure) => {
+            const data = {
+                guard: formatDisplay('afterEach'),
+            };
+            if (failure) {
+                data.failure = {
+                    _custom: {
+                        type: Error,
+                        readOnly: true,
+                        display: failure ? failure.message : '',
+                        tooltip: 'Navigation Failure',
+                        value: failure,
+                    },
+                };
+                data.status = formatDisplay('❌');
+            }
+            else {
+                data.status = formatDisplay('✅');
+            }
+            // we set here to have the right order
+            data.from = formatRouteLocation(from, 'Current Location during this navigation');
+            data.to = formatRouteLocation(to, 'Target location');
+            api.addTimelineEvent({
+                layerId: navigationsLayerId,
+                event: {
+                    title: 'End of navigation',
+                    subtitle: to.fullPath,
+                    time: api.now(),
+                    data,
+                    logType: failure ? 'warning' : 'default',
+                    groupId: to.meta.__navigationId,
+                },
+            });
+        });
+        /**
+         * Inspector of Existing routes
+         */
+        const routerInspectorId = 'router-inspector:' + id;
+        api.addInspector({
+            id: routerInspectorId,
+            label: 'Routes' + (id ? ' ' + id : ''),
+            icon: 'book',
+            treeFilterPlaceholder: 'Search routes',
+        });
+        function refreshRoutesView() {
+            // the routes view isn't active
+            if (!activeRoutesPayload)
+                return;
+            const payload = activeRoutesPayload;
+            // children routes will appear as nested
+            let routes = matcher.getRoutes().filter(route => !route.parent);
+            // reset match state to false
+            routes.forEach(resetMatchStateOnRouteRecord);
+            // apply a match state if there is a payload
+            if (payload.filter) {
+                routes = routes.filter(route => 
+                // save matches state based on the payload
+                isRouteMatching(route, payload.filter.toLowerCase()));
+            }
+            // mark active routes
+            routes.forEach(route => markRouteRecordActive(route, router.currentRoute.value));
+            payload.rootNodes = routes.map(formatRouteRecordForInspector);
+        }
+        let activeRoutesPayload;
+        api.on.getInspectorTree(payload => {
+            activeRoutesPayload = payload;
+            if (payload.app === app && payload.inspectorId === routerInspectorId) {
+                refreshRoutesView();
+            }
+        });
+        /**
+         * Display information about the currently selected route record
+         */
+        api.on.getInspectorState(payload => {
+            if (payload.app === app && payload.inspectorId === routerInspectorId) {
+                const routes = matcher.getRoutes();
+                const route = routes.find(route => route.record.__vd_id === payload.nodeId);
+                if (route) {
+                    payload.state = {
+                        options: formatRouteRecordMatcherForStateInspector(route),
+                    };
+                }
+            }
+        });
+        api.sendInspectorTree(routerInspectorId);
+        api.sendInspectorState(routerInspectorId);
+    });
 }
 function modifierForKey(key) {
     if (key.optional) {
@@ -2601,7 +2810,7 @@ function createRouter(options) {
     const parseQuery$1 = options.parseQuery || parseQuery;
     const stringifyQuery$1 = options.stringifyQuery || stringifyQuery;
     const routerHistory = options.history;
-    if (!routerHistory)
+    if ((process.env.NODE_ENV !== 'production') && !routerHistory)
         throw new Error('Provide the "history" option when calling "createRouter()":' +
             ' https://next.router.vuejs.org/api/#history.');
     const beforeGuards = useCallbacks();
@@ -2635,7 +2844,7 @@ function createRouter(options) {
         if (recordMatcher) {
             matcher.removeRoute(recordMatcher);
         }
-        else {
+        else if ((process.env.NODE_ENV !== 'production')) {
             warn(`Cannot remove non-existent route "${String(name)}"`);
         }
     }
@@ -2653,7 +2862,7 @@ function createRouter(options) {
             const locationNormalized = parseURL(parseQuery$1, rawLocation, currentLocation.path);
             const matchedRoute = matcher.resolve({ path: locationNormalized.path }, currentLocation);
             const href = routerHistory.createHref(locationNormalized.fullPath);
-            {
+            if ((process.env.NODE_ENV !== 'production')) {
                 if (href.startsWith('//'))
                     warn(`Location "${rawLocation}" resolved to "${href}". A resolved location cannot start with multiple slashes.`);
                 else if (!matchedRoute.matched.length) {
@@ -2671,7 +2880,8 @@ function createRouter(options) {
         let matcherLocation;
         // path could be relative in object as well
         if ('path' in rawLocation) {
-            if ('params' in rawLocation &&
+            if ((process.env.NODE_ENV !== 'production') &&
+                'params' in rawLocation &&
                 !('name' in rawLocation) &&
                 // @ts-expect-error: the type is never
                 Object.keys(rawLocation.params).length) {
@@ -2701,7 +2911,7 @@ function createRouter(options) {
         }
         const matchedRoute = matcher.resolve(matcherLocation, currentLocation);
         const hash = rawLocation.hash || '';
-        if (hash && !hash.startsWith('#')) {
+        if ((process.env.NODE_ENV !== 'production') && hash && !hash.startsWith('#')) {
             warn(`A \`hash\` should always start with the character "#". Replace "${hash}" with "#${hash}".`);
         }
         // decoding them) the matcher might have merged current location params so
@@ -2712,7 +2922,7 @@ function createRouter(options) {
             path: matchedRoute.path,
         }));
         const href = routerHistory.createHref(fullPath);
-        {
+        if ((process.env.NODE_ENV !== 'production')) {
             if (href.startsWith('//')) {
                 warn(`Location "${rawLocation}" resolved to "${href}". A resolved location cannot start with multiple slashes.`);
             }
@@ -2773,7 +2983,8 @@ function createRouter(options) {
                 // the router parse them again
                 newTargetLocation.params = {};
             }
-            if (!('path' in newTargetLocation) &&
+            if ((process.env.NODE_ENV !== 'production') &&
+                !('path' in newTargetLocation) &&
                 !('name' in newTargetLocation)) {
                 warn(`Invalid redirect found:\n${JSON.stringify(newTargetLocation, null, 2)}\n when navigating to "${to.fullPath}". A redirect must contain a name or path. This will break in production.`);
                 throw new Error('Invalid redirect');
@@ -2827,7 +3038,8 @@ function createRouter(options) {
             .then((failure) => {
             if (failure) {
                 if (isNavigationFailure(failure, 2 /* NAVIGATION_GUARD_REDIRECT */)) {
-                    if (// we are redirecting to the same location we were already at
+                    if ((process.env.NODE_ENV !== 'production') &&
+                        // we are redirecting to the same location we were already at
                         isSameRouteLocation(stringifyQuery$1, resolve(failure.to), toLocation) &&
                         // and we have done it a couple of times
                         redirectedFrom &&
@@ -3084,7 +3296,7 @@ function createRouter(options) {
             list.forEach(handler => handler(error, to, from));
         }
         else {
-            {
+            if ((process.env.NODE_ENV !== 'production')) {
                 warn('uncaught error during route navigation:');
             }
             console.error(error);
@@ -3166,7 +3378,8 @@ function createRouter(options) {
                 // see above
                 started = true;
                 push(routerHistory.location).catch(err => {
-                    warn('Unexpected error when starting the router:', err);
+                    if ((process.env.NODE_ENV !== 'production'))
+                        warn('Unexpected error when starting the router:', err);
                 });
             }
             const reactiveRoute = {};
@@ -3192,7 +3405,7 @@ function createRouter(options) {
                 }
                 unmountApp();
             };
-            if (isBrowser) {
+            if (((process.env.NODE_ENV !== 'production') || __VUE_PROD_DEVTOOLS__) && isBrowser) {
                 addDevtools(app, router, matcher);
             }
         },

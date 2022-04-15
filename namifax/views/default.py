@@ -29,3 +29,26 @@ might be caused by one of the following things:
 After you fix the problem, please restart the Pyramid application to
 try it again.
 """
+
+@view_config(route_name='login', request_method='POST', renderer='json')
+def login(request):
+    print(request)
+    login = request.POST['login']
+    password = request.POST['password']
+    # user_id = authenticate(login, password)  # You will need to implement this.
+    user_id = 'search5'
+    if user_id:
+        return {
+            'result': 'ok',
+            'token': request.create_jwt_token(user_id, roles=['admin'],
+                                            userName='이지호')
+        }
+    else:
+        return {
+            'result': 'error'
+        }
+
+
+@view_config(route_name='view_a', request_method='GET', permission="admin", renderer='json')
+def view_a(request):
+    return {'success': True}
