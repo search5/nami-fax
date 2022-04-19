@@ -20,32 +20,41 @@ def setup_models(dbsession):
                                     wasreset=True,
                                     email='root@localhost',
                                     is_admin=True, 
-                                    language = 'ko',
+                                    language='ko',
                                     acc_enabled=True,
                                     any_modem=True,
-                                    superuse0r=True)
-    model_new_record.add(model)
+                                    superuser=True)
+    model_new_record.append(model)
     
     model = models.UserPasswordsModel(uid=1, pwdhash='5f4dcc3b5aa765d61d8327deb882cf99')
-    model_new_record.add(model)
+    model_new_record.append(model)
 
     model = models.AddressBookModel(company='XXXXXXX')
-    model_new_record.add(model)
+    model_new_record.append(model)
 
-    model = models.AddressBookFAXModel(abook_id = 1, faxnumber='XXXXXXX')
-    model_new_record.add(model)
+    model = models.AddressBookFAXModel(abook_id=1, faxnumber='XXXXXXX')
+    model_new_record.append(model)
 
-    model1 = models.CoverPagesModel(title='Generic A4', file='cover.ps')
-    model_new_record.add(model)
+    model = models.CoverPagesModel(title='Generic A4', file='cover.ps')
+    model_new_record.append(model)
     
     model = models.CoverPagesModel(title='Generic Letter', file='cover-letter.ps')
-    model_new_record.add(model)
+    model_new_record.append(model)
     
     model = models.CoverPagesModel(title='Generic HTML', file='coverpage.html')
-    model_new_record.add(model)
+    model_new_record.append(model)
 
     for item in model_new_record:
         dbsession.add(item)
+
+
+def parse_args(argv):
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        'config_uri',
+        help='Configuration file, e.g., development.ini',
+    )
+    return parser.parse_args(argv[1:])
 
 
 def main(argv=sys.argv):
