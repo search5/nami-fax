@@ -1,1 +1,2 @@
-# TODO
+def main():
+    return 'TODO'
