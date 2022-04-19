@@ -9,4 +9,4 @@ class UserPasswordsModel(Base):
 
     upid = Column(BigInteger, Identity(start=1), primary_key=True)
     uid = Column(Integer, nullable=False)
-    pwdhash = Column(String(32), nullable=False)
+    pwdhash = Column(String(60), nullable=False)

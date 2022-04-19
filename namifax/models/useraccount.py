@@ -11,7 +11,7 @@ class UserAccountModel(Base):
     uid = Column(BigInteger, Identity(start=1), primary_key=True)
     name = Column(String(40))
     username = Column(String(40), nullable=False)
-    password = Column(String(32), nullable=False)
+    password = Column(String(60), nullable=False)
     email = Column(String(99), nullable=False)
     email_sig = Column(Text)
     user_tsi = Column(String(100))

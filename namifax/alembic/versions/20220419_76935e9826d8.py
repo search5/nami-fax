@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 2ca956711e26
+Revision ID: 76935e9826d8
 Revises: 
-Create Date: 2022-04-10 16:08:01.419720
+Create Date: 2022-04-19 17:06:55.816289
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '2ca956711e26'
+revision = '76935e9826d8'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -126,7 +126,7 @@ def upgrade():
     sa.Column('uid', sa.BigInteger(), sa.Identity(always=False, start=1), nullable=False),
     sa.Column('name', sa.String(length=40), nullable=True),
     sa.Column('username', sa.String(length=40), nullable=False),
-    sa.Column('password', sa.String(length=32), nullable=False),
+    sa.Column('password', sa.String(length=60), nullable=False),
     sa.Column('email', sa.String(length=99), nullable=False),
     sa.Column('email_sig', sa.Text(), nullable=True),
     sa.Column('user_tsi', sa.String(length=100), nullable=True),
@@ -159,7 +159,7 @@ def upgrade():
     op.create_table('UserPasswords',
     sa.Column('upid', sa.BigInteger(), sa.Identity(always=False, start=1), nullable=False),
     sa.Column('uid', sa.Integer(), nullable=False),
-    sa.Column('pwdhash', sa.String(length=32), nullable=False),
+    sa.Column('pwdhash', sa.String(length=60), nullable=False),
     sa.PrimaryKeyConstraint('upid', name=op.f('pk_UserPasswords'))
     )
     # ### end Alembic commands ###

@@ -16,7 +16,7 @@ def setup_models(dbsession):
 
     model = models.UserAccountModel(name='NamiFAX Admin',
                                     username='admin',
-                                    password='5f4dcc3b5aa765d61d8327deb882cf99',
+                                    password='$2b$12$7ODaX6PcKO/nwLg/pDcaNO.jXAk4gp7pjND/a.H.RIZU7E1HYozv.',
                                     wasreset=True,
                                     email='root@localhost',
                                     is_admin=True, 
@@ -26,7 +26,7 @@ def setup_models(dbsession):
                                     superuser=True)
     model_new_record.append(model)
     
-    model = models.UserPasswordsModel(uid=1, pwdhash='5f4dcc3b5aa765d61d8327deb882cf99')
+    model = models.UserPasswordsModel(uid=1, pwdhash='$2b$12$7ODaX6PcKO/nwLg/pDcaNO.jXAk4gp7pjND/a.H.RIZU7E1HYozv.')
     model_new_record.append(model)
 
     model = models.AddressBookModel(company='XXXXXXX')
