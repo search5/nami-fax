@@ -20,4 +20,11 @@ class Constants:
         return cls.instance
 
     def __dir__(self):
-        return tuple(self.constant_dict.keys())
+        stored_keys = list(self.constant_dict.keys())
+        merge_keys = stored_keys[:]
+
+        for item in self.local_config:
+            if item not in stored_keys:
+                merge_keys.append(item)
+
+        return merge_keys

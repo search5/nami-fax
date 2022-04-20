@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="{{ request.locale_name }}">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={$LANG.ISO}" />
+<title>AvantFAX - Admin Login</title>
+<link rel="stylesheet" href="{{ request.static_url('namifax:static/admin/admin.css') }}" type="text/css" />
+<link rel="stylesheet" href="{{ request.static_url('namifax:static/css/forms.css') }}" type="text/css" />
+<link rel="stylesheet" href="{{ request.static_url('namifax:static/css/custom/custom.css') }}" type="text/css" />
+<script type="text/javascript" src="{{ request.static_url('namifax:static/js/scriptaculous-js/lib/prototype.js') }}"></script>
+<script type="text/javascript" src="{{ request.static_url('namifax:static/js/scriptaculous-js/src/scriptaculous.js') }}"></script>
+</head>
+
+<body>
+
+<div class="tableForm" style="width:40em; padding-top: 15em">
+	<form action="TODO" method="post">
+
+	<div style="width: 24.5em; margin-left: auto; margin-right:auto">
+		<a href="{{ request.route_path('index') }}">
+            <img src="{{ request.static_url('namifax:static/images/avantfax-big.png') }}" alt="">
+        </a>
+		<p align="center"><strong>Admin Login</strong> | {{ request.NAMIFAX_VERSION }}</p>
+		<p align="center" class="servername">{{ request.NAMIFAX_SERVERNAME }}</p>
+	</div>
+	<br />
+	{% if error %}
+        <div class="error" align="center">{$error}</div>
+    {% endif %}
+	<p><label for="username">{% trans %}username{% endtrans %}:</label> <input type="text" name="username" id="username" size="20" maxlength="{$MAX_PASSWD_SIZE}" /></p>
+	<p><label for="password">{% trans %}password{% endtrans %}:</label><input type="password" name="password" id="password" size="15" maxlength="{$MAX_PASSWD_SIZE}" /></p>
+	<p align="center"><a href="{{ request.route_path('forgot') }}" class="forgot">{% trans %}Lost your Password?{% endtrans %}</a></p>
+	<br>
+	<p align="center"><input type="submit" class="inputsubmit" value="{% trans %}Login{% endtrans %}" /></p>
+	<input type="hidden" name="_submit_check" value="1" />
+	</form>
+</div>
+
+<script type="text/javascript">
+// <![CDATA[
+	$('username').focus ();
+// ]]>
+</script>
+</body>
+</html>
