@@ -17,6 +17,7 @@ def main(global_config, **settings):
     with Configurator(settings=settings) as config:
         config.include('pyramid_jinja2')
         config.include('.routes')
+        config.include('.routes_admin', route_prefix='/admin')
         config.include('.models')
         # Pyramid requires an authorization policy to be active.
         config.set_authorization_policy(ACLAuthorizationPolicy())
