@@ -251,7 +251,7 @@ const.add('SENDFAXFILETYPES', "PostScript (.ps), PDF (.pdf), TIFF (.tif), Text (
 const.add('PREV_TN', 80)  # thumbnail
 const.add('PREV_SP', 750)  # static preview
 
-const.add('NOTHUMBIMG', pkg_resources.resource_filename(__name__, f"../static/{const.NOTHUMB}"))
+const.add('NOTHUMBIMG', pkg_resources.resource_filename('namifax', f"static/{const.NOTHUMB}"))
 
 if const.ENABLE_DID_ROUTING:
     const.add('NAMIFAX_VERSION', f'{const.NAMIFAX_VERSION}&dagger')
