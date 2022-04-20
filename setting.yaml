@@ -4,19 +4,25 @@
 # @copyright	2007 - 2008 iFAX Solutions, Inc.
 # @license		Apache2 License
 FAX_DIR: /var/spool/faxes
+TMPDIR: /tmp
+# phone book for WHFC
+PHONEBOOK: /var/www/namifax/pbook.phb
+
+NAMIFAX_VERSION: 0.1
+
 AFDB_USER: namifax
 AFDB_PASS: d58fe49
 AFDB_NAME: namifax
 AFDB_ENGINE: postgresql
 AFDB_HOST: localhost
-HYLAFAX:
-  # typical on Linux, while /usr/local/bin would be typical for FreeBSD
-  BINARYDIR: /usr/bin
-  # if you installed hylafax from source, your installation may default to /usr/local
-  HYLAFAX_PREFIX: /usr
-  HYLASPOOL: /var/spool/hylafax
-  # Use HylaFAX's tiff2ps script (/var/spool/hylafax/bin/tiff2ps) instead of NamiFAX's tiff2ps functionality
-  HYLATIFF2PS: false
+
+# typical on Linux, while /usr/local/bin would be typical for FreeBSD
+BINARYDIR: /usr/bin
+# if you installed hylafax from source, your installation may default to /usr/local
+HYLAFAX_PREFIX: /usr
+HYLASPOOL: /var/spool/hylafax
+# Use HylaFAX's tiff2ps script (/var/spool/hylafax/bin/tiff2ps) instead of NamiFAX's tiff2ps functionality
+HYLATIFF2PS: false
 
 #
 # Configuring Caller ID
@@ -32,10 +38,9 @@ HYLAFAX:
 # CallIDPattern:    "NMBR="
 # CallIDPattern:    "NAME="
 # CallIDPattern:    "NDID="
-CALLER_ID:
-  CALLIDn_CIDNumber: 1
-  CALLIDn_CIDName: 2
-  CALLIDn_DIDNum: 3
+CALLIDn_CIDNumber: 1
+CALLIDn_CIDName: 2
+CALLIDn_DIDNum: 3
 
 #
 # Faxmail user
@@ -79,11 +84,10 @@ dft_config_lang: en
 
 # Default values for fields when sending a fax either through NamiFAX or directly through HylaFAX
 # (only if they havent been set in /etc/hylafax/hyla.conf)
-FROM:
-  FROM_COMPANY: ''
-  FROM_LOCATION: ''
-  FROM_FAXNUMBER: ''
-  FROM_VOICENUMBER: ''
+FROM_COMPANY: ''
+FROM_LOCATION: ''
+FROM_FAXNUMBER: ''
+FROM_VOICENUMBER: ''
 DEFAULT_TSI_ID: ''
 
 # enable interface to show link for downloading the original TIFF file
@@ -171,17 +175,16 @@ CPAGE_LINELEN: 80
 #
 # Printer Settings
 #
-PRINTER:
-  # Printing support for received faxes to enable support, change to true
-  FAXRCVD: false
-  # the name of the print queue or leave blank for default printer
-  NAME: ''
-  # the print spool command
-  CMD: /usr/bin/lpr
-  # the print command
-  FAX2PS: /usr/bin/fax2ps
-  # the print command for PDFs
-  PDFCMD: /usr/bin/lpr
+# Printing support for received faxes to enable support, change to true
+PRINTFAXRCVD: false
+# the name of the print queue or leave blank for default printer
+PRINTERNAME: ''
+# the print spool command
+PRINTCMD: /usr/bin/lpr
+# the print command
+PRINTFAX2PS: /usr/bin/fax2ps
+# the print command for PDFs
+PDFPRINTCMD: /usr/bin/lpr
 
 #
 # Ghostscript tweaks
@@ -195,18 +198,17 @@ DPIS: 200
 #
 # Custom Authentication settings
 #
-ALTERNATE_AUTH:
-  # If you would like to use/develop your own custom authentication backend, set ALTERNATE_AUTH_ENABLE to true and see below
-  ENABLE: false
-  # If you want to allow users who arent able to login via your custom authentication method to be able to login using
-  # their NamiFAX username and password, set ALTERNATE_AUTH_FALLBACK to true.  Otherwise, if you require all users to
-  # login using your method, set ALTERNATE_AUTH_FALLBACK to false.
-  FALLBACK: true
-  # Enter the name of your custom authentication class below.  The name of the class must be identical (case-sensitive)
-  # to the PHP file name and the class must be located in the includes/ directory.  The class file will by dynamically
-  # included by NamiFAX when needed.  Your class must implement the "CustomAuth" interface found in includes/classes.php.
-  # For an example, see includes/PAMAuth.php
-  CLASS: PAMAuth
+# If you would like to use/develop your own custom authentication backend, set ALTERNATE_AUTH_ENABLE to true and see below
+ALTERNATE_AUTH_ENABLE: false
+# If you want to allow users who arent able to login via your custom authentication method to be able to login using
+# their NamiFAX username and password, set ALTERNATE_AUTH_FALLBACK to true.  Otherwise, if you require all users to
+# login using your method, set ALTERNATE_AUTH_FALLBACK to false.
+ALTERNATE_AUTH_FALLBACK: true
+# Enter the name of your custom authentication class below.  The name of the class must be identical (case-sensitive)
+# to the PHP file name and the class must be located in the includes/ directory.  The class file will by dynamically
+# included by NamiFAX when needed.  Your class must implement the "CustomAuth" interface found in includes/classes.php.
+# For an example, see includes/PAMAuth.php
+ALTERNATE_AUTH_CLASS: PAMAuth
 
 #
 # NamiFAX System email address
@@ -247,23 +249,21 @@ INBOX_LIST_MODEM: false
 # tesseract must be installed first
 
 # set to true to enable support
-OCR:
-  ENABLE_SUPPORT: false
-  BINARY: /usr/local/bin/tesseract
-  # to use all languages, remove "-l %s" from the command
-  COMMAND: /usr/local/bin/tesseract %s %s -l %s
-  # Examples: eng, fra, deu, spa, ita, kor
-  LANGUAGE: eng
+ENABLE_OCR_SUPPORT: false
+OCR_BINARY: /usr/local/bin/tesseract
+# to use all languages, remove "-l %s" from the command
+OCR_COMMAND: /usr/local/bin/tesseract %s %s -l %s
+# Examples: eng, fra, deu, spa, ita, kor
+OCR_LANGUAGE: eng
 
 #
 # Barcode Support
 #
 # If you have the bardecode software, you can enable this functionality to automatically store any barcode data from received faxes in the database
 # Contact sales@ifax.com for details
-BARCODE:
-  ENABLE_SUPPORT: false
-  BINARY: /var/spool/hylafax/bin/bardecode
-  COMMAND: /var/spool/hylafax/bin/bardecode -t any -f %s
+ENABLE_BARDECODE_SUPPORT: false
+BARDECODE_BINARY: /var/spool/hylafax/bin/bardecode
+BARDECODE_COMMAND: /var/spool/hylafax/bin/bardecode -t any -f %s
 
 #
 # Annotation support
@@ -284,21 +284,20 @@ EMAIL_ENCODING_HTML: Base64Encoding
 EMAIL_ENCODING_CHARSET: UTF-8
 
 # SMTP server support for using external mail server (mail server not on this machine)
-SMTP:
-  # set to true to enable usage
-  USE: false
-  # set your mail server address (ie: mail.example.com, or ssl:#mail.example.com)
-  SERVER: localhost
-  # mail server port.  For SSL, try 465
-  PORT: 25
-  # set to true to enable SMTP authentication
-  AUTH: false
-  # username for authentication
-  USERNAME: ''
-  # password for authentication
-  PASSWORD: ''
-  # the value to give for HELO
-  LOCALHOST: localhost
+# set to true to enable usage
+USE_SMTPSERVER: false
+# set your mail server address (ie: mail.example.com, or ssl:#mail.example.com)
+SMTP_SERVER: localhost
+# mail server port.  For SSL, try 465
+SMTP_PORT: 25
+# set to true to enable SMTP authentication
+SMTP_AUTH: false
+# username for authentication
+SMTP_USERNAME: ''
+# password for authentication
+SMTP_PASSWORD: ''
+# the value to give for HELO
+SMTP_LOCALHOST: localhost
 
 #
 # Date format settings

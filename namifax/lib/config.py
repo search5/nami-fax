@@ -1,6 +1,8 @@
 import socket
-from collections import namedtuple
+import pkg_resources
 import yaml
+
+from . import extract_ip
 from .constant import Constants
 import os.path
 
@@ -12,11 +14,12 @@ const.add('dft_config_lang', 'en')
 const.add('EMAIL_TPL', 'en')
 
 # NamiFAX DB
-const.add('AFDB_USER', 'avantfax')
-const.add('AFDB_PASS', 'd58fe49')
-const.add('AFDB_NAME', 'avantfax')
-const.add('AFDB_ENGINE', 'mysql')
-const.add('AFDB_HOST', 'localhost')
+
+const.add('AFDB_USER', 'avantfax')  # username
+const.add('AFDB_PASS', 'd58fe49')  # password
+const.add('AFDB_NAME', 'avantfax')  # database name
+const.add('AFDB_ENGINE', 'mysql')  # database engine
+const.add('AFDB_HOST', 'localhost')  # database server
 
 const.add('ADMIN_EMAIL', 'root@localhost')
 
@@ -70,16 +73,13 @@ const.add('ARCHIVE_WIDE', True)
 # Printing support for received faxes, disabled by default
 const.add('PRINTFAXRCVD', False)
 
-# the name of the print queue
-const.add('PRINTERNAME', '')
+const.add('PRINTERNAME', '')  # the name of the print queue
 
 const.add('PRINTCMD', '/usr/bin/lpr')
 
-# the print command
-const.add('PRINTFAX2PS', '/usr/bin/fax2ps')
+const.add('PRINTFAX2PS', '/usr/bin/fax2ps')  # the print command
 
-# TIFF file, printer
-const.add('PRINTFAXCMD', f'{const.PRINTFAX2PS} %s | {const.PRINTCMD} %s')
+const.add('PRINTFAXCMD', f'{const.PRINTFAX2PS} %s | {const.PRINTCMD} %s')  # TIFF file, printer
 
 const.add('PDFPRINTCMD', '/usr/bin/lpr')
 
@@ -133,199 +133,132 @@ const.add('ALTERNATE_AUTH_ENABLE', False)
 const.add('ALTERNATE_AUTH_FALLBACK', True)
 const.add('ALTERNATE_AUTH_CLASS', "PAMAuth")
 
-"""
-	if (!isset($DEFAULT_FAXES_PER_PAGE_INBOX))
-		$DEFAULT_FAXES_PER_PAGE_INBOX = 25;
+const.add('DEFAULT_FAXES_PER_PAGE_INBOX', 25)
 
-	if (!isset($DEFAULT_FAXES_PER_PAGE_ARCHIVE))
-		$DEFAULT_FAXES_PER_PAGE_ARCHIVE = 30;
-	
-	if (!defined('ENABLE_BARDECODE_SUPPORT'))
-		define('ENABLE_BARDECODE_SUPPORT', false);
-	
-	if (!defined('BARDECODE_BINARY'))
-		define('BARDECODE_BINARY', "/var/spool/hylafax/bin/bardecode");
-	
-	if (!defined('BARDECODE_COMMAND'))
-		define('BARDECODE_COMMAND',	BARDECODE_BINARY." -t any -f %s");
-	
-	if (!defined('ENABLE_FAX_ANNOTATION'))
-		define('ENABLE_FAX_ANNOTATION', false);
-	
-	if (!defined('ENABLE_OCR_SUPPORT'))
-		define('ENABLE_OCR_SUPPORT', false);
-	
-	if (!defined('OCR_BINARY'))
-		define('OCR_BINARY', "/usr/local/bin/tesseract");
-	
-	if (!defined('OCR_COMMAND'))
-		define('OCR_COMMAND', OCR_BINARY." %s %s -l %s");
-	
-	if (!defined('OCR_LANGUAGE'))
-		define('OCR_LANGUAGE', "eng");
-	
-	if (!defined('EMAIL_ENCODING_TEXT'))
-		define('EMAIL_ENCODING_TEXT', "Base64Encoding");
+const.add('DEFAULT_FAXES_PER_PAGE_ARCHIVE', 30)
 
-	if (!defined('EMAIL_ENCODING_HTML'))
-		define('EMAIL_ENCODING_HTML', "Base64Encoding");
-	
-	if (!defined('EMAIL_ENCODING_CHARSET'))
-		define('EMAIL_ENCODING_CHARSET', "UTF-8");
-	
-	if (!defined('FAXCOVER_DATE_FORMAT'))
-		define('FAXCOVER_DATE_FORMAT', "%d.%m.%Y %H:%M");
-	
-	if (!defined('EMAIL_DATE_FORMAT'))
-		define('EMAIL_DATE_FORMAT', "%d.%m.%Y %H:%M");
+const.add('ENABLE_BARDECODE_SUPPORT', False)
 
-	if (!defined('ARCHIVE_DATE_FORMAT'))
-		define('ARCHIVE_DATE_FORMAT', "'%d.%m.%Y %H:%i'");
-		
-	if (!defined('WHITEPAGES'))
-		define('WHITEPAGES', 'http://www.whitepages.com/search/ReversePhone?full_phone=');
-	
-	if (!defined('MAX_USERNAME_SIZE'))
-		define('MAX_USERNAME_SIZE',	15);
-	
-	if (!defined('MAX_PASSWD_SIZE'))
-		define('MAX_PASSWD_SIZE',	15);
-	
-	if (!defined('MIN_PASSWD_SIZE'))
-		define('MIN_PASSWD_SIZE',	8);
+const.add('BARDECODE_BINARY', '/var/spool/hylafax/bin/bardecode')
 
-	if (!defined('MAX_EMAIL_SIZE'))
-		define('MAX_EMAIL_SIZE',	99);
-	
-	if (!defined('HAS_NEGATIVE_TIFF'))
-		define('HAS_NEGATIVE_TIFF', false);
-	
-	/**
-	 * errorHandler
-	 *
-	 * @param string $errno
-	 * @param string $errstr
-	 * @param string $errfile
-	 * @param string $errline
-	 * @param array $errcontext
-	 * @return false
-	 */
-	function errorHandler($errno, $errstr, $errfile = NULL, $errline = NULL, array $errcontext = NULL) {
-		var_dump(debug_backtrace());
-		error_log("$errfile ($errline): $errstr");
-		return false;
-	}
-	
-	if ($AVANTFAX_DEBUG) {
-		set_error_handler('errorHandler', E_USER_ERROR);
-	}
-	
-	$HAS_MIME_FUNCTION	= function_exists('mime_content_type');
-	$HAS_FILEINFO		= extension_loaded('fileinfo');
-	
-	// Try to dynamically load the fileinfo library
-	if (!$HAS_FILEINFO) {
-		$HAS_FILEINFO	= @dl('fileinfo.so');
-	}
-	
-	$grep_function	= 'preg_match';
-	// USE mbstring function if it is available
-	if (extension_loaded('mbstring')) {
-		mb_internal_encoding("UTF-8");
-		$grep_function	= 'mb_ereg_match';
-	}
-	
-	// AvantFAX directories under INSTALLDIR
-	$ARCHIVE		= $INSTALLDIR.DIRECTORY_SEPARATOR.'faxes'.DIRECTORY_SEPARATOR.'recvd';
-	$ARCHIVE_SENT	= $INSTALLDIR.DIRECTORY_SEPARATOR.'faxes'.DIRECTORY_SEPARATOR.'sent';
-	$TMPDIR			= $INSTALLDIR.DIRECTORY_SEPARATOR.'tmp'.DIRECTORY_SEPARATOR;
-	$PHONEBOOK		= $INSTALLDIR.DIRECTORY_SEPARATOR.'pbook.phb'; // phone book for WHFC
-	$FAXCOVER		= $INSTALLDIR.DIRECTORY_SEPARATOR.'includes'.DIRECTORY_SEPARATOR.'faxcover.php';
-	
-	// tiff
-	$TIFFCP			= $BINARYDIR.DIRECTORY_SEPARATOR.'tiffcp';
-	$TIFFCPG4		= $BINARYDIR.DIRECTORY_SEPARATOR.'tiffcp -c g4';
-	$TIFFPS			= $BINARYDIR.DIRECTORY_SEPARATOR.'tiff2ps -2ap';
-	$TIFFSPLIT		= $BINARYDIR.DIRECTORY_SEPARATOR.'tiffsplit';
-	
-	if (!isset($TIFF_TO_G4))
-		$TIFF_TO_G4 = false;
-	
-	// imagemagick
-	$CONVERT		= $BINARYDIR.DIRECTORY_SEPARATOR.'convert'; // a source install may put this in /usr/local/bin/
-	
-	// netpbm
-	$PNMSCALE		= $BINARYDIR.DIRECTORY_SEPARATOR.'pnmscale';
-	$PNMDEPTH		= $BINARYDIR.DIRECTORY_SEPARATOR.'pnmdepth';
-	$PPMTOGIF		= $BINARYDIR.DIRECTORY_SEPARATOR.'ppmtogif';
-	$PNMQUANT		= $BINARYDIR.DIRECTORY_SEPARATOR.'pnmquant';
-	
-	// psresize
-	$PSRESIZE		= $BINARYDIR.DIRECTORY_SEPARATOR.'psresize';
+const.add('BARDECODE_COMMAND', f'{const.BARDECODE_BINARY} -t any -f %s')
 
-	// ghostscript
-	if (!isset($DPI))
-		$DPI		= 92;
-	
-	if (!isset($DPIS))
-		$DPIS		= 200;
-	
-	$GS				= $BINARYDIR.DIRECTORY_SEPARATOR.'gs';
-	$GSR			= "$GS -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -dCompatibility=1.4 -sPAPERSIZE=$PAPERSIZE";	// tiff2pdf (faxrcvd)
-	$GSN			= "$GS -q -dNOPAUSE -sPAPERSIZE=$PAPERSIZE -sDEVICE=pnm -r${DPI}x${DPI}";					// static preview (faxrvd & rotate)
-	$GSN2			= "$GS -q -dNOPAUSE -sPAPERSIZE=$PAPERSIZE -sDEVICE=pnm";									// static preview (faxrvd & rotate)
-	$GSTIFF			= "$GS -sDEVICE=tiffg4 -r${DPIS}x${DPIS} -dNOPAUSE -sPAPERSIZE=$PAPERSIZE";					// convert2pdf (notify)
-	$GSCMD			= "$GS -dCompatibilityLevel=1.4 -dSAFER -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=%s -sPAPERSIZE=$PAPERSIZE -f %s >/dev/null 2>/dev/null"; // output, input
+const.add('ENABLE_FAX_ANNOTATION', False)
 
-	if (!defined('ANN_GRAVITY'))
-		define('ANN_GRAVITY', "southeast");
+const.add('ENABLE_OCR_SUPPORT', False)
 
-	// hylafax
-	$FAXINFO		= $HYLAFAX_PREFIX.DIRECTORY_SEPARATOR.'sbin'.DIRECTORY_SEPARATOR.'faxinfo';
-	$FAXSTAT		= $HYLAFAX_PREFIX.DIRECTORY_SEPARATOR.'bin'.DIRECTORY_SEPARATOR.'faxstat -s';
-	$FAXADDUSER		= $HYLAFAX_PREFIX.DIRECTORY_SEPARATOR.'sbin'.DIRECTORY_SEPARATOR.'faxadduser';
-	$FAXDELUSER		= $HYLAFAX_PREFIX.DIRECTORY_SEPARATOR.'sbin'.DIRECTORY_SEPARATOR.'faxdeluser';
-	$FAXGETTY		= $HYLAFAX_PREFIX.DIRECTORY_SEPARATOR.'sbin'.DIRECTORY_SEPARATOR.'faxgetty';
-	$SENDFAX		= $HYLAFAX_PREFIX.DIRECTORY_SEPARATOR.'bin'.DIRECTORY_SEPARATOR.'sendfax';
-	$FAXRM			= $HYLAFAX_PREFIX.DIRECTORY_SEPARATOR.'bin'.DIRECTORY_SEPARATOR.'faxrm';
-	$FAXALTER		= $HYLAFAX_PREFIX.DIRECTORY_SEPARATOR.'bin'.DIRECTORY_SEPARATOR.'faxalter';
-	
-	$FAXSENDQ		= $HYLAFAX_PREFIX.DIRECTORY_SEPARATOR.'bin'.DIRECTORY_SEPARATOR.'faxstat -s';
-	$FAXDONEQ		= $HYLAFAX_PREFIX.DIRECTORY_SEPARATOR.'bin'.DIRECTORY_SEPARATOR.'faxstat -d';
-	
-	// sudo
-	$SUDO			= $BINARYDIR.DIRECTORY_SEPARATOR.'sudo';
-	
-	$SYSTEM_IP		= (array_key_exists('SERVER_ADDR', $_SERVER)) ? $_SERVER['SERVER_ADDR'] : $AVANTFAX_SERVERNAME;
-	
-	$RESERVED_FAX_NUM = 'XXXXXXX';
+const.add('OCR_BINARY', '/usr/local/bin/tesseract')
 
-	define('THUMBNAIL',		'thumb.gif');
-	define('NOTHUMB',		'images/nothumb.gif');
-	define('PDFNAME',		'fax.pdf');
-	define('TIFFNAME',		'fax.tif');
-	define('PREVIMG',		'prev');
-	define('PREVIMGSFX',	'.gif');
-	
-	define('CONTACTFILETYPES',	"vCard (.vcf)");
-	define('SENDFAXFILETYPES',	"PostScript (.ps), PDF (.pdf), TIFF (.tif), Text (.txt)");
-	
-	if (!defined('PREV_TN'))
-		define('PREV_TN', 80);		// thumbnail
-	
-	if(!defined('PREV_SP'))
-		define('PREV_SP', 750);		// static preview
-	
-	$NOTHUMBIMG = $INSTALLDIR.DIRECTORY_SEPARATOR.NOTHUMB;
-	
-	if ($ENABLE_DID_ROUTING) $AVANTFAX_VERSION .= '&dagger;';
-	
-	require_once 'functions.php';					// include the system wide functions file
-	
-	// used in sendfax and refax
-	$upload_sizes	= get_max_fileupload();
-	$SF_FILESIZE	= $upload_sizes['max'];
-	$SF_MAXSIZE		= $upload_sizes['abbrev'];
-	
-	require_once "langs/$dft_config_lang.php";		// require the default language file
-"""
+const.add('OCR_COMMAND', f'{const.OCR_BINARY} %s %s -l %s')
+
+const.add('OCR_LANGUAGE', 'eng')
+
+const.add('EMAIL_ENCODING_TEXT', 'Base64Encoding')
+const.add('EMAIL_ENCODING_HTML', 'Base64Encoding')
+
+const.add('EMAIL_ENCODING_CHARSET', 'UTF-8')
+
+const.add('FAXCOVER_DATE_FORMAT', '%d.%m.%Y %H:%M')
+
+const.add('EMAIL_DATE_FORMAT', '%d.%m.%Y %H:%M')
+
+const.add('ARCHIVE_DATE_FORMAT', "'%d.%m.%Y %H:%i'")
+
+const.add('WHITEPAGES', 'http://www.whitepages.com/search/ReversePhone?full_phone=')
+
+const.add('MAX_USERNAME_SIZE', 15)
+const.add('MAX_PASSWD_SIZE', 15)
+const.add('MIN_PASSWD_SIZE', 8)
+const.add('MAX_EMAIL_SIZE', 99)
+
+const.add('HAS_NEGATIVE_TIFF', False)
+
+# TODO NAMIFAX_DEBUG 플래그에 대한 에러 처리 추가 필요
+
+# NamiFAX directories under INSTALLDIR
+const.add('ARCHIVE', os.path.join(const.FAX_DIR, 'recvd'))
+const.add('ARCHIVE_SENT', os.path.join(const.FAX_DIR, 'sent'))
+const.add('TMPDIR', '/tmp')
+const.add('PHONEBOOK', '/var/spool/pbook.phb')
+
+# tiff
+const.add('TIFFCP', os.path.join(const.BINARYDIR, 'tiffcp'))
+const.add('TIFFCPG4', os.path.join(const.BINARYDIR, 'tiffcp -c g4'))
+const.add('TIFFPS', os.path.join(const.BINARYDIR, 'tiff2ps -2ap'))
+const.add('TIFFSPLIT', os.path.join(const.BINARYDIR, 'tiffsplit'))
+
+const.add('TIFF_TO_G4', False)
+
+# imagemagick
+const.add('CONVERT', os.path.join(const.BINARYDIR, 'convert'))
+
+# netpbm
+const.add('PNMSCALE', os.path.join(const.BINARYDIR, 'pnmscale'))
+const.add('PNMDEPTH', os.path.join(const.BINARYDIR, 'pnmdepth'))
+const.add('PPMTOGIF', os.path.join(const.BINARYDIR, 'ppmtogif'))
+const.add('PNMQUANT', os.path.join(const.BINARYDIR, 'pnmquant'))
+
+# psresize
+const.add('PSRESIZE', os.path.join(const.BINARYDIR, 'psresize'))
+
+# ghostscript
+const.add('DPI', 92)
+const.add('DPIS', 200)
+
+const.add('GS', os.path.join(const.BINARYDIR, 'gs'))
+const.add('GSR', f'{const.GS} -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite'
+                 f' -dCompatibility=1.4 -sPAPERSIZE=$PAPERSIZE')  # tiff2pdf (faxrcvd)
+const.add('GSN', f'{const.GS} -q -dNOPAUSE -sPAPERSIZE=$PAPERSIZE'
+                 f' -sDEVICE=pnm -r${const.DPI}x${const.DPI}')  # static preview (faxrvd & rotate)
+const.add('GSN2', f'{const.GS} -q -dNOPAUSE -sPAPERSIZE=$PAPERSIZE'
+                  f' -sDEVICE=pnm')  # static preview (faxrvd & rotate)
+const.add('GSTIFF', f'{const.GS} -sDEVICE=tiffg4 -r${const.DPIS}x${const.DPIS}'
+                    f' -dNOPAUSE -sPAPERSIZE=$PAPERSIZE')  # convert2pdf (notify)
+const.add('GSCMD', f'{const.GS} -dCompatibilityLevel=1.4 -dSAFER -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite'
+                   f' -sOutputFile=%s -sPAPERSIZE=$PAPERSIZE -f %s >/dev/null 2>/dev/null')  # output, input
+
+const.add('ANN_GRAVITY', 'southeast')
+
+# hylafax
+const.add('FAXINFO', os.path.join(const.HYLAFAX_PREFIX, 'sbin', 'faxinfo'))
+const.add('FAXSTAT', os.path.join(const.HYLAFAX_PREFIX, 'bin', 'faxstat -s'))
+const.add('FAXADDUSER', os.path.join(const.HYLAFAX_PREFIX, 'sbin', 'faxadduser'))
+const.add('FAXDELUSER', os.path.join(const.HYLAFAX_PREFIX, 'sbin', 'faxdeluser'))
+const.add('FAXGETTY', os.path.join(const.HYLAFAX_PREFIX, 'sbin', 'faxgetty'))
+const.add('SENDFAX', os.path.join(const.HYLAFAX_PREFIX, 'bin', 'sendfax'))
+const.add('FAXRM', os.path.join(const.HYLAFAX_PREFIX, 'bin', 'faxrm'))
+const.add('FAXALTER', os.path.join(const.HYLAFAX_PREFIX, 'bin', 'faxalter'))
+const.add('FAXSENDQ', os.path.join(const.HYLAFAX_PREFIX, 'bin', 'faxstat -s'))
+const.add('FAXDONEQ', os.path.join(const.HYLAFAX_PREFIX, 'bin', 'faxstat -d'))
+
+# sudo
+const.add('SUDO', os.path.join(const.BINARYDIR, 'sudo'))
+
+const.add('SYSTEM_IP', extract_ip())
+
+const.add('RESERVED_FAX_NUM', 'XXXXXXX')
+
+const.add('THUMBNAIL', 'thumb.gif')
+const.add('NOTHUMB', 'images/nothumb.gif')
+const.add('PDFNAME', 'fax.pdf')
+const.add('TIFFNAME', 'fax.tif')
+const.add('PREVIMG', 'prev')
+const.add('PREVIMGSFX', '.gif')
+
+const.add('CONTACTFILETYPES', "vCard (.vcf)")
+const.add('SENDFAXFILETYPES', "PostScript (.ps), PDF (.pdf), TIFF (.tif), Text (.txt)")
+
+const.add('PREV_TN', 80)  # thumbnail
+const.add('PREV_SP', 750)  # static preview
+
+const.add('NOTHUMBIMG', pkg_resources.resource_filename(__name__, f"../static/{const.NOTHUMB}"))
+
+if const.ENABLE_DID_ROUTING:
+    const.add('NAMIFAX_VERSION', f'{const.NAMIFAX_VERSION}&dagger')
+
+# used in sendfax and refax
+const.add('SF_FILESIZE', 1 * (1024 * 1024 * 1024))
+const.add('SF_MAXSIZE', 'G')
+
+# includes/functions.php는 이 파일에 포함하지 않는다
+# 다국어 처리는 여기에서 다루지 않는다

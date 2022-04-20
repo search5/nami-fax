@@ -7,7 +7,10 @@ class Constants:
             self.constant_dict[name] = self.local_config.get(name, value)
 
     def __getattr__(self, item):
-        return self.constant_dict.get(item)
+        if item in self.constant_dict.keys():
+            return self.constant_dict.get(item)
+        else:
+            return self.local_config.get(item)
 
     def __new__(cls, *args, **kwargs):
         if not hasattr(cls, 'instance'):
