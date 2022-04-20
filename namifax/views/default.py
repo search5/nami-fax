@@ -1,8 +1,12 @@
 from pyramid.view import view_config
+from namifax.lib import classes
+
+
 from pyramid.response import Response
 from sqlalchemy.exc import SQLAlchemyError
 
 from .. import models
+from ..lib.constant import Constants
 
 
 @view_config(route_name='index', renderer='namifax:templates/mytemplate.jinja2')
