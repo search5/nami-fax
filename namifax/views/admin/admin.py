@@ -3,9 +3,8 @@ from pyramid.view import view_config
 
 @view_config(route_name='admin_index', renderer='namifax:templates/admin/index.jinja2')
 def admin_index(request):
-    """
-    $error = NULL;
-    
+    error = None
+    """ 
     /******************************************************************************************************************************
     SETUP FORM RULES
     ******************************************************************************************************************************/
@@ -48,12 +47,6 @@ def admin_index(request):
             $error = $_SESSION[USERSESSION]->get_error();
         }
     }
-    
-    /******************************************************************************************************************************
-            SHOW TEMPLATE
-     ******************************************************************************************************************************/
-    $asmarty = new AdminSmarty;
-    $asmarty->assign('error',        $error);
-    display_template('index.tpl',    $asmarty);
     """
-    return {}
+
+    return dict(error=error)
