@@ -20,19 +20,19 @@ msgstr ""
 
 #: namifax/templates/admin/index.jinja2:29
 msgid "username"
-msgstr ""
+msgstr "ユーザー名"
 
 #: namifax/templates/admin/index.jinja2:30
 msgid "password"
-msgstr ""
+msgstr "パスワード"
 
 #: namifax/templates/admin/index.jinja2:31
 msgid "Lost your Password?"
-msgstr ""
+msgstr "パスワードを忘れましたか？"
 
 #: namifax/templates/admin/index.jinja2:33
 msgid "Login"
-msgstr ""
+msgstr "ログイン"
 
 #~ msgid "Welcome to"
 #~ msgstr ""
