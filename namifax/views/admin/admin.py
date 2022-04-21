@@ -1,7 +1,7 @@
 from io import StringIO
 
 from markupsafe import Markup
-from pyramid.httpexceptions import HTTPFound, HTTPCreated
+from pyramid.httpexceptions import HTTPFound
 from pyramid.view import view_config
 from cerberus import Validator
 
@@ -24,10 +24,24 @@ def admin_index(request):
             return HTTPFound(location=request.route_path('index'))
         else:
             errors = StringIO()
-            errors.write('<ul>')
             for key, val in v.errors.items():
                 errors.write(f'<li>{key}: {"<br>".join(val)}</li>')
-            errors.write('</ul>')
+
+            if not errors.getvalue():
+                if alter_auth_enable:
+                    if login_auth:
+                        /admin redirect
+
+                if not alter_auth_enable or (alter_auth_enable and alter_auth_fallback):
+                    if login_auth:
+                        if login_expired:
+                            redirect /pwdexpired
+                        else:
+                            redirect /admin
+
+                for key, val in v.errors.items():
+                    errors.write(f'<li>{key}: {"<br>".join(val)}</li>')
+
 
             # if ($ALTERNATE_AUTH_ENABLE) {
             #     if ($_SESSION[USERSESSION]->login_alternate_auth($formdata->username, $formdata->password, true)) {
