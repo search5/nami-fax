@@ -21,5 +21,6 @@ def includeme(config):
     config.add_route('admin_conf_barcoderoute', '/conf_barcoderoute')
     config.add_route('admin_conf_didroute_edit', '/conf_didroute_edit')
     config.add_route('admin_deluser', '/deluser')
-    config.add_route('admin_index', '', inherit_slash=True)
+    config.add_route('admin_index', '', inherit_slash=True, request_method=('GET', 'POST'))
+    config.add_route('admin_login', '', inherit_slash=True)
     config.add_route('admin_system_logs', '/system_logs')

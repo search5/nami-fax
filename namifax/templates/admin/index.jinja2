@@ -13,7 +13,7 @@
 <body>
 
 <div class="tableForm" style="width:40em; padding-top: 15em">
-	<form action="TODO" method="post">
+	<form action="{{ request.route_path('admin_index') }}" method="post">
 
 	<div style="width: 24.5em; margin-left: auto; margin-right:auto">
 		<a href="{{ request.route_path('index') }}">
@@ -24,14 +24,13 @@
 	</div>
 	<br />
 	{% if error %}
-        <div class="error" align="center">{$error}</div>
+        <div class="error" align="center">{{ error }}</div>
     {% endif %}
 	<p><label for="username">{% trans %}username{% endtrans %}:</label> <input type="text" name="username" id="username" size="20" maxlength="{$MAX_PASSWD_SIZE}" /></p>
 	<p><label for="password">{% trans %}password{% endtrans %}:</label><input type="password" name="password" id="password" size="15" maxlength="{$MAX_PASSWD_SIZE}" /></p>
 	<p align="center"><a href="{{ request.route_path('forgot') }}" class="forgot">{% trans %}Lost your Password?{% endtrans %}</a></p>
 	<br>
 	<p align="center"><input type="submit" class="inputsubmit" value="{% trans %}Login{% endtrans %}" /></p>
-	<input type="hidden" name="_submit_check" value="1" />
 	</form>
 </div>
 
