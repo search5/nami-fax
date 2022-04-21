@@ -7,7 +7,6 @@ def includeme(config):
     config.add_route('admin_conf_covers', '/conf_covers')
     config.add_route('admin_conf_dynconf_edit', '/conf_dynconf_edit')
     config.add_route('admin_fax2email_edit', '/fax2email_edit')
-    config.add_route('admin_no-database', '/no-database')
     config.add_route('admin_users_list', '/users_list')
     config.add_route('admin_admin', '/admin')
     config.add_route('admin_conf_covers_edit', '/conf_covers_edit')

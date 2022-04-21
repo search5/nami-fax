@@ -20,7 +20,6 @@ def includeme(config):
     config.add_route('settings', '/settings')
     config.add_route('email', '/email')
     config.add_route('file', '/file')
-    config.add_route('no-database', '/no-database')
     config.add_route('rotate', '/rotate')
     config.add_route('setcompany', '/setcompany')
     config.add_route('viewfax', '/viewfax')
