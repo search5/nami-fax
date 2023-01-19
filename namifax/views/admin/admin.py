@@ -28,16 +28,16 @@ def admin_index(request):
                 errors.write(f'<li>{key}: {"<br>".join(val)}</li>')
 
             if not errors.getvalue():
-                if alter_auth_enable:
-                    if login_auth:
-                        /admin redirect
+                # if alter_auth_enable:
+                #     if login_auth:
+                #         /admin redirect
 
-                if not alter_auth_enable or (alter_auth_enable and alter_auth_fallback):
-                    if login_auth:
-                        if login_expired:
-                            redirect /pwdexpired
-                        else:
-                            redirect /admin
+                # if not alter_auth_enable or (alter_auth_enable and alter_auth_fallback):
+                #     if login_auth:
+                #         if login_expired:
+                #             redirect /pwdexpired
+                #         else:
+                #             redirect /admin
 
                 for key, val in v.errors.items():
                     errors.write(f'<li>{key}: {"<br>".join(val)}</li>')
