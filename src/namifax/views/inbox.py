@@ -10,7 +10,7 @@ from pyramid.response import Response
 from pyramid.view import view_config
 
 from namifax.common import settings
-from namifax.common.helpers import clean_faxnum
+from namifax.common.helpers import avantfaxlog, clean_faxnum
 from namifax.services.addressbook import RESERVED_FAX_NUM, NFAddressBook
 from namifax.services.archive_in import ArchiveIn
 from namifax.views.admin import get_all_admin_modems
@@ -292,14 +292,19 @@ def setcompany_view(request):
     faxnumid = request.POST.get("faxnumid")
 
     if fid and faxnumid:
+        try:
+            faxnumid = int(faxnumid)
+        except ValueError:
+            raise HTTPBadRequest("faxnumid must be a number.")
         arc = ArchiveIn(db=request.dbsession)
         ab = NFAddressBook(db=request.dbsession)
-        try:
-            if load_fax(request, arc, fid, action="setcompany"):
-                arc.set_faxnumid(int(faxnumid))
-            if ab.loadbyfaxnumid(int(faxnumid)):
+        # A database error is not caught here: it ends the request with a 500 and the transaction is rolled back,
+        # instead of the page answering "done" for an assignment that did not happen.
+        if load_fax(request, arc, fid, action="setcompany"):
+            if not arc.set_faxnumid(faxnumid):
+                avantfaxlog(f"setcompany> Could not assign fax number {faxnumid} to fax '{fid}': {arc.get_error()}",
+                            session=request.dbsession)
+            elif ab.loadbyfaxnumid(faxnumid):               # count the fax only when it was really assigned
                 ab.inc_faxfrom()
-        except Exception:
-            pass
 
     return HTTPFound(location=request.route_url("inbox"))

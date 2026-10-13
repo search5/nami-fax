@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 import os
 from typing import Any
 from PIL import Image
@@ -12,6 +13,8 @@ from sqlalchemy import func, select
 from namifax.db.missing import resolve_db
 from namifax.db.textsearch import ESCAPE_CHAR, like_pattern
 from namifax.models.faxocr import FaxOCR
+
+log = logging.getLogger("namifax")
 
 class OcrService:
     """Enterprise Fax OCR Text Extraction & Full-Text Search service."""
@@ -31,6 +34,7 @@ class OcrService:
             else:
                 return pytesseract.image_to_string(image, lang=self.lang).strip()
         except Exception:
+            log.exception("OCR failed for %s", image if isinstance(image, str) else "an image")
             return ""
 
     def extract_text_from_tiff(self, tiff_path: str) -> dict[str, Any]:
@@ -55,6 +59,7 @@ class OcrService:
                 "pages": n_frames,
             }
         except Exception as e:
+            log.exception("OCR failed for %s", tiff_path)
             return {
                 "success": False,
                 "error": str(e),
@@ -68,9 +73,11 @@ class OcrService:
         if not res.get("success"):
             return False
 
-        text = res.get("text", "")
-        pages = res.get("pages", 1)
+        self.store_text(fax_file, res.get("text", ""), int(res.get("pages", 1)), fax_id)
+        return True
 
+    def store_text(self, fax_file: str, text: str, pages: int = 1, fax_id: int | None = None) -> None:
+        """Save already-recognised text in the FaxOCR table (one row per file; a second call updates it)."""
         row = self.db.execute(select(FaxOCR).where(FaxOCR.fax_file == fax_file)).scalars().first()
         if row is None:
             row = FaxOCR(fax_file=fax_file, created_at=datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
@@ -78,7 +85,6 @@ class OcrService:
         row.ocr_text, row.page_count = text, int(pages)
         row.fax_id = int(fax_id) if fax_id is not None else None
         self.db.flush()
-        return True
 
     def get_ocr_text(self, fax_file: str) -> str | None:
         """Retrieve stored OCR text for a fax file."""

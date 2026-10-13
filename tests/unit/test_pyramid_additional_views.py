@@ -2,6 +2,7 @@
 
 from unittest.mock import MagicMock, patch
 from pyramid import testing
+from pyramid.httpexceptions import HTTPBadRequest
 import pytest
 
 from namifax.views.inbox import fax_rotate_view, setcompany_view
@@ -78,3 +79,36 @@ def test_ajax_archivebook_xml(dummy_request):
     assert res.status_code == 200
     assert "response" in res.text
     assert "Acme Corp" in res.text
+
+
+def test_setcompany_view_does_not_hide_a_database_error(dummy_request):
+    dummy_request.db = MagicMock()
+    dummy_request.method = "POST"
+    dummy_request.POST = {"fid": "42", "faxnumid": "10"}
+    with patch("namifax.views.inbox.ArchiveIn") as mock_arc_cls, patch("namifax.views.inbox.NFAddressBook"), \
+         patch("namifax.views.inbox.check_csrf_token"):
+        mock_arc_cls.return_value.load_fax.return_value = True
+        mock_arc_cls.return_value.set_faxnumid.side_effect = RuntimeError("db down")
+        with pytest.raises(RuntimeError):
+            setcompany_view(dummy_request)
+
+
+def test_setcompany_view_counts_only_an_assignment_that_worked(dummy_request):
+    dummy_request.db = MagicMock()
+    dummy_request.method = "POST"
+    dummy_request.POST = {"fid": "42", "faxnumid": "10"}
+    with patch("namifax.views.inbox.ArchiveIn") as mock_arc_cls, patch("namifax.views.inbox.NFAddressBook") as ab_cls, \
+         patch("namifax.views.inbox.check_csrf_token"), patch("namifax.views.inbox.avantfaxlog") as logged:
+        mock_arc_cls.return_value.load_fax.return_value = True
+        mock_arc_cls.return_value.set_faxnumid.return_value = False
+        setcompany_view(dummy_request)
+        ab_cls.return_value.inc_faxfrom.assert_not_called()
+        logged.assert_called_once()
+
+
+def test_setcompany_view_rejects_a_faxnumid_that_is_not_a_number(dummy_request):
+    dummy_request.db = MagicMock()
+    dummy_request.method = "POST"
+    dummy_request.POST = {"fid": "42", "faxnumid": "abc"}
+    with patch("namifax.views.inbox.check_csrf_token"), pytest.raises(HTTPBadRequest):
+        setcompany_view(dummy_request)

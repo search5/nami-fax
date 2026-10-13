@@ -18,7 +18,7 @@ def _run(tmp_path, **kwargs):
     with patch.dict("os.environ", {"ENABLE_OCR_SUPPORT": "1"}), patch.multiple(mod, **classes), \
             patch.object(mod, "faxinfo", return_value={"Sender": "1", "Pages": "1", "Received": "2026:10:01 10:00:00"}), \
             patch.object(mod, "tiff2pdf"), patch.object(mod, "copy_tiff", return_value=True), patch.object(mod, "static_preview"), patch.object(mod, "send_mail"), \
-            patch.object(mod, "bardecode", return_value=None), \
+            patch.object(mod, "bardecode", return_value=None), patch.object(mod, "ocr_faxcontent", return_value="text"), \
             patch("namifax.services.ocr.OcrService") as ocr:
         code = mod.run_faxrcvd(["faxrcvd.py", str(tiff), "ttyS0", "comm01", "none"], **kwargs)
     return code, classes, ocr

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import html
+import logging
 import os
 import re
 import secrets
@@ -667,7 +668,8 @@ def ocr_faxcontent(filename: str) -> Optional[str]:
                 subprocess.run(argv, capture_output=True, check=False, timeout=600)
                 with open(base + ".txt", "r", encoding="utf-8", errors="replace") as handle:
                     return handle.read().strip() or None
-            except (OSError, subprocess.SubprocessError, ValueError):
+            except (OSError, subprocess.SubprocessError, ValueError) as e:
+                logging.getLogger("namifax").error("OCR command failed for %s: %s", filename, e)
                 return None
 
     try:
@@ -680,6 +682,7 @@ def ocr_faxcontent(filename: str) -> Optional[str]:
         txt = ocr.extract_text_from_image(filename)
         return txt.strip() if txt else None
     except Exception:
+        logging.getLogger("namifax").exception("OCR failed for %s", filename)
         return None
 
 

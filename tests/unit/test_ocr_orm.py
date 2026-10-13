@@ -87,3 +87,19 @@ def test_server_database(monkeypatch, server_db_url, alembic_cfg):
             assert s.execute(sa.select(sa.func.count()).select_from(FaxOCR)).scalar() == 1
     finally:
         engine.dispose()
+
+
+def test_store_text_saves_recognised_text_without_reading_the_file_again(ocr):
+    with patch.object(ocr, "extract_text_from_tiff") as extract:
+        ocr.store_text("s.tif", "already read", 2, 7)
+    extract.assert_not_called()
+    assert ocr.get_ocr_text("s.tif") == "already read"
+
+
+def test_a_tesseract_failure_is_logged(ocr, caplog):
+    from PIL import Image
+
+    with patch("namifax.services.ocr.pytesseract.image_to_string", side_effect=RuntimeError("no tesseract")), \
+         caplog.at_level("ERROR", logger="namifax"):
+        assert ocr.extract_text_from_image(Image.new("L", (1, 1))) == ""
+    assert "OCR failed" in caplog.text
