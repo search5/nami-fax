@@ -1,5 +1,6 @@
 site_name: NamiFAX
 site_description: NamiFAX - web front end for HylaFAX / HylaFAX 팩스 서버 웹 프런트엔드
+site_url: https://search5.github.io/nami-fax/
 repo_url: https://github.com/search5/nami-fax
 repo_name: search5/nami-fax
 docs_dir: docs
