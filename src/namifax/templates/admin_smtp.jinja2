@@ -1,0 +1,234 @@
+{% extends "admin_layout.jinja2" %}
+
+{% block title %}NamiFAX - Admin - SMTP Gateway{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+  
+  <!-- Header & Status Overview -->
+  <div class="border-b border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <div>
+        <h1 class="text-xl font-bold text-slate-100 flex items-center gap-2">
+          {{ _('External SMTP Gateway') }}
+          <span class="text-xs px-2 py-0.5 rounded-full bg-blue-900/60 text-blue-300 border border-blue-700/50">Enterprise</span>
+        </h1>
+        <p class="text-xs text-slate-400">{{ _('Configure external mail delivery server for inbound fax notifications and user alerts') }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flash Alerts -->
+  {% if message %}
+  <div class="p-4 bg-emerald-950/60 border border-emerald-500/40 rounded-xl text-emerald-300 flex items-center gap-3">
+    <svg class="w-5 h-5 shrink-0 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+    <span class="text-sm font-medium">{{ message }}</span>
+  </div>
+  {% endif %}
+
+  {% if error %}
+  <div class="p-4 bg-rose-950/60 border border-rose-500/40 rounded-xl text-rose-300 flex items-center gap-3">
+    <svg class="w-5 h-5 shrink-0 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+    </svg>
+    <span class="text-sm font-medium">{{ error }}</span>
+  </div>
+  {% endif %}
+
+  <!-- Diagnostic Result Notification -->
+  {% if test_result %}
+  <div class="p-4 rounded-xl border {% if test_result.success %}bg-emerald-950/50 border-emerald-500/50 text-emerald-200{% else %}bg-rose-950/50 border-rose-500/50 text-rose-200{% endif %}">
+    <div class="flex items-start gap-3">
+      <div class="mt-0.5 shrink-0">
+        {% if test_result.success %}
+        <svg class="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        {% else %}
+        <svg class="w-5 h-5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        {% endif %}
+      </div>
+      <div class="flex-1 min-w-0">
+        <h3 class="text-sm font-bold {% if test_result.success %}text-emerald-300{% else %}text-rose-300{% endif %}">
+          {{ _('Diagnostics Result') }}: {{ test_result.message }}
+        </h3>
+        {% if test_result.details %}
+        <div class="mt-3 p-3 bg-slate-950/80 rounded-lg border border-slate-800 font-mono text-xs text-slate-300 space-y-1">
+          {% for line in test_result.details %}
+          <div class="flex items-center gap-2">
+            <span class="text-slate-600">&gt;</span>
+            <span>{{ line }}</span>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- Main Settings Form -->
+  <form method="POST" action="/admin/smtp" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    
+    <!-- Left Column: Core SMTP Server & Authentication -->
+    <div class="lg:col-span-2 space-y-6">
+      <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-6 shadow-sm space-y-5">
+        <h2 class="text-base font-semibold text-slate-200 border-b border-slate-800/80 pb-3 flex items-center gap-2">
+          <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+          </svg>
+          {{ _('Server Connection & Security') }}
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <!-- SMTP Host -->
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-medium text-slate-300 mb-1.5">{{ _('SMTP Host / Server') }} <span class="text-rose-400">*</span></label>
+            <input type="text" name="smtp_host" value="{{ config.smtp_host }}" required
+                   placeholder="smtp.example.com"
+                   class="w-full bg-slate-950/80 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 transition" />
+          </div>
+
+          <!-- Port -->
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1.5">{{ _('Port') }} <span class="text-rose-400">*</span></label>
+            <input type="number" name="smtp_port" value="{{ config.smtp_port }}" min="1" max="65535" required
+                   placeholder="587"
+                   class="w-full bg-slate-950/80 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 transition" />
+          </div>
+        </div>
+
+        <!-- Encryption Protocol -->
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1.5">{{ _('Encryption Protocol') }}</label>
+          <div class="grid grid-cols-3 gap-3">
+            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-800 bg-slate-950/40 cursor-pointer hover:border-slate-700 transition">
+              <input type="radio" name="smtp_security" value="NONE" {% if config.smtp_security == 'NONE' %}checked{% endif %} class="text-blue-600 focus:ring-blue-500 bg-slate-900 border-slate-700" />
+              <span class="text-xs text-slate-200">{{ _('None (Plain)') }}</span>
+            </label>
+            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-800 bg-slate-950/40 cursor-pointer hover:border-slate-700 transition">
+              <input type="radio" name="smtp_security" value="STARTTLS" {% if config.smtp_security == 'STARTTLS' %}checked{% endif %} class="text-blue-600 focus:ring-blue-500 bg-slate-900 border-slate-700" />
+              <span class="text-xs text-slate-200">{{ _('STARTTLS (587)') }}</span>
+            </label>
+            <label class="flex items-center gap-2 p-2.5 rounded-lg border border-slate-800 bg-slate-950/40 cursor-pointer hover:border-slate-700 transition">
+              <input type="radio" name="smtp_security" value="SSL" {% if config.smtp_security == 'SSL' %}checked{% endif %} class="text-blue-600 focus:ring-blue-500 bg-slate-900 border-slate-700" />
+              <span class="text-xs text-slate-200">{{ _('SSL / TLS (465)') }}</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Authentication Switch & Fields -->
+        <div class="pt-2 border-t border-slate-800/80 space-y-4">
+          <label class="flex items-center gap-2.5 cursor-pointer">
+            <input type="checkbox" name="smtp_auth" value="on" {% if config.smtp_auth %}checked{% endif %}
+                   class="rounded bg-slate-950 border-slate-700 text-blue-600 focus:ring-blue-500 w-4 h-4" />
+            <span class="text-sm font-medium text-slate-200">{{ _('Requires SMTP Authentication') }}</span>
+          </label>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">{{ _('Username / Login') }}</label>
+              <input type="text" name="smtp_username" value="{{ config.smtp_username or '' }}"
+                     placeholder="mailer@company.com"
+                     class="w-full bg-slate-950/80 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 transition" />
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1.5">{{ _('Password / App Key') }}</label>
+              <input type="password" name="smtp_password" value="{{ config.smtp_password or '' }}"
+                     placeholder="••••••••••••"
+                     class="w-full bg-slate-950/80 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 transition" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sender Info & Signatures -->
+      <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-6 shadow-sm space-y-5">
+        <h2 class="text-base font-semibold text-slate-200 border-b border-slate-800/80 pb-3 flex items-center gap-2">
+          <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+          </svg>
+          {{ _('Default Sender Profile & Signatures') }}
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1.5">{{ _('From Email Address') }} <span class="text-rose-400">*</span></label>
+            <input type="email" name="from_email" value="{{ config.from_email }}" required
+                   placeholder="fax-system@company.com"
+                   class="w-full bg-slate-950/80 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 transition" />
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1.5">{{ _('From Display Name') }}</label>
+            <input type="text" name="from_name" value="{{ config.from_name }}"
+                   placeholder="{{ _('NamiFAX Corporate Dispatcher') }}"
+                   class="w-full bg-slate-950/80 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 transition" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1.5">{{ _('Email Signature (Plaintext)') }}</label>
+          <textarea name="email_sig_text" rows="2"
+                    placeholder="{{ _('Sent automatically by NamiFAX Gateway.') }}"
+                    class="w-full bg-slate-950/80 border border-slate-700/80 rounded-lg p-2.5 text-xs font-mono text-slate-200 placeholder-slate-500 focus:outline-none focus:border-blue-500 transition">{{ config.email_sig_text }}</textarea>
+        </div>
+
+        <div class="pt-4 flex items-center justify-between">
+          <span class="text-xs text-slate-500">
+            {% if config.updated_at %}{{ _('Last updated') }}: {{ config.updated_at[:19] }}{% endif %}
+          </span>
+          <button type="submit" name="action" value="save"
+                  class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition shadow-lg shadow-blue-900/30 flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            {{ _('Save Gateway Settings') }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Real-Time Diagnostic Tool -->
+    <div class="space-y-6">
+      <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-6 shadow-sm space-y-4">
+        <h2 class="text-base font-semibold text-slate-200 border-b border-slate-800/80 pb-3 flex items-center gap-2">
+          <svg class="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          {{ _('Diagnostic Self-Test') }}
+        </h2>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          {{ _('Verify server reachability, TLS handshake, credentials and message dispatch in real time.') }}
+        </p>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1.5">{{ _('Target Recipient Email') }}</label>
+          <input type="email" name="test_email" value="{{ current_user.email if current_user and current_user.email else 'admin@localhost' }}"
+                 placeholder="admin@company.com"
+                 class="w-full bg-slate-950/80 border border-slate-700/80 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-amber-500 transition" />
+        </div>
+
+        <button type="submit" name="action" value="test"
+                class="w-full py-2.5 rounded-lg bg-amber-600/20 hover:bg-amber-600/30 border border-amber-500/40 text-amber-300 hover:text-white font-medium text-xs transition flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          {{ _('Send Diagnostic Email') }}
+        </button>
+      </div>
+    </div>
+
+  </form>
+
+</div>
+{% endblock %}

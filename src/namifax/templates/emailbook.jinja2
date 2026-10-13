@@ -1,0 +1,89 @@
+{% extends "layout.jinja2" %}
+
+{% block title %}- NamiFAX - Email Address Book{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+  
+  <!-- Header & Navigation Bar -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-700 shadow-2xs">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-slate-900 tracking-tight">{{ _('Email Address Book') }}</h2>
+        <p class="text-xs text-slate-500">{{ _('Manage email recipients, transmission routing, and contacts directory.') }}</p>
+      </div>
+    </div>
+
+    <!-- Navigation Chips & Primary Action -->
+    <div class="flex items-center space-x-2">
+      <nav class="book-menu inline-flex rounded-lg border border-slate-200 bg-slate-50 p-0.5 text-xs font-semibold mr-2">
+        <a href="/emailbook" class="px-3 py-1 rounded-md bg-white text-sky-800 shadow-2xs font-bold">{{ _('Email Book') }}</a>
+        <a href="/addressbook" class="px-3 py-1 rounded-md text-slate-600 hover:text-slate-900 transition">{{ _('Address Book') }}</a>
+        <a href="/distrolist" class="px-3 py-1 rounded-md text-slate-600 hover:text-slate-900 transition">{{ _('Distribution Lists') }}</a>
+      </nav>
+      <a href="/emailbook/edit" class="inline-flex items-center space-x-1.5 px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-xs font-bold shadow-2xs transition">
+        <span>+ {{ _('New Contact') }}</span>
+      </a>
+    </div>
+  </div>
+
+  <form action="/emailbook" method="get" class="flex items-center gap-2 text-xs">
+    <label for="q" class="font-semibold text-slate-700">{{ _('Search') }}:</label>
+    <input type="text" name="q" id="q" data-live-filter="#email-table" value="{{ query or '' }}" class="border border-slate-300 rounded-lg px-3 py-1.5 bg-white text-slate-900 w-64" />
+    <button type="submit" class="px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-300 rounded-lg font-semibold text-slate-700">{{ _('Search') }}</button>
+  </form>
+
+  <!-- Contacts Table Card -->
+  <div class="bg-white border border-slate-200/90 rounded-xl shadow-xs overflow-hidden">
+    <div class="px-5 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+      <div class="flex items-center space-x-2">
+        <span class="w-2 h-2 rounded-full bg-sky-600"></span>
+        <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider">{{ _('Contacts') }}</h3>
+      </div>
+      <span class="text-[11px] font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full font-bold">
+        {{ contacts|length if contacts else 0 }} {{ _('recipients') }}
+      </span>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table id="email-table" class="min-w-full divide-y divide-slate-100 text-xs">
+        <thead class="bg-slate-50 text-slate-500 font-bold uppercase tracking-wider text-[11px]">
+          <tr>
+            <th class="px-5 py-3 text-left">{{ _('Contact Name') }}</th>
+            <th class="px-5 py-3 text-left">{{ _('Company Affiliation') }}</th>
+            <th class="px-5 py-3 text-left">{{ _('Email Address') }}</th>
+            <th class="px-5 py-3 text-right">{{ _('Actions') }}</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 bg-white">
+          {% for c in contacts %}
+            <tr class="hover:bg-slate-50/80 transition">
+              <td class="px-5 py-3.5 whitespace-nowrap font-bold text-slate-900">{{ c.name }}</td>
+              <td class="px-5 py-3.5 whitespace-nowrap text-slate-600">{{ c.company or '-' }}</td>
+              <td class="px-5 py-3.5 whitespace-nowrap font-mono text-[11px] text-sky-700 font-medium">{{ c.email }}</td>
+              <td class="px-5 py-3.5 whitespace-nowrap text-right font-medium">
+                <a href="/emailbook/edit?abookemail_id={{ c.id }}" class="inline-flex items-center px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold border border-slate-200 transition">
+                  {{ _('Edit') }}
+                </a>
+              </td>
+            </tr>
+          {% else %}
+            <tr>
+              <td colspan="4" class="px-5 py-10 text-center text-slate-400">
+                {{ _('No email contacts found in the directory. Click "+ New Contact" to register one.') }}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+

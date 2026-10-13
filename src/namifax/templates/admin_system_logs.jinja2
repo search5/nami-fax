@@ -1,0 +1,98 @@
+{% extends "admin_layout.jinja2" %}
+
+{% block title %}- NamiFAX - Admin - System Logs{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+  
+  <!-- Header & Filter Form -->
+  <div class="border-b border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-sky-950 border border-sky-800 flex items-center justify-center text-sky-400 shadow-inner">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-white tracking-tight">{{ _('System Logs') }}</h2>
+        <p class="text-xs text-slate-400">{{ _('Audit logs and HylaFAX server operational event traces') }}</p>
+      </div>
+    </div>
+
+    <!-- Keyword & Date Search Toolbar (Matching Legacy Sequence & Contract) -->
+    <form action="/admin/system_logs" method="get" class="flex flex-wrap items-center gap-2 text-xs">
+      <div class="flex items-center space-x-1.5">
+        <label for="kw" class="font-semibold text-slate-300">{{ _('Keywords:') }}</label>
+        <input type="text" name="kw" id="kw" value="{{ kw or '' }}" placeholder="{{ _('Search text...') }}" class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 font-mono transition" />
+      </div>
+
+      <div class="flex items-center space-x-1">
+        <label for="day" class="font-semibold text-slate-300">{{ _('Date:') }}</label>
+        <select name="day" id="day" class="bg-slate-900 border border-slate-700 rounded-lg px-2 py-1.5 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition">
+          <option value="">DD</option>
+          {% for d in days %}
+            <option value="{{ d }}" {% if d == day %}selected{% endif %}>{{ d }}</option>
+          {% endfor %}
+        </select>
+        <select name="month" id="month" class="bg-slate-900 border border-slate-700 rounded-lg px-2 py-1.5 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition">
+          <option value="">MM</option>
+          {% for m, mname in months %}
+            <option value="{{ m }}" {% if m == month %}selected{% endif %}>{{ mname }}</option>
+          {% endfor %}
+        </select>
+        <select name="year" id="year" class="bg-slate-900 border border-slate-700 rounded-lg px-2 py-1.5 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition">
+          <option value="">YYYY</option>
+          {% for y in years %}
+            <option value="{{ y }}" {% if y == year %}selected{% endif %}>{{ y }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <input type="hidden" name="_submit_check" value="1" />
+      <button type="submit" class="inline-flex items-center px-4 py-1.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-xs shadow-2xs transition">
+        {{ _('Search') }}
+      </button>
+    </form>
+  </div>
+
+  <!-- Terminal Style Logs Grid -->
+  <div class="bg-slate-950/80 border border-slate-800/90 rounded-xl overflow-hidden shadow-xs">
+    <div class="overflow-x-auto">
+      <table class="w-full text-xs text-left border-collapse font-mono">
+        <thead>
+          <tr class="bg-slate-900 border-b border-slate-800 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+            <th scope="col" class="py-3 px-4 w-48">{{ _('Date') }}</th>
+            <th scope="col" class="py-3 px-4">{{ _('Log Text') }}</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800/60 text-slate-300">
+          {% if logs and logs|length > 0 %}
+            {% for log in logs %}
+              <tr class="hover:bg-slate-900/60 transition">
+                <td class="py-2.5 px-4 text-slate-500 whitespace-nowrap align-top text-[11px]">{{ log.logdate }}</td>
+                <td class="py-2.5 px-4 text-slate-200 align-top leading-relaxed break-all">{{ log.logtext }}</td>
+              </tr>
+            {% endfor %}
+          {% else %}
+            <tr>
+              <td colspan="2" class="p-12 text-center text-slate-500">
+                <p class="font-semibold text-slate-400">{{ _('No system logs found matching criteria.') }}</p>
+                <p class="text-[11px] mt-1 text-slate-600">{{ _('Transmissions and server events will be streamed here in real time.') }}</p>
+              </td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  {% if pages > 1 %}
+  <nav aria-label="pager" class="flex items-center justify-center gap-4 text-xs text-slate-400">
+    {% if page > 1 %}<a href="/admin/system_logs?{{ pager_query }}&amp;page={{ page - 1 }}" class="text-sky-400">&lsaquo; {{ _('Previous') }}</a>{% endif %}
+    <span>{{ _('Page') }} {{ page }} / {{ pages }}</span>
+    {% if page < pages %}<a href="/admin/system_logs?{{ pager_query }}&amp;page={{ page + 1 }}" class="text-sky-400">{{ _('Next') }} &rsaquo;</a>{% endif %}
+  </nav>
+  {% endif %}
+
+</div>
+{% endblock %}

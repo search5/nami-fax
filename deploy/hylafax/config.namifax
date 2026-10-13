@@ -1,0 +1,7 @@
+# Add to every modem's /etc/hylafax/config.<device> (or to config for all modems).  See docs/ko/install/hylafax.md.
+#
+## NamiFAX
+#
+FaxRcvdCmd:     bin/faxrcvd
+DynamicConfig:  bin/dynconf
+UseJobTSI:      true

@@ -1,3 +1,82 @@
+[project]
+name = "namifax"
+version = "4.0.0"
+description = "Modernized Enterprise HylaFAX Platform with Pyramid, SQLAlchemy, and APScheduler"
+readme = "README.md"
+license = "BSD-3-Clause"
+license-files = ["LICENSE", "NOTICE.txt", "COPYING.txt"]
+authors = [
+    { name = "Lee Ji-ho", email = "search5@mz.co.kr" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "pyramid>=2.0",
+    "pyramid_jinja2>=2.10.0",
+    "waitress>=3.0.0",
+    "plaster_pastedeploy>=1.0.0",
+    "apscheduler>=3.10.0",
+    "sqlalchemy>=2.0.0",
+    "pydantic>=2.0.0",
+    "babel>=2.18.0",
+    "pillow>=12.3.0",
+    "boto3>=1.43.105",
+    "pyotp>=2.10.0",
+    "webauthn>=3.0.1",
+    "defusedxml>=0.7.1",
+    "pytesseract>=0.3.13",
+    "pyramid-tm>=2.6",
+    "pyramid-retry>=2.1.1",
+    "transaction>=5.1",
+    "zope-sqlalchemy>=4.1",
+    "alembic>=1.20.0",
+    "segno>=1.6.6",
+    "pypdf>=6.19.0",
+    "argon2-cffi>=25.1.0",
+    "signxml>=5.1.0",
+]
+
+[project.scripts]
+namifax = "namifax.main:main"
+namifax-server = "namifax.main:serve_main"
+namifax-createuser = "namifax.main:createuser_main"
+namifax-dynconf = "namifax.main:dynconf_main"
+namifax-faxrcvd = "namifax.main:faxrcvd_main"
+namifax-notify = "namifax.main:notify_main"
+namifax-faxcover = "namifax.main:faxcover_main"
+namifax-cron = "namifax.main:cron_main"
+namifax-phb = "namifax.main:phb_main"
+
+[project.entry-points."paste.app_factory"]
+main = "namifax:main"
+
+[project.optional-dependencies]
+postgresql = [
+    "psycopg[binary]>=3.2",
+]
+mysql = [
+    "pymysql>=1.1",
+]
+
+[dependency-groups]
+dev = [
+    "psycopg[binary]>=3.2",
+    "pymysql>=1.1",
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+    "webtest>=3.0.0",
+]
+
 [build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["uv_build>=0.10.12,<0.11.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers"
+markers = [
+    "serverdb: runs against a throw-away database on a real PostgreSQL, MySQL or MariaDB server (see tests/conftest.py; skipped when the server URL is not configured)",
+]
+testpaths = ["tests"]
+# a single test that has not finished after 20 s (the slowest takes under 2 s, even on the server databases) dumps every
+# thread's stack to stderr and the run goes on, so a stall shows where it is stuck instead of just hanging
+faulthandler_timeout = 20
+pythonpath = [".", "src"]

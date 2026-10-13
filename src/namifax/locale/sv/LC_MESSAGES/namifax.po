@@ -1,0 +1,2609 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: NamiFAX 4.0.Language: sMIME-Version: 1.Content-Type: "
+"text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-02 00:54+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sv\n"
+"Language-Team: sv <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "Address Book"
+msgstr "E-postadresser"
+
+msgid "Save frequently used fax numbers for quick access when sending."
+msgstr "Spara ofta använda faxnummer för snabb åtkomst vid sändning."
+
+msgid "Company or fax number..."
+msgstr ""
+
+msgid "Search"
+msgstr "S�k"
+
+#, fuzzy
+msgid "New Company"
+msgstr "To company"
+
+msgid "Email Book"
+msgstr "E-postbok"
+
+msgid "Distribution Lists"
+msgstr "Distribution Lists"
+
+#, fuzzy
+msgid "Company / Name"
+msgstr "To company"
+
+msgid "Fax Number"
+msgstr "Fax number"
+
+msgid "Email"
+msgstr "E-post"
+
+msgid "Actions"
+msgstr "Åtgärder"
+
+msgid "Send Fax"
+msgstr "Skicka Fax"
+
+msgid "Edit"
+msgstr "Editera"
+
+#, fuzzy
+msgid "No contacts yet"
+msgstr "Kontakter"
+
+msgid "No contacts matched"
+msgstr "Inga matchande kontakter"
+
+msgid ""
+"Add contacts to quickly select fax numbers when sending without typing "
+"them every time."
+msgstr ""
+"Lägg till kontakter för att snabbt välja faxnummer vid sändning utan att "
+"behöva skriva dem varje gång."
+
+msgid "Add First Contact"
+msgstr "Lägg till första kontakt"
+
+#, fuzzy
+msgid "Edit Company"
+msgstr "To company"
+
+#, fuzzy
+msgid "Add New Company"
+msgstr "To company"
+
+msgid "Configure the company and every fax number it uses."
+msgstr ""
+
+#, fuzzy
+msgid "Back to Contacts"
+msgstr "Kontakter"
+
+msgid "Upload contacts file (vCard)"
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "Company"
+msgstr "To company"
+
+#, fuzzy
+msgid "Company Name"
+msgstr "To company"
+
+msgid "e.g. Acme Corporation"
+msgstr ""
+
+msgid "Clear the number to remove it."
+msgstr ""
+
+msgid "Description"
+msgstr "Beskrivning"
+
+msgid "Category"
+msgstr "Kategori"
+
+msgid "Location"
+msgstr ""
+
+msgid "Voice Telephone"
+msgstr "Rösttelefon"
+
+msgid "Street Address"
+msgstr "Gatuadress"
+
+msgid "Zip / Postal Code"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Add a Fax Number"
+msgstr ""
+
+msgid "First Fax Number"
+msgstr ""
+
+msgid "Delete"
+msgstr "Radera"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Save"
+msgstr "Spara"
+
+#, fuzzy
+msgid "Dashboard Overview"
+msgstr "Dashboard"
+
+#, fuzzy
+msgid "SYSTEM OPERATIONAL"
+msgstr "Systemfunktioner"
+
+msgid ""
+"Real-time status of fax spools, hardware serial modems, and registered "
+"users"
+msgstr ""
+"Realtidsstatus för faxköer, seriella hårdvarumodem och registrerade "
+"användare"
+
+msgid "Users"
+msgstr "Anv�ndare"
+
+msgid "Modems"
+msgstr "Konfigurera modem"
+
+#, fuzzy
+msgid "DID Routes"
+msgstr "DID/DTMF Route groups"
+
+#, fuzzy
+msgid "Logs"
+msgstr "Logga ut"
+
+#, fuzzy
+msgid "Fax Lines"
+msgstr "Fax Modems"
+
+msgid "Hardware Ready"
+msgstr "Hårdvara redo"
+
+#, fuzzy
+msgid "Active accounts"
+msgstr "Anv�ndare"
+
+msgid "Backend Core"
+msgstr "Backend-kärna"
+
+msgid "unknown"
+msgstr ""
+
+msgid "Scheduler"
+msgstr "Schemaläggare"
+
+msgid "Running"
+msgstr "Körs"
+
+#, fuzzy
+msgid "Registered User Accounts"
+msgstr "Anv�ndare"
+
+msgid "Manage Users"
+msgstr "Hantera användare"
+
+msgid "Name"
+msgstr "Namn"
+
+msgid "Username"
+msgstr "Anv�ndarnamn"
+
+msgid "Last Login"
+msgstr "Senaste inloggning"
+
+msgid "Server Status"
+msgstr "Serverstatus"
+
+msgid "Core"
+msgstr "Kärna"
+
+msgid "Database Engine"
+msgstr "Databasmotor"
+
+msgid "System Scheduler"
+msgstr "Systemschemaläggare"
+
+msgid "Configured Modems"
+msgstr "Konfigurerade modem"
+
+msgid "Administrator Workflow Guide"
+msgstr "Arbetsflödesguide för administratörer"
+
+#, fuzzy
+msgid "Configure Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid ""
+"Route incoming faxes automatically based on recognized Code39 / QR "
+"barcodes"
+msgstr ""
+"Dirigera inkommande fax automatiskt baserat på igenkända Code39- / QR-"
+"streckkoder"
+
+#, fuzzy
+msgid "New Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode Routing Rules"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode:"
+msgstr "Barcode Routing"
+
+msgid "Contact:"
+msgstr "Kontakt"
+
+msgid "None"
+msgstr "Ingen"
+
+msgid "Printer:"
+msgstr "Skrivare:"
+
+#, fuzzy
+msgid "Edit Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Add Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "EDIT MODE"
+msgstr "Editera"
+
+msgid "NEW"
+msgstr "NY"
+
+msgid "Barcode"
+msgstr "Barcode"
+
+msgid "Alias"
+msgstr "Alias"
+
+#, fuzzy
+msgid "Contact Email"
+msgstr "Kontakter"
+
+msgid "Printer"
+msgstr "Printer"
+
+msgid "Fax Categories"
+msgstr "Visa faxkategorier"
+
+msgid ""
+"Manage classification tags and archival categories for organizing "
+"transmissions"
+msgstr ""
+"Hantera klassificeringstaggar och arkivkategorier för att organisera "
+"överföringar"
+
+#, fuzzy
+msgid "New Category"
+msgstr "Visa faxkategorier"
+
+#, fuzzy
+msgid "Existing Categories"
+msgstr "Visa faxkategorier"
+
+msgid "Edit Category"
+msgstr "Redigera kategori"
+
+#, fuzzy
+msgid "Add Category"
+msgstr "Visa faxkategorier"
+
+msgid "Category Name"
+msgstr "Kategorinamn"
+
+msgid "e.g. Invoices, Contracts"
+msgstr ""
+
+#, fuzzy
+msgid "Configure Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Manage facsimile PostScript cover page templates and layouts"
+msgstr "Hantera PostScript-mallar och layouter för faxförsättsblad"
+
+#, fuzzy
+msgid "New Cover Page"
+msgstr "Anv�nd f�rs�ttsblad"
+
+#, fuzzy
+msgid "Available Cover Pages"
+msgstr "Cover Pages"
+
+#, fuzzy
+msgid "Edit Cover Page"
+msgstr "Anv�nd f�rs�ttsblad"
+
+#, fuzzy
+msgid "Add Cover Page"
+msgstr "Anv�nd f�rs�ttsblad"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "File"
+msgstr "Fil"
+
+msgid "e.g. custom.ps"
+msgstr ""
+
+msgid "Cover Template Studio: Dynamic Tag References"
+msgstr ""
+
+msgid ""
+"Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF"
+" templates. The Cover Studio engine automatically substitutes them during"
+" fax rendering."
+msgstr ""
+
+msgid "Dynamic Configuration"
+msgstr "Dynamisk konfiguration"
+
+msgid ""
+"Manage Caller ID blacklists and transmission rejection rules for modem "
+"devices"
+msgstr ""
+"Hantera svarta listor för nummerpresentation och avvisningsregler för "
+"modemenheter"
+
+msgid "New Rule"
+msgstr "Ny regel"
+
+msgid "Blocked Caller IDs"
+msgstr "Blockerade nummerpresentationer"
+
+msgid "Caller ID:"
+msgstr "Nummerpresentation:"
+
+msgid "All Devices"
+msgstr "Alla enheter"
+
+msgid "Edit Caller ID Rule"
+msgstr "Redigera regel för nummerpresentation"
+
+msgid "Add Caller ID Rule"
+msgstr "Lägg till regel för nummerpresentation"
+
+msgid "Caller ID"
+msgstr "Caller ID"
+
+msgid "e.g. 5550199 or pattern"
+msgstr ""
+
+msgid "Modem Device"
+msgstr "Modemenhet"
+
+#, fuzzy
+msgid "Fax to Email"
+msgstr "Fax Modems"
+
+msgid ""
+"Configure automated inbound fax forwarding and PDF dispatch rules mapped "
+"by company"
+msgstr ""
+"Konfigurera automatisk vidarebefordran av inkommande fax och PDF-utskick "
+"kopplade till företag"
+
+msgid "Add companies in the Address Book"
+msgstr ""
+
+msgid "Company Forwarding Rules"
+msgstr "Vidarebefordringsregler för företag"
+
+msgid "fax numbers"
+msgstr "Faxnummer"
+
+msgid "Email:"
+msgstr "E-post:"
+
+msgid "Edit Forwarding Rules"
+msgstr ""
+
+msgid "Forwarding Rules"
+msgstr ""
+
+msgid "This company has no fax numbers yet. Add them in the Address Book."
+msgstr ""
+
+msgid ""
+"Select a company on the left to set where the faxes received on each of "
+"its numbers are sent."
+msgstr ""
+
+#, fuzzy
+msgid "Control Panel"
+msgstr "Anv�nd f�rs�ttsblad"
+
+msgid "User Portal"
+msgstr "User Portal"
+
+msgid "Inbox"
+msgstr "Inkorg"
+
+#, fuzzy
+msgid "Overview"
+msgstr "Visa Fax"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Access Control"
+msgstr "Åtkomstkontroll"
+
+msgid "User Accounts"
+msgstr "Anv�ndare"
+
+msgid "Hardware & Lines"
+msgstr "Hårdvara & linjer"
+
+msgid "Fax Modems"
+msgstr "Fax Modems"
+
+msgid "Network Printers"
+msgstr ""
+
+#, fuzzy
+msgid "Inbound Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid "DID Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid "Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid "Content & Templates"
+msgstr "Innehåll & mallar"
+
+msgid "Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Security & System"
+msgstr "Säkerhet & system"
+
+msgid "Blacklist (DynConf)"
+msgstr "Blacklist (DynConf)"
+
+msgid "System Audit Logs"
+msgstr "System Audit Logs"
+
+msgid "System Functions"
+msgstr "Systemfunktioner"
+
+msgid "SMTP Gateway"
+msgstr ""
+
+msgid "Storage & Cloud"
+msgstr ""
+
+msgid "SAML 2.0 SSO"
+msgstr ""
+
+msgid "Logout"
+msgstr "Logga ut"
+
+msgid "Admin Control Panel"
+msgstr "Administratörspanel"
+
+msgid "Appliance Engine Online"
+msgstr "Enhetsmotor online"
+
+msgid ""
+"Configure Modems hardware devices, physical serial ports, and print-"
+"forwarding rules"
+msgstr ""
+"Konfigurera modemhårdvara, fysiska serieportar och regler för "
+"utskriftsvidarebefordran"
+
+#, fuzzy
+msgid "Configure Modems"
+msgstr "Fax Modems"
+
+msgid "Active Modem Lines"
+msgstr "Aktiva modemlinjer"
+
+msgid "Device"
+msgstr "Enhet"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Status"
+msgstr "Status"
+
+#, fuzzy
+msgid "Edit Modem"
+msgstr "Fax Modems"
+
+msgid "Configure Modems Device"
+msgstr "Konfigurera modemenhet"
+
+msgid "e.g. ttyS0"
+msgstr ""
+
+msgid "e.g. Main Inbound Line"
+msgstr ""
+
+msgid "Are you sure you want to delete this modem?"
+msgstr ""
+
+msgid "Create"
+msgstr "Skapa"
+
+msgid "Appliance Note:"
+msgstr "Enhetsanteckning:"
+
+msgid ""
+"Modems configured here must correspond to physical RS-232 serial devices,"
+" USB modems, or virtual IAX modems recognized by the underlying HylaFAX "
+"server."
+msgstr ""
+"Modem som konfigureras här måste motsvara fysiska seriella "
+"RS-232-enheter, USB-modem eller virtuella IAX-modem som identifieras av "
+"den underliggande HylaFAX-servern."
+
+msgid "Direct RAW socket & IPP network printing dispatch for received faxes"
+msgstr ""
+
+msgid "Add Network Printer"
+msgstr ""
+
+msgid "Printer Name"
+msgstr ""
+
+msgid "e.g. Office HP LaserJet"
+msgstr ""
+
+msgid "Protocol"
+msgstr ""
+
+msgid "Host / IP"
+msgstr ""
+
+#, fuzzy
+msgid "Port"
+msgstr "Priority"
+
+msgid "Queue Name (Optional)"
+msgstr ""
+
+msgid "2nd Floor Accounting Printer"
+msgstr ""
+
+msgid "Register Printer"
+msgstr ""
+
+msgid "Configured Printers"
+msgstr ""
+
+msgid "No network printers configured yet. Add one using the form on the left."
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+msgid "Test Print"
+msgstr ""
+
+msgid "Are you sure you want to delete this printer?"
+msgstr ""
+
+#, fuzzy
+msgid "Configure DID Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid ""
+"Route incoming faxes by Direct Inward Dialing (DID) extension to specific"
+" email boxes or printers"
+msgstr ""
+"Dirigera inkommande fax via direktinval (DID) till specifika e-postlådor "
+"eller skrivare"
+
+#, fuzzy
+msgid "New DID Route"
+msgstr "DID/DTMF Route groups"
+
+#, fuzzy
+msgid "Active DID Routing Rules"
+msgstr "DID/DTMF Route groups"
+
+msgid "Route Code"
+msgstr "Dirigeringskod"
+
+msgid "Action"
+msgstr "Åtgärd"
+
+msgid "Configure Routing Rule"
+msgstr "Konfigurera dirigeringsregel"
+
+msgid "e.g. 1000"
+msgstr ""
+
+msgid "e.g. Sales Direct Line"
+msgstr ""
+
+msgid "-- None --"
+msgstr "-- Ingen --"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid ""
+"DID (Direct Inward Dialing) routing automatically redirects incoming "
+"transmissions matching extension patterns directly to mapped operator "
+"inboxes or physical printers."
+msgstr ""
+"DID-dirigering (direktinval) omdirigerar automatiskt inkommande "
+"överföringar som matchar anknytningsmönster direkt till mappade inkorgar "
+"eller fysiska skrivare."
+
+msgid "SAML 2.0 Enterprise SSO"
+msgstr ""
+
+msgid ""
+"Single Sign-On integration with Okta, Microsoft Entra ID (Azure AD), "
+"Google Workspace & Keycloak"
+msgstr ""
+
+msgid "Download SP Metadata XML"
+msgstr ""
+
+msgid "Identity Provider (IdP) Settings"
+msgstr ""
+
+msgid "Enable SAML 2.0 Single Sign-On"
+msgstr ""
+
+msgid "Shows \"SAML 2.0 Enterprise SSO\" login option on login page"
+msgstr ""
+
+msgid "IdP Entity ID / Issuer"
+msgstr ""
+
+msgid "IdP Single Sign-On Service URL (HTTP-Redirect / POST)"
+msgstr ""
+
+msgid "IdP Public X.509 Certificate (PEM)"
+msgstr ""
+
+msgid "Just-in-Time (JIT) Provisioning"
+msgstr ""
+
+msgid "Auto-create account on first login"
+msgstr ""
+
+msgid "Default Role for JIT Users"
+msgstr ""
+
+msgid "Save SAML Configuration"
+msgstr ""
+
+msgid "NamiFAX SP Endpoints"
+msgstr ""
+
+msgid ""
+"Copy these endpoints into your Identity Provider (Azure AD, Okta, Google)"
+" console:"
+msgstr ""
+
+msgid "Assertion Consumer Service (ACS) URL"
+msgstr ""
+
+msgid "SP Entity ID / Metadata URL"
+msgstr ""
+
+msgid "NameID Format"
+msgstr ""
+
+msgid "External SMTP Gateway"
+msgstr ""
+
+msgid ""
+"Configure external mail delivery server for inbound fax notifications and"
+" user alerts"
+msgstr ""
+
+msgid "Diagnostics Result"
+msgstr ""
+
+msgid "Server Connection & Security"
+msgstr ""
+
+msgid "SMTP Host / Server"
+msgstr ""
+
+msgid "Encryption Protocol"
+msgstr ""
+
+msgid "None (Plain)"
+msgstr ""
+
+msgid "STARTTLS (587)"
+msgstr ""
+
+msgid "SSL / TLS (465)"
+msgstr ""
+
+msgid "Requires SMTP Authentication"
+msgstr ""
+
+#, fuzzy
+msgid "Username / Login"
+msgstr "Anv�ndarnamn"
+
+#, fuzzy
+msgid "Password / App Key"
+msgstr "L�senord"
+
+msgid "Default Sender Profile & Signatures"
+msgstr ""
+
+#, fuzzy
+msgid "From Email Address"
+msgstr "E-postadress"
+
+#, fuzzy
+msgid "From Display Name"
+msgstr "To company"
+
+msgid "NamiFAX Corporate Dispatcher"
+msgstr ""
+
+msgid "Email Signature (Plaintext)"
+msgstr ""
+
+msgid "Sent automatically by NamiFAX Gateway."
+msgstr ""
+
+msgid "Last updated"
+msgstr "Senast uppdaterad"
+
+#, fuzzy
+msgid "Save Gateway Settings"
+msgstr "Inst�llningar"
+
+msgid "Diagnostic Self-Test"
+msgstr ""
+
+msgid ""
+"Verify server reachability, TLS handshake, credentials and message "
+"dispatch in real time."
+msgstr ""
+
+msgid "Target Recipient Email"
+msgstr ""
+
+#, fuzzy
+msgid "Send Diagnostic Email"
+msgstr "Skicka Fax"
+
+msgid "Enterprise storage lifecycle policies and S3 / MinIO / GCS cloud backends"
+msgstr ""
+
+msgid "Storage Lifecycle Policies"
+msgstr ""
+
+msgid "Purge Local TIFFs After (Days)"
+msgstr ""
+
+msgid ""
+"Frees local disk space if a PDF version exists. 0 = immediate after "
+"conversion."
+msgstr ""
+
+msgid "Full Fax Retention (Days)"
+msgstr ""
+
+msgid ""
+"Purge entire fax record and archival files after specified days. 0 = keep"
+" forever."
+msgstr ""
+
+msgid "Synchronize remote cloud object deletion on fax purge"
+msgstr ""
+
+msgid "Save Lifecycle Policy"
+msgstr ""
+
+msgid "Cloud Storage Backend"
+msgstr ""
+
+msgid "Storage Provider"
+msgstr ""
+
+msgid "Local Filesystem (Default)"
+msgstr ""
+
+msgid "Endpoint URL (MinIO / S3 Compatible)"
+msgstr ""
+
+msgid "Region"
+msgstr ""
+
+msgid "Bucket Name"
+msgstr ""
+
+msgid "Access Key ID"
+msgstr ""
+
+msgid "Secret Access Key"
+msgstr ""
+
+msgid "Key Prefix"
+msgstr ""
+
+msgid "Save Storage Config"
+msgstr ""
+
+msgid "Test Connection"
+msgstr ""
+
+msgid "Perform maintenance operations, service control, and backups."
+msgstr "Utför underhållsåtgärder, tjänstekontroll och säkerhetskopiering."
+
+msgid "HylaFAX Engine Active"
+msgstr "HylaFAX-motor aktiv"
+
+#, fuzzy
+msgid "Admin Dashboard"
+msgstr "Dashboard"
+
+msgid "Caution: Appliance Maintenance Operations"
+msgstr "Varning: Underhållsåtgärder för enheten"
+
+msgid ""
+"Restarting or shutting down services will interrupt active fax modem "
+"spooling and disconnect client sessions. Ensure all outbound "
+"transmissions in the modem queue are completed before initiating "
+"maintenance tasks."
+msgstr ""
+"Omstart eller avstängning av tjänster avbryter aktiv faxmodemkö och "
+"kopplar från klientsessioner. Se till att alla utgående överföringar i "
+"modemkön är slutförda innan underhållsuppgifter påbörjas."
+
+msgid "Daemon Service Control"
+msgstr "Tjänstekontroll för demoner"
+
+msgid "Restart HylaFAX and NamiFAX web services, or halt background workers."
+msgstr ""
+"Starta om HylaFAX- och NamiFAX-webbtjänster eller stoppa "
+"bakgrundsprocesser."
+
+msgid "Reboot Services"
+msgstr "Starta om tjänster"
+
+msgid "Shutdown Services"
+msgstr "Stäng av tjänster"
+
+msgid "Database & Archive Backup"
+msgstr "Säkerhetskopiering av databas & arkiv"
+
+msgid "Download system archives and database snapshots for offsite retention."
+msgstr "Ladda ner systemarkiv och databasögonblicksbilder för extern lagring."
+
+msgid "Download Archive"
+msgstr "Download Archive"
+
+msgid "Download Database"
+msgstr "Download Database"
+
+msgid "System Logs"
+msgstr "Systemloggar"
+
+msgid "Audit logs and HylaFAX server operational event traces"
+msgstr "Granskningsloggar och driftshändelsespår från HylaFAX-servern"
+
+msgid "Keywords:"
+msgstr "Nyckelord:"
+
+msgid "Search text..."
+msgstr ""
+
+msgid "Date:"
+msgstr "Datum:"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Log Text"
+msgstr "Loggtext"
+
+msgid "No system logs found matching criteria."
+msgstr "Inga systemloggar matchade sökkriterierna."
+
+msgid "Transmissions and server events will be streamed here in real time."
+msgstr "Överföringar och serverhändelser strömmas här i realtid."
+
+msgid "Delete User"
+msgstr "Ta bort anv�ndare"
+
+msgid "Are you sure you want to delete the user"
+msgstr ""
+
+msgid "Manage system operator credentials, access permissions, and route mapping"
+msgstr ""
+"Hantera inloggningsuppgifter för systemoperatörer, åtkomstbehörigheter "
+"och dirigeringsmappning"
+
+msgid "Create New User"
+msgstr "Skapa ny användare"
+
+msgid "Last IP"
+msgstr "Senaste IP-adress"
+
+msgid "Superuser"
+msgstr "Superanvändare"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "YES"
+msgstr "Ja"
+
+msgid "NO"
+msgstr "Nej"
+
+msgid "users"
+msgstr "Anv�ndare"
+
+msgid "user"
+msgstr "Anv�ndare"
+
+msgid "Modify User"
+msgstr "�ndra anv�ndare"
+
+msgid "New User"
+msgstr "Ny anv�ndare"
+
+msgid "Full Name"
+msgstr "Fullständigt namn"
+
+msgid "Password"
+msgstr "L�senord"
+
+msgid "Leave empty to keep the current password (a new user is sent a random one)"
+msgstr ""
+
+msgid "Email Address"
+msgstr "E-postadress"
+
+msgid "Password expiration cycle"
+msgstr ""
+
+msgid "Language"
+msgstr "Spr�k"
+
+msgid "Password can be reused"
+msgstr ""
+
+msgid "My Company"
+msgstr ""
+
+msgid "My Location"
+msgstr ""
+
+msgid "My Voice Number"
+msgstr ""
+
+msgid "My Fax Number"
+msgstr ""
+
+msgid "TSI ID"
+msgstr ""
+
+msgid "Select Cover Page"
+msgstr ""
+
+msgid "New fax sound"
+msgstr ""
+
+msgid "Permissions & Capabilities"
+msgstr "Behörigheter & funktioner"
+
+msgid "Administrator Console"
+msgstr "Administratörskonsol"
+
+msgid "Superuser Rights"
+msgstr "Superanvändarbehörighet"
+
+msgid "Send on Any Modem"
+msgstr "Skicka via valfritt modem"
+
+msgid "You must first create a DID/DTMF group"
+msgstr ""
+
+msgid "You must first create a modem"
+msgstr ""
+
+#, fuzzy
+msgid "Categories"
+msgstr "Visa faxkategorier"
+
+msgid "You must first create a category"
+msgstr ""
+
+#, fuzzy
+msgid "Archive Search"
+msgstr "Arkiv"
+
+msgid "Search all sent and received fax records by date, company, or fax number."
+msgstr ""
+"Sök bland alla skickade och mottagna faxposter efter datum, företag eller"
+" faxnummer."
+
+#, fuzzy
+msgid "Search Filters"
+msgstr "S�k"
+
+msgid ""
+"Leave filters empty to search all records. Narrow results by adding more "
+"criteria."
+msgstr ""
+"Lämna filtren tomma för att söka i alla poster. Begränsa resultaten genom"
+" att lägga till fler kriterier."
+
+msgid "Company search"
+msgstr "F�retagss�kning"
+
+msgid "Company list"
+msgstr "F�retagslista"
+
+#, fuzzy
+msgid "Fax ID"
+msgstr "Fax Modems"
+
+msgid "e.g. 104"
+msgstr ""
+
+msgid "Keywords"
+msgstr "S�kord"
+
+msgid "Company, number, notes..."
+msgstr ""
+
+#, fuzzy
+msgid "All Categories"
+msgstr "Visa faxkategorier"
+
+msgid "User"
+msgstr "Anv�ndare"
+
+msgid "Start Date"
+msgstr ""
+
+msgid "End Date"
+msgstr ""
+
+#, fuzzy
+msgid "Direction"
+msgstr "DID/DTMF Route groups"
+
+#, python-format
+msgid "Total %(n)d results found."
+msgstr "Hittade totalt %(n)d resultat."
+
+msgid "Pages"
+msgstr "Sidor"
+
+msgid "Download PDF"
+msgstr "Ladda ner PDF"
+
+msgid "Reply to fax"
+msgstr ""
+
+#, fuzzy
+msgid "Re-send"
+msgstr "Skicka"
+
+msgid "Email PDF"
+msgstr "E-posta PDF"
+
+msgid "Add note to fax"
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid "Delete fax"
+msgstr ""
+
+msgid "Select"
+msgstr "V�lj"
+
+msgid "Unknown"
+msgstr ""
+
+#, fuzzy
+msgid "Received"
+msgstr "Arkiv"
+
+msgid "Sent"
+msgstr ""
+
+msgid "No results were found"
+msgstr "Hittade inga resultat"
+
+msgid "Reset filters"
+msgstr "Återställ filter"
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr "Nästa"
+
+msgid "Name the sender"
+msgstr ""
+
+msgid "Select Contact Record"
+msgstr "Välj kontaktpost"
+
+msgid "Or type a new company name"
+msgstr ""
+
+msgid "Delete selected faxes?"
+msgstr ""
+
+msgid "faxes"
+msgstr "fax"
+
+msgid "No contacts found"
+msgstr ""
+
+msgid "Add"
+msgstr "L�gg till"
+
+msgid "Close"
+msgstr "Stäng"
+
+msgid "Organize recipient groups for mass fax broadcasting and notifications."
+msgstr "Organisera mottagargrupper för massutskick av fax och aviseringar."
+
+msgid "Create List"
+msgstr "Skapa lista"
+
+msgid "Saved Distribution Lists"
+msgstr "Sparade distributionslistor"
+
+msgid "members"
+msgstr "medlemmar"
+
+msgid "Group Members & Settings"
+msgstr "Gruppmedlemmar & inställningar"
+
+msgid "Create New Distribution List"
+msgstr "Skapa ny distributionslista"
+
+msgid "List Name"
+msgstr "List name"
+
+msgid "e.g. Executive Sales Team"
+msgstr ""
+
+msgid "Group Members (Contacts & Fax Numbers)"
+msgstr "Gruppmedlemmar (kontakter & faxnummer)"
+
+#, fuzzy
+msgid "contacts assigned"
+msgstr "Kontakter"
+
+msgid "No contacts assigned to this list yet."
+msgstr "Inga kontakter har tilldelats denna lista än."
+
+msgid "Add Member"
+msgstr "Lägg till medlem"
+
+msgid "Delete this distribution list?"
+msgstr ""
+
+msgid "Edit Distribution List"
+msgstr "Redigera distributionslista"
+
+msgid "Create Distribution List"
+msgstr "Skapa distributionslista"
+
+msgid "Configure broadcast list parameters and recipient group members."
+msgstr ""
+"Konfigurera parametrar för distributionslistor och "
+"mottagargruppsmedlemmar."
+
+msgid "Back to Lists"
+msgstr "Tillbaka till listor"
+
+msgid "Distribution List Profile"
+msgstr "Profil för distributionslista"
+
+msgid "e.g. Finance Operations"
+msgstr ""
+
+msgid "Enrolled Members"
+msgstr "Registrerade medlemmar"
+
+msgid "List ID:"
+msgstr "List-ID:"
+
+msgid "No contacts in this list."
+msgstr "Inga kontakter i denna lista."
+
+msgid "Add contacts to the list"
+msgstr ""
+
+msgid "Changes saved"
+msgstr ""
+
+msgid "Back"
+msgstr "[ Tillbaka ]"
+
+#, fuzzy
+msgid "Email Address Book"
+msgstr "E-postadresser"
+
+msgid "Manage email recipients, transmission routing, and contacts directory."
+msgstr "Hantera e-postmottagare, överföringsdirigering och kontaktkatalog."
+
+#, fuzzy
+msgid "New Contact"
+msgstr "Kontakter"
+
+msgid "Contacts"
+msgstr "Kontakter"
+
+msgid "recipients"
+msgstr "mottagare"
+
+#, fuzzy
+msgid "Contact Name"
+msgstr "Kontakter"
+
+msgid "Company Affiliation"
+msgstr "Företagstillhörighet"
+
+msgid ""
+"No email contacts found in the directory. Click \"+ New Contact\" to "
+"register one."
+msgstr ""
+"Inga e-postkontakter hittades i katalogen. Klicka på \"+ Ny kontakt\" för"
+" att registrera en."
+
+msgid "Email Book - Edit Email Contact"
+msgstr "E-postbok - Redigera e-postkontakt"
+
+msgid "Manage contact information and company affiliation in Email Book."
+msgstr "Hantera kontaktinformation och företagstillhörighet i e-postboken."
+
+msgid "Back to Email Book"
+msgstr "Tillbaka till e-postboken"
+
+msgid "Contact Profile Details"
+msgstr "Kontaktprofildetaljer"
+
+msgid "John Doe"
+msgstr ""
+
+msgid "New Destination"
+msgstr ""
+
+msgid "Priority"
+msgstr "Priority"
+
+msgid "Modem / Device"
+msgstr ""
+
+msgid "Number of tries"
+msgstr ""
+
+msgid "Expire after"
+msgstr ""
+
+msgid "Now"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Hours"
+msgstr ""
+
+msgid "Days"
+msgstr ""
+
+msgid "Schedule Send Time"
+msgstr ""
+
+#, fuzzy
+msgid "Lost Password"
+msgstr "L�senord"
+
+msgid "Account Recovery Assistance"
+msgstr "Hjälp med kontoåterställning"
+
+msgid "Back to Login"
+msgstr "Tillbaka till inloggning"
+
+msgid "Your password will be sent to the given e-mail address."
+msgstr ""
+
+msgid "Once you have received your new password you can login in and change it."
+msgstr ""
+
+msgid "Login"
+msgstr "Logga in"
+
+msgid ""
+"Please enter your e-mail address then click on the Send Password button. "
+"You will receive a new password shortly. Use this new password to access "
+"the site."
+msgstr ""
+
+msgid "E-mail address"
+msgstr "E-postadress"
+
+msgid "Send Password"
+msgstr "Skicka l�senord"
+
+msgid "Received faxes appear here automatically in real time."
+msgstr "Mottagna fax visas här automatiskt i realtid."
+
+msgid "Faxes"
+msgstr "fax"
+
+msgid "Fax"
+msgstr "Fax"
+
+#, fuzzy
+msgid "Archive Selected"
+msgstr "Arkiv"
+
+msgid "Delete Selected"
+msgstr "Ta bort markerade"
+
+msgid "fax"
+msgstr ""
+
+#, fuzzy
+msgid "Preview"
+msgstr "Visa Fax"
+
+msgid "Sender"
+msgstr "Sender"
+
+msgid "Page"
+msgstr "Sida"
+
+msgid "of"
+msgstr "av"
+
+msgid "This number belongs to several companies. Which one is it?"
+msgstr ""
+
+msgid "Unknown Sender"
+msgstr ""
+
+msgid "View"
+msgstr "Visa Fax"
+
+msgid "Reply"
+msgstr "Reply to FAX"
+
+msgid "Archive"
+msgstr "Arkiv"
+
+msgid "Email Fax"
+msgstr "E-posta fax"
+
+msgid "Rotate"
+msgstr "Rotera Fax"
+
+msgid "Download TIFF"
+msgstr "Ladda ner TIFF"
+
+msgid "0 FAXES"
+msgstr "0 FAX"
+
+msgid ""
+"There are no incoming faxes waiting in your inbox. Incoming transmissions"
+" will automatically appear here in real time."
+msgstr ""
+"Det finns inga inkommande fax som väntar i din inkorg. Inkommande "
+"sändningar visas automatiskt här i realtid."
+
+msgid "Send Your First Fax"
+msgstr "Skicka ditt första fax"
+
+#, fuzzy
+msgid "Search Archive"
+msgstr "Arkiv"
+
+msgid "Getting Started with NamiFAX"
+msgstr "Kom igång med NamiFAX"
+
+msgid "Receive Faxes"
+msgstr "Ta emot fax"
+
+msgid ""
+"When someone sends a fax to this system's number, it will appear here "
+"automatically."
+msgstr "När någon skickar ett fax till systemets nummer visas det här automatiskt."
+
+#, fuzzy
+msgid "Send Faxes"
+msgstr "Skicka Fax"
+
+msgid "Click Send Fax to transmit a PDF or image document to any fax number."
+msgstr ""
+"Klicka på Skicka fax för att sända ett PDF- eller bilddokument till "
+"vilket faxnummer som helst."
+
+msgid "Manage Records"
+msgstr "Hantera poster"
+
+msgid ""
+"Download faxes as PDF, archive them for later, or search all records in "
+"the Archive."
+msgstr ""
+"Ladda ner fax som PDF, arkivera dem för senare eller sök bland alla "
+"poster i arkivet."
+
+msgid "Archive search"
+msgstr ""
+
+msgid "new fax"
+msgstr ""
+
+msgid "Outbox"
+msgstr "Outbox"
+
+msgid "lines"
+msgstr ""
+
+msgid "Settings"
+msgstr "Inst�llningar"
+
+msgid "Sign in"
+msgstr "Logga in"
+
+msgid "Enter your credentials to continue."
+msgstr "Ange dina inloggningsuppgifter för att fortsätta."
+
+#, fuzzy
+msgid "System Online"
+msgstr "Systemfunktioner"
+
+msgid "Enter your username"
+msgstr ""
+
+msgid "Forgot password?"
+msgstr ""
+"Fyll i din e-postadress och klicka p� knappen 'Skicka l�senord'.Du kommer"
+" att f� ett nytt l�senord utskickat alldeles strax.  Anv�nd det nya "
+"l�senordet f�r att komma in p� sidan."
+
+msgid "Enter your password"
+msgstr ""
+
+msgid "Contact your system administrator if you need an account."
+msgstr "Kontakta din systemadministratör om du behöver ett konto."
+
+msgid "Or continue with"
+msgstr ""
+
+msgid "Sign in with Passkey (Touch ID / Security Key)"
+msgstr ""
+
+msgid "SAML 2.0 Enterprise SSO (Okta / Entra ID)"
+msgstr ""
+
+msgid "Two-Factor Authentication"
+msgstr ""
+
+msgid ""
+"Enter the 6-digit code from your authenticator app or an emergency "
+"recovery code."
+msgstr ""
+
+#, fuzzy
+msgid "Authentication Code"
+msgstr "To person"
+
+msgid "123456 or 8-char backup code"
+msgstr ""
+
+msgid "Verify & Log In"
+msgstr ""
+
+msgid "Sign out?"
+msgstr ""
+
+msgid "Assign Company Name"
+msgstr "Tilldela företagsnamn"
+
+msgid "Associate document with registered enterprise contact"
+msgstr "Koppla dokumentet till en registrerad företagskontakt"
+
+msgid "Search Company Name"
+msgstr "Sök företagsnamn"
+
+msgid "Type company name to filter..."
+msgstr ""
+
+#, fuzzy
+msgid "Delete Fax"
+msgstr "Radera"
+
+msgid "Are you sure you want to delete this fax?"
+msgstr "Är du säker på att du vill ta bort detta fax?"
+
+msgid "This operation will permanently purge the fax document archive."
+msgstr "Denna åtgärd kommer att permanent radera faxdokumentarkivet."
+
+msgid "Dispatch PDF document attachment to email recipients"
+msgstr "Skicka PDF-dokumentbilaga till e-postmottagare"
+
+msgid "From"
+msgstr "Fr�n"
+
+msgid "Recipients"
+msgstr "Mottagare"
+
+msgid "Choose from contacts"
+msgstr ""
+
+msgid "CC"
+msgstr ""
+
+msgid "BCC"
+msgstr ""
+
+msgid "Subject"
+msgstr "�mne"
+
+msgid "PDF file name"
+msgstr "PDF:ens filnamn"
+
+msgid "Message"
+msgstr "Meddelande"
+
+msgid "Archive fax"
+msgstr ""
+
+msgid "Send"
+msgstr "Skicka"
+
+msgid "Append internal administrative note or comments"
+msgstr "Bifoga intern administrativ anteckning eller kommentarer"
+
+msgid "Note / Description"
+msgstr "Anteckning / beskrivning"
+
+msgid "Enter transaction note or dispatch comments..."
+msgstr ""
+
+msgid "Transmission Report"
+msgstr "Sändningsrapport"
+
+msgid "Official facsimile delivery confirmation receipt"
+msgstr "Officiellt kvitto på faxleveransbekräftelse"
+
+msgid "Print"
+msgstr "Print"
+
+msgid "Company:"
+msgstr "F�retag"
+
+msgid "Pages:"
+msgstr "Sidor:"
+
+msgid "Fax Number:"
+msgstr "Faxnummer"
+
+msgid "Database unavailable"
+msgstr ""
+
+msgid ""
+"The database cannot be reached right now. This page tries again every 10 "
+"seconds."
+msgstr ""
+
+msgid "Faxes currently queued or being transmitted."
+msgstr "Fax som för närvarande ligger i kö eller sänds."
+
+msgid ""
+"This page shows only faxes that are queued or in progress. Once "
+"delivered, they are removed from this list. Find completed records in the"
+msgstr ""
+"Denna sida visar endast fax som ligger i kö eller pågår. När de har "
+"levererats tas de bort från denna lista. Hitta slutförda poster i"
+
+msgid "jobs in progress"
+msgstr "jobb pågår"
+
+msgid "job in progress"
+msgstr "jobb pågår"
+
+msgid "Job ID"
+msgstr "Jobb-ID"
+
+msgid "Dials"
+msgstr ""
+
+msgid "TTS"
+msgstr ""
+
+msgid "Modify"
+msgstr ""
+
+msgid "Kill job"
+msgstr ""
+
+msgid "Kill"
+msgstr ""
+
+msgid "Failed Transmissions"
+msgstr "Misslyckade överföringar"
+
+msgid "Review the number or retry below."
+msgstr "Kontrollera numret eller försök igen nedan."
+
+msgid "Retry"
+msgstr "Retry"
+
+msgid "No jobs in queue"
+msgstr "Inga jobb i kön"
+
+msgid ""
+"There are no faxes waiting to be sent. Send a fax to see its progress "
+"here."
+msgstr ""
+"Det finns inga fax som väntar på att skickas. Skicka ett fax för att se "
+"dess förlopp här."
+
+#, fuzzy
+msgid "Send a Fax"
+msgstr "Skicka Fax"
+
+#, fuzzy
+msgid "Password Expired"
+msgstr "L�senord"
+
+msgid "Security Credentials Renewal"
+msgstr "Förnyelse av säkerhetsuppgifter"
+
+msgid "Action Required"
+msgstr "Åtgärd krävs"
+
+msgid ""
+"Your password has expired or needs to be changed before proceeding. "
+"Please enter your old password and choose a new password."
+msgstr ""
+"Ditt lösenord har upphört att gälla eller måste ändras innan du "
+"fortsätter. Ange ditt gamla lösenord och välj ett nytt lösenord."
+
+msgid "Old Password"
+msgstr "Gammalt l�senord"
+
+msgid "Current credentials"
+msgstr ""
+
+msgid "New Password"
+msgstr "Nytt l�senord"
+
+msgid "New secure passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Confirm New Password"
+msgstr ""
+"Fyll i din e-postadress och klicka p� knappen 'Skicka l�senord'.Du kommer"
+" att f� ett nytt l�senord utskickat alldeles strax.  Anv�nd det nya "
+"l�senordet f�r att komma in p� sidan."
+
+msgid "Re-type new passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Update Password"
+msgstr "L�senord"
+
+msgid "Fill in the details below and click Send."
+msgstr "Fyll i uppgifterna nedan och klicka på Skicka."
+
+#, fuzzy
+msgid "Destination & Recipients"
+msgstr "Fax number"
+
+msgid "Enter the fax number and recipient details."
+msgstr "Ange faxnummer och mottagaruppgifter."
+
+msgid "e.g. +1-555-0199  —  separate multiple numbers with semicolons"
+msgstr ""
+
+msgid "Choose a distribution list"
+msgstr ""
+
+msgid "To send to multiple recipients at once, separate numbers with a semicolon."
+msgstr ""
+
+msgid "Saved contacts are available in the"
+msgstr "Sparade kontakter finns tillgängliga i"
+
+msgid "Attention To"
+msgstr "To person"
+
+msgid "optional"
+msgstr "valfritt"
+
+msgid "e.g. Jane Doe"
+msgstr ""
+
+msgid "Voice Number"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Zip"
+msgstr ""
+
+msgid "Subject / Regarding"
+msgstr "�mne"
+
+msgid "e.g. Purchase Order #4921"
+msgstr ""
+
+msgid "Document Attachment"
+msgstr "Dokumentbilaga"
+
+msgid "Attach the file you want to transmit."
+msgstr "Bifoga filen du vill skicka."
+
+msgid "Click to select a file"
+msgstr "Klicka för att välja en fil"
+
+msgid "Supported: PDF, TIFF, PostScript, TXT"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid ""
+"PDF is the most commonly used format. Convert Word or Excel files to PDF "
+"before attaching."
+msgstr ""
+"PDF är det vanligaste formatet. Konvertera Word- eller Excel-filer till "
+"PDF innan du bifogar."
+
+msgid "Cover Page"
+msgstr "Anv�nd f�rs�ttsblad"
+
+msgid "Add a cover sheet with sender and recipient info."
+msgstr "Lägg till ett försättsblad med avsändar- och mottagarinformation."
+
+#, fuzzy
+msgid "Include Cover Page"
+msgstr "Anv�nd f�rs�ttsblad"
+
+#, fuzzy
+msgid "Cover Template"
+msgstr "Anv�nd f�rs�ttsblad"
+
+msgid "No cover pages are set up"
+msgstr ""
+
+msgid "Send via Line"
+msgstr "Skicka via linje"
+
+msgid "No modems configured"
+msgstr "Inga modem konfigurerade"
+
+#, fuzzy
+msgid "Cover Comments"
+msgstr "Cover Pages"
+
+msgid "Notes or message to print on the cover sheet..."
+msgstr ""
+
+msgid "Advanced Options"
+msgstr "Avancerade alternativ"
+
+msgid "Priority, retries, notifications"
+msgstr "Prioritet, återförsök, aviseringar"
+
+#, fuzzy
+msgid "Max Retries"
+msgstr "Visa faxkategorier"
+
+msgid "Retries automatically on busy signal."
+msgstr "Försöker automatiskt igen vid upptagetton."
+
+msgid "The original fax is sent along."
+msgstr ""
+
+msgid "Cancel & return to Inbox"
+msgstr "Avbryt & återgå till inkorgen"
+
+#, fuzzy
+msgid "User Settings"
+msgstr "Inst�llningar"
+
+msgid ""
+"Configure your personal profile, fax station identity, and portal "
+"preferences."
+msgstr ""
+"Konfigurera din personliga profil, faxstationsidentitet och "
+"portalinställningar."
+
+msgid "Return to Inbox"
+msgstr "Återgå till inkorgen"
+
+msgid "Personal & Organization Details"
+msgstr "Person- & organisationsuppgifter"
+
+msgid "Office / Location"
+msgstr "Kontor / plats"
+
+msgid "Direct Voice Number"
+msgstr "Direkttelefonnummer"
+
+#, fuzzy
+msgid "Direct Fax Number"
+msgstr "Fax number"
+
+msgid "Transmitting Station ID (TSI)"
+msgstr "Transmitting Station ID (TSI)"
+
+msgid "e.g. +1 555 123 4567"
+msgstr ""
+
+msgid "Header identifier imprinted on top of transmitted fax pages."
+msgstr "Sidhuvudsidentifierare tryckt överst på sända faxsidor."
+
+msgid "Email & Fax Notification Signature"
+msgstr "Signatur för e-post- & faxaviseringar"
+
+msgid "Portal & Delivery Preferences"
+msgstr "Portal- & leveransinställningar"
+
+msgid "Display Language"
+msgstr "Visningsspråk"
+
+#, fuzzy
+msgid "Default Cover Page"
+msgstr "Anv�nd f�rs�ttsblad"
+
+msgid "Faxes Per Page"
+msgstr "faxes per page"
+
+msgid "Archive Faxes Per Page"
+msgstr ""
+
+#, fuzzy
+msgid "Change Password"
+msgstr "L�senord"
+
+#, fuzzy
+msgid "Current Password"
+msgstr ""
+"Fyll i din e-postadress och klicka p� knappen 'Skicka l�senord'.Du kommer"
+" att f� ett nytt l�senord utskickat alldeles strax.  Anv�nd det nya "
+"l�senordet f�r att komma in p� sidan."
+
+msgid "Enter current password to verify"
+msgstr ""
+
+msgid "Enter secure new password"
+msgstr ""
+
+msgid "Re-type new password"
+msgstr ""
+
+#, fuzzy
+msgid "Update Settings"
+msgstr "Inst�llningar"
+
+msgid "Two-Factor Authentication (TOTP)"
+msgstr ""
+
+msgid ""
+"Protect your account with Google Authenticator, Authy, or compatible RFC "
+"6238 apps."
+msgstr ""
+
+msgid "Active / Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid ""
+"When enabled, signing in requires your password and a 6-digit one-time "
+"token from your mobile device."
+msgstr ""
+
+msgid "recovery codes left"
+msgstr ""
+
+msgid "Code from your app (to get new recovery codes)"
+msgstr ""
+
+msgid "New recovery codes"
+msgstr ""
+
+msgid "Turn off 2FA for your account?"
+msgstr ""
+
+msgid "Code or recovery code"
+msgstr ""
+
+msgid "Disable 2FA"
+msgstr ""
+
+msgid "Enable 2FA (Setup Authenticator)"
+msgstr ""
+
+msgid "FIDO2 Passkeys & Biometric Security Keys"
+msgstr ""
+
+msgid ""
+"Sign in securely without passwords using Touch ID, Face ID, Windows "
+"Hello, or YubiKey."
+msgstr ""
+
+msgid "Register New Passkey"
+msgstr ""
+
+msgid "Loading registered security keys..."
+msgstr ""
+
+msgid "No Passkeys registered yet."
+msgstr ""
+
+msgid ""
+"No Passkeys registered yet. Click Register to add Touch ID or a security "
+"key."
+msgstr ""
+
+msgid "Remove"
+msgstr "Ta bort"
+
+msgid ""
+"1. Scan this code with Google Authenticator, Authy or another RFC 6238 "
+"app, or type the key by hand."
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "2. Enter the 6-digit code the app shows"
+msgstr ""
+
+msgid "Turn on 2FA"
+msgstr ""
+
+msgid "Save your recovery codes"
+msgstr ""
+
+msgid ""
+"Each code works once if you lose your phone. They are shown only now; "
+"store them somewhere safe."
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Back to settings"
+msgstr ""
+
+msgid "Previous fax"
+msgstr "F�reg�nde Fax"
+
+msgid "Prev"
+msgstr "Föregående"
+
+msgid "Next fax"
+msgstr "N�sta Fax"
+
+msgid "Rotate fax"
+msgstr "Rotera Fax"
+
+#, python-format
+msgid "Invalid fax number: %(number)s"
+msgstr ""
+
+msgid "Address book entry saved."
+msgstr ""
+
+msgid "Please enter a valid fax number"
+msgstr ""
+
+msgid "You are not allowed to delete address book entries."
+msgstr ""
+
+msgid "You are not allowed to delete contacts."
+msgstr ""
+
+msgid "This modem already exists"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Cover page template removed successfully"
+msgstr ""
+
+msgid "Failed to remove cover page template"
+msgstr ""
+
+msgid "Failed to update cover page template"
+msgstr ""
+
+msgid "Cover page template registered successfully"
+msgstr ""
+
+msgid "Title and File are required"
+msgstr ""
+
+msgid "The company does not exist."
+msgstr ""
+
+msgid "The company and its fax numbers were deleted."
+msgstr ""
+
+msgid "Please enter a valid e-mail address."
+msgstr "Var v�nlig fyll i en giltig e-postadress"
+
+msgid "Fax to Email settings saved"
+msgstr ""
+
+msgid "The system is rebooting. Please wait..."
+msgstr ""
+
+msgid "The system is shutting down. Please wait..."
+msgstr ""
+
+msgid "The command could not be run"
+msgstr ""
+
+msgid "There is no fax archive folder to download."
+msgstr ""
+
+msgid "The database dump could not be made"
+msgstr ""
+
+msgid "Access denied. Superadmin permission required."
+msgstr ""
+
+msgid "SMTP Gateway settings saved successfully."
+msgstr ""
+
+msgid "Printer name and host are required."
+msgstr ""
+
+msgid "Network printer registered successfully."
+msgstr ""
+
+msgid "Printer deleted successfully."
+msgstr ""
+
+msgid "Lifecycle policy saved successfully."
+msgstr ""
+
+msgid "Cloud storage configuration saved successfully."
+msgstr ""
+
+msgid "SAML 2.0 configuration saved successfully."
+msgstr ""
+
+msgid "Catch All"
+msgstr ""
+
+msgid "Never"
+msgstr ""
+
+msgid "Every 3 Months"
+msgstr ""
+
+msgid "Every 6 Months"
+msgstr ""
+
+msgid "You must enter a username"
+msgstr ""
+
+msgid "Non-alphanumeric characters are not allowed in username."
+msgstr "Anv�ndarnamnet f�r bara inneh�lla alfanumeriska tecken"
+
+#, python-format
+msgid ""
+"Hello %(name)s,\n"
+"\n"
+"This email contains your username and password to log into NamiFAX "
+"(%(url)s)\n"
+"\n"
+"Username - %(username)s\n"
+"Password - %(password)s\n"
+"\n"
+"Please do not respond to this message as it is automatically generated "
+"and is for information purposes only"
+msgstr ""
+
+msgid "New User Details"
+msgstr "Nya anv�ndaruppgifter"
+
+msgid "The user does not exist."
+msgstr ""
+
+msgid "You cannot delete your own account."
+msgstr ""
+
+msgid "You cannot delete the last superuser."
+msgstr ""
+
+msgid "Please enter a valid number."
+msgstr ""
+
+msgid "Both sent and received faxes"
+msgstr "B�de skickade och mottagna fax"
+
+msgid "Only sent faxes"
+msgstr "Bara skickade fax"
+
+msgid "Only received faxes"
+msgstr "Bara mottagna fax"
+
+msgid "Account is disabled"
+msgstr ""
+
+#, python-format
+msgid "Too many failed attempts. Try again in %(minutes)d minutes."
+msgstr ""
+
+msgid "Invalid or expired verification code."
+msgstr ""
+
+#, python-format
+msgid ""
+"The user account %(user)s has this email associated with it.  A web user "
+"from %(ip)s has just requested that a new password be sent.\n"
+"\n"
+"Your New Password is: %(password)s\n"
+"\n"
+"If this was an error just login with your new password and then change "
+"your password to what you would like it to be."
+msgstr ""
+"Anv�ndarkontot %(user)s har den h�r e-postadressen registrerad. En "
+"webanv�ndare p� %(ip)s har beg�rt ut ett nytt l�senord f�r anv�ndaren. "
+"Ditt nya l�senord �r: %(password)s Om n�got blivit fel kan du logga in "
+"med ditt nya l�senord och �ndra till ett du sj�lv vill ha."
+
+msgid "Email failed to send"
+msgstr "E-postmeddelandet gick inte att skicka"
+
+msgid "Fax Contacts"
+msgstr ""
+
+msgid "Email Contacts"
+msgstr ""
+
+msgid "The fax document was not found."
+msgstr ""
+
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+msgid "Invalid job number."
+msgstr ""
+
+msgid "Any Available Line (Auto)"
+msgstr "Alla tillgängliga linjer (auto)"
+
+msgid "You may not use this line."
+msgstr ""
+
+msgid "Your fax has been successfully queued to be faxed."
+msgstr ""
+
+msgid "Job"
+msgstr ""
+
+msgid "The code is not valid."
+msgstr ""
+
+msgid "The code did not match. Check the time on your phone and try again."
+msgstr ""
+
+msgid "The password is not correct."
+msgstr ""
+
+msgid "Add a note"
+msgstr "L�gg till notering"
+
+msgid "Account active"
+msgstr "Kontot aktivt"
+
+msgid "The cover page was updated"
+msgstr ""
+
+msgid "The modem was created"
+msgstr "Modemet skapades"
+
+msgid "The modem was deleted"
+msgstr "Modemet uppdaterades"
+
+msgid "The modem was updated"
+msgstr "Modemet togs bort"
+
+msgid "Archive - show"
+msgstr ""
+
+msgid "Inbox - show"
+msgstr ""
+
+msgid "Assign a company name"
+msgstr "Tilldela ett f�retagsnamn"
+
+msgid "You must enter a company name"
+msgstr "Du m�ste mata in ett f�retagsnamn"
+
+msgid "Contact details saved"
+msgstr "Kontaktinfo sparades"
+
+msgid "Remove entries"
+msgstr ""
+
+msgid "Save list name"
+msgstr ""
+
+msgid "The email failed to send."
+msgstr "Misslyckades att skicka e-postmeddelandet."
+
+msgid "The email was sent successfully."
+msgstr "E-postmeddelandet skickades."
+
+msgid "Destination fax numbers"
+msgstr "Mottagande faxnummer"
+
+msgid "You must enter an alias"
+msgstr ""
+
+msgid "You must enter a device name"
+msgstr ""
+
+msgid "Modify Job"
+msgstr ""
+
+msgid "You must enter a name."
+msgstr "Du m�ste ange ett namn."
+
+msgid "Notify on requeue"
+msgstr "Avisera vid nytt försök"
+
+msgid "Forward fax via email"
+msgstr "Vidarebfordra fax via e-post"
+
+#, fuzzy
+msgid "To person"
+msgstr "To person"
+
+msgid "User can delete faxes"
+msgstr "Anv�ndaren kan ta bort fax"
+
+msgid "User settings have been saved."
+msgstr "Anv�ndarinst�llningarna sparades."
+
+msgid "Select All Faxes"
+msgstr "Markera alla"
+
+#~ msgid "High"
+#~ msgstr "High"
+
+#~ msgid "Configure corporate contact identity and transmission routing defaults."
+#~ msgstr ""
+#~ "Konfigurera företagets kontaktidentitet och "
+#~ "standardvärden för överföringsdirigering."
+
+#~ msgid "Primary Company Profile"
+#~ msgstr "Primär företagsprofil"
+
+#~ msgid "Recipient Contact & Physical Address"
+#~ msgstr "Mottagarkontakt och fysisk adress"
+
+#~ msgid "City / Postal Region"
+#~ msgstr "Stad / Postregion"
+
+#~ msgid "Category Tag"
+#~ msgstr "Kategoritagg"
+
+#~ msgid "General"
+#~ msgstr "Normal"
+
+#~ msgid "Invoices & Billing"
+#~ msgstr "Fakturor & fakturering"
+
+#~ msgid "Legal"
+#~ msgstr "Juridik"
+
+#~ msgid "Description / Internal Notes"
+#~ msgstr "Beskrivning / interna anteckningar"
+
+#~ msgid "Edit Forwarding Rule"
+#~ msgstr "Redigera vidarebefordringsregel"
+
+#~ msgid "Add Forwarding Rule"
+#~ msgstr "Lägg till vidarebefordringsregel"
+
+#~ msgid ""
+#~ "Please enter your registered username or"
+#~ " email address below. Password reset "
+#~ "instructions will be dispatched to your"
+#~ " account email address."
+#~ msgstr ""
+#~ "Vänligen ange ditt registrerade användarnamn"
+#~ " eller din e-postadress nedan. "
+#~ "Instruktioner för återställning av lösenord"
+#~ " skickas till din registrerade "
+#~ "e-postadress."
+
+#~ msgid "Username or Email Address"
+#~ msgstr "Användarnamn eller e-postadress"
+
+#~ msgid "Reset Password"
+#~ msgstr ""
+#~ "Fyll i din e-postadress och klicka "
+#~ "p� knappen 'Skicka l�senord'.Du kommer "
+#~ "att f� ett nytt l�senord utskickat "
+#~ "alldeles strax.  Anv�nd det nya "
+#~ "l�senordet f�r att komma in p� "
+#~ "sidan."
+
+#~ msgid "Standard (Default)"
+#~ msgstr "Standard (standard)"
+
+#~ msgid "Urgent"
+#~ msgstr "Brådskande"
+
+#~ msgid "Confidential"
+#~ msgstr "Konfidentiellt"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Low"
+#~ msgstr "Low"
+
+#~ msgid "High (Urgent)"
+#~ msgstr "Hög (brådskande)"
+
+#~ msgid "Reply to Fax"
+#~ msgstr "Reply to FAX"
+
+#~ msgid "Dispatch quick reply transmission to originating sender"
+#~ msgstr "Skicka snabbsvarsöverföring till ursprunglig avsändare"
+
+#~ msgid "Regarding (Subject)"
+#~ msgstr "Angående (ämne)"
+
+#~ msgid "Comments"
+#~ msgstr "Kommentarer"
+
+#~ msgid "Destination"
+#~ msgstr "Fax number"
+
+#~ msgid "Queued"
+#~ msgstr "I kö"
+
+#~ msgid "Reason"
+#~ msgstr "Orsak"
+
+#~ msgid "To send to multiple recipients at once, separate numbers with a comma."
+#~ msgstr ""
+#~ "För att skicka till flera mottagare "
+#~ "samtidigt separerar du numren med ett"
+#~ " komma."
+
+#~ msgid "Save Modem"
+#~ msgstr "Fax Modems"
+
+#~ msgid "Configure User:"
+#~ msgstr "Konfigurera användare:"
+
+#~ msgid "recipient@example.com (comma separated)"
+#~ msgstr ""
+
+#~ msgid "NamiFAX Transmission Document"
+#~ msgstr ""
+
+#~ msgid "Please find the attached facsimile document."
+#~ msgstr ""
+
+#~ msgid "results"
+#~ msgstr "Reset"
+
+#~ msgid "result"
+#~ msgstr "Reset"
+
+#~ msgid "Keyword"
+#~ msgstr "Keyword"
+
+#~ msgid "Invoices / Orders"
+#~ msgstr "Fakturor / beställningar"
+
+#~ msgid "Legal / Contracts"
+#~ msgstr "Kontakter"
+
+#~ msgid "From Date"
+#~ msgstr "Rotera Fax"
+
+#~ msgid "To Date"
+#~ msgstr "Rotera Fax"
+
+#~ msgid "Sent & Received"
+#~ msgstr "Skickat & mottaget"
+
+#~ msgid "Received only"
+#~ msgstr "Endast mottagna"
+
+#~ msgid "Sent only"
+#~ msgstr "Endast skickade"
+
+#~ msgid "Results"
+#~ msgstr "Reset"
+
+#~ msgid "records"
+#~ msgstr "poster"
+
+#~ msgid "record"
+#~ msgstr "post"
+
+#~ msgid "No results found"
+#~ msgstr "Inga resultat hittades"
+
+#~ msgid "Try adjusting your search terms or date range."
+#~ msgstr "Försök att justera sökorden eller datumintervallet."
+
+#~ msgid "Search the Archive"
+#~ msgstr "Sök i arkivet"
+
+#~ msgid "Enter a keyword or filter above and click Search to find fax records."
+#~ msgstr ""
+#~ "Ange ett nyckelord eller filter ovan "
+#~ "och klicka på Sök för att hitta"
+#~ " faxposter."
+
+#~ msgid "Showing"
+#~ msgstr "Visar"
+
+#~ msgid "of"
+#~ msgstr "av"
+
+#~ msgid "Fax Viewer"
+#~ msgstr "Faxvisare"
+
+#~ msgid "Page 1 of"
+#~ msgstr "Sida 1 av"
+
+#~ msgid "FROM:"
+#~ msgstr "FRÅN:"
+
+#~ msgid "DATE:"
+#~ msgstr "DATUM:"
+
+#~ msgid "DEVICE:"
+#~ msgstr "ENHET:"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "TIFF"
+#~ msgstr "TIFF"
+
+#~ msgid "Total"
+#~ msgstr "Totalt"
+
+#~ msgid "Incoming Transmission"
+#~ msgstr "Inkommande sändning"
+
+#~ msgid "FACSIMILE TRANSMISSION"
+#~ msgstr "FAXÖVERFÖRING"
+
+#~ msgid "Date Received:"
+#~ msgstr "Mottagningsdatum:"
+
+#~ msgid "Originating Station:"
+#~ msgstr "Avsändande station:"
+
+#~ msgid "PORT"
+#~ msgstr "Priority"
+
+#~ msgid "High-Resolution Raster Preview"
+#~ msgstr "Högupplöst rasterförhandsgranskning"
+
+#~ msgid "Device Line:"
+#~ msgstr "Enhetslinje:"
+
+#~ msgid "Download Original Document"
+#~ msgstr "Ladda ner originaldokument"
+
+#~ msgid "NamiFAX Enterprise Facsimile Engine"
+#~ msgstr "NamiFAX Enterprise Facsimile Engine"
+
+#~ msgid "Archive ID:"
+#~ msgstr "Arkiv"
+
+#~ msgid "Add contact name or fax number..."
+#~ msgstr ""
+
+#~ msgid "Delete List"
+#~ msgstr "Delete list"
+
+#~ msgid "Save Changes"
+#~ msgstr "Cover Pages"
+
+#~ msgid "Supported: PDF, TIFF, PostScript, TXT · Max 10 MB"
+#~ msgstr "Stöds: PDF, TIFF, PostScript, TXT · Max 10 MB"
+
+#~ msgid "Auto-select recommended"
+#~ msgstr "Automatiskt val rekommenderas"
+
+#~ msgid "Status:"
+#~ msgstr "Status:"
+
+#~ msgid "Transmitted Successfully (OK)"
+#~ msgstr "Överfördes framgångsrikt (OK)"
+

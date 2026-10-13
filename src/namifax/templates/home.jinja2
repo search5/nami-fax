@@ -1,0 +1,210 @@
+{% extends "namifax:templates/layout.jinja2" %}
+
+{% block title %}대시보드 - NamiFAX 모던 팩스 시스템{% endblock %}
+
+{% block content %}
+<div class="space-y-8">
+  
+  <!-- Welcome Banner -->
+  <div class="bg-gradient-to-r from-brand-600 via-indigo-600 to-indigo-800 rounded-2xl p-6 sm:p-8 text-white shadow-xl shadow-brand-500/10 relative overflow-hidden">
+    <div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+      <i data-lucide="printer" class="w-80 h-80"></i>
+    </div>
+    <div class="relative z-10 max-w-2xl">
+      <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">NamiFAX 엔터프라이즈 포털</h1>
+      <p class="mt-2 text-brand-100 text-sm sm:text-base leading-relaxed">
+        HylaFAX 엔진과 완벽히 연동되는 현대적인 엔터프라이즈 팩스 솔루션입니다. 팩스 수신, 웹 발송, 아카이빙 및 실시간 라우팅을 손쉽게 관리하세요.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="/sendfax" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-white text-brand-700 font-semibold text-sm shadow hover:bg-brand-50 transition-colors">
+          <i data-lucide="send" class="w-4 h-4 mr-2"></i>
+          새 팩스 작성 및 전송
+        </a>
+        <a href="/inbox" class="inline-flex items-center px-4 py-2.5 rounded-xl bg-brand-700/60 hover:bg-brand-700 text-white font-medium text-sm backdrop-blur transition-colors border border-white/10">
+          <i data-lucide="inbox" class="w-4 h-4 mr-2"></i>
+          수신함 확인
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Key Metrics Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    
+    <!-- Inbound Faxes -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">수신함 (Inbox)</p>
+          <h3 class="text-2xl font-bold text-slate-800 mt-1" id="stat-inbox-count">0</h3>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
+          <i data-lucide="inbox" class="w-6 h-6"></i>
+        </div>
+      </div>
+      <div class="mt-4 flex items-center text-xs text-slate-500">
+        <span class="text-emerald-600 font-medium flex items-center mr-1.5">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5 mr-0.5"></i> 정상
+        </span>
+        <span>수신 팩스 즉시 조회 가능</span>
+      </div>
+    </div>
+
+    <!-- Outbox Faxes -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">송신 큐 (Outbox)</p>
+          <h3 class="text-2xl font-bold text-slate-800 mt-1" id="stat-outbox-count">0</h3>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
+          <i data-lucide="clock" class="w-6 h-6"></i>
+        </div>
+      </div>
+      <div class="mt-4 flex items-center text-xs text-slate-500">
+        <span class="text-slate-600 font-medium">대기열 없음</span>
+        <span class="mx-1">•</span>
+        <span>즉시 발송 모드</span>
+      </div>
+    </div>
+
+    <!-- Active Modems -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">등록 모뎀 장치</p>
+          <h3 class="text-2xl font-bold text-slate-800 mt-1" id="stat-modems-count">준비됨</h3>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+          <i data-lucide="activity" class="w-6 h-6"></i>
+        </div>
+      </div>
+      <div class="mt-4 flex items-center text-xs text-slate-500">
+        <span class="text-emerald-600 font-medium flex items-center mr-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1 animate-ping"></span>
+          대기 중
+        </span>
+        <span>HylaFAX 회선 감시 활성</span>
+      </div>
+    </div>
+
+    <!-- Scheduler Status -->
+    <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">배치 스케줄러</p>
+          <h3 class="text-2xl font-bold text-slate-800 mt-1">APScheduler</h3>
+        </div>
+        <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+          <i data-lucide="calendar" class="w-6 h-6"></i>
+        </div>
+      </div>
+      <div class="mt-4 flex items-center text-xs text-slate-500">
+        <span class="text-purple-600 font-medium mr-1.5">인프로세스 구동</span>
+        <span>임시파일/주소록 동기화</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- System Features & Quick Navigation Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    
+    <!-- Card 1: Inbox Quick View -->
+    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+      <div>
+        <div class="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+          <i data-lucide="file-text" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900">수신함 (Inbox)</h3>
+        <p class="text-sm text-slate-500 mt-2 leading-relaxed">
+          수신된 모든 팩스의 TIFF 원본 및 PDF 변환 파일, 썸네일 미리보기를 확인하고 다운로드할 수 있습니다.
+        </p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-slate-100">
+        <a href="/inbox" class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-800">
+          수신함 바로가기 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 2: Send Fax -->
+    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+      <div>
+        <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center mb-4">
+          <i data-lucide="send" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900">팩스 발송 (Send Fax)</h3>
+        <p class="text-sm text-slate-500 mt-2 leading-relaxed">
+          커버페이지 자동 생성, 다중 PDF/TIFF 문서 첨부 및 주소록 연동을 통해 원클릭으로 팩스를 전송합니다.
+        </p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-slate-100">
+        <a href="/sendfax" class="inline-flex items-center text-sm font-semibold text-brand-600 hover:text-brand-800">
+          팩스 작성하기 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Card 3: Admin Console -->
+    <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+      <div>
+        <div class="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center mb-4">
+          <i data-lucide="sliders" class="w-5 h-5"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900">시스템 관리 (Admin)</h3>
+        <p class="text-sm text-slate-500 mt-2 leading-relaxed">
+          모뎀 구성, DID/바코드 기반 자동 라우팅 규칙, 사용자 권한 및 스팸 수신 거부(DynConf)를 설정합니다.
+        </p>
+      </div>
+      <div class="mt-6 pt-4 border-t border-slate-100">
+        <a href="/admin" class="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-800">
+          관리 콘솔 열기 <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Architecture & System Specs Banner -->
+  <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+    <h3 class="text-base font-bold text-slate-900 flex items-center">
+      <i data-lucide="cpu" class="w-5 h-5 mr-2 text-brand-600"></i>
+      NamiFAX 시스템 기술 스택
+    </h3>
+    <div class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+      <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+        <span class="text-slate-400 block font-medium">웹 프레임워크</span>
+        <span class="text-slate-800 font-bold text-sm mt-0.5 block">Pyramid 2.1</span>
+      </div>
+      <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+        <span class="text-slate-400 block font-medium">데이터 영속성</span>
+        <span class="text-slate-800 font-bold text-sm mt-0.5 block">SQLAlchemy 2.0</span>
+      </div>
+      <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+        <span class="text-slate-400 block font-medium">스케줄러 엔진</span>
+        <span class="text-slate-800 font-bold text-sm mt-0.5 block">APScheduler 3.11</span>
+      </div>
+      <div class="p-3 rounded-xl bg-slate-50 border border-slate-100">
+        <span class="text-slate-400 block font-medium">패키지 관리</span>
+        <span class="text-slate-800 font-bold text-sm mt-0.5 block">uv & uv_build</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  // Dynamic stats fetcher
+  fetch('/inbox')
+    .then(r => r.json())
+    .then(data => {
+      if (data && typeof data.total_count !== 'undefined') {
+        document.getElementById('stat-inbox-count').innerText = data.total_count;
+      }
+    })
+    .catch(() => {});
+</script>
+{% endblock %}

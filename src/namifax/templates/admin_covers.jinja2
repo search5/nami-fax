@@ -1,0 +1,132 @@
+{% extends "admin_layout.jinja2" %}
+
+{% block title %}- NamiFAX - Admin - Configure Cover Pages{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+  
+  <!-- Header & Actions -->
+  <div class="border-b border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-sky-950 border border-sky-800 flex items-center justify-center text-sky-400 shadow-inner">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-white tracking-tight">{{ _('Configure Cover Pages') }}</h2>
+        <p class="text-xs text-slate-400">{{ _('Manage facsimile PostScript cover page templates and layouts') }}</p>
+      </div>
+    </div>
+
+    <a href="/admin/covers" class="inline-flex items-center space-x-1.5 px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-xs font-bold shadow-2xs transition">
+      <span>+ {{ _('New Cover Page') }}</span>
+    </a>
+  </div>
+
+  {% if message %}
+    <div class="p-4 bg-emerald-950/80 border border-emerald-800/80 text-emerald-200 rounded-xl text-xs font-semibold flex items-center space-x-3 shadow-2xs">
+      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+      <span>{{ message }}</span>
+    </div>
+  {% endif %}
+  {% if error %}
+    <div class="p-4 bg-rose-950/80 border border-rose-800/80 text-rose-200 rounded-xl text-xs font-semibold flex items-center space-x-3 shadow-2xs">
+      <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+      <span>{{ error }}</span>
+    </div>
+  {% endif %}
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    
+    <!-- Left: Covers List -->
+    <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-5 space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-800 pb-3">
+        <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+        <h3 class="text-xs font-bold text-white uppercase tracking-wider">{{ _('Available Cover Pages') }}</h3>
+      </div>
+
+      <div class="divide-y divide-slate-800/60 border border-slate-800/80 rounded-xl overflow-hidden text-xs">
+        {% for c in covers %}
+          {% set cid = c.cover_id %}
+          <div class="p-3 flex justify-between items-center hover:bg-slate-900/60 transition {% if selected_cover and selected_cover.cover_id == cid %}bg-slate-800/60 border-l-2 border-l-sky-500{% endif %}">
+            <div>
+              <span class="font-bold text-white">{{ c.title }}</span>
+              <span class="text-slate-400 font-mono text-[11px] ml-2">({{ c.file }})</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-[10px] font-mono bg-slate-900 text-slate-400 border border-slate-800 px-2 py-0.5 rounded">ID: {{ cid }}</span>
+              <a href="/admin/covers?cover_id={{ cid }}" class="inline-flex items-center px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-sky-400 text-[11px] font-semibold border border-slate-700 transition">{{ _('Edit') }}</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Right: Cover Page Form (Strict 3 Inputs, 1 Button Contract) -->
+    <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-5 space-y-4" id="cover-form">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div class="flex items-center space-x-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">
+            {% if selected_cover %}{{ _('Edit Cover Page') }} ({{ selected_cover.title }}){% else %}{{ _('Add Cover Page') }}{% endif %}
+          </h3>
+        </div>
+        {% if selected_cover %}
+          <span class="px-2 py-0.5 bg-amber-950 text-amber-300 border border-amber-800 text-[10px] font-bold rounded">{{ _('EDIT MODE') }}</span>
+        {% else %}
+          <span class="px-2 py-0.5 bg-emerald-950 text-emerald-300 border border-emerald-800 text-[10px] font-bold rounded">{{ _('NEW') }}</span>
+        {% endif %}
+      </div>
+
+      <form action="/admin/covers{% if selected_cover %}?cover_id={{ selected_cover.cover_id }}{% endif %}" method="post" class="space-y-4 text-xs">
+        <div>
+          <label for="title" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Title') }} *</label>
+          <input type="text" name="title" id="title" required value="{{ selected_cover.title if selected_cover else '' }}" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition" />
+        </div>
+
+        <div>
+          <label for="file" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('File') }} *</label>
+          <input type="text" name="file" id="file" required value="{{ selected_cover.file if selected_cover else '' }}" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition" placeholder="{{ _('e.g. custom.ps') }}" />
+        </div>
+
+        <input type="hidden" name="_submit_check" value="1" />
+        {% if selected_cover %}
+          <input type="hidden" name="cover_id" value="{{ selected_cover.cover_id }}" />
+        {% endif %}
+
+        <div class="pt-3 border-t border-slate-800 flex items-center justify-end space-x-2">
+          {% if selected_cover %}
+            <a href="/admin/covers" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg font-semibold text-xs transition">{{ _('Cancel') }}</a>
+            <button type="submit" name="delete" value="1" onclick="return confirm('Delete this cover page template?');" class="px-4 py-2 bg-rose-900 hover:bg-rose-800 text-white rounded-lg font-bold text-xs transition">{{ _('Delete') }}</button>
+            <button type="submit" name="save" value="1" class="px-6 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-xs shadow-2xs transition">{{ _('Save') }}</button>
+          {% else %}
+            <button type="submit" name="create" value="1" class="px-6 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-xs shadow-2xs transition">{{ _('Save') }}</button>
+          {% endif %}
+        </div>
+      </form>
+    </div>
+
+    <!-- Supported Dynamic Tags Reference Card -->
+    {% if supported_tags %}
+    <div class="lg:col-span-3 bg-slate-900/60 backdrop-blur-md border border-slate-800 rounded-xl p-5 shadow-sm">
+      <h3 class="text-sm font-semibold text-slate-200 uppercase tracking-wider mb-3 flex items-center space-x-2">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <span>{{ _('Cover Template Studio: Dynamic Tag References') }}</span>
+      </h3>
+      <p class="text-xs text-slate-400 mb-4">{{ _('Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF templates. The Cover Studio engine automatically substitutes them during fax rendering.') }}</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+        {% for item in supported_tags %}
+        <div class="p-2.5 rounded-lg bg-slate-800/50 border border-slate-700/50 flex flex-col justify-between">
+          <code class="text-xs font-mono text-emerald-400 font-semibold select-all">@{{ item.tag }}@</code>
+          <span class="text-xs text-slate-400 mt-1">{{ item.desc }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-900/50 backdrop-blur-xs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>- NamiFAX - Transmission Report</title>
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/static/css/main.css?v=3.6.0" type="text/css" />
+</head>
+<body class="min-h-full flex items-center justify-center p-4 sm:p-6 font-sans antialiased text-slate-800">
+
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-2xl border border-slate-200/90 overflow-hidden">
+    
+    <!-- Modal Header -->
+    <div class="px-6 py-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/70">
+      <div class="flex items-center space-x-2.5">
+        <div class="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 shadow-2xs">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-sm font-bold text-slate-900 tracking-tight">{{ _('Transmission Report') }}</h1>
+          <p class="text-[11px] text-slate-500">{{ _('Official facsimile delivery confirmation receipt') }}</p>
+        </div>
+      </div>
+      <button type="button" onclick="window.print()" class="px-3 py-1.5 bg-white hover:bg-slate-50 text-slate-700 rounded-lg text-xs font-semibold border border-slate-300 shadow-2xs transition inline-flex items-center space-x-1.5">
+        <svg class="w-3.5 h-3.5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+        </svg>
+        <span>{{ _('Print') }}</span>
+      </button>
+    </div>
+
+    <!-- Report Details Container -->
+    <div class="p-6 space-y-4 text-xs">
+      <div class="border border-slate-200/90 rounded-xl divide-y divide-slate-100 bg-slate-50/50 overflow-hidden">
+        <div class="p-3 flex justify-between items-center">
+          <span class="font-bold text-slate-700">{{ _('Company:') }}</span>
+          <span class="font-bold text-slate-900">{{ company }}</span>
+        </div>
+        <div class="p-3 flex justify-between items-center">
+          <span class="font-bold text-slate-700">{{ _('Date:') }}</span>
+          <span class="font-mono text-slate-600">{{ date }}</span>
+        </div>
+        <div class="p-3 flex justify-between items-center">
+          <span class="font-bold text-slate-700">{{ _('Pages:') }}</span>
+          <span class="font-mono text-slate-800 font-bold">{{ pages }}</span>
+        </div>
+        <div class="p-3 flex justify-between items-center">
+          <span class="font-bold text-slate-700">{{ _('Fax Number:') }}</span>
+          <span class="font-mono text-slate-800">{{ faxnum }}</span>
+        </div>
+      </div>
+
+      {% if has_image %}<p class="text-center"><img src="/faxes/image/{{ fid }}/1" alt="" class="max-w-full border border-slate-200" /></p>{% endif %}
+
+      <div class="pt-2 flex justify-end">
+        <button type="button" onclick="window.close()" class="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-bold text-xs shadow-2xs transition">
+          {{ _('Close') }}
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+

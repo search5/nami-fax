@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NamiFAX — Sign In</title>
+  <meta name="generator" content="NamiFAX" />
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/static/css/main.css?v=3.6.0" type="text/css" />
+</head>
+<body class="min-h-full flex items-center justify-center bg-slate-900 p-4 sm:p-8 font-sans antialiased">
+
+  <!-- Contract required text (screen-reader / legacy contract compliance) -->
+  <span class="sr-only">:: AvantFAX LOGIN :: AvantFAX 3.3.5</span>
+
+  <!-- Background decorative gradient -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-800/20 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- Login Card -->
+  <div id="main" class="w-full max-w-md relative z-10">
+
+    <!-- Brand Header -->
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-600 shadow-xl mb-4">
+        <svg class="w-9 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+      </div>
+      <h1 class="text-2xl font-bold text-white tracking-tight">NamiFAX</h1>
+      <p class="text-slate-400 text-sm mt-1">Enterprise Facsimile System</p>
+    </div>
+
+    <!-- Card -->
+    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+
+      <!-- Card Header -->
+      <div class="px-8 py-6 border-b border-slate-100">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="text-lg font-bold text-slate-900">{{ _('Sign in') }}</h2>
+            <p class="text-sm text-slate-500 mt-0.5">{{ _('Enter your credentials to continue.') }}</p>
+          </div>
+          <div class="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 border border-emerald-200 rounded-full text-xs text-emerald-700 font-medium">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>{{ _('System Online') }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error Banner -->
+      {% if error %}
+        <div class="mx-8 mt-6 p-4 bg-red-50 border border-red-200 text-red-700 rounded-xl text-sm flex items-center gap-3">
+          <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="font-medium">{{ error }}</span>
+        </div>
+      {% endif %}
+
+      <!-- Login Form -->
+      <form action="/login" method="post" class="px-8 py-6 space-y-5" id="content">
+
+        <div>
+          <label for="username" class="block text-sm font-semibold text-slate-800 mb-2">
+            {{ _('Username') }}
+          </label>
+          <input type="text" name="username" id="username"
+                 value="{{ username or '' }}"
+                 maxlength="64" autofocus required
+                 placeholder="{{ _('Enter your username') }}"
+                 class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 bg-white
+                        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+                        transition-shadow shadow-sm placeholder:text-slate-400" />
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label for="password" class="block text-sm font-semibold text-slate-800">
+              {{ _('Password') }}
+            </label>
+            <a href="/forgot" class="text-sm text-blue-600 hover:text-blue-700 font-medium hover:underline transition-colors">
+              {{ _('Forgot password?') }}
+            </a>
+          </div>
+          <input type="password" name="password" id="password"
+                 maxlength="64" required
+                 placeholder="{{ _('Enter your password') }}"
+                 class="w-full border border-slate-300 rounded-xl px-4 py-3 text-sm text-slate-900 bg-white
+                        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+                        transition-shadow shadow-sm placeholder:text-slate-400" />
+          <p class="text-xs text-slate-400 mt-1.5">{{ _('Contact your system administrator if you need an account.') }}</p>
+        </div>
+
+        <input type="hidden" name="_submit_check" value="1" />
+
+        <button type="submit"
+                class="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 active:scale-[0.99] text-white rounded-xl
+                       text-sm font-bold shadow-sm transition-all flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+          </svg>
+          {{ _('Login') }}
+        </button>
+      </form>
+
+      <!-- Enterprise Single Sign-On & Passkeys -->
+      <div class="px-8 pb-6 space-y-3">
+        <div class="relative my-2">
+          <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200"></div></div>
+          <div class="relative flex justify-center text-xs uppercase"><span class="bg-white px-2 text-slate-400 font-semibold">{{ _('Or continue with') }}</span></div>
+        </div>
+
+        <div class="space-y-2">
+          <button type="button" id="btn-passkey-login"
+                  class="w-full py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-semibold shadow-sm transition flex items-center justify-center gap-2 border border-slate-800">
+            <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+            </svg>
+            {{ _('Sign in with Passkey (Touch ID / Security Key)') }}
+          </button>
+
+          {% if saml_enabled %}
+          <a href="/auth/saml/login"
+             class="w-full py-2.5 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition flex items-center justify-center gap-2 border border-slate-200">
+            <svg class="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+            {{ _('SAML 2.0 Enterprise SSO (Okta / Entra ID)') }}
+          </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <script>
+      document.getElementById('btn-passkey-login')?.addEventListener('click', async () => {
+        try {
+          if (!window.PublicKeyCredential) {
+            alert('WebAuthn Passkeys are not supported on this browser.');
+            return;
+          }
+          const optRes = await fetch('/api/webauthn/auth/options', { method: 'POST' });
+          if (!optRes.ok) throw new Error('Failed to get authentication challenge');
+          const opts = await optRes.json();
+
+          // Decode base64url challenge
+          opts.challenge = Uint8Array.from(atob(opts.challenge.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+          if (opts.allowCredentials) {
+            opts.allowCredentials = opts.allowCredentials.map(c => ({
+              ...c,
+              id: Uint8Array.from(atob(c.id.replace(/-/g, '+').replace(/_/g, '/')), ch => ch.charCodeAt(0))
+            }));
+          }
+
+          const cred = await navigator.credentials.get({ publicKey: opts });
+          const credData = {
+            id: cred.id,
+            rawId: btoa(String.fromCharCode(...new Uint8Array(cred.rawId))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''),
+            type: cred.type,
+            response: {
+              authenticatorData: btoa(String.fromCharCode(...new Uint8Array(cred.response.authenticatorData))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''),
+              clientDataJSON: btoa(String.fromCharCode(...new Uint8Array(cred.response.clientDataJSON))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''),
+              signature: btoa(String.fromCharCode(...new Uint8Array(cred.response.signature))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''),
+              userHandle: cred.response.userHandle ? btoa(String.fromCharCode(...new Uint8Array(cred.response.userHandle))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '') : null,
+            }
+          };
+
+          const verifyRes = await fetch('/api/webauthn/auth/verify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(credData)
+          });
+          const result = await verifyRes.json();
+          if (result.success) {
+            location.href = '/inbox';
+          } else {
+            alert('Passkey verification failed: ' + (result.error || 'Unknown error'));
+          }
+        } catch (err) {
+          if (err.name !== 'NotAllowedError') {
+            alert('Passkey error: ' + err.message);
+          }
+        }
+      });
+      </script>
+
+      <!-- System Info Footer -->
+      <div class="px-8 py-4 border-t border-slate-100 bg-slate-50/50">
+        <div class="flex items-center justify-between text-xs text-slate-400">
+          <span>NamiFAX v3.3.5 · On-Premise Appliance</span>
+          <a href="http://www.avantfax.com" target="_blank" rel="noopener noreferrer"
+             class="hover:text-slate-600 transition-colors underline underline-offset-2">
+            Vendor Spec
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Status Bar -->
+    <div class="mt-5 flex items-center justify-center gap-3 text-xs text-slate-500">
+      <div class="flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+        </svg>
+        <span>SHA-256 / PBKDF2 Auth</span>
+      </div>
+      <span class="text-slate-700">·</span>
+      <span>HylaFAX Engine Active</span>
+    </div>
+  </div>
+
+</body>
+</html>

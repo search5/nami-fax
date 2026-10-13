@@ -1,0 +1,90 @@
+{% extends "admin_layout.jinja2" %}
+
+{% block title %}- NamiFAX - Admin - Fax Categories{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+  
+  <!-- Header & Actions -->
+  <div class="border-b border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-sky-950 border border-sky-800 flex items-center justify-center text-sky-400 shadow-inner">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-white tracking-tight">{{ _('Fax Categories') }}</h2>
+        <p class="text-xs text-slate-400">{{ _('Manage classification tags and archival categories for organizing transmissions') }}</p>
+      </div>
+    </div>
+
+    <a href="/admin/categories" class="inline-flex items-center space-x-1.5 px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-xs font-bold shadow-2xs transition">
+      <span>+ {{ _('New Category') }}</span>
+    </a>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    
+    <!-- Left: Existing Categories List -->
+    <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-5 space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-800 pb-3">
+        <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+        <h3 class="text-xs font-bold text-white uppercase tracking-wider">{{ _('Existing Categories') }}</h3>
+      </div>
+
+      <div class="divide-y divide-slate-800/60 border border-slate-800/80 rounded-xl overflow-hidden text-xs">
+        {% for cat in categories %}
+          <div class="p-3 flex justify-between items-center hover:bg-slate-900/60 transition {% if selected_category and selected_category.catid == cat.catid %}bg-slate-800/60 border-l-2 border-l-sky-500{% endif %}">
+            <span class="font-bold text-white">{{ cat.name }}</span>
+            <div class="flex items-center space-x-2">
+              <span class="text-[10px] font-mono bg-slate-900 text-slate-400 border border-slate-800 px-2 py-0.5 rounded">ID: {{ cat.catid }}</span>
+              <a href="/admin/categories?catid={{ cat.catid }}" class="inline-flex items-center px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-sky-400 text-[11px] font-semibold border border-slate-700 transition">{{ _('Edit') }}</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Right: Category Form (Strict Inputs Sequence & Contract) -->
+    <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-5 space-y-4" id="category-form">
+      <div class="flex items-center space-x-2 border-b border-slate-800 pb-3">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <h3 class="text-xs font-bold text-white uppercase tracking-wider">
+          {% if selected_category %}{{ _('Edit Category') }} #{{ selected_category.catid }}{% else %}{{ _('Add Category') }}{% endif %}
+        </h3>
+      </div>
+
+      <form action="/admin/categories" method="post" class="space-y-4 text-xs">
+        <input type="hidden" name="_submit_check" value="1" />
+        {% if selected_category %}
+          <input type="hidden" name="catid" value="{{ selected_category.catid }}" />
+        {% endif %}
+
+        <div>
+          <label for="name" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Category Name') }} *</label>
+          <input type="text" name="name" id="name" required value="{{ selected_category.name if selected_category else '' }}" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition" placeholder="{{ _('e.g. Invoices, Contracts') }}" />
+        </div>
+
+        <div class="pt-3 border-t border-slate-800">
+          {% if selected_category %}
+            <div class="flex items-center justify-between">
+              <button type="submit" name="delete" value="1" class="px-4 py-2 bg-rose-900 hover:bg-rose-800 text-white rounded-lg font-bold text-xs transition" onclick="return confirm('Are you sure you want to delete this category?');">{{ _('Delete') }}</button>
+              <div class="space-x-2">
+                <a href="/admin/categories" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg font-semibold text-xs transition">{{ _('Cancel') }}</a>
+                <button type="submit" name="save" value="1" class="px-6 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-xs shadow-2xs transition">{{ _('Save') }}</button>
+              </div>
+            </div>
+          {% else %}
+            <div class="text-right">
+              <button type="submit" name="create" value="1" class="px-6 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-xs shadow-2xs transition">{{ _('Save') }}</button>
+            </div>
+          {% endif %}
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

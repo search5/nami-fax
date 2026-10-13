@@ -1,0 +1,193 @@
+{% extends "admin_layout.jinja2" %}
+
+{% block title %}- NamiFAX - Admin - Users{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+  
+  <!-- Header & Actions -->
+  <div class="border-b border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-sky-950 border border-sky-800 flex items-center justify-center text-sky-400 shadow-inner">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-white tracking-tight">{{ _('User Accounts') }}</h2>
+        <p class="text-xs text-slate-400">{{ _('Manage system operator credentials, access permissions, and route mapping') }}</p>
+      </div>
+    </div>
+
+    <a href="#user-form" class="inline-flex items-center space-x-1.5 px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-xs font-bold shadow-2xs transition">
+      <span>+ {{ _('Create New User') }}</span>
+    </a>
+  </div>
+
+  <!-- Users Table (Dark Appliance Data Grid) -->
+  <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl overflow-hidden shadow-xs">
+    <div class="overflow-x-auto">
+      <table class="w-full text-xs text-left border-collapse">
+        <thead>
+          <tr class="bg-slate-900 border-b border-slate-800 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+            <th scope="col" class="py-3 px-4">{{ _('Username') }}</th>
+            <th scope="col" class="py-3 px-4">{{ _('Name') }}</th>
+            <th scope="col" class="py-3 px-4">{{ _('Email') }}</th>
+            <th scope="col" class="py-3 px-4">{{ _('Last Login') }}</th>
+            <th scope="col" class="py-3 px-4">{{ _('Last IP') }}</th>
+            <th scope="col" class="py-3 px-3 text-center">{{ _('Superuser') }}</th>
+            <th scope="col" class="py-3 px-3 text-center">{{ _('Admin') }}</th>
+            <th scope="col" class="py-3 px-4 text-right">{{ _('Actions') }}</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-800/60 text-slate-300">
+          {% for u in users %}
+            <tr class="hover:bg-slate-800/40 transition">
+              <td class="py-3 px-4 font-mono font-bold text-white">
+                <a href="/admin/users?uid={{ u.uid }}" class="hover:text-sky-400 hover:underline transition">{{ u.username }}</a>
+                {% if u.locked %}<span class="ml-2 inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-rose-950 text-rose-300 border border-rose-800">{{ _('Locked') }}</span>{% endif %}
+              </td>
+              <td class="py-3 px-4 text-slate-300 font-medium">{{ u.name }}</td>
+              <td class="py-3 px-4 font-mono text-sky-400">
+                <a href="mailto:{{ u.email }}" class="hover:underline">{{ u.email }}</a>
+              </td>
+              <td class="py-3 px-4 font-mono text-slate-400">{{ u.last_login }}</td>
+              <td class="py-3 px-4 font-mono text-slate-400">{{ u.last_ip }}</td>
+              <td class="py-3 px-3 text-center">
+                {% if u.superuser %}
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-amber-950 text-amber-300 border border-amber-800">{{ _('YES') }}</span>
+                {% else %}
+                  <span class="text-slate-600 font-mono text-[11px]">{{ _('NO') }}</span>
+                {% endif %}
+              </td>
+              <td class="py-3 px-3 text-center">
+                {% if u.is_admin %}
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-sky-950 text-sky-300 border border-sky-800">{{ _('YES') }}</span>
+                {% else %}
+                  <span class="text-slate-600 font-mono text-[11px]">{{ _('NO') }}</span>
+                {% endif %}
+              </td>
+              <td class="py-3 px-4 text-right whitespace-nowrap">
+                {% if u.locked %}
+                <form action="/admin/users" method="post" data-unlock="1" class="inline">
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+                  <input type="hidden" name="unlock_uid" value="{{ u.uid }}" />
+                  <button type="submit" class="inline-flex items-center px-2.5 py-1 bg-rose-900 hover:bg-rose-800 text-rose-100 rounded-lg text-xs font-semibold border border-rose-700 transition">{{ _('Unlock') }}</button>
+                </form>
+                {% endif %}
+                <a href="/admin/users?uid={{ u.uid }}" class="inline-flex items-center px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-sky-400 rounded-lg text-xs font-semibold border border-slate-700 transition">
+                  {{ _('Edit') }}
+                </a>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="px-4 py-2 text-[11px] text-slate-500 border-t border-slate-800">{{ users|length }} {{ _('users') if users|length != 1 else _('user') }}</div>
+  </div>
+
+  <!-- User Creation / Edit Form -->
+  {% set inp = "w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition" %}
+  {% macro text(name, label, value, extra='') %}
+  <div>
+    <label for="{{ name }}" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ label }}</label>
+    <input type="text" name="{{ name }}" id="{{ name }}" value="{{ value or '' }}" {{ extra|safe }} class="{{ inp }}" />
+  </div>
+  {% endmacro %}
+  {% macro pick(name, label, options, selected) %}
+  <div>
+    <label for="{{ name }}" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ label }}</label>
+    <select name="{{ name }}" id="{{ name }}" class="{{ inp }}">
+      {% for value, title in options %}<option value="{{ value }}" {% if selected|string == value|string %}selected{% endif %}>{{ title }}</option>{% endfor %}
+    </select>
+  </div>
+  {% endmacro %}
+  {% macro check(name, label, on) %}
+  <label class="flex items-center space-x-2.5 p-3 rounded-lg bg-slate-900 border border-slate-800 cursor-pointer hover:border-slate-700 transition">
+    <input type="checkbox" name="{{ name }}" value="1" {% if on %}checked{% endif %} class="rounded border-slate-700 bg-slate-800 text-sky-600 focus:ring-sky-500 w-4 h-4" />
+    <span class="font-medium text-slate-200">{{ label }}</span>
+  </label>
+  {% endmacro %}
+  {% macro group(name, legend, options, chosen, none_text, none_url) %}
+  <fieldset class="border border-slate-800 rounded-lg p-3">
+    <legend class="px-2 text-[11px] font-bold text-slate-400 uppercase tracking-wider">{{ legend }}</legend>
+    {% if options %}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+      {% for value, title in options %}
+      <label class="flex items-center space-x-2 text-slate-200"><input type="checkbox" name="{{ name }}[]" value="{{ value }}" {% if value in chosen %}checked{% endif %} class="rounded border-slate-700 bg-slate-800 text-sky-600 w-4 h-4" /><span>{{ title }}</span></label>
+      {% endfor %}
+    </div>
+    {% else %}<a href="{{ none_url }}" class="text-sky-400 hover:underline">{{ none_text }}</a>{% endif %}
+  </fieldset>
+  {% endmacro %}
+
+  <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-6 shadow-xs space-y-5" id="user-form">
+    <div class="border-b border-slate-800 pb-3 flex items-center space-x-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+      <h3 class="text-xs font-bold text-white uppercase tracking-wider">
+        {% if values.uid %}{{ _('Modify User') }}: {{ values.username }}{% else %}{{ _('New User') }}{% endif %}
+      </h3>
+    </div>
+
+    {% if saved %}<div class="p-3 bg-emerald-950/60 border border-emerald-500/40 rounded-lg text-emerald-300 text-xs">{{ _('User settings have been saved.') }}</div>{% endif %}
+    {% if errors %}<div class="p-3 bg-rose-950/60 border border-rose-500/40 rounded-lg text-rose-300 text-xs"><ul class="list-disc ml-4">{% for e in errors %}<li>{{ e }}</li>{% endfor %}</ul></div>{% endif %}
+
+    <form action="/admin/users" method="post" class="space-y-5 text-xs">
+      {% if values.uid %}
+      <label class="inline-flex items-center gap-2 text-slate-200"><input type="checkbox" name="acc_enabled" id="acc_enabled" value="1" {% if values.acc_enabled %}checked{% endif %} class="rounded border-slate-700 bg-slate-800 text-sky-600 w-4 h-4" /> {{ _('Account active') }}</label>
+      {% else %}<input type="hidden" name="acc_enabled" value="1" />{% endif %}
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {{ text('name', _('Full Name') ~ ' *', values.name, 'maxlength="40"') }}
+        {{ text('username', _('Username') ~ ' *', values.username, 'maxlength="' ~ max_username ~ '"') }}
+        <div>
+          <label for="password" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Password') }}</label>
+          <input type="password" name="password" id="password" maxlength="{{ max_password }}" autocomplete="new-password" placeholder="{{ _('Leave empty to keep the current password (a new user is sent a random one)') }}" class="{{ inp }}" />
+        </div>
+        {{ text('email', _('Email Address') ~ ' *', values.email, 'maxlength="' ~ max_email ~ '"') }}
+        {{ pick('pwdcycle', _('Password expiration cycle'), choices.cycles, values.pwdcycle) }}
+        {{ pick('language', _('Language'), choices.languages, values.language) }}
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">{{ check('pwd_reuse', _('Password can be reused'), values.pwd_reuse) }}</div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {{ text('from_company', _('My Company'), values.from_company) }}
+        {{ text('from_location', _('My Location'), values.from_location) }}
+        {{ text('from_voicenumber', _('My Voice Number'), values.from_voicenumber) }}
+        {{ text('from_faxnumber', _('My Fax Number'), values.from_faxnumber) }}
+        {{ text('user_tsi', _('TSI ID'), values.user_tsi) }}
+        {{ pick('coverpage_id', _('Select Cover Page'), [('', '')] + choices.covers, values.coverpage_id) }}
+        {% if choices.audio %}{{ pick('audiofile', _('New fax sound'), [('', '')] + choices.audio, values.audiofile) }}{% endif %}
+        {{ pick('faxperpageinbox', _('Inbox - show'), choices.per_page, values.faxperpageinbox) }}
+        {{ pick('faxperpagearchive', _('Archive - show'), choices.per_page, values.faxperpagearchive) }}
+      </div>
+
+      <div class="pt-3 border-t border-slate-800">
+        <span class="block font-bold text-slate-400 uppercase text-[11px] tracking-wider mb-2.5">{{ _('Permissions & Capabilities') }}</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {{ check('is_admin', _('Administrator Console'), values.is_admin) }}
+          {{ check('superuser', _('Superuser Rights'), values.superuser) }}
+          {{ check('can_del', _('User can delete faxes'), values.can_del) }}
+          {{ check('any_modem', _('Send on Any Modem'), values.any_modem) }}
+        </div>
+      </div>
+
+      {% if choices.did_enabled %}{{ group('didrouting', _('DID Routes'), choices.routes, values.didrouting, _('You must first create a DID/DTMF group'), '/admin/routing') }}{% endif %}
+      {{ group('modemdevs', _('Fax Lines'), choices.lines, values.modemdevs, _('You must first create a modem'), '/admin/modems') }}
+      {{ group('faxcats', _('Categories'), choices.categories, values.faxcats, _('You must first create a category'), '/admin/categories') }}
+
+      {% if values.uid %}<input type="hidden" name="uid" value="{{ values.uid }}" />{% endif %}
+      <input type="hidden" name="_submit_check" value="1" />
+
+      <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+        {% if values.uid %}<button type="submit" name="delete" value="1" class="px-4 py-2 bg-rose-900 hover:bg-rose-800 text-white rounded-lg font-bold text-xs transition">{{ _('Delete User') }}</button>{% else %}<span></span>{% endif %}
+        <div class="space-x-2">
+          <a href="/admin/users" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg font-semibold text-xs transition">{{ _('Cancel') }}</a>
+          <button type="submit" class="px-6 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-xs shadow-2xs transition">{{ _('Save') }}</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

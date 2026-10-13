@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-900/50 backdrop-blur-xs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/static/css/main.css?v=3.6.0" type="text/css" />
+</head>
+<body class="min-h-full flex items-center justify-center p-4 sm:p-6 font-sans antialiased text-slate-800">
+  {% set field = "w-full border border-slate-300 rounded-lg px-3 py-1.5 bg-white text-slate-900 text-xs focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" %}
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-2xl border border-slate-200/90 overflow-hidden">
+    <div class="px-6 py-4 border-b border-slate-100 bg-slate-50/70">
+      <h1 class="text-sm font-bold text-slate-900 tracking-tight">{{ _('Modify Job') }}</h1>
+    </div>
+
+    <form id="faxalter" action="/ajax/faxalter" method="post" class="p-6 space-y-4 text-xs">
+      {% if error %}<div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-700">{{ error }}</div>{% endif %}
+
+      <div>
+        <label for="dest" class="block font-semibold text-slate-700 mb-1.5">{{ _('New Destination') }}</label>
+        <input type="text" name="destination" id="dest" value="{{ values.destination }}" class="{{ field }}" />
+      </div>
+
+      <div>
+        <label for="priority" class="block font-semibold text-slate-700 mb-1.5">{{ _('Priority') }}</label>
+        <select name="priority" id="priority" class="{{ field }}">
+          {% for p in priority_list %}<option value="{{ p }}" {% if values.priority == p %}selected{% endif %}>{{ '' if p == '*' else p }}</option>{% endfor %}
+        </select>
+      </div>
+
+      {% if modem_list %}
+      <div>
+        <label for="modem" class="block font-semibold text-slate-700 mb-1.5">{{ _('Modem / Device') }}</label>
+        <select name="modem" id="modem" class="{{ field }}">
+          <option value=""></option>
+          {% for device, alias in modem_list %}<option value="{{ device }}" {% if values.modem == device %}selected{% endif %}>{{ alias }}</option>{% endfor %}
+        </select>
+      </div>
+      {% endif %}
+
+      <div>
+        <label for="numtries" class="block font-semibold text-slate-700 mb-1.5">{{ _('Number of tries') }}</label>
+        <input type="text" name="numtries" id="numtries" value="{{ values.numtries }}" maxlength="3" class="{{ field }} w-20" />
+      </div>
+
+      <div>
+        <label for="killtime" class="block font-semibold text-slate-700 mb-1.5">{{ _('Expire after') }}</label>
+        <div class="flex items-center gap-2">
+          <span>{{ _('Now') }} +</span>
+          <input type="text" name="killtime" id="killtime" value="{{ values.killtime }}" class="{{ field }} w-20" />
+          <select name="killtime_unit" id="killtime_unit" class="{{ field }}">
+            {% for unit, label in (('minutes', _('Minutes')), ('hours', _('Hours')), ('days', _('Days'))) %}<option value="{{ unit }}" {% if values.killtime_unit == unit %}selected{% endif %}>{{ label }}</option>{% endfor %}
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <span class="block font-semibold text-slate-700 mb-1.5">{{ _('Schedule Send Time') }}</span>
+        <label class="inline-flex items-center gap-2 mb-2"><input type="checkbox" name="sendnow" value="1" {% if values.sendnow %}checked{% endif %} /> {{ _('Now') }}</label>
+        <div class="flex items-center gap-2">
+          <input type="checkbox" name="sendtime" id="sendtime" value="1" {% if values.sendtime %}checked{% endif %} />
+          <select name="sendtimeHour" id="sendtimeHour" class="{{ field }} w-20">{% for h in hours %}<option value="{{ h }}" {% if values.sendtimeHour == h %}selected{% endif %}>{{ h }}</option>{% endfor %}</select> :
+          <select name="sendtimeMin" id="sendtimeMin" class="{{ field }} w-20">{% for m in minutes %}<option value="{{ m }}" {% if values.sendtimeMin == m %}selected{% endif %}>{{ m }}</option>{% endfor %}</select>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-100 flex justify-end gap-2">
+        <a href="/outbox" class="px-4 py-2 bg-white hover:bg-slate-50 text-slate-700 rounded-lg font-semibold border border-slate-300 transition">{{ _('Cancel') }}</a>
+        <button type="submit" id="mainbtn" class="px-5 py-2 bg-sky-800 hover:bg-sky-700 text-white rounded-lg font-semibold transition">{{ _('Save') }}</button>
+      </div>
+
+      <input type="hidden" name="jid" value="{{ values.jid }}" />
+      <input type="hidden" name="resubmit" value="{{ values.resubmit }}" />
+      <input type="hidden" name="owner" value="{{ values.owner }}" />
+      <input type="hidden" name="_submit_check" value="1" />
+    </form>
+  </div>
+</body>
+</html>

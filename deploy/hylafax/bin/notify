@@ -1,0 +1,6 @@
+#!/bin/sh
+# HylaFAX NotifyCmd: called by faxq when a job is done, blocked, requeued or failed.  Copy to $SPOOL/bin/ (usually /var/spool/hylafax/bin).
+# NAMIFAX_HOME is where NamiFAX is installed; DATABASE_URL etc. come from /etc/namifax.env.
+# set -a exports every KEY=value of the file (it has no 'export'), so the variables reach the exec'd program.
+set -a; [ -r /etc/namifax.env ] && . /etc/namifax.env; set +a
+exec "${NAMIFAX_HOME:-/opt/namifax}/.venv/bin/namifax-notify" "$@"

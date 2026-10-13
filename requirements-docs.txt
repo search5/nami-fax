@@ -1,0 +1,4 @@
+# Build the manual: pip install -r requirements-docs.txt && mkdocs serve
+mkdocs>=1.6,<2
+mkdocs-material>=9.5
+mkdocs-static-i18n>=1.2

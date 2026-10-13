@@ -1,0 +1,6 @@
+# /etc/sudoers.d/namifax  (mode 0440, check with: visudo -cf /etc/sudoers.d/namifax)
+# The user NamiFAX runs as (uucp in deploy/systemd) may do exactly this, and nothing else:
+#  - reboot or halt the machine (Admin > System Functions)
+#  - create and remove HylaFAX users (only used when HYLAFAX_USER_SYNC=1)
+# Replace "uucp" with the account in your service file. NamiFAX runs these without a shell.
+uucp ALL=(root) NOPASSWD: /sbin/reboot, /sbin/halt, /usr/sbin/faxdeluser *, /usr/sbin/faxadduser -u * -p * *

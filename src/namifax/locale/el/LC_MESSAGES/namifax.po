@@ -1,0 +1,2626 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: NamiFAX 4.0.Language: eMIME-Version: 1.Content-Type: "
+"text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-02 00:54+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: el\n"
+"Language-Team: el <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "Address Book"
+msgstr "Διευθύνσεις e-mail"
+
+msgid "Save frequently used fax numbers for quick access when sending."
+msgstr ""
+"Αποθηκεύστε συχνά χρησιμοποιούμενους αριθμούς φαξ για γρήγορη πρόσβαση "
+"κατά την αποστολή."
+
+msgid "Company or fax number..."
+msgstr ""
+
+msgid "Search"
+msgstr "Αναζήτηση"
+
+#, fuzzy
+msgid "New Company"
+msgstr "Εταιρία"
+
+msgid "Email Book"
+msgstr "Ευρετήριο email"
+
+msgid "Distribution Lists"
+msgstr "Λίστες διανομής"
+
+#, fuzzy
+msgid "Company / Name"
+msgstr "Εταιρία"
+
+msgid "Fax Number"
+msgstr "Αριθμός φαξ"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Actions"
+msgstr "Ενέργειες"
+
+msgid "Send Fax"
+msgstr "Νέο φαξ"
+
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#, fuzzy
+msgid "No contacts yet"
+msgstr "Επαφές"
+
+msgid "No contacts matched"
+msgstr "Δεν βρέθηκαν επαφές που να ταιριάζουν"
+
+msgid ""
+"Add contacts to quickly select fax numbers when sending without typing "
+"them every time."
+msgstr ""
+"Προσθέστε επαφές για να επιλέγετε γρήγορα αριθμούς φαξ κατά την αποστολή "
+"χωρίς να τους πληκτρολογείτε κάθε φορά."
+
+msgid "Add First Contact"
+msgstr "Προσθήκη πρώτης επαφής"
+
+#, fuzzy
+msgid "Edit Company"
+msgstr "Εταιρία"
+
+#, fuzzy
+msgid "Add New Company"
+msgstr "Εταιρία"
+
+msgid "Configure the company and every fax number it uses."
+msgstr ""
+
+#, fuzzy
+msgid "Back to Contacts"
+msgstr "Επαφές"
+
+msgid "Upload contacts file (vCard)"
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "Company"
+msgstr "Εταιρία"
+
+#, fuzzy
+msgid "Company Name"
+msgstr "Εταιρία"
+
+msgid "e.g. Acme Corporation"
+msgstr ""
+
+msgid "Clear the number to remove it."
+msgstr ""
+
+msgid "Description"
+msgstr "Περιγραφή"
+
+msgid "Category"
+msgstr "Κατηγορία"
+
+msgid "Location"
+msgstr "Τοποθεσία"
+
+msgid "Voice Telephone"
+msgstr "Τηλέφωνο φωνής"
+
+msgid "Street Address"
+msgstr "Διεύθυνση (Οδός & αριθμός)"
+
+msgid "Zip / Postal Code"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Add a Fax Number"
+msgstr ""
+
+msgid "First Fax Number"
+msgstr ""
+
+msgid "Delete"
+msgstr "Διαγραφή"
+
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#, fuzzy
+msgid "Dashboard Overview"
+msgstr "Dashboard"
+
+#, fuzzy
+msgid "SYSTEM OPERATIONAL"
+msgstr "Λειτουργίες συστήματος"
+
+msgid ""
+"Real-time status of fax spools, hardware serial modems, and registered "
+"users"
+msgstr ""
+"Κατάσταση σε πραγματικό χρόνο ουρών φαξ, σειριακών μόντεμ υλικού και "
+"εγγεγραμμένων χρηστών"
+
+msgid "Users"
+msgstr "Χρήστες"
+
+msgid "Modems"
+msgstr "Ρύθμιση φαξ modems"
+
+#, fuzzy
+msgid "DID Routes"
+msgstr "DID/DTMF Route groups"
+
+#, fuzzy
+msgid "Logs"
+msgstr "Έξοδος"
+
+#, fuzzy
+msgid "Fax Lines"
+msgstr "Fax Modems"
+
+msgid "Hardware Ready"
+msgstr "Υλικό έτοιμο"
+
+#, fuzzy
+msgid "Active accounts"
+msgstr "Χρήστες"
+
+msgid "Backend Core"
+msgstr "Πυρήνας backend"
+
+msgid "unknown"
+msgstr ""
+
+msgid "Scheduler"
+msgstr "Χρονοπρογραμματιστής"
+
+msgid "Running"
+msgstr "Σε εκτέλεση"
+
+#, fuzzy
+msgid "Registered User Accounts"
+msgstr "Χρήστες"
+
+msgid "Manage Users"
+msgstr "Διαχείριση χρηστών"
+
+msgid "Name"
+msgstr "Όνομα"
+
+msgid "Username"
+msgstr "όνομα χρήστη"
+
+msgid "Last Login"
+msgstr "Τελευταία είσοδος"
+
+msgid "Server Status"
+msgstr "Κατάσταση διακομιστή"
+
+msgid "Core"
+msgstr "Πυρήνας"
+
+msgid "Database Engine"
+msgstr "Μηχανή βάσης δεδομένων"
+
+msgid "System Scheduler"
+msgstr "Χρονοπρογραμματιστής συστήματος"
+
+msgid "Configured Modems"
+msgstr "Ρυθμισμένα μόντεμ"
+
+msgid "Administrator Workflow Guide"
+msgstr "Οδηγός ροής εργασιών διαχειριστή"
+
+#, fuzzy
+msgid "Configure Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid ""
+"Route incoming faxes automatically based on recognized Code39 / QR "
+"barcodes"
+msgstr ""
+"Αυτόματη δρομολόγηση εισερχόμενων φαξ βάσει αναγνωρισμένων γραμμωτών "
+"κωδικών Code39 / QR"
+
+#, fuzzy
+msgid "New Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode Routing Rules"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode:"
+msgstr "Barcode Routing"
+
+msgid "Contact:"
+msgstr "Επικοινωνία με"
+
+msgid "None"
+msgstr "Κανένα"
+
+msgid "Printer:"
+msgstr "Εκτυπωτής:"
+
+#, fuzzy
+msgid "Edit Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Add Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "EDIT MODE"
+msgstr "Επεξεργασία"
+
+msgid "NEW"
+msgstr "ΝΕΟ"
+
+msgid "Barcode"
+msgstr "Barcode"
+
+msgid "Alias"
+msgstr "Ονομασία"
+
+#, fuzzy
+msgid "Contact Email"
+msgstr "Επαφές"
+
+msgid "Printer"
+msgstr "Printer"
+
+msgid "Fax Categories"
+msgstr "Προβολή κατηγοριών φαξ"
+
+msgid ""
+"Manage classification tags and archival categories for organizing "
+"transmissions"
+msgstr ""
+"Διαχείριση ετικετών ταξινόμησης και κατηγοριών αρχειοθέτησης για οργάνωση"
+" μεταδόσεων"
+
+#, fuzzy
+msgid "New Category"
+msgstr "Προβολή κατηγοριών φαξ"
+
+#, fuzzy
+msgid "Existing Categories"
+msgstr "Προβολή κατηγοριών φαξ"
+
+msgid "Edit Category"
+msgstr "Επεξεργασία κατηγορίας"
+
+#, fuzzy
+msgid "Add Category"
+msgstr "Προβολή κατηγοριών φαξ"
+
+msgid "Category Name"
+msgstr "Ονομασία κατηγορίας"
+
+msgid "e.g. Invoices, Contracts"
+msgstr ""
+
+#, fuzzy
+msgid "Configure Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Manage facsimile PostScript cover page templates and layouts"
+msgstr "Διαχείριση προτύπων και διατάξεων συνοδευτικών σελίδων PostScript φαξ"
+
+#, fuzzy
+msgid "New Cover Page"
+msgstr "Αποστολή εξωφύλλου"
+
+#, fuzzy
+msgid "Available Cover Pages"
+msgstr "Cover Pages"
+
+#, fuzzy
+msgid "Edit Cover Page"
+msgstr "Αποστολή εξωφύλλου"
+
+#, fuzzy
+msgid "Add Cover Page"
+msgstr "Αποστολή εξωφύλλου"
+
+msgid "Title"
+msgstr "Τίτλος"
+
+msgid "File"
+msgstr "Αρχείο"
+
+msgid "e.g. custom.ps"
+msgstr ""
+
+msgid "Cover Template Studio: Dynamic Tag References"
+msgstr ""
+
+msgid ""
+"Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF"
+" templates. The Cover Studio engine automatically substitutes them during"
+" fax rendering."
+msgstr ""
+
+msgid "Dynamic Configuration"
+msgstr "Δυναμική ρύθμιση παραμέτρων"
+
+msgid ""
+"Manage Caller ID blacklists and transmission rejection rules for modem "
+"devices"
+msgstr ""
+"Διαχείριση λιστών αποκλεισμού Caller ID και κανόνων απόρριψης μεταδόσεων "
+"για μόντεμ"
+
+msgid "New Rule"
+msgstr "Νέος κανόνας"
+
+msgid "Blocked Caller IDs"
+msgstr "Αποκλεισμένα Caller ID"
+
+msgid "Caller ID:"
+msgstr "Caller ID:"
+
+msgid "All Devices"
+msgstr "Όλες οι συσκευές"
+
+msgid "Edit Caller ID Rule"
+msgstr "Επεξεργασία κανόνα Caller ID"
+
+msgid "Add Caller ID Rule"
+msgstr "Προσθήκη κανόνα Caller ID"
+
+msgid "Caller ID"
+msgstr "Caller ID"
+
+msgid "e.g. 5550199 or pattern"
+msgstr ""
+
+msgid "Modem Device"
+msgstr "Συσκευή μόντεμ"
+
+#, fuzzy
+msgid "Fax to Email"
+msgstr "Fax Modems"
+
+msgid ""
+"Configure automated inbound fax forwarding and PDF dispatch rules mapped "
+"by company"
+msgstr ""
+"Ρύθμιση αυτοματοποιημένης προώθησης εισερχόμενων φαξ και κανόνων "
+"αποστολής PDF ανά εταιρεία"
+
+msgid "Add companies in the Address Book"
+msgstr ""
+
+msgid "Company Forwarding Rules"
+msgstr "Κανόνες προώθησης ανά εταιρεία"
+
+msgid "fax numbers"
+msgstr "Αριθμοί Φαξ"
+
+msgid "Email:"
+msgstr "Email:"
+
+msgid "Edit Forwarding Rules"
+msgstr ""
+
+msgid "Forwarding Rules"
+msgstr ""
+
+msgid "This company has no fax numbers yet. Add them in the Address Book."
+msgstr ""
+
+msgid ""
+"Select a company on the left to set where the faxes received on each of "
+"its numbers are sent."
+msgstr ""
+
+#, fuzzy
+msgid "Control Panel"
+msgstr "Αποστολή εξωφύλλου"
+
+msgid "User Portal"
+msgstr "User Portal"
+
+msgid "Inbox"
+msgstr "Εισερχόμενα"
+
+#, fuzzy
+msgid "Overview"
+msgstr "Προβολή φαξ"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Access Control"
+msgstr "Έλεγχος πρόσβασης"
+
+msgid "User Accounts"
+msgstr "Χρήστες"
+
+msgid "Hardware & Lines"
+msgstr "Υλικό & Γραμμές"
+
+msgid "Fax Modems"
+msgstr "Fax Modems"
+
+msgid "Network Printers"
+msgstr ""
+
+#, fuzzy
+msgid "Inbound Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid "DID Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid "Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid "Content & Templates"
+msgstr "Περιεχόμενο & Πρότυπα"
+
+msgid "Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Security & System"
+msgstr "Ασφάλεια & Σύστημα"
+
+msgid "Blacklist (DynConf)"
+msgstr "Blacklist (DynConf)"
+
+msgid "System Audit Logs"
+msgstr "System Audit Logs"
+
+msgid "System Functions"
+msgstr "Λειτουργίες συστήματος"
+
+msgid "SMTP Gateway"
+msgstr ""
+
+msgid "Storage & Cloud"
+msgstr ""
+
+msgid "SAML 2.0 SSO"
+msgstr ""
+
+msgid "Logout"
+msgstr "Έξοδος"
+
+msgid "Admin Control Panel"
+msgstr "Πίνακας ελέγχου διαχειριστή"
+
+msgid "Appliance Engine Online"
+msgstr "Μηχανή συσκευής σε σύνδεση"
+
+msgid ""
+"Configure Modems hardware devices, physical serial ports, and print-"
+"forwarding rules"
+msgstr ""
+"Διαμόρφωση συσκευών υλικού μόντεμ, φυσικών σειριακών θυρών και κανόνων "
+"προώθησης εκτύπωσης"
+
+#, fuzzy
+msgid "Configure Modems"
+msgstr "Fax Modems"
+
+msgid "Active Modem Lines"
+msgstr "Ενεργές γραμμές μόντεμ"
+
+msgid "Device"
+msgstr "Συσκευή"
+
+msgid "Contact"
+msgstr "Επικοινωνία με"
+
+msgid "Status"
+msgstr "Κατάσταση"
+
+#, fuzzy
+msgid "Edit Modem"
+msgstr "Fax Modems"
+
+msgid "Configure Modems Device"
+msgstr "Διαμόρφωση συσκευής μόντεμ"
+
+msgid "e.g. ttyS0"
+msgstr ""
+
+msgid "e.g. Main Inbound Line"
+msgstr ""
+
+msgid "Are you sure you want to delete this modem?"
+msgstr ""
+
+msgid "Create"
+msgstr "Δημιουργία"
+
+msgid "Appliance Note:"
+msgstr "Σημείωση συσκευής:"
+
+msgid ""
+"Modems configured here must correspond to physical RS-232 serial devices,"
+" USB modems, or virtual IAX modems recognized by the underlying HylaFAX "
+"server."
+msgstr ""
+"Τα μόντεμ που διαμορφώνονται εδώ πρέπει να αντιστοιχούν σε φυσικές "
+"σειριακές συσκευές RS-232, μόντεμ USB ή εικονικά μόντεμ IAX αναγνωρισμένα"
+" από τον υποκείμενο διακομιστή HylaFAX."
+
+msgid "Direct RAW socket & IPP network printing dispatch for received faxes"
+msgstr ""
+
+msgid "Add Network Printer"
+msgstr ""
+
+msgid "Printer Name"
+msgstr ""
+
+msgid "e.g. Office HP LaserJet"
+msgstr ""
+
+msgid "Protocol"
+msgstr ""
+
+msgid "Host / IP"
+msgstr ""
+
+#, fuzzy
+msgid "Port"
+msgstr "Priority"
+
+msgid "Queue Name (Optional)"
+msgstr ""
+
+msgid "2nd Floor Accounting Printer"
+msgstr ""
+
+msgid "Register Printer"
+msgstr ""
+
+msgid "Configured Printers"
+msgstr ""
+
+msgid "No network printers configured yet. Add one using the form on the left."
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+msgid "Test Print"
+msgstr ""
+
+msgid "Are you sure you want to delete this printer?"
+msgstr ""
+
+#, fuzzy
+msgid "Configure DID Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid ""
+"Route incoming faxes by Direct Inward Dialing (DID) extension to specific"
+" email boxes or printers"
+msgstr ""
+"Δρομολόγηση εισερχόμενων φαξ μέσω εσωτερικού αριθμού DID σε συγκεκριμένα "
+"γραμματοκιβώτια email ή εκτυπωτές"
+
+#, fuzzy
+msgid "New DID Route"
+msgstr "DID/DTMF Route groups"
+
+#, fuzzy
+msgid "Active DID Routing Rules"
+msgstr "DID/DTMF Route groups"
+
+msgid "Route Code"
+msgstr "Κωδικός διαδρομής"
+
+msgid "Action"
+msgstr "Ενέργεια"
+
+msgid "Configure Routing Rule"
+msgstr "Διαμόρφωση κανόνα δρομολόγησης"
+
+msgid "e.g. 1000"
+msgstr ""
+
+msgid "e.g. Sales Direct Line"
+msgstr ""
+
+msgid "-- None --"
+msgstr "-- Κανένα --"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid ""
+"DID (Direct Inward Dialing) routing automatically redirects incoming "
+"transmissions matching extension patterns directly to mapped operator "
+"inboxes or physical printers."
+msgstr ""
+"Η δρομολόγηση DID (Άμεση εσωτερική κλήση) ανακατευθύνει αυτόματα τις "
+"εισερχόμενες μεταδόσεις που ταιριάζουν με μοτίβα εσωτερικών γραμμών "
+"απευθείας σε αντιστοιχισμένα εισερχόμενα χειριστών ή φυσικούς εκτυπωτές."
+
+msgid "SAML 2.0 Enterprise SSO"
+msgstr ""
+
+msgid ""
+"Single Sign-On integration with Okta, Microsoft Entra ID (Azure AD), "
+"Google Workspace & Keycloak"
+msgstr ""
+
+msgid "Download SP Metadata XML"
+msgstr ""
+
+msgid "Identity Provider (IdP) Settings"
+msgstr ""
+
+msgid "Enable SAML 2.0 Single Sign-On"
+msgstr ""
+
+msgid "Shows \"SAML 2.0 Enterprise SSO\" login option on login page"
+msgstr ""
+
+msgid "IdP Entity ID / Issuer"
+msgstr ""
+
+msgid "IdP Single Sign-On Service URL (HTTP-Redirect / POST)"
+msgstr ""
+
+msgid "IdP Public X.509 Certificate (PEM)"
+msgstr ""
+
+msgid "Just-in-Time (JIT) Provisioning"
+msgstr ""
+
+msgid "Auto-create account on first login"
+msgstr ""
+
+msgid "Default Role for JIT Users"
+msgstr ""
+
+msgid "Save SAML Configuration"
+msgstr ""
+
+msgid "NamiFAX SP Endpoints"
+msgstr ""
+
+msgid ""
+"Copy these endpoints into your Identity Provider (Azure AD, Okta, Google)"
+" console:"
+msgstr ""
+
+msgid "Assertion Consumer Service (ACS) URL"
+msgstr ""
+
+msgid "SP Entity ID / Metadata URL"
+msgstr ""
+
+msgid "NameID Format"
+msgstr ""
+
+msgid "External SMTP Gateway"
+msgstr ""
+
+msgid ""
+"Configure external mail delivery server for inbound fax notifications and"
+" user alerts"
+msgstr ""
+
+msgid "Diagnostics Result"
+msgstr ""
+
+msgid "Server Connection & Security"
+msgstr ""
+
+msgid "SMTP Host / Server"
+msgstr ""
+
+msgid "Encryption Protocol"
+msgstr ""
+
+msgid "None (Plain)"
+msgstr ""
+
+msgid "STARTTLS (587)"
+msgstr ""
+
+msgid "SSL / TLS (465)"
+msgstr ""
+
+msgid "Requires SMTP Authentication"
+msgstr ""
+
+#, fuzzy
+msgid "Username / Login"
+msgstr "όνομα χρήστη"
+
+#, fuzzy
+msgid "Password / App Key"
+msgstr "συνθηματικό"
+
+msgid "Default Sender Profile & Signatures"
+msgstr ""
+
+#, fuzzy
+msgid "From Email Address"
+msgstr "Διεύθυνση Email"
+
+#, fuzzy
+msgid "From Display Name"
+msgstr "Εταιρία"
+
+msgid "NamiFAX Corporate Dispatcher"
+msgstr ""
+
+msgid "Email Signature (Plaintext)"
+msgstr ""
+
+msgid "Sent automatically by NamiFAX Gateway."
+msgstr ""
+
+msgid "Last updated"
+msgstr "Τελευταία ανανέωση"
+
+#, fuzzy
+msgid "Save Gateway Settings"
+msgstr "Ρυθμίσεις"
+
+msgid "Diagnostic Self-Test"
+msgstr ""
+
+msgid ""
+"Verify server reachability, TLS handshake, credentials and message "
+"dispatch in real time."
+msgstr ""
+
+msgid "Target Recipient Email"
+msgstr ""
+
+#, fuzzy
+msgid "Send Diagnostic Email"
+msgstr "Νέο φαξ"
+
+msgid "Enterprise storage lifecycle policies and S3 / MinIO / GCS cloud backends"
+msgstr ""
+
+msgid "Storage Lifecycle Policies"
+msgstr ""
+
+msgid "Purge Local TIFFs After (Days)"
+msgstr ""
+
+msgid ""
+"Frees local disk space if a PDF version exists. 0 = immediate after "
+"conversion."
+msgstr ""
+
+msgid "Full Fax Retention (Days)"
+msgstr ""
+
+msgid ""
+"Purge entire fax record and archival files after specified days. 0 = keep"
+" forever."
+msgstr ""
+
+msgid "Synchronize remote cloud object deletion on fax purge"
+msgstr ""
+
+msgid "Save Lifecycle Policy"
+msgstr ""
+
+msgid "Cloud Storage Backend"
+msgstr ""
+
+msgid "Storage Provider"
+msgstr ""
+
+msgid "Local Filesystem (Default)"
+msgstr ""
+
+msgid "Endpoint URL (MinIO / S3 Compatible)"
+msgstr ""
+
+msgid "Region"
+msgstr ""
+
+msgid "Bucket Name"
+msgstr ""
+
+msgid "Access Key ID"
+msgstr ""
+
+msgid "Secret Access Key"
+msgstr ""
+
+msgid "Key Prefix"
+msgstr ""
+
+msgid "Save Storage Config"
+msgstr ""
+
+msgid "Test Connection"
+msgstr ""
+
+msgid "Perform maintenance operations, service control, and backups."
+msgstr ""
+"Εκτέλεση λειτουργιών συντήρησης, ελέγχου υπηρεσιών και αντιγράφων "
+"ασφαλείας."
+
+msgid "HylaFAX Engine Active"
+msgstr "Μηχανή HylaFAX ενεργή"
+
+#, fuzzy
+msgid "Admin Dashboard"
+msgstr "Dashboard"
+
+msgid "Caution: Appliance Maintenance Operations"
+msgstr "Προσοχή: Λειτουργίες συντήρησης συσκευής"
+
+msgid ""
+"Restarting or shutting down services will interrupt active fax modem "
+"spooling and disconnect client sessions. Ensure all outbound "
+"transmissions in the modem queue are completed before initiating "
+"maintenance tasks."
+msgstr ""
+"Η επανεκκίνηση ή ο τερματισμός υπηρεσιών θα διακόψει την ενεργή ουρά "
+"μόντεμ φαξ και θα αποσυνδέσει τις περιόδους λειτουργίας πελατών. "
+"Βεβαιωθείτε ότι όλες οι εξερχόμενες μεταδόσεις στην ουρά μόντεμ έχουν "
+"ολοκληρωθεί πριν από την έναρξη εργασιών συντήρησης."
+
+msgid "Daemon Service Control"
+msgstr "Έλεγχος υπηρεσιών δαίμονα (Daemon)"
+
+msgid "Restart HylaFAX and NamiFAX web services, or halt background workers."
+msgstr ""
+"Επανεκκίνηση υπηρεσιών ιστού HylaFAX και NamiFAX ή διακοπή διεργασιών "
+"παρασκηνίου."
+
+msgid "Reboot Services"
+msgstr "Επανεκκίνηση υπηρεσιών"
+
+msgid "Shutdown Services"
+msgstr "Τερματισμός υπηρεσιών"
+
+msgid "Database & Archive Backup"
+msgstr "Αντίγραφο ασφαλείας βάσης δεδομένων & αρχείου"
+
+msgid "Download system archives and database snapshots for offsite retention."
+msgstr ""
+"Λήψη αρχείων συστήματος και στιγμιοτύπων βάσης δεδομένων για εξωτερική "
+"διατήρηση."
+
+msgid "Download Archive"
+msgstr "Download Archive"
+
+msgid "Download Database"
+msgstr "Download Database"
+
+msgid "System Logs"
+msgstr "Αρχεία καταγραφής συστήματος"
+
+msgid "Audit logs and HylaFAX server operational event traces"
+msgstr "Καταγραφές ελέγχου και ίχνη λειτουργικών συμβάντων διακομιστή HylaFAX"
+
+msgid "Keywords:"
+msgstr "Λέξεις-κλειδιά:"
+
+msgid "Search text..."
+msgstr ""
+
+msgid "Date:"
+msgstr "Ημερομηνία:"
+
+msgid "Date"
+msgstr "Ημερομηνία"
+
+msgid "Log Text"
+msgstr "Κείμενο καταγραφής"
+
+msgid "No system logs found matching criteria."
+msgstr ""
+"Δεν βρέθηκαν αρχεία καταγραφής συστήματος που να ταιριάζουν με τα "
+"κριτήρια."
+
+msgid "Transmissions and server events will be streamed here in real time."
+msgstr ""
+"Οι μεταδόσεις και τα συμβάντα διακομιστή θα μεταδίδονται εδώ σε "
+"πραγματικό χρόνο."
+
+msgid "Delete User"
+msgstr "Διαγραφή χρήστη"
+
+msgid "Are you sure you want to delete the user"
+msgstr ""
+
+msgid "Manage system operator credentials, access permissions, and route mapping"
+msgstr ""
+"Διαχείριση διαπιστευτηρίων χειριστών συστήματος, δικαιωμάτων πρόσβασης "
+"και αντιστοίχισης δρομολόγησης"
+
+msgid "Create New User"
+msgstr "Δημιουργία νέου χρήστη"
+
+msgid "Last IP"
+msgstr "Τελευταία είσοδος από IP"
+
+msgid "Superuser"
+msgstr "Υπερχρήστης"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "YES"
+msgstr "Ναι"
+
+msgid "NO"
+msgstr "Όχι"
+
+msgid "users"
+msgstr "Χρήστες"
+
+msgid "user"
+msgstr "Χρήστης"
+
+msgid "Modify User"
+msgstr "Μεταβολή χρήστη"
+
+msgid "New User"
+msgstr "Νέος χρήστης"
+
+msgid "Full Name"
+msgstr "Πλήρες όνομα"
+
+msgid "Password"
+msgstr "συνθηματικό"
+
+msgid "Leave empty to keep the current password (a new user is sent a random one)"
+msgstr ""
+
+msgid "Email Address"
+msgstr "Διεύθυνση Email"
+
+msgid "Password expiration cycle"
+msgstr ""
+
+msgid "Language"
+msgstr "Γλώσσα"
+
+msgid "Password can be reused"
+msgstr ""
+
+msgid "My Company"
+msgstr ""
+
+msgid "My Location"
+msgstr ""
+
+msgid "My Voice Number"
+msgstr ""
+
+msgid "My Fax Number"
+msgstr ""
+
+msgid "TSI ID"
+msgstr ""
+
+msgid "Select Cover Page"
+msgstr ""
+
+msgid "New fax sound"
+msgstr ""
+
+msgid "Permissions & Capabilities"
+msgstr "Δικαιώματα & Δυνατότητες"
+
+msgid "Administrator Console"
+msgstr "Κονσόλα διαχειριστή"
+
+msgid "Superuser Rights"
+msgstr "Δικαιώματα υπερχρήστη"
+
+msgid "Send on Any Modem"
+msgstr "Αποστολή μέσω οποιουδήποτε μόντεμ"
+
+msgid "You must first create a DID/DTMF group"
+msgstr ""
+
+msgid "You must first create a modem"
+msgstr ""
+
+#, fuzzy
+msgid "Categories"
+msgstr "Προβολή κατηγοριών φαξ"
+
+msgid "You must first create a category"
+msgstr ""
+
+#, fuzzy
+msgid "Archive Search"
+msgstr "Αρχείο"
+
+msgid "Search all sent and received fax records by date, company, or fax number."
+msgstr ""
+"Αναζήτηση όλων των απεσταλμένων και ληφθέντων φαξ βάσει ημερομηνίας, "
+"εταιρείας ή αριθμού φαξ."
+
+#, fuzzy
+msgid "Search Filters"
+msgstr "Αναζήτηση"
+
+msgid ""
+"Leave filters empty to search all records. Narrow results by adding more "
+"criteria."
+msgstr ""
+"Αφήστε τα φίλτρα κενά για αναζήτηση όλων των εγγραφών. Περιορίστε τα "
+"αποτελέσματα προσθέτοντας περισσότερα κριτήρια."
+
+msgid "Company search"
+msgstr "Αναζήτηση εταιρίας"
+
+msgid "Company list"
+msgstr "Λίστα εταιριών"
+
+#, fuzzy
+msgid "Fax ID"
+msgstr "Fax Modems"
+
+msgid "e.g. 104"
+msgstr ""
+
+msgid "Keywords"
+msgstr "Λέξεις-κλειδιά"
+
+msgid "Company, number, notes..."
+msgstr ""
+
+#, fuzzy
+msgid "All Categories"
+msgstr "Προβολή κατηγοριών φαξ"
+
+msgid "User"
+msgstr "Χρήστης"
+
+msgid "Start Date"
+msgstr "Από ημερομηνία"
+
+msgid "End Date"
+msgstr "Εώς ημερομηνία"
+
+#, fuzzy
+msgid "Direction"
+msgstr "DID/DTMF Route groups"
+
+#, python-format
+msgid "Total %(n)d results found."
+msgstr "Βρέθηκαν %(n)d αποτελέσματα"
+
+msgid "Pages"
+msgstr "Σελίδες"
+
+msgid "Download PDF"
+msgstr "Λήψη PDF"
+
+msgid "Reply to fax"
+msgstr "Απάντηση φαξ"
+
+#, fuzzy
+msgid "Re-send"
+msgstr "Αποστολή"
+
+msgid "Email PDF"
+msgstr "Αποστολή PDF με e-mail"
+
+msgid "Add note to fax"
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid "Delete fax"
+msgstr ""
+
+msgid "Select"
+msgstr "Επιλογή"
+
+msgid "Unknown"
+msgstr ""
+
+#, fuzzy
+msgid "Received"
+msgstr "Αρχείο"
+
+msgid "Sent"
+msgstr ""
+
+msgid "No results were found"
+msgstr "Δεν βρέθηκαν αποτελέσματα"
+
+msgid "Reset filters"
+msgstr "Επαναφορά φίλτρων"
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr "Επόμ."
+
+msgid "Name the sender"
+msgstr ""
+
+msgid "Select Contact Record"
+msgstr "Επιλογή εγγραφής επαφής"
+
+msgid "Or type a new company name"
+msgstr ""
+
+msgid "Delete selected faxes?"
+msgstr ""
+
+msgid "faxes"
+msgstr "φαξ"
+
+msgid "No contacts found"
+msgstr ""
+
+msgid "Add"
+msgstr "Προσθήκη"
+
+msgid "Close"
+msgstr "Κλείσιμο"
+
+msgid "Organize recipient groups for mass fax broadcasting and notifications."
+msgstr "Οργάνωση ομάδων παραληπτών για μαζική αποστολή φαξ και ειδοποιήσεων."
+
+msgid "Create List"
+msgstr "Δημιουργία λίστας"
+
+msgid "Saved Distribution Lists"
+msgstr "Αποθηκευμένες λίστες διανομής"
+
+msgid "members"
+msgstr "μέλη"
+
+msgid "Group Members & Settings"
+msgstr "Μέλη ομάδας & Ρυθμίσεις"
+
+msgid "Create New Distribution List"
+msgstr "Δημιουργία νέας λίστας διανομής"
+
+msgid "List Name"
+msgstr "Ονομασία λίστας"
+
+msgid "e.g. Executive Sales Team"
+msgstr ""
+
+msgid "Group Members (Contacts & Fax Numbers)"
+msgstr "Μέλη ομάδας (Επαφές & Αριθμοί φαξ)"
+
+#, fuzzy
+msgid "contacts assigned"
+msgstr "Επαφές"
+
+msgid "No contacts assigned to this list yet."
+msgstr "Δεν έχουν εκχωρηθεί ακόμη επαφές σε αυτήν τη λίστα."
+
+msgid "Add Member"
+msgstr "Προσθήκη μέλους"
+
+msgid "Delete this distribution list?"
+msgstr "Είστε σίγουρος ότι θέλετε να διαγραφεί αυτή η λίστα;"
+
+msgid "Edit Distribution List"
+msgstr "Επεξεργασία λίστας διανομής"
+
+msgid "Create Distribution List"
+msgstr "Δημιουργία λίστας διανομής"
+
+msgid "Configure broadcast list parameters and recipient group members."
+msgstr ""
+"Διαμόρφωση παραμέτρων λίστας μαζικής αποστολής και μελών ομάδας "
+"παραληπτών."
+
+msgid "Back to Lists"
+msgstr "Επιστροφή στις λίστες"
+
+msgid "Distribution List Profile"
+msgstr "Προφίλ λίστας διανομής"
+
+msgid "e.g. Finance Operations"
+msgstr ""
+
+msgid "Enrolled Members"
+msgstr "Εγγεγραμμένα μέλη"
+
+msgid "List ID:"
+msgstr "ID λίστας:"
+
+msgid "No contacts in this list."
+msgstr "Δεν υπάρχουν επαφές σε αυτήν τη λίστα."
+
+msgid "Add contacts to the list"
+msgstr ""
+
+msgid "Changes saved"
+msgstr "Οι αλλαγές αποθηκεύτηκαν"
+
+msgid "Back"
+msgstr "[ Πίσω ]"
+
+#, fuzzy
+msgid "Email Address Book"
+msgstr "Διευθύνσεις e-mail"
+
+msgid "Manage email recipients, transmission routing, and contacts directory."
+msgstr "Διαχείριση παραληπτών email, δρομολόγησης μεταδόσεων και καταλόγου επαφών."
+
+#, fuzzy
+msgid "New Contact"
+msgstr "Επαφές"
+
+msgid "Contacts"
+msgstr "Επαφές"
+
+msgid "recipients"
+msgstr "παραλήπτες"
+
+#, fuzzy
+msgid "Contact Name"
+msgstr "Επαφές"
+
+msgid "Company Affiliation"
+msgstr "Εταιρική υπαγωγή"
+
+msgid ""
+"No email contacts found in the directory. Click \"+ New Contact\" to "
+"register one."
+msgstr ""
+"Δεν βρέθηκαν επαφές email στον κατάλογο. Κάντε κλικ στο \\\"+ Νέα "
+"επαφή\\\" για να καταχωρίσετε μία."
+
+msgid "Email Book - Edit Email Contact"
+msgstr "Ευρετήριο email - Επεξεργασία επαφής email"
+
+msgid "Manage contact information and company affiliation in Email Book."
+msgstr "Διαχείριση πληροφοριών επαφής και εταιρικής υπαγωγής στο ευρετήριο email."
+
+msgid "Back to Email Book"
+msgstr "Επιστροφή στο ευρετήριο email"
+
+msgid "Contact Profile Details"
+msgstr "Στοιχεία προφίλ επαφής"
+
+msgid "John Doe"
+msgstr ""
+
+msgid "New Destination"
+msgstr ""
+
+msgid "Priority"
+msgstr "Priority"
+
+msgid "Modem / Device"
+msgstr ""
+
+msgid "Number of tries"
+msgstr ""
+
+msgid "Expire after"
+msgstr ""
+
+msgid "Now"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Hours"
+msgstr ""
+
+msgid "Days"
+msgstr ""
+
+msgid "Schedule Send Time"
+msgstr ""
+
+#, fuzzy
+msgid "Lost Password"
+msgstr "συνθηματικό"
+
+msgid "Account Recovery Assistance"
+msgstr "Βοήθεια ανάκτησης λογαριασμού"
+
+msgid "Back to Login"
+msgstr "Επιστροφή στη σύνδεση"
+
+msgid "Your password will be sent to the given e-mail address."
+msgstr ""
+
+msgid "Once you have received your new password you can login in and change it."
+msgstr ""
+
+msgid "Login"
+msgstr "Είσοδος"
+
+msgid ""
+"Please enter your e-mail address then click on the Send Password button. "
+"You will receive a new password shortly. Use this new password to access "
+"the site."
+msgstr ""
+
+msgid "E-mail address"
+msgstr "Διεύθυνση e-mail"
+
+msgid "Send Password"
+msgstr "Αποστολή συνθηματικού"
+
+msgid "Received faxes appear here automatically in real time."
+msgstr "Τα ληφθέντα φαξ εμφανίζονται εδώ αυτόματα σε πραγματικό χρόνο."
+
+msgid "Faxes"
+msgstr "φαξ"
+
+msgid "Fax"
+msgstr "Φαξ"
+
+#, fuzzy
+msgid "Archive Selected"
+msgstr "Αρχείο"
+
+msgid "Delete Selected"
+msgstr "Διαγραφή επιλεγμένων"
+
+msgid "fax"
+msgstr "Φαξ"
+
+#, fuzzy
+msgid "Preview"
+msgstr "Προβολή φαξ"
+
+msgid "Sender"
+msgstr "Sender"
+
+msgid "Page"
+msgstr "Σελίδα"
+
+msgid "of"
+msgstr "από"
+
+msgid "This number belongs to several companies. Which one is it?"
+msgstr ""
+
+msgid "Unknown Sender"
+msgstr ""
+
+msgid "View"
+msgstr "Προβολή φαξ"
+
+msgid "Reply"
+msgstr "Απάντηση φαξ"
+
+msgid "Archive"
+msgstr "Αρχείο"
+
+msgid "Email Fax"
+msgstr "Αποστολή φαξ μέσω Email"
+
+msgid "Rotate"
+msgstr "Περιστροφή φαξ"
+
+msgid "Download TIFF"
+msgstr "Λήψη TIFF"
+
+msgid "0 FAXES"
+msgstr "0 ΦΑΞ"
+
+msgid ""
+"There are no incoming faxes waiting in your inbox. Incoming transmissions"
+" will automatically appear here in real time."
+msgstr ""
+"Δεν υπάρχουν εισερχόμενα φαξ στα εισερχόμενά σας. Οι εισερχόμενες "
+"μεταδόσεις θα εμφανίζονται εδώ αυτόματα σε πραγματικό χρόνο."
+
+msgid "Send Your First Fax"
+msgstr "Στείλτε το πρώτο σας φαξ"
+
+#, fuzzy
+msgid "Search Archive"
+msgstr "Αρχείο"
+
+msgid "Getting Started with NamiFAX"
+msgstr "Ξεκινώντας με το NamiFAX"
+
+msgid "Receive Faxes"
+msgstr "Λήψη φαξ"
+
+msgid ""
+"When someone sends a fax to this system's number, it will appear here "
+"automatically."
+msgstr ""
+"Όταν κάποιος στέλνει φαξ στον αριθμό αυτού του συστήματος, θα εμφανίζεται"
+" εδώ αυτόματα."
+
+#, fuzzy
+msgid "Send Faxes"
+msgstr "Νέο φαξ"
+
+msgid "Click Send Fax to transmit a PDF or image document to any fax number."
+msgstr ""
+"Κάντε κλικ στο Αποστολή φαξ για να μεταδώσετε έγγραφο PDF ή εικόνας σε "
+"οποιονδήποτε αριθμό φαξ."
+
+msgid "Manage Records"
+msgstr "Διαχείριση εγγραφών"
+
+msgid ""
+"Download faxes as PDF, archive them for later, or search all records in "
+"the Archive."
+msgstr ""
+"Κατεβάστε φαξ ως PDF, αρχειοθετήστε τα για αργότερα ή αναζητήστε όλες τις"
+" εγγραφές στο Αρχείο."
+
+msgid "Archive search"
+msgstr ""
+
+msgid "new fax"
+msgstr ""
+
+msgid "Outbox"
+msgstr "Outbox"
+
+msgid "lines"
+msgstr ""
+
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+msgid "Sign in"
+msgstr "Είσοδος"
+
+msgid "Enter your credentials to continue."
+msgstr "Εισαγάγετε τα διαπιστευτήριά σας για να συνεχίσετε."
+
+#, fuzzy
+msgid "System Online"
+msgstr "Λειτουργίες συστήματος"
+
+msgid "Enter your username"
+msgstr ""
+
+msgid "Forgot password?"
+msgstr ""
+"Παρακαλώ εισάγετε την διεύθυνση e-mail σας και πατήστε στο κουμπί "
+"Αποστολή συνθηματικού.Θα λάβετε ένα νέο συνθηματικό σύντομα το οποίο "
+"μπορείτε να χρησιμοποίησετε για την είσοδο σας σε αυτό το περιβάλλον."
+
+msgid "Enter your password"
+msgstr ""
+
+msgid "Contact your system administrator if you need an account."
+msgstr ""
+"Επικοινωνήστε με τον διαχειριστή του συστήματός σας εάν χρειάζεστε "
+"λογαριασμό."
+
+msgid "Or continue with"
+msgstr ""
+
+msgid "Sign in with Passkey (Touch ID / Security Key)"
+msgstr ""
+
+msgid "SAML 2.0 Enterprise SSO (Okta / Entra ID)"
+msgstr ""
+
+msgid "Two-Factor Authentication"
+msgstr ""
+
+msgid ""
+"Enter the 6-digit code from your authenticator app or an emergency "
+"recovery code."
+msgstr ""
+
+#, fuzzy
+msgid "Authentication Code"
+msgstr "Υπόψιν"
+
+msgid "123456 or 8-char backup code"
+msgstr ""
+
+msgid "Verify & Log In"
+msgstr ""
+
+msgid "Sign out?"
+msgstr ""
+
+msgid "Assign Company Name"
+msgstr "Ανάθεση ονόματος εταιρείας"
+
+msgid "Associate document with registered enterprise contact"
+msgstr "Σύνδεση εγγράφου με καταχωρισμένη εταιρική επαφή"
+
+msgid "Search Company Name"
+msgstr "Αναζήτηση ονόματος εταιρείας"
+
+msgid "Type company name to filter..."
+msgstr ""
+
+#, fuzzy
+msgid "Delete Fax"
+msgstr "Διαγραφή"
+
+msgid "Are you sure you want to delete this fax?"
+msgstr "Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το φαξ;"
+
+msgid "This operation will permanently purge the fax document archive."
+msgstr "Αυτή η λειτουργία θα διαγράψει οριστικά το αρχείο εγγράφων φαξ."
+
+msgid "Dispatch PDF document attachment to email recipients"
+msgstr "Αποστολή συνημμένου εγγράφου PDF σε παραλήπτες email"
+
+msgid "From"
+msgstr "Από"
+
+msgid "Recipients"
+msgstr "Παραλήπτες"
+
+msgid "Choose from contacts"
+msgstr ""
+
+msgid "CC"
+msgstr ""
+
+msgid "BCC"
+msgstr ""
+
+msgid "Subject"
+msgstr "Θέμα"
+
+msgid "PDF file name"
+msgstr "Όνομα αρχείου PDF"
+
+msgid "Message"
+msgstr "Μήνυμα"
+
+msgid "Archive fax"
+msgstr ""
+
+msgid "Send"
+msgstr "Αποστολή"
+
+msgid "Append internal administrative note or comments"
+msgstr "Προσθήκη εσωτερικής διοικητικής σημείωσης ή σχολίων"
+
+msgid "Note / Description"
+msgstr "Σημείωση / Περιγραφή"
+
+msgid "Enter transaction note or dispatch comments..."
+msgstr ""
+
+msgid "Transmission Report"
+msgstr "Αναφορά μετάδοσης"
+
+msgid "Official facsimile delivery confirmation receipt"
+msgstr "Επίσημη απόδειξη επιβεβαίωσης παράδοσης φαξ"
+
+msgid "Print"
+msgstr "Print"
+
+msgid "Company:"
+msgstr "Εταιρία"
+
+msgid "Pages:"
+msgstr "Σελίδες:"
+
+msgid "Fax Number:"
+msgstr "Αριθμός φαξ"
+
+msgid "Database unavailable"
+msgstr ""
+
+msgid ""
+"The database cannot be reached right now. This page tries again every 10 "
+"seconds."
+msgstr ""
+
+msgid "Faxes currently queued or being transmitted."
+msgstr "Φαξ που βρίσκονται σε ουρά αναμονής ή μεταδίδονται αυτήν τη στιγμή."
+
+msgid ""
+"This page shows only faxes that are queued or in progress. Once "
+"delivered, they are removed from this list. Find completed records in the"
+msgstr ""
+"Αυτή η σελίδα εμφανίζει μόνο φαξ που βρίσκονται σε ουρά ή σε εξέλιξη. "
+"Μετά την παράδοσή τους, αφαιρούνται από αυτήν τη λίστα. Βρείτε "
+"ολοκληρωμένες εγγραφές στο"
+
+msgid "jobs in progress"
+msgstr "εργασίες σε εξέλιξη"
+
+msgid "job in progress"
+msgstr "εργασία σε εξέλιξη"
+
+msgid "Job ID"
+msgstr "ID εργασίας"
+
+msgid "Dials"
+msgstr ""
+
+msgid "TTS"
+msgstr ""
+
+msgid "Modify"
+msgstr ""
+
+msgid "Kill job"
+msgstr ""
+
+msgid "Kill"
+msgstr ""
+
+msgid "Failed Transmissions"
+msgstr "Αποτυχημένες μεταδόσεις"
+
+msgid "Review the number or retry below."
+msgstr "Ελέγξτε τον αριθμό ή δοκιμάστε ξανά παρακάτω."
+
+msgid "Retry"
+msgstr "Retry"
+
+msgid "No jobs in queue"
+msgstr "Δεν υπάρχουν εργασίες στην ουρά"
+
+msgid ""
+"There are no faxes waiting to be sent. Send a fax to see its progress "
+"here."
+msgstr ""
+"Δεν υπάρχουν φαξ σε αναμονή για αποστολή. Στείλτε ένα φαξ για να "
+"παρακολουθήσετε την πρόοδό του εδώ."
+
+#, fuzzy
+msgid "Send a Fax"
+msgstr "Νέο φαξ"
+
+#, fuzzy
+msgid "Password Expired"
+msgstr "συνθηματικό"
+
+msgid "Security Credentials Renewal"
+msgstr "Ανανέωση διαπιστευτηρίων ασφαλείας"
+
+msgid "Action Required"
+msgstr "Απαιτείται ενέργεια"
+
+msgid ""
+"Your password has expired or needs to be changed before proceeding. "
+"Please enter your old password and choose a new password."
+msgstr ""
+"Ο κωδικός πρόσβασής σας έχει λήξει ή πρέπει να αλλάξει πριν συνεχίσετε. "
+"Παρακαλούμε εισαγάγετε τον παλιό σας κωδικό πρόσβασης και επιλέξτε έναν "
+"νέο κωδικό πρόσβασης."
+
+msgid "Old Password"
+msgstr "Παλαιό συνθηματικό"
+
+msgid "Current credentials"
+msgstr ""
+
+msgid "New Password"
+msgstr "Νέο συνθηματικό"
+
+msgid "New secure passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Confirm New Password"
+msgstr ""
+"Παρακαλώ εισάγετε την διεύθυνση e-mail σας και πατήστε στο κουμπί "
+"Αποστολή συνθηματικού.Θα λάβετε ένα νέο συνθηματικό σύντομα το οποίο "
+"μπορείτε να χρησιμοποίησετε για την είσοδο σας σε αυτό το περιβάλλον."
+
+msgid "Re-type new passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Update Password"
+msgstr "συνθηματικό"
+
+msgid "Fill in the details below and click Send."
+msgstr "Συμπληρώστε τα παρακάτω στοιχεία και κάντε κλικ στο Αποστολή."
+
+#, fuzzy
+msgid "Destination & Recipients"
+msgstr "Αριθμός φαξ"
+
+msgid "Enter the fax number and recipient details."
+msgstr "Εισαγάγετε τον αριθμό φαξ και τα στοιχεία του παραλήπτη."
+
+msgid "e.g. +1-555-0199  —  separate multiple numbers with semicolons"
+msgstr ""
+
+msgid "Choose a distribution list"
+msgstr ""
+
+msgid "To send to multiple recipients at once, separate numbers with a semicolon."
+msgstr ""
+
+msgid "Saved contacts are available in the"
+msgstr "Οι αποθηκευμένες επαφές είναι διαθέσιμες στο"
+
+msgid "Attention To"
+msgstr "Υπόψιν"
+
+msgid "optional"
+msgstr "προαιρετικό"
+
+msgid "e.g. Jane Doe"
+msgstr ""
+
+msgid "Voice Number"
+msgstr "Αριθμός τηλεφώνου"
+
+msgid "Address"
+msgstr ""
+
+msgid "Zip"
+msgstr ""
+
+msgid "Subject / Regarding"
+msgstr "Θέμα"
+
+msgid "e.g. Purchase Order #4921"
+msgstr ""
+
+msgid "Document Attachment"
+msgstr "Συνημμένο έγγραφο"
+
+msgid "Attach the file you want to transmit."
+msgstr "Επισυνάψτε το αρχείο που θέλετε να μεταδώσετε."
+
+msgid "Click to select a file"
+msgstr "Κάντε κλικ για να επιλέξετε αρχείο"
+
+msgid "Supported: PDF, TIFF, PostScript, TXT"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid ""
+"PDF is the most commonly used format. Convert Word or Excel files to PDF "
+"before attaching."
+msgstr ""
+"Το PDF είναι η πιο συνηθισμένη μορφή. Μετατρέψτε αρχεία Word ή Excel σε "
+"PDF πριν από την επισύναψη."
+
+msgid "Cover Page"
+msgstr "Αποστολή εξωφύλλου"
+
+msgid "Add a cover sheet with sender and recipient info."
+msgstr "Προσθέστε μια συνοδευτική σελίδα με πληροφορίες αποστολέα και παραλήπτη."
+
+#, fuzzy
+msgid "Include Cover Page"
+msgstr "Αποστολή εξωφύλλου"
+
+#, fuzzy
+msgid "Cover Template"
+msgstr "Αποστολή εξωφύλλου"
+
+msgid "No cover pages are set up"
+msgstr ""
+
+msgid "Send via Line"
+msgstr "Αποστολή μέσω γραμμής"
+
+msgid "No modems configured"
+msgstr "Δεν έχουν ρυθμιστεί φαξ modems"
+
+#, fuzzy
+msgid "Cover Comments"
+msgstr "Cover Pages"
+
+msgid "Notes or message to print on the cover sheet..."
+msgstr ""
+
+msgid "Advanced Options"
+msgstr "Σύνθετες επιλογές"
+
+msgid "Priority, retries, notifications"
+msgstr "Προτεραιότητα, επαναπροσπάθειες, ειδοποιήσεις"
+
+#, fuzzy
+msgid "Max Retries"
+msgstr "Προβολή κατηγοριών φαξ"
+
+msgid "Retries automatically on busy signal."
+msgstr "Αυτόματη επανάληψη σε περίπτωση σήματος κατειλημμένου."
+
+msgid "The original fax is sent along."
+msgstr ""
+
+msgid "Cancel & return to Inbox"
+msgstr "Ακύρωση & επιστροφή στα Εισερχόμενα"
+
+#, fuzzy
+msgid "User Settings"
+msgstr "Ρυθμίσεις"
+
+msgid ""
+"Configure your personal profile, fax station identity, and portal "
+"preferences."
+msgstr ""
+"Διαμορφώστε το προσωπικό σας προφίλ, την ταυτότητα σταθμού φαξ και τις "
+"προτιμήσεις πύλης."
+
+msgid "Return to Inbox"
+msgstr "Επιστροφή στα Εισερχόμενα"
+
+msgid "Personal & Organization Details"
+msgstr "Προσωπικά στοιχεία & στοιχεία οργανισμού"
+
+msgid "Office / Location"
+msgstr "Γραφείο / Τοποθεσία"
+
+msgid "Direct Voice Number"
+msgstr "Αριθμός άμεσης φωνητικής κλήσης"
+
+#, fuzzy
+msgid "Direct Fax Number"
+msgstr "Αριθμός φαξ"
+
+msgid "Transmitting Station ID (TSI)"
+msgstr "Αναγνωριστικό σταθμού μετάδοσης (TSI)"
+
+msgid "e.g. +1 555 123 4567"
+msgstr ""
+
+msgid "Header identifier imprinted on top of transmitted fax pages."
+msgstr "Αναγνωριστικό κεφαλίδας που αποτυπώνεται στο επάνω μέρος των σελίδων φαξ."
+
+msgid "Email & Fax Notification Signature"
+msgstr "Υπογραφή ειδοποίησης Email & Φαξ"
+
+msgid "Portal & Delivery Preferences"
+msgstr "Προτιμήσεις πύλης & παράδοσης"
+
+msgid "Display Language"
+msgstr "Γλώσσα εμφάνισης"
+
+#, fuzzy
+msgid "Default Cover Page"
+msgstr "Αποστολή εξωφύλλου"
+
+msgid "Faxes Per Page"
+msgstr "faxes per page"
+
+msgid "Archive Faxes Per Page"
+msgstr ""
+
+#, fuzzy
+msgid "Change Password"
+msgstr "συνθηματικό"
+
+#, fuzzy
+msgid "Current Password"
+msgstr ""
+"Παρακαλώ εισάγετε την διεύθυνση e-mail σας και πατήστε στο κουμπί "
+"Αποστολή συνθηματικού.Θα λάβετε ένα νέο συνθηματικό σύντομα το οποίο "
+"μπορείτε να χρησιμοποίησετε για την είσοδο σας σε αυτό το περιβάλλον."
+
+msgid "Enter current password to verify"
+msgstr ""
+
+msgid "Enter secure new password"
+msgstr ""
+
+msgid "Re-type new password"
+msgstr ""
+
+#, fuzzy
+msgid "Update Settings"
+msgstr "Ρυθμίσεις"
+
+msgid "Two-Factor Authentication (TOTP)"
+msgstr ""
+
+msgid ""
+"Protect your account with Google Authenticator, Authy, or compatible RFC "
+"6238 apps."
+msgstr ""
+
+msgid "Active / Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid ""
+"When enabled, signing in requires your password and a 6-digit one-time "
+"token from your mobile device."
+msgstr ""
+
+msgid "recovery codes left"
+msgstr ""
+
+msgid "Code from your app (to get new recovery codes)"
+msgstr ""
+
+msgid "New recovery codes"
+msgstr ""
+
+msgid "Turn off 2FA for your account?"
+msgstr ""
+
+msgid "Code or recovery code"
+msgstr ""
+
+msgid "Disable 2FA"
+msgstr ""
+
+msgid "Enable 2FA (Setup Authenticator)"
+msgstr ""
+
+msgid "FIDO2 Passkeys & Biometric Security Keys"
+msgstr ""
+
+msgid ""
+"Sign in securely without passwords using Touch ID, Face ID, Windows "
+"Hello, or YubiKey."
+msgstr ""
+
+msgid "Register New Passkey"
+msgstr ""
+
+msgid "Loading registered security keys..."
+msgstr ""
+
+msgid "No Passkeys registered yet."
+msgstr ""
+
+msgid ""
+"No Passkeys registered yet. Click Register to add Touch ID or a security "
+"key."
+msgstr ""
+
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+msgid ""
+"1. Scan this code with Google Authenticator, Authy or another RFC 6238 "
+"app, or type the key by hand."
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "2. Enter the 6-digit code the app shows"
+msgstr ""
+
+msgid "Turn on 2FA"
+msgstr ""
+
+msgid "Save your recovery codes"
+msgstr ""
+
+msgid ""
+"Each code works once if you lose your phone. They are shown only now; "
+"store them somewhere safe."
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Back to settings"
+msgstr ""
+
+msgid "Previous fax"
+msgstr "Προηγούμενο φαξ"
+
+msgid "Prev"
+msgstr "Προηγ."
+
+msgid "Next fax"
+msgstr "Επόμενο φαξ"
+
+msgid "Rotate fax"
+msgstr "Περιστροφή φαξ"
+
+#, python-format
+msgid "Invalid fax number: %(number)s"
+msgstr ""
+
+msgid "Address book entry saved."
+msgstr ""
+
+msgid "Please enter a valid fax number"
+msgstr ""
+
+msgid "You are not allowed to delete address book entries."
+msgstr ""
+
+msgid "You are not allowed to delete contacts."
+msgstr ""
+
+msgid "This modem already exists"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Cover page template removed successfully"
+msgstr ""
+
+msgid "Failed to remove cover page template"
+msgstr ""
+
+msgid "Failed to update cover page template"
+msgstr ""
+
+msgid "Cover page template registered successfully"
+msgstr ""
+
+msgid "Title and File are required"
+msgstr ""
+
+msgid "The company does not exist."
+msgstr ""
+
+msgid "The company and its fax numbers were deleted."
+msgstr ""
+
+msgid "Please enter a valid e-mail address."
+msgstr "Παρακαλώ εισάγετε ένα έγκυρο e-mail."
+
+msgid "Fax to Email settings saved"
+msgstr ""
+
+msgid "The system is rebooting. Please wait..."
+msgstr ""
+
+msgid "The system is shutting down. Please wait..."
+msgstr ""
+
+msgid "The command could not be run"
+msgstr ""
+
+msgid "There is no fax archive folder to download."
+msgstr ""
+
+msgid "The database dump could not be made"
+msgstr ""
+
+msgid "Access denied. Superadmin permission required."
+msgstr ""
+
+msgid "SMTP Gateway settings saved successfully."
+msgstr ""
+
+msgid "Printer name and host are required."
+msgstr ""
+
+msgid "Network printer registered successfully."
+msgstr ""
+
+msgid "Printer deleted successfully."
+msgstr ""
+
+msgid "Lifecycle policy saved successfully."
+msgstr ""
+
+msgid "Cloud storage configuration saved successfully."
+msgstr ""
+
+msgid "SAML 2.0 configuration saved successfully."
+msgstr ""
+
+msgid "Catch All"
+msgstr ""
+
+msgid "Never"
+msgstr ""
+
+msgid "Every 3 Months"
+msgstr ""
+
+msgid "Every 6 Months"
+msgstr ""
+
+msgid "You must enter a username"
+msgstr ""
+
+msgid "Non-alphanumeric characters are not allowed in username."
+msgstr "Απαγορεύεται η χρήση μη αλφαριθμητικών χαρακτήρων στο όνομα χρήστη."
+
+#, python-format
+msgid ""
+"Hello %(name)s,\n"
+"\n"
+"This email contains your username and password to log into NamiFAX "
+"(%(url)s)\n"
+"\n"
+"Username - %(username)s\n"
+"Password - %(password)s\n"
+"\n"
+"Please do not respond to this message as it is automatically generated "
+"and is for information purposes only"
+msgstr ""
+
+msgid "New User Details"
+msgstr "Στοιχεία νέου χρήστη"
+
+msgid "The user does not exist."
+msgstr ""
+
+msgid "You cannot delete your own account."
+msgstr ""
+
+msgid "You cannot delete the last superuser."
+msgstr ""
+
+msgid "Please enter a valid number."
+msgstr ""
+
+msgid "Both sent and received faxes"
+msgstr "Απεσταλμένα και ληφθέντα φαξ"
+
+msgid "Only sent faxes"
+msgstr "Μόνο απεσταλμένα φαξ"
+
+msgid "Only received faxes"
+msgstr "Μόνο ληφθέντα φαξ"
+
+msgid "Account is disabled"
+msgstr ""
+
+#, python-format
+msgid "Too many failed attempts. Try again in %(minutes)d minutes."
+msgstr ""
+
+msgid "Invalid or expired verification code."
+msgstr ""
+
+#, python-format
+msgid ""
+"The user account %(user)s has this email associated with it.  A web user "
+"from %(ip)s has just requested that a new password be sent.\n"
+"\n"
+"Your New Password is: %(password)s\n"
+"\n"
+"If this was an error just login with your new password and then change "
+"your password to what you would like it to be."
+msgstr ""
+"Ο λογαριασμός %(user)s έχει αυτό το email συνδεμένο με ατόν. Ένας χρήστης"
+" web από %(ip)s ζήτησε την αποστολή νέου συνθηματικού. Το νέο σας "
+"συνθηματικό είναι: %(password)s Αν η συγκεκριμένη ενέργεια προήλθε από "
+"λάθος, εισέλθετε με το νέο σας συνθηματικό και αλλάξτε το σε αυτό που θα "
+"θέλατε να έχετε."
+
+msgid "Email failed to send"
+msgstr "Αποτυχία αποστολής e-mail."
+
+msgid "Fax Contacts"
+msgstr ""
+
+msgid "Email Contacts"
+msgstr ""
+
+msgid "The fax document was not found."
+msgstr ""
+
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+msgid "Invalid job number."
+msgstr ""
+
+msgid "Any Available Line (Auto)"
+msgstr "Οποιαδήποτε διαθέσιμη γραμμή (Αυτόματο)"
+
+msgid "You may not use this line."
+msgstr ""
+
+msgid "Your fax has been successfully queued to be faxed."
+msgstr ""
+
+msgid "Job"
+msgstr ""
+
+msgid "The code is not valid."
+msgstr ""
+
+msgid "The code did not match. Check the time on your phone and try again."
+msgstr ""
+
+msgid "The password is not correct."
+msgstr ""
+
+msgid "Add a note"
+msgstr "Προσθήκη σημείωσης"
+
+msgid "Account active"
+msgstr "Ενεργοποιημένος λογαριασμός"
+
+msgid "The cover page was updated"
+msgstr ""
+
+msgid "The modem was created"
+msgstr "Το φαξ modem δημιουργήθηκε"
+
+msgid "The modem was deleted"
+msgstr "Το φαξ modem διαγράφηκε"
+
+msgid "The modem was updated"
+msgstr "Το φαξ modem ανανεώθηκε"
+
+msgid "Archive - show"
+msgstr ""
+
+msgid "Inbox - show"
+msgstr ""
+
+msgid "Assign a company name"
+msgstr "Ορισμός ονομασίας εταιρίας"
+
+msgid "You must enter a company name"
+msgstr "Πρέπει να εισάγετε την ονομασία της εταιρίας"
+
+msgid "Contact details saved"
+msgstr "Τα στοιχεία επαφής αποθηκεύτηκαν"
+
+msgid "Remove entries"
+msgstr "Διαγραφή στοιχείων"
+
+msgid "Save list name"
+msgstr "Αποθήκευση ονομασίας λίστας"
+
+msgid "The email failed to send."
+msgstr "Η αποστολή email απέτυχε."
+
+msgid "The email was sent successfully."
+msgstr "Το e-mail στάλθηκε επιτυχώς."
+
+msgid "Destination fax numbers"
+msgstr "Αριθμοί φαξ των παραληπτών"
+
+msgid "You must enter an alias"
+msgstr ""
+
+msgid "You must enter a device name"
+msgstr ""
+
+msgid "Modify Job"
+msgstr ""
+
+msgid "You must enter a name."
+msgstr "Πρέπει να εισάγετε ένα όνομα."
+
+msgid "Notify on requeue"
+msgstr "Ειδοποίηση κατά την επανάληψη"
+
+msgid "Forward fax via email"
+msgstr "Προώθηση φαξ μέσω e-mail"
+
+msgid "To person"
+msgstr "Υπόψιν"
+
+msgid "User can delete faxes"
+msgstr "Δικαιώμα διαγραφής φαξ"
+
+msgid "User settings have been saved."
+msgstr "Οι επιλογές του χρήστη αποθηκεύτηκαν."
+
+msgid "Select All Faxes"
+msgstr "Επιλογή όλων"
+
+#~ msgid "High"
+#~ msgstr "High"
+
+#~ msgid "Configure corporate contact identity and transmission routing defaults."
+#~ msgstr ""
+#~ "Διαμορφώστε την εταιρική ταυτότητα επαφής "
+#~ "και τις προεπιλογές δρομολόγησης μετάδοσης."
+
+#~ msgid "Primary Company Profile"
+#~ msgstr "Κύριο εταιρικό προφίλ"
+
+#~ msgid "Recipient Contact & Physical Address"
+#~ msgstr "Επαφή παραλήπτη & φυσική διεύθυνση"
+
+#~ msgid "City / Postal Region"
+#~ msgstr "Πόλη / Ταχυδρομικός τομέας"
+
+#~ msgid "Category Tag"
+#~ msgstr "Ετικέτα κατηγορίας"
+
+#~ msgid "General"
+#~ msgstr "Normal"
+
+#~ msgid "Invoices & Billing"
+#~ msgstr "Τιμολόγια & Χρεώσεις"
+
+#~ msgid "Legal"
+#~ msgstr "Νομικά"
+
+#~ msgid "Description / Internal Notes"
+#~ msgstr "Περιγραφή / Εσωτερικές σημειώσεις"
+
+#~ msgid "Edit Forwarding Rule"
+#~ msgstr "Επεξεργασία κανόνα προώθησης"
+
+#~ msgid "Add Forwarding Rule"
+#~ msgstr "Προσθήκη κανόνα προώθησης"
+
+#~ msgid ""
+#~ "Please enter your registered username or"
+#~ " email address below. Password reset "
+#~ "instructions will be dispatched to your"
+#~ " account email address."
+#~ msgstr ""
+#~ "Παρακαλούμε εισαγάγετε το όνομα χρήστη ή"
+#~ " τη διεύθυνση email σας παρακάτω. "
+#~ "Οδηγίες για την επαναφορά κωδικού "
+#~ "πρόσβασης θα σταλούν στη διεύθυνση email"
+#~ " του λογαριασμού σας."
+
+#~ msgid "Username or Email Address"
+#~ msgstr "Όνομα χρήστη ή διεύθυνση Email"
+
+#~ msgid "Reset Password"
+#~ msgstr ""
+#~ "Παρακαλώ εισάγετε την διεύθυνση e-mail "
+#~ "σας και πατήστε στο κουμπί Αποστολή "
+#~ "συνθηματικού.Θα λάβετε ένα νέο συνθηματικό "
+#~ "σύντομα το οποίο μπορείτε να "
+#~ "χρησιμοποίησετε για την είσοδο σας σε"
+#~ " αυτό το περιβάλλον."
+
+#~ msgid "Standard (Default)"
+#~ msgstr "Τυπικό (Προεπιλογή)"
+
+#~ msgid "Urgent"
+#~ msgstr "Επείγον"
+
+#~ msgid "Confidential"
+#~ msgstr "Εμπιστευτικό"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Low"
+#~ msgstr "Low"
+
+#~ msgid "High (Urgent)"
+#~ msgstr "Υψηλή (Επείγον)"
+
+#~ msgid "Reply to Fax"
+#~ msgstr "Απάντηση φαξ"
+
+#~ msgid "Dispatch quick reply transmission to originating sender"
+#~ msgstr "Αποστολή γρήγορης απάντησης στον αρχικό αποστολέα"
+
+#~ msgid "Regarding (Subject)"
+#~ msgstr "Θέμα"
+
+#~ msgid "Comments"
+#~ msgstr "Σχόλια"
+
+#~ msgid "Destination"
+#~ msgstr "Αριθμός φαξ"
+
+#~ msgid "Queued"
+#~ msgstr "Σε ουρά"
+
+#~ msgid "Reason"
+#~ msgstr "Αιτία"
+
+#~ msgid "To send to multiple recipients at once, separate numbers with a comma."
+#~ msgstr ""
+#~ "Για αποστολή σε πολλούς παραλήπτες "
+#~ "ταυτόχρονα, διαχωρίστε τους αριθμούς με "
+#~ "κόμμα."
+
+#~ msgid "Save Modem"
+#~ msgstr "Fax Modems"
+
+#~ msgid "Configure User:"
+#~ msgstr "Διαμόρφωση χρήστη:"
+
+#~ msgid "recipient@example.com (comma separated)"
+#~ msgstr ""
+
+#~ msgid "NamiFAX Transmission Document"
+#~ msgstr ""
+
+#~ msgid "Please find the attached facsimile document."
+#~ msgstr ""
+
+#~ msgid "results"
+#~ msgstr "Reset"
+
+#~ msgid "result"
+#~ msgstr "Reset"
+
+#~ msgid "Keyword"
+#~ msgstr "Keyword"
+
+#~ msgid "Invoices / Orders"
+#~ msgstr "Τιμολόγια / Παραγγελίες"
+
+#~ msgid "Legal / Contracts"
+#~ msgstr "Επαφές"
+
+#~ msgid "From Date"
+#~ msgstr "Περιστροφή φαξ"
+
+#~ msgid "To Date"
+#~ msgstr "Περιστροφή φαξ"
+
+#~ msgid "Sent & Received"
+#~ msgstr "Απεσταλμένα & Ληφθέντα"
+
+#~ msgid "Received only"
+#~ msgstr "Μόνο ληφθέντα"
+
+#~ msgid "Sent only"
+#~ msgstr "Μόνο απεσταλμένα"
+
+#~ msgid "Results"
+#~ msgstr "Reset"
+
+#~ msgid "records"
+#~ msgstr "εγγραφές"
+
+#~ msgid "record"
+#~ msgstr "εγγραφή"
+
+#~ msgid "No results found"
+#~ msgstr "Δεν βρέθηκαν αποτελέσματα"
+
+#~ msgid "Try adjusting your search terms or date range."
+#~ msgstr "Δοκιμάστε να προσαρμόσετε τους όρους αναζήτησης ή το εύρος ημερομηνιών."
+
+#~ msgid "Search the Archive"
+#~ msgstr "Αναζήτηση στο αρχείο"
+
+#~ msgid "Enter a keyword or filter above and click Search to find fax records."
+#~ msgstr ""
+#~ "Εισαγάγετε μια λέξη-κλειδί ή φίλτρο "
+#~ "παραπάνω και κάντε κλικ στην Αναζήτηση"
+#~ " για να βρείτε εγγραφές φαξ."
+
+#~ msgid "Showing"
+#~ msgstr "Εμφάνιση"
+
+#~ msgid "of"
+#~ msgstr "από"
+
+#~ msgid "Fax Viewer"
+#~ msgstr "Πρόγραμμα προβολής φαξ"
+
+#~ msgid "Page 1 of"
+#~ msgstr "Σελίδα 1 από"
+
+#~ msgid "FROM:"
+#~ msgstr "ΑΠΟ:"
+
+#~ msgid "DATE:"
+#~ msgstr "ΗΜΕΡΟΜΗΝΙΑ:"
+
+#~ msgid "DEVICE:"
+#~ msgstr "ΣΥΣΚΕΥΗ:"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "TIFF"
+#~ msgstr "TIFF"
+
+#~ msgid "Total"
+#~ msgstr "Σύνολο"
+
+#~ msgid "Incoming Transmission"
+#~ msgstr "Εισερχόμενη μετάδοση"
+
+#~ msgid "FACSIMILE TRANSMISSION"
+#~ msgstr "ΜΕΤΑΔΟΣΗ ΦΑΞ"
+
+#~ msgid "Date Received:"
+#~ msgstr "Ημερομηνία λήψης:"
+
+#~ msgid "Originating Station:"
+#~ msgstr "Σταθμός προέλευσης:"
+
+#~ msgid "PORT"
+#~ msgstr "Priority"
+
+#~ msgid "High-Resolution Raster Preview"
+#~ msgstr "Προεπισκόπηση ψηφιογραφικής ανάλυσης υψηλής ευκρίνειας"
+
+#~ msgid "Device Line:"
+#~ msgstr "Γραμμή συσκευής:"
+
+#~ msgid "Download Original Document"
+#~ msgstr "Λήψη αρχικού εγγράφου"
+
+#~ msgid "NamiFAX Enterprise Facsimile Engine"
+#~ msgstr "Εταιρική μηχανή τηλεομοιοτυπίας (φαξ) NamiFAX"
+
+#~ msgid "Archive ID:"
+#~ msgstr "Αρχείο"
+
+#~ msgid "Add contact name or fax number..."
+#~ msgstr ""
+
+#~ msgid "Delete List"
+#~ msgstr "Διαγραφή λίστας"
+
+#~ msgid "Save Changes"
+#~ msgstr "Cover Pages"
+
+#~ msgid "Supported: PDF, TIFF, PostScript, TXT · Max 10 MB"
+#~ msgstr "Υποστηριζόμενα: PDF, TIFF, PostScript, TXT · Μέγιστο 10 MB"
+
+#~ msgid "Auto-select recommended"
+#~ msgstr "Συνιστάται αυτόματη επιλογή"
+
+#~ msgid "Status:"
+#~ msgstr "Κατάσταση:"
+
+#~ msgid "Transmitted Successfully (OK)"
+#~ msgstr "Μεταδόθηκε επιτυχώς (OK)"
+

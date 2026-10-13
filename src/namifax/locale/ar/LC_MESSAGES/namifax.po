@@ -1,0 +1,2586 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: NamiFAX 4.0.Language: aMIME-Version: 1.Content-Type: "
+"text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-02 00:54+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ar\n"
+"Language-Team: ar <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "Address Book"
+msgstr "عناوين البريد الإلكتروني"
+
+msgid "Save frequently used fax numbers for quick access when sending."
+msgstr "حفظ أرقام الفاكس المستخدمة بكثرة للوصول السريع عند الإرسال."
+
+msgid "Company or fax number..."
+msgstr ""
+
+msgid "Search"
+msgstr "بحث"
+
+#, fuzzy
+msgid "New Company"
+msgstr "شركة"
+
+msgid "Email Book"
+msgstr "دفتر البريد الإلكتروني"
+
+msgid "Distribution Lists"
+msgstr "قوائم التوزيع"
+
+#, fuzzy
+msgid "Company / Name"
+msgstr "شركة"
+
+msgid "Fax Number"
+msgstr "رقم الفاكس"
+
+msgid "Email"
+msgstr "ارسال"
+
+msgid "Actions"
+msgstr "إجراءات"
+
+msgid "Send Fax"
+msgstr "إرسال فاكس"
+
+msgid "Edit"
+msgstr "تحرير"
+
+#, fuzzy
+msgid "No contacts yet"
+msgstr "يتصل بـ"
+
+msgid "No contacts matched"
+msgstr "لم يتم العثور على جهات اتصال مطابقة"
+
+msgid ""
+"Add contacts to quickly select fax numbers when sending without typing "
+"them every time."
+msgstr ""
+"أضف جهات اتصال لاختيار أرقام الفاكس سريعاً عند الإرسال دون كتابتها في كل "
+"مرة."
+
+msgid "Add First Contact"
+msgstr "إضافة أول جهة اتصال"
+
+#, fuzzy
+msgid "Edit Company"
+msgstr "شركة"
+
+#, fuzzy
+msgid "Add New Company"
+msgstr "شركة"
+
+msgid "Configure the company and every fax number it uses."
+msgstr ""
+
+#, fuzzy
+msgid "Back to Contacts"
+msgstr "يتصل بـ"
+
+msgid "Upload contacts file (vCard)"
+msgstr ""
+
+msgid "Upload"
+msgstr "تحميل"
+
+msgid "Company"
+msgstr "شركة"
+
+#, fuzzy
+msgid "Company Name"
+msgstr "شركة"
+
+msgid "e.g. Acme Corporation"
+msgstr ""
+
+msgid "Clear the number to remove it."
+msgstr ""
+
+msgid "Description"
+msgstr "وصف"
+
+msgid "Category"
+msgstr "الفئة"
+
+msgid "Location"
+msgstr "موقع"
+
+msgid "Voice Telephone"
+msgstr "رقم الهاتف الصوتي"
+
+msgid "Street Address"
+msgstr "عنوان الشارع"
+
+msgid "Zip / Postal Code"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Add a Fax Number"
+msgstr ""
+
+msgid "First Fax Number"
+msgstr ""
+
+msgid "Delete"
+msgstr "ازالة"
+
+msgid "Cancel"
+msgstr "الغاء"
+
+msgid "Save"
+msgstr "حفظ"
+
+#, fuzzy
+msgid "Dashboard Overview"
+msgstr "لوحة القيادة"
+
+#, fuzzy
+msgid "SYSTEM OPERATIONAL"
+msgstr "وظائف النظام"
+
+msgid ""
+"Real-time status of fax spools, hardware serial modems, and registered "
+"users"
+msgstr ""
+"حالة فورية لقوائم انتظار الفاكس، وأجهزة المودم التسلسلية، والمستخدمين "
+"المسجلين"
+
+msgid "Users"
+msgstr "المستخدمين"
+
+msgid "Modems"
+msgstr "المودم"
+
+#, fuzzy
+msgid "DID Routes"
+msgstr "DID/DTMF Route groups"
+
+#, fuzzy
+msgid "Logs"
+msgstr "خروج"
+
+#, fuzzy
+msgid "Fax Lines"
+msgstr "Fax Modems"
+
+msgid "Hardware Ready"
+msgstr "العتاد جاهز"
+
+#, fuzzy
+msgid "Active accounts"
+msgstr "المستخدمين"
+
+msgid "Backend Core"
+msgstr "نواة النظام الخلفي"
+
+msgid "unknown"
+msgstr ""
+
+msgid "Scheduler"
+msgstr "المجدول"
+
+msgid "Running"
+msgstr "قيد التشغيل"
+
+#, fuzzy
+msgid "Registered User Accounts"
+msgstr "المستخدمين"
+
+msgid "Manage Users"
+msgstr "إدارة المستخدمين"
+
+msgid "Name"
+msgstr "أسم"
+
+msgid "Username"
+msgstr "اسم المستخدم"
+
+msgid "Last Login"
+msgstr "آخر دخول"
+
+msgid "Server Status"
+msgstr "حالة الخادم"
+
+msgid "Core"
+msgstr "النواة"
+
+msgid "Database Engine"
+msgstr "محرك قاعدة البيانات"
+
+msgid "System Scheduler"
+msgstr "مجدول النظام"
+
+msgid "Configured Modems"
+msgstr "أجهزة المودم المهيأة"
+
+msgid "Administrator Workflow Guide"
+msgstr "دليل سير عمل المشرف"
+
+#, fuzzy
+msgid "Configure Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid ""
+"Route incoming faxes automatically based on recognized Code39 / QR "
+"barcodes"
+msgstr ""
+"توجيه الفاكسات الواردة تلقائياً بناءً على الرموز الشريطية Code39 / QR "
+"المعترف بها"
+
+#, fuzzy
+msgid "New Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode Routing Rules"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode:"
+msgstr "Barcode Routing"
+
+msgid "Contact:"
+msgstr "اتصل ب"
+
+msgid "None"
+msgstr "لا يوجد"
+
+msgid "Printer:"
+msgstr "الطابعة:"
+
+#, fuzzy
+msgid "Edit Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Add Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "EDIT MODE"
+msgstr "تحرير"
+
+msgid "NEW"
+msgstr "جديد"
+
+msgid "Barcode"
+msgstr "Barcode"
+
+msgid "Alias"
+msgstr "اسم مستعار"
+
+#, fuzzy
+msgid "Contact Email"
+msgstr "يتصل بـ"
+
+msgid "Printer"
+msgstr "طابعة"
+
+msgid "Fax Categories"
+msgstr "عرض فئات الفاكس"
+
+msgid ""
+"Manage classification tags and archival categories for organizing "
+"transmissions"
+msgstr "إدارة وسوم التصنيف وفئات الأرشيف لتنظيم عمليات الإرسال"
+
+#, fuzzy
+msgid "New Category"
+msgstr "عرض فئات الفاكس"
+
+#, fuzzy
+msgid "Existing Categories"
+msgstr "عرض فئات الفاكس"
+
+msgid "Edit Category"
+msgstr "تعديل الفئة"
+
+#, fuzzy
+msgid "Add Category"
+msgstr "عرض فئات الفاكس"
+
+msgid "Category Name"
+msgstr "اسم الفئة"
+
+msgid "e.g. Invoices, Contracts"
+msgstr ""
+
+#, fuzzy
+msgid "Configure Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Manage facsimile PostScript cover page templates and layouts"
+msgstr "إدارة قوالب وتخطيطات صفحات الغلاف بتنسيق PostScript للفاكس"
+
+#, fuzzy
+msgid "New Cover Page"
+msgstr "استخدام صفحة مقدمة"
+
+#, fuzzy
+msgid "Available Cover Pages"
+msgstr "Cover Pages"
+
+#, fuzzy
+msgid "Edit Cover Page"
+msgstr "استخدام صفحة مقدمة"
+
+#, fuzzy
+msgid "Add Cover Page"
+msgstr "استخدام صفحة مقدمة"
+
+msgid "Title"
+msgstr "العنوان"
+
+msgid "File"
+msgstr "ملف"
+
+msgid "e.g. custom.ps"
+msgstr ""
+
+msgid "Cover Template Studio: Dynamic Tag References"
+msgstr ""
+
+msgid ""
+"Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF"
+" templates. The Cover Studio engine automatically substitutes them during"
+" fax rendering."
+msgstr ""
+
+msgid "Dynamic Configuration"
+msgstr "تكوين ديناميكي"
+
+msgid ""
+"Manage Caller ID blacklists and transmission rejection rules for modem "
+"devices"
+msgstr "إدارة قوائم حظر Caller ID وقواعد رفض الإرسال لأجهزة المودم"
+
+msgid "New Rule"
+msgstr "قاعدة جديدة"
+
+msgid "Blocked Caller IDs"
+msgstr "أرقام Caller ID المحظورة"
+
+msgid "Caller ID:"
+msgstr "Caller ID:"
+
+msgid "All Devices"
+msgstr "كافة الأجهزة"
+
+msgid "Edit Caller ID Rule"
+msgstr "تعديل قاعدة Caller ID"
+
+msgid "Add Caller ID Rule"
+msgstr "إضافة قاعدة Caller ID"
+
+msgid "Caller ID"
+msgstr "Caller ID"
+
+msgid "e.g. 5550199 or pattern"
+msgstr ""
+
+msgid "Modem Device"
+msgstr "جهاز المودم"
+
+#, fuzzy
+msgid "Fax to Email"
+msgstr "Fax Modems"
+
+msgid ""
+"Configure automated inbound fax forwarding and PDF dispatch rules mapped "
+"by company"
+msgstr "تكوين قواعد إعادة التوجيه التلقائي للفاكس الوارد وإرسال PDF حسب الشركة"
+
+msgid "Add companies in the Address Book"
+msgstr ""
+
+msgid "Company Forwarding Rules"
+msgstr "قواعد إعادة توجيه الشركة"
+
+msgid "fax numbers"
+msgstr "أرقام الفاكس"
+
+msgid "Email:"
+msgstr "البريد الإلكتروني:"
+
+msgid "Edit Forwarding Rules"
+msgstr ""
+
+msgid "Forwarding Rules"
+msgstr ""
+
+msgid "This company has no fax numbers yet. Add them in the Address Book."
+msgstr ""
+
+msgid ""
+"Select a company on the left to set where the faxes received on each of "
+"its numbers are sent."
+msgstr ""
+
+#, fuzzy
+msgid "Control Panel"
+msgstr "استخدام صفحة مقدمة"
+
+msgid "User Portal"
+msgstr "User Portal"
+
+msgid "Inbox"
+msgstr "الوارد"
+
+#, fuzzy
+msgid "Overview"
+msgstr "استعرض الفاكس"
+
+msgid "Dashboard"
+msgstr "لوحة القيادة"
+
+msgid "Access Control"
+msgstr "التحكم في الوصول"
+
+msgid "User Accounts"
+msgstr "المستخدمين"
+
+msgid "Hardware & Lines"
+msgstr "الأجهزة والخطوط"
+
+msgid "Fax Modems"
+msgstr "Fax Modems"
+
+msgid "Network Printers"
+msgstr ""
+
+#, fuzzy
+msgid "Inbound Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid "DID Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid "Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid "Content & Templates"
+msgstr "المحتوى والقوالب"
+
+msgid "Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Security & System"
+msgstr "الأمان والنظام"
+
+msgid "Blacklist (DynConf)"
+msgstr "Blacklist (DynConf)"
+
+msgid "System Audit Logs"
+msgstr "System Audit Logs"
+
+msgid "System Functions"
+msgstr "وظائف النظام"
+
+msgid "SMTP Gateway"
+msgstr ""
+
+msgid "Storage & Cloud"
+msgstr ""
+
+msgid "SAML 2.0 SSO"
+msgstr ""
+
+msgid "Logout"
+msgstr "خروج"
+
+msgid "Admin Control Panel"
+msgstr "لوحة تحكم المشرف"
+
+msgid "Appliance Engine Online"
+msgstr "محرك الجهاز متصل بالإنترنت"
+
+msgid ""
+"Configure Modems hardware devices, physical serial ports, and print-"
+"forwarding rules"
+msgstr ""
+"تكوين أجهزة المودم، والمنافذ التسلسلية الفعلية، وقواعد إعادة التوجيه "
+"للطباعة"
+
+#, fuzzy
+msgid "Configure Modems"
+msgstr "Fax Modems"
+
+msgid "Active Modem Lines"
+msgstr "خطوط المودم النشطة"
+
+msgid "Device"
+msgstr "جهاز"
+
+msgid "Contact"
+msgstr "اتصل ب"
+
+msgid "Status"
+msgstr "الحالة"
+
+#, fuzzy
+msgid "Edit Modem"
+msgstr "Fax Modems"
+
+msgid "Configure Modems Device"
+msgstr "تكوين جهاز المودم"
+
+msgid "e.g. ttyS0"
+msgstr ""
+
+msgid "e.g. Main Inbound Line"
+msgstr ""
+
+msgid "Are you sure you want to delete this modem?"
+msgstr ""
+
+msgid "Create"
+msgstr "أنشاء"
+
+msgid "Appliance Note:"
+msgstr "ملاحظة الجهاز:"
+
+msgid ""
+"Modems configured here must correspond to physical RS-232 serial devices,"
+" USB modems, or virtual IAX modems recognized by the underlying HylaFAX "
+"server."
+msgstr ""
+"يجب أن تتطابق أجهزة المودم المهيأة هنا مع أجهزة RS-232 التسلسلية الفعلية،"
+" أو أجهزة مودم USB، أو أجهزة مودم IAX الافتراضية المعترف بها بواسطة خادم "
+"HylaFAX الأساسي."
+
+msgid "Direct RAW socket & IPP network printing dispatch for received faxes"
+msgstr ""
+
+msgid "Add Network Printer"
+msgstr ""
+
+msgid "Printer Name"
+msgstr ""
+
+msgid "e.g. Office HP LaserJet"
+msgstr ""
+
+msgid "Protocol"
+msgstr ""
+
+msgid "Host / IP"
+msgstr ""
+
+#, fuzzy
+msgid "Port"
+msgstr "الأولوية"
+
+msgid "Queue Name (Optional)"
+msgstr ""
+
+msgid "2nd Floor Accounting Printer"
+msgstr ""
+
+msgid "Register Printer"
+msgstr ""
+
+msgid "Configured Printers"
+msgstr ""
+
+msgid "No network printers configured yet. Add one using the form on the left."
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+msgid "Test Print"
+msgstr ""
+
+msgid "Are you sure you want to delete this printer?"
+msgstr ""
+
+#, fuzzy
+msgid "Configure DID Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid ""
+"Route incoming faxes by Direct Inward Dialing (DID) extension to specific"
+" email boxes or printers"
+msgstr ""
+"توجيه الفاكسات الواردة حسب الرقم الداخلي للطلب الداخلي المباشر (DID) إلى "
+"صناديق بريد أو طابعات محددة"
+
+#, fuzzy
+msgid "New DID Route"
+msgstr "DID/DTMF Route groups"
+
+#, fuzzy
+msgid "Active DID Routing Rules"
+msgstr "DID/DTMF Route groups"
+
+msgid "Route Code"
+msgstr "رمز التوجيه"
+
+msgid "Action"
+msgstr "الإجراء"
+
+msgid "Configure Routing Rule"
+msgstr "تكوين قاعدة التوجيه"
+
+msgid "e.g. 1000"
+msgstr ""
+
+msgid "e.g. Sales Direct Line"
+msgstr ""
+
+msgid "-- None --"
+msgstr "-- لا يوجد --"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid ""
+"DID (Direct Inward Dialing) routing automatically redirects incoming "
+"transmissions matching extension patterns directly to mapped operator "
+"inboxes or physical printers."
+msgstr ""
+"يعيد توجيه DID (Direct Inward Dialing) تلقائياً عمليات الإرسال الواردة "
+"المطابقة لأنماط الأرقام الداخلية مباشرة إلى صناديق المشغلين المعنيين أو "
+"الطابعات الفعلية."
+
+msgid "SAML 2.0 Enterprise SSO"
+msgstr ""
+
+msgid ""
+"Single Sign-On integration with Okta, Microsoft Entra ID (Azure AD), "
+"Google Workspace & Keycloak"
+msgstr ""
+
+msgid "Download SP Metadata XML"
+msgstr ""
+
+msgid "Identity Provider (IdP) Settings"
+msgstr ""
+
+msgid "Enable SAML 2.0 Single Sign-On"
+msgstr ""
+
+msgid "Shows \"SAML 2.0 Enterprise SSO\" login option on login page"
+msgstr ""
+
+msgid "IdP Entity ID / Issuer"
+msgstr ""
+
+msgid "IdP Single Sign-On Service URL (HTTP-Redirect / POST)"
+msgstr ""
+
+msgid "IdP Public X.509 Certificate (PEM)"
+msgstr ""
+
+msgid "Just-in-Time (JIT) Provisioning"
+msgstr ""
+
+msgid "Auto-create account on first login"
+msgstr ""
+
+msgid "Default Role for JIT Users"
+msgstr ""
+
+msgid "Save SAML Configuration"
+msgstr ""
+
+msgid "NamiFAX SP Endpoints"
+msgstr ""
+
+msgid ""
+"Copy these endpoints into your Identity Provider (Azure AD, Okta, Google)"
+" console:"
+msgstr ""
+
+msgid "Assertion Consumer Service (ACS) URL"
+msgstr ""
+
+msgid "SP Entity ID / Metadata URL"
+msgstr ""
+
+msgid "NameID Format"
+msgstr ""
+
+msgid "External SMTP Gateway"
+msgstr ""
+
+msgid ""
+"Configure external mail delivery server for inbound fax notifications and"
+" user alerts"
+msgstr ""
+
+msgid "Diagnostics Result"
+msgstr ""
+
+msgid "Server Connection & Security"
+msgstr ""
+
+msgid "SMTP Host / Server"
+msgstr ""
+
+msgid "Encryption Protocol"
+msgstr ""
+
+msgid "None (Plain)"
+msgstr ""
+
+msgid "STARTTLS (587)"
+msgstr ""
+
+msgid "SSL / TLS (465)"
+msgstr ""
+
+msgid "Requires SMTP Authentication"
+msgstr ""
+
+#, fuzzy
+msgid "Username / Login"
+msgstr "اسم المستخدم"
+
+#, fuzzy
+msgid "Password / App Key"
+msgstr "كلمة السر"
+
+msgid "Default Sender Profile & Signatures"
+msgstr ""
+
+#, fuzzy
+msgid "From Email Address"
+msgstr "عنوان البريد الإلكتروني"
+
+#, fuzzy
+msgid "From Display Name"
+msgstr "شركة"
+
+msgid "NamiFAX Corporate Dispatcher"
+msgstr ""
+
+msgid "Email Signature (Plaintext)"
+msgstr ""
+
+msgid "Sent automatically by NamiFAX Gateway."
+msgstr ""
+
+msgid "Last updated"
+msgstr "آخر تحديث"
+
+#, fuzzy
+msgid "Save Gateway Settings"
+msgstr "إعدادات"
+
+msgid "Diagnostic Self-Test"
+msgstr ""
+
+msgid ""
+"Verify server reachability, TLS handshake, credentials and message "
+"dispatch in real time."
+msgstr ""
+
+msgid "Target Recipient Email"
+msgstr ""
+
+#, fuzzy
+msgid "Send Diagnostic Email"
+msgstr "إرسال فاكس"
+
+msgid "Enterprise storage lifecycle policies and S3 / MinIO / GCS cloud backends"
+msgstr ""
+
+msgid "Storage Lifecycle Policies"
+msgstr ""
+
+msgid "Purge Local TIFFs After (Days)"
+msgstr ""
+
+msgid ""
+"Frees local disk space if a PDF version exists. 0 = immediate after "
+"conversion."
+msgstr ""
+
+msgid "Full Fax Retention (Days)"
+msgstr ""
+
+msgid ""
+"Purge entire fax record and archival files after specified days. 0 = keep"
+" forever."
+msgstr ""
+
+msgid "Synchronize remote cloud object deletion on fax purge"
+msgstr ""
+
+msgid "Save Lifecycle Policy"
+msgstr ""
+
+msgid "Cloud Storage Backend"
+msgstr ""
+
+msgid "Storage Provider"
+msgstr ""
+
+msgid "Local Filesystem (Default)"
+msgstr ""
+
+msgid "Endpoint URL (MinIO / S3 Compatible)"
+msgstr ""
+
+msgid "Region"
+msgstr ""
+
+msgid "Bucket Name"
+msgstr ""
+
+msgid "Access Key ID"
+msgstr ""
+
+msgid "Secret Access Key"
+msgstr ""
+
+msgid "Key Prefix"
+msgstr ""
+
+msgid "Save Storage Config"
+msgstr ""
+
+msgid "Test Connection"
+msgstr ""
+
+msgid "Perform maintenance operations, service control, and backups."
+msgstr "إجراء عمليات الصيانة، والتحكم في الخدمات، والنسخ الاحتياطي."
+
+msgid "HylaFAX Engine Active"
+msgstr "محرك HylaFAX نشط"
+
+#, fuzzy
+msgid "Admin Dashboard"
+msgstr "لوحة القيادة"
+
+msgid "Caution: Appliance Maintenance Operations"
+msgstr "تنبيه: عمليات صيانة الجهاز"
+
+msgid ""
+"Restarting or shutting down services will interrupt active fax modem "
+"spooling and disconnect client sessions. Ensure all outbound "
+"transmissions in the modem queue are completed before initiating "
+"maintenance tasks."
+msgstr ""
+"ستؤدي إعادة تشغيل الخدمات أو إيقاف تشغيلها إلى مقاطعة قائمة انتظار مودم "
+"الفاكس النشطة وفصل جلسات العملاء. تأكد من اكتمال كافة عمليات الإرسال "
+"الصادرة في قائمة الانتظار قبل بدء مهام الصيانة."
+
+msgid "Daemon Service Control"
+msgstr "التحكم في الخدمات الخلفية (Daemons)"
+
+msgid "Restart HylaFAX and NamiFAX web services, or halt background workers."
+msgstr "إعادة تشغيل خدمات الويب لـ HylaFAX و NamiFAX، أو إيقاف العمال في الخلفية."
+
+msgid "Reboot Services"
+msgstr "إعادة تشغيل الخدمات"
+
+msgid "Shutdown Services"
+msgstr "إيقاف تشغيل الخدمات"
+
+msgid "Database & Archive Backup"
+msgstr "النسخ الاحتياطي لقاعدة البيانات والأرشيف"
+
+msgid "Download system archives and database snapshots for offsite retention."
+msgstr ""
+"تنزيل أرشيفات النظام ونسخ قاعدة البيانات الاحتياطية للاحتفاظ بها في موقع "
+"خارجي."
+
+msgid "Download Archive"
+msgstr "تنزيل الارشيف"
+
+msgid "Download Database"
+msgstr "تنزيل قاعدة بيانات"
+
+msgid "System Logs"
+msgstr "System Logs"
+
+msgid "Audit logs and HylaFAX server operational event traces"
+msgstr "سجلات التدقيق وتتبع الأحداث التشغيلية لخادم HylaFAX"
+
+msgid "Keywords:"
+msgstr "الكلمات المفتاحية:"
+
+msgid "Search text..."
+msgstr ""
+
+msgid "Date:"
+msgstr "التاريخ:"
+
+msgid "Date"
+msgstr "تاريخ"
+
+msgid "Log Text"
+msgstr "نص السجل"
+
+msgid "No system logs found matching criteria."
+msgstr "لم يتم العثور على سجلات نظام مطابقة للمعايير."
+
+msgid "Transmissions and server events will be streamed here in real time."
+msgstr "سيتم بث عمليات الإرسال وأحداث الخادم هنا في الوقت الفعلي."
+
+msgid "Delete User"
+msgstr "حذف المستخدم"
+
+msgid "Are you sure you want to delete the user"
+msgstr ""
+
+msgid "Manage system operator credentials, access permissions, and route mapping"
+msgstr "إدارة بيانات اعتماد مشغل النظام، وأذونات الوصول، وتعيين المسارات"
+
+msgid "Create New User"
+msgstr "إنشاء مستخدم جديد"
+
+msgid "Last IP"
+msgstr "آخر IP"
+
+msgid "Superuser"
+msgstr "مشرف متميز (Superuser)"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "YES"
+msgstr "نعم"
+
+msgid "NO"
+msgstr "لا"
+
+msgid "users"
+msgstr "المستخدمين"
+
+msgid "user"
+msgstr "مستخدم"
+
+msgid "Modify User"
+msgstr "تغيير المستخدم"
+
+msgid "New User"
+msgstr "مستخدم جديد"
+
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+msgid "Password"
+msgstr "كلمة السر"
+
+msgid "Leave empty to keep the current password (a new user is sent a random one)"
+msgstr ""
+
+msgid "Email Address"
+msgstr "عنوان البريد الإلكتروني"
+
+msgid "Password expiration cycle"
+msgstr ""
+
+msgid "Language"
+msgstr "لغة"
+
+msgid "Password can be reused"
+msgstr ""
+
+msgid "My Company"
+msgstr ""
+
+msgid "My Location"
+msgstr ""
+
+msgid "My Voice Number"
+msgstr ""
+
+msgid "My Fax Number"
+msgstr ""
+
+msgid "TSI ID"
+msgstr ""
+
+msgid "Select Cover Page"
+msgstr ""
+
+msgid "New fax sound"
+msgstr ""
+
+msgid "Permissions & Capabilities"
+msgstr "الأذونات والإمكانيات"
+
+msgid "Administrator Console"
+msgstr "وحدة تحكم المشرف"
+
+msgid "Superuser Rights"
+msgstr "صلاحيات المشرف المتميز"
+
+msgid "Send on Any Modem"
+msgstr "الإرسال عبر أي مودم"
+
+msgid "You must first create a DID/DTMF group"
+msgstr ""
+
+msgid "You must first create a modem"
+msgstr ""
+
+#, fuzzy
+msgid "Categories"
+msgstr "عرض فئات الفاكس"
+
+msgid "You must first create a category"
+msgstr ""
+
+#, fuzzy
+msgid "Archive Search"
+msgstr "ارشيف"
+
+msgid "Search all sent and received fax records by date, company, or fax number."
+msgstr ""
+"البحث في جميع سجلات الفاكس المرسلة والمستلمة حسب التاريخ أو الشركة أو رقم"
+" الفاكس."
+
+#, fuzzy
+msgid "Search Filters"
+msgstr "بحث"
+
+msgid ""
+"Leave filters empty to search all records. Narrow results by adding more "
+"criteria."
+msgstr ""
+"اترك عوامل التصفية فارغة للبحث في جميع السجلات. ضيّق النتائج بإضافة "
+"المزيد من المعايير."
+
+msgid "Company search"
+msgstr "البحث عن شركة"
+
+msgid "Company list"
+msgstr "قائمة الشركات"
+
+#, fuzzy
+msgid "Fax ID"
+msgstr "Fax Modems"
+
+msgid "e.g. 104"
+msgstr ""
+
+msgid "Keywords"
+msgstr "الكلمات الرئيسية"
+
+msgid "Company, number, notes..."
+msgstr ""
+
+#, fuzzy
+msgid "All Categories"
+msgstr "عرض فئات الفاكس"
+
+msgid "User"
+msgstr "مستخدم"
+
+msgid "Start Date"
+msgstr "من تاريخ"
+
+msgid "End Date"
+msgstr "الى تاريخ"
+
+#, fuzzy
+msgid "Direction"
+msgstr "DID/DTMF Route groups"
+
+#, python-format
+msgid "Total %(n)d results found."
+msgstr "مجموع %(n)d النتائج الموجودة."
+
+msgid "Pages"
+msgstr "صفحات"
+
+msgid "Download PDF"
+msgstr "تنزيل PDF"
+
+msgid "Reply to fax"
+msgstr "الرد على فاكس"
+
+#, fuzzy
+msgid "Re-send"
+msgstr "ارسال"
+
+msgid "Email PDF"
+msgstr "ارسال PDF"
+
+msgid "Add note to fax"
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid "Delete fax"
+msgstr ""
+
+msgid "Select"
+msgstr "اختيار"
+
+msgid "Unknown"
+msgstr ""
+
+#, fuzzy
+msgid "Received"
+msgstr "ارشيف"
+
+msgid "Sent"
+msgstr ""
+
+msgid "No results were found"
+msgstr "لم يتم العثور على نتائج"
+
+msgid "Reset filters"
+msgstr "إعادة تعيين عوامل التصفية"
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr "التالي"
+
+msgid "Name the sender"
+msgstr ""
+
+msgid "Select Contact Record"
+msgstr "تحديد سجل جهة الاتصال"
+
+msgid "Or type a new company name"
+msgstr ""
+
+msgid "Delete selected faxes?"
+msgstr ""
+
+msgid "faxes"
+msgstr "فاكسات"
+
+msgid "No contacts found"
+msgstr ""
+
+msgid "Add"
+msgstr "إضافة"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Organize recipient groups for mass fax broadcasting and notifications."
+msgstr "تنظيم مجموعات المستلمين للبث الجماعي للفاكسات والإشعارات."
+
+msgid "Create List"
+msgstr "إنشاء قائمة"
+
+msgid "Saved Distribution Lists"
+msgstr "قوائم التوزيع المحفوظة"
+
+msgid "members"
+msgstr "أعضاء"
+
+msgid "Group Members & Settings"
+msgstr "أعضاء المجموعة والإعدادات"
+
+msgid "Create New Distribution List"
+msgstr "إنشاء قائمة توزيع جديدة"
+
+msgid "List Name"
+msgstr "قائمة الاسماء"
+
+msgid "e.g. Executive Sales Team"
+msgstr ""
+
+msgid "Group Members (Contacts & Fax Numbers)"
+msgstr "أعضاء المجموعة (جهات الاتصال وأرقام الفاكس)"
+
+#, fuzzy
+msgid "contacts assigned"
+msgstr "يتصل بـ"
+
+msgid "No contacts assigned to this list yet."
+msgstr "لم يتم تعيين جهات اتصال لهذه القائمة بعد."
+
+msgid "Add Member"
+msgstr "إضافة عضو"
+
+msgid "Delete this distribution list?"
+msgstr "حذف قائمة التوزيع هذه؟"
+
+msgid "Edit Distribution List"
+msgstr "تعديل قائمة التوزيع"
+
+msgid "Create Distribution List"
+msgstr "إنشاء قائمة توزيع"
+
+msgid "Configure broadcast list parameters and recipient group members."
+msgstr "تكوين معلمات قائمة البث وأعضاء مجموعة المستلمين."
+
+msgid "Back to Lists"
+msgstr "العودة إلى القوائم"
+
+msgid "Distribution List Profile"
+msgstr "الملف التعريفي لقائمة التوزيع"
+
+msgid "e.g. Finance Operations"
+msgstr ""
+
+msgid "Enrolled Members"
+msgstr "الأعضاء المسجلون"
+
+msgid "List ID:"
+msgstr "معرف القائمة:"
+
+msgid "No contacts in this list."
+msgstr "لا توجد جهات اتصال في هذه القائمة."
+
+msgid "Add contacts to the list"
+msgstr ""
+
+msgid "Changes saved"
+msgstr "تم حفظ التغيرات"
+
+msgid "Back"
+msgstr "خلف"
+
+#, fuzzy
+msgid "Email Address Book"
+msgstr "عناوين البريد الإلكتروني"
+
+msgid "Manage email recipients, transmission routing, and contacts directory."
+msgstr "إدارة مستلمي البريد الإلكتروني، وتوجيه الإرسال، ودليل جهات الاتصال."
+
+#, fuzzy
+msgid "New Contact"
+msgstr "يتصل بـ"
+
+msgid "Contacts"
+msgstr "يتصل بـ"
+
+msgid "recipients"
+msgstr "مستلمين"
+
+#, fuzzy
+msgid "Contact Name"
+msgstr "يتصل بـ"
+
+msgid "Company Affiliation"
+msgstr "التبعية للشركة"
+
+msgid ""
+"No email contacts found in the directory. Click \"+ New Contact\" to "
+"register one."
+msgstr ""
+"لم يتم العثور على جهات اتصال بريد إلكتروني في الدليل. انقر فوق \"+ New "
+"Contact\" لتسجيل جهة اتصال."
+
+msgid "Email Book - Edit Email Contact"
+msgstr "دفتر البريد الإلكتروني - تعديل جهة اتصال البريد"
+
+msgid "Manage contact information and company affiliation in Email Book."
+msgstr "إدارة معلومات الاتصال والتبعية للشركة في دفتر البريد الإلكتروني."
+
+msgid "Back to Email Book"
+msgstr "العودة إلى دفتر البريد الإلكتروني"
+
+msgid "Contact Profile Details"
+msgstr "تفاصيل الملف التعريفي لجهة الاتصال"
+
+msgid "John Doe"
+msgstr ""
+
+msgid "New Destination"
+msgstr "الوجهة الجديدة"
+
+msgid "Priority"
+msgstr "الأولوية"
+
+msgid "Modem / Device"
+msgstr ""
+
+msgid "Number of tries"
+msgstr "عدد المحاولات"
+
+msgid "Expire after"
+msgstr ""
+
+msgid "Now"
+msgstr "الان"
+
+msgid "Minutes"
+msgstr "دقائق"
+
+msgid "Hours"
+msgstr "ساعات"
+
+msgid "Days"
+msgstr "ايام"
+
+msgid "Schedule Send Time"
+msgstr ""
+
+#, fuzzy
+msgid "Lost Password"
+msgstr "كلمة السر"
+
+msgid "Account Recovery Assistance"
+msgstr "المساعدة في استرداد الحساب"
+
+msgid "Back to Login"
+msgstr "العودة إلى تسجيل الدخول"
+
+msgid "Your password will be sent to the given e-mail address."
+msgstr ""
+
+msgid "Once you have received your new password you can login in and change it."
+msgstr ""
+
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+msgid ""
+"Please enter your e-mail address then click on the Send Password button. "
+"You will receive a new password shortly. Use this new password to access "
+"the site."
+msgstr ""
+
+msgid "E-mail address"
+msgstr "عنوان البريد الالكتروني"
+
+msgid "Send Password"
+msgstr "إرسال كلمة المرور"
+
+msgid "Received faxes appear here automatically in real time."
+msgstr "تظهر الفاكسات المستلمة هنا تلقائياً في الوقت الفعلي."
+
+msgid "Faxes"
+msgstr "فاكسات"
+
+msgid "Fax"
+msgstr "الفاكس"
+
+#, fuzzy
+msgid "Archive Selected"
+msgstr "ارشيف"
+
+msgid "Delete Selected"
+msgstr "حذف المحدد"
+
+msgid "fax"
+msgstr "الفاكس"
+
+#, fuzzy
+msgid "Preview"
+msgstr "استعرض الفاكس"
+
+msgid "Sender"
+msgstr "Sender"
+
+msgid "Page"
+msgstr "صفحة"
+
+msgid "of"
+msgstr "من"
+
+msgid "This number belongs to several companies. Which one is it?"
+msgstr ""
+
+msgid "Unknown Sender"
+msgstr ""
+
+msgid "View"
+msgstr "استعرض الفاكس"
+
+msgid "Reply"
+msgstr "الرد على فاكس"
+
+msgid "Archive"
+msgstr "ارشيف"
+
+msgid "Email Fax"
+msgstr "إرسال الفاكس بالبريد الإلكتروني"
+
+msgid "Rotate"
+msgstr "تدوير الفاكس"
+
+msgid "Download TIFF"
+msgstr "تنزيل TIFF"
+
+msgid "0 FAXES"
+msgstr "0 فاكس"
+
+msgid ""
+"There are no incoming faxes waiting in your inbox. Incoming transmissions"
+" will automatically appear here in real time."
+msgstr ""
+"لا توجد فاكسات واردة بانتظارك في البريد الوارد. ستظهر عمليات الإرسال "
+"الواردة هنا تلقائياً في الوقت الفعلي."
+
+msgid "Send Your First Fax"
+msgstr "أرسل أول فاكس لك"
+
+#, fuzzy
+msgid "Search Archive"
+msgstr "ارشيف"
+
+msgid "Getting Started with NamiFAX"
+msgstr "بدء استخدام NamiFAX"
+
+msgid "Receive Faxes"
+msgstr "استلام الفاكسات"
+
+msgid ""
+"When someone sends a fax to this system's number, it will appear here "
+"automatically."
+msgstr "عندما يرسل شخص ما فاكساً إلى رقم هذا النظام، سيظهر هنا تلقائياً."
+
+#, fuzzy
+msgid "Send Faxes"
+msgstr "إرسال فاكس"
+
+msgid "Click Send Fax to transmit a PDF or image document to any fax number."
+msgstr "انقر فوق إرسال فاكس لنقل مستند PDF أو صورة إلى أي رقم فاكس."
+
+msgid "Manage Records"
+msgstr "إدارة السجلات"
+
+msgid ""
+"Download faxes as PDF, archive them for later, or search all records in "
+"the Archive."
+msgstr ""
+"قم بتنزيل الفاكسات بتنسيق PDF أو أرشفتها لوقت لاحق أو البحث في كافة "
+"السجلات في الأرشيف."
+
+msgid "Archive search"
+msgstr ""
+
+msgid "new fax"
+msgstr ""
+
+msgid "Outbox"
+msgstr "الخارج"
+
+msgid "lines"
+msgstr ""
+
+msgid "Settings"
+msgstr "إعدادات"
+
+msgid "Sign in"
+msgstr "تسجيل الدخول"
+
+msgid "Enter your credentials to continue."
+msgstr "أدخل بيانات اعتمادك للمتابعة."
+
+#, fuzzy
+msgid "System Online"
+msgstr "وظائف النظام"
+
+msgid "Enter your username"
+msgstr ""
+
+msgid "Forgot password?"
+msgstr ""
+"الرجاء إدخال عنوان البريد الإلكتروني الخاص بك ثم اضغط على زر ارسال كلمة "
+"المرور.  ستتلقى كلمة المرور الجديدة بعد قليل.  استخدمها لتسجيل الدخول فى "
+"موقعنا"
+
+msgid "Enter your password"
+msgstr ""
+
+msgid "Contact your system administrator if you need an account."
+msgstr "اتصل بمسؤول النظام إذا كنت بحاجة إلى حساب."
+
+msgid "Or continue with"
+msgstr ""
+
+msgid "Sign in with Passkey (Touch ID / Security Key)"
+msgstr ""
+
+msgid "SAML 2.0 Enterprise SSO (Okta / Entra ID)"
+msgstr ""
+
+msgid "Two-Factor Authentication"
+msgstr ""
+
+msgid ""
+"Enter the 6-digit code from your authenticator app or an emergency "
+"recovery code."
+msgstr ""
+
+#, fuzzy
+msgid "Authentication Code"
+msgstr "الى شخص"
+
+msgid "123456 or 8-char backup code"
+msgstr ""
+
+msgid "Verify & Log In"
+msgstr ""
+
+msgid "Sign out?"
+msgstr ""
+
+msgid "Assign Company Name"
+msgstr "تعيين اسم الشركة"
+
+msgid "Associate document with registered enterprise contact"
+msgstr "ربط المستند بجهة اتصال مؤسسية مسجلة"
+
+msgid "Search Company Name"
+msgstr "البحث عن اسم الشركة"
+
+msgid "Type company name to filter..."
+msgstr ""
+
+#, fuzzy
+msgid "Delete Fax"
+msgstr "ازالة"
+
+msgid "Are you sure you want to delete this fax?"
+msgstr "هل أنت متأكد أنك تريد حذف هذا الفاكس؟"
+
+msgid "This operation will permanently purge the fax document archive."
+msgstr "ستؤدي هذه العملية إلى حذف مستند الفاكس نهائياً من الأرشيف."
+
+msgid "Dispatch PDF document attachment to email recipients"
+msgstr "إرسال مرفق مستند PDF إلى مستلمي البريد الإلكتروني"
+
+msgid "From"
+msgstr "من"
+
+msgid "Recipients"
+msgstr "المستلمون"
+
+msgid "Choose from contacts"
+msgstr ""
+
+msgid "CC"
+msgstr ""
+
+msgid "BCC"
+msgstr ""
+
+msgid "Subject"
+msgstr "موضوع"
+
+msgid "PDF file name"
+msgstr "PDF اسم الملف"
+
+msgid "Message"
+msgstr "الرسالة"
+
+msgid "Archive fax"
+msgstr ""
+
+msgid "Send"
+msgstr "ارسال"
+
+msgid "Append internal administrative note or comments"
+msgstr "إلحاق ملاحظة إدارية داخلية أو تعليقات"
+
+msgid "Note / Description"
+msgstr "ملاحظة / وصف"
+
+msgid "Enter transaction note or dispatch comments..."
+msgstr ""
+
+msgid "Transmission Report"
+msgstr "تقرير الإرسال"
+
+msgid "Official facsimile delivery confirmation receipt"
+msgstr "إيصال تأكيد تسليم الفاكس الرسمي"
+
+msgid "Print"
+msgstr "اطبع"
+
+msgid "Company:"
+msgstr "شركة"
+
+msgid "Pages:"
+msgstr "الصفحات:"
+
+msgid "Fax Number:"
+msgstr "رقم الفاكس"
+
+msgid "Database unavailable"
+msgstr ""
+
+msgid ""
+"The database cannot be reached right now. This page tries again every 10 "
+"seconds."
+msgstr ""
+
+msgid "Faxes currently queued or being transmitted."
+msgstr "الفاكسات الموجودة حالياً في قائمة الانتظار أو قيد الإرسال."
+
+msgid ""
+"This page shows only faxes that are queued or in progress. Once "
+"delivered, they are removed from this list. Find completed records in the"
+msgstr ""
+"تعرض هذه الصفحة فقط الفاكسات الموجودة في قائمة الانتظار أو قيد التقدم. "
+"بمجرد تسليمها، تتم إزالتها من هذه القائمة. ابحث عن السجلات المكتملة في"
+
+msgid "jobs in progress"
+msgstr "مهام قيد التقدم"
+
+msgid "job in progress"
+msgstr "مهمة قيد التقدم"
+
+msgid "Job ID"
+msgstr "معرف المهمة"
+
+msgid "Dials"
+msgstr "الأوجه"
+
+msgid "TTS"
+msgstr ""
+
+msgid "Modify"
+msgstr ""
+
+msgid "Kill job"
+msgstr "انهاء"
+
+msgid "Kill"
+msgstr ""
+
+msgid "Failed Transmissions"
+msgstr "عمليات الإرسال الفاشلة"
+
+msgid "Review the number or retry below."
+msgstr "راجع الرقم أو أعد المحاولة أدناه."
+
+msgid "Retry"
+msgstr "Retry"
+
+msgid "No jobs in queue"
+msgstr "لا توجد مهام في قائمة الانتظار"
+
+msgid ""
+"There are no faxes waiting to be sent. Send a fax to see its progress "
+"here."
+msgstr "لا توجد فاكسات بانتظار الإرسال. أرسل فاكساً لمتابعة تقدمه هنا."
+
+#, fuzzy
+msgid "Send a Fax"
+msgstr "إرسال فاكس"
+
+#, fuzzy
+msgid "Password Expired"
+msgstr "كلمة السر"
+
+msgid "Security Credentials Renewal"
+msgstr "تجديد بيانات اعتماد الأمان"
+
+msgid "Action Required"
+msgstr "إجراء مطلوب"
+
+msgid ""
+"Your password has expired or needs to be changed before proceeding. "
+"Please enter your old password and choose a new password."
+msgstr ""
+"انتهت صلاحية كلمة المرور الخاصة بك أو يلزم تغييرها قبل المتابعة. يرجى "
+"إدخال كلمة المرور القديمة واختيار كلمة مرور جديدة."
+
+msgid "Old Password"
+msgstr "كلمة السر القديمة"
+
+msgid "Current credentials"
+msgstr ""
+
+msgid "New Password"
+msgstr "كلمة السر الجديدة"
+
+msgid "New secure passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Confirm New Password"
+msgstr ""
+"الرجاء إدخال عنوان البريد الإلكتروني الخاص بك ثم اضغط على زر ارسال كلمة "
+"المرور.  ستتلقى كلمة المرور الجديدة بعد قليل.  استخدمها لتسجيل الدخول فى "
+"موقعنا"
+
+msgid "Re-type new passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Update Password"
+msgstr "كلمة السر"
+
+msgid "Fill in the details below and click Send."
+msgstr "املأ التفاصيل أدناه وانقر فوق إرسال."
+
+#, fuzzy
+msgid "Destination & Recipients"
+msgstr "رقم الفاكس"
+
+msgid "Enter the fax number and recipient details."
+msgstr "أدخل رقم الفاكس وتفاصيل المستلم."
+
+msgid "e.g. +1-555-0199  —  separate multiple numbers with semicolons"
+msgstr ""
+
+msgid "Choose a distribution list"
+msgstr ""
+
+msgid "To send to multiple recipients at once, separate numbers with a semicolon."
+msgstr ""
+
+msgid "Saved contacts are available in the"
+msgstr "جهات الاتصال المحفوظة متوفرة في"
+
+msgid "Attention To"
+msgstr "الى شخص"
+
+msgid "optional"
+msgstr "اختياري"
+
+msgid "e.g. Jane Doe"
+msgstr ""
+
+msgid "Voice Number"
+msgstr "رقم الهاتف"
+
+msgid "Address"
+msgstr ""
+
+msgid "Zip"
+msgstr ""
+
+msgid "Subject / Regarding"
+msgstr "موضوع"
+
+msgid "e.g. Purchase Order #4921"
+msgstr ""
+
+msgid "Document Attachment"
+msgstr "مرفق المستند"
+
+msgid "Attach the file you want to transmit."
+msgstr "أرفق الملف الذي تريد إرساله."
+
+msgid "Click to select a file"
+msgstr "انقر لتحديد ملف"
+
+msgid "Supported: PDF, TIFF, PostScript, TXT"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid ""
+"PDF is the most commonly used format. Convert Word or Excel files to PDF "
+"before attaching."
+msgstr ""
+"يعد PDF التنسيق الأكثر استخداماً. قم بتحويل ملفات Word أو Excel إلى PDF "
+"قبل الإرفاق."
+
+msgid "Cover Page"
+msgstr "استخدام صفحة مقدمة"
+
+msgid "Add a cover sheet with sender and recipient info."
+msgstr "أضف صفحة غلاف تتضمن معلومات المرسل والمستلم."
+
+#, fuzzy
+msgid "Include Cover Page"
+msgstr "استخدام صفحة مقدمة"
+
+#, fuzzy
+msgid "Cover Template"
+msgstr "استخدام صفحة مقدمة"
+
+msgid "No cover pages are set up"
+msgstr ""
+
+msgid "Send via Line"
+msgstr "إرسال عبر الخط"
+
+msgid "No modems configured"
+msgstr ""
+
+#, fuzzy
+msgid "Cover Comments"
+msgstr "Cover Pages"
+
+msgid "Notes or message to print on the cover sheet..."
+msgstr ""
+
+msgid "Advanced Options"
+msgstr "خيارات متقدمة"
+
+msgid "Priority, retries, notifications"
+msgstr "الأولوية، وإعادة المحاولة، والإشعارات"
+
+#, fuzzy
+msgid "Max Retries"
+msgstr "عرض فئات الفاكس"
+
+msgid "Retries automatically on busy signal."
+msgstr "إعادة المحاولة تلقائياً عند إشارة مشغول."
+
+msgid "The original fax is sent along."
+msgstr ""
+
+msgid "Cancel & return to Inbox"
+msgstr "إلغاء والعودة إلى البريد الوارد"
+
+#, fuzzy
+msgid "User Settings"
+msgstr "إعدادات"
+
+msgid ""
+"Configure your personal profile, fax station identity, and portal "
+"preferences."
+msgstr "تكوين ملفك الشخصي، وهوية محطة الفاكس، وتفضيلات البوابة."
+
+msgid "Return to Inbox"
+msgstr "العودة إلى البريد الوارد"
+
+msgid "Personal & Organization Details"
+msgstr "التفاصيل الشخصية والمؤسسية"
+
+msgid "Office / Location"
+msgstr "المكتب / الموقع"
+
+msgid "Direct Voice Number"
+msgstr "رقم الهاتف الصوتي المباشر"
+
+#, fuzzy
+msgid "Direct Fax Number"
+msgstr "رقم الفاكس"
+
+msgid "Transmitting Station ID (TSI)"
+msgstr "معرف محطة الإرسال (TSI)"
+
+msgid "e.g. +1 555 123 4567"
+msgstr ""
+
+msgid "Header identifier imprinted on top of transmitted fax pages."
+msgstr "معرف رأس الصفحة المطبوع في أعلى صفحات الفاكس المرسلة."
+
+msgid "Email & Fax Notification Signature"
+msgstr "توقيع إشعارات البريد الإلكتروني والفاكس"
+
+msgid "Portal & Delivery Preferences"
+msgstr "تفضيلات البوابة والتسليم"
+
+msgid "Display Language"
+msgstr "لغة العرض"
+
+#, fuzzy
+msgid "Default Cover Page"
+msgstr "استخدام صفحة مقدمة"
+
+msgid "Faxes Per Page"
+msgstr "faxes per page"
+
+msgid "Archive Faxes Per Page"
+msgstr ""
+
+#, fuzzy
+msgid "Change Password"
+msgstr "كلمة السر"
+
+#, fuzzy
+msgid "Current Password"
+msgstr ""
+"الرجاء إدخال عنوان البريد الإلكتروني الخاص بك ثم اضغط على زر ارسال كلمة "
+"المرور.  ستتلقى كلمة المرور الجديدة بعد قليل.  استخدمها لتسجيل الدخول فى "
+"موقعنا"
+
+msgid "Enter current password to verify"
+msgstr ""
+
+msgid "Enter secure new password"
+msgstr ""
+
+msgid "Re-type new password"
+msgstr ""
+
+#, fuzzy
+msgid "Update Settings"
+msgstr "إعدادات"
+
+msgid "Two-Factor Authentication (TOTP)"
+msgstr ""
+
+msgid ""
+"Protect your account with Google Authenticator, Authy, or compatible RFC "
+"6238 apps."
+msgstr ""
+
+msgid "Active / Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid ""
+"When enabled, signing in requires your password and a 6-digit one-time "
+"token from your mobile device."
+msgstr ""
+
+msgid "recovery codes left"
+msgstr ""
+
+msgid "Code from your app (to get new recovery codes)"
+msgstr ""
+
+msgid "New recovery codes"
+msgstr ""
+
+msgid "Turn off 2FA for your account?"
+msgstr ""
+
+msgid "Code or recovery code"
+msgstr ""
+
+msgid "Disable 2FA"
+msgstr ""
+
+msgid "Enable 2FA (Setup Authenticator)"
+msgstr ""
+
+msgid "FIDO2 Passkeys & Biometric Security Keys"
+msgstr ""
+
+msgid ""
+"Sign in securely without passwords using Touch ID, Face ID, Windows "
+"Hello, or YubiKey."
+msgstr ""
+
+msgid "Register New Passkey"
+msgstr ""
+
+msgid "Loading registered security keys..."
+msgstr ""
+
+msgid "No Passkeys registered yet."
+msgstr ""
+
+msgid ""
+"No Passkeys registered yet. Click Register to add Touch ID or a security "
+"key."
+msgstr ""
+
+msgid "Remove"
+msgstr "إزالة"
+
+msgid ""
+"1. Scan this code with Google Authenticator, Authy or another RFC 6238 "
+"app, or type the key by hand."
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "2. Enter the 6-digit code the app shows"
+msgstr ""
+
+msgid "Turn on 2FA"
+msgstr ""
+
+msgid "Save your recovery codes"
+msgstr ""
+
+msgid ""
+"Each code works once if you lose your phone. They are shown only now; "
+"store them somewhere safe."
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Back to settings"
+msgstr ""
+
+msgid "Previous fax"
+msgstr "رقم الفاكس السابق"
+
+msgid "Prev"
+msgstr "السابق"
+
+msgid "Next fax"
+msgstr "رقم الفاكس التالي"
+
+msgid "Rotate fax"
+msgstr "تدوير الفاكس"
+
+#, python-format
+msgid "Invalid fax number: %(number)s"
+msgstr ""
+
+msgid "Address book entry saved."
+msgstr ""
+
+msgid "Please enter a valid fax number"
+msgstr ""
+
+msgid "You are not allowed to delete address book entries."
+msgstr ""
+
+msgid "You are not allowed to delete contacts."
+msgstr ""
+
+msgid "This modem already exists"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Cover page template removed successfully"
+msgstr ""
+
+msgid "Failed to remove cover page template"
+msgstr ""
+
+msgid "Failed to update cover page template"
+msgstr ""
+
+msgid "Cover page template registered successfully"
+msgstr ""
+
+msgid "Title and File are required"
+msgstr ""
+
+msgid "The company does not exist."
+msgstr ""
+
+msgid "The company and its fax numbers were deleted."
+msgstr ""
+
+msgid "Please enter a valid e-mail address."
+msgstr "الرجاء إدخال عنوان بريد إلكتروني صحيح."
+
+msgid "Fax to Email settings saved"
+msgstr ""
+
+msgid "The system is rebooting. Please wait..."
+msgstr ""
+
+msgid "The system is shutting down. Please wait..."
+msgstr ""
+
+msgid "The command could not be run"
+msgstr ""
+
+msgid "There is no fax archive folder to download."
+msgstr ""
+
+msgid "The database dump could not be made"
+msgstr ""
+
+msgid "Access denied. Superadmin permission required."
+msgstr ""
+
+msgid "SMTP Gateway settings saved successfully."
+msgstr ""
+
+msgid "Printer name and host are required."
+msgstr ""
+
+msgid "Network printer registered successfully."
+msgstr ""
+
+msgid "Printer deleted successfully."
+msgstr ""
+
+msgid "Lifecycle policy saved successfully."
+msgstr ""
+
+msgid "Cloud storage configuration saved successfully."
+msgstr ""
+
+msgid "SAML 2.0 configuration saved successfully."
+msgstr ""
+
+msgid "Catch All"
+msgstr "القبض على جميع"
+
+msgid "Never"
+msgstr ""
+
+msgid "Every 3 Months"
+msgstr ""
+
+msgid "Every 6 Months"
+msgstr ""
+
+msgid "You must enter a username"
+msgstr "يجب إدخال اسم المستخدم"
+
+msgid "Non-alphanumeric characters are not allowed in username."
+msgstr "غير أحرف أبجدية رقمية لا يسمح في اسم المستخدم."
+
+#, python-format
+msgid ""
+"Hello %(name)s,\n"
+"\n"
+"This email contains your username and password to log into NamiFAX "
+"(%(url)s)\n"
+"\n"
+"Username - %(username)s\n"
+"Password - %(password)s\n"
+"\n"
+"Please do not respond to this message as it is automatically generated "
+"and is for information purposes only"
+msgstr ""
+
+msgid "New User Details"
+msgstr "تفاصيل مستخدم جديد"
+
+msgid "The user does not exist."
+msgstr ""
+
+msgid "You cannot delete your own account."
+msgstr ""
+
+msgid "You cannot delete the last superuser."
+msgstr ""
+
+msgid "Please enter a valid number."
+msgstr ""
+
+msgid "Both sent and received faxes"
+msgstr "كل الفاكسات المرسلة والواردة"
+
+msgid "Only sent faxes"
+msgstr "فقط الفاكسات المرسلة"
+
+msgid "Only received faxes"
+msgstr "فقط الفاكسات الواردة"
+
+msgid "Account is disabled"
+msgstr ""
+
+#, python-format
+msgid "Too many failed attempts. Try again in %(minutes)d minutes."
+msgstr ""
+
+msgid "Invalid or expired verification code."
+msgstr ""
+
+#, python-format
+msgid ""
+"The user account %(user)s has this email associated with it.  A web user "
+"from %(ip)s has just requested that a new password be sent.\n"
+"\n"
+"Your New Password is: %(password)s\n"
+"\n"
+"If this was an error just login with your new password and then change "
+"your password to what you would like it to be."
+msgstr ""
+"حساب المستخدم %(user)s مرتبطة بهذا البريد الالكتروني . A web user from "
+"%(ip)s has just requested that a new password be sent. كلمة السر الجديدة "
+"هي: %(password)s اذا كان هذا مجرد خطأ في تسجيل الدخول وكلمة المرور "
+"الجديدة ثم تغيير كلمة السر الخاصة بك الى ما تريد أن تكون."
+
+msgid "Email failed to send"
+msgstr "فشل إرسال البريد الإلكتروني"
+
+msgid "Fax Contacts"
+msgstr ""
+
+msgid "Email Contacts"
+msgstr ""
+
+msgid "The fax document was not found."
+msgstr ""
+
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+msgid "Invalid job number."
+msgstr ""
+
+msgid "Any Available Line (Auto)"
+msgstr "أي خط متاح (تلقائي)"
+
+msgid "You may not use this line."
+msgstr ""
+
+msgid "Your fax has been successfully queued to be faxed."
+msgstr ""
+
+msgid "Job"
+msgstr ""
+
+msgid "The code is not valid."
+msgstr ""
+
+msgid "The code did not match. Check the time on your phone and try again."
+msgstr ""
+
+msgid "The password is not correct."
+msgstr ""
+
+msgid "Add a note"
+msgstr "اضف ملاحظة"
+
+msgid "Account active"
+msgstr "حساب نشط"
+
+msgid "The cover page was updated"
+msgstr ""
+
+msgid "The modem was created"
+msgstr "تم انشاء مودم"
+
+msgid "The modem was deleted"
+msgstr "تم حذف مودم"
+
+msgid "The modem was updated"
+msgstr "تم تحديث مودم"
+
+msgid "Archive - show"
+msgstr ""
+
+msgid "Inbox - show"
+msgstr ""
+
+msgid "Assign a company name"
+msgstr "تعين اسم الشركة"
+
+msgid "You must enter a company name"
+msgstr "يجب ادخال اسم الشركة"
+
+msgid "Contact details saved"
+msgstr "تم حفظ تفاصيل الاتصال"
+
+msgid "Remove entries"
+msgstr "ازالة محتوى"
+
+msgid "Save list name"
+msgstr "حفظ قائمة الاسماء"
+
+msgid "The email failed to send."
+msgstr "فشل البريد الالكتروني بالارسال"
+
+msgid "The email was sent successfully."
+msgstr "تم إرسال البريد الإلكتروني بنجاح."
+
+msgid "Destination fax numbers"
+msgstr "أرقام الفاكسات المراد الارسال اليها"
+
+msgid "You must enter an alias"
+msgstr "يجب إدخال اسم مستعار"
+
+msgid "You must enter a device name"
+msgstr "يجب إدخال اسم الجهاز"
+
+msgid "Modify Job"
+msgstr "تعديل وظائف"
+
+msgid "You must enter a name."
+msgstr "يجب عليك إدخال اسم."
+
+msgid "Notify on requeue"
+msgstr "ابلاغ لأعادة الارسال"
+
+msgid "Forward fax via email"
+msgstr "ارسال الفاكس عبر البريد الإلكتروني"
+
+msgid "To person"
+msgstr "الى شخص"
+
+msgid "User can delete faxes"
+msgstr "يمكن للمستخدم حذف الفاكسات"
+
+msgid "User settings have been saved."
+msgstr "تم حفظ إعدادات ألمستخدم ."
+
+msgid "Select All Faxes"
+msgstr "تحديد الكل"
+
+#~ msgid "High"
+#~ msgstr "High"
+
+#~ msgid "Configure corporate contact identity and transmission routing defaults."
+#~ msgstr "تكوين هوية جهة اتصال الشركة والإعدادات الافتراضية لتوجيه الإرسال."
+
+#~ msgid "Primary Company Profile"
+#~ msgstr "الملف التعريفي الأساسي للشركة"
+
+#~ msgid "Recipient Contact & Physical Address"
+#~ msgstr "جهة اتصال المستلم والعنوان الفعلي"
+
+#~ msgid "City / Postal Region"
+#~ msgstr "المدينة / المنطقة البريدية"
+
+#~ msgid "Category Tag"
+#~ msgstr "وسم الفئة"
+
+#~ msgid "General"
+#~ msgstr "Normal"
+
+#~ msgid "Invoices & Billing"
+#~ msgstr "الفواتير والمدفوعات"
+
+#~ msgid "Legal"
+#~ msgstr "قانوني"
+
+#~ msgid "Description / Internal Notes"
+#~ msgstr "الوصف / ملاحظات داخلية"
+
+#~ msgid "Edit Forwarding Rule"
+#~ msgstr "تعديل قاعدة إعادة التوجيه"
+
+#~ msgid "Add Forwarding Rule"
+#~ msgstr "إضافة قاعدة إعادة التوجيه"
+
+#~ msgid ""
+#~ "Please enter your registered username or"
+#~ " email address below. Password reset "
+#~ "instructions will be dispatched to your"
+#~ " account email address."
+#~ msgstr ""
+#~ "يرجى إدخال اسم المستخدم المسجل أو "
+#~ "عنوان البريد الإلكتروني أدناه. سيتم "
+#~ "إرسال تعليمات إعادة تعيين كلمة المرور"
+#~ " إلى عنوان بريدك الإلكتروني."
+
+#~ msgid "Username or Email Address"
+#~ msgstr "اسم المستخدم أو عنوان البريد الإلكتروني"
+
+#~ msgid "Reset Password"
+#~ msgstr ""
+#~ "الرجاء إدخال عنوان البريد الإلكتروني "
+#~ "الخاص بك ثم اضغط على زر ارسال "
+#~ "كلمة المرور.  ستتلقى كلمة المرور الجديدة"
+#~ " بعد قليل.  استخدمها لتسجيل الدخول فى"
+#~ " موقعنا"
+
+#~ msgid "Standard (Default)"
+#~ msgstr "قياسي (افتراضي)"
+
+#~ msgid "Urgent"
+#~ msgstr "عاجل"
+
+#~ msgid "Confidential"
+#~ msgstr "سري"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Low"
+#~ msgstr "Low"
+
+#~ msgid "High (Urgent)"
+#~ msgstr "عالية (عاجل)"
+
+#~ msgid "Reply to Fax"
+#~ msgstr "الرد على فاكس"
+
+#~ msgid "Dispatch quick reply transmission to originating sender"
+#~ msgstr "إرسال رد سريع إلى المرسل الأصلي"
+
+#~ msgid "Regarding (Subject)"
+#~ msgstr "بخصوص (الموضوع)"
+
+#~ msgid "Comments"
+#~ msgstr "مُلَاحَظَات"
+
+#~ msgid "Destination"
+#~ msgstr "رقم الفاكس"
+
+#~ msgid "Queued"
+#~ msgstr "في قائمة الانتظار"
+
+#~ msgid "Reason"
+#~ msgstr "السبب"
+
+#~ msgid "To send to multiple recipients at once, separate numbers with a comma."
+#~ msgstr "للإرسال إلى مستلمين متعددين في وقت واحد، افصل بين الأرقام بفاصلة."
+
+#~ msgid "Save Modem"
+#~ msgstr "Fax Modems"
+
+#~ msgid "Configure User:"
+#~ msgstr "تكوين المستخدم:"
+
+#~ msgid "recipient@example.com (comma separated)"
+#~ msgstr ""
+
+#~ msgid "NamiFAX Transmission Document"
+#~ msgstr ""
+
+#~ msgid "Please find the attached facsimile document."
+#~ msgstr ""
+
+#~ msgid "results"
+#~ msgstr "Reset"
+
+#~ msgid "result"
+#~ msgstr "Reset"
+
+#~ msgid "Keyword"
+#~ msgstr "Keyword"
+
+#~ msgid "Invoices / Orders"
+#~ msgstr "الفواتير / الطلبات"
+
+#~ msgid "Legal / Contracts"
+#~ msgstr "يتصل بـ"
+
+#~ msgid "From Date"
+#~ msgstr "تدوير الفاكس"
+
+#~ msgid "To Date"
+#~ msgstr "تدوير الفاكس"
+
+#~ msgid "Sent & Received"
+#~ msgstr "المرسلة والمستلمة"
+
+#~ msgid "Received only"
+#~ msgstr "المستلمة فقط"
+
+#~ msgid "Sent only"
+#~ msgstr "المرسلة فقط"
+
+#~ msgid "Results"
+#~ msgstr "Reset"
+
+#~ msgid "records"
+#~ msgstr "سجلات"
+
+#~ msgid "record"
+#~ msgstr "سجل"
+
+#~ msgid "No results found"
+#~ msgstr "لم يتم العثور على نتائج"
+
+#~ msgid "Try adjusting your search terms or date range."
+#~ msgstr "حاول تعديل مصطلحات البحث أو النطاق الزمني."
+
+#~ msgid "Search the Archive"
+#~ msgstr "البحث في الأرشيف"
+
+#~ msgid "Enter a keyword or filter above and click Search to find fax records."
+#~ msgstr ""
+#~ "أدخل كلمة مفتاحية أو عامل تصفية "
+#~ "أعلاه وانقر فوق بحث للعثور على "
+#~ "سجلات الفاكس."
+
+#~ msgid "Showing"
+#~ msgstr "عرض"
+
+#~ msgid "of"
+#~ msgstr "من"
+
+#~ msgid "Fax Viewer"
+#~ msgstr "عارض الفاكس"
+
+#~ msgid "Page 1 of"
+#~ msgstr "الصفحة 1 من"
+
+#~ msgid "FROM:"
+#~ msgstr "من:"
+
+#~ msgid "DATE:"
+#~ msgstr "التاريخ:"
+
+#~ msgid "DEVICE:"
+#~ msgstr "الجهاز:"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "TIFF"
+#~ msgstr "TIFF"
+
+#~ msgid "Total"
+#~ msgstr "الإجمالي"
+
+#~ msgid "Incoming Transmission"
+#~ msgstr "إرسال وارد"
+
+#~ msgid "FACSIMILE TRANSMISSION"
+#~ msgstr "إرسال الفاكس"
+
+#~ msgid "Date Received:"
+#~ msgstr "تاريخ الاستلام:"
+
+#~ msgid "Originating Station:"
+#~ msgstr "محطة الإرسال:"
+
+#~ msgid "PORT"
+#~ msgstr "الأولوية"
+
+#~ msgid "High-Resolution Raster Preview"
+#~ msgstr "معاينة نقطية عالية الدقة"
+
+#~ msgid "Device Line:"
+#~ msgstr "خط الجهاز:"
+
+#~ msgid "Download Original Document"
+#~ msgstr "تنزيل المستند الأصلي"
+
+#~ msgid "NamiFAX Enterprise Facsimile Engine"
+#~ msgstr "محرك الفاكس المؤسسي NamiFAX"
+
+#~ msgid "Archive ID:"
+#~ msgstr "ارشيف"
+
+#~ msgid "Add contact name or fax number..."
+#~ msgstr ""
+
+#~ msgid "Delete List"
+#~ msgstr "قائمة المحذوفين"
+
+#~ msgid "Save Changes"
+#~ msgstr "Cover Pages"
+
+#~ msgid "Supported: PDF, TIFF, PostScript, TXT · Max 10 MB"
+#~ msgstr "الملفات المدعومة: PDF, TIFF, PostScript, TXT · الحد الأقصى 10 ميغابايت"
+
+#~ msgid "Auto-select recommended"
+#~ msgstr "يوصى بالتحديد التلقائي"
+
+#~ msgid "Status:"
+#~ msgstr "الحالة:"
+
+#~ msgid "Transmitted Successfully (OK)"
+#~ msgstr "تم الإرسال بنجاح (OK)"
+

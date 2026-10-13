@@ -1,0 +1,26 @@
+NamiFAX third-party and derived material
+========================================
+
+NamiFAX is a re-implementation of AvantFAX 3 (David D. Mimms, Jr.,
+http://www.avantfax.com), which is licensed under the GNU General Public
+License, version 2 (COPYING.txt).
+
+The following material in this repository comes from AvantFAX and remains
+under the GNU General Public License, version 2:
+
+  src/namifax/static/images/*        all 51 files are byte-for-byte copies of the
+                                     AvantFAX images (icons by Silvestre Herrera;
+                                     the AvantFAX logo is not covered by the
+                                     icon license)
+  src/namifax/locale/*/              translations that were carried over from the
+                                     AvantFAX language files (includes/langs/*.php)
+  tests/fixtures/legacy_sql/*        the AvantFAX installation SQL (create_tables.sql,
+                                     db-update-334.sql)
+  CONTRIBUTORS.txt                   the AvantFAX contributors list, unchanged
+
+Everything else (the Python code, templates, tests and documents written for
+NamiFAX) is under the BSD 3-Clause License in LICENSE.
+
+This notice records where the material came from. It is not legal advice: whether
+code that was ported from the AvantFAX PHP sources may be distributed under a
+license other than the GPL has not been reviewed by a lawyer.

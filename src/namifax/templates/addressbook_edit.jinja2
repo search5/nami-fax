@@ -1,0 +1,182 @@
+{% extends "layout.jinja2" %}
+
+{% block title %}NamiFAX - Address Book{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto space-y-6">
+
+  <!-- Header & Breadcrumbs -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-700 shadow-2xs">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-slate-900 tracking-tight">
+          {% if company.id %}{{ _('Edit Company') }} - {{ company.company }}{% else %}{{ _('Add New Company') }}{% endif %}
+        </h2>
+        <p class="text-xs text-slate-500">{{ _('Configure the company and every fax number it uses.') }}</p>
+      </div>
+    </div>
+    <div class="flex items-center space-x-2">
+      <a href="/addressbook" class="px-3.5 py-1.5 bg-white hover:bg-slate-50 text-slate-700 rounded-lg text-xs font-semibold border border-slate-300 shadow-2xs transition">
+        &larr; {{ _('Back to Contacts') }}
+      </a>
+    </div>
+  </div>
+
+  {% if error %}<div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-700 text-xs">{{ error }}</div>{% endif %}
+  {% if message %}<div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-700 text-xs">{{ message }}</div>{% endif %}
+
+  {% if not company.id %}
+  <form action="/upload/faxcontacts" method="post" enctype="multipart/form-data" class="bg-white border border-slate-200/90 rounded-xl p-4 shadow-xs flex flex-wrap items-center gap-3 text-xs">
+    <span class="font-semibold text-slate-700">{{ _('Upload contacts file (vCard)') }}</span>
+    <select name="catid" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs bg-white w-auto">
+      <option value=""></option>
+      {% for cid, cname in categories %}<option value="{{ cid }}">{{ cname }}</option>{% endfor %}
+    </select>
+    <input type="file" name="upload" accept=".vcf,text/vcard,text/x-vcard,text/plain" class="w-full border border-slate-300 rounded-lg px-3 py-1.5 text-xs bg-white flex-1 min-w-[12rem]" />
+    <input type="hidden" name="_submit_check" value="1" />
+    <button type="submit" class="px-4 py-1.5 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-semibold transition">{{ _('Upload') }}</button>
+  </form>
+  {% endif %}
+
+  <form action="/addressbook/edit" method="post" class="space-y-6 text-xs">
+    {% if company.id %}<input type="hidden" name="abook_id" value="{{ company.id }}" />{% endif %}
+    <input type="hidden" name="_submit_check" value="1" />
+
+    <div class="bg-white border border-slate-200/90 rounded-xl p-5 shadow-xs space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-100 pb-3">
+        <span class="w-2 h-2 rounded-full bg-sky-600"></span>
+        <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider">{{ _('Company') }}</h3>
+      </div>
+      <div>
+        <label for="company" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Company Name') }} *</label>
+        <input type="text" name="company" id="company" value="{{ company.company or '' }}" required class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" placeholder="{{ _('e.g. Acme Corporation') }}" />
+      </div>
+    </div>
+
+    {% for n in numbers %}
+    <div class="bg-white border border-slate-200/90 rounded-xl p-5 shadow-xs space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-100 pb-3">
+        <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+        <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider">{{ _('Fax Number') }} {{ n.faxnumber }}</h3>
+        <span class="text-[11px] text-slate-400">{{ _('Clear the number to remove it.') }}</span>
+      </div>
+      <input type="hidden" name="abookfax_id" value="{{ n.abookfax_id }}" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="faxnumber" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Fax Number') }}</label>
+          <input type="text" name="faxnumber" id="faxnumber" value="{{ n.faxnumber or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 font-mono text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="description" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Description') }}</label>
+          <input type="text" name="description" id="description" value="{{ n.description or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="faxcatid" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Category') }}</label>
+          <select name="faxcatid" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition">
+            <option value=""></option>
+            {% for cid, cname in categories %}<option value="{{ cid }}" {% if n.faxcatid == cid %}selected{% endif %}>{{ cname }}</option>{% endfor %}
+          </select>
+        </div>
+        <div>
+          <label for="to_person" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('To person') }}</label>
+          <input type="text" name="to_person" id="to_person" value="{{ n.to_person or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="to_location" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Location') }}</label>
+          <input type="text" name="to_location" id="to_location" value="{{ n.to_location or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="to_voicenumber" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Voice Telephone') }}</label>
+          <input type="text" name="to_voicenumber" id="to_voicenumber" value="{{ n.to_voicenumber or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="to_address" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Street Address') }}</label>
+          <input type="text" name="to_address" id="to_address" value="{{ n.to_address or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="to_zip" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Zip / Postal Code') }}</label>
+          <input type="text" name="to_zip" id="to_zip" value="{{ n.to_zip or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="to_city" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('City') }}</label>
+          <input type="text" name="to_city" id="to_city" value="{{ n.to_city or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="bg-white border border-slate-200/90 rounded-xl p-5 shadow-xs space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-100 pb-3">
+        <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+        <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider">{% if numbers %}{{ _('Add a Fax Number') }}{% else %}{{ _('First Fax Number') }}{% endif %}</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="new_faxnum" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Fax Number') }} *</label>
+          <input type="text" name="new_faxnum" id="new_faxnum" value="{{ values.new_faxnum or '' }}" {% if not company.id %}required{% endif %} class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 font-mono text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="new_desc" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Description') }}</label>
+          <input type="text" name="new_desc" id="new_desc" value="{{ values.new_desc or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="newfaxcatid" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Category') }}</label>
+          <select name="newfaxcatid" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition">
+            <option value=""></option>
+            {% for cid, cname in categories %}<option value="{{ cid }}" {% if values.newfaxcatid == cid|string %}selected{% endif %}>{{ cname }}</option>{% endfor %}
+          </select>
+        </div>
+        <div>
+          <label for="new_to_person" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('To person') }}</label>
+          <input type="text" name="new_to_person" id="new_to_person" value="{{ values.new_to_person or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="new_to_location" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Location') }}</label>
+          <input type="text" name="new_to_location" id="new_to_location" value="{{ values.new_to_location or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="new_to_voicenumber" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Voice Telephone') }}</label>
+          <input type="text" name="new_to_voicenumber" id="new_to_voicenumber" value="{{ values.new_to_voicenumber or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="new_to_address" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Street Address') }}</label>
+          <input type="text" name="new_to_address" id="new_to_address" value="{{ values.new_to_address or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="new_to_zip" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Zip / Postal Code') }}</label>
+          <input type="text" name="new_to_zip" id="new_to_zip" value="{{ values.new_to_zip or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+        <div>
+          <label for="new_to_city" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('City') }}</label>
+          <input type="text" name="new_to_city" id="new_to_city" value="{{ values.new_to_city or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-4 border-t border-slate-200">
+      <div class="flex items-center justify-between">
+        <div>
+          {% if company.id and can_del %}
+          <button type="submit" name="delete" value="1" class="px-5 py-2.5 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 rounded-lg font-bold text-xs transition" onclick="return confirm('Are you sure you want to delete this company?');">
+            {{ _('Delete') }}
+          </button>
+          {% endif %}
+        </div>
+        <div class="space-x-3">
+          <a href="/addressbook" class="px-5 py-2.5 bg-slate-100 text-slate-700 rounded-lg font-semibold hover:bg-slate-200 transition">{{ _('Cancel') }}</a>
+          {% if company.id %}
+          <button type="submit" name="save" value="1" class="px-6 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold shadow-2xs transition">{{ _('Save') }}</button>
+          {% else %}
+          <button type="submit" name="create" value="1" class="px-6 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold shadow-2xs transition">{{ _('Save') }}</button>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

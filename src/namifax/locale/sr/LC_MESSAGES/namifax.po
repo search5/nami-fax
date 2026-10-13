@@ -1,0 +1,2604 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: NamiFAX 4.0.Language: sMIME-Version: 1.Content-Type: "
+"text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-02 00:54+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sr\n"
+"Language-Team: sr <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "Address Book"
+msgstr "E-mail adrese"
+
+msgid "Save frequently used fax numbers for quick access when sending."
+msgstr "Sačuvajte često korišćene brojeve faksa za brz pristup prilikom slanja."
+
+msgid "Company or fax number..."
+msgstr ""
+
+msgid "Search"
+msgstr "Pretraga"
+
+#, fuzzy
+msgid "New Company"
+msgstr "Kompanija"
+
+msgid "Email Book"
+msgstr "E-mail adresar"
+
+msgid "Distribution Lists"
+msgstr "Lista dostave"
+
+#, fuzzy
+msgid "Company / Name"
+msgstr "Kompanija"
+
+msgid "Fax Number"
+msgstr "Broij faksa"
+
+msgid "Email"
+msgstr "Elektronska pošta"
+
+msgid "Actions"
+msgstr "Akcije"
+
+msgid "Send Fax"
+msgstr "Pošalji Fax"
+
+msgid "Edit"
+msgstr "Izmeni"
+
+#, fuzzy
+msgid "No contacts yet"
+msgstr "Kontakti"
+
+msgid "No contacts matched"
+msgstr "Nema podudarnih kontakata"
+
+msgid ""
+"Add contacts to quickly select fax numbers when sending without typing "
+"them every time."
+msgstr ""
+"Dodajte kontakte kako biste brzo izabrali brojeve faksa prilikom slanja "
+"bez ponovnog kucanja."
+
+msgid "Add First Contact"
+msgstr "Dodaj prvi kontakt"
+
+#, fuzzy
+msgid "Edit Company"
+msgstr "Kompanija"
+
+#, fuzzy
+msgid "Add New Company"
+msgstr "Kompanija"
+
+msgid "Configure the company and every fax number it uses."
+msgstr ""
+
+#, fuzzy
+msgid "Back to Contacts"
+msgstr "Kontakti"
+
+msgid "Upload contacts file (vCard)"
+msgstr ""
+
+msgid "Upload"
+msgstr "Otpremi"
+
+msgid "Company"
+msgstr "Kompanija"
+
+#, fuzzy
+msgid "Company Name"
+msgstr "Kompanija"
+
+msgid "e.g. Acme Corporation"
+msgstr ""
+
+msgid "Clear the number to remove it."
+msgstr ""
+
+msgid "Description"
+msgstr "Opis"
+
+msgid "Category"
+msgstr "Kategorija"
+
+msgid "Location"
+msgstr "Lokacija"
+
+msgid "Voice Telephone"
+msgstr "Telefon"
+
+msgid "Street Address"
+msgstr "Ulica i broj"
+
+msgid "Zip / Postal Code"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Add a Fax Number"
+msgstr ""
+
+msgid "First Fax Number"
+msgstr ""
+
+msgid "Delete"
+msgstr "Izbriši"
+
+msgid "Cancel"
+msgstr "Odustani"
+
+msgid "Save"
+msgstr "Sačuvaj"
+
+#, fuzzy
+msgid "Dashboard Overview"
+msgstr "Kontrolna tabla"
+
+#, fuzzy
+msgid "SYSTEM OPERATIONAL"
+msgstr "Sistemske funkcije"
+
+msgid ""
+"Real-time status of fax spools, hardware serial modems, and registered "
+"users"
+msgstr ""
+"Status u realnom vremenu za redove faksa, hardverske serijske modeme i "
+"registrovane korisnike"
+
+msgid "Users"
+msgstr "Korisnici"
+
+msgid "Modems"
+msgstr "Modemi"
+
+#, fuzzy
+msgid "DID Routes"
+msgstr "DID/DTMF grupe ruta"
+
+#, fuzzy
+msgid "Logs"
+msgstr "Odjava"
+
+#, fuzzy
+msgid "Fax Lines"
+msgstr "Fax Modems"
+
+msgid "Hardware Ready"
+msgstr "Hardver spreman"
+
+#, fuzzy
+msgid "Active accounts"
+msgstr "Korisnici"
+
+msgid "Backend Core"
+msgstr "Serversko jezgro"
+
+msgid "unknown"
+msgstr ""
+
+msgid "Scheduler"
+msgstr "Planer"
+
+msgid "Running"
+msgstr "Radi"
+
+#, fuzzy
+msgid "Registered User Accounts"
+msgstr "Korisnici"
+
+msgid "Manage Users"
+msgstr "Upravljanje korisnicima"
+
+msgid "Name"
+msgstr "Ime"
+
+msgid "Username"
+msgstr "korisnički nalog"
+
+msgid "Last Login"
+msgstr "Poslednja prijava"
+
+msgid "Server Status"
+msgstr "Status servera"
+
+msgid "Core"
+msgstr "Jezgro"
+
+msgid "Database Engine"
+msgstr "Sistem baze podataka"
+
+msgid "System Scheduler"
+msgstr "Sistemski planer"
+
+msgid "Configured Modems"
+msgstr "Podešeni modemi"
+
+msgid "Administrator Workflow Guide"
+msgstr "Vodič za administratore"
+
+#, fuzzy
+msgid "Configure Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid ""
+"Route incoming faxes automatically based on recognized Code39 / QR "
+"barcodes"
+msgstr ""
+"Automatski usmeravaj dolazne faksove na osnovu prepoznatih Code39 / QR "
+"bar-kodova"
+
+#, fuzzy
+msgid "New Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode Routing Rules"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode:"
+msgstr "Barcode Routing"
+
+msgid "Contact:"
+msgstr "Kontakt"
+
+msgid "None"
+msgstr "Nijedan"
+
+msgid "Printer:"
+msgstr "Štampač:"
+
+#, fuzzy
+msgid "Edit Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Add Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "EDIT MODE"
+msgstr "Izmeni"
+
+msgid "NEW"
+msgstr "NOVO"
+
+msgid "Barcode"
+msgstr "Barcode"
+
+msgid "Alias"
+msgstr "Alias"
+
+#, fuzzy
+msgid "Contact Email"
+msgstr "Kontakti"
+
+msgid "Printer"
+msgstr "Štampa"
+
+msgid "Fax Categories"
+msgstr "Vidljive faks kategorije"
+
+msgid ""
+"Manage classification tags and archival categories for organizing "
+"transmissions"
+msgstr ""
+"Upravljanje oznakama klasifikacije i arhivskim kategorijama za "
+"organizovanje prenosa"
+
+#, fuzzy
+msgid "New Category"
+msgstr "Vidljive faks kategorije"
+
+#, fuzzy
+msgid "Existing Categories"
+msgstr "Vidljive faks kategorije"
+
+msgid "Edit Category"
+msgstr "Uredi kategoriju"
+
+#, fuzzy
+msgid "Add Category"
+msgstr "Vidljive faks kategorije"
+
+msgid "Category Name"
+msgstr "Ime kategorije"
+
+msgid "e.g. Invoices, Contracts"
+msgstr ""
+
+#, fuzzy
+msgid "Configure Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Manage facsimile PostScript cover page templates and layouts"
+msgstr "Upravljanje PostScript šablonima i izgledom naslovnih strana faksa"
+
+#, fuzzy
+msgid "New Cover Page"
+msgstr "Koristi naslovnu stranicu"
+
+#, fuzzy
+msgid "Available Cover Pages"
+msgstr "Cover Pages"
+
+#, fuzzy
+msgid "Edit Cover Page"
+msgstr "Koristi naslovnu stranicu"
+
+#, fuzzy
+msgid "Add Cover Page"
+msgstr "Koristi naslovnu stranicu"
+
+msgid "Title"
+msgstr "Naslov"
+
+msgid "File"
+msgstr "Datoteka"
+
+msgid "e.g. custom.ps"
+msgstr ""
+
+msgid "Cover Template Studio: Dynamic Tag References"
+msgstr ""
+
+msgid ""
+"Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF"
+" templates. The Cover Studio engine automatically substitutes them during"
+" fax rendering."
+msgstr ""
+
+msgid "Dynamic Configuration"
+msgstr "Dinamička konfiguracija"
+
+msgid ""
+"Manage Caller ID blacklists and transmission rejection rules for modem "
+"devices"
+msgstr ""
+"Upravljanje crnim listama Caller ID-a i pravilima odbijanja prenosa za "
+"modemske uređaje"
+
+msgid "New Rule"
+msgstr "Novo pravilo"
+
+msgid "Blocked Caller IDs"
+msgstr "Blokirani Caller ID brojevi"
+
+msgid "Caller ID:"
+msgstr "Caller ID:"
+
+msgid "All Devices"
+msgstr "Svi uređaji"
+
+msgid "Edit Caller ID Rule"
+msgstr "Uredi pravilo za Caller ID"
+
+msgid "Add Caller ID Rule"
+msgstr "Dodaj pravilo za Caller ID"
+
+msgid "Caller ID"
+msgstr "Caller ID"
+
+msgid "e.g. 5550199 or pattern"
+msgstr ""
+
+msgid "Modem Device"
+msgstr "Modemski uređaj"
+
+#, fuzzy
+msgid "Fax to Email"
+msgstr "Fax Modems"
+
+msgid ""
+"Configure automated inbound fax forwarding and PDF dispatch rules mapped "
+"by company"
+msgstr ""
+"Podesite pravila za automatsko prosleđivanje dolaznih faksova i slanje "
+"PDF-a po kompanijama"
+
+msgid "Add companies in the Address Book"
+msgstr ""
+
+msgid "Company Forwarding Rules"
+msgstr "Pravila prosleđivanja kompanije"
+
+msgid "fax numbers"
+msgstr "Brojevi faksa"
+
+msgid "Email:"
+msgstr "E-mail:"
+
+msgid "Edit Forwarding Rules"
+msgstr ""
+
+msgid "Forwarding Rules"
+msgstr ""
+
+msgid "This company has no fax numbers yet. Add them in the Address Book."
+msgstr ""
+
+msgid ""
+"Select a company on the left to set where the faxes received on each of "
+"its numbers are sent."
+msgstr ""
+
+#, fuzzy
+msgid "Control Panel"
+msgstr "Koristi naslovnu stranicu"
+
+msgid "User Portal"
+msgstr "User Portal"
+
+msgid "Inbox"
+msgstr "Prijem"
+
+#, fuzzy
+msgid "Overview"
+msgstr "Pogledaj Fax"
+
+msgid "Dashboard"
+msgstr "Kontrolna tabla"
+
+msgid "Access Control"
+msgstr "Kontrola pristupa"
+
+msgid "User Accounts"
+msgstr "Korisnici"
+
+msgid "Hardware & Lines"
+msgstr "Hardver i linije"
+
+msgid "Fax Modems"
+msgstr "Fax Modems"
+
+msgid "Network Printers"
+msgstr ""
+
+#, fuzzy
+msgid "Inbound Routing"
+msgstr "DID/DTMF grupe ruta"
+
+msgid "DID Routing"
+msgstr "DID/DTMF grupe ruta"
+
+msgid "Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid "Content & Templates"
+msgstr "Sadržaj i šabloni"
+
+msgid "Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Security & System"
+msgstr "Bezbednost i sistem"
+
+msgid "Blacklist (DynConf)"
+msgstr "Blacklist (DynConf)"
+
+msgid "System Audit Logs"
+msgstr "System Audit Logs"
+
+msgid "System Functions"
+msgstr "Sistemske funkcije"
+
+msgid "SMTP Gateway"
+msgstr ""
+
+msgid "Storage & Cloud"
+msgstr ""
+
+msgid "SAML 2.0 SSO"
+msgstr ""
+
+msgid "Logout"
+msgstr "Odjava"
+
+msgid "Admin Control Panel"
+msgstr "Administratorski kontrolni panel"
+
+msgid "Appliance Engine Online"
+msgstr "Sistem uređaja je na mreži"
+
+msgid ""
+"Configure Modems hardware devices, physical serial ports, and print-"
+"forwarding rules"
+msgstr ""
+"Podešavanje hardverskih modema, fizičkih serijskih portova i pravila "
+"prosleđivanja na štampu"
+
+#, fuzzy
+msgid "Configure Modems"
+msgstr "Fax Modems"
+
+msgid "Active Modem Lines"
+msgstr "Aktivne modemske linije"
+
+msgid "Device"
+msgstr "Uređaj"
+
+msgid "Contact"
+msgstr "Kontakt"
+
+msgid "Status"
+msgstr "Status"
+
+#, fuzzy
+msgid "Edit Modem"
+msgstr "Fax Modems"
+
+msgid "Configure Modems Device"
+msgstr "Podešavanje modemskog uređaja"
+
+msgid "e.g. ttyS0"
+msgstr ""
+
+msgid "e.g. Main Inbound Line"
+msgstr ""
+
+msgid "Are you sure you want to delete this modem?"
+msgstr ""
+
+msgid "Create"
+msgstr "Kreiraj"
+
+msgid "Appliance Note:"
+msgstr "Napomena uređaja:"
+
+msgid ""
+"Modems configured here must correspond to physical RS-232 serial devices,"
+" USB modems, or virtual IAX modems recognized by the underlying HylaFAX "
+"server."
+msgstr ""
+"Ovde podešeni modemi moraju odgovarati fizičkim RS-232 serijskim "
+"uređajima, USB modemima ili virtuelnim IAX modemima koje prepoznaje "
+"HylaFAX server."
+
+msgid "Direct RAW socket & IPP network printing dispatch for received faxes"
+msgstr ""
+
+msgid "Add Network Printer"
+msgstr ""
+
+msgid "Printer Name"
+msgstr ""
+
+msgid "e.g. Office HP LaserJet"
+msgstr ""
+
+msgid "Protocol"
+msgstr ""
+
+msgid "Host / IP"
+msgstr ""
+
+#, fuzzy
+msgid "Port"
+msgstr "Prioritet"
+
+msgid "Queue Name (Optional)"
+msgstr ""
+
+msgid "2nd Floor Accounting Printer"
+msgstr ""
+
+msgid "Register Printer"
+msgstr ""
+
+msgid "Configured Printers"
+msgstr ""
+
+msgid "No network printers configured yet. Add one using the form on the left."
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+msgid "Test Print"
+msgstr ""
+
+msgid "Are you sure you want to delete this printer?"
+msgstr ""
+
+#, fuzzy
+msgid "Configure DID Routing"
+msgstr "DID/DTMF grupe ruta"
+
+msgid ""
+"Route incoming faxes by Direct Inward Dialing (DID) extension to specific"
+" email boxes or printers"
+msgstr ""
+"Usmeravanje dolaznih faksova putem DID lokala na određene e-mail "
+"sandučiće ili štampače"
+
+#, fuzzy
+msgid "New DID Route"
+msgstr "DID/DTMF grupe ruta"
+
+#, fuzzy
+msgid "Active DID Routing Rules"
+msgstr "DID/DTMF grupe ruta"
+
+msgid "Route Code"
+msgstr "Kod usmeravanja"
+
+msgid "Action"
+msgstr "Akcija"
+
+msgid "Configure Routing Rule"
+msgstr "Podesi pravilo usmeravanja"
+
+msgid "e.g. 1000"
+msgstr ""
+
+msgid "e.g. Sales Direct Line"
+msgstr ""
+
+msgid "-- None --"
+msgstr "-- Nijedan --"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid ""
+"DID (Direct Inward Dialing) routing automatically redirects incoming "
+"transmissions matching extension patterns directly to mapped operator "
+"inboxes or physical printers."
+msgstr ""
+"DID (Direct Inward Dialing) usmeravanje automatski preusmerava dolazne "
+"prenose koji odgovaraju šablonu lokala direktno u sandučiće operatera ili"
+" na fizičke štampače."
+
+msgid "SAML 2.0 Enterprise SSO"
+msgstr ""
+
+msgid ""
+"Single Sign-On integration with Okta, Microsoft Entra ID (Azure AD), "
+"Google Workspace & Keycloak"
+msgstr ""
+
+msgid "Download SP Metadata XML"
+msgstr ""
+
+msgid "Identity Provider (IdP) Settings"
+msgstr ""
+
+msgid "Enable SAML 2.0 Single Sign-On"
+msgstr ""
+
+msgid "Shows \"SAML 2.0 Enterprise SSO\" login option on login page"
+msgstr ""
+
+msgid "IdP Entity ID / Issuer"
+msgstr ""
+
+msgid "IdP Single Sign-On Service URL (HTTP-Redirect / POST)"
+msgstr ""
+
+msgid "IdP Public X.509 Certificate (PEM)"
+msgstr ""
+
+msgid "Just-in-Time (JIT) Provisioning"
+msgstr ""
+
+msgid "Auto-create account on first login"
+msgstr ""
+
+msgid "Default Role for JIT Users"
+msgstr ""
+
+msgid "Save SAML Configuration"
+msgstr ""
+
+msgid "NamiFAX SP Endpoints"
+msgstr ""
+
+msgid ""
+"Copy these endpoints into your Identity Provider (Azure AD, Okta, Google)"
+" console:"
+msgstr ""
+
+msgid "Assertion Consumer Service (ACS) URL"
+msgstr ""
+
+msgid "SP Entity ID / Metadata URL"
+msgstr ""
+
+msgid "NameID Format"
+msgstr ""
+
+msgid "External SMTP Gateway"
+msgstr ""
+
+msgid ""
+"Configure external mail delivery server for inbound fax notifications and"
+" user alerts"
+msgstr ""
+
+msgid "Diagnostics Result"
+msgstr ""
+
+msgid "Server Connection & Security"
+msgstr ""
+
+msgid "SMTP Host / Server"
+msgstr ""
+
+msgid "Encryption Protocol"
+msgstr ""
+
+msgid "None (Plain)"
+msgstr ""
+
+msgid "STARTTLS (587)"
+msgstr ""
+
+msgid "SSL / TLS (465)"
+msgstr ""
+
+msgid "Requires SMTP Authentication"
+msgstr ""
+
+#, fuzzy
+msgid "Username / Login"
+msgstr "korisnički nalog"
+
+#, fuzzy
+msgid "Password / App Key"
+msgstr "lozinka"
+
+msgid "Default Sender Profile & Signatures"
+msgstr ""
+
+#, fuzzy
+msgid "From Email Address"
+msgstr "E-mail adresa"
+
+#, fuzzy
+msgid "From Display Name"
+msgstr "Kompanija"
+
+msgid "NamiFAX Corporate Dispatcher"
+msgstr ""
+
+msgid "Email Signature (Plaintext)"
+msgstr ""
+
+msgid "Sent automatically by NamiFAX Gateway."
+msgstr ""
+
+msgid "Last updated"
+msgstr "Poslednji put ažurirano"
+
+#, fuzzy
+msgid "Save Gateway Settings"
+msgstr "Podešavanja"
+
+msgid "Diagnostic Self-Test"
+msgstr ""
+
+msgid ""
+"Verify server reachability, TLS handshake, credentials and message "
+"dispatch in real time."
+msgstr ""
+
+msgid "Target Recipient Email"
+msgstr ""
+
+#, fuzzy
+msgid "Send Diagnostic Email"
+msgstr "Pošalji Fax"
+
+msgid "Enterprise storage lifecycle policies and S3 / MinIO / GCS cloud backends"
+msgstr ""
+
+msgid "Storage Lifecycle Policies"
+msgstr ""
+
+msgid "Purge Local TIFFs After (Days)"
+msgstr ""
+
+msgid ""
+"Frees local disk space if a PDF version exists. 0 = immediate after "
+"conversion."
+msgstr ""
+
+msgid "Full Fax Retention (Days)"
+msgstr ""
+
+msgid ""
+"Purge entire fax record and archival files after specified days. 0 = keep"
+" forever."
+msgstr ""
+
+msgid "Synchronize remote cloud object deletion on fax purge"
+msgstr ""
+
+msgid "Save Lifecycle Policy"
+msgstr ""
+
+msgid "Cloud Storage Backend"
+msgstr ""
+
+msgid "Storage Provider"
+msgstr ""
+
+msgid "Local Filesystem (Default)"
+msgstr ""
+
+msgid "Endpoint URL (MinIO / S3 Compatible)"
+msgstr ""
+
+msgid "Region"
+msgstr ""
+
+msgid "Bucket Name"
+msgstr ""
+
+msgid "Access Key ID"
+msgstr ""
+
+msgid "Secret Access Key"
+msgstr ""
+
+msgid "Key Prefix"
+msgstr ""
+
+msgid "Save Storage Config"
+msgstr ""
+
+msgid "Test Connection"
+msgstr ""
+
+msgid "Perform maintenance operations, service control, and backups."
+msgstr ""
+"Obavljanje operacija održavanja, kontrole usluga i pravljenja rezervnih "
+"kopija."
+
+msgid "HylaFAX Engine Active"
+msgstr "HylaFAX servis je aktivan"
+
+#, fuzzy
+msgid "Admin Dashboard"
+msgstr "Kontrolna tabla"
+
+msgid "Caution: Appliance Maintenance Operations"
+msgstr "Upozorenje: Operacije održavanja sistema"
+
+msgid ""
+"Restarting or shutting down services will interrupt active fax modem "
+"spooling and disconnect client sessions. Ensure all outbound "
+"transmissions in the modem queue are completed before initiating "
+"maintenance tasks."
+msgstr ""
+"Ponovno pokretanje ili zaustavljanje servisa će prekinuti aktivno slanje "
+"faksova i odjaviti klijentske sesije. Uverite se da su svi odlazni "
+"prenosi u redu završeni pre pokretanja održavanja."
+
+msgid "Daemon Service Control"
+msgstr "Kontrola pozadinskih servisa (demona)"
+
+msgid "Restart HylaFAX and NamiFAX web services, or halt background workers."
+msgstr ""
+"Ponovo pokrenite HylaFAX i NamiFAX veb servise ili zaustavite pozadinske "
+"procese."
+
+msgid "Reboot Services"
+msgstr "Ponovo pokreni servise"
+
+msgid "Shutdown Services"
+msgstr "Zaustavi servise"
+
+msgid "Database & Archive Backup"
+msgstr "Rezervna kopija baze i arhive"
+
+msgid "Download system archives and database snapshots for offsite retention."
+msgstr "Preuzmite sistemske arhive i kopije baze podataka za eksterno čuvanje."
+
+msgid "Download Archive"
+msgstr "Preuzimanje arhive"
+
+msgid "Download Database"
+msgstr "Preuzimanje baze podataka"
+
+msgid "System Logs"
+msgstr "System Logs"
+
+msgid "Audit logs and HylaFAX server operational event traces"
+msgstr "Revizorski zapisi i operativni događaji HylaFAX servera"
+
+msgid "Keywords:"
+msgstr "Ključne reči:"
+
+msgid "Search text..."
+msgstr ""
+
+msgid "Date:"
+msgstr "Datum:"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Log Text"
+msgstr "Tekst dnevnika"
+
+msgid "No system logs found matching criteria."
+msgstr "Nisu pronađeni sistemski zapisi koji odgovaraju kriterijumima."
+
+msgid "Transmissions and server events will be streamed here in real time."
+msgstr "Prenosi i serverski događaji biće prikazani ovde u realnom vremenu."
+
+msgid "Delete User"
+msgstr "Izbriši korisnika"
+
+msgid "Are you sure you want to delete the user"
+msgstr ""
+
+msgid "Manage system operator credentials, access permissions, and route mapping"
+msgstr "Upravljanje nalozima operatera, dozvolama za pristup i mapiranjem ruta"
+
+msgid "Create New User"
+msgstr "Kreiraj novog korisnika"
+
+msgid "Last IP"
+msgstr "Poslednja IP adresa"
+
+msgid "Superuser"
+msgstr "Superkorisnik"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "YES"
+msgstr "Da"
+
+msgid "NO"
+msgstr "Ne"
+
+msgid "users"
+msgstr "Korisnici"
+
+msgid "user"
+msgstr "Korisnik"
+
+msgid "Modify User"
+msgstr "Izmena korisnika"
+
+msgid "New User"
+msgstr "Novi korisnik"
+
+msgid "Full Name"
+msgstr "Puno ime"
+
+msgid "Password"
+msgstr "lozinka"
+
+msgid "Leave empty to keep the current password (a new user is sent a random one)"
+msgstr ""
+
+msgid "Email Address"
+msgstr "E-mail adresa"
+
+msgid "Password expiration cycle"
+msgstr ""
+
+msgid "Language"
+msgstr "Jezik"
+
+msgid "Password can be reused"
+msgstr ""
+
+msgid "My Company"
+msgstr ""
+
+msgid "My Location"
+msgstr ""
+
+msgid "My Voice Number"
+msgstr ""
+
+msgid "My Fax Number"
+msgstr ""
+
+msgid "TSI ID"
+msgstr ""
+
+msgid "Select Cover Page"
+msgstr ""
+
+msgid "New fax sound"
+msgstr ""
+
+msgid "Permissions & Capabilities"
+msgstr "Dozvole i mogućnosti"
+
+msgid "Administrator Console"
+msgstr "Administratorska konzola"
+
+msgid "Superuser Rights"
+msgstr "Prava superkorisnika"
+
+msgid "Send on Any Modem"
+msgstr "Slanje preko bilo kog modema"
+
+msgid "You must first create a DID/DTMF group"
+msgstr ""
+
+msgid "You must first create a modem"
+msgstr ""
+
+#, fuzzy
+msgid "Categories"
+msgstr "Vidljive faks kategorije"
+
+msgid "You must first create a category"
+msgstr ""
+
+#, fuzzy
+msgid "Archive Search"
+msgstr "Arhiviraj"
+
+msgid "Search all sent and received fax records by date, company, or fax number."
+msgstr ""
+"Pretražite sve poslate i primljene faksove po datumu, kompaniji ili broju"
+" faksa."
+
+#, fuzzy
+msgid "Search Filters"
+msgstr "Pretraga"
+
+msgid ""
+"Leave filters empty to search all records. Narrow results by adding more "
+"criteria."
+msgstr ""
+"Ostavite filtere prazne za pretragu svih zapisa. Sužavajte rezultate "
+"dodavanjem više kriterijuma."
+
+msgid "Company search"
+msgstr "Pretraga kompanija"
+
+msgid "Company list"
+msgstr "Lilsta kompanija"
+
+#, fuzzy
+msgid "Fax ID"
+msgstr "Fax Modems"
+
+msgid "e.g. 104"
+msgstr ""
+
+msgid "Keywords"
+msgstr "Kljune reči"
+
+msgid "Company, number, notes..."
+msgstr ""
+
+#, fuzzy
+msgid "All Categories"
+msgstr "Vidljive faks kategorije"
+
+msgid "User"
+msgstr "Korisnik"
+
+msgid "Start Date"
+msgstr "Početni datum"
+
+msgid "End Date"
+msgstr "Krajnji datum"
+
+#, fuzzy
+msgid "Direction"
+msgstr "DID/DTMF grupe ruta"
+
+#, python-format
+msgid "Total %(n)d results found."
+msgstr "Ukupno %(n)d rezultata pronađeno."
+
+msgid "Pages"
+msgstr "Strane"
+
+msgid "Download PDF"
+msgstr "Preuzmi PDF"
+
+msgid "Reply to fax"
+msgstr "Odgovori na FAX"
+
+#, fuzzy
+msgid "Re-send"
+msgstr "Pošalji"
+
+msgid "Email PDF"
+msgstr ""
+
+msgid "Add note to fax"
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid "Delete fax"
+msgstr ""
+
+msgid "Select"
+msgstr "Izaberi"
+
+msgid "Unknown"
+msgstr ""
+
+#, fuzzy
+msgid "Received"
+msgstr "Arhiviraj"
+
+msgid "Sent"
+msgstr ""
+
+msgid "No results were found"
+msgstr "Nisu pronađeni rezultati"
+
+msgid "Reset filters"
+msgstr "Resetuj filtere"
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr "Sledeća"
+
+msgid "Name the sender"
+msgstr ""
+
+msgid "Select Contact Record"
+msgstr "Izaberi zapis kontakta"
+
+msgid "Or type a new company name"
+msgstr ""
+
+msgid "Delete selected faxes?"
+msgstr ""
+
+msgid "faxes"
+msgstr "faksovi"
+
+msgid "No contacts found"
+msgstr ""
+
+msgid "Add"
+msgstr "Dodaj"
+
+msgid "Close"
+msgstr "Zatvori"
+
+msgid "Organize recipient groups for mass fax broadcasting and notifications."
+msgstr "Organizujte grupe primalaca za masovno emitovanje faksova i obaveštenja."
+
+msgid "Create List"
+msgstr "Kreiraj listu"
+
+msgid "Saved Distribution Lists"
+msgstr "Sačuvane distributivne liste"
+
+msgid "members"
+msgstr "članova"
+
+msgid "Group Members & Settings"
+msgstr "Članovi grupe i podešavanja"
+
+msgid "Create New Distribution List"
+msgstr "Kreiraj novu distributivnu listu"
+
+msgid "List Name"
+msgstr "Lista imena"
+
+msgid "e.g. Executive Sales Team"
+msgstr ""
+
+msgid "Group Members (Contacts & Fax Numbers)"
+msgstr "Članovi grupe (Kontakti i brojevi faksa)"
+
+#, fuzzy
+msgid "contacts assigned"
+msgstr "Kontakti"
+
+msgid "No contacts assigned to this list yet."
+msgstr "Još uvek nema kontakata dodeljenih ovoj listi."
+
+msgid "Add Member"
+msgstr "Dodaj člana"
+
+msgid "Delete this distribution list?"
+msgstr "Izbriši ovu listu dostave?"
+
+msgid "Edit Distribution List"
+msgstr "Uredi distributivnu listu"
+
+msgid "Create Distribution List"
+msgstr "Kreiraj distributivnu listu"
+
+msgid "Configure broadcast list parameters and recipient group members."
+msgstr "Podesite parametre liste za emitovanje i članove grupe primalaca."
+
+msgid "Back to Lists"
+msgstr "Nazad na liste"
+
+msgid "Distribution List Profile"
+msgstr "Profil distributivne liste"
+
+msgid "e.g. Finance Operations"
+msgstr ""
+
+msgid "Enrolled Members"
+msgstr "Učlanjeni kontakti"
+
+msgid "List ID:"
+msgstr "ID liste:"
+
+msgid "No contacts in this list."
+msgstr "Nema kontakata na ovoj listi."
+
+msgid "Add contacts to the list"
+msgstr ""
+
+msgid "Changes saved"
+msgstr "Promene sačuvane"
+
+msgid "Back"
+msgstr "Nazad"
+
+#, fuzzy
+msgid "Email Address Book"
+msgstr "E-mail adrese"
+
+msgid "Manage email recipients, transmission routing, and contacts directory."
+msgstr "Upravljanje e-mail primaocima, usmeravanjem prenosa i adresarom."
+
+#, fuzzy
+msgid "New Contact"
+msgstr "Kontakti"
+
+msgid "Contacts"
+msgstr "Kontakti"
+
+msgid "recipients"
+msgstr "primalaca"
+
+#, fuzzy
+msgid "Contact Name"
+msgstr "Kontakti"
+
+msgid "Company Affiliation"
+msgstr "Pripadnost kompaniji"
+
+msgid ""
+"No email contacts found in the directory. Click \"+ New Contact\" to "
+"register one."
+msgstr ""
+"U adresaru nisu pronađeni e-mail kontakti. Kliknite na \"+ New Contact\" "
+"da biste registrovali novi."
+
+msgid "Email Book - Edit Email Contact"
+msgstr "E-mail adresar - Uredi e-mail kontakt"
+
+msgid "Manage contact information and company affiliation in Email Book."
+msgstr "Upravljanje kontaktnim podacima i pripadnošću kompaniji u E-mail adresaru."
+
+msgid "Back to Email Book"
+msgstr "Nazad na E-mail adresar"
+
+msgid "Contact Profile Details"
+msgstr "Detalji profila kontakta"
+
+msgid "John Doe"
+msgstr ""
+
+msgid "New Destination"
+msgstr "Nova destinacija"
+
+msgid "Priority"
+msgstr "Prioritet"
+
+msgid "Modem / Device"
+msgstr ""
+
+msgid "Number of tries"
+msgstr "Broj pokušaja"
+
+msgid "Expire after"
+msgstr ""
+
+msgid "Now"
+msgstr "Sad"
+
+msgid "Minutes"
+msgstr "Minuti"
+
+msgid "Hours"
+msgstr "Sati"
+
+msgid "Days"
+msgstr "Dana"
+
+msgid "Schedule Send Time"
+msgstr ""
+
+#, fuzzy
+msgid "Lost Password"
+msgstr "lozinka"
+
+msgid "Account Recovery Assistance"
+msgstr "Pomoć za oporavak naloga"
+
+msgid "Back to Login"
+msgstr "Nazad na prijavu"
+
+msgid "Your password will be sent to the given e-mail address."
+msgstr ""
+
+msgid "Once you have received your new password you can login in and change it."
+msgstr ""
+
+msgid "Login"
+msgstr "Prijavljivanje"
+
+msgid ""
+"Please enter your e-mail address then click on the Send Password button. "
+"You will receive a new password shortly. Use this new password to access "
+"the site."
+msgstr ""
+
+msgid "E-mail address"
+msgstr "E-mail Adressa"
+
+msgid "Send Password"
+msgstr "Pošalji lozinku"
+
+msgid "Received faxes appear here automatically in real time."
+msgstr "Primljeni faksovi se automatski pojavljuju ovde u realnom vremenu."
+
+msgid "Faxes"
+msgstr "faksovi"
+
+msgid "Fax"
+msgstr "Fax"
+
+#, fuzzy
+msgid "Archive Selected"
+msgstr "Arhiviraj"
+
+msgid "Delete Selected"
+msgstr "Obriši izabrano"
+
+msgid "fax"
+msgstr ""
+
+#, fuzzy
+msgid "Preview"
+msgstr "Pogledaj Fax"
+
+msgid "Sender"
+msgstr "Pošiljaoc"
+
+msgid "Page"
+msgstr "Strana"
+
+msgid "of"
+msgstr "od"
+
+msgid "This number belongs to several companies. Which one is it?"
+msgstr ""
+
+msgid "Unknown Sender"
+msgstr ""
+
+msgid "View"
+msgstr "Pogledaj Fax"
+
+msgid "Reply"
+msgstr "Odgovori na FAX"
+
+msgid "Archive"
+msgstr "Arhiviraj"
+
+msgid "Email Fax"
+msgstr "Pošalji faks na e-mail"
+
+msgid "Rotate"
+msgstr "Rotiraj Fax"
+
+msgid "Download TIFF"
+msgstr "Preuzmi TIFF"
+
+msgid "0 FAXES"
+msgstr "0 FAKSOVA"
+
+msgid ""
+"There are no incoming faxes waiting in your inbox. Incoming transmissions"
+" will automatically appear here in real time."
+msgstr ""
+"Nema dolaznih faksova koji čekaju u vašem prijemnom sandučetu. Dolazni "
+"prenosi će se automatski pojaviti ovde u realnom vremenu."
+
+msgid "Send Your First Fax"
+msgstr "Pošaljite svoj prvi faks"
+
+#, fuzzy
+msgid "Search Archive"
+msgstr "Arhiviraj"
+
+msgid "Getting Started with NamiFAX"
+msgstr "Početak rada sa NamiFAX-om"
+
+msgid "Receive Faxes"
+msgstr "Prijem faksova"
+
+msgid ""
+"When someone sends a fax to this system's number, it will appear here "
+"automatically."
+msgstr ""
+"Kada neko pošalje faks na broj ovog sistema, on će se automatski pojaviti"
+" ovde."
+
+#, fuzzy
+msgid "Send Faxes"
+msgstr "Pošalji Fax"
+
+msgid "Click Send Fax to transmit a PDF or image document to any fax number."
+msgstr ""
+"Kliknite na Pošalji faks da biste preneli PDF ili sliku na bilo koji broj"
+" faksa."
+
+msgid "Manage Records"
+msgstr "Upravljanje zapisima"
+
+msgid ""
+"Download faxes as PDF, archive them for later, or search all records in "
+"the Archive."
+msgstr ""
+"Preuzmite faksove u PDF formatu, arhivirajte ih za kasnije ili pretražite"
+" sve zapise u Arhivi."
+
+msgid "Archive search"
+msgstr ""
+
+msgid "new fax"
+msgstr ""
+
+msgid "Outbox"
+msgstr "Slanje"
+
+msgid "lines"
+msgstr ""
+
+msgid "Settings"
+msgstr "Podešavanja"
+
+msgid "Sign in"
+msgstr "Prijavljivanje"
+
+msgid "Enter your credentials to continue."
+msgstr "Unesite vaše pristupne podatke da biste nastavili."
+
+#, fuzzy
+msgid "System Online"
+msgstr "Sistemske funkcije"
+
+msgid "Enter your username"
+msgstr ""
+
+msgid "Forgot password?"
+msgstr ""
+"Molimo unesite Vašu e-mail adresu, a potom kliknite na dugme Pošalji "
+"lozinku.Primićete uskoro novu lozinku.Iskoristite novu lozinku za pristup"
+" sajtu."
+
+msgid "Enter your password"
+msgstr ""
+
+msgid "Contact your system administrator if you need an account."
+msgstr "Obratite se administratoru sistema ako vam je potreban nalog."
+
+msgid "Or continue with"
+msgstr ""
+
+msgid "Sign in with Passkey (Touch ID / Security Key)"
+msgstr ""
+
+msgid "SAML 2.0 Enterprise SSO (Okta / Entra ID)"
+msgstr ""
+
+msgid "Two-Factor Authentication"
+msgstr ""
+
+msgid ""
+"Enter the 6-digit code from your authenticator app or an emergency "
+"recovery code."
+msgstr ""
+
+#, fuzzy
+msgid "Authentication Code"
+msgstr "Za lice"
+
+msgid "123456 or 8-char backup code"
+msgstr ""
+
+msgid "Verify & Log In"
+msgstr ""
+
+msgid "Sign out?"
+msgstr ""
+
+msgid "Assign Company Name"
+msgstr "Dodeli naziv kompanije"
+
+msgid "Associate document with registered enterprise contact"
+msgstr "Poveži dokument sa registrovanim poslovnim kontaktom"
+
+msgid "Search Company Name"
+msgstr "Pretraži naziv kompanije"
+
+msgid "Type company name to filter..."
+msgstr ""
+
+#, fuzzy
+msgid "Delete Fax"
+msgstr "Izbriši"
+
+msgid "Are you sure you want to delete this fax?"
+msgstr "Da li ste sigurni da želite da obrišete ovaj faks?"
+
+msgid "This operation will permanently purge the fax document archive."
+msgstr "Ova operacija će trajno obrisati dokument iz arhive faksova."
+
+msgid "Dispatch PDF document attachment to email recipients"
+msgstr "Pošaljite priloženi PDF dokument primaocima e-pošte"
+
+msgid "From"
+msgstr "Od"
+
+msgid "Recipients"
+msgstr "Primaoci"
+
+msgid "Choose from contacts"
+msgstr ""
+
+msgid "CC"
+msgstr ""
+
+msgid "BCC"
+msgstr ""
+
+msgid "Subject"
+msgstr "Predmet"
+
+msgid "PDF file name"
+msgstr "Ime PDF dokumenta"
+
+msgid "Message"
+msgstr "Poruka"
+
+msgid "Archive fax"
+msgstr ""
+
+msgid "Send"
+msgstr "Pošalji"
+
+msgid "Append internal administrative note or comments"
+msgstr "Dodaj internu administrativnu belešku ili komentar"
+
+msgid "Note / Description"
+msgstr "Beleška / Opis"
+
+msgid "Enter transaction note or dispatch comments..."
+msgstr ""
+
+msgid "Transmission Report"
+msgstr "Izveštaj o prenosu"
+
+msgid "Official facsimile delivery confirmation receipt"
+msgstr "Zvanična potvrda o isporuci faksa"
+
+msgid "Print"
+msgstr "Štampaj"
+
+msgid "Company:"
+msgstr "Kompanija"
+
+msgid "Pages:"
+msgstr "Stranica:"
+
+msgid "Fax Number:"
+msgstr ""
+
+msgid "Database unavailable"
+msgstr ""
+
+msgid ""
+"The database cannot be reached right now. This page tries again every 10 "
+"seconds."
+msgstr ""
+
+msgid "Faxes currently queued or being transmitted."
+msgstr "Faksovi koji su trenutno u redu ili se prenose."
+
+msgid ""
+"This page shows only faxes that are queued or in progress. Once "
+"delivered, they are removed from this list. Find completed records in the"
+msgstr ""
+"Ova stranica prikazuje samo faksove koji su u redu ili u toku. Nakon "
+"isporuke, uklanjaju se sa ove liste. Završene zapise pronađite u"
+
+msgid "jobs in progress"
+msgstr "zadataka u toku"
+
+msgid "job in progress"
+msgstr "zadatak u toku"
+
+msgid "Job ID"
+msgstr "ID zadatka"
+
+msgid "Dials"
+msgstr "Birano"
+
+msgid "TTS"
+msgstr ""
+
+msgid "Modify"
+msgstr ""
+
+msgid "Kill job"
+msgstr "Obustavi proces"
+
+msgid "Kill"
+msgstr ""
+
+msgid "Failed Transmissions"
+msgstr "Neuspeli prenosi"
+
+msgid "Review the number or retry below."
+msgstr "Proverite broj ili pokušajte ponovo ispod."
+
+msgid "Retry"
+msgstr "Retry"
+
+msgid "No jobs in queue"
+msgstr "Nema zadataka u redu"
+
+msgid ""
+"There are no faxes waiting to be sent. Send a fax to see its progress "
+"here."
+msgstr ""
+"Nema faksova koji čekaju na slanje. Pošaljite faks da biste videli njegov"
+" napredak ovde."
+
+#, fuzzy
+msgid "Send a Fax"
+msgstr "Pošalji Fax"
+
+#, fuzzy
+msgid "Password Expired"
+msgstr "lozinka"
+
+msgid "Security Credentials Renewal"
+msgstr "Obnova bezbednosnih akreditiva"
+
+msgid "Action Required"
+msgstr "Potrebna akcija"
+
+msgid ""
+"Your password has expired or needs to be changed before proceeding. "
+"Please enter your old password and choose a new password."
+msgstr ""
+"Vaša lozinka je istekla ili se mora promeniti pre nastavka. Molimo "
+"unesite staru lozinku i izaberite novu lozinku."
+
+msgid "Old Password"
+msgstr "Stara lozinka"
+
+msgid "Current credentials"
+msgstr ""
+
+msgid "New Password"
+msgstr "Nova lozinka"
+
+msgid "New secure passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Confirm New Password"
+msgstr ""
+"Molimo unesite Vašu e-mail adresu, a potom kliknite na dugme Pošalji "
+"lozinku.Primićete uskoro novu lozinku.Iskoristite novu lozinku za pristup"
+" sajtu."
+
+msgid "Re-type new passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Update Password"
+msgstr "lozinka"
+
+msgid "Fill in the details below and click Send."
+msgstr "Popunite podatke ispod i kliknite na Pošalji."
+
+#, fuzzy
+msgid "Destination & Recipients"
+msgstr "Broij faksa"
+
+msgid "Enter the fax number and recipient details."
+msgstr "Unesite broj faksa i podatke o primaocu."
+
+msgid "e.g. +1-555-0199  —  separate multiple numbers with semicolons"
+msgstr ""
+
+msgid "Choose a distribution list"
+msgstr ""
+
+msgid "To send to multiple recipients at once, separate numbers with a semicolon."
+msgstr ""
+
+msgid "Saved contacts are available in the"
+msgstr "Sačuvani kontakti su dostupni u"
+
+msgid "Attention To"
+msgstr "Za lice"
+
+msgid "optional"
+msgstr "opciono"
+
+msgid "e.g. Jane Doe"
+msgstr ""
+
+msgid "Voice Number"
+msgstr "Broj govorne pošte"
+
+msgid "Address"
+msgstr ""
+
+msgid "Zip"
+msgstr ""
+
+msgid "Subject / Regarding"
+msgstr "Predmet"
+
+msgid "e.g. Purchase Order #4921"
+msgstr ""
+
+msgid "Document Attachment"
+msgstr "Prilog dokumenta"
+
+msgid "Attach the file you want to transmit."
+msgstr "Priložite datoteku koju želite da pošaljete."
+
+msgid "Click to select a file"
+msgstr "Kliknite da izaberete datoteku"
+
+msgid "Supported: PDF, TIFF, PostScript, TXT"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid ""
+"PDF is the most commonly used format. Convert Word or Excel files to PDF "
+"before attaching."
+msgstr ""
+"PDF je najčešće korišćeni format. Konvertujte Word ili Excel datoteke u "
+"PDF pre prilaganja."
+
+msgid "Cover Page"
+msgstr "Koristi naslovnu stranicu"
+
+msgid "Add a cover sheet with sender and recipient info."
+msgstr "Dodajte naslovnu stranu sa podacima o pošiljaocu i primaocu."
+
+#, fuzzy
+msgid "Include Cover Page"
+msgstr "Koristi naslovnu stranicu"
+
+#, fuzzy
+msgid "Cover Template"
+msgstr "Koristi naslovnu stranicu"
+
+msgid "No cover pages are set up"
+msgstr ""
+
+msgid "Send via Line"
+msgstr "Pošalji preko linije"
+
+msgid "No modems configured"
+msgstr "Nema konfigurisanih modema"
+
+#, fuzzy
+msgid "Cover Comments"
+msgstr "Cover Pages"
+
+msgid "Notes or message to print on the cover sheet..."
+msgstr ""
+
+msgid "Advanced Options"
+msgstr "Napredne opcije"
+
+msgid "Priority, retries, notifications"
+msgstr "Prioritet, ponovni pokušaji, obaveštenja"
+
+#, fuzzy
+msgid "Max Retries"
+msgstr "Vidljive faks kategorije"
+
+msgid "Retries automatically on busy signal."
+msgstr "Automatski ponovni pokušaj na signal zauzeća."
+
+msgid "The original fax is sent along."
+msgstr ""
+
+msgid "Cancel & return to Inbox"
+msgstr "Otkaži i vrati se u Prijemno sanduče"
+
+#, fuzzy
+msgid "User Settings"
+msgstr "Podešavanja"
+
+msgid ""
+"Configure your personal profile, fax station identity, and portal "
+"preferences."
+msgstr "Podesite svoj lični profil, identitet faks stanice i postavke portala."
+
+msgid "Return to Inbox"
+msgstr "Povratak u Prijemno sanduče"
+
+msgid "Personal & Organization Details"
+msgstr "Lični podaci i podaci o organizaciji"
+
+msgid "Office / Location"
+msgstr "Kancelarija / Lokacija"
+
+msgid "Direct Voice Number"
+msgstr "Direktan telefonski broj"
+
+#, fuzzy
+msgid "Direct Fax Number"
+msgstr "Broij faksa"
+
+msgid "Transmitting Station ID (TSI)"
+msgstr "Identifikator predajne stanice (TSI)"
+
+msgid "e.g. +1 555 123 4567"
+msgstr ""
+
+msgid "Header identifier imprinted on top of transmitted fax pages."
+msgstr "Identifikator u zaglavlju utisnut na vrhu poslatih stranica faksa."
+
+msgid "Email & Fax Notification Signature"
+msgstr "Potpis za e-mail i faks obaveštenja"
+
+msgid "Portal & Delivery Preferences"
+msgstr "Postavke portala i isporuke"
+
+msgid "Display Language"
+msgstr "Jezik prikaza"
+
+#, fuzzy
+msgid "Default Cover Page"
+msgstr "Koristi naslovnu stranicu"
+
+msgid "Faxes Per Page"
+msgstr "faxes per page"
+
+msgid "Archive Faxes Per Page"
+msgstr ""
+
+#, fuzzy
+msgid "Change Password"
+msgstr "lozinka"
+
+#, fuzzy
+msgid "Current Password"
+msgstr ""
+"Molimo unesite Vašu e-mail adresu, a potom kliknite na dugme Pošalji "
+"lozinku.Primićete uskoro novu lozinku.Iskoristite novu lozinku za pristup"
+" sajtu."
+
+msgid "Enter current password to verify"
+msgstr ""
+
+msgid "Enter secure new password"
+msgstr ""
+
+msgid "Re-type new password"
+msgstr ""
+
+#, fuzzy
+msgid "Update Settings"
+msgstr "Podešavanja"
+
+msgid "Two-Factor Authentication (TOTP)"
+msgstr ""
+
+msgid ""
+"Protect your account with Google Authenticator, Authy, or compatible RFC "
+"6238 apps."
+msgstr ""
+
+msgid "Active / Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid ""
+"When enabled, signing in requires your password and a 6-digit one-time "
+"token from your mobile device."
+msgstr ""
+
+msgid "recovery codes left"
+msgstr ""
+
+msgid "Code from your app (to get new recovery codes)"
+msgstr ""
+
+msgid "New recovery codes"
+msgstr ""
+
+msgid "Turn off 2FA for your account?"
+msgstr ""
+
+msgid "Code or recovery code"
+msgstr ""
+
+msgid "Disable 2FA"
+msgstr ""
+
+msgid "Enable 2FA (Setup Authenticator)"
+msgstr ""
+
+msgid "FIDO2 Passkeys & Biometric Security Keys"
+msgstr ""
+
+msgid ""
+"Sign in securely without passwords using Touch ID, Face ID, Windows "
+"Hello, or YubiKey."
+msgstr ""
+
+msgid "Register New Passkey"
+msgstr ""
+
+msgid "Loading registered security keys..."
+msgstr ""
+
+msgid "No Passkeys registered yet."
+msgstr ""
+
+msgid ""
+"No Passkeys registered yet. Click Register to add Touch ID or a security "
+"key."
+msgstr ""
+
+msgid "Remove"
+msgstr "Ukloni"
+
+msgid ""
+"1. Scan this code with Google Authenticator, Authy or another RFC 6238 "
+"app, or type the key by hand."
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "2. Enter the 6-digit code the app shows"
+msgstr ""
+
+msgid "Turn on 2FA"
+msgstr ""
+
+msgid "Save your recovery codes"
+msgstr ""
+
+msgid ""
+"Each code works once if you lose your phone. They are shown only now; "
+"store them somewhere safe."
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Back to settings"
+msgstr ""
+
+msgid "Previous fax"
+msgstr "Prethodni Fax"
+
+msgid "Prev"
+msgstr "Prethodna"
+
+msgid "Next fax"
+msgstr "Sledeći Fax"
+
+msgid "Rotate fax"
+msgstr "Rotiraj Fax"
+
+#, python-format
+msgid "Invalid fax number: %(number)s"
+msgstr ""
+
+msgid "Address book entry saved."
+msgstr ""
+
+msgid "Please enter a valid fax number"
+msgstr ""
+
+msgid "You are not allowed to delete address book entries."
+msgstr ""
+
+msgid "You are not allowed to delete contacts."
+msgstr ""
+
+msgid "This modem already exists"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Cover page template removed successfully"
+msgstr ""
+
+msgid "Failed to remove cover page template"
+msgstr ""
+
+msgid "Failed to update cover page template"
+msgstr ""
+
+msgid "Cover page template registered successfully"
+msgstr ""
+
+msgid "Title and File are required"
+msgstr ""
+
+msgid "The company does not exist."
+msgstr ""
+
+msgid "The company and its fax numbers were deleted."
+msgstr ""
+
+msgid "Please enter a valid e-mail address."
+msgstr "Molimo unesite valinu e-mail adresu."
+
+msgid "Fax to Email settings saved"
+msgstr ""
+
+msgid "The system is rebooting. Please wait..."
+msgstr ""
+
+msgid "The system is shutting down. Please wait..."
+msgstr ""
+
+msgid "The command could not be run"
+msgstr ""
+
+msgid "There is no fax archive folder to download."
+msgstr ""
+
+msgid "The database dump could not be made"
+msgstr ""
+
+msgid "Access denied. Superadmin permission required."
+msgstr ""
+
+msgid "SMTP Gateway settings saved successfully."
+msgstr ""
+
+msgid "Printer name and host are required."
+msgstr ""
+
+msgid "Network printer registered successfully."
+msgstr ""
+
+msgid "Printer deleted successfully."
+msgstr ""
+
+msgid "Lifecycle policy saved successfully."
+msgstr ""
+
+msgid "Cloud storage configuration saved successfully."
+msgstr ""
+
+msgid "SAML 2.0 configuration saved successfully."
+msgstr ""
+
+msgid "Catch All"
+msgstr "Obuhvati sve"
+
+msgid "Never"
+msgstr ""
+
+msgid "Every 3 Months"
+msgstr ""
+
+msgid "Every 6 Months"
+msgstr ""
+
+msgid "You must enter a username"
+msgstr "Morate uneti korisnički nalog"
+
+msgid "Non-alphanumeric characters are not allowed in username."
+msgstr "Ne-alfanumerički karakteri nisu dozvoljeni u korisničkom nalogu"
+
+#, python-format
+msgid ""
+"Hello %(name)s,\n"
+"\n"
+"This email contains your username and password to log into NamiFAX "
+"(%(url)s)\n"
+"\n"
+"Username - %(username)s\n"
+"Password - %(password)s\n"
+"\n"
+"Please do not respond to this message as it is automatically generated "
+"and is for information purposes only"
+msgstr ""
+
+msgid "New User Details"
+msgstr "Novi detalji korisnika"
+
+msgid "The user does not exist."
+msgstr ""
+
+msgid "You cannot delete your own account."
+msgstr ""
+
+msgid "You cannot delete the last superuser."
+msgstr ""
+
+msgid "Please enter a valid number."
+msgstr ""
+
+msgid "Both sent and received faxes"
+msgstr "Oba poslata i primljena faksa"
+
+msgid "Only sent faxes"
+msgstr "Samo poslati faksovi"
+
+msgid "Only received faxes"
+msgstr "Samo primljeni faksovi"
+
+msgid "Account is disabled"
+msgstr ""
+
+#, python-format
+msgid "Too many failed attempts. Try again in %(minutes)d minutes."
+msgstr ""
+
+msgid "Invalid or expired verification code."
+msgstr ""
+
+#, python-format
+msgid ""
+"The user account %(user)s has this email associated with it.  A web user "
+"from %(ip)s has just requested that a new password be sent.\n"
+"\n"
+"Your New Password is: %(password)s\n"
+"\n"
+"If this was an error just login with your new password and then change "
+"your password to what you would like it to be."
+msgstr ""
+"Korisnički nalog %(user)s poseduje ovaj email i povezan je sa njom. Web "
+"korisnik sa %(ip)s upravo je podneo zahtev za dodelom i slanjem nove "
+"lozinke. Vaša nova lozinka je: %(password)s Ako je ovo bila greška samo "
+"se prijavite sa novom lozinkom, a potom promenite Vašu lozinku u onu u "
+"koju biste vi želite da bude."
+
+msgid "Email failed to send"
+msgstr "Greška u slanju E-pošte"
+
+msgid "Fax Contacts"
+msgstr ""
+
+msgid "Email Contacts"
+msgstr ""
+
+msgid "The fax document was not found."
+msgstr ""
+
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+msgid "Invalid job number."
+msgstr ""
+
+msgid "Any Available Line (Auto)"
+msgstr "Bilo koja dostupna linija (Automatski)"
+
+msgid "You may not use this line."
+msgstr ""
+
+msgid "Your fax has been successfully queued to be faxed."
+msgstr ""
+
+msgid "Job"
+msgstr ""
+
+msgid "The code is not valid."
+msgstr ""
+
+msgid "The code did not match. Check the time on your phone and try again."
+msgstr ""
+
+msgid "The password is not correct."
+msgstr ""
+
+msgid "Add a note"
+msgstr "Dodaj napomenu..."
+
+msgid "Account active"
+msgstr "Aktivni nalozi"
+
+msgid "The cover page was updated"
+msgstr ""
+
+msgid "The modem was created"
+msgstr "Modem je kreiran"
+
+msgid "The modem was deleted"
+msgstr "Modem je izbrisan"
+
+msgid "The modem was updated"
+msgstr "Modem je osvežen"
+
+msgid "Archive - show"
+msgstr ""
+
+msgid "Inbox - show"
+msgstr ""
+
+msgid "Assign a company name"
+msgstr "Dodeli naziv kompanije"
+
+msgid "You must enter a company name"
+msgstr "Morate uneti ime kompanije"
+
+msgid "Contact details saved"
+msgstr "Detalji kontakta sačuvani"
+
+msgid "Remove entries"
+msgstr "Ukloni stavku"
+
+msgid "Save list name"
+msgstr "Sačuvaj spisak imena"
+
+msgid "The email failed to send."
+msgstr "Slanje e-pošte nije uspelo!"
+
+msgid "The email was sent successfully."
+msgstr "E-pošta je uspeano poslata."
+
+msgid "Destination fax numbers"
+msgstr "Broj odredišta za fax"
+
+msgid "You must enter an alias"
+msgstr "Morate uneti alias"
+
+msgid "You must enter a device name"
+msgstr "Morate uneti naziv uređaja"
+
+msgid "Modify Job"
+msgstr "Izmeni posao"
+
+msgid "You must enter a name."
+msgstr "Morate uneti ime."
+
+msgid "Notify on requeue"
+msgstr "Obavesti o obnovi čekanja"
+
+msgid "Forward fax via email"
+msgstr "Prosledi fax putem e-pošte"
+
+msgid "To person"
+msgstr "Za lice"
+
+msgid "User can delete faxes"
+msgstr "Korisniku omogućeno brisanje faksova"
+
+msgid "User settings have been saved."
+msgstr "Korisnička podešavanja su sačuvana."
+
+msgid "Select All Faxes"
+msgstr "Izaberi sve"
+
+#~ msgid "High"
+#~ msgstr "High"
+
+#~ msgid "Configure corporate contact identity and transmission routing defaults."
+#~ msgstr ""
+#~ "Podesite identitet poslovnog kontakta i "
+#~ "podrazumevano usmeravanje prenosa."
+
+#~ msgid "Primary Company Profile"
+#~ msgstr "Primarni profil kompanije"
+
+#~ msgid "Recipient Contact & Physical Address"
+#~ msgstr "Kontakt primaoca i fizička adresa"
+
+#~ msgid "City / Postal Region"
+#~ msgstr "Grad / Poštanski region"
+
+#~ msgid "Category Tag"
+#~ msgstr "Oznaka kategorije"
+
+#~ msgid "General"
+#~ msgstr "Normal"
+
+#~ msgid "Invoices & Billing"
+#~ msgstr "Fakture i obračun"
+
+#~ msgid "Legal"
+#~ msgstr "Pravno"
+
+#~ msgid "Description / Internal Notes"
+#~ msgstr "Opis / Interne beleške"
+
+#~ msgid "Edit Forwarding Rule"
+#~ msgstr "Uredi pravilo prosleđivanja"
+
+#~ msgid "Add Forwarding Rule"
+#~ msgstr "Dodaj pravilo prosleđivanja"
+
+#~ msgid ""
+#~ "Please enter your registered username or"
+#~ " email address below. Password reset "
+#~ "instructions will be dispatched to your"
+#~ " account email address."
+#~ msgstr ""
+#~ "Molimo unesite vaše registrovano korisničko"
+#~ " ime ili e-mail adresu ispod. "
+#~ "Uputstva za resetovanje lozinke biće "
+#~ "poslata na vašu e-mail adresu."
+
+#~ msgid "Username or Email Address"
+#~ msgstr "Korisničko ime ili e-mail adresa"
+
+#~ msgid "Reset Password"
+#~ msgstr ""
+#~ "Molimo unesite Vašu e-mail adresu, a "
+#~ "potom kliknite na dugme Pošalji "
+#~ "lozinku.Primićete uskoro novu lozinku.Iskoristite"
+#~ " novu lozinku za pristup sajtu."
+
+#~ msgid "Standard (Default)"
+#~ msgstr "Standardno (Podrazumevano)"
+
+#~ msgid "Urgent"
+#~ msgstr "Hitno"
+
+#~ msgid "Confidential"
+#~ msgstr "Poverljivo"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Low"
+#~ msgstr "Low"
+
+#~ msgid "High (Urgent)"
+#~ msgstr "Visok (Hitno)"
+
+#~ msgid "Reply to Fax"
+#~ msgstr "Odgovori na FAX"
+
+#~ msgid "Dispatch quick reply transmission to originating sender"
+#~ msgstr "Pošaljite brzi odgovor pošiljaocu"
+
+#~ msgid "Regarding (Subject)"
+#~ msgstr "Povodom (Predmet)"
+
+#~ msgid "Comments"
+#~ msgstr "Komentari"
+
+#~ msgid "Destination"
+#~ msgstr "Broij faksa"
+
+#~ msgid "Queued"
+#~ msgstr "U redu"
+
+#~ msgid "Reason"
+#~ msgstr "Razlog"
+
+#~ msgid "To send to multiple recipients at once, separate numbers with a comma."
+#~ msgstr ""
+#~ "Da biste poslali na više primalaca "
+#~ "odjednom, razdvojite brojeve zarezom."
+
+#~ msgid "Save Modem"
+#~ msgstr "Fax Modems"
+
+#~ msgid "Configure User:"
+#~ msgstr "Podesi korisnika:"
+
+#~ msgid "recipient@example.com (comma separated)"
+#~ msgstr ""
+
+#~ msgid "NamiFAX Transmission Document"
+#~ msgstr ""
+
+#~ msgid "Please find the attached facsimile document."
+#~ msgstr ""
+
+#~ msgid "results"
+#~ msgstr "Reset"
+
+#~ msgid "result"
+#~ msgstr "Reset"
+
+#~ msgid "Keyword"
+#~ msgstr "Ključna reč"
+
+#~ msgid "Invoices / Orders"
+#~ msgstr "Fakture / Narudžbine"
+
+#~ msgid "Legal / Contracts"
+#~ msgstr "Kontakti"
+
+#~ msgid "From Date"
+#~ msgstr "Rotiraj Fax"
+
+#~ msgid "To Date"
+#~ msgstr "Rotiraj Fax"
+
+#~ msgid "Sent & Received"
+#~ msgstr "Poslati i primljeni"
+
+#~ msgid "Received only"
+#~ msgstr "Samo primljeni"
+
+#~ msgid "Sent only"
+#~ msgstr "Samo poslati"
+
+#~ msgid "Results"
+#~ msgstr "Reset"
+
+#~ msgid "records"
+#~ msgstr "zapisa"
+
+#~ msgid "record"
+#~ msgstr "zapis"
+
+#~ msgid "No results found"
+#~ msgstr "Nema pronađenih rezultata"
+
+#~ msgid "Try adjusting your search terms or date range."
+#~ msgstr "Pokušajte sa prilagođavanjem parametara pretrage ili raspona datuma."
+
+#~ msgid "Search the Archive"
+#~ msgstr "Pretraži arhivu"
+
+#~ msgid "Enter a keyword or filter above and click Search to find fax records."
+#~ msgstr ""
+#~ "Unesite ključnu reč ili filter iznad "
+#~ "i kliknite na Pretraga za pronalaženje"
+#~ " zapisa faksova."
+
+#~ msgid "Showing"
+#~ msgstr "Prikazano"
+
+#~ msgid "of"
+#~ msgstr "od"
+
+#~ msgid "Fax Viewer"
+#~ msgstr "Pregledač faksa"
+
+#~ msgid "Page 1 of"
+#~ msgstr "Stranica 1 od"
+
+#~ msgid "FROM:"
+#~ msgstr "OD:"
+
+#~ msgid "DATE:"
+#~ msgstr "DATUM:"
+
+#~ msgid "DEVICE:"
+#~ msgstr "UREĐAJ:"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "TIFF"
+#~ msgstr "TIFF"
+
+#~ msgid "Total"
+#~ msgstr "Ukupno"
+
+#~ msgid "Incoming Transmission"
+#~ msgstr "Dolazni prenos"
+
+#~ msgid "FACSIMILE TRANSMISSION"
+#~ msgstr "FAKS PRENOS"
+
+#~ msgid "Date Received:"
+#~ msgstr "Datum prijema:"
+
+#~ msgid "Originating Station:"
+#~ msgstr "Predajna stanica:"
+
+#~ msgid "PORT"
+#~ msgstr "Prioritet"
+
+#~ msgid "High-Resolution Raster Preview"
+#~ msgstr "Rasterski pregled visoke rezolucije"
+
+#~ msgid "Device Line:"
+#~ msgstr "Linija uređaja:"
+
+#~ msgid "Download Original Document"
+#~ msgstr "Preuzmi originalni dokument"
+
+#~ msgid "NamiFAX Enterprise Facsimile Engine"
+#~ msgstr "NamiFAX Enterprise Facsimile Engine"
+
+#~ msgid "Archive ID:"
+#~ msgstr "Arhiviraj"
+
+#~ msgid "Add contact name or fax number..."
+#~ msgstr ""
+
+#~ msgid "Delete List"
+#~ msgstr "Izbriši liste"
+
+#~ msgid "Save Changes"
+#~ msgstr "Cover Pages"
+
+#~ msgid "Supported: PDF, TIFF, PostScript, TXT · Max 10 MB"
+#~ msgstr "Podržano: PDF, TIFF, PostScript, TXT · Maks. 10 MB"
+
+#~ msgid "Auto-select recommended"
+#~ msgstr "Preporučuje se automatski izbor"
+
+#~ msgid "Status:"
+#~ msgstr "Status:"
+
+#~ msgid "Transmitted Successfully (OK)"
+#~ msgstr "Uspešno preneto (OK)"
+

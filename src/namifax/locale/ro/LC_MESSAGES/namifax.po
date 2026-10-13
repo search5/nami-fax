@@ -1,0 +1,2637 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: NamiFAX 4.0.Language: rMIME-Version: 1.Content-Type: "
+"text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-02 00:54+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ro\n"
+"Language-Team: ro <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
+" < 20)) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "Address Book"
+msgstr "Adrese e-mail"
+
+msgid "Save frequently used fax numbers for quick access when sending."
+msgstr ""
+"Salvați numerele de fax utilizate frecvent pentru acces rapid la "
+"trimitere."
+
+msgid "Company or fax number..."
+msgstr ""
+
+msgid "Search"
+msgstr "Cauta"
+
+#, fuzzy
+msgid "New Company"
+msgstr "Firma"
+
+msgid "Email Book"
+msgstr "Agendă de e-mail"
+
+msgid "Distribution Lists"
+msgstr "Distribution Lists"
+
+#, fuzzy
+msgid "Company / Name"
+msgstr "Firma"
+
+msgid "Fax Number"
+msgstr "Numar de fax"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Actions"
+msgstr "Acțiuni"
+
+msgid "Send Fax"
+msgstr "Trimite Fax"
+
+msgid "Edit"
+msgstr "Editeaza"
+
+#, fuzzy
+msgid "No contacts yet"
+msgstr "Contacte"
+
+msgid "No contacts matched"
+msgstr "Niciun contact găsit"
+
+msgid ""
+"Add contacts to quickly select fax numbers when sending without typing "
+"them every time."
+msgstr ""
+"Adăugați contacte pentru a selecta rapid numerele de fax la trimitere, "
+"fără a le introduce de fiecare dată."
+
+msgid "Add First Contact"
+msgstr "Adăugați primul contact"
+
+#, fuzzy
+msgid "Edit Company"
+msgstr "Firma"
+
+#, fuzzy
+msgid "Add New Company"
+msgstr "Firma"
+
+msgid "Configure the company and every fax number it uses."
+msgstr ""
+
+#, fuzzy
+msgid "Back to Contacts"
+msgstr "Contacte"
+
+msgid "Upload contacts file (vCard)"
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "Company"
+msgstr "Firma"
+
+#, fuzzy
+msgid "Company Name"
+msgstr "Firma"
+
+msgid "e.g. Acme Corporation"
+msgstr ""
+
+msgid "Clear the number to remove it."
+msgstr ""
+
+msgid "Description"
+msgstr "Descriere"
+
+msgid "Category"
+msgstr "Categorie"
+
+msgid "Location"
+msgstr "Locatia"
+
+msgid "Voice Telephone"
+msgstr "Telefon fix/mobil"
+
+msgid "Street Address"
+msgstr "Adresă stradală"
+
+msgid "Zip / Postal Code"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Add a Fax Number"
+msgstr ""
+
+msgid "First Fax Number"
+msgstr ""
+
+msgid "Delete"
+msgstr "Sterge"
+
+msgid "Cancel"
+msgstr "Anuleaza"
+
+msgid "Save"
+msgstr "Salveaza"
+
+#, fuzzy
+msgid "Dashboard Overview"
+msgstr "Dashboard"
+
+#, fuzzy
+msgid "SYSTEM OPERATIONAL"
+msgstr "Functii de sistem"
+
+msgid ""
+"Real-time status of fax spools, hardware serial modems, and registered "
+"users"
+msgstr ""
+"Starea în timp real a cozilor de fax, a modemurilor seriale hardware și a"
+" utilizatorilor înregistrați"
+
+msgid "Users"
+msgstr "Utilizatori"
+
+msgid "Modems"
+msgstr "Configureaza Modemuri"
+
+#, fuzzy
+msgid "DID Routes"
+msgstr "DID/DTMF Route groups"
+
+#, fuzzy
+msgid "Logs"
+msgstr "Sfarsit sesiune"
+
+#, fuzzy
+msgid "Fax Lines"
+msgstr "Fax Modems"
+
+msgid "Hardware Ready"
+msgstr "Hardware pregătit"
+
+#, fuzzy
+msgid "Active accounts"
+msgstr "Utilizatori"
+
+msgid "Backend Core"
+msgstr "Nucleu backend"
+
+msgid "unknown"
+msgstr ""
+
+msgid "Scheduler"
+msgstr "Planificator"
+
+msgid "Running"
+msgstr "În execuție"
+
+#, fuzzy
+msgid "Registered User Accounts"
+msgstr "Utilizatori"
+
+msgid "Manage Users"
+msgstr "Gestionare utilizatori"
+
+msgid "Name"
+msgstr "Nume"
+
+msgid "Username"
+msgstr "nume utilizator"
+
+msgid "Last Login"
+msgstr "Ultima autentificare"
+
+msgid "Server Status"
+msgstr "Stare server"
+
+msgid "Core"
+msgstr "Nucleu"
+
+msgid "Database Engine"
+msgstr "Motor bază de date"
+
+msgid "System Scheduler"
+msgstr "Planificator de sistem"
+
+msgid "Configured Modems"
+msgstr "Modemuri configurate"
+
+msgid "Administrator Workflow Guide"
+msgstr "Ghid flux de lucru administrator"
+
+#, fuzzy
+msgid "Configure Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid ""
+"Route incoming faxes automatically based on recognized Code39 / QR "
+"barcodes"
+msgstr ""
+"Rutare automată a faxurilor primite pe baza codurilor de bare Code39 / QR"
+" recunoscute"
+
+#, fuzzy
+msgid "New Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode Routing Rules"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode:"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Contact:"
+msgstr "Contacte"
+
+msgid "None"
+msgstr "Niciunul"
+
+msgid "Printer:"
+msgstr "Imprimantă:"
+
+#, fuzzy
+msgid "Edit Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Add Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "EDIT MODE"
+msgstr "Editeaza"
+
+msgid "NEW"
+msgstr "NOU"
+
+msgid "Barcode"
+msgstr "Barcode"
+
+msgid "Alias"
+msgstr "Alias"
+
+#, fuzzy
+msgid "Contact Email"
+msgstr "Contacte"
+
+msgid "Printer"
+msgstr "Printer"
+
+msgid "Fax Categories"
+msgstr "Categorii fax vizualizabile"
+
+msgid ""
+"Manage classification tags and archival categories for organizing "
+"transmissions"
+msgstr ""
+"Gestionați etichetele de clasificare și categoriile de arhivă pentru "
+"organizarea transmisiilor"
+
+#, fuzzy
+msgid "New Category"
+msgstr "Categorii fax vizualizabile"
+
+#, fuzzy
+msgid "Existing Categories"
+msgstr "Categorii fax vizualizabile"
+
+msgid "Edit Category"
+msgstr "Editare categorie"
+
+#, fuzzy
+msgid "Add Category"
+msgstr "Categorii fax vizualizabile"
+
+msgid "Category Name"
+msgstr "Nume Categorie"
+
+msgid "e.g. Invoices, Contracts"
+msgstr ""
+
+#, fuzzy
+msgid "Configure Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Manage facsimile PostScript cover page templates and layouts"
+msgstr ""
+"Gestionați șabloanele și machetele paginilor de gardă PostScript pentru "
+"fax"
+
+#, fuzzy
+msgid "New Cover Page"
+msgstr "Foloseste pagina de garda"
+
+#, fuzzy
+msgid "Available Cover Pages"
+msgstr "Cover Pages"
+
+#, fuzzy
+msgid "Edit Cover Page"
+msgstr "Foloseste pagina de garda"
+
+#, fuzzy
+msgid "Add Cover Page"
+msgstr "Foloseste pagina de garda"
+
+msgid "Title"
+msgstr "Titlu"
+
+msgid "File"
+msgstr "Fișier"
+
+msgid "e.g. custom.ps"
+msgstr ""
+
+msgid "Cover Template Studio: Dynamic Tag References"
+msgstr ""
+
+msgid ""
+"Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF"
+" templates. The Cover Studio engine automatically substitutes them during"
+" fax rendering."
+msgstr ""
+
+msgid "Dynamic Configuration"
+msgstr "Configurație dinamică"
+
+msgid ""
+"Manage Caller ID blacklists and transmission rejection rules for modem "
+"devices"
+msgstr ""
+"Gestionați listele negre de Caller ID și regulile de respingere a "
+"transmisiilor pentru dispozitivele modem"
+
+msgid "New Rule"
+msgstr "Regulă nouă"
+
+msgid "Blocked Caller IDs"
+msgstr "ID-uri apelant blocate"
+
+msgid "Caller ID:"
+msgstr "Caller ID:"
+
+msgid "All Devices"
+msgstr "Toate dispozitivele"
+
+msgid "Edit Caller ID Rule"
+msgstr "Editare regulă Caller ID"
+
+msgid "Add Caller ID Rule"
+msgstr "Adăugare regulă Caller ID"
+
+msgid "Caller ID"
+msgstr "Caller ID"
+
+msgid "e.g. 5550199 or pattern"
+msgstr ""
+
+msgid "Modem Device"
+msgstr "Dispositivo modem"
+
+#, fuzzy
+msgid "Fax to Email"
+msgstr "Fax Modems"
+
+msgid ""
+"Configure automated inbound fax forwarding and PDF dispatch rules mapped "
+"by company"
+msgstr ""
+"Configurați reguli automatizate de redirecționare a faxurilor primite și "
+"trimitere PDF mapate pe companie"
+
+msgid "Add companies in the Address Book"
+msgstr ""
+
+msgid "Company Forwarding Rules"
+msgstr "Reguli de redirecționare pe companie"
+
+msgid "fax numbers"
+msgstr "Numere de fax"
+
+msgid "Email:"
+msgstr "E-mail:"
+
+msgid "Edit Forwarding Rules"
+msgstr ""
+
+msgid "Forwarding Rules"
+msgstr ""
+
+msgid "This company has no fax numbers yet. Add them in the Address Book."
+msgstr ""
+
+msgid ""
+"Select a company on the left to set where the faxes received on each of "
+"its numbers are sent."
+msgstr ""
+
+#, fuzzy
+msgid "Control Panel"
+msgstr "Foloseste pagina de garda"
+
+msgid "User Portal"
+msgstr "User Portal"
+
+msgid "Inbox"
+msgstr "Inbox"
+
+#, fuzzy
+msgid "Overview"
+msgstr "Vizualizare Fax"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Access Control"
+msgstr "Control acces"
+
+msgid "User Accounts"
+msgstr "Utilizatori"
+
+msgid "Hardware & Lines"
+msgstr "Hardware și linii"
+
+msgid "Fax Modems"
+msgstr "Fax Modems"
+
+msgid "Network Printers"
+msgstr ""
+
+#, fuzzy
+msgid "Inbound Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid "DID Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid "Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid "Content & Templates"
+msgstr "Conținut și șabloane"
+
+msgid "Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Security & System"
+msgstr "Securitate și sistem"
+
+msgid "Blacklist (DynConf)"
+msgstr "Blacklist (DynConf)"
+
+msgid "System Audit Logs"
+msgstr "System Audit Logs"
+
+msgid "System Functions"
+msgstr "Functii de sistem"
+
+msgid "SMTP Gateway"
+msgstr ""
+
+msgid "Storage & Cloud"
+msgstr ""
+
+msgid "SAML 2.0 SSO"
+msgstr ""
+
+msgid "Logout"
+msgstr "Sfarsit sesiune"
+
+msgid "Admin Control Panel"
+msgstr "Panou de control administrator"
+
+msgid "Appliance Engine Online"
+msgstr "Motor appliance online"
+
+msgid ""
+"Configure Modems hardware devices, physical serial ports, and print-"
+"forwarding rules"
+msgstr ""
+"Configurați dispozitivele hardware de modem, porturile seriale fizice și "
+"regulile de redirecționare imprimare"
+
+#, fuzzy
+msgid "Configure Modems"
+msgstr "Fax Modems"
+
+msgid "Active Modem Lines"
+msgstr "Linii modem active"
+
+msgid "Device"
+msgstr "Port"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Status"
+msgstr "Stare"
+
+#, fuzzy
+msgid "Edit Modem"
+msgstr "Fax Modems"
+
+msgid "Configure Modems Device"
+msgstr "Configurare dispozitiv modem"
+
+msgid "e.g. ttyS0"
+msgstr ""
+
+msgid "e.g. Main Inbound Line"
+msgstr ""
+
+msgid "Are you sure you want to delete this modem?"
+msgstr ""
+
+msgid "Create"
+msgstr "Creeaza"
+
+msgid "Appliance Note:"
+msgstr "Notă echipament:"
+
+msgid ""
+"Modems configured here must correspond to physical RS-232 serial devices,"
+" USB modems, or virtual IAX modems recognized by the underlying HylaFAX "
+"server."
+msgstr ""
+"Modemurile configurate aici trebuie să corespundă dispozitivelor seriale "
+"fizice RS-232, modemurilor USB sau modemurilor virtuale IAX recunoscute "
+"de serverul HylaFAX subiacent."
+
+msgid "Direct RAW socket & IPP network printing dispatch for received faxes"
+msgstr ""
+
+msgid "Add Network Printer"
+msgstr ""
+
+msgid "Printer Name"
+msgstr ""
+
+msgid "e.g. Office HP LaserJet"
+msgstr ""
+
+msgid "Protocol"
+msgstr ""
+
+msgid "Host / IP"
+msgstr ""
+
+#, fuzzy
+msgid "Port"
+msgstr "Priority"
+
+msgid "Queue Name (Optional)"
+msgstr ""
+
+msgid "2nd Floor Accounting Printer"
+msgstr ""
+
+msgid "Register Printer"
+msgstr ""
+
+msgid "Configured Printers"
+msgstr ""
+
+msgid "No network printers configured yet. Add one using the form on the left."
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+msgid "Test Print"
+msgstr ""
+
+msgid "Are you sure you want to delete this printer?"
+msgstr ""
+
+#, fuzzy
+msgid "Configure DID Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid ""
+"Route incoming faxes by Direct Inward Dialing (DID) extension to specific"
+" email boxes or printers"
+msgstr ""
+"Rutare faxuri primite prin extensie de apelare directă în interior (DID) "
+"către cutii de e-mail specifice sau imprimante"
+
+#, fuzzy
+msgid "New DID Route"
+msgstr "DID/DTMF Route groups"
+
+#, fuzzy
+msgid "Active DID Routing Rules"
+msgstr "DID/DTMF Route groups"
+
+msgid "Route Code"
+msgstr "Cod rutare"
+
+msgid "Action"
+msgstr "Acțiune"
+
+msgid "Configure Routing Rule"
+msgstr "Configurare regulă de rutare"
+
+msgid "e.g. 1000"
+msgstr ""
+
+msgid "e.g. Sales Direct Line"
+msgstr ""
+
+msgid "-- None --"
+msgstr "-- Niciunul --"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid ""
+"DID (Direct Inward Dialing) routing automatically redirects incoming "
+"transmissions matching extension patterns directly to mapped operator "
+"inboxes or physical printers."
+msgstr ""
+"Rutarea DID (apelare directă în interior) redirecționează automat "
+"transmisiile primite care se potrivesc cu tiparele de extensie direct "
+"către căsuțele de e-mail ale operatorilor mapați sau imprimante fizice."
+
+msgid "SAML 2.0 Enterprise SSO"
+msgstr ""
+
+msgid ""
+"Single Sign-On integration with Okta, Microsoft Entra ID (Azure AD), "
+"Google Workspace & Keycloak"
+msgstr ""
+
+msgid "Download SP Metadata XML"
+msgstr ""
+
+msgid "Identity Provider (IdP) Settings"
+msgstr ""
+
+msgid "Enable SAML 2.0 Single Sign-On"
+msgstr ""
+
+msgid "Shows \"SAML 2.0 Enterprise SSO\" login option on login page"
+msgstr ""
+
+msgid "IdP Entity ID / Issuer"
+msgstr ""
+
+msgid "IdP Single Sign-On Service URL (HTTP-Redirect / POST)"
+msgstr ""
+
+msgid "IdP Public X.509 Certificate (PEM)"
+msgstr ""
+
+msgid "Just-in-Time (JIT) Provisioning"
+msgstr ""
+
+msgid "Auto-create account on first login"
+msgstr ""
+
+msgid "Default Role for JIT Users"
+msgstr ""
+
+msgid "Save SAML Configuration"
+msgstr ""
+
+msgid "NamiFAX SP Endpoints"
+msgstr ""
+
+msgid ""
+"Copy these endpoints into your Identity Provider (Azure AD, Okta, Google)"
+" console:"
+msgstr ""
+
+msgid "Assertion Consumer Service (ACS) URL"
+msgstr ""
+
+msgid "SP Entity ID / Metadata URL"
+msgstr ""
+
+msgid "NameID Format"
+msgstr ""
+
+msgid "External SMTP Gateway"
+msgstr ""
+
+msgid ""
+"Configure external mail delivery server for inbound fax notifications and"
+" user alerts"
+msgstr ""
+
+msgid "Diagnostics Result"
+msgstr ""
+
+msgid "Server Connection & Security"
+msgstr ""
+
+msgid "SMTP Host / Server"
+msgstr ""
+
+msgid "Encryption Protocol"
+msgstr ""
+
+msgid "None (Plain)"
+msgstr ""
+
+msgid "STARTTLS (587)"
+msgstr ""
+
+msgid "SSL / TLS (465)"
+msgstr ""
+
+msgid "Requires SMTP Authentication"
+msgstr ""
+
+#, fuzzy
+msgid "Username / Login"
+msgstr "nume utilizator"
+
+#, fuzzy
+msgid "Password / App Key"
+msgstr "parola"
+
+msgid "Default Sender Profile & Signatures"
+msgstr ""
+
+#, fuzzy
+msgid "From Email Address"
+msgstr "Adresă de e-mail"
+
+#, fuzzy
+msgid "From Display Name"
+msgstr "Firma"
+
+msgid "NamiFAX Corporate Dispatcher"
+msgstr ""
+
+msgid "Email Signature (Plaintext)"
+msgstr ""
+
+msgid "Sent automatically by NamiFAX Gateway."
+msgstr ""
+
+msgid "Last updated"
+msgstr "Actualizat ultima data"
+
+#, fuzzy
+msgid "Save Gateway Settings"
+msgstr "Setari"
+
+msgid "Diagnostic Self-Test"
+msgstr ""
+
+msgid ""
+"Verify server reachability, TLS handshake, credentials and message "
+"dispatch in real time."
+msgstr ""
+
+msgid "Target Recipient Email"
+msgstr ""
+
+#, fuzzy
+msgid "Send Diagnostic Email"
+msgstr "Trimite Fax"
+
+msgid "Enterprise storage lifecycle policies and S3 / MinIO / GCS cloud backends"
+msgstr ""
+
+msgid "Storage Lifecycle Policies"
+msgstr ""
+
+msgid "Purge Local TIFFs After (Days)"
+msgstr ""
+
+msgid ""
+"Frees local disk space if a PDF version exists. 0 = immediate after "
+"conversion."
+msgstr ""
+
+msgid "Full Fax Retention (Days)"
+msgstr ""
+
+msgid ""
+"Purge entire fax record and archival files after specified days. 0 = keep"
+" forever."
+msgstr ""
+
+msgid "Synchronize remote cloud object deletion on fax purge"
+msgstr ""
+
+msgid "Save Lifecycle Policy"
+msgstr ""
+
+msgid "Cloud Storage Backend"
+msgstr ""
+
+msgid "Storage Provider"
+msgstr ""
+
+msgid "Local Filesystem (Default)"
+msgstr ""
+
+msgid "Endpoint URL (MinIO / S3 Compatible)"
+msgstr ""
+
+msgid "Region"
+msgstr ""
+
+msgid "Bucket Name"
+msgstr ""
+
+msgid "Access Key ID"
+msgstr ""
+
+msgid "Secret Access Key"
+msgstr ""
+
+msgid "Key Prefix"
+msgstr ""
+
+msgid "Save Storage Config"
+msgstr ""
+
+msgid "Test Connection"
+msgstr ""
+
+msgid "Perform maintenance operations, service control, and backups."
+msgstr ""
+"Efectuați operațiuni de întreținere, control al serviciilor și copii de "
+"siguranță."
+
+msgid "HylaFAX Engine Active"
+msgstr "Motor HylaFAX activ"
+
+#, fuzzy
+msgid "Admin Dashboard"
+msgstr "Dashboard"
+
+msgid "Caution: Appliance Maintenance Operations"
+msgstr "Atenție: Operațiuni de întreținere a echipamentului"
+
+msgid ""
+"Restarting or shutting down services will interrupt active fax modem "
+"spooling and disconnect client sessions. Ensure all outbound "
+"transmissions in the modem queue are completed before initiating "
+"maintenance tasks."
+msgstr ""
+"Repornirea sau oprirea serviciilor va întrerupe derularea activă a cozii "
+"modemului de fax și va deconecta sesiunile clienților. Asigurați-vă că "
+"toate transmisiile de ieșire din coada modemului sunt finalizate înainte "
+"de inițierea sarcinilor de întreținere."
+
+msgid "Daemon Service Control"
+msgstr "Control servicii demon"
+
+msgid "Restart HylaFAX and NamiFAX web services, or halt background workers."
+msgstr ""
+"Reporniți serviciile web HylaFAX și NamiFAX sau opriți procesele de "
+"fundal."
+
+msgid "Reboot Services"
+msgstr "Repornire servicii"
+
+msgid "Shutdown Services"
+msgstr "Oprire servicii"
+
+msgid "Database & Archive Backup"
+msgstr "Copie de siguranță a bazei de date și a arhivei"
+
+msgid "Download system archives and database snapshots for offsite retention."
+msgstr ""
+"Descărcați arhive de sistem și instantanee ale bazei de date pentru "
+"păstrare externă."
+
+msgid "Download Archive"
+msgstr "Download Archive"
+
+msgid "Download Database"
+msgstr "Download Database"
+
+msgid "System Logs"
+msgstr "Istoric sistem"
+
+msgid "Audit logs and HylaFAX server operational event traces"
+msgstr ""
+"Jurnale de audit și trasări ale evenimentelor operaționale ale serverului"
+" HylaFAX"
+
+msgid "Keywords:"
+msgstr "Cuvinte cheie:"
+
+msgid "Search text..."
+msgstr ""
+
+msgid "Date:"
+msgstr "Dată:"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Log Text"
+msgstr "Text jurnal"
+
+msgid "No system logs found matching criteria."
+msgstr "Nu s-au găsit jurnale de sistem care să corespundă criteriilor."
+
+msgid "Transmissions and server events will be streamed here in real time."
+msgstr "Transmisiile și evenimentele de server vor fi transmise aici în timp real."
+
+msgid "Delete User"
+msgstr "Sterge Utilizator"
+
+msgid "Are you sure you want to delete the user"
+msgstr ""
+
+msgid "Manage system operator credentials, access permissions, and route mapping"
+msgstr ""
+"Gestionați acreditările operatorilor de sistem, permisiunile de acces și "
+"maparea rutelor"
+
+msgid "Create New User"
+msgstr "Creare utilizator nou"
+
+msgid "Last IP"
+msgstr "Ultimul IP"
+
+msgid "Superuser"
+msgstr "Superutilizator"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "YES"
+msgstr "Yes"
+
+msgid "NO"
+msgstr "No"
+
+msgid "users"
+msgstr "Utilizatori"
+
+msgid "user"
+msgstr "Utilizator"
+
+msgid "Modify User"
+msgstr "Modifica utilizator"
+
+msgid "New User"
+msgstr "Utilizator nou"
+
+msgid "Full Name"
+msgstr "Nume complet"
+
+msgid "Password"
+msgstr "parola"
+
+msgid "Leave empty to keep the current password (a new user is sent a random one)"
+msgstr ""
+
+msgid "Email Address"
+msgstr "Adresă de e-mail"
+
+msgid "Password expiration cycle"
+msgstr ""
+
+msgid "Language"
+msgstr "Limba"
+
+msgid "Password can be reused"
+msgstr ""
+
+msgid "My Company"
+msgstr ""
+
+msgid "My Location"
+msgstr ""
+
+msgid "My Voice Number"
+msgstr ""
+
+msgid "My Fax Number"
+msgstr ""
+
+msgid "TSI ID"
+msgstr ""
+
+msgid "Select Cover Page"
+msgstr ""
+
+msgid "New fax sound"
+msgstr ""
+
+msgid "Permissions & Capabilities"
+msgstr "Permisiuni și capabilități"
+
+msgid "Administrator Console"
+msgstr "Consolă administrator"
+
+msgid "Superuser Rights"
+msgstr "Drepturi de superutilizator"
+
+msgid "Send on Any Modem"
+msgstr "Trimite pe orice modem"
+
+msgid "You must first create a DID/DTMF group"
+msgstr ""
+
+msgid "You must first create a modem"
+msgstr ""
+
+#, fuzzy
+msgid "Categories"
+msgstr "Categorii fax vizualizabile"
+
+msgid "You must first create a category"
+msgstr ""
+
+#, fuzzy
+msgid "Archive Search"
+msgstr "Arhiva"
+
+msgid "Search all sent and received fax records by date, company, or fax number."
+msgstr ""
+"Căutați toate înregistrările de fax trimise și primite după dată, "
+"companie sau număr de fax."
+
+#, fuzzy
+msgid "Search Filters"
+msgstr "Cauta"
+
+msgid ""
+"Leave filters empty to search all records. Narrow results by adding more "
+"criteria."
+msgstr ""
+"Lăsați filtrele goale pentru a căuta în toate înregistrările. Restrângeți"
+" rezultatele adăugând mai multe criterii."
+
+msgid "Company search"
+msgstr "Cautare dupa companie"
+
+msgid "Company list"
+msgstr "Lista Firme"
+
+#, fuzzy
+msgid "Fax ID"
+msgstr "Fax Modems"
+
+msgid "e.g. 104"
+msgstr ""
+
+msgid "Keywords"
+msgstr "Cuvinte cheie"
+
+msgid "Company, number, notes..."
+msgstr ""
+
+#, fuzzy
+msgid "All Categories"
+msgstr "Categorii fax vizualizabile"
+
+msgid "User"
+msgstr "Utilizator"
+
+msgid "Start Date"
+msgstr "Data de inceput"
+
+msgid "End Date"
+msgstr "Data de sfarsit"
+
+#, fuzzy
+msgid "Direction"
+msgstr "DID/DTMF Route groups"
+
+#, python-format
+msgid "Total %(n)d results found."
+msgstr "Au fost gasite un total de %(n)d"
+
+msgid "Pages"
+msgstr "Pagini"
+
+msgid "Download PDF"
+msgstr ""
+
+msgid "Reply to fax"
+msgstr ""
+
+#, fuzzy
+msgid "Re-send"
+msgstr "Trimite"
+
+msgid "Email PDF"
+msgstr ""
+
+msgid "Add note to fax"
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid "Delete fax"
+msgstr ""
+
+msgid "Select"
+msgstr "Selecteaza"
+
+msgid "Unknown"
+msgstr ""
+
+#, fuzzy
+msgid "Received"
+msgstr "Arhiva"
+
+msgid "Sent"
+msgstr ""
+
+msgid "No results were found"
+msgstr "Nu a fost gasit nimic"
+
+msgid "Reset filters"
+msgstr "Resetare filtre"
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr "Urm"
+
+msgid "Name the sender"
+msgstr ""
+
+msgid "Select Contact Record"
+msgstr "Selectare înregistrare contact"
+
+msgid "Or type a new company name"
+msgstr ""
+
+msgid "Delete selected faxes?"
+msgstr ""
+
+msgid "faxes"
+msgstr "faxuri"
+
+msgid "No contacts found"
+msgstr ""
+
+msgid "Add"
+msgstr "Adauga"
+
+msgid "Close"
+msgstr "Închidere"
+
+msgid "Organize recipient groups for mass fax broadcasting and notifications."
+msgstr ""
+"Organizați grupuri de destinatari pentru difuzare în masă de faxuri și "
+"notificări."
+
+msgid "Create List"
+msgstr "Creare listă"
+
+msgid "Saved Distribution Lists"
+msgstr "Liste de distribuție salvate"
+
+msgid "members"
+msgstr "membri"
+
+msgid "Group Members & Settings"
+msgstr "Membri grup și setări"
+
+msgid "Create New Distribution List"
+msgstr "Creare listă nouă de distribuție"
+
+msgid "List Name"
+msgstr "List name"
+
+msgid "e.g. Executive Sales Team"
+msgstr ""
+
+msgid "Group Members (Contacts & Fax Numbers)"
+msgstr "Membri grup (Contacte și numere de fax)"
+
+#, fuzzy
+msgid "contacts assigned"
+msgstr "Contacte"
+
+msgid "No contacts assigned to this list yet."
+msgstr "Niciun contact alocat acestei liste încă."
+
+msgid "Add Member"
+msgstr "Adăugare membru"
+
+msgid "Delete this distribution list?"
+msgstr ""
+
+msgid "Edit Distribution List"
+msgstr "Editare listă de distribuție"
+
+msgid "Create Distribution List"
+msgstr "Creare listă de distribuție"
+
+msgid "Configure broadcast list parameters and recipient group members."
+msgstr ""
+"Configurați parametrii listei de difuzare și membrii grupului de "
+"destinatari."
+
+msgid "Back to Lists"
+msgstr "Înapoi la liste"
+
+msgid "Distribution List Profile"
+msgstr "Profil listă de distribuție"
+
+msgid "e.g. Finance Operations"
+msgstr ""
+
+msgid "Enrolled Members"
+msgstr "Membri înscriși"
+
+msgid "List ID:"
+msgstr "ID listă:"
+
+msgid "No contacts in this list."
+msgstr "Niciun contact în această listă."
+
+msgid "Add contacts to the list"
+msgstr ""
+
+msgid "Changes saved"
+msgstr ""
+
+msgid "Back"
+msgstr "[ Inapoi ]"
+
+#, fuzzy
+msgid "Email Address Book"
+msgstr "Adrese e-mail"
+
+msgid "Manage email recipients, transmission routing, and contacts directory."
+msgstr ""
+"Gestionați destinatarii de e-mail, rutarea transmisiilor și directorul de"
+" contacte."
+
+#, fuzzy
+msgid "New Contact"
+msgstr "Contacte"
+
+msgid "Contacts"
+msgstr "Contacte"
+
+msgid "recipients"
+msgstr "destinatari"
+
+#, fuzzy
+msgid "Contact Name"
+msgstr "Contacte"
+
+msgid "Company Affiliation"
+msgstr "Afiliere companie"
+
+msgid ""
+"No email contacts found in the directory. Click \"+ New Contact\" to "
+"register one."
+msgstr ""
+"Nu s-au găsit contacte de e-mail în agendă. Faceți clic pe \\\"+ Contact "
+"nou\\\" pentru a înregistra unul."
+
+msgid "Email Book - Edit Email Contact"
+msgstr "Agendă de e-mail - Editare contact de e-mail"
+
+msgid "Manage contact information and company affiliation in Email Book."
+msgstr ""
+"Gestionați informațiile de contact și afilierea companiei în Agenda de "
+"e-mail."
+
+msgid "Back to Email Book"
+msgstr "Înapoi la Agenda de e-mail"
+
+msgid "Contact Profile Details"
+msgstr "Detalii profil contact"
+
+msgid "John Doe"
+msgstr ""
+
+msgid "New Destination"
+msgstr ""
+
+msgid "Priority"
+msgstr "Priority"
+
+msgid "Modem / Device"
+msgstr ""
+
+msgid "Number of tries"
+msgstr ""
+
+msgid "Expire after"
+msgstr ""
+
+msgid "Now"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Hours"
+msgstr ""
+
+msgid "Days"
+msgstr ""
+
+msgid "Schedule Send Time"
+msgstr ""
+
+#, fuzzy
+msgid "Lost Password"
+msgstr "parola"
+
+msgid "Account Recovery Assistance"
+msgstr "Asistență pentru recuperarea contului"
+
+msgid "Back to Login"
+msgstr "Înapoi la autentificare"
+
+msgid "Your password will be sent to the given e-mail address."
+msgstr ""
+
+msgid "Once you have received your new password you can login in and change it."
+msgstr ""
+
+msgid "Login"
+msgstr "Autentificare"
+
+msgid ""
+"Please enter your e-mail address then click on the Send Password button. "
+"You will receive a new password shortly. Use this new password to access "
+"the site."
+msgstr ""
+
+msgid "E-mail address"
+msgstr "Adresa e-mail"
+
+msgid "Send Password"
+msgstr "Trimite Parola"
+
+msgid "Received faxes appear here automatically in real time."
+msgstr "Faxurile primite apar aici automat în timp real."
+
+msgid "Faxes"
+msgstr "faxuri"
+
+msgid "Fax"
+msgstr "Fax"
+
+#, fuzzy
+msgid "Archive Selected"
+msgstr "Arhiva"
+
+msgid "Delete Selected"
+msgstr "Ștergere elemente selectate"
+
+msgid "fax"
+msgstr ""
+
+#, fuzzy
+msgid "Preview"
+msgstr "Vizualizare Fax"
+
+msgid "Sender"
+msgstr "Sender"
+
+msgid "Page"
+msgstr "Pagina"
+
+msgid "of"
+msgstr "din"
+
+msgid "This number belongs to several companies. Which one is it?"
+msgstr ""
+
+msgid "Unknown Sender"
+msgstr ""
+
+msgid "View"
+msgstr "Vizualizare Fax"
+
+msgid "Reply"
+msgstr "Reply to FAX"
+
+msgid "Archive"
+msgstr "Arhiva"
+
+msgid "Email Fax"
+msgstr "Trimitere fax prin e-mail"
+
+msgid "Rotate"
+msgstr "Rotire Fax"
+
+msgid "Download TIFF"
+msgstr "Download TIFF"
+
+msgid "0 FAXES"
+msgstr "0 FAXURI"
+
+msgid ""
+"There are no incoming faxes waiting in your inbox. Incoming transmissions"
+" will automatically appear here in real time."
+msgstr ""
+"Nu există faxuri primite care așteaptă în căsuța de primire. Transmisiile"
+" primite vor apărea automat aici în timp real."
+
+msgid "Send Your First Fax"
+msgstr "Trimiteți primul dvs. fax"
+
+#, fuzzy
+msgid "Search Archive"
+msgstr "Arhiva"
+
+msgid "Getting Started with NamiFAX"
+msgstr "Ghid inițial NamiFAX"
+
+msgid "Receive Faxes"
+msgstr "Primire faxuri"
+
+msgid ""
+"When someone sends a fax to this system's number, it will appear here "
+"automatically."
+msgstr ""
+"Când cineva trimite un fax la numărul acestui sistem, acesta va apărea "
+"aici automat."
+
+#, fuzzy
+msgid "Send Faxes"
+msgstr "Trimite Fax"
+
+msgid "Click Send Fax to transmit a PDF or image document to any fax number."
+msgstr ""
+"Faceți clic pe Trimitere fax pentru a transmite un document PDF sau "
+"imagine către orice număr de fax."
+
+msgid "Manage Records"
+msgstr "Gestionare înregistrări"
+
+msgid ""
+"Download faxes as PDF, archive them for later, or search all records in "
+"the Archive."
+msgstr ""
+"Descărcați faxurile ca PDF, arhivați-le pentru mai târziu sau căutați "
+"toate înregistrările în Arhivă."
+
+msgid "Archive search"
+msgstr ""
+
+msgid "new fax"
+msgstr ""
+
+msgid "Outbox"
+msgstr "Outbox"
+
+msgid "lines"
+msgstr ""
+
+msgid "Settings"
+msgstr "Setari"
+
+msgid "Sign in"
+msgstr "Autentificare"
+
+msgid "Enter your credentials to continue."
+msgstr "Introduceți acreditările pentru a continua."
+
+#, fuzzy
+msgid "System Online"
+msgstr "Functii de sistem"
+
+msgid "Enter your username"
+msgstr ""
+
+msgid "Forgot password?"
+msgstr ""
+"Va rog sa introduceti adresa de mail si apoi sa apasati pe butonul "
+"Trimite Parola.Veti primi o parola noua in scurt timp.  Folositi aceasta "
+"parola pentru a accesa situl."
+
+msgid "Enter your password"
+msgstr ""
+
+msgid "Contact your system administrator if you need an account."
+msgstr "Contactați administratorul de sistem dacă aveți nevoie de un cont."
+
+msgid "Or continue with"
+msgstr ""
+
+msgid "Sign in with Passkey (Touch ID / Security Key)"
+msgstr ""
+
+msgid "SAML 2.0 Enterprise SSO (Okta / Entra ID)"
+msgstr ""
+
+msgid "Two-Factor Authentication"
+msgstr ""
+
+msgid ""
+"Enter the 6-digit code from your authenticator app or an emergency "
+"recovery code."
+msgstr ""
+
+#, fuzzy
+msgid "Authentication Code"
+msgstr "In atentia d-lui (d-nei)"
+
+msgid "123456 or 8-char backup code"
+msgstr ""
+
+msgid "Verify & Log In"
+msgstr ""
+
+msgid "Sign out?"
+msgstr ""
+
+msgid "Assign Company Name"
+msgstr "Atribuire nume companie"
+
+msgid "Associate document with registered enterprise contact"
+msgstr "Asociați documentul cu un contact corporativ înregistrat"
+
+msgid "Search Company Name"
+msgstr "Căutare nume companie"
+
+msgid "Type company name to filter..."
+msgstr ""
+
+#, fuzzy
+msgid "Delete Fax"
+msgstr "Sterge"
+
+msgid "Are you sure you want to delete this fax?"
+msgstr "Sigur doriți să ștergeți acest fax?"
+
+msgid "This operation will permanently purge the fax document archive."
+msgstr "Această operațiune va șterge definitiv arhiva de documente fax."
+
+msgid "Dispatch PDF document attachment to email recipients"
+msgstr "Trimitere atașament document PDF către destinatarii de e-mail"
+
+msgid "From"
+msgstr "De la"
+
+msgid "Recipients"
+msgstr "Destinatari"
+
+msgid "Choose from contacts"
+msgstr ""
+
+msgid "CC"
+msgstr ""
+
+msgid "BCC"
+msgstr ""
+
+msgid "Subject"
+msgstr "Subiect"
+
+msgid "PDF file name"
+msgstr "Nume fisier PDF"
+
+msgid "Message"
+msgstr "Mesaj"
+
+msgid "Archive fax"
+msgstr ""
+
+msgid "Send"
+msgstr "Trimite"
+
+msgid "Append internal administrative note or comments"
+msgstr "Adăugare notă administrativă internă sau comentarii"
+
+msgid "Note / Description"
+msgstr "Notă / Descriere"
+
+msgid "Enter transaction note or dispatch comments..."
+msgstr ""
+
+msgid "Transmission Report"
+msgstr "Raport de transmisie"
+
+msgid "Official facsimile delivery confirmation receipt"
+msgstr "Confirmare oficială de livrare a faxului"
+
+msgid "Print"
+msgstr "Print"
+
+#, fuzzy
+msgid "Company:"
+msgstr "Firma"
+
+msgid "Pages:"
+msgstr "Pagini:"
+
+msgid "Fax Number:"
+msgstr "Numar de fax"
+
+msgid "Database unavailable"
+msgstr ""
+
+msgid ""
+"The database cannot be reached right now. This page tries again every 10 "
+"seconds."
+msgstr ""
+
+msgid "Faxes currently queued or being transmitted."
+msgstr "Faxuri aflate în coada de așteptare sau în curs de transmitere."
+
+msgid ""
+"This page shows only faxes that are queued or in progress. Once "
+"delivered, they are removed from this list. Find completed records in the"
+msgstr ""
+"Această pagină afișează numai faxurile aflate în coadă sau în curs de "
+"desfășurare. Odată livrate, acestea sunt eliminate din această listă. "
+"Găsiți înregistrările finalizate în"
+
+msgid "jobs in progress"
+msgstr "sarcini în curs"
+
+msgid "job in progress"
+msgstr "sarcină în curs"
+
+msgid "Job ID"
+msgstr "ID sarcină"
+
+msgid "Dials"
+msgstr ""
+
+msgid "TTS"
+msgstr ""
+
+msgid "Modify"
+msgstr ""
+
+msgid "Kill job"
+msgstr ""
+
+msgid "Kill"
+msgstr ""
+
+msgid "Failed Transmissions"
+msgstr "Transmisii eșuate"
+
+msgid "Review the number or retry below."
+msgstr "Verificați numărul sau reîncercați mai jos."
+
+msgid "Retry"
+msgstr "Retry"
+
+msgid "No jobs in queue"
+msgstr "Nicio sarcină în coadă"
+
+msgid ""
+"There are no faxes waiting to be sent. Send a fax to see its progress "
+"here."
+msgstr ""
+"Nu există faxuri care așteaptă să fie trimise. Trimiteți un fax pentru "
+"a-i urmări progresul aici."
+
+#, fuzzy
+msgid "Send a Fax"
+msgstr "Trimite Fax"
+
+#, fuzzy
+msgid "Password Expired"
+msgstr "parola"
+
+msgid "Security Credentials Renewal"
+msgstr "Reînnoirea acreditărilor de securitate"
+
+msgid "Action Required"
+msgstr "Acțiune necesară"
+
+msgid ""
+"Your password has expired or needs to be changed before proceeding. "
+"Please enter your old password and choose a new password."
+msgstr ""
+"Parola dvs. a expirat sau trebuie schimbată înainte de a continua. Vă "
+"rugăm să introduceți parola veche și să alegeți o parolă nouă."
+
+msgid "Old Password"
+msgstr "Parola Veche"
+
+msgid "Current credentials"
+msgstr ""
+
+msgid "New Password"
+msgstr "Parola Noua"
+
+msgid "New secure passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Confirm New Password"
+msgstr ""
+"Va rog sa introduceti adresa de mail si apoi sa apasati pe butonul "
+"Trimite Parola.Veti primi o parola noua in scurt timp.  Folositi aceasta "
+"parola pentru a accesa situl."
+
+msgid "Re-type new passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Update Password"
+msgstr "parola"
+
+msgid "Fill in the details below and click Send."
+msgstr "Completați detaliile de mai jos și faceți clic pe Trimite."
+
+#, fuzzy
+msgid "Destination & Recipients"
+msgstr "Numar de fax"
+
+msgid "Enter the fax number and recipient details."
+msgstr "Introduceți numărul de fax și detaliile destinatarului."
+
+msgid "e.g. +1-555-0199  —  separate multiple numbers with semicolons"
+msgstr ""
+
+msgid "Choose a distribution list"
+msgstr ""
+
+msgid "To send to multiple recipients at once, separate numbers with a semicolon."
+msgstr ""
+
+msgid "Saved contacts are available in the"
+msgstr "Contactele salvate sunt disponibile în"
+
+msgid "Attention To"
+msgstr "In atentia d-lui (d-nei)"
+
+msgid "optional"
+msgstr "opțional"
+
+msgid "e.g. Jane Doe"
+msgstr ""
+
+msgid "Voice Number"
+msgstr "Numar de voce"
+
+msgid "Address"
+msgstr ""
+
+msgid "Zip"
+msgstr ""
+
+msgid "Subject / Regarding"
+msgstr "Subiect"
+
+msgid "e.g. Purchase Order #4921"
+msgstr ""
+
+msgid "Document Attachment"
+msgstr "Atașament document"
+
+msgid "Attach the file you want to transmit."
+msgstr "Atașați fișierul pe care doriți să îl transmiteți."
+
+msgid "Click to select a file"
+msgstr "Faceți clic pentru a selecta un fișier"
+
+msgid "Supported: PDF, TIFF, PostScript, TXT"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid ""
+"PDF is the most commonly used format. Convert Word or Excel files to PDF "
+"before attaching."
+msgstr ""
+"PDF este cel mai des utilizat format. Convertiți fișierele Word sau Excel"
+" în PDF înainte de atașare."
+
+msgid "Cover Page"
+msgstr "Foloseste pagina de garda"
+
+msgid "Add a cover sheet with sender and recipient info."
+msgstr ""
+"Adăugați o pagină de gardă cu informațiile expeditorului și ale "
+"destinatarului."
+
+#, fuzzy
+msgid "Include Cover Page"
+msgstr "Foloseste pagina de garda"
+
+#, fuzzy
+msgid "Cover Template"
+msgstr "Foloseste pagina de garda"
+
+msgid "No cover pages are set up"
+msgstr ""
+
+msgid "Send via Line"
+msgstr "Trimitere prin linia"
+
+msgid "No modems configured"
+msgstr "Nu exista modem-uri configurate"
+
+#, fuzzy
+msgid "Cover Comments"
+msgstr "Cover Pages"
+
+msgid "Notes or message to print on the cover sheet..."
+msgstr ""
+
+msgid "Advanced Options"
+msgstr "Opțiuni avansate"
+
+msgid "Priority, retries, notifications"
+msgstr "Prioritate, reîncercări, notificări"
+
+#, fuzzy
+msgid "Max Retries"
+msgstr "Categorii fax vizualizabile"
+
+msgid "Retries automatically on busy signal."
+msgstr "Reîncearcă automat la semnal de ocupat."
+
+msgid "The original fax is sent along."
+msgstr ""
+
+msgid "Cancel & return to Inbox"
+msgstr "Anulare și revenire la Căsuța de primire"
+
+#, fuzzy
+msgid "User Settings"
+msgstr "Setari"
+
+msgid ""
+"Configure your personal profile, fax station identity, and portal "
+"preferences."
+msgstr ""
+"Configurați profilul personal, identitatea stației de fax și preferințele"
+" portalului."
+
+msgid "Return to Inbox"
+msgstr "Revenire la Căsuța de primire"
+
+msgid "Personal & Organization Details"
+msgstr "Detalii personale și ale organizației"
+
+msgid "Office / Location"
+msgstr "Birou / Locație"
+
+msgid "Direct Voice Number"
+msgstr "Număr direct de telefon"
+
+#, fuzzy
+msgid "Direct Fax Number"
+msgstr "Numar de fax"
+
+msgid "Transmitting Station ID (TSI)"
+msgstr "ID stație de transmisie (TSI)"
+
+msgid "e.g. +1 555 123 4567"
+msgstr ""
+
+msgid "Header identifier imprinted on top of transmitted fax pages."
+msgstr ""
+"Identificator de antet imprimat în partea de sus a paginilor de fax "
+"transmise."
+
+msgid "Email & Fax Notification Signature"
+msgstr "Semnătură de notificare prin e-mail și fax"
+
+msgid "Portal & Delivery Preferences"
+msgstr "Preferințe pentru portal și livrare"
+
+msgid "Display Language"
+msgstr "Limbă de afișare"
+
+#, fuzzy
+msgid "Default Cover Page"
+msgstr "Foloseste pagina de garda"
+
+msgid "Faxes Per Page"
+msgstr "faxes per page"
+
+msgid "Archive Faxes Per Page"
+msgstr ""
+
+#, fuzzy
+msgid "Change Password"
+msgstr "parola"
+
+#, fuzzy
+msgid "Current Password"
+msgstr ""
+"Va rog sa introduceti adresa de mail si apoi sa apasati pe butonul "
+"Trimite Parola.Veti primi o parola noua in scurt timp.  Folositi aceasta "
+"parola pentru a accesa situl."
+
+msgid "Enter current password to verify"
+msgstr ""
+
+msgid "Enter secure new password"
+msgstr ""
+
+msgid "Re-type new password"
+msgstr ""
+
+#, fuzzy
+msgid "Update Settings"
+msgstr "Setari"
+
+msgid "Two-Factor Authentication (TOTP)"
+msgstr ""
+
+msgid ""
+"Protect your account with Google Authenticator, Authy, or compatible RFC "
+"6238 apps."
+msgstr ""
+
+msgid "Active / Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid ""
+"When enabled, signing in requires your password and a 6-digit one-time "
+"token from your mobile device."
+msgstr ""
+
+msgid "recovery codes left"
+msgstr ""
+
+msgid "Code from your app (to get new recovery codes)"
+msgstr ""
+
+msgid "New recovery codes"
+msgstr ""
+
+msgid "Turn off 2FA for your account?"
+msgstr ""
+
+msgid "Code or recovery code"
+msgstr ""
+
+msgid "Disable 2FA"
+msgstr ""
+
+msgid "Enable 2FA (Setup Authenticator)"
+msgstr ""
+
+msgid "FIDO2 Passkeys & Biometric Security Keys"
+msgstr ""
+
+msgid ""
+"Sign in securely without passwords using Touch ID, Face ID, Windows "
+"Hello, or YubiKey."
+msgstr ""
+
+msgid "Register New Passkey"
+msgstr ""
+
+msgid "Loading registered security keys..."
+msgstr ""
+
+msgid "No Passkeys registered yet."
+msgstr ""
+
+msgid ""
+"No Passkeys registered yet. Click Register to add Touch ID or a security "
+"key."
+msgstr ""
+
+msgid "Remove"
+msgstr "Eliminare"
+
+msgid ""
+"1. Scan this code with Google Authenticator, Authy or another RFC 6238 "
+"app, or type the key by hand."
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "2. Enter the 6-digit code the app shows"
+msgstr ""
+
+msgid "Turn on 2FA"
+msgstr ""
+
+msgid "Save your recovery codes"
+msgstr ""
+
+msgid ""
+"Each code works once if you lose your phone. They are shown only now; "
+"store them somewhere safe."
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Back to settings"
+msgstr ""
+
+msgid "Previous fax"
+msgstr "Faxul Anterior"
+
+msgid "Prev"
+msgstr "Prec"
+
+msgid "Next fax"
+msgstr "Faxul Urmator"
+
+msgid "Rotate fax"
+msgstr "Rotire Fax"
+
+#, python-format
+msgid "Invalid fax number: %(number)s"
+msgstr ""
+
+msgid "Address book entry saved."
+msgstr ""
+
+msgid "Please enter a valid fax number"
+msgstr ""
+
+msgid "You are not allowed to delete address book entries."
+msgstr ""
+
+msgid "You are not allowed to delete contacts."
+msgstr ""
+
+msgid "This modem already exists"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Cover page template removed successfully"
+msgstr ""
+
+msgid "Failed to remove cover page template"
+msgstr ""
+
+msgid "Failed to update cover page template"
+msgstr ""
+
+msgid "Cover page template registered successfully"
+msgstr ""
+
+msgid "Title and File are required"
+msgstr ""
+
+msgid "The company does not exist."
+msgstr ""
+
+msgid "The company and its fax numbers were deleted."
+msgstr ""
+
+msgid "Please enter a valid e-mail address."
+msgstr "Va rog introduceti o adresa de mail valida"
+
+msgid "Fax to Email settings saved"
+msgstr ""
+
+msgid "The system is rebooting. Please wait..."
+msgstr ""
+
+msgid "The system is shutting down. Please wait..."
+msgstr ""
+
+msgid "The command could not be run"
+msgstr ""
+
+msgid "There is no fax archive folder to download."
+msgstr ""
+
+msgid "The database dump could not be made"
+msgstr ""
+
+msgid "Access denied. Superadmin permission required."
+msgstr ""
+
+msgid "SMTP Gateway settings saved successfully."
+msgstr ""
+
+msgid "Printer name and host are required."
+msgstr ""
+
+msgid "Network printer registered successfully."
+msgstr ""
+
+msgid "Printer deleted successfully."
+msgstr ""
+
+msgid "Lifecycle policy saved successfully."
+msgstr ""
+
+msgid "Cloud storage configuration saved successfully."
+msgstr ""
+
+msgid "SAML 2.0 configuration saved successfully."
+msgstr ""
+
+msgid "Catch All"
+msgstr ""
+
+msgid "Never"
+msgstr ""
+
+msgid "Every 3 Months"
+msgstr ""
+
+msgid "Every 6 Months"
+msgstr ""
+
+msgid "You must enter a username"
+msgstr ""
+
+msgid "Non-alphanumeric characters are not allowed in username."
+msgstr "Numai caracterele alfa-numerice sunt permise in numele de utilizator."
+
+#, python-format
+msgid ""
+"Hello %(name)s,\n"
+"\n"
+"This email contains your username and password to log into NamiFAX "
+"(%(url)s)\n"
+"\n"
+"Username - %(username)s\n"
+"Password - %(password)s\n"
+"\n"
+"Please do not respond to this message as it is automatically generated "
+"and is for information purposes only"
+msgstr ""
+
+msgid "New User Details"
+msgstr "Detalii Utilizator Nou"
+
+msgid "The user does not exist."
+msgstr ""
+
+msgid "You cannot delete your own account."
+msgstr ""
+
+msgid "You cannot delete the last superuser."
+msgstr ""
+
+msgid "Please enter a valid number."
+msgstr ""
+
+msgid "Both sent and received faxes"
+msgstr "Faxuri trimise si receptionate"
+
+msgid "Only sent faxes"
+msgstr "Doar fax-urile trimise de catre mine"
+
+msgid "Only received faxes"
+msgstr "Doar faxurile receptionate"
+
+msgid "Account is disabled"
+msgstr ""
+
+#, python-format
+msgid "Too many failed attempts. Try again in %(minutes)d minutes."
+msgstr ""
+
+msgid "Invalid or expired verification code."
+msgstr ""
+
+#, python-format
+msgid ""
+"The user account %(user)s has this email associated with it.  A web user "
+"from %(ip)s has just requested that a new password be sent.\n"
+"\n"
+"Your New Password is: %(password)s\n"
+"\n"
+"If this was an error just login with your new password and then change "
+"your password to what you would like it to be."
+msgstr ""
+"Contul de utilizator %(user)s are acest e-mail asociat. Un utilizator web"
+" de la %(ip)s a cerut sa-i fie trimisa o noua parola. Noua parola este: "
+"%(password)s Daca aceasta a fost o greseala va puteti logina cu noua "
+"parola si apoi schimba parola."
+
+msgid "Email failed to send"
+msgstr "Email nu a putut fi trimis."
+
+msgid "Fax Contacts"
+msgstr ""
+
+msgid "Email Contacts"
+msgstr ""
+
+msgid "The fax document was not found."
+msgstr ""
+
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+msgid "Invalid job number."
+msgstr ""
+
+msgid "Any Available Line (Auto)"
+msgstr "Orice linie disponibilă (Auto)"
+
+msgid "You may not use this line."
+msgstr ""
+
+msgid "Your fax has been successfully queued to be faxed."
+msgstr ""
+
+msgid "Job"
+msgstr ""
+
+msgid "The code is not valid."
+msgstr ""
+
+msgid "The code did not match. Check the time on your phone and try again."
+msgstr ""
+
+msgid "The password is not correct."
+msgstr ""
+
+msgid "Add a note"
+msgstr "Adauga o nota"
+
+msgid "Account active"
+msgstr "Cont activ"
+
+msgid "The cover page was updated"
+msgstr ""
+
+msgid "The modem was created"
+msgstr "Modemul a fost creat"
+
+msgid "The modem was deleted"
+msgstr "Modemul a fost sters"
+
+msgid "The modem was updated"
+msgstr "Modemul a fost actualizat"
+
+msgid "Archive - show"
+msgstr ""
+
+msgid "Inbox - show"
+msgstr ""
+
+msgid "Assign a company name"
+msgstr "Asignati un nume de companie"
+
+msgid "You must enter a company name"
+msgstr "Trebuie sa introduceti un nume de companie"
+
+msgid "Contact details saved"
+msgstr "Detaliile de contact salvate"
+
+msgid "Remove entries"
+msgstr ""
+
+msgid "Save list name"
+msgstr ""
+
+msgid "The email failed to send."
+msgstr "Trimiterea e-mail-ului a esuat."
+
+msgid "The email was sent successfully."
+msgstr "E-mail-ul a fost trimis."
+
+msgid "Destination fax numbers"
+msgstr "Numerele de destinatie pentru fax"
+
+msgid "You must enter an alias"
+msgstr ""
+
+msgid "You must enter a device name"
+msgstr ""
+
+msgid "Modify Job"
+msgstr ""
+
+msgid "You must enter a name."
+msgstr "Trebuie sa introduceti un nume"
+
+msgid "Notify on requeue"
+msgstr "Notificare la reîncercare"
+
+msgid "Forward fax via email"
+msgstr "Trimite fax prin e-mail"
+
+msgid "To person"
+msgstr "In atentia d-lui (d-nei)"
+
+msgid "User can delete faxes"
+msgstr "Utilizatorul poate sterge fax-uri"
+
+msgid "User settings have been saved."
+msgstr "Setarile utilizatorului au fost salvate."
+
+msgid "Select All Faxes"
+msgstr "Selectare totală"
+
+#~ msgid "High"
+#~ msgstr "High"
+
+#~ msgid "Configure corporate contact identity and transmission routing defaults."
+#~ msgstr ""
+#~ "Configurați identitatea contactului corporativ "
+#~ "și valorile implicite de rutare a "
+#~ "transmisiilor."
+
+#~ msgid "Primary Company Profile"
+#~ msgstr "Profilul principal al companiei"
+
+#~ msgid "Recipient Contact & Physical Address"
+#~ msgstr "Contact destinatar și adresă fizică"
+
+#~ msgid "City / Postal Region"
+#~ msgstr "Oraș / Regiune poștală"
+
+#~ msgid "Category Tag"
+#~ msgstr "Etichetă categorie"
+
+#~ msgid "General"
+#~ msgstr "Normal"
+
+#~ msgid "Invoices & Billing"
+#~ msgstr "Facturi și facturare"
+
+#~ msgid "Legal"
+#~ msgstr "Juridic"
+
+#~ msgid "Description / Internal Notes"
+#~ msgstr "Descriere / Note interne"
+
+#~ msgid "Edit Forwarding Rule"
+#~ msgstr "Editare regulă de redirecționare"
+
+#~ msgid "Add Forwarding Rule"
+#~ msgstr "Adăugare regulă de redirecționare"
+
+#~ msgid ""
+#~ "Please enter your registered username or"
+#~ " email address below. Password reset "
+#~ "instructions will be dispatched to your"
+#~ " account email address."
+#~ msgstr ""
+#~ "Vă rugăm să introduceți mai jos "
+#~ "numele de utilizator înregistrat sau "
+#~ "adresa de e-mail. Instrucțiunile de "
+#~ "resetare a parolei vor fi trimise "
+#~ "la adresa de e-mail a contului "
+#~ "dvs."
+
+#~ msgid "Username or Email Address"
+#~ msgstr "Nume de utilizator sau adresă de e-mail"
+
+#~ msgid "Reset Password"
+#~ msgstr ""
+#~ "Va rog sa introduceti adresa de "
+#~ "mail si apoi sa apasati pe butonul"
+#~ " Trimite Parola.Veti primi o parola "
+#~ "noua in scurt timp.  Folositi aceasta"
+#~ " parola pentru a accesa situl."
+
+#~ msgid "Standard (Default)"
+#~ msgstr "Standard (Implicit)"
+
+#~ msgid "Urgent"
+#~ msgstr "Urgent"
+
+#~ msgid "Confidential"
+#~ msgstr "Confidențial"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Low"
+#~ msgstr "Low"
+
+#~ msgid "High (Urgent)"
+#~ msgstr "Ridicată (Urgent)"
+
+#~ msgid "Reply to Fax"
+#~ msgstr "Reply to FAX"
+
+#~ msgid "Dispatch quick reply transmission to originating sender"
+#~ msgstr "Trimitere răspuns rapid către expeditorul inițial"
+
+#~ msgid "Regarding (Subject)"
+#~ msgstr "Subiect"
+
+#~ msgid "Comments"
+#~ msgstr "Comentarii"
+
+#~ msgid "Destination"
+#~ msgstr "Numar de fax"
+
+#~ msgid "Queued"
+#~ msgstr "În coadă"
+
+#~ msgid "Reason"
+#~ msgstr "Motiv"
+
+#~ msgid "To send to multiple recipients at once, separate numbers with a comma."
+#~ msgstr ""
+#~ "Pentru a trimite către mai mulți "
+#~ "destinatari simultan, separați numerele prin"
+#~ " virgulă."
+
+#~ msgid "Save Modem"
+#~ msgstr "Fax Modems"
+
+#~ msgid "Configure User:"
+#~ msgstr "Configurare utilizator:"
+
+#~ msgid "recipient@example.com (comma separated)"
+#~ msgstr ""
+
+#~ msgid "NamiFAX Transmission Document"
+#~ msgstr ""
+
+#~ msgid "Please find the attached facsimile document."
+#~ msgstr ""
+
+#~ msgid "results"
+#~ msgstr "Reset"
+
+#~ msgid "result"
+#~ msgstr "Reset"
+
+#~ msgid "Keyword"
+#~ msgstr "Keyword"
+
+#~ msgid "Invoices / Orders"
+#~ msgstr "Facturi / Comenzi"
+
+#~ msgid "Legal / Contracts"
+#~ msgstr "Contacte"
+
+#~ msgid "From Date"
+#~ msgstr "Rotire Fax"
+
+#~ msgid "To Date"
+#~ msgstr "Rotire Fax"
+
+#~ msgid "Sent & Received"
+#~ msgstr "Trimise și primite"
+
+#~ msgid "Received only"
+#~ msgstr "Doar primite"
+
+#~ msgid "Sent only"
+#~ msgstr "Doar trimise"
+
+#~ msgid "Results"
+#~ msgstr "Reset"
+
+#~ msgid "records"
+#~ msgstr "înregistrări"
+
+#~ msgid "record"
+#~ msgstr "înregistrare"
+
+#~ msgid "No results found"
+#~ msgstr "Niciun rezultat găsit"
+
+#~ msgid "Try adjusting your search terms or date range."
+#~ msgstr "Încercați să ajustați termenii de căutare sau intervalul de date."
+
+#~ msgid "Search the Archive"
+#~ msgstr "Căutare în arhivă"
+
+#~ msgid "Enter a keyword or filter above and click Search to find fax records."
+#~ msgstr ""
+#~ "Introduceți un cuvânt cheie sau un "
+#~ "filtru mai sus și faceți clic pe"
+#~ " Căutare pentru a găsi înregistrări "
+#~ "de fax."
+
+#~ msgid "Showing"
+#~ msgstr "Se afișează"
+
+#~ msgid "of"
+#~ msgstr "din"
+
+#~ msgid "Fax Viewer"
+#~ msgstr "Vizualizator fax"
+
+#~ msgid "Page 1 of"
+#~ msgstr "Pagina 1 din"
+
+#~ msgid "FROM:"
+#~ msgstr "DE LA:"
+
+#~ msgid "DATE:"
+#~ msgstr "DATA:"
+
+#~ msgid "DEVICE:"
+#~ msgstr "DISPOZITIV:"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "TIFF"
+#~ msgstr "TIFF"
+
+#~ msgid "Total"
+#~ msgstr "Total"
+
+#~ msgid "Incoming Transmission"
+#~ msgstr "Transmisie primită"
+
+#~ msgid "FACSIMILE TRANSMISSION"
+#~ msgstr "TRANSMISIE FAX"
+
+#~ msgid "Date Received:"
+#~ msgstr "Data primirii:"
+
+#~ msgid "Originating Station:"
+#~ msgstr "Stație de origine:"
+
+#~ msgid "PORT"
+#~ msgstr "Priority"
+
+#~ msgid "High-Resolution Raster Preview"
+#~ msgstr "Previzualizare raster de înaltă rezoluție"
+
+#~ msgid "Device Line:"
+#~ msgstr "Linie dispozitiv:"
+
+#~ msgid "Download Original Document"
+#~ msgstr "Descărcare document original"
+
+#~ msgid "NamiFAX Enterprise Facsimile Engine"
+#~ msgstr "Motor de fax enterprise NamiFAX"
+
+#~ msgid "Archive ID:"
+#~ msgstr "Arhiva"
+
+#~ msgid "Add contact name or fax number..."
+#~ msgstr ""
+
+#~ msgid "Delete List"
+#~ msgstr "Delete list"
+
+#~ msgid "Save Changes"
+#~ msgstr "Cover Pages"
+
+#~ msgid "Supported: PDF, TIFF, PostScript, TXT · Max 10 MB"
+#~ msgstr "Acceptat: PDF, TIFF, PostScript, TXT · Max 10 MB"
+
+#~ msgid "Auto-select recommended"
+#~ msgstr "Se recomandă selecția automată"
+
+#~ msgid "Status:"
+#~ msgstr "Stare:"
+
+#~ msgid "Transmitted Successfully (OK)"
+#~ msgstr "Transmis cu succes (OK)"
+

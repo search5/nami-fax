@@ -1,0 +1,187 @@
+{% extends "admin_layout.jinja2" %}
+
+{% block title %}NamiFAX - Admin - SAML 2.0 SSO{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+
+  <!-- Header -->
+  <div class="border-b border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="p-2 bg-blue-500/10 border border-blue-500/20 rounded-lg text-blue-400">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+        </svg>
+      </div>
+      <div>
+        <h1 class="text-xl font-bold text-slate-100">{{ _('SAML 2.0 Enterprise SSO') }}</h1>
+        <p class="text-xs text-slate-400">{{ _('Single Sign-On integration with Okta, Microsoft Entra ID (Azure AD), Google Workspace & Keycloak') }}</p>
+      </div>
+    </div>
+    <div>
+      <a href="{{ saml.sp_metadata_url }}" target="_blank"
+         class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-medium transition">
+        <svg class="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+        <span>{{ _('Download SP Metadata XML') }}</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Messages -->
+  {% if message %}
+  <div class="p-4 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-400 text-sm flex items-center gap-2">
+    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+    </svg>
+    <span>{{ message }}</span>
+  </div>
+  {% endif %}
+
+  {% if error %}
+  <div class="p-4 rounded-lg bg-rose-950/40 border border-rose-500/30 text-rose-400 text-sm flex items-center gap-2">
+    <svg class="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+    </svg>
+    <span>{{ error }}</span>
+  </div>
+  {% endif %}
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- IdP Configuration Form -->
+    <div class="lg:col-span-2 bg-slate-900/60 border border-slate-800 rounded-xl p-5 space-y-4">
+      <h2 class="text-base font-semibold text-slate-200 border-b border-slate-800 pb-2">
+        {{ _('Identity Provider (IdP) Settings') }}
+      </h2>
+
+      <form method="POST" action="/admin/saml" class="space-y-4">
+        
+        <div class="flex items-center gap-3 p-3 bg-slate-950/60 border border-slate-800 rounded-lg">
+          <input type="checkbox" id="enabled" name="enabled" value="1"
+                 {% if saml.enabled %}checked{% endif %}
+                 class="w-4 h-4 rounded bg-slate-900 border-slate-700 text-blue-600 focus:ring-0">
+          <div>
+            <label for="enabled" class="text-sm font-medium text-slate-200 cursor-pointer">
+              {{ _('Enable SAML 2.0 Single Sign-On') }}
+            </label>
+            <p class="text-xs text-slate-500">{{ _('Shows "SAML 2.0 Enterprise SSO" login option on login page') }}</p>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">{{ _('IdP Entity ID / Issuer') }} *</label>
+          <input type="text" name="idp_entity_id" value="{{ saml.idp_entity_id }}" placeholder="https://sts.windows.net/... or https://dev-xxx.okta.com"
+                 class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-blue-500">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">{{ _('IdP Single Sign-On Service URL (HTTP-Redirect / POST)') }} *</label>
+          <input type="text" name="idp_sso_url" value="{{ saml.idp_sso_url }}" placeholder="https://login.microsoftonline.com/.../saml2"
+                 class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-blue-500">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-400 mb-1">{{ _('IdP Public X.509 Certificate (PEM)') }} *</label>
+          <textarea name="idp_x509_cert" rows="6" placeholder="-----BEGIN CERTIFICATE-----&#10;...&#10;-----END CERTIFICATE-----"
+                    class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs font-mono text-slate-300 focus:outline-none focus:border-blue-500">{{ saml.idp_x509_cert }}</textarea>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 pt-2">
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="jit_provisioning" name="jit_provisioning" value="1"
+                   {% if saml.jit_provisioning %}checked{% endif %}
+                   class="w-4 h-4 rounded bg-slate-950 border-slate-700 text-blue-600 focus:ring-0">
+            <div>
+              <label for="jit_provisioning" class="text-xs font-medium text-slate-300 cursor-pointer">
+                {{ _('Just-in-Time (JIT) Provisioning') }}
+              </label>
+              <p class="text-xs text-slate-500">{{ _('Auto-create account on first login') }}</p>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">{{ _('Default Role for JIT Users') }}</label>
+            <select name="default_role" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-blue-500">
+              <option value="user" {% if saml.default_role == 'user' %}selected{% endif %}>Standard User</option>
+              <option value="admin" {% if saml.default_role == 'admin' %}selected{% endif %}>Administrator</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="space-y-3 border-t border-slate-800 pt-4">
+          <div class="flex items-center gap-3 p-3 bg-slate-950/60 border border-slate-800 rounded-lg">
+            <input type="checkbox" id="saml_role_mapping" name="saml_role_mapping" value="1" {% if saml.role_mapping %}checked{% endif %}
+                   class="w-4 h-4 rounded bg-slate-900 border-slate-700 text-blue-600 focus:ring-0">
+            <div>
+              <label for="saml_role_mapping" class="text-sm font-medium text-slate-200 cursor-pointer">{{ _('Take rights from the identity provider') }}</label>
+              <p class="text-xs text-slate-500">{{ _('At every sign-in the account\'s administrator, superuser, delete and line rights follow the roles below (a role that is gone takes the right away). Settings changed here by hand are overwritten at the next SSO sign-in.') }}</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div><label class="block text-xs font-medium text-slate-400 mb-1">{{ _('Attribute that holds the roles') }}</label>
+              <input type="text" name="saml_role_attribute" value="{{ saml.role_attribute }}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-blue-500"></div>
+            <div><label class="block text-xs font-medium text-slate-400 mb-1">{{ _('Role: administrator') }}</label>
+              <input type="text" name="saml_role_admin" value="{{ saml.role_admin }}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-blue-500"></div>
+            <div><label class="block text-xs font-medium text-slate-400 mb-1">{{ _('Role: superuser') }}</label>
+              <input type="text" name="saml_role_superuser" value="{{ saml.role_superuser }}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-blue-500"></div>
+            <div><label class="block text-xs font-medium text-slate-400 mb-1">{{ _('Role: may delete faxes') }}</label>
+              <input type="text" name="saml_role_can_del" value="{{ saml.role_can_del }}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-blue-500"></div>
+            <div><label class="block text-xs font-medium text-slate-400 mb-1">{{ _('Role: send on any line') }}</label>
+              <input type="text" name="saml_role_any_modem" value="{{ saml.role_any_modem }}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-blue-500"></div>
+            <div><label class="block text-xs font-medium text-slate-400 mb-1">{{ _('Attribute with the lines (blank: not managed)') }}</label>
+              <input type="text" name="saml_attr_modems" value="{{ saml.attr_modems }}" placeholder="{{ _('modems') }}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-blue-500"></div>
+            <div><label class="block text-xs font-medium text-slate-400 mb-1">{{ _('Attribute with the categories (blank: not managed)') }}</label>
+              <input type="text" name="saml_attr_faxcats" value="{{ saml.attr_faxcats }}" placeholder="{{ _('faxcats') }}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-blue-500"></div>
+            <div><label class="block text-xs font-medium text-slate-400 mb-1">{{ _('Attribute with the DID routes (blank: not managed)') }}</label>
+              <input type="text" name="saml_attr_didroutes" value="{{ saml.attr_didroutes }}" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-blue-500"></div>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="py-2 px-4 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition shadow-lg shadow-blue-500/20">
+            {{ _('Save SAML Configuration') }}
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- SP Service Provider Information for IdP Config -->
+    <div class="lg:col-span-1 bg-slate-900/60 border border-slate-800 rounded-xl p-5 space-y-4">
+      <h2 class="text-base font-semibold text-slate-200 border-b border-slate-800 pb-2">
+        {{ _('NamiFAX SP Endpoints') }}
+      </h2>
+      <p class="text-xs text-slate-400">
+        {{ _('Copy these endpoints into your Identity Provider (Azure AD, Okta, Google) console:') }}
+      </p>
+
+      <div class="space-y-3">
+        <div>
+          <span class="block text-xs text-slate-500 font-medium">{{ _('Assertion Consumer Service (ACS) URL') }}</span>
+          <div class="mt-1 p-2 bg-slate-950 border border-slate-800 rounded font-mono text-xs text-blue-400 select-all break-all">
+            {{ saml.sp_acs_url }}
+          </div>
+        </div>
+
+        <div>
+          <span class="block text-xs text-slate-500 font-medium">{{ _('SP Entity ID / Metadata URL') }}</span>
+          <div class="mt-1 p-2 bg-slate-950 border border-slate-800 rounded font-mono text-xs text-blue-400 select-all break-all">
+            {{ saml.sp_metadata_url }}
+          </div>
+        </div>
+
+        <div>
+          <span class="block text-xs text-slate-500 font-medium">{{ _('NameID Format') }}</span>
+          <div class="mt-1 p-2 bg-slate-950 border border-slate-800 rounded font-mono text-xs text-slate-300">
+            urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

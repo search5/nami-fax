@@ -1,0 +1,2611 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: NamiFAX 4.0.Language: tMIME-Version: 1.Content-Type: "
+"text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-02 00:54+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: tr\n"
+"Language-Team: tr <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "Address Book"
+msgstr "Eposta Adresleri"
+
+msgid "Save frequently used fax numbers for quick access when sending."
+msgstr ""
+"Gönderim sırasında hızlı erişim için sık kullanılan faks numaralarını "
+"kaydedin."
+
+msgid "Company or fax number..."
+msgstr ""
+
+msgid "Search"
+msgstr "Arama"
+
+#, fuzzy
+msgid "New Company"
+msgstr "Şirket"
+
+msgid "Email Book"
+msgstr "E-posta Rehberi"
+
+msgid "Distribution Lists"
+msgstr "Dağıtım listeleri"
+
+#, fuzzy
+msgid "Company / Name"
+msgstr "Şirket"
+
+msgid "Fax Number"
+msgstr "Faks nosu"
+
+msgid "Email"
+msgstr "Eposta"
+
+msgid "Actions"
+msgstr "İşlemler"
+
+msgid "Send Fax"
+msgstr "Faks Gönder"
+
+msgid "Edit"
+msgstr "Düzenle"
+
+#, fuzzy
+msgid "No contacts yet"
+msgstr "Adresler"
+
+msgid "No contacts matched"
+msgstr "Eşleşen kişi bulunamadı"
+
+msgid ""
+"Add contacts to quickly select fax numbers when sending without typing "
+"them every time."
+msgstr ""
+"Her seferinde yazmak zorunda kalmadan, gönderim yaparken faks "
+"numaralarını hızla seçmek için kişiler ekleyin."
+
+msgid "Add First Contact"
+msgstr "İlk Kişiyi Ekle"
+
+#, fuzzy
+msgid "Edit Company"
+msgstr "Şirket"
+
+#, fuzzy
+msgid "Add New Company"
+msgstr "Şirket"
+
+msgid "Configure the company and every fax number it uses."
+msgstr ""
+
+#, fuzzy
+msgid "Back to Contacts"
+msgstr "Adresler"
+
+msgid "Upload contacts file (vCard)"
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "Company"
+msgstr "Şirket"
+
+#, fuzzy
+msgid "Company Name"
+msgstr "Şirket"
+
+msgid "e.g. Acme Corporation"
+msgstr ""
+
+msgid "Clear the number to remove it."
+msgstr ""
+
+msgid "Description"
+msgstr "Açıklama"
+
+msgid "Category"
+msgstr "Kategori"
+
+msgid "Location"
+msgstr "Yeri"
+
+msgid "Voice Telephone"
+msgstr "Sesli Telefon"
+
+msgid "Street Address"
+msgstr "Açık Adres"
+
+msgid "Zip / Postal Code"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Add a Fax Number"
+msgstr ""
+
+msgid "First Fax Number"
+msgstr ""
+
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Cancel"
+msgstr "İptal"
+
+msgid "Save"
+msgstr "Kaydet"
+
+#, fuzzy
+msgid "Dashboard Overview"
+msgstr "Dashboard"
+
+#, fuzzy
+msgid "SYSTEM OPERATIONAL"
+msgstr "Sistem fonksiyonları"
+
+msgid ""
+"Real-time status of fax spools, hardware serial modems, and registered "
+"users"
+msgstr ""
+"Faks kuyruklarının, donanım seri modemlerinin ve kayıtlı kullanıcıların "
+"gerçek zamanlı durumu"
+
+msgid "Users"
+msgstr "Kullanıcılar"
+
+msgid "Modems"
+msgstr "Modemleri Ayarla"
+
+#, fuzzy
+msgid "DID Routes"
+msgstr "DID/DTMF Route groups"
+
+#, fuzzy
+msgid "Logs"
+msgstr "Çıkış"
+
+#, fuzzy
+msgid "Fax Lines"
+msgstr "Fax Modems"
+
+msgid "Hardware Ready"
+msgstr "Donanım Hazır"
+
+#, fuzzy
+msgid "Active accounts"
+msgstr "Kullanıcılar"
+
+msgid "Backend Core"
+msgstr "Arka Uç Çekirdeği"
+
+msgid "unknown"
+msgstr ""
+
+msgid "Scheduler"
+msgstr "Zamanlayıcı"
+
+msgid "Running"
+msgstr "Çalışıyor"
+
+#, fuzzy
+msgid "Registered User Accounts"
+msgstr "Kullanıcılar"
+
+msgid "Manage Users"
+msgstr "Kullanıcıları Yönet"
+
+msgid "Name"
+msgstr "Ad"
+
+msgid "Username"
+msgstr "kullanıcı"
+
+msgid "Last Login"
+msgstr "Son Giriş"
+
+msgid "Server Status"
+msgstr "Sunucu Durumu"
+
+msgid "Core"
+msgstr "Çekirdek"
+
+msgid "Database Engine"
+msgstr "Veritabanı Motoru"
+
+msgid "System Scheduler"
+msgstr "Sistem Zamanlayıcısı"
+
+msgid "Configured Modems"
+msgstr "Yapılandırılmış Modemler"
+
+msgid "Administrator Workflow Guide"
+msgstr "Yönetici İş Akışı Kılavuzu"
+
+#, fuzzy
+msgid "Configure Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid ""
+"Route incoming faxes automatically based on recognized Code39 / QR "
+"barcodes"
+msgstr ""
+"Gelen faksları tanınan Code39 / QR barkodlarına göre otomatik olarak "
+"yönlendirin"
+
+#, fuzzy
+msgid "New Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode Routing Rules"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode:"
+msgstr "Barcode Routing"
+
+msgid "Contact:"
+msgstr "Adres"
+
+msgid "None"
+msgstr "Yok"
+
+msgid "Printer:"
+msgstr "Yazıcı:"
+
+#, fuzzy
+msgid "Edit Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Add Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "EDIT MODE"
+msgstr "Düzenle"
+
+msgid "NEW"
+msgstr "YENİ"
+
+msgid "Barcode"
+msgstr "Barcode"
+
+msgid "Alias"
+msgstr "Kısa Adı"
+
+#, fuzzy
+msgid "Contact Email"
+msgstr "Adresler"
+
+msgid "Printer"
+msgstr "Printer"
+
+msgid "Fax Categories"
+msgstr "Bağlı grupları"
+
+msgid ""
+"Manage classification tags and archival categories for organizing "
+"transmissions"
+msgstr ""
+"İletimleri düzenlemek için sınıflandırma etiketlerini ve arşiv "
+"kategorilerini yönetin"
+
+#, fuzzy
+msgid "New Category"
+msgstr "Bağlı grupları"
+
+#, fuzzy
+msgid "Existing Categories"
+msgstr "Bağlı grupları"
+
+msgid "Edit Category"
+msgstr "Kategoriyi Düzenle"
+
+#, fuzzy
+msgid "Add Category"
+msgstr "Bağlı grupları"
+
+msgid "Category Name"
+msgstr "Kategori adı"
+
+msgid "e.g. Invoices, Contracts"
+msgstr ""
+
+#, fuzzy
+msgid "Configure Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Manage facsimile PostScript cover page templates and layouts"
+msgstr "Faks PostScript kapak sayfası şablonlarını ve düzenlerini yönetin"
+
+#, fuzzy
+msgid "New Cover Page"
+msgstr "Başlık sayfası kullan"
+
+#, fuzzy
+msgid "Available Cover Pages"
+msgstr "Cover Pages"
+
+#, fuzzy
+msgid "Edit Cover Page"
+msgstr "Başlık sayfası kullan"
+
+#, fuzzy
+msgid "Add Cover Page"
+msgstr "Başlık sayfası kullan"
+
+msgid "Title"
+msgstr "Başlık"
+
+msgid "File"
+msgstr "Dosya"
+
+msgid "e.g. custom.ps"
+msgstr ""
+
+msgid "Cover Template Studio: Dynamic Tag References"
+msgstr ""
+
+msgid ""
+"Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF"
+" templates. The Cover Studio engine automatically substitutes them during"
+" fax rendering."
+msgstr ""
+
+msgid "Dynamic Configuration"
+msgstr "Dinamik Yapılandırma"
+
+msgid ""
+"Manage Caller ID blacklists and transmission rejection rules for modem "
+"devices"
+msgstr ""
+"Modem cihazları için Arayan Kimliği (Caller ID) kara listelerini ve "
+"iletim reddetme kurallarını yönetin"
+
+msgid "New Rule"
+msgstr "Yeni Kural"
+
+msgid "Blocked Caller IDs"
+msgstr "Engellenen Arayan Kimlikleri"
+
+msgid "Caller ID:"
+msgstr "Arayan Kimliği (Caller ID):"
+
+msgid "All Devices"
+msgstr "Tüm Cihazlar"
+
+msgid "Edit Caller ID Rule"
+msgstr "Arayan Kimliği Kuralını Düzenle"
+
+msgid "Add Caller ID Rule"
+msgstr "Arayan Kimliği Kuralı Ekle"
+
+msgid "Caller ID"
+msgstr "Caller ID"
+
+msgid "e.g. 5550199 or pattern"
+msgstr ""
+
+msgid "Modem Device"
+msgstr "Modem Cihazı"
+
+#, fuzzy
+msgid "Fax to Email"
+msgstr "Fax Modems"
+
+msgid ""
+"Configure automated inbound fax forwarding and PDF dispatch rules mapped "
+"by company"
+msgstr ""
+"Şirkete göre eşlenen otomatik gelen faks yönlendirme ve PDF gönderim "
+"kurallarını yapılandırın"
+
+msgid "Add companies in the Address Book"
+msgstr ""
+
+msgid "Company Forwarding Rules"
+msgstr "Şirket Yönlendirme Kuralları"
+
+msgid "fax numbers"
+msgstr "Faks Numaraları"
+
+msgid "Email:"
+msgstr "E-posta:"
+
+msgid "Edit Forwarding Rules"
+msgstr ""
+
+msgid "Forwarding Rules"
+msgstr ""
+
+msgid "This company has no fax numbers yet. Add them in the Address Book."
+msgstr ""
+
+msgid ""
+"Select a company on the left to set where the faxes received on each of "
+"its numbers are sent."
+msgstr ""
+
+#, fuzzy
+msgid "Control Panel"
+msgstr "Başlık sayfası kullan"
+
+msgid "User Portal"
+msgstr "User Portal"
+
+msgid "Inbox"
+msgstr "Gelen kutusu"
+
+#, fuzzy
+msgid "Overview"
+msgstr "Faksı Görüntüle"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Access Control"
+msgstr "Erişim Kontrolü"
+
+msgid "User Accounts"
+msgstr "Kullanıcılar"
+
+msgid "Hardware & Lines"
+msgstr "Donanım ve Hatlar"
+
+msgid "Fax Modems"
+msgstr "Fax Modems"
+
+msgid "Network Printers"
+msgstr ""
+
+#, fuzzy
+msgid "Inbound Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid "DID Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid "Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid "Content & Templates"
+msgstr "İçerik ve Şablonlar"
+
+msgid "Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Security & System"
+msgstr "Güvenlik ve Sistem"
+
+msgid "Blacklist (DynConf)"
+msgstr "Blacklist (DynConf)"
+
+msgid "System Audit Logs"
+msgstr "System Audit Logs"
+
+msgid "System Functions"
+msgstr "Sistem fonksiyonları"
+
+msgid "SMTP Gateway"
+msgstr ""
+
+msgid "Storage & Cloud"
+msgstr ""
+
+msgid "SAML 2.0 SSO"
+msgstr ""
+
+msgid "Logout"
+msgstr "Çıkış"
+
+msgid "Admin Control Panel"
+msgstr "Yönetici Kontrol Paneli"
+
+msgid "Appliance Engine Online"
+msgstr "Cihaz Motoru Çevrimiçi"
+
+msgid ""
+"Configure Modems hardware devices, physical serial ports, and print-"
+"forwarding rules"
+msgstr ""
+"Modem donanım cihazlarını, fiziksel seri bağlantı noktalarını ve yazdırma"
+" yönlendirme kurallarını yapılandırın"
+
+#, fuzzy
+msgid "Configure Modems"
+msgstr "Fax Modems"
+
+msgid "Active Modem Lines"
+msgstr "Aktif Modem Hatları"
+
+msgid "Device"
+msgstr "Aygıt"
+
+msgid "Contact"
+msgstr "Adres"
+
+msgid "Status"
+msgstr "Durum"
+
+#, fuzzy
+msgid "Edit Modem"
+msgstr "Fax Modems"
+
+msgid "Configure Modems Device"
+msgstr "Modem Cihazını Yapılandır"
+
+msgid "e.g. ttyS0"
+msgstr ""
+
+msgid "e.g. Main Inbound Line"
+msgstr ""
+
+msgid "Are you sure you want to delete this modem?"
+msgstr ""
+
+msgid "Create"
+msgstr "Oluştur"
+
+msgid "Appliance Note:"
+msgstr "Cihaz Notu:"
+
+msgid ""
+"Modems configured here must correspond to physical RS-232 serial devices,"
+" USB modems, or virtual IAX modems recognized by the underlying HylaFAX "
+"server."
+msgstr ""
+"Burada yapılandırılan modemler, alttaki HylaFAX sunucusu tarafından "
+"tanınan fiziksel RS-232 seri cihazlara, USB modemlere veya sanal IAX "
+"modemlerine karşılık gelmelidir."
+
+msgid "Direct RAW socket & IPP network printing dispatch for received faxes"
+msgstr ""
+
+msgid "Add Network Printer"
+msgstr ""
+
+msgid "Printer Name"
+msgstr ""
+
+msgid "e.g. Office HP LaserJet"
+msgstr ""
+
+msgid "Protocol"
+msgstr ""
+
+msgid "Host / IP"
+msgstr ""
+
+#, fuzzy
+msgid "Port"
+msgstr "Priority"
+
+msgid "Queue Name (Optional)"
+msgstr ""
+
+msgid "2nd Floor Accounting Printer"
+msgstr ""
+
+msgid "Register Printer"
+msgstr ""
+
+msgid "Configured Printers"
+msgstr ""
+
+msgid "No network printers configured yet. Add one using the form on the left."
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+msgid "Test Print"
+msgstr ""
+
+msgid "Are you sure you want to delete this printer?"
+msgstr ""
+
+#, fuzzy
+msgid "Configure DID Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid ""
+"Route incoming faxes by Direct Inward Dialing (DID) extension to specific"
+" email boxes or printers"
+msgstr ""
+"Gelen faksları Doğrudan Dahili Arama (DID) dahili numarasına göre belirli"
+" e-posta kutularına veya yazıcılara yönlendirin"
+
+#, fuzzy
+msgid "New DID Route"
+msgstr "DID/DTMF Route groups"
+
+#, fuzzy
+msgid "Active DID Routing Rules"
+msgstr "DID/DTMF Route groups"
+
+msgid "Route Code"
+msgstr "Yönlendirme Kodu"
+
+msgid "Action"
+msgstr "İşlem"
+
+msgid "Configure Routing Rule"
+msgstr "Yönlendirme Kuralını Yapılandır"
+
+msgid "e.g. 1000"
+msgstr ""
+
+msgid "e.g. Sales Direct Line"
+msgstr ""
+
+msgid "-- None --"
+msgstr "-- Yok --"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid ""
+"DID (Direct Inward Dialing) routing automatically redirects incoming "
+"transmissions matching extension patterns directly to mapped operator "
+"inboxes or physical printers."
+msgstr ""
+"DID (Doğrudan Dahili Arama) yönlendirmesi, dahili numara modelleriyle "
+"eşleşen gelen iletimleri doğrudan eşlenmiş operatör gelen kutularına veya"
+" fiziksel yazıcılara yönlendirir."
+
+msgid "SAML 2.0 Enterprise SSO"
+msgstr ""
+
+msgid ""
+"Single Sign-On integration with Okta, Microsoft Entra ID (Azure AD), "
+"Google Workspace & Keycloak"
+msgstr ""
+
+msgid "Download SP Metadata XML"
+msgstr ""
+
+msgid "Identity Provider (IdP) Settings"
+msgstr ""
+
+msgid "Enable SAML 2.0 Single Sign-On"
+msgstr ""
+
+msgid "Shows \"SAML 2.0 Enterprise SSO\" login option on login page"
+msgstr ""
+
+msgid "IdP Entity ID / Issuer"
+msgstr ""
+
+msgid "IdP Single Sign-On Service URL (HTTP-Redirect / POST)"
+msgstr ""
+
+msgid "IdP Public X.509 Certificate (PEM)"
+msgstr ""
+
+msgid "Just-in-Time (JIT) Provisioning"
+msgstr ""
+
+msgid "Auto-create account on first login"
+msgstr ""
+
+msgid "Default Role for JIT Users"
+msgstr ""
+
+msgid "Save SAML Configuration"
+msgstr ""
+
+msgid "NamiFAX SP Endpoints"
+msgstr ""
+
+msgid ""
+"Copy these endpoints into your Identity Provider (Azure AD, Okta, Google)"
+" console:"
+msgstr ""
+
+msgid "Assertion Consumer Service (ACS) URL"
+msgstr ""
+
+msgid "SP Entity ID / Metadata URL"
+msgstr ""
+
+msgid "NameID Format"
+msgstr ""
+
+msgid "External SMTP Gateway"
+msgstr ""
+
+msgid ""
+"Configure external mail delivery server for inbound fax notifications and"
+" user alerts"
+msgstr ""
+
+msgid "Diagnostics Result"
+msgstr ""
+
+msgid "Server Connection & Security"
+msgstr ""
+
+msgid "SMTP Host / Server"
+msgstr ""
+
+msgid "Encryption Protocol"
+msgstr ""
+
+msgid "None (Plain)"
+msgstr ""
+
+msgid "STARTTLS (587)"
+msgstr ""
+
+msgid "SSL / TLS (465)"
+msgstr ""
+
+msgid "Requires SMTP Authentication"
+msgstr ""
+
+#, fuzzy
+msgid "Username / Login"
+msgstr "kullanıcı"
+
+#, fuzzy
+msgid "Password / App Key"
+msgstr "şifre"
+
+msgid "Default Sender Profile & Signatures"
+msgstr ""
+
+#, fuzzy
+msgid "From Email Address"
+msgstr "E-posta Adresi"
+
+#, fuzzy
+msgid "From Display Name"
+msgstr "Şirket"
+
+msgid "NamiFAX Corporate Dispatcher"
+msgstr ""
+
+msgid "Email Signature (Plaintext)"
+msgstr ""
+
+msgid "Sent automatically by NamiFAX Gateway."
+msgstr ""
+
+msgid "Last updated"
+msgstr "Son Güncelleme"
+
+#, fuzzy
+msgid "Save Gateway Settings"
+msgstr "Ayarlar"
+
+msgid "Diagnostic Self-Test"
+msgstr ""
+
+msgid ""
+"Verify server reachability, TLS handshake, credentials and message "
+"dispatch in real time."
+msgstr ""
+
+msgid "Target Recipient Email"
+msgstr ""
+
+#, fuzzy
+msgid "Send Diagnostic Email"
+msgstr "Faks Gönder"
+
+msgid "Enterprise storage lifecycle policies and S3 / MinIO / GCS cloud backends"
+msgstr ""
+
+msgid "Storage Lifecycle Policies"
+msgstr ""
+
+msgid "Purge Local TIFFs After (Days)"
+msgstr ""
+
+msgid ""
+"Frees local disk space if a PDF version exists. 0 = immediate after "
+"conversion."
+msgstr ""
+
+msgid "Full Fax Retention (Days)"
+msgstr ""
+
+msgid ""
+"Purge entire fax record and archival files after specified days. 0 = keep"
+" forever."
+msgstr ""
+
+msgid "Synchronize remote cloud object deletion on fax purge"
+msgstr ""
+
+msgid "Save Lifecycle Policy"
+msgstr ""
+
+msgid "Cloud Storage Backend"
+msgstr ""
+
+msgid "Storage Provider"
+msgstr ""
+
+msgid "Local Filesystem (Default)"
+msgstr ""
+
+msgid "Endpoint URL (MinIO / S3 Compatible)"
+msgstr ""
+
+msgid "Region"
+msgstr ""
+
+msgid "Bucket Name"
+msgstr ""
+
+msgid "Access Key ID"
+msgstr ""
+
+msgid "Secret Access Key"
+msgstr ""
+
+msgid "Key Prefix"
+msgstr ""
+
+msgid "Save Storage Config"
+msgstr ""
+
+msgid "Test Connection"
+msgstr ""
+
+msgid "Perform maintenance operations, service control, and backups."
+msgstr "Bakım işlemlerini, servis kontrolünü ve yedeklemeleri gerçekleştirin."
+
+msgid "HylaFAX Engine Active"
+msgstr "HylaFAX Motoru Aktif"
+
+#, fuzzy
+msgid "Admin Dashboard"
+msgstr "Dashboard"
+
+msgid "Caution: Appliance Maintenance Operations"
+msgstr "Dikkat: Cihaz Bakım İşlemleri"
+
+msgid ""
+"Restarting or shutting down services will interrupt active fax modem "
+"spooling and disconnect client sessions. Ensure all outbound "
+"transmissions in the modem queue are completed before initiating "
+"maintenance tasks."
+msgstr ""
+"Hizmetlerin yeniden başlatılması veya kapatılması, etkin faks modemi "
+"kuyruğunu kesecek ve istemci oturumlarının bağlantısını kesecektir. Bakım"
+" görevlerini başlatmadan önce modem kuyruğundaki tüm giden iletimlerin "
+"tamamlandığından emin olun."
+
+msgid "Daemon Service Control"
+msgstr "Arka Plan Hizmet (Daemon) Kontrolü"
+
+msgid "Restart HylaFAX and NamiFAX web services, or halt background workers."
+msgstr ""
+"HylaFAX ve NamiFAX web servislerini yeniden başlatın veya arka plan "
+"çalışanlarını durdurun."
+
+msgid "Reboot Services"
+msgstr "Servisleri Yeniden Başlat"
+
+msgid "Shutdown Services"
+msgstr "Servisleri Kapat"
+
+msgid "Database & Archive Backup"
+msgstr "Veritabanı ve Arşiv Yedekleme"
+
+msgid "Download system archives and database snapshots for offsite retention."
+msgstr ""
+"Harici saklama için sistem arşivlerini ve veritabanı anlık görüntülerini "
+"indirin."
+
+msgid "Download Archive"
+msgstr "Download Archive"
+
+msgid "Download Database"
+msgstr "Download Database"
+
+msgid "System Logs"
+msgstr "Sistem kayıtları"
+
+msgid "Audit logs and HylaFAX server operational event traces"
+msgstr "Denetim günlükleri ve HylaFAX sunucusu operasyonel olay izleri"
+
+msgid "Keywords:"
+msgstr "Anahtar Kelimeler:"
+
+msgid "Search text..."
+msgstr ""
+
+msgid "Date:"
+msgstr "Tarih:"
+
+msgid "Date"
+msgstr "Tarih"
+
+msgid "Log Text"
+msgstr "Günlük Metni"
+
+msgid "No system logs found matching criteria."
+msgstr "Kriterlerle eşleşen sistem günlüğü bulunamadı."
+
+msgid "Transmissions and server events will be streamed here in real time."
+msgstr "İletimler ve sunucu olayları burada gerçek zamanlı olarak akıtılacaktır."
+
+msgid "Delete User"
+msgstr "Kullanıcı Sil"
+
+msgid "Are you sure you want to delete the user"
+msgstr ""
+
+msgid "Manage system operator credentials, access permissions, and route mapping"
+msgstr ""
+"Sistem operatörü kimlik bilgilerini, erişim izinlerini ve yönlendirme "
+"eşlemelerini yönetin"
+
+msgid "Create New User"
+msgstr "Yeni Kullanıcı Oluştur"
+
+msgid "Last IP"
+msgstr "Son erişilen IP"
+
+msgid "Superuser"
+msgstr "Süper Kullanıcı"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "YES"
+msgstr "Evet"
+
+msgid "NO"
+msgstr "Hayır"
+
+msgid "users"
+msgstr "Kullanıcılar"
+
+msgid "user"
+msgstr "Kullanıcı"
+
+msgid "Modify User"
+msgstr "Kullanıcı Değiştir"
+
+msgid "New User"
+msgstr "Yeni Kullanıcı"
+
+msgid "Full Name"
+msgstr "Ad Soyad"
+
+msgid "Password"
+msgstr "şifre"
+
+msgid "Leave empty to keep the current password (a new user is sent a random one)"
+msgstr ""
+
+msgid "Email Address"
+msgstr "E-posta Adresi"
+
+msgid "Password expiration cycle"
+msgstr ""
+
+msgid "Language"
+msgstr "Dil"
+
+msgid "Password can be reused"
+msgstr ""
+
+msgid "My Company"
+msgstr ""
+
+msgid "My Location"
+msgstr ""
+
+msgid "My Voice Number"
+msgstr ""
+
+msgid "My Fax Number"
+msgstr ""
+
+msgid "TSI ID"
+msgstr ""
+
+msgid "Select Cover Page"
+msgstr ""
+
+msgid "New fax sound"
+msgstr ""
+
+msgid "Permissions & Capabilities"
+msgstr "İzinler ve Yetkiler"
+
+msgid "Administrator Console"
+msgstr "Yönetici Konsolu"
+
+msgid "Superuser Rights"
+msgstr "Süper Kullanıcı Hakları"
+
+msgid "Send on Any Modem"
+msgstr "Herhangi Bir Modemden Gönder"
+
+msgid "You must first create a DID/DTMF group"
+msgstr ""
+
+msgid "You must first create a modem"
+msgstr ""
+
+#, fuzzy
+msgid "Categories"
+msgstr "Bağlı grupları"
+
+msgid "You must first create a category"
+msgstr ""
+
+#, fuzzy
+msgid "Archive Search"
+msgstr "Arşiv"
+
+msgid "Search all sent and received fax records by date, company, or fax number."
+msgstr ""
+"Tüm gönderilen ve alınan faks kayıtlarını tarihe, şirkete veya faks "
+"numarasına göre arayın."
+
+#, fuzzy
+msgid "Search Filters"
+msgstr "Arama"
+
+msgid ""
+"Leave filters empty to search all records. Narrow results by adding more "
+"criteria."
+msgstr ""
+"Tüm kayıtları aramak için filtreleri boş bırakın. Daha fazla ölçüt "
+"ekleyerek sonuçları daraltın."
+
+msgid "Company search"
+msgstr "Kurum arama"
+
+msgid "Company list"
+msgstr "Kurum listesi"
+
+#, fuzzy
+msgid "Fax ID"
+msgstr "Fax Modems"
+
+msgid "e.g. 104"
+msgstr ""
+
+msgid "Keywords"
+msgstr "Anahtar kelimeler"
+
+msgid "Company, number, notes..."
+msgstr ""
+
+#, fuzzy
+msgid "All Categories"
+msgstr "Bağlı grupları"
+
+msgid "User"
+msgstr "Kullanıcı"
+
+msgid "Start Date"
+msgstr "Başlangıç Tarihi"
+
+msgid "End Date"
+msgstr "Bitiş Tarihi"
+
+#, fuzzy
+msgid "Direction"
+msgstr "DID/DTMF Route groups"
+
+#, python-format
+msgid "Total %(n)d results found."
+msgstr "Toplam %(n)d sonuç bulundu."
+
+msgid "Pages"
+msgstr "Sayfa"
+
+msgid "Download PDF"
+msgstr "PDF olarak indir"
+
+msgid "Reply to fax"
+msgstr "Faksı cevapla"
+
+#, fuzzy
+msgid "Re-send"
+msgstr "Gönder"
+
+msgid "Email PDF"
+msgstr "PDF olarak eposta at"
+
+msgid "Add note to fax"
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid "Delete fax"
+msgstr ""
+
+msgid "Select"
+msgstr "Seç"
+
+msgid "Unknown"
+msgstr ""
+
+#, fuzzy
+msgid "Received"
+msgstr "Arşiv"
+
+msgid "Sent"
+msgstr ""
+
+msgid "No results were found"
+msgstr "Sonuç bulunamadı"
+
+msgid "Reset filters"
+msgstr "Filtreleri sıfırla"
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr "Sonraki"
+
+msgid "Name the sender"
+msgstr ""
+
+msgid "Select Contact Record"
+msgstr "Kişi Kaydını Seçin"
+
+msgid "Or type a new company name"
+msgstr ""
+
+msgid "Delete selected faxes?"
+msgstr ""
+
+msgid "faxes"
+msgstr "faks"
+
+msgid "No contacts found"
+msgstr ""
+
+msgid "Add"
+msgstr "Ekle"
+
+msgid "Close"
+msgstr "Kapat"
+
+msgid "Organize recipient groups for mass fax broadcasting and notifications."
+msgstr "Toplu faks yayını ve bildirimler için alıcı gruplarını düzenleyin."
+
+msgid "Create List"
+msgstr "Liste Oluştur"
+
+msgid "Saved Distribution Lists"
+msgstr "Kayıtlı Dağıtım Listeleri"
+
+msgid "members"
+msgstr "üye"
+
+msgid "Group Members & Settings"
+msgstr "Grup Üyeleri ve Ayarları"
+
+msgid "Create New Distribution List"
+msgstr "Yeni Dağıtım Listesi Oluştur"
+
+msgid "List Name"
+msgstr "Liste adı"
+
+msgid "e.g. Executive Sales Team"
+msgstr ""
+
+msgid "Group Members (Contacts & Fax Numbers)"
+msgstr "Grup Üyeleri (Kişiler ve Faks Numaraları)"
+
+#, fuzzy
+msgid "contacts assigned"
+msgstr "Adresler"
+
+msgid "No contacts assigned to this list yet."
+msgstr "Bu listeye henüz kişi atanmadı."
+
+msgid "Add Member"
+msgstr "Üye Ekle"
+
+msgid "Delete this distribution list?"
+msgstr "Bu dağıtım listesi silinsin mi?"
+
+msgid "Edit Distribution List"
+msgstr "Dağıtım Listesini Düzenle"
+
+msgid "Create Distribution List"
+msgstr "Dağıtım Listesi Oluştur"
+
+msgid "Configure broadcast list parameters and recipient group members."
+msgstr "Yayın listesi parametrelerini ve alıcı grubu üyelerini yapılandırın."
+
+msgid "Back to Lists"
+msgstr "Listelere Dön"
+
+msgid "Distribution List Profile"
+msgstr "Dağıtım Listesi Profili"
+
+msgid "e.g. Finance Operations"
+msgstr ""
+
+msgid "Enrolled Members"
+msgstr "Kayıtlı Üyeler"
+
+msgid "List ID:"
+msgstr "Liste Kimliği:"
+
+msgid "No contacts in this list."
+msgstr "Bu listede kişi yok."
+
+msgid "Add contacts to the list"
+msgstr ""
+
+msgid "Changes saved"
+msgstr "Değişiklikler kaydedildi"
+
+msgid "Back"
+msgstr "[ Geri ]"
+
+#, fuzzy
+msgid "Email Address Book"
+msgstr "Eposta Adresleri"
+
+msgid "Manage email recipients, transmission routing, and contacts directory."
+msgstr "E-posta alıcılarını, iletim yönlendirmesini ve kişiler dizinini yönetin."
+
+#, fuzzy
+msgid "New Contact"
+msgstr "Adresler"
+
+msgid "Contacts"
+msgstr "Adresler"
+
+msgid "recipients"
+msgstr "alıcı"
+
+#, fuzzy
+msgid "Contact Name"
+msgstr "Adresler"
+
+msgid "Company Affiliation"
+msgstr "Şirket Bağlantısı"
+
+msgid ""
+"No email contacts found in the directory. Click \"+ New Contact\" to "
+"register one."
+msgstr ""
+"Dizinde e-posta kişisi bulunamadı. Yeni bir tane kaydetmek için \\\"+ "
+"Yeni Kişi\\\"ye tıklayın."
+
+msgid "Email Book - Edit Email Contact"
+msgstr "E-posta Rehberi - E-posta Kişisini Düzenle"
+
+msgid "Manage contact information and company affiliation in Email Book."
+msgstr "E-posta Rehberinde kişi bilgilerini ve şirket bağlantısını yönetin."
+
+msgid "Back to Email Book"
+msgstr "E-posta Rehberine Dön"
+
+msgid "Contact Profile Details"
+msgstr "Kişi Profili Ayrıntıları"
+
+msgid "John Doe"
+msgstr ""
+
+msgid "New Destination"
+msgstr ""
+
+msgid "Priority"
+msgstr "Priority"
+
+msgid "Modem / Device"
+msgstr ""
+
+msgid "Number of tries"
+msgstr ""
+
+msgid "Expire after"
+msgstr ""
+
+msgid "Now"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Hours"
+msgstr ""
+
+msgid "Days"
+msgstr ""
+
+msgid "Schedule Send Time"
+msgstr ""
+
+#, fuzzy
+msgid "Lost Password"
+msgstr "şifre"
+
+msgid "Account Recovery Assistance"
+msgstr "Hesap Kurtarma Yardımı"
+
+msgid "Back to Login"
+msgstr "Girişe Dön"
+
+msgid "Your password will be sent to the given e-mail address."
+msgstr ""
+
+msgid "Once you have received your new password you can login in and change it."
+msgstr ""
+
+msgid "Login"
+msgstr "Giriş"
+
+msgid ""
+"Please enter your e-mail address then click on the Send Password button. "
+"You will receive a new password shortly. Use this new password to access "
+"the site."
+msgstr ""
+
+msgid "E-mail address"
+msgstr "Eposta adresi"
+
+msgid "Send Password"
+msgstr "Şifre gönder"
+
+msgid "Received faxes appear here automatically in real time."
+msgstr "Alınan fakslar burada gerçek zamanlı olarak otomatik görünür."
+
+msgid "Faxes"
+msgstr "faks"
+
+msgid "Fax"
+msgstr "Faks"
+
+#, fuzzy
+msgid "Archive Selected"
+msgstr "Arşiv"
+
+msgid "Delete Selected"
+msgstr "Seçilenleri Sil"
+
+msgid "fax"
+msgstr "Faks"
+
+#, fuzzy
+msgid "Preview"
+msgstr "Faksı Görüntüle"
+
+msgid "Sender"
+msgstr "Sender"
+
+msgid "Page"
+msgstr "Sayfa"
+
+msgid "of"
+msgstr "ile"
+
+msgid "This number belongs to several companies. Which one is it?"
+msgstr ""
+
+msgid "Unknown Sender"
+msgstr ""
+
+msgid "View"
+msgstr "Faksı Görüntüle"
+
+msgid "Reply"
+msgstr "Faksı cevapla"
+
+msgid "Archive"
+msgstr "Arşiv"
+
+msgid "Email Fax"
+msgstr "Faksı E-postayla Gönder"
+
+msgid "Rotate"
+msgstr "Döndür"
+
+msgid "Download TIFF"
+msgstr "TIFF olarak indir"
+
+msgid "0 FAXES"
+msgstr "0 FAKS"
+
+msgid ""
+"There are no incoming faxes waiting in your inbox. Incoming transmissions"
+" will automatically appear here in real time."
+msgstr ""
+"Gelen kutunuzda bekleyen gelen faks yok. Gelen iletimler burada gerçek "
+"zamanlı olarak otomatik olarak görünecektir."
+
+msgid "Send Your First Fax"
+msgstr "İlk Faksınızı Gönderin"
+
+#, fuzzy
+msgid "Search Archive"
+msgstr "Arşiv"
+
+msgid "Getting Started with NamiFAX"
+msgstr "NamiFAX'e Başlarken"
+
+msgid "Receive Faxes"
+msgstr "Faks Alın"
+
+msgid ""
+"When someone sends a fax to this system's number, it will appear here "
+"automatically."
+msgstr ""
+"Biri bu sistemin numarasına faks gönderdiğinde, burada otomatik olarak "
+"görünecektir."
+
+#, fuzzy
+msgid "Send Faxes"
+msgstr "Faks Gönder"
+
+msgid "Click Send Fax to transmit a PDF or image document to any fax number."
+msgstr ""
+"Herhangi bir faks numarasına PDF veya görsel belgesi iletmek için Faks "
+"Gönder'e tıklayın."
+
+msgid "Manage Records"
+msgstr "Kayıtları Yönetin"
+
+msgid ""
+"Download faxes as PDF, archive them for later, or search all records in "
+"the Archive."
+msgstr ""
+"Faksları PDF olarak indirin, daha sonra kullanmak üzere arşivleyin veya "
+"Arşivdeki tüm kayıtları arayın."
+
+msgid "Archive search"
+msgstr ""
+
+msgid "new fax"
+msgstr ""
+
+msgid "Outbox"
+msgstr "Giden kutusu"
+
+msgid "lines"
+msgstr ""
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+msgid "Sign in"
+msgstr "Giriş"
+
+msgid "Enter your credentials to continue."
+msgstr "Devam etmek için kimlik bilgilerinizi girin."
+
+#, fuzzy
+msgid "System Online"
+msgstr "Sistem fonksiyonları"
+
+msgid "Enter your username"
+msgstr ""
+
+msgid "Forgot password?"
+msgstr ""
+"Lütfen eposta adresini yazıp şifre Gönder düğmesine basınız.Yeni "
+"şifrenizi kısa bir zamanda alacaksınız. Siteye girmek için alacağınız "
+"yeni şifrenizi kullanınız"
+
+msgid "Enter your password"
+msgstr ""
+
+msgid "Contact your system administrator if you need an account."
+msgstr "Bir hesaba ihtiyacınız varsa sistem yöneticinizle iletişime geçin."
+
+msgid "Or continue with"
+msgstr ""
+
+msgid "Sign in with Passkey (Touch ID / Security Key)"
+msgstr ""
+
+msgid "SAML 2.0 Enterprise SSO (Okta / Entra ID)"
+msgstr ""
+
+msgid "Two-Factor Authentication"
+msgstr ""
+
+msgid ""
+"Enter the 6-digit code from your authenticator app or an emergency "
+"recovery code."
+msgstr ""
+
+#, fuzzy
+msgid "Authentication Code"
+msgstr "Kime"
+
+msgid "123456 or 8-char backup code"
+msgstr ""
+
+msgid "Verify & Log In"
+msgstr ""
+
+msgid "Sign out?"
+msgstr ""
+
+msgid "Assign Company Name"
+msgstr "Şirket Adı Ata"
+
+msgid "Associate document with registered enterprise contact"
+msgstr "Belgeyi kayıtlı kurumsal kişiyle ilişkilendirin"
+
+msgid "Search Company Name"
+msgstr "Şirket Adı Ara"
+
+msgid "Type company name to filter..."
+msgstr ""
+
+#, fuzzy
+msgid "Delete Fax"
+msgstr "Sil"
+
+msgid "Are you sure you want to delete this fax?"
+msgstr "Bu faksı silmek istediğinizden emin misiniz?"
+
+msgid "This operation will permanently purge the fax document archive."
+msgstr "Bu işlem faks belgesi arşivini kalıcı olarak temizleyecektir."
+
+msgid "Dispatch PDF document attachment to email recipients"
+msgstr "PDF belge ekini e-posta alıcılarına gönderin"
+
+msgid "From"
+msgstr "Kimden"
+
+msgid "Recipients"
+msgstr "Alıcılar"
+
+msgid "Choose from contacts"
+msgstr ""
+
+msgid "CC"
+msgstr ""
+
+msgid "BCC"
+msgstr ""
+
+msgid "Subject"
+msgstr "Konu"
+
+msgid "PDF file name"
+msgstr "PDF dosya adı"
+
+msgid "Message"
+msgstr "Mesaj"
+
+msgid "Archive fax"
+msgstr ""
+
+msgid "Send"
+msgstr "Gönder"
+
+msgid "Append internal administrative note or comments"
+msgstr "Dahili yönetim notu veya yorum ekleyin"
+
+msgid "Note / Description"
+msgstr "Not / Açıklama"
+
+msgid "Enter transaction note or dispatch comments..."
+msgstr ""
+
+msgid "Transmission Report"
+msgstr "İletim Raporu"
+
+msgid "Official facsimile delivery confirmation receipt"
+msgstr "Resmi faks teslimat onay makbuzu"
+
+msgid "Print"
+msgstr "Print"
+
+#, fuzzy
+msgid "Company:"
+msgstr "Şirket"
+
+msgid "Pages:"
+msgstr "Sayfa:"
+
+msgid "Fax Number:"
+msgstr ""
+
+msgid "Database unavailable"
+msgstr ""
+
+msgid ""
+"The database cannot be reached right now. This page tries again every 10 "
+"seconds."
+msgstr ""
+
+msgid "Faxes currently queued or being transmitted."
+msgstr "Şu anda kuyrukta olan veya iletilen fakslar."
+
+msgid ""
+"This page shows only faxes that are queued or in progress. Once "
+"delivered, they are removed from this list. Find completed records in the"
+msgstr ""
+"Bu sayfa yalnızca kuyrukta veya işlemde olan faksları gösterir. Teslim "
+"edildikten sonra bu listeden kaldırılırlar. Tamamlanan kayıtları şurada "
+"bulabilirsiniz:"
+
+msgid "jobs in progress"
+msgstr "devam eden iş"
+
+msgid "job in progress"
+msgstr "devam eden iş"
+
+msgid "Job ID"
+msgstr "İş Kimliği"
+
+msgid "Dials"
+msgstr "Aramalar"
+
+msgid "TTS"
+msgstr ""
+
+msgid "Modify"
+msgstr ""
+
+msgid "Kill job"
+msgstr "Görevi sonlandır"
+
+msgid "Kill"
+msgstr ""
+
+msgid "Failed Transmissions"
+msgstr "Başarısız İletimler"
+
+msgid "Review the number or retry below."
+msgstr "Numarayı kontrol edin veya aşağıdan tekrar deneyin."
+
+msgid "Retry"
+msgstr "Retry"
+
+msgid "No jobs in queue"
+msgstr "Kuyrukta iş yok"
+
+msgid ""
+"There are no faxes waiting to be sent. Send a fax to see its progress "
+"here."
+msgstr ""
+"Gönderilmeyi bekleyen faks yok. İlerlemesini burada görmek için bir faks "
+"gönderin."
+
+#, fuzzy
+msgid "Send a Fax"
+msgstr "Faks Gönder"
+
+#, fuzzy
+msgid "Password Expired"
+msgstr "şifre"
+
+msgid "Security Credentials Renewal"
+msgstr "Güvenlik Kimlik Bilgilerini Yenileme"
+
+msgid "Action Required"
+msgstr "İşlem Gerekiyor"
+
+msgid ""
+"Your password has expired or needs to be changed before proceeding. "
+"Please enter your old password and choose a new password."
+msgstr ""
+"Şifrenizin süresi doldu veya devam etmeden önce değiştirilmesi gerekiyor."
+" Lütfen eski şifrenizi girin ve yeni bir şifre seçin."
+
+msgid "Old Password"
+msgstr "Eski şifre"
+
+msgid "Current credentials"
+msgstr ""
+
+msgid "New Password"
+msgstr "Yeni şifre"
+
+msgid "New secure passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Confirm New Password"
+msgstr ""
+"Lütfen eposta adresini yazıp şifre Gönder düğmesine basınız.Yeni "
+"şifrenizi kısa bir zamanda alacaksınız. Siteye girmek için alacağınız "
+"yeni şifrenizi kullanınız"
+
+msgid "Re-type new passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Update Password"
+msgstr "şifre"
+
+msgid "Fill in the details below and click Send."
+msgstr "Aşağıdaki ayrıntıları doldurun ve Gönder'e tıklayın."
+
+#, fuzzy
+msgid "Destination & Recipients"
+msgstr "Faks nosu"
+
+msgid "Enter the fax number and recipient details."
+msgstr "Faks numarasını ve alıcı ayrıntılarını girin."
+
+msgid "e.g. +1-555-0199  —  separate multiple numbers with semicolons"
+msgstr ""
+
+msgid "Choose a distribution list"
+msgstr ""
+
+msgid "To send to multiple recipients at once, separate numbers with a semicolon."
+msgstr ""
+
+msgid "Saved contacts are available in the"
+msgstr "Kayıtlı kişiler şurada mevcuttur:"
+
+msgid "Attention To"
+msgstr "Kime"
+
+msgid "optional"
+msgstr "isteğe bağlı"
+
+msgid "e.g. Jane Doe"
+msgstr ""
+
+msgid "Voice Number"
+msgstr "Sesli nosu"
+
+msgid "Address"
+msgstr ""
+
+msgid "Zip"
+msgstr ""
+
+msgid "Subject / Regarding"
+msgstr "Konu"
+
+msgid "e.g. Purchase Order #4921"
+msgstr ""
+
+msgid "Document Attachment"
+msgstr "Belge Eki"
+
+msgid "Attach the file you want to transmit."
+msgstr "İletmek istediğiniz dosyayı ekleyin."
+
+msgid "Click to select a file"
+msgstr "Bir dosya seçmek için tıklayın"
+
+msgid "Supported: PDF, TIFF, PostScript, TXT"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid ""
+"PDF is the most commonly used format. Convert Word or Excel files to PDF "
+"before attaching."
+msgstr ""
+"PDF en sık kullanılan formattır. Eklemeden önce Word veya Excel "
+"dosyalarını PDF'ye dönüştürün."
+
+msgid "Cover Page"
+msgstr "Başlık sayfası kullan"
+
+msgid "Add a cover sheet with sender and recipient info."
+msgstr "Gönderen ve alıcı bilgilerini içeren bir kapak sayfası ekleyin."
+
+#, fuzzy
+msgid "Include Cover Page"
+msgstr "Başlık sayfası kullan"
+
+#, fuzzy
+msgid "Cover Template"
+msgstr "Başlık sayfası kullan"
+
+msgid "No cover pages are set up"
+msgstr ""
+
+msgid "Send via Line"
+msgstr "Hat üzerinden gönder"
+
+msgid "No modems configured"
+msgstr "Ayarlanmış bir modem yok"
+
+#, fuzzy
+msgid "Cover Comments"
+msgstr "Cover Pages"
+
+msgid "Notes or message to print on the cover sheet..."
+msgstr ""
+
+msgid "Advanced Options"
+msgstr "Gelişmiş Seçenekler"
+
+msgid "Priority, retries, notifications"
+msgstr "Öncelik, yeniden denemeler, bildirimler"
+
+#, fuzzy
+msgid "Max Retries"
+msgstr "Bağlı grupları"
+
+msgid "Retries automatically on busy signal."
+msgstr "Meşgul sinyalinde otomatik olarak tekrar dener."
+
+msgid "The original fax is sent along."
+msgstr ""
+
+msgid "Cancel & return to Inbox"
+msgstr "İptal et ve Gelen Kutusuna dön"
+
+#, fuzzy
+msgid "User Settings"
+msgstr "Ayarlar"
+
+msgid ""
+"Configure your personal profile, fax station identity, and portal "
+"preferences."
+msgstr ""
+"Kişisel profilinizi, faks istasyonu kimliğinizi ve portal tercihlerinizi "
+"yapılandırın."
+
+msgid "Return to Inbox"
+msgstr "Gelen Kutusuna Dön"
+
+msgid "Personal & Organization Details"
+msgstr "Kişisel ve Kuruluş Ayrıntıları"
+
+msgid "Office / Location"
+msgstr "Ofis / Konum"
+
+msgid "Direct Voice Number"
+msgstr "Doğrudan Ses Numarası"
+
+#, fuzzy
+msgid "Direct Fax Number"
+msgstr "Faks nosu"
+
+msgid "Transmitting Station ID (TSI)"
+msgstr "Gönderici İstasyon Kimliği (TSI)"
+
+msgid "e.g. +1 555 123 4567"
+msgstr ""
+
+msgid "Header identifier imprinted on top of transmitted fax pages."
+msgstr "İletilen faks sayfalarının üst kısmına basılan başlık tanımlayıcısı."
+
+msgid "Email & Fax Notification Signature"
+msgstr "E-posta ve Faks Bildirim İmzası"
+
+msgid "Portal & Delivery Preferences"
+msgstr "Portal ve Teslimat Tercihleri"
+
+msgid "Display Language"
+msgstr "Görüntüleme Dili"
+
+#, fuzzy
+msgid "Default Cover Page"
+msgstr "Başlık sayfası kullan"
+
+msgid "Faxes Per Page"
+msgstr "faxes per page"
+
+msgid "Archive Faxes Per Page"
+msgstr ""
+
+#, fuzzy
+msgid "Change Password"
+msgstr "şifre"
+
+#, fuzzy
+msgid "Current Password"
+msgstr ""
+"Lütfen eposta adresini yazıp şifre Gönder düğmesine basınız.Yeni "
+"şifrenizi kısa bir zamanda alacaksınız. Siteye girmek için alacağınız "
+"yeni şifrenizi kullanınız"
+
+msgid "Enter current password to verify"
+msgstr ""
+
+msgid "Enter secure new password"
+msgstr ""
+
+msgid "Re-type new password"
+msgstr ""
+
+#, fuzzy
+msgid "Update Settings"
+msgstr "Ayarlar"
+
+msgid "Two-Factor Authentication (TOTP)"
+msgstr ""
+
+msgid ""
+"Protect your account with Google Authenticator, Authy, or compatible RFC "
+"6238 apps."
+msgstr ""
+
+msgid "Active / Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid ""
+"When enabled, signing in requires your password and a 6-digit one-time "
+"token from your mobile device."
+msgstr ""
+
+msgid "recovery codes left"
+msgstr ""
+
+msgid "Code from your app (to get new recovery codes)"
+msgstr ""
+
+msgid "New recovery codes"
+msgstr ""
+
+msgid "Turn off 2FA for your account?"
+msgstr ""
+
+msgid "Code or recovery code"
+msgstr ""
+
+msgid "Disable 2FA"
+msgstr ""
+
+msgid "Enable 2FA (Setup Authenticator)"
+msgstr ""
+
+msgid "FIDO2 Passkeys & Biometric Security Keys"
+msgstr ""
+
+msgid ""
+"Sign in securely without passwords using Touch ID, Face ID, Windows "
+"Hello, or YubiKey."
+msgstr ""
+
+msgid "Register New Passkey"
+msgstr ""
+
+msgid "Loading registered security keys..."
+msgstr ""
+
+msgid "No Passkeys registered yet."
+msgstr ""
+
+msgid ""
+"No Passkeys registered yet. Click Register to add Touch ID or a security "
+"key."
+msgstr ""
+
+msgid "Remove"
+msgstr "Kaldır"
+
+msgid ""
+"1. Scan this code with Google Authenticator, Authy or another RFC 6238 "
+"app, or type the key by hand."
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "2. Enter the 6-digit code the app shows"
+msgstr ""
+
+msgid "Turn on 2FA"
+msgstr ""
+
+msgid "Save your recovery codes"
+msgstr ""
+
+msgid ""
+"Each code works once if you lose your phone. They are shown only now; "
+"store them somewhere safe."
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Back to settings"
+msgstr ""
+
+msgid "Previous fax"
+msgstr "Önceki faks"
+
+msgid "Prev"
+msgstr "Önceki"
+
+msgid "Next fax"
+msgstr "Sonraki faks"
+
+msgid "Rotate fax"
+msgstr "Döndür"
+
+#, python-format
+msgid "Invalid fax number: %(number)s"
+msgstr ""
+
+msgid "Address book entry saved."
+msgstr ""
+
+msgid "Please enter a valid fax number"
+msgstr ""
+
+msgid "You are not allowed to delete address book entries."
+msgstr ""
+
+msgid "You are not allowed to delete contacts."
+msgstr ""
+
+msgid "This modem already exists"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Cover page template removed successfully"
+msgstr ""
+
+msgid "Failed to remove cover page template"
+msgstr ""
+
+msgid "Failed to update cover page template"
+msgstr ""
+
+msgid "Cover page template registered successfully"
+msgstr ""
+
+msgid "Title and File are required"
+msgstr ""
+
+msgid "The company does not exist."
+msgstr ""
+
+msgid "The company and its fax numbers were deleted."
+msgstr ""
+
+msgid "Please enter a valid e-mail address."
+msgstr "Lütfen geçerli bir eposta adresi giriniz."
+
+msgid "Fax to Email settings saved"
+msgstr ""
+
+msgid "The system is rebooting. Please wait..."
+msgstr ""
+
+msgid "The system is shutting down. Please wait..."
+msgstr ""
+
+msgid "The command could not be run"
+msgstr ""
+
+msgid "There is no fax archive folder to download."
+msgstr ""
+
+msgid "The database dump could not be made"
+msgstr ""
+
+msgid "Access denied. Superadmin permission required."
+msgstr ""
+
+msgid "SMTP Gateway settings saved successfully."
+msgstr ""
+
+msgid "Printer name and host are required."
+msgstr ""
+
+msgid "Network printer registered successfully."
+msgstr ""
+
+msgid "Printer deleted successfully."
+msgstr ""
+
+msgid "Lifecycle policy saved successfully."
+msgstr ""
+
+msgid "Cloud storage configuration saved successfully."
+msgstr ""
+
+msgid "SAML 2.0 configuration saved successfully."
+msgstr ""
+
+msgid "Catch All"
+msgstr ""
+
+msgid "Never"
+msgstr ""
+
+msgid "Every 3 Months"
+msgstr ""
+
+msgid "Every 6 Months"
+msgstr ""
+
+msgid "You must enter a username"
+msgstr ""
+
+msgid "Non-alphanumeric characters are not allowed in username."
+msgstr "Kullanıcı adında alfanümerik karakterler bulunamaz. �rnek: *?= v.b"
+
+#, python-format
+msgid ""
+"Hello %(name)s,\n"
+"\n"
+"This email contains your username and password to log into NamiFAX "
+"(%(url)s)\n"
+"\n"
+"Username - %(username)s\n"
+"Password - %(password)s\n"
+"\n"
+"Please do not respond to this message as it is automatically generated "
+"and is for information purposes only"
+msgstr ""
+
+msgid "New User Details"
+msgstr "Yeni Kullanıcı Detayları"
+
+msgid "The user does not exist."
+msgstr ""
+
+msgid "You cannot delete your own account."
+msgstr ""
+
+msgid "You cannot delete the last superuser."
+msgstr ""
+
+msgid "Please enter a valid number."
+msgstr ""
+
+msgid "Both sent and received faxes"
+msgstr "Gönderilen ve gelen fakslar birlikte"
+
+msgid "Only sent faxes"
+msgstr "Sadece benim gönderdiğim fakslar"
+
+msgid "Only received faxes"
+msgstr "Sadece gelen fakslar"
+
+msgid "Account is disabled"
+msgstr ""
+
+#, python-format
+msgid "Too many failed attempts. Try again in %(minutes)d minutes."
+msgstr ""
+
+msgid "Invalid or expired verification code."
+msgstr ""
+
+#, python-format
+msgid ""
+"The user account %(user)s has this email associated with it.  A web user "
+"from %(ip)s has just requested that a new password be sent.\n"
+"\n"
+"Your New Password is: %(password)s\n"
+"\n"
+"If this was an error just login with your new password and then change "
+"your password to what you would like it to be."
+msgstr ""
+"Sayın %(user)s; Hesabınızla bağlantılı, web kullanıcı %(ip)s olarak yeni "
+"bir şifre talebinde bulundunuz. Yeni şifreniz: %(password)s olmuştur. "
+"Eğer hatalı olarak bu talebi yaptıysanız yeni şifrenizle sisteme girin ve"
+" lütfen şifrenizi değiştirin."
+
+msgid "Email failed to send"
+msgstr "Eposta gönderimi başarısız oldu"
+
+msgid "Fax Contacts"
+msgstr ""
+
+msgid "Email Contacts"
+msgstr ""
+
+msgid "The fax document was not found."
+msgstr ""
+
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+msgid "Invalid job number."
+msgstr ""
+
+msgid "Any Available Line (Auto)"
+msgstr "Herhangi Bir Uygun Hat (Otomatik)"
+
+msgid "You may not use this line."
+msgstr ""
+
+msgid "Your fax has been successfully queued to be faxed."
+msgstr ""
+
+msgid "Job"
+msgstr ""
+
+msgid "The code is not valid."
+msgstr ""
+
+msgid "The code did not match. Check the time on your phone and try again."
+msgstr ""
+
+msgid "The password is not correct."
+msgstr ""
+
+msgid "Add a note"
+msgstr "Not veya grup ekle"
+
+msgid "Account active"
+msgstr "Hesap kullanılabilir"
+
+msgid "The cover page was updated"
+msgstr ""
+
+msgid "The modem was created"
+msgstr "Modem oluşturuldu"
+
+msgid "The modem was deleted"
+msgstr "Modem silindi"
+
+msgid "The modem was updated"
+msgstr "Modem güncellendi"
+
+msgid "Archive - show"
+msgstr ""
+
+msgid "Inbox - show"
+msgstr ""
+
+msgid "Assign a company name"
+msgstr "Kurum adı atayınız"
+
+msgid "You must enter a company name"
+msgstr "Kurum adı girmelisiniz"
+
+msgid "Contact details saved"
+msgstr "Adres bilgileri kaydedildi"
+
+msgid "Remove entries"
+msgstr "Girişleri siliniz"
+
+msgid "Save list name"
+msgstr "Lİste adını kaydet"
+
+msgid "The email failed to send."
+msgstr "Eposta gönderiminde hata oluştu."
+
+msgid "The email was sent successfully."
+msgstr "Eposta başarıyla gönderildi."
+
+msgid "Destination fax numbers"
+msgstr "Alıcı faks numaraları"
+
+msgid "You must enter an alias"
+msgstr ""
+
+msgid "You must enter a device name"
+msgstr ""
+
+msgid "Modify Job"
+msgstr ""
+
+msgid "You must enter a name."
+msgstr "İsim girmelisiniz."
+
+msgid "Notify on requeue"
+msgstr "Tekrar denemede bildir"
+
+msgid "Forward fax via email"
+msgstr "Faksı eposta ile ilet"
+
+msgid "To person"
+msgstr "Kime"
+
+msgid "User can delete faxes"
+msgstr "Kullanıcı faksları silebilir"
+
+msgid "User settings have been saved."
+msgstr "Kullanıcı ayarları güncellendi."
+
+msgid "Select All Faxes"
+msgstr "Tümünü Seç"
+
+#~ msgid "High"
+#~ msgstr "High"
+
+#~ msgid "Configure corporate contact identity and transmission routing defaults."
+#~ msgstr ""
+#~ "Kurumsal kişi kimliğini ve iletim "
+#~ "yönlendirme varsayılanlarını yapılandırın."
+
+#~ msgid "Primary Company Profile"
+#~ msgstr "Birincil Şirket Profili"
+
+#~ msgid "Recipient Contact & Physical Address"
+#~ msgstr "Alıcı Kişi ve Fiziksel Adres"
+
+#~ msgid "City / Postal Region"
+#~ msgstr "Şehir / Posta Bölgesi"
+
+#~ msgid "Category Tag"
+#~ msgstr "Kategori Etiketi"
+
+#~ msgid "General"
+#~ msgstr "Normal"
+
+#~ msgid "Invoices & Billing"
+#~ msgstr "Faturalar ve Faturalandırma"
+
+#~ msgid "Legal"
+#~ msgstr "Hukuki"
+
+#~ msgid "Description / Internal Notes"
+#~ msgstr "Açıklama / Dahili Notlar"
+
+#~ msgid "Edit Forwarding Rule"
+#~ msgstr "Yönlendirme Kuralını Düzenle"
+
+#~ msgid "Add Forwarding Rule"
+#~ msgstr "Yönlendirme Kuralı Ekle"
+
+#~ msgid ""
+#~ "Please enter your registered username or"
+#~ " email address below. Password reset "
+#~ "instructions will be dispatched to your"
+#~ " account email address."
+#~ msgstr ""
+#~ "Lütfen aşağıya kayıtlı kullanıcı adınızı "
+#~ "veya e-posta adresinizi girin. Şifre "
+#~ "sıfırlama talimatları hesap e-posta adresinize"
+#~ " gönderilecektir."
+
+#~ msgid "Username or Email Address"
+#~ msgstr "Kullanıcı Adı veya E-posta Adresi"
+
+#~ msgid "Reset Password"
+#~ msgstr ""
+#~ "Lütfen eposta adresini yazıp şifre "
+#~ "Gönder düğmesine basınız.Yeni şifrenizi kısa"
+#~ " bir zamanda alacaksınız. Siteye girmek "
+#~ "için alacağınız yeni şifrenizi kullanınız"
+
+#~ msgid "Standard (Default)"
+#~ msgstr "Standart (Varsayılan)"
+
+#~ msgid "Urgent"
+#~ msgstr "Acil"
+
+#~ msgid "Confidential"
+#~ msgstr "Gizli"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Low"
+#~ msgstr "Low"
+
+#~ msgid "High (Urgent)"
+#~ msgstr "Yüksek (Acil)"
+
+#~ msgid "Reply to Fax"
+#~ msgstr "Faksı cevapla"
+
+#~ msgid "Dispatch quick reply transmission to originating sender"
+#~ msgstr "Orijinal gönderene hızlı yanıt iletimi gönderin"
+
+#~ msgid "Regarding (Subject)"
+#~ msgstr "Konu"
+
+#~ msgid "Comments"
+#~ msgstr "Açıklama"
+
+#~ msgid "Destination"
+#~ msgstr "Faks nosu"
+
+#~ msgid "Queued"
+#~ msgstr "Kuyrukta"
+
+#~ msgid "Reason"
+#~ msgstr "Neden"
+
+#~ msgid "To send to multiple recipients at once, separate numbers with a comma."
+#~ msgstr ""
+#~ "Aynı anda birden fazla alıcıya göndermek"
+#~ " için numaraları virgülle ayırın."
+
+#~ msgid "Save Modem"
+#~ msgstr "Fax Modems"
+
+#~ msgid "Configure User:"
+#~ msgstr "Kullanıcıyı Yapılandır:"
+
+#~ msgid "recipient@example.com (comma separated)"
+#~ msgstr ""
+
+#~ msgid "NamiFAX Transmission Document"
+#~ msgstr ""
+
+#~ msgid "Please find the attached facsimile document."
+#~ msgstr ""
+
+#~ msgid "results"
+#~ msgstr "Reset"
+
+#~ msgid "result"
+#~ msgstr "Reset"
+
+#~ msgid "Keyword"
+#~ msgstr "Keyword"
+
+#~ msgid "Invoices / Orders"
+#~ msgstr "Faturalar / Siparişler"
+
+#~ msgid "Legal / Contracts"
+#~ msgstr "Adresler"
+
+#~ msgid "From Date"
+#~ msgstr "Döndür"
+
+#~ msgid "To Date"
+#~ msgstr "Döndür"
+
+#~ msgid "Sent & Received"
+#~ msgstr "Gönderilenler ve Alınanlar"
+
+#~ msgid "Received only"
+#~ msgstr "Yalnızca alınanlar"
+
+#~ msgid "Sent only"
+#~ msgstr "Yalnızca gönderilenler"
+
+#~ msgid "Results"
+#~ msgstr "Reset"
+
+#~ msgid "records"
+#~ msgstr "kayıt"
+
+#~ msgid "record"
+#~ msgstr "kayıt"
+
+#~ msgid "No results found"
+#~ msgstr "Sonuç bulunamadı"
+
+#~ msgid "Try adjusting your search terms or date range."
+#~ msgstr "Arama terimlerinizi veya tarih aralığınızı ayarlamayı deneyin."
+
+#~ msgid "Search the Archive"
+#~ msgstr "Arşivde Ara"
+
+#~ msgid "Enter a keyword or filter above and click Search to find fax records."
+#~ msgstr ""
+#~ "Faks kayıtlarını bulmak için yukarıya "
+#~ "bir anahtar kelime veya filtre girin "
+#~ "ve Ara'ya tıklayın."
+
+#~ msgid "Showing"
+#~ msgstr "Gösterilen"
+
+#~ msgid "of"
+#~ msgstr "ile"
+
+#~ msgid "Fax Viewer"
+#~ msgstr "Faks Görüntüleyici"
+
+#~ msgid "Page 1 of"
+#~ msgstr "Sayfa 1 /"
+
+#~ msgid "FROM:"
+#~ msgstr "KİMDEN:"
+
+#~ msgid "DATE:"
+#~ msgstr "TARİH:"
+
+#~ msgid "DEVICE:"
+#~ msgstr "CİHAZ:"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "TIFF"
+#~ msgstr "TIFF"
+
+#~ msgid "Total"
+#~ msgstr "Toplam"
+
+#~ msgid "Incoming Transmission"
+#~ msgstr "Gelen İletim"
+
+#~ msgid "FACSIMILE TRANSMISSION"
+#~ msgstr "FAKS İLETİMİ"
+
+#~ msgid "Date Received:"
+#~ msgstr "Alınma Tarihi:"
+
+#~ msgid "Originating Station:"
+#~ msgstr "Kaynak İstasyon:"
+
+#~ msgid "PORT"
+#~ msgstr "Priority"
+
+#~ msgid "High-Resolution Raster Preview"
+#~ msgstr "Yüksek Çözünürlüklü Raster Önizleme"
+
+#~ msgid "Device Line:"
+#~ msgstr "Cihaz Hattı:"
+
+#~ msgid "Download Original Document"
+#~ msgstr "Orijinal Belgeyi İndir"
+
+#~ msgid "NamiFAX Enterprise Facsimile Engine"
+#~ msgstr "NamiFAX Kurumsal Faks Motoru"
+
+#~ msgid "Archive ID:"
+#~ msgstr "Arşiv"
+
+#~ msgid "Add contact name or fax number..."
+#~ msgstr ""
+
+#~ msgid "Delete List"
+#~ msgstr "Lİsteyi sil"
+
+#~ msgid "Save Changes"
+#~ msgstr "Cover Pages"
+
+#~ msgid "Supported: PDF, TIFF, PostScript, TXT · Max 10 MB"
+#~ msgstr "Desteklenen: PDF, TIFF, PostScript, TXT · Maks. 10 MB"
+
+#~ msgid "Auto-select recommended"
+#~ msgstr "Otomatik seçim önerilir"
+
+#~ msgid "Status:"
+#~ msgstr "Durum:"
+
+#~ msgid "Transmitted Successfully (OK)"
+#~ msgstr "Başarıyla İletildi (Tamam)"
+

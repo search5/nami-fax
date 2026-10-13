@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-m3-dark-surface-container-lowest">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>- NamiFAX - Password Expired</title>
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/static/css/main.css?v=3.6.0" type="text/css" />
+</head>
+<body class="min-h-full flex items-center justify-center p-4 sm:p-6 bg-m3-dark-surface font-sans antialiased text-m3-dark-on-surface selection:bg-m3-dark-primary-container selection:text-m3-dark-on-primary-container">
+
+  <div class="w-full max-w-md bg-m3-dark-surface-container border border-m3-dark-outline-variant/50 rounded-m3-xl shadow-m3-3 p-6 sm:p-8 relative overflow-hidden">
+    
+    <!-- Ambient Glow -->
+    <div class="absolute -top-24 -left-24 w-60 h-60 bg-amber-500/10 rounded-m3-full blur-3xl pointer-events-none"></div>
+
+    <!-- Header Console -->
+    <div class="flex justify-between items-center border-b border-m3-dark-outline-variant/40 pb-4 mb-6">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-m3-lg bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-300 shadow-m3-1">
+          <svg class="w-5 h-5 text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-sm font-bold text-m3-dark-on-surface tracking-wide">:: NamiFAX :: {{ _('Password Expired') }}</h1>
+          <p class="text-[11px] font-mono text-m3-dark-on-surface-variant">{{ _('Security Credentials Renewal') }}</p>
+        </div>
+      </div>
+      <span class="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-m3-full bg-amber-950/80 text-amber-300 border border-amber-800/80">{{ _('Action Required') }}</span>
+    </div>
+
+    {% if error %}
+      <div class="mb-4 p-3.5 bg-m3-dark-error-container text-m3-dark-on-error-container border border-m3-dark-error/30 rounded-m3-lg text-xs flex items-center space-x-2.5 shadow-m3-1">
+        <span class="w-2 h-2 rounded-m3-full bg-m3-dark-error"></span>
+        <span>{{ error }}</span>
+      </div>
+    {% endif %}
+
+    <p class="text-xs text-m3-dark-on-surface-variant mb-6 leading-relaxed">
+      {{ _('Your password has expired or needs to be changed before proceeding. Please enter your old password and choose a new password.') }}
+    </p>
+
+    <!-- Strict Form Contract -->
+    <form action="/pwdexpired" method="post" class="space-y-4 text-xs">
+      <div>
+        <label for="oldpwd" class="block text-xs font-semibold text-m3-dark-on-surface mb-1.5">{{ _('Old Password') }} *</label>
+        <input type="password" name="oldpwd" id="oldpwd" required class="w-full bg-m3-dark-surface-container-low border border-m3-dark-outline-variant rounded-m3-sm px-3.5 py-2 text-xs text-m3-dark-on-surface focus:outline-none focus:ring-2 focus:ring-m3-dark-primary focus:border-m3-dark-primary transition shadow-inner font-mono" placeholder="{{ _('Current credentials') }}" />
+      </div>
+
+      <div>
+        <label for="newpwd" class="block text-xs font-semibold text-m3-dark-on-surface mb-1.5">{{ _('New Password') }} *</label>
+        <input type="password" name="newpwd" id="newpwd" required class="w-full bg-m3-dark-surface-container-low border border-m3-dark-outline-variant rounded-m3-sm px-3.5 py-2 text-xs text-m3-dark-on-surface focus:outline-none focus:ring-2 focus:ring-m3-dark-primary focus:border-m3-dark-primary transition shadow-inner font-mono" placeholder="{{ _('New secure passphrase') }}" />
+      </div>
+
+      <div>
+        <label for="conpwd" class="block text-xs font-semibold text-m3-dark-on-surface mb-1.5">{{ _('Confirm New Password') }} *</label>
+        <input type="password" name="conpwd" id="conpwd" required class="w-full bg-m3-dark-surface-container-low border border-m3-dark-outline-variant rounded-m3-sm px-3.5 py-2 text-xs text-m3-dark-on-surface focus:outline-none focus:ring-2 focus:ring-m3-dark-primary focus:border-m3-dark-primary transition shadow-inner font-mono" placeholder="{{ _('Re-type new passphrase') }}" />
+      </div>
+
+      <input type="hidden" name="_submit_check" value="1" />
+
+      <div class="pt-3 border-t border-m3-dark-outline-variant/40 flex items-center justify-between">
+        <a href="/login" class="text-xs text-m3-dark-on-surface-variant hover:text-m3-dark-on-surface transition">{{ _('Cancel') }}</a>
+        <button type="submit" class="px-6 py-2.5 bg-m3-dark-primary hover:brightness-110 text-m3-dark-on-primary rounded-m3-full font-bold text-xs shadow-m3-1 transition">
+          {{ _('Update Password') }}
+        </button>
+      </div>
+    </form>
+
+  </div>
+
+</body>
+</html>

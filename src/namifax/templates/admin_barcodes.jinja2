@@ -1,0 +1,132 @@
+{% extends "admin_layout.jinja2" %}
+
+{% block title %}- NamiFAX - Admin - Configure Barcode Routing{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+  
+  <!-- Header & Actions -->
+  <div class="border-b border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-sky-950 border border-sky-800 flex items-center justify-center text-sky-400 shadow-inner">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-white tracking-tight">{{ _('Configure Barcode Routing') }}</h2>
+        <p class="text-xs text-slate-400">{{ _('Route incoming faxes automatically based on recognized Code39 / QR barcodes') }}</p>
+      </div>
+    </div>
+
+    <a href="/admin/barcodes" class="inline-flex items-center space-x-1.5 px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-xs font-bold shadow-2xs transition">
+      <span>+ {{ _('New Barcode Route') }}</span>
+    </a>
+  </div>
+
+  {% if message %}
+    <div class="p-4 bg-emerald-950/80 border border-emerald-800/80 text-emerald-200 rounded-xl text-xs font-semibold flex items-center space-x-3 shadow-2xs">
+      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+      <span>{{ message }}</span>
+    </div>
+  {% endif %}
+  {% if error %}
+    <div class="p-4 bg-rose-950/80 border border-rose-800/80 text-rose-200 rounded-xl text-xs font-semibold flex items-center space-x-3 shadow-2xs">
+      <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+      <span>{{ error }}</span>
+    </div>
+  {% endif %}
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    
+    <!-- Left: Barcode Rules List -->
+    <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-5 space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-800 pb-3">
+        <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+        <h3 class="text-xs font-bold text-white uppercase tracking-wider">{{ _('Barcode Routing Rules') }}</h3>
+      </div>
+
+      <div class="divide-y divide-slate-800/60 border border-slate-800/80 rounded-xl overflow-hidden text-xs">
+        {% for b in barcodes %}
+          {% set bid = b.barcode_id %}
+          <div class="p-3 flex justify-between items-center hover:bg-slate-900/60 transition {% if selected_barcode and selected_barcode.barcode_id == bid %}bg-slate-800/60 border-l-2 border-l-sky-500{% endif %}">
+            <div class="space-y-1">
+              <div class="flex items-center space-x-2">
+                <span class="font-mono font-bold text-white">{{ _('Barcode:') }} {{ b.barcode }}</span>
+                <span class="text-[10px] font-semibold bg-slate-900 text-slate-300 border border-slate-800 px-1.5 py-0.5 rounded">{{ b.alias }}</span>
+              </div>
+              <p class="text-slate-400 text-[11px]">{{ _('Contact:') }} {{ b.contact or _('None') }} | {{ _('Printer:') }} {{ b.printer or _('None') }}</p>
+            </div>
+            <div>
+              <a href="/admin/barcodes?barcode_id={{ bid }}" class="inline-flex items-center px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-sky-400 text-[11px] font-semibold border border-slate-700 transition">{{ _('Edit') }}</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Right: Barcode Form (Strict 5 Inputs, 1 Button Contract) -->
+    <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-5 space-y-4" id="barcode-form">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div class="flex items-center space-x-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">
+            {% if selected_barcode %}{{ _('Edit Barcode Route') }} ({{ selected_barcode.alias }}){% else %}{{ _('Add Barcode Route') }}{% endif %}
+          </h3>
+        </div>
+        {% if selected_barcode %}
+          <span class="px-2 py-0.5 bg-amber-950 text-amber-300 border border-amber-800 text-[10px] font-bold rounded">{{ _('EDIT MODE') }}</span>
+        {% else %}
+          <span class="px-2 py-0.5 bg-emerald-950 text-emerald-300 border border-emerald-800 text-[10px] font-bold rounded">{{ _('NEW') }}</span>
+        {% endif %}
+      </div>
+
+      <form action="/admin/barcodes{% if selected_barcode %}?barcode_id={{ selected_barcode.barcode_id }}{% endif %}" method="post" class="space-y-4 text-xs">
+        <div>
+          <label for="barcode" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Barcode') }} *</label>
+          <input type="text" name="barcode" id="barcode" required value="{{ selected_barcode.barcode if selected_barcode else '' }}" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition" />
+        </div>
+
+        <div>
+          <label for="alias" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Alias') }} *</label>
+          <input type="text" name="alias" id="alias" required value="{{ selected_barcode.alias if selected_barcode else '' }}" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition" />
+        </div>
+
+        <div>
+          <label for="contact" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Contact Email') }}</label>
+          <input type="email" name="contact" id="contact" value="{{ selected_barcode.contact if selected_barcode else '' }}" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition" />
+        </div>
+
+        <div>
+          <label for="printer" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Printer') }}</label>
+          <input type="text" name="printer" id="printer" value="{{ selected_barcode.printer if selected_barcode else '' }}" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition" />
+        </div>
+        <div>
+          <label for="faxcatid" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Category') }}</label>
+          <select name="faxcatid" id="faxcatid" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition">
+            <option value=""></option>
+            {% for cid, cname in categories %}<option value="{{ cid }}" {% if selected_barcode and selected_barcode.faxcatid|string == cid %}selected{% endif %}>{{ cname }}</option>{% endfor %}
+          </select>
+        </div>
+
+        <input type="hidden" name="_submit_check" value="1" />
+        {% if selected_barcode %}
+          <input type="hidden" name="barcode_id" value="{{ selected_barcode.barcode_id }}" />
+        {% endif %}
+
+        <div class="pt-3 border-t border-slate-800 flex items-center justify-end space-x-2">
+          {% if selected_barcode %}
+            <a href="/admin/barcodes" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg font-semibold text-xs transition">{{ _('Cancel') }}</a>
+            <button type="submit" name="delete" value="1" onclick="return confirm('Are you sure you want to delete this barcode route?');" class="px-4 py-2 bg-rose-900 hover:bg-rose-800 text-white rounded-lg font-bold text-xs transition">{{ _('Delete') }}</button>
+            <button type="submit" name="save" value="1" class="px-6 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-xs shadow-2xs transition">{{ _('Save') }}</button>
+          {% else %}
+            <button type="submit" name="create" value="1" class="px-6 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-xs shadow-2xs transition">{{ _('Save') }}</button>
+          {% endif %}
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

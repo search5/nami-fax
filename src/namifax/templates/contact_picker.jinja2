@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/css/main.css?v=3.6.0" type="text/css" />
+</head>
+<body class="bg-slate-50 text-slate-800 p-4" data-target="{{ target }}" data-separator="{{ separator }}" data-fetch="{{ fetch }}" data-prefill="{{ 1 if prefill else 0 }}">
+  <div class="max-w-md mx-auto bg-white p-5 rounded-xl shadow border border-slate-200 space-y-3">
+    <h2 class="text-base font-bold text-sky-900">{{ heading }}</h2>
+
+    <form action="{{ action }}" method="get" class="flex gap-2">
+      <input type="hidden" name="target" value="{{ target }}" />
+      <input type="text" name="regexp" id="regexp" value="{{ query }}" placeholder="{{ _('Search') }}" autofocus autocomplete="off"
+             class="flex-1 border border-slate-300 rounded px-3 py-1.5 text-sm" />
+      <button type="submit" class="px-3 py-1.5 bg-slate-200 rounded text-sm font-semibold">{{ _('Search') }}</button>
+    </form>
+
+    <div id="items" class="max-h-72 overflow-y-auto border border-slate-200 rounded divide-y divide-slate-100">
+      {% for option in options %}
+        <label class="flex items-center gap-2 px-3 py-1.5 text-sm cursor-pointer hover:bg-slate-50">
+          <input type="checkbox" data-pick value="{{ option[0] }}"{% if option|length > 2 and option[2] %} data-fnid="{{ option[2] }}"{% endif %} class="rounded border-slate-300" /> <span>{{ option[1] }}</span>
+        </label>
+      {% else %}
+        <p class="p-4 text-center text-sm text-slate-400">{{ _('No contacts found') }}</p>
+      {% endfor %}
+    </div>
+
+    <div class="flex justify-end gap-2">
+      <button type="button" id="add" class="px-4 py-1.5 bg-sky-700 hover:bg-sky-600 text-white rounded text-sm font-semibold">{{ _('Add') }}</button>
+      <button type="button" onclick="window.close()" class="px-4 py-1.5 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded text-sm font-semibold">{{ _('Close') }}</button>
+    </div>
+  </div>
+
+<script>
+// The chosen entries go into the field of the window that opened this one (the original's faxcontacts.js / emailcontacts.js).
+(function () {
+  var body = document.body, target = body.getAttribute('data-target'), separator = body.getAttribute('data-separator');
+  var fetchUrl = body.getAttribute('data-fetch');
+  var items = document.getElementById('items');
+  var filter = document.getElementById('regexp');
+  filter.addEventListener('keyup', function () {                      // filter as you type
+    var q = filter.value.toLowerCase();
+    items.querySelectorAll('label').forEach(function (l) { l.style.display = l.textContent.toLowerCase().indexOf(q) < 0 ? 'none' : ''; });
+  });
+  function put(values) {
+    var field = window.opener && target ? window.opener.document.getElementById(target) : null;
+    if (!field || !values.length) return;
+    var present = field.value.trim();
+    field.value = (present ? present.replace(/[;,]\s*$/, '') + separator : '') + values.join(separator);
+    field.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+  document.getElementById('add').addEventListener('click', function () {
+    var boxes = items.querySelectorAll('input[data-pick]:checked');
+    var chosen = Array.prototype.map.call(boxes, function (c) { return c.value; });
+    // one number chosen from the address book: its cover page fields (person, company, address...) are filled in too
+    if (body.getAttribute('data-prefill') === '1' && boxes.length === 1 && boxes[0].getAttribute('data-fnid')) {
+      fetch('/ajax/prefillto?fnid=' + encodeURIComponent(boxes[0].getAttribute('data-fnid')), { credentials: 'same-origin' })
+        .then(function (r) { return r.text(); }).then(function (text) {
+          var xml = new DOMParser().parseFromString(text, 'text/xml');
+          ['to_person', 'to_company', 'to_address', 'to_zip', 'to_city', 'to_location', 'to_voicenumber'].forEach(function (id) {
+            var node = xml.getElementsByTagName(id)[0], field = window.opener && window.opener.document.getElementById(id);
+            if (node && node.firstChild && field) field.value = node.firstChild.data;
+          });
+        });
+    }
+    if (!fetchUrl) { put(chosen); window.close(); return; }
+    Promise.all(chosen.map(function (id) { return fetch(fetchUrl + encodeURIComponent(id), { credentials: 'same-origin' }).then(function (r) { return r.text(); }); }))
+      .then(function (answers) {
+        var numbers = [];
+        answers.forEach(function (a) { a.split(';').forEach(function (n) { n = n.trim(); if (n && n !== 'Invalid list id') numbers.push(n); }); });
+        put(numbers); window.close();
+      });
+  });
+})();
+</script>
+</body>
+</html>

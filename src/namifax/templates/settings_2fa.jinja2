@@ -1,0 +1,56 @@
+{% extends "layout.jinja2" %}
+
+{% block title %}- NamiFAX - {{ _('Two-Factor Authentication') }}{% endblock %}
+
+{% block content %}
+<div class="max-w-xl mx-auto space-y-6">
+  <div class="pb-4 border-b border-slate-200">
+    <h1 class="text-lg font-bold text-slate-900">{{ _('Two-Factor Authentication') }}</h1>
+  </div>
+
+  {% if error %}
+  <div class="p-3 bg-rose-50 border border-rose-200 rounded-lg text-rose-700 text-xs">{{ error }}</div>
+  {% endif %}
+  {% if message %}
+  <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-700 text-xs">{{ message }}</div>
+  {% endif %}
+
+  {% if mode == 'setup' %}
+  <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-2xs space-y-4">
+    <p class="text-xs text-slate-600">{{ _('1. Scan this code with Google Authenticator, Authy or another RFC 6238 app, or type the key by hand.') }}</p>
+    <div class="flex justify-center p-3 bg-white">{{ qr_svg|safe }}</div>
+    <p class="text-xs text-slate-600 flex items-center gap-2 flex-wrap">{{ _('Key') }}: <code class="font-mono text-slate-900 select-all" data-secret="{{ secret }}">{{ secret }}</code>
+      <button type="button" data-copy="{{ secret }}" data-done="{{ _('Copied') }}" class="px-2.5 py-1 rounded border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-semibold">{{ _('Copy key') }}</button></p>
+    <p class="text-[11px] text-slate-400 break-all">{{ uri }}</p>
+    <form method="POST" action="/settings/2fa/enable" class="space-y-3">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+      <label for="code" class="block font-semibold text-slate-700 text-xs">{{ _('2. Enter the 6-digit code the app shows') }}</label>
+      <input type="text" name="code" id="code" inputmode="numeric" autocomplete="one-time-code" maxlength="8" required
+             class="w-full border border-slate-300 rounded-lg px-3.5 py-2 text-slate-900 tracking-widest" />
+      <div class="flex justify-end space-x-3">
+        <a href="/settings" class="px-5 py-2.5 bg-slate-100 text-slate-700 rounded-lg font-semibold hover:bg-slate-200 transition">{{ _('Cancel') }}</a>
+        <button type="submit" class="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-bold transition">{{ _('Turn on 2FA') }}</button>
+      </div>
+    </form>
+  </div>
+  {% elif mode == 'codes' %}
+  <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-2xs space-y-4">
+    <p class="text-sm font-semibold text-slate-900">{{ _('Save your recovery codes') }}</p>
+    <p class="text-xs text-slate-600">{{ _('Each code works once if you lose your phone. They are shown only now; store them somewhere safe.') }}</p>
+    <ul class="grid grid-cols-2 gap-2 font-mono text-sm text-slate-900">
+      {% for code in codes %}<li class="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded">{{ code }}</li>{% endfor %}
+    </ul>
+    <div class="flex flex-wrap items-center gap-2">
+      <button type="button" data-copy="{{ codes|join('\n') }}" data-done="{{ _('Copied') }}" class="px-4 py-2 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold">{{ _('Copy codes') }}</button>
+      <button type="button" data-download="{{ backup_file }}" data-filename="{{ backup_name }}" class="px-4 py-2 rounded-lg border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold">{{ _('Download as a file') }}</button>
+    </div>
+    <p class="text-[11px] text-slate-400">{{ _('The file is made in your browser from what is shown here and is not stored on the server. Codes are kept on the server only as hashes.') }}</p>
+    <div class="flex justify-end"><a href="/settings" class="px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-semibold transition">{{ _('Done') }}</a></div>
+  </div>
+  {% else %}
+  <div class="flex justify-end"><a href="/settings" class="px-5 py-2.5 bg-slate-100 text-slate-700 rounded-lg font-semibold hover:bg-slate-200 transition">{{ _('Back to settings') }}</a></div>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_scripts %}<script src="/static/js/twofa.js" defer></script>{% endblock %}

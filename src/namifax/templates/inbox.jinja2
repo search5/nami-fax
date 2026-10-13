@@ -1,0 +1,345 @@
+{% extends "layout.jinja2" %}
+
+{% block title %}- NamiFAX - Inbox{% endblock %}
+
+{% block content %}
+<div class="space-y-5">
+  <!-- Page Header -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div>
+      <h1 class="text-xl font-bold text-slate-900">{{ _('Inbox') }}</h1>
+      <p class="text-sm text-slate-500 mt-0.5">{{ _('Received faxes appear here automatically in real time.') }}</p>
+    </div>
+    <div class="flex items-center gap-2">
+      {% if faxes and faxes|length > 0 %}
+      <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 rounded-full text-sm font-semibold">
+        <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+        {{ total_faxes or 0 }} {{ _('Faxes') if (total_faxes or 0) != 1 else _('Fax') }}
+      </span>
+      {% endif %}
+      <a href="/sendfax"
+         class="inline-flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-sm transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+        </svg>
+        {{ _('Send Fax') }}
+      </a>
+    </div>
+  </div>
+
+  {% if faxes and faxes|length > 0 %}
+
+  <!-- Batch Action Bar -->
+  <div class="flex items-center gap-3 flex-wrap">
+    <label class="inline-flex items-center gap-2 cursor-pointer text-sm text-slate-700 font-medium select-none">
+      <input type="checkbox" id="selectAll" class="w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500" />
+      <span>{{ _('Select All Faxes') }}</span>
+    </label>
+    <div class="h-4 w-px bg-slate-300"></div>
+    <form id="batchform" method="post" action="/ajax/archivefax"><input type="hidden" name="_submit_check" value="1" /></form>
+    <button type="submit" form="batchform" formaction="/ajax/archivefax"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-lg text-sm font-medium transition-colors">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+      </svg>
+      {{ _('Archive Selected') }}
+    </button>
+    {% if can_del %}
+    <button type="submit" form="batchform" formaction="/ajax/deletefaxes" formmethod="get"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-red-50 border border-slate-200 hover:border-red-200 text-slate-600 hover:text-red-600 rounded-lg text-sm font-medium transition-colors">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+      </svg>
+      {{ _('Delete Selected') }}
+    </button>
+    {% endif %}
+    <span class="ml-auto text-sm text-slate-400">
+      {% if pages %}{{ first_shown }} - {{ last_shown }} {% endif %}({{ total_faxes }} {{ _('faxes') if total_faxes != 1 else _('fax') }})
+    </span>
+  </div>
+
+  <!-- Fax Table -->
+  <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden" id="inbox-table">
+    <div class="overflow-x-auto">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="border-b border-slate-100 bg-slate-50/80">
+            <th class="py-3 px-4 w-10"><span class="sr-only">{{ _('Select') }}</span></th>
+            <th class="py-3 px-3 w-16 text-xs font-semibold text-slate-400 uppercase tracking-wider text-center">{{ _('Preview') }}</th>
+            <th class="py-3 px-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">{{ _('Sender') }}</th>
+            <th class="py-3 px-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">{{ _('Received') }}</th>
+            <th class="py-3 px-3 text-xs font-semibold text-slate-400 uppercase tracking-wider text-center">{{ _('Pages') }}</th>
+            <th class="py-3 px-4 text-xs font-semibold text-slate-400 uppercase tracking-wider text-right">{{ _('Actions') }}</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          {% for fax in faxes %}
+          {% if list_by_line and (loop.first or fax.line != loop.previtem.line) %}
+          <tr data-line-heading class="bg-slate-50">
+            <th colspan="6" class="py-2 px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-left">{{ fax.line or _('Unknown') }}</th>
+          </tr>
+          {% endif %}
+          <tr class="hover:bg-blue-50/30 transition-colors group" id="faxid_{{ fax.id }}">
+
+            <td class="py-4 px-4 align-middle">
+              <input type="checkbox" name="fids" value="{{ fax.id }}" form="batchform"
+                     class="fax-checkbox w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500" />
+            </td>
+
+            <td class="py-4 px-3 align-middle text-center">
+              <a href="/viewfax?fid={{ fax.id }}"
+                 class="inline-block rounded-lg overflow-hidden border border-slate-200 group-hover:border-blue-300 shadow-sm hover:shadow transition-all">
+                <img src="/faxes/thumbnail/{{ fax.id }}" alt="Fax preview" title="{{ _('Page') }} 1 {{ _('of') }} {{ fax.pages }}" loading="lazy" class="w-11 h-14 object-cover" />
+              </a>
+            </td>
+
+            <td class="py-4 px-4 align-middle" data-sender="{{ fax.id }}">
+              {% if fax.choices %}
+              <form method="post" action="/setcompany" class="flex items-center gap-2" title="{{ _('This number belongs to several companies. Which one is it?') }}">
+                <select name="faxnumid" class="border border-slate-300 rounded-lg px-2 py-1 text-xs bg-white">
+                  {% for number_id, label in fax.choices %}<option value="{{ number_id }}">{{ label }}</option>{% endfor %}
+                </select>
+                <input type="hidden" name="fid" value="{{ fax.id }}" />
+                <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+                <button type="submit" class="px-2.5 py-1 bg-sky-700 hover:bg-sky-600 text-white rounded-lg text-xs font-semibold transition">{{ _('Select') }}</button>
+              </form>
+              <div class="text-xs text-slate-400 font-mono mt-0.5">{{ fax.origfaxnum }}</div>
+              {% else %}
+              <div class="font-semibold text-slate-900 group-hover:text-blue-700 transition-colors">
+                {% if fax.assign == 'x' %}
+                <a href="/assignx?fid={{ fax.id }}" class="hover:underline" title="{{ _('Name the sender') }}">{{ fax.origfaxnum if fax.origfaxnum != '-' else _('Unknown Sender') }}</a>
+                {% elif fax.assign == 'c' %}
+                <a href="/assign?abook_id={{ fax.cid }}" class="hover:underline" title="{{ _('Name the sender') }}">{{ fax.company }}</a>
+                {% elif fax.cid %}
+                <a href="/addressbook/edit?abook_id={{ fax.cid }}" class="hover:underline">{{ fax.company }}</a>{% if fax.number_description %} - {{ fax.number_description }}{% endif %}
+                {% else %}
+                <a href="/addressbook?search={{ fax.company or '' }}" class="hover:underline">{{ fax.company or fax.origfaxnum or _('Unknown Sender') }}</a>
+                {% endif %}
+              </div>
+              {% if fax.origfaxnum and fax.company %}
+                <div class="text-xs text-slate-400 font-mono mt-0.5">{{ fax.origfaxnum }}</div>
+              {% endif %}
+              {% endif %}
+              {% if fax.description %}
+                <p class="text-xs text-slate-500 truncate max-w-xs mt-0.5">{{ fax.description }}</p>
+              {% endif %}
+            </td>
+
+            <td class="py-4 px-4 align-middle whitespace-nowrap text-sm text-slate-600">
+              {{ fax.archstamp or '—' }}
+              {% if fax.line %}<div data-line-of="{{ fax.id }}" class="text-[11px] text-slate-400 font-mono">{{ fax.line }}</div>{% endif %}
+            </td>
+
+            <td class="py-4 px-3 align-middle text-center">
+              <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-slate-100 text-slate-700 font-bold text-sm">
+                {{ fax.pages or 1 }}
+              </span>
+            </td>
+
+            <!-- Actions: 3 primary + more dropdown -->
+            <td class="py-4 px-4 align-middle text-right">
+              <div class="inline-flex items-center gap-1">
+                <!-- View -->
+                <a href="/viewfax?fid={{ fax.id }}"
+                   class="inline-flex items-center gap-1 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg transition-colors shadow-sm">
+                  <img src="/static/images/viewfax.png" alt="" class="w-3.5 h-3.5 brightness-[10]" />
+                  {{ _('View') }}
+                </a>
+
+                <!-- PDF -->
+                <a href="/faxes/download/{{ fax.id }}?format=pdf"
+                   class="inline-flex items-center gap-1 px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-xs font-medium rounded-lg transition-colors">
+                  <img src="/static/images/pdf.png" alt="" class="w-3.5 h-3.5" />
+                  PDF
+                </a>
+
+                <!-- Reply -->
+                <a href="/sendfax?refax={{ fax.id }}"
+                   class="inline-flex items-center gap-1 px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 text-xs font-medium rounded-lg transition-colors">
+                  <img src="/static/images/refax.png" alt="" class="w-3.5 h-3.5" />
+                  {{ _('Reply') }}
+                </a>
+
+                <!-- More (fixed-position dropdown) -->
+                <button type="button"
+                        class="more-btn inline-flex items-center justify-center w-8 h-8 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-500 hover:text-slate-700 transition-colors text-xs font-bold"
+                        data-fax-id="{{ fax.id }}"
+                        aria-label="More actions">
+                  ···
+                </button>
+                <div class="fax-dropdown hidden fixed z-50 bg-white border border-slate-200 rounded-xl shadow-xl min-w-[160px] py-1"
+                     data-fax-id="{{ fax.id }}">
+                  <form method="post" action="/ajax/archivefax" data-fax="{{ fax.id }}">
+                    <input type="hidden" name="fids" value="{{ fax.id }}" />
+                    <button type="submit"
+                            class="w-full text-left flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+                      <img src="/static/images/folder.png" alt="" class="w-4 h-4 shrink-0" /> {{ _('Archive') }}
+                    </button>
+                  </form>
+                  <a href="/email?fid={{ fax.id }}"
+                     class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+                    <img src="/static/images/email.png" alt="" class="w-4 h-4 shrink-0" /> {{ _('Email Fax') }}
+                  </a>
+                  <a href="/note?fid={{ fax.id }}"
+                     class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+                    <img src="/static/images/note.png" alt="" class="w-4 h-4 shrink-0" /> {{ _('Add a note') }}
+                  </a>
+                  <form method="post" action="/faxes/rotate/{{ fax.id }}">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+                    <input type="hidden" name="redirect" value="inbox" />
+                    <button type="submit"
+                            class="w-full text-left flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+                      <img src="/static/images/rotate.png" alt="" class="w-4 h-4 shrink-0" /> {{ _('Rotate') }}
+                    </button>
+                  </form>
+                  {% if dl_tiff_enabled %}<a href="/faxes/download/{{ fax.id }}?format=tiff"
+                     class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 transition-colors">
+                    <img src="/static/images/tiff.png" alt="" class="w-4 h-4 shrink-0" /> {{ _('Download TIFF') }}
+                  </a>{% endif %}
+                  {% if can_del %}
+                  <div class="border-t border-slate-100 mt-1 pt-1">
+                    <a href="/delete?fid={{ fax.id }}"
+                       class="flex items-center gap-2.5 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors">
+                      <img src="/static/images/remove.png" alt="" class="w-4 h-4 shrink-0" /> {{ _('Delete') }}
+                    </a>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <div class="border-t border-slate-100 px-5 py-3 flex items-center justify-between bg-slate-50/50">
+      <p class="text-sm text-slate-500">
+        {% if pages %}{{ first_shown }} - {{ last_shown }} {% endif %}({{ total_faxes }} {{ _('faxes') if total_faxes != 1 else _('fax') }})
+      </p>
+      {% if pages %}
+      {% set extra = ('&pagelimit=' ~ page_limit_param) if page_limit_param else '' %}
+      <nav class="paging flex items-center gap-1" aria-label="{{ _('Pages') }}">
+        {% if page > 0 %}<a href="/inbox?pageindex={{ page - 1 }}{{ extra }}" class="w-8 h-8 flex items-center justify-center rounded-lg text-sm text-slate-600 hover:bg-slate-100" title="{{ _('Previous') }}">&lsaquo;</a>{% endif %}
+        {% for p in range(pages) %}
+          {% if p == page %}<span class="w-8 h-8 flex items-center justify-center rounded-lg text-sm font-bold bg-blue-600 text-white">{{ p + 1 }}</span>
+          {% else %}<a href="/inbox?pageindex={{ p }}{{ extra }}" class="w-8 h-8 flex items-center justify-center rounded-lg text-sm text-slate-600 hover:bg-slate-100">{{ p + 1 }}</a>{% endif %}
+        {% endfor %}
+        {% if page < pages - 1 %}<a href="/inbox?pageindex={{ page + 1 }}{{ extra }}" class="w-8 h-8 flex items-center justify-center rounded-lg text-sm text-slate-600 hover:bg-slate-100" title="{{ _('Next') }}">&rsaquo;</a>{% endif %}
+      </nav>
+      {% endif %}
+    </div>
+  </div>
+
+  {% else %}
+  <!-- Empty State -->
+  <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+    <div class="p-12 text-center border-b border-slate-100">
+      <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-5">
+        <svg class="w-10 h-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-bold text-slate-800">{{ _('0 FAXES') }}</h3>
+      <p class="text-sm text-slate-500 mt-2 max-w-sm mx-auto">
+        {{ _('There are no incoming faxes waiting in your inbox. Incoming transmissions will automatically appear here in real time.') }}
+      </p>
+      <div class="mt-6 flex items-center justify-center gap-3">
+        <a href="/sendfax"
+           class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-semibold shadow-sm transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+          </svg>
+          {{ _('Send Your First Fax') }}
+        </a>
+        <a href="/archive"
+           class="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-xl text-sm font-semibold transition-colors">
+          {{ _('Search Archive') }}
+        </a>
+      </div>
+    </div>
+
+    <!-- Getting Started Guide -->
+    <div class="px-8 py-6 bg-slate-50/60">
+      <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">{{ _('Getting Started with NamiFAX') }}</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="flex items-start gap-3">
+          <div class="w-7 h-7 rounded-full bg-blue-100 text-blue-600 text-xs font-bold flex items-center justify-center shrink-0">1</div>
+          <div>
+            <p class="text-sm font-semibold text-slate-700">{{ _('Receive Faxes') }}</p>
+            <p class="text-xs text-slate-500 mt-0.5">{{ _('When someone sends a fax to this system\'s number, it will appear here automatically.') }}</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="w-7 h-7 rounded-full bg-blue-100 text-blue-600 text-xs font-bold flex items-center justify-center shrink-0">2</div>
+          <div>
+            <p class="text-sm font-semibold text-slate-700">{{ _('Send Faxes') }}</p>
+            <p class="text-xs text-slate-500 mt-0.5">{{ _('Click Send Fax to transmit a PDF or image document to any fax number.') }}</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3">
+          <div class="w-7 h-7 rounded-full bg-blue-100 text-blue-600 text-xs font-bold flex items-center justify-center shrink-0">3</div>
+          <div>
+            <p class="text-sm font-semibold text-slate-700">{{ _('Manage Records') }}</p>
+            <p class="text-xs text-slate-500 mt-0.5">{{ _('Download faxes as PDF, archive them for later, or search all records in the Archive.') }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+</div>
+
+<script>
+(function() {
+  let activeDropdown = null;
+
+  document.querySelectorAll('.more-btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const faxId = this.dataset.faxId;
+      const panel = document.querySelector('.fax-dropdown[data-fax-id="' + faxId + '"]');
+
+      if (activeDropdown && activeDropdown !== panel) {
+        activeDropdown.classList.add('hidden');
+      }
+      if (panel.classList.contains('hidden')) {
+        const rect = this.getBoundingClientRect();
+        const panelW = 164;
+        let left = rect.right - panelW;
+        let top  = rect.bottom + 6;
+        if (left < 8) left = 8;
+        if (top + 280 > window.innerHeight) {
+          top = rect.top - 280 - 6;
+          if (top < 8) top = 8;
+        }
+        panel.style.left = left + 'px';
+        panel.style.top  = top  + 'px';
+        panel.classList.remove('hidden');
+        activeDropdown = panel;
+      } else {
+        panel.classList.add('hidden');
+        activeDropdown = null;
+      }
+    });
+  });
+
+  document.addEventListener('click', function() {
+    if (activeDropdown) { activeDropdown.classList.add('hidden'); activeDropdown = null; }
+  });
+  document.addEventListener('scroll', function() {
+    if (activeDropdown) { activeDropdown.classList.add('hidden'); activeDropdown = null; }
+  }, true);
+
+  const selectAll = document.getElementById('selectAll');
+  if (selectAll) {
+    selectAll.addEventListener('change', function() {
+      document.querySelectorAll('.fax-checkbox').forEach(cb => cb.checked = this.checked);
+    });
+  }
+})();
+</script>
+{% endblock %}

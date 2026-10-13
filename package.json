@@ -1,0 +1,30 @@
+{
+  "name": "avantfax",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./src/namifax/static/css/input.css -o ./src/namifax/static/css/main.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YetOpen/avantfax.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/YetOpen/avantfax/issues"
+  },
+  "homepage": "https://github.com/YetOpen/avantfax#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.19"
+  }
+}

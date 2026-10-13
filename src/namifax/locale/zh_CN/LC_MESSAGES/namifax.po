@@ -1,0 +1,2525 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: NamiFAX 4.0.Language: zh_CMIME-Version: 1.Content-"
+"Type: text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-02 00:54+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "Address Book"
+msgstr "Email地址"
+
+msgid "Save frequently used fax numbers for quick access when sending."
+msgstr "保存常用传真号码，以便发送时快速选择。"
+
+msgid "Company or fax number..."
+msgstr ""
+
+msgid "Search"
+msgstr "搜索"
+
+#, fuzzy
+msgid "New Company"
+msgstr "公司"
+
+msgid "Email Book"
+msgstr "邮箱通讯录"
+
+msgid "Distribution Lists"
+msgstr "分发列表"
+
+#, fuzzy
+msgid "Company / Name"
+msgstr "公司"
+
+msgid "Fax Number"
+msgstr "传真号码"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Actions"
+msgstr "操作"
+
+msgid "Send Fax"
+msgstr "发传真"
+
+msgid "Edit"
+msgstr "编辑"
+
+#, fuzzy
+msgid "No contacts yet"
+msgstr "联系人"
+
+msgid "No contacts matched"
+msgstr "未找到匹配的联系人"
+
+msgid ""
+"Add contacts to quickly select fax numbers when sending without typing "
+"them every time."
+msgstr "添加联系人以便在发送时快速选择传真号码，无需每次重复输入。"
+
+msgid "Add First Contact"
+msgstr "添加第一个联系人"
+
+#, fuzzy
+msgid "Edit Company"
+msgstr "公司"
+
+#, fuzzy
+msgid "Add New Company"
+msgstr "公司"
+
+msgid "Configure the company and every fax number it uses."
+msgstr ""
+
+#, fuzzy
+msgid "Back to Contacts"
+msgstr "联系人"
+
+msgid "Upload contacts file (vCard)"
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "Company"
+msgstr "公司"
+
+#, fuzzy
+msgid "Company Name"
+msgstr "公司"
+
+msgid "e.g. Acme Corporation"
+msgstr ""
+
+msgid "Clear the number to remove it."
+msgstr ""
+
+msgid "Description"
+msgstr "描述"
+
+msgid "Category"
+msgstr "分类"
+
+msgid "Location"
+msgstr "地点"
+
+msgid "Voice Telephone"
+msgstr "语音电话"
+
+msgid "Street Address"
+msgstr "街道地址"
+
+msgid "Zip / Postal Code"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Add a Fax Number"
+msgstr ""
+
+msgid "First Fax Number"
+msgstr ""
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Save"
+msgstr "保存"
+
+#, fuzzy
+msgid "Dashboard Overview"
+msgstr "Dashboard"
+
+#, fuzzy
+msgid "SYSTEM OPERATIONAL"
+msgstr "系统功能"
+
+msgid ""
+"Real-time status of fax spools, hardware serial modems, and registered "
+"users"
+msgstr "传真脱机排队、硬件串口调制解调器及注册用户的实时状态"
+
+msgid "Users"
+msgstr "用户"
+
+msgid "Modems"
+msgstr "配置modem"
+
+#, fuzzy
+msgid "DID Routes"
+msgstr "DID/DTMF Route groups"
+
+#, fuzzy
+msgid "Logs"
+msgstr "退出"
+
+#, fuzzy
+msgid "Fax Lines"
+msgstr "Fax Modems"
+
+msgid "Hardware Ready"
+msgstr "硬件就绪"
+
+#, fuzzy
+msgid "Active accounts"
+msgstr "用户"
+
+msgid "Backend Core"
+msgstr "后端核心"
+
+msgid "unknown"
+msgstr ""
+
+msgid "Scheduler"
+msgstr "调度器"
+
+msgid "Running"
+msgstr "运行中"
+
+#, fuzzy
+msgid "Registered User Accounts"
+msgstr "用户"
+
+msgid "Manage Users"
+msgstr "用户管理"
+
+msgid "Name"
+msgstr "姓名"
+
+msgid "Username"
+msgstr "用户名"
+
+msgid "Last Login"
+msgstr "最近一次登录"
+
+msgid "Server Status"
+msgstr "服务器状态"
+
+msgid "Core"
+msgstr "核心"
+
+msgid "Database Engine"
+msgstr "数据库引擎"
+
+msgid "System Scheduler"
+msgstr "系统调度器"
+
+msgid "Configured Modems"
+msgstr "已配置的调制解调器"
+
+msgid "Administrator Workflow Guide"
+msgstr "管理员工作流指南"
+
+#, fuzzy
+msgid "Configure Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid ""
+"Route incoming faxes automatically based on recognized Code39 / QR "
+"barcodes"
+msgstr "根据识别的Code39 / QR条形码自动路由接收的传真"
+
+#, fuzzy
+msgid "New Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode Routing Rules"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode:"
+msgstr "Barcode Routing"
+
+msgid "Contact:"
+msgstr "联系人"
+
+msgid "None"
+msgstr "无"
+
+msgid "Printer:"
+msgstr "打印机:"
+
+#, fuzzy
+msgid "Edit Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Add Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "EDIT MODE"
+msgstr "编辑"
+
+msgid "NEW"
+msgstr "新增"
+
+msgid "Barcode"
+msgstr "Barcode"
+
+msgid "Alias"
+msgstr "别名"
+
+#, fuzzy
+msgid "Contact Email"
+msgstr "联系人"
+
+msgid "Printer"
+msgstr "Printer"
+
+msgid "Fax Categories"
+msgstr "允许查看的传真类别"
+
+msgid ""
+"Manage classification tags and archival categories for organizing "
+"transmissions"
+msgstr "管理用于组织传真记录的分类标签和归档类别"
+
+#, fuzzy
+msgid "New Category"
+msgstr "允许查看的传真类别"
+
+#, fuzzy
+msgid "Existing Categories"
+msgstr "允许查看的传真类别"
+
+msgid "Edit Category"
+msgstr "编辑类别"
+
+#, fuzzy
+msgid "Add Category"
+msgstr "允许查看的传真类别"
+
+msgid "Category Name"
+msgstr "分类名称"
+
+msgid "e.g. Invoices, Contracts"
+msgstr ""
+
+#, fuzzy
+msgid "Configure Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Manage facsimile PostScript cover page templates and layouts"
+msgstr "管理传真PostScript封面模板及版面布局"
+
+#, fuzzy
+msgid "New Cover Page"
+msgstr "使用传真封面"
+
+#, fuzzy
+msgid "Available Cover Pages"
+msgstr "Cover Pages"
+
+#, fuzzy
+msgid "Edit Cover Page"
+msgstr "使用传真封面"
+
+#, fuzzy
+msgid "Add Cover Page"
+msgstr "使用传真封面"
+
+msgid "Title"
+msgstr "标题"
+
+msgid "File"
+msgstr "文件"
+
+msgid "e.g. custom.ps"
+msgstr ""
+
+msgid "Cover Template Studio: Dynamic Tag References"
+msgstr ""
+
+msgid ""
+"Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF"
+" templates. The Cover Studio engine automatically substitutes them during"
+" fax rendering."
+msgstr ""
+
+msgid "Dynamic Configuration"
+msgstr "动态配置"
+
+msgid ""
+"Manage Caller ID blacklists and transmission rejection rules for modem "
+"devices"
+msgstr "管理调制解调器设备的发件人来电显示(Caller ID)黑名单及拒收规则"
+
+msgid "New Rule"
+msgstr "新建规则"
+
+msgid "Blocked Caller IDs"
+msgstr "已阻止的来电显示"
+
+msgid "Caller ID:"
+msgstr "来电显示:"
+
+msgid "All Devices"
+msgstr "所有设备"
+
+msgid "Edit Caller ID Rule"
+msgstr "编辑来电显示规则"
+
+msgid "Add Caller ID Rule"
+msgstr "添加来电显示规则"
+
+msgid "Caller ID"
+msgstr "Caller ID"
+
+msgid "e.g. 5550199 or pattern"
+msgstr ""
+
+msgid "Modem Device"
+msgstr "调制解调器设备"
+
+#, fuzzy
+msgid "Fax to Email"
+msgstr "Fax Modems"
+
+msgid ""
+"Configure automated inbound fax forwarding and PDF dispatch rules mapped "
+"by company"
+msgstr "配置按企业映射的自动入站传真转发及PDF发送规则"
+
+msgid "Add companies in the Address Book"
+msgstr ""
+
+msgid "Company Forwarding Rules"
+msgstr "企业转发规则"
+
+msgid "fax numbers"
+msgstr "传真号码"
+
+msgid "Email:"
+msgstr "电子邮箱:"
+
+msgid "Edit Forwarding Rules"
+msgstr ""
+
+msgid "Forwarding Rules"
+msgstr ""
+
+msgid "This company has no fax numbers yet. Add them in the Address Book."
+msgstr ""
+
+msgid ""
+"Select a company on the left to set where the faxes received on each of "
+"its numbers are sent."
+msgstr ""
+
+#, fuzzy
+msgid "Control Panel"
+msgstr "使用传真封面"
+
+msgid "User Portal"
+msgstr "User Portal"
+
+msgid "Inbox"
+msgstr "收件箱"
+
+#, fuzzy
+msgid "Overview"
+msgstr "查看传真"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Access Control"
+msgstr "访问控制"
+
+msgid "User Accounts"
+msgstr "用户"
+
+msgid "Hardware & Lines"
+msgstr "硬件与线路"
+
+msgid "Fax Modems"
+msgstr "Fax Modems"
+
+msgid "Network Printers"
+msgstr ""
+
+#, fuzzy
+msgid "Inbound Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid "DID Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid "Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid "Content & Templates"
+msgstr "内容与模板"
+
+msgid "Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Security & System"
+msgstr "安全与系统"
+
+msgid "Blacklist (DynConf)"
+msgstr "Blacklist (DynConf)"
+
+msgid "System Audit Logs"
+msgstr "System Audit Logs"
+
+msgid "System Functions"
+msgstr "系统功能"
+
+msgid "SMTP Gateway"
+msgstr ""
+
+msgid "Storage & Cloud"
+msgstr ""
+
+msgid "SAML 2.0 SSO"
+msgstr ""
+
+msgid "Logout"
+msgstr "退出"
+
+msgid "Admin Control Panel"
+msgstr "管理员控制面板"
+
+msgid "Appliance Engine Online"
+msgstr "设备引擎在线"
+
+msgid ""
+"Configure Modems hardware devices, physical serial ports, and print-"
+"forwarding rules"
+msgstr "配置调制解调器硬件设备、物理串口及打印转发规则"
+
+#, fuzzy
+msgid "Configure Modems"
+msgstr "Fax Modems"
+
+msgid "Active Modem Lines"
+msgstr "活动调制解调器线路"
+
+msgid "Device"
+msgstr "设备"
+
+msgid "Contact"
+msgstr "联系人"
+
+msgid "Status"
+msgstr "状态"
+
+#, fuzzy
+msgid "Edit Modem"
+msgstr "Fax Modems"
+
+msgid "Configure Modems Device"
+msgstr "配置调制解调器设备"
+
+msgid "e.g. ttyS0"
+msgstr ""
+
+msgid "e.g. Main Inbound Line"
+msgstr ""
+
+msgid "Are you sure you want to delete this modem?"
+msgstr ""
+
+msgid "Create"
+msgstr "创建"
+
+msgid "Appliance Note:"
+msgstr "设备说明:"
+
+msgid ""
+"Modems configured here must correspond to physical RS-232 serial devices,"
+" USB modems, or virtual IAX modems recognized by the underlying HylaFAX "
+"server."
+msgstr "此处配置的调制解调器必须对应于底层HylaFAX服务器所识别的物理RS-232串口设备、USB调制解调器或虚拟IAX调制解调器。"
+
+msgid "Direct RAW socket & IPP network printing dispatch for received faxes"
+msgstr ""
+
+msgid "Add Network Printer"
+msgstr ""
+
+msgid "Printer Name"
+msgstr ""
+
+msgid "e.g. Office HP LaserJet"
+msgstr ""
+
+msgid "Protocol"
+msgstr ""
+
+msgid "Host / IP"
+msgstr ""
+
+#, fuzzy
+msgid "Port"
+msgstr "Priority"
+
+msgid "Queue Name (Optional)"
+msgstr ""
+
+msgid "2nd Floor Accounting Printer"
+msgstr ""
+
+msgid "Register Printer"
+msgstr ""
+
+msgid "Configured Printers"
+msgstr ""
+
+msgid "No network printers configured yet. Add one using the form on the left."
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+msgid "Test Print"
+msgstr ""
+
+msgid "Are you sure you want to delete this printer?"
+msgstr ""
+
+#, fuzzy
+msgid "Configure DID Routing"
+msgstr "DID/DTMF Route groups"
+
+msgid ""
+"Route incoming faxes by Direct Inward Dialing (DID) extension to specific"
+" email boxes or printers"
+msgstr "通过直接入站拨号(DID)分机号将入站传真路由至特定的邮箱或打印机"
+
+#, fuzzy
+msgid "New DID Route"
+msgstr "DID/DTMF Route groups"
+
+#, fuzzy
+msgid "Active DID Routing Rules"
+msgstr "DID/DTMF Route groups"
+
+msgid "Route Code"
+msgstr "路由代码"
+
+msgid "Action"
+msgstr "操作"
+
+msgid "Configure Routing Rule"
+msgstr "配置路由规则"
+
+msgid "e.g. 1000"
+msgstr ""
+
+msgid "e.g. Sales Direct Line"
+msgstr ""
+
+msgid "-- None --"
+msgstr "-- 无 --"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid ""
+"DID (Direct Inward Dialing) routing automatically redirects incoming "
+"transmissions matching extension patterns directly to mapped operator "
+"inboxes or physical printers."
+msgstr "DID（直接入站拨号）路由会自动将匹配分机模式的入站传真直接重定向至映射的经办人收件箱或物理打印机。"
+
+msgid "SAML 2.0 Enterprise SSO"
+msgstr ""
+
+msgid ""
+"Single Sign-On integration with Okta, Microsoft Entra ID (Azure AD), "
+"Google Workspace & Keycloak"
+msgstr ""
+
+msgid "Download SP Metadata XML"
+msgstr ""
+
+msgid "Identity Provider (IdP) Settings"
+msgstr ""
+
+msgid "Enable SAML 2.0 Single Sign-On"
+msgstr ""
+
+msgid "Shows \"SAML 2.0 Enterprise SSO\" login option on login page"
+msgstr ""
+
+msgid "IdP Entity ID / Issuer"
+msgstr ""
+
+msgid "IdP Single Sign-On Service URL (HTTP-Redirect / POST)"
+msgstr ""
+
+msgid "IdP Public X.509 Certificate (PEM)"
+msgstr ""
+
+msgid "Just-in-Time (JIT) Provisioning"
+msgstr ""
+
+msgid "Auto-create account on first login"
+msgstr ""
+
+msgid "Default Role for JIT Users"
+msgstr ""
+
+msgid "Save SAML Configuration"
+msgstr ""
+
+msgid "NamiFAX SP Endpoints"
+msgstr ""
+
+msgid ""
+"Copy these endpoints into your Identity Provider (Azure AD, Okta, Google)"
+" console:"
+msgstr ""
+
+msgid "Assertion Consumer Service (ACS) URL"
+msgstr ""
+
+msgid "SP Entity ID / Metadata URL"
+msgstr ""
+
+msgid "NameID Format"
+msgstr ""
+
+msgid "External SMTP Gateway"
+msgstr ""
+
+msgid ""
+"Configure external mail delivery server for inbound fax notifications and"
+" user alerts"
+msgstr ""
+
+msgid "Diagnostics Result"
+msgstr ""
+
+msgid "Server Connection & Security"
+msgstr ""
+
+msgid "SMTP Host / Server"
+msgstr ""
+
+msgid "Encryption Protocol"
+msgstr ""
+
+msgid "None (Plain)"
+msgstr ""
+
+msgid "STARTTLS (587)"
+msgstr ""
+
+msgid "SSL / TLS (465)"
+msgstr ""
+
+msgid "Requires SMTP Authentication"
+msgstr ""
+
+#, fuzzy
+msgid "Username / Login"
+msgstr "用户名"
+
+#, fuzzy
+msgid "Password / App Key"
+msgstr "密码"
+
+msgid "Default Sender Profile & Signatures"
+msgstr ""
+
+#, fuzzy
+msgid "From Email Address"
+msgstr "电子邮箱地址"
+
+#, fuzzy
+msgid "From Display Name"
+msgstr "公司"
+
+msgid "NamiFAX Corporate Dispatcher"
+msgstr ""
+
+msgid "Email Signature (Plaintext)"
+msgstr ""
+
+msgid "Sent automatically by NamiFAX Gateway."
+msgstr ""
+
+msgid "Last updated"
+msgstr "最后修改日期"
+
+#, fuzzy
+msgid "Save Gateway Settings"
+msgstr "设置"
+
+msgid "Diagnostic Self-Test"
+msgstr ""
+
+msgid ""
+"Verify server reachability, TLS handshake, credentials and message "
+"dispatch in real time."
+msgstr ""
+
+msgid "Target Recipient Email"
+msgstr ""
+
+#, fuzzy
+msgid "Send Diagnostic Email"
+msgstr "发传真"
+
+msgid "Enterprise storage lifecycle policies and S3 / MinIO / GCS cloud backends"
+msgstr ""
+
+msgid "Storage Lifecycle Policies"
+msgstr ""
+
+msgid "Purge Local TIFFs After (Days)"
+msgstr ""
+
+msgid ""
+"Frees local disk space if a PDF version exists. 0 = immediate after "
+"conversion."
+msgstr ""
+
+msgid "Full Fax Retention (Days)"
+msgstr ""
+
+msgid ""
+"Purge entire fax record and archival files after specified days. 0 = keep"
+" forever."
+msgstr ""
+
+msgid "Synchronize remote cloud object deletion on fax purge"
+msgstr ""
+
+msgid "Save Lifecycle Policy"
+msgstr ""
+
+msgid "Cloud Storage Backend"
+msgstr ""
+
+msgid "Storage Provider"
+msgstr ""
+
+msgid "Local Filesystem (Default)"
+msgstr ""
+
+msgid "Endpoint URL (MinIO / S3 Compatible)"
+msgstr ""
+
+msgid "Region"
+msgstr ""
+
+msgid "Bucket Name"
+msgstr ""
+
+msgid "Access Key ID"
+msgstr ""
+
+msgid "Secret Access Key"
+msgstr ""
+
+msgid "Key Prefix"
+msgstr ""
+
+msgid "Save Storage Config"
+msgstr ""
+
+msgid "Test Connection"
+msgstr ""
+
+msgid "Perform maintenance operations, service control, and backups."
+msgstr "执行维护操作、服务控制及备份。"
+
+msgid "HylaFAX Engine Active"
+msgstr "HylaFAX引擎运行中"
+
+#, fuzzy
+msgid "Admin Dashboard"
+msgstr "Dashboard"
+
+msgid "Caution: Appliance Maintenance Operations"
+msgstr "注意: 设备维护操作"
+
+msgid ""
+"Restarting or shutting down services will interrupt active fax modem "
+"spooling and disconnect client sessions. Ensure all outbound "
+"transmissions in the modem queue are completed before initiating "
+"maintenance tasks."
+msgstr "重启或关闭服务将中断活动的传真调制解调器排队，并断开客户端会话。在开始维护任务之前，请确保调制解调器队列中的所有出站传输均已完成。"
+
+msgid "Daemon Service Control"
+msgstr "守护进程服务控制"
+
+msgid "Restart HylaFAX and NamiFAX web services, or halt background workers."
+msgstr "重启HylaFAX和NamiFAX Web服务，或停止后台工作程序。"
+
+msgid "Reboot Services"
+msgstr "重启服务"
+
+msgid "Shutdown Services"
+msgstr "关闭服务"
+
+msgid "Database & Archive Backup"
+msgstr "数据库与归档备份"
+
+msgid "Download system archives and database snapshots for offsite retention."
+msgstr "下载系统归档和数据库快照以进行异地保存。"
+
+msgid "Download Archive"
+msgstr "Download Archive"
+
+msgid "Download Database"
+msgstr "Download Database"
+
+msgid "System Logs"
+msgstr "系统日志"
+
+msgid "Audit logs and HylaFAX server operational event traces"
+msgstr "审计日志和HylaFAX服务器操作事件跟踪"
+
+msgid "Keywords:"
+msgstr "关键词:"
+
+msgid "Search text..."
+msgstr ""
+
+msgid "Date:"
+msgstr "日期:"
+
+msgid "Date"
+msgstr "日期"
+
+msgid "Log Text"
+msgstr "日志内容"
+
+msgid "No system logs found matching criteria."
+msgstr "未找到符合条件的系统日志。"
+
+msgid "Transmissions and server events will be streamed here in real time."
+msgstr "传输记录和服务器事件将在此实时流式显示。"
+
+msgid "Delete User"
+msgstr "删除用户"
+
+msgid "Are you sure you want to delete the user"
+msgstr ""
+
+msgid "Manage system operator credentials, access permissions, and route mapping"
+msgstr "管理系统操作员凭据、访问权限和路由映射"
+
+msgid "Create New User"
+msgstr "创建新用户"
+
+msgid "Last IP"
+msgstr "最近登录IP"
+
+msgid "Superuser"
+msgstr "超级用户"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "YES"
+msgstr "是"
+
+msgid "NO"
+msgstr "否"
+
+msgid "users"
+msgstr "用户"
+
+msgid "user"
+msgstr "用户"
+
+msgid "Modify User"
+msgstr "更改用户"
+
+msgid "New User"
+msgstr "新用户"
+
+msgid "Full Name"
+msgstr "全名"
+
+msgid "Password"
+msgstr "密码"
+
+msgid "Leave empty to keep the current password (a new user is sent a random one)"
+msgstr ""
+
+msgid "Email Address"
+msgstr "电子邮箱地址"
+
+msgid "Password expiration cycle"
+msgstr ""
+
+msgid "Language"
+msgstr "语言"
+
+msgid "Password can be reused"
+msgstr ""
+
+msgid "My Company"
+msgstr ""
+
+msgid "My Location"
+msgstr ""
+
+msgid "My Voice Number"
+msgstr ""
+
+msgid "My Fax Number"
+msgstr ""
+
+msgid "TSI ID"
+msgstr ""
+
+msgid "Select Cover Page"
+msgstr ""
+
+msgid "New fax sound"
+msgstr ""
+
+msgid "Permissions & Capabilities"
+msgstr "权限与功能"
+
+msgid "Administrator Console"
+msgstr "管理员控制台"
+
+msgid "Superuser Rights"
+msgstr "超级用户权限"
+
+msgid "Send on Any Modem"
+msgstr "允许使用任意调制解调器发送"
+
+msgid "You must first create a DID/DTMF group"
+msgstr ""
+
+msgid "You must first create a modem"
+msgstr ""
+
+#, fuzzy
+msgid "Categories"
+msgstr "允许查看的传真类别"
+
+msgid "You must first create a category"
+msgstr ""
+
+#, fuzzy
+msgid "Archive Search"
+msgstr "档案柜"
+
+msgid "Search all sent and received fax records by date, company, or fax number."
+msgstr "按日期、企业或传真号码搜索所有已发送和已接收的传真记录。"
+
+#, fuzzy
+msgid "Search Filters"
+msgstr "搜索"
+
+msgid ""
+"Leave filters empty to search all records. Narrow results by adding more "
+"criteria."
+msgstr "留空筛选条件以搜索所有记录。添加更多条件可缩小搜索范围。"
+
+msgid "Company search"
+msgstr "搜索公司"
+
+msgid "Company list"
+msgstr "公司列表"
+
+#, fuzzy
+msgid "Fax ID"
+msgstr "Fax Modems"
+
+msgid "e.g. 104"
+msgstr ""
+
+msgid "Keywords"
+msgstr "关键词"
+
+msgid "Company, number, notes..."
+msgstr ""
+
+#, fuzzy
+msgid "All Categories"
+msgstr "允许查看的传真类别"
+
+msgid "User"
+msgstr "用户"
+
+msgid "Start Date"
+msgstr "开始日期"
+
+msgid "End Date"
+msgstr "结束日期"
+
+#, fuzzy
+msgid "Direction"
+msgstr "DID/DTMF Route groups"
+
+#, python-format
+msgid "Total %(n)d results found."
+msgstr "共找到%(n)d条结果"
+
+msgid "Pages"
+msgstr "页数"
+
+msgid "Download PDF"
+msgstr "下载PDF文件"
+
+msgid "Reply to fax"
+msgstr "回复传真"
+
+#, fuzzy
+msgid "Re-send"
+msgstr "发送"
+
+msgid "Email PDF"
+msgstr "邮件发送PDF文件"
+
+msgid "Add note to fax"
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid "Delete fax"
+msgstr ""
+
+msgid "Select"
+msgstr "选择"
+
+msgid "Unknown"
+msgstr ""
+
+#, fuzzy
+msgid "Received"
+msgstr "档案柜"
+
+msgid "Sent"
+msgstr ""
+
+msgid "No results were found"
+msgstr "没有找到结果"
+
+msgid "Reset filters"
+msgstr "重置筛选器"
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr "下一页"
+
+msgid "Name the sender"
+msgstr ""
+
+msgid "Select Contact Record"
+msgstr "选择联系人记录"
+
+msgid "Or type a new company name"
+msgstr ""
+
+msgid "Delete selected faxes?"
+msgstr ""
+
+msgid "faxes"
+msgstr "份传真"
+
+msgid "No contacts found"
+msgstr ""
+
+msgid "Add"
+msgstr "添加"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Organize recipient groups for mass fax broadcasting and notifications."
+msgstr "组织用于大量传真群发和通知的收件人群组。"
+
+msgid "Create List"
+msgstr "创建群发列表"
+
+msgid "Saved Distribution Lists"
+msgstr "已保存的分发列表"
+
+msgid "members"
+msgstr "名成员"
+
+msgid "Group Members & Settings"
+msgstr "群组成员与设置"
+
+msgid "Create New Distribution List"
+msgstr "创建新分发列表"
+
+msgid "List Name"
+msgstr "列表名"
+
+msgid "e.g. Executive Sales Team"
+msgstr ""
+
+msgid "Group Members (Contacts & Fax Numbers)"
+msgstr "群组成员（联系人与传真号码）"
+
+#, fuzzy
+msgid "contacts assigned"
+msgstr "联系人"
+
+msgid "No contacts assigned to this list yet."
+msgstr "该列表中尚未分配任何联系人。"
+
+msgid "Add Member"
+msgstr "添加成员"
+
+msgid "Delete this distribution list?"
+msgstr "删除该分发列表?"
+
+msgid "Edit Distribution List"
+msgstr "编辑分发列表"
+
+msgid "Create Distribution List"
+msgstr "创建分发列表"
+
+msgid "Configure broadcast list parameters and recipient group members."
+msgstr "配置广播列表参数和收件人群组成员。"
+
+msgid "Back to Lists"
+msgstr "返回列表"
+
+msgid "Distribution List Profile"
+msgstr "分发列表资料"
+
+msgid "e.g. Finance Operations"
+msgstr ""
+
+msgid "Enrolled Members"
+msgstr "已加入的成员"
+
+msgid "List ID:"
+msgstr "列表ID:"
+
+msgid "No contacts in this list."
+msgstr "此列表中没有联系人。"
+
+msgid "Add contacts to the list"
+msgstr ""
+
+msgid "Changes saved"
+msgstr "更改已保存"
+
+msgid "Back"
+msgstr "[ 返回 ]"
+
+#, fuzzy
+msgid "Email Address Book"
+msgstr "Email地址"
+
+msgid "Manage email recipients, transmission routing, and contacts directory."
+msgstr "管理电子邮件收件人、传输路由及联系人目录。"
+
+#, fuzzy
+msgid "New Contact"
+msgstr "联系人"
+
+msgid "Contacts"
+msgstr "联系人"
+
+msgid "recipients"
+msgstr "位收件人"
+
+#, fuzzy
+msgid "Contact Name"
+msgstr "联系人"
+
+msgid "Company Affiliation"
+msgstr "所属企业"
+
+msgid ""
+"No email contacts found in the directory. Click \"+ New Contact\" to "
+"register one."
+msgstr "通讯录中未找到邮件联系人。点击“+ 新建联系人”以注册一个。"
+
+msgid "Email Book - Edit Email Contact"
+msgstr "邮箱通讯录 - 编辑邮件联系人"
+
+msgid "Manage contact information and company affiliation in Email Book."
+msgstr "在邮箱通讯录中管理联系人信息及所属企业。"
+
+msgid "Back to Email Book"
+msgstr "返回邮箱通讯录"
+
+msgid "Contact Profile Details"
+msgstr "联系人资料详情"
+
+msgid "John Doe"
+msgstr ""
+
+msgid "New Destination"
+msgstr ""
+
+msgid "Priority"
+msgstr "Priority"
+
+msgid "Modem / Device"
+msgstr ""
+
+msgid "Number of tries"
+msgstr ""
+
+msgid "Expire after"
+msgstr ""
+
+msgid "Now"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Hours"
+msgstr ""
+
+msgid "Days"
+msgstr ""
+
+msgid "Schedule Send Time"
+msgstr ""
+
+#, fuzzy
+msgid "Lost Password"
+msgstr "密码"
+
+msgid "Account Recovery Assistance"
+msgstr "账户恢复协助"
+
+msgid "Back to Login"
+msgstr "返回登录"
+
+msgid "Your password will be sent to the given e-mail address."
+msgstr ""
+
+msgid "Once you have received your new password you can login in and change it."
+msgstr ""
+
+msgid "Login"
+msgstr "登录"
+
+msgid ""
+"Please enter your e-mail address then click on the Send Password button. "
+"You will receive a new password shortly. Use this new password to access "
+"the site."
+msgstr ""
+
+msgid "E-mail address"
+msgstr "E-mail地址"
+
+msgid "Send Password"
+msgstr "发送密码"
+
+msgid "Received faxes appear here automatically in real time."
+msgstr "收到的传真将在此实时自动显示。"
+
+msgid "Faxes"
+msgstr "份传真"
+
+msgid "Fax"
+msgstr "传真"
+
+#, fuzzy
+msgid "Archive Selected"
+msgstr "档案柜"
+
+msgid "Delete Selected"
+msgstr "删除所选"
+
+msgid "fax"
+msgstr "传真"
+
+#, fuzzy
+msgid "Preview"
+msgstr "查看传真"
+
+msgid "Sender"
+msgstr "Sender"
+
+msgid "Page"
+msgstr "页码"
+
+msgid "of"
+msgstr "/"
+
+msgid "This number belongs to several companies. Which one is it?"
+msgstr ""
+
+msgid "Unknown Sender"
+msgstr ""
+
+msgid "View"
+msgstr "查看传真"
+
+msgid "Reply"
+msgstr "回复传真"
+
+msgid "Archive"
+msgstr "档案柜"
+
+msgid "Email Fax"
+msgstr "邮件发送传真"
+
+msgid "Rotate"
+msgstr "旋转传真"
+
+msgid "Download TIFF"
+msgstr "下载TIFF文件"
+
+msgid "0 FAXES"
+msgstr "0 份传真"
+
+msgid ""
+"There are no incoming faxes waiting in your inbox. Incoming transmissions"
+" will automatically appear here in real time."
+msgstr "收件箱中没有正在等待的传入传真。新传入的传真将在此实时自动显示。"
+
+msgid "Send Your First Fax"
+msgstr "发送您的第一份传真"
+
+#, fuzzy
+msgid "Search Archive"
+msgstr "档案柜"
+
+msgid "Getting Started with NamiFAX"
+msgstr "开始使用 NamiFAX"
+
+msgid "Receive Faxes"
+msgstr "接收传真"
+
+msgid ""
+"When someone sends a fax to this system's number, it will appear here "
+"automatically."
+msgstr "当有人向本系统的号码发送传真时，传真将自动显示在此处。"
+
+#, fuzzy
+msgid "Send Faxes"
+msgstr "发传真"
+
+msgid "Click Send Fax to transmit a PDF or image document to any fax number."
+msgstr "点击“发送传真”即可将PDF或图像文件发送至任意传真号码。"
+
+msgid "Manage Records"
+msgstr "管理记录"
+
+msgid ""
+"Download faxes as PDF, archive them for later, or search all records in "
+"the Archive."
+msgstr "将传真下载为PDF、归档以备日后查看，或在归档库中搜索所有记录。"
+
+msgid "Archive search"
+msgstr ""
+
+msgid "new fax"
+msgstr ""
+
+msgid "Outbox"
+msgstr "发件箱"
+
+msgid "lines"
+msgstr ""
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Sign in"
+msgstr "登录"
+
+msgid "Enter your credentials to continue."
+msgstr "请输入您的凭据以继续。"
+
+#, fuzzy
+msgid "System Online"
+msgstr "系统功能"
+
+msgid "Enter your username"
+msgstr ""
+
+msgid "Forgot password?"
+msgstr "请输入您的电子邮件地址，然后按发送密码按钮。您很快就会收到新的密码，请用新密码访问。"
+
+msgid "Enter your password"
+msgstr ""
+
+msgid "Contact your system administrator if you need an account."
+msgstr "如需账户，请联系系统管理员。"
+
+msgid "Or continue with"
+msgstr ""
+
+msgid "Sign in with Passkey (Touch ID / Security Key)"
+msgstr ""
+
+msgid "SAML 2.0 Enterprise SSO (Okta / Entra ID)"
+msgstr ""
+
+msgid "Two-Factor Authentication"
+msgstr ""
+
+msgid ""
+"Enter the 6-digit code from your authenticator app or an emergency "
+"recovery code."
+msgstr ""
+
+#, fuzzy
+msgid "Authentication Code"
+msgstr "收件人"
+
+msgid "123456 or 8-char backup code"
+msgstr ""
+
+msgid "Verify & Log In"
+msgstr ""
+
+msgid "Sign out?"
+msgstr ""
+
+msgid "Assign Company Name"
+msgstr "指定企业名称"
+
+msgid "Associate document with registered enterprise contact"
+msgstr "将文件与已注册的企业联系人关联"
+
+msgid "Search Company Name"
+msgstr "搜索企业名称"
+
+msgid "Type company name to filter..."
+msgstr ""
+
+#, fuzzy
+msgid "Delete Fax"
+msgstr "删除"
+
+msgid "Are you sure you want to delete this fax?"
+msgstr "确定要删除此传真吗？"
+
+msgid "This operation will permanently purge the fax document archive."
+msgstr "此操作将永久清除该传真文档归档。"
+
+msgid "Dispatch PDF document attachment to email recipients"
+msgstr "将PDF文档附件发送给邮件收件人"
+
+msgid "From"
+msgstr "发件人"
+
+msgid "Recipients"
+msgstr "收件人"
+
+msgid "Choose from contacts"
+msgstr ""
+
+msgid "CC"
+msgstr ""
+
+msgid "BCC"
+msgstr ""
+
+msgid "Subject"
+msgstr "主题"
+
+msgid "PDF file name"
+msgstr "PDF文件名"
+
+msgid "Message"
+msgstr "信息"
+
+msgid "Archive fax"
+msgstr ""
+
+msgid "Send"
+msgstr "发送"
+
+msgid "Append internal administrative note or comments"
+msgstr "附加内部管理备注或评注"
+
+msgid "Note / Description"
+msgstr "备注 / 描述"
+
+msgid "Enter transaction note or dispatch comments..."
+msgstr ""
+
+msgid "Transmission Report"
+msgstr "传输报告"
+
+msgid "Official facsimile delivery confirmation receipt"
+msgstr "官方传真送达确认回执"
+
+msgid "Print"
+msgstr "Print"
+
+msgid "Company:"
+msgstr "公司"
+
+msgid "Pages:"
+msgstr "页数:"
+
+msgid "Fax Number:"
+msgstr "传真号码"
+
+msgid "Database unavailable"
+msgstr ""
+
+msgid ""
+"The database cannot be reached right now. This page tries again every 10 "
+"seconds."
+msgstr ""
+
+msgid "Faxes currently queued or being transmitted."
+msgstr "当前排队中或正在发送的传真。"
+
+msgid ""
+"This page shows only faxes that are queued or in progress. Once "
+"delivered, they are removed from this list. Find completed records in the"
+msgstr "此页面仅显示正在排队或正在进行的传真。发送成功后将从列表中移除。可在以下位置查找已完成记录:"
+
+msgid "jobs in progress"
+msgstr "个进行中的任务"
+
+msgid "job in progress"
+msgstr "个进行中的任务"
+
+msgid "Job ID"
+msgstr "任务ID"
+
+msgid "Dials"
+msgstr "拨号次数"
+
+msgid "TTS"
+msgstr ""
+
+msgid "Modify"
+msgstr ""
+
+msgid "Kill job"
+msgstr "删除任务"
+
+msgid "Kill"
+msgstr ""
+
+msgid "Failed Transmissions"
+msgstr "传输失败记录"
+
+msgid "Review the number or retry below."
+msgstr "请检查号码或在下方重试。"
+
+msgid "Retry"
+msgstr "Retry"
+
+msgid "No jobs in queue"
+msgstr "队列中没有任务"
+
+msgid ""
+"There are no faxes waiting to be sent. Send a fax to see its progress "
+"here."
+msgstr "没有等待发送的传真。发送传真即可在此查看其进度。"
+
+#, fuzzy
+msgid "Send a Fax"
+msgstr "发传真"
+
+#, fuzzy
+msgid "Password Expired"
+msgstr "密码"
+
+msgid "Security Credentials Renewal"
+msgstr "安全凭据更新"
+
+msgid "Action Required"
+msgstr "需要采取操作"
+
+msgid ""
+"Your password has expired or needs to be changed before proceeding. "
+"Please enter your old password and choose a new password."
+msgstr "您的密码已过期或需要修改后方可继续。请输入您的旧密码并设置新密码。"
+
+msgid "Old Password"
+msgstr "旧密码"
+
+msgid "Current credentials"
+msgstr ""
+
+msgid "New Password"
+msgstr "新密码"
+
+msgid "New secure passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Confirm New Password"
+msgstr "请输入您的电子邮件地址，然后按发送密码按钮。您很快就会收到新的密码，请用新密码访问。"
+
+msgid "Re-type new passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Update Password"
+msgstr "密码"
+
+msgid "Fill in the details below and click Send."
+msgstr "填写以下详细信息并点击“发送”。"
+
+#, fuzzy
+msgid "Destination & Recipients"
+msgstr "传真号码"
+
+msgid "Enter the fax number and recipient details."
+msgstr "输入传真号码和收件人详情。"
+
+msgid "e.g. +1-555-0199  —  separate multiple numbers with semicolons"
+msgstr ""
+
+msgid "Choose a distribution list"
+msgstr ""
+
+msgid "To send to multiple recipients at once, separate numbers with a semicolon."
+msgstr ""
+
+msgid "Saved contacts are available in the"
+msgstr "已保存的联系人可在此处获取:"
+
+msgid "Attention To"
+msgstr "收件人"
+
+msgid "optional"
+msgstr "可选"
+
+msgid "e.g. Jane Doe"
+msgstr ""
+
+msgid "Voice Number"
+msgstr "电话号码"
+
+msgid "Address"
+msgstr ""
+
+msgid "Zip"
+msgstr ""
+
+msgid "Subject / Regarding"
+msgstr "主题"
+
+msgid "e.g. Purchase Order #4921"
+msgstr ""
+
+msgid "Document Attachment"
+msgstr "文档附件"
+
+msgid "Attach the file you want to transmit."
+msgstr "附加要发送的文件。"
+
+msgid "Click to select a file"
+msgstr "点击选择文件"
+
+msgid "Supported: PDF, TIFF, PostScript, TXT"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid ""
+"PDF is the most commonly used format. Convert Word or Excel files to PDF "
+"before attaching."
+msgstr "PDF是最常用的格式。附加前请先将Word或Excel文件转换为PDF。"
+
+msgid "Cover Page"
+msgstr "使用传真封面"
+
+msgid "Add a cover sheet with sender and recipient info."
+msgstr "添加包含发件人和收件人信息的封面。"
+
+#, fuzzy
+msgid "Include Cover Page"
+msgstr "使用传真封面"
+
+#, fuzzy
+msgid "Cover Template"
+msgstr "使用传真封面"
+
+msgid "No cover pages are set up"
+msgstr ""
+
+msgid "Send via Line"
+msgstr "发送线路"
+
+msgid "No modems configured"
+msgstr "未配置modem"
+
+#, fuzzy
+msgid "Cover Comments"
+msgstr "Cover Pages"
+
+msgid "Notes or message to print on the cover sheet..."
+msgstr ""
+
+msgid "Advanced Options"
+msgstr "高级选项"
+
+msgid "Priority, retries, notifications"
+msgstr "优先级、重试次数、通知设置"
+
+#, fuzzy
+msgid "Max Retries"
+msgstr "允许查看的传真类别"
+
+msgid "Retries automatically on busy signal."
+msgstr "占线时自动重试。"
+
+msgid "The original fax is sent along."
+msgstr ""
+
+msgid "Cancel & return to Inbox"
+msgstr "取消并返回收件箱"
+
+#, fuzzy
+msgid "User Settings"
+msgstr "设置"
+
+msgid ""
+"Configure your personal profile, fax station identity, and portal "
+"preferences."
+msgstr "配置您的个人资料、传真台站标识及门户偏好设置。"
+
+msgid "Return to Inbox"
+msgstr "返回收件箱"
+
+msgid "Personal & Organization Details"
+msgstr "个人与组织详情"
+
+msgid "Office / Location"
+msgstr "办公室 / 地点"
+
+msgid "Direct Voice Number"
+msgstr "直拨电话号码"
+
+#, fuzzy
+msgid "Direct Fax Number"
+msgstr "传真号码"
+
+msgid "Transmitting Station ID (TSI)"
+msgstr "发送台站标识 (TSI)"
+
+msgid "e.g. +1 555 123 4567"
+msgstr ""
+
+msgid "Header identifier imprinted on top of transmitted fax pages."
+msgstr "印在已发送传真页面顶部的页眉标识符。"
+
+msgid "Email & Fax Notification Signature"
+msgstr "邮件与传真通知签名"
+
+msgid "Portal & Delivery Preferences"
+msgstr "门户及递送偏好设置"
+
+msgid "Display Language"
+msgstr "显示语言"
+
+#, fuzzy
+msgid "Default Cover Page"
+msgstr "使用传真封面"
+
+msgid "Faxes Per Page"
+msgstr "faxes per page"
+
+msgid "Archive Faxes Per Page"
+msgstr ""
+
+#, fuzzy
+msgid "Change Password"
+msgstr "密码"
+
+#, fuzzy
+msgid "Current Password"
+msgstr "请输入您的电子邮件地址，然后按发送密码按钮。您很快就会收到新的密码，请用新密码访问。"
+
+msgid "Enter current password to verify"
+msgstr ""
+
+msgid "Enter secure new password"
+msgstr ""
+
+msgid "Re-type new password"
+msgstr ""
+
+#, fuzzy
+msgid "Update Settings"
+msgstr "设置"
+
+msgid "Two-Factor Authentication (TOTP)"
+msgstr ""
+
+msgid ""
+"Protect your account with Google Authenticator, Authy, or compatible RFC "
+"6238 apps."
+msgstr ""
+
+msgid "Active / Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid ""
+"When enabled, signing in requires your password and a 6-digit one-time "
+"token from your mobile device."
+msgstr ""
+
+msgid "recovery codes left"
+msgstr ""
+
+msgid "Code from your app (to get new recovery codes)"
+msgstr ""
+
+msgid "New recovery codes"
+msgstr ""
+
+msgid "Turn off 2FA for your account?"
+msgstr ""
+
+msgid "Code or recovery code"
+msgstr ""
+
+msgid "Disable 2FA"
+msgstr ""
+
+msgid "Enable 2FA (Setup Authenticator)"
+msgstr ""
+
+msgid "FIDO2 Passkeys & Biometric Security Keys"
+msgstr ""
+
+msgid ""
+"Sign in securely without passwords using Touch ID, Face ID, Windows "
+"Hello, or YubiKey."
+msgstr ""
+
+msgid "Register New Passkey"
+msgstr ""
+
+msgid "Loading registered security keys..."
+msgstr ""
+
+msgid "No Passkeys registered yet."
+msgstr ""
+
+msgid ""
+"No Passkeys registered yet. Click Register to add Touch ID or a security "
+"key."
+msgstr ""
+
+msgid "Remove"
+msgstr "移除"
+
+msgid ""
+"1. Scan this code with Google Authenticator, Authy or another RFC 6238 "
+"app, or type the key by hand."
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "2. Enter the 6-digit code the app shows"
+msgstr ""
+
+msgid "Turn on 2FA"
+msgstr ""
+
+msgid "Save your recovery codes"
+msgstr ""
+
+msgid ""
+"Each code works once if you lose your phone. They are shown only now; "
+"store them somewhere safe."
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Back to settings"
+msgstr ""
+
+msgid "Previous fax"
+msgstr "前一份传真"
+
+msgid "Prev"
+msgstr "上一页"
+
+msgid "Next fax"
+msgstr "下一份传真"
+
+msgid "Rotate fax"
+msgstr "旋转传真"
+
+#, python-format
+msgid "Invalid fax number: %(number)s"
+msgstr ""
+
+msgid "Address book entry saved."
+msgstr ""
+
+msgid "Please enter a valid fax number"
+msgstr ""
+
+msgid "You are not allowed to delete address book entries."
+msgstr ""
+
+msgid "You are not allowed to delete contacts."
+msgstr ""
+
+msgid "This modem already exists"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Cover page template removed successfully"
+msgstr ""
+
+msgid "Failed to remove cover page template"
+msgstr ""
+
+msgid "Failed to update cover page template"
+msgstr ""
+
+msgid "Cover page template registered successfully"
+msgstr ""
+
+msgid "Title and File are required"
+msgstr ""
+
+msgid "The company does not exist."
+msgstr ""
+
+msgid "The company and its fax numbers were deleted."
+msgstr ""
+
+msgid "Please enter a valid e-mail address."
+msgstr "请输入有效的电子邮件地址。"
+
+msgid "Fax to Email settings saved"
+msgstr ""
+
+msgid "The system is rebooting. Please wait..."
+msgstr ""
+
+msgid "The system is shutting down. Please wait..."
+msgstr ""
+
+msgid "The command could not be run"
+msgstr ""
+
+msgid "There is no fax archive folder to download."
+msgstr ""
+
+msgid "The database dump could not be made"
+msgstr ""
+
+msgid "Access denied. Superadmin permission required."
+msgstr ""
+
+msgid "SMTP Gateway settings saved successfully."
+msgstr ""
+
+msgid "Printer name and host are required."
+msgstr ""
+
+msgid "Network printer registered successfully."
+msgstr ""
+
+msgid "Printer deleted successfully."
+msgstr ""
+
+msgid "Lifecycle policy saved successfully."
+msgstr ""
+
+msgid "Cloud storage configuration saved successfully."
+msgstr ""
+
+msgid "SAML 2.0 configuration saved successfully."
+msgstr ""
+
+msgid "Catch All"
+msgstr ""
+
+msgid "Never"
+msgstr ""
+
+msgid "Every 3 Months"
+msgstr ""
+
+msgid "Every 6 Months"
+msgstr ""
+
+msgid "You must enter a username"
+msgstr ""
+
+msgid "Non-alphanumeric characters are not allowed in username."
+msgstr "用户名不允许含有字母数字以外的字符。"
+
+#, python-format
+msgid ""
+"Hello %(name)s,\n"
+"\n"
+"This email contains your username and password to log into NamiFAX "
+"(%(url)s)\n"
+"\n"
+"Username - %(username)s\n"
+"Password - %(password)s\n"
+"\n"
+"Please do not respond to this message as it is automatically generated "
+"and is for information purposes only"
+msgstr ""
+
+msgid "New User Details"
+msgstr "新用户详细资料"
+
+msgid "The user does not exist."
+msgstr ""
+
+msgid "You cannot delete your own account."
+msgstr ""
+
+msgid "You cannot delete the last superuser."
+msgstr ""
+
+msgid "Please enter a valid number."
+msgstr ""
+
+msgid "Both sent and received faxes"
+msgstr "发出以及收到的传真"
+
+msgid "Only sent faxes"
+msgstr "仅我发出的传真"
+
+msgid "Only received faxes"
+msgstr "仅收到的传真"
+
+msgid "Account is disabled"
+msgstr ""
+
+#, python-format
+msgid "Too many failed attempts. Try again in %(minutes)d minutes."
+msgstr ""
+
+msgid "Invalid or expired verification code."
+msgstr ""
+
+#, python-format
+msgid ""
+"The user account %(user)s has this email associated with it.  A web user "
+"from %(ip)s has just requested that a new password be sent.\n"
+"\n"
+"Your New Password is: %(password)s\n"
+"\n"
+"If this was an error just login with your new password and then change "
+"your password to what you would like it to be."
+msgstr ""
+"用户帐号%(user)s对应您的邮件地址。%(ip)s上的web用户刚要求重发新密码。 您的新密码是: %(password)s "
+"如果这是一个错误，请用新密码登录后更改密码。"
+
+msgid "Email failed to send"
+msgstr "邮件发送失败"
+
+msgid "Fax Contacts"
+msgstr ""
+
+msgid "Email Contacts"
+msgstr ""
+
+msgid "The fax document was not found."
+msgstr ""
+
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+msgid "Invalid job number."
+msgstr ""
+
+msgid "Any Available Line (Auto)"
+msgstr "任意可用线路 (自动)"
+
+msgid "You may not use this line."
+msgstr ""
+
+msgid "Your fax has been successfully queued to be faxed."
+msgstr ""
+
+msgid "Job"
+msgstr ""
+
+msgid "The code is not valid."
+msgstr ""
+
+msgid "The code did not match. Check the time on your phone and try again."
+msgstr ""
+
+msgid "The password is not correct."
+msgstr ""
+
+msgid "Add a note"
+msgstr "添加注释"
+
+msgid "Account active"
+msgstr "帐户有效"
+
+msgid "The cover page was updated"
+msgstr ""
+
+msgid "The modem was created"
+msgstr "Modem已创建"
+
+msgid "The modem was deleted"
+msgstr "Modem已删除"
+
+msgid "The modem was updated"
+msgstr "Modem已更新"
+
+msgid "Archive - show"
+msgstr ""
+
+msgid "Inbox - show"
+msgstr ""
+
+msgid "Assign a company name"
+msgstr "指定公司名称"
+
+msgid "You must enter a company name"
+msgstr "必须输入公司名称"
+
+msgid "Contact details saved"
+msgstr "联系人信息已保存"
+
+msgid "Remove entries"
+msgstr "删除项目"
+
+msgid "Save list name"
+msgstr "保存列表名"
+
+msgid "The email failed to send."
+msgstr "邮件发送错误"
+
+msgid "The email was sent successfully."
+msgstr "邮件成功发送"
+
+msgid "Destination fax numbers"
+msgstr "收件人传真号码"
+
+msgid "You must enter an alias"
+msgstr ""
+
+msgid "You must enter a device name"
+msgstr ""
+
+msgid "Modify Job"
+msgstr ""
+
+msgid "You must enter a name."
+msgstr "必须输入名字"
+
+msgid "Notify on requeue"
+msgstr "重试时通知"
+
+msgid "Forward fax via email"
+msgstr "通过邮件转发传真"
+
+msgid "To person"
+msgstr "收件人"
+
+msgid "User can delete faxes"
+msgstr "用户允许删除传真"
+
+msgid "User settings have been saved."
+msgstr "用户设置已保存."
+
+msgid "Select All Faxes"
+msgstr "全选"
+
+#~ msgid "High"
+#~ msgstr "High"
+
+#~ msgid "Configure corporate contact identity and transmission routing defaults."
+#~ msgstr "配置企业联系人身份及传输路由默认设置。"
+
+#~ msgid "Primary Company Profile"
+#~ msgstr "主要企业资料"
+
+#~ msgid "Recipient Contact & Physical Address"
+#~ msgstr "收件人联系方式及实际地址"
+
+#~ msgid "City / Postal Region"
+#~ msgstr "城市 / 邮政区域"
+
+#~ msgid "Category Tag"
+#~ msgstr "分类标签"
+
+#~ msgid "General"
+#~ msgstr "Normal"
+
+#~ msgid "Invoices & Billing"
+#~ msgstr "发票与账单"
+
+#~ msgid "Legal"
+#~ msgstr "法务"
+
+#~ msgid "Description / Internal Notes"
+#~ msgstr "描述 / 内部备注"
+
+#~ msgid "Edit Forwarding Rule"
+#~ msgstr "编辑转发规则"
+
+#~ msgid "Add Forwarding Rule"
+#~ msgstr "添加转发规则"
+
+#~ msgid ""
+#~ "Please enter your registered username or"
+#~ " email address below. Password reset "
+#~ "instructions will be dispatched to your"
+#~ " account email address."
+#~ msgstr "请在下方输入您注册的用户名或电子邮箱地址。密码重置说明将发送至您的账户邮箱。"
+
+#~ msgid "Username or Email Address"
+#~ msgstr "用户名或电子邮箱地址"
+
+#~ msgid "Reset Password"
+#~ msgstr "请输入您的电子邮件地址，然后按发送密码按钮。您很快就会收到新的密码，请用新密码访问。"
+
+#~ msgid "Standard (Default)"
+#~ msgstr "标准 (默认)"
+
+#~ msgid "Urgent"
+#~ msgstr "紧急"
+
+#~ msgid "Confidential"
+#~ msgstr "机密"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Low"
+#~ msgstr "Low"
+
+#~ msgid "High (Urgent)"
+#~ msgstr "高 (紧急)"
+
+#~ msgid "Reply to Fax"
+#~ msgstr "回复传真"
+
+#~ msgid "Dispatch quick reply transmission to originating sender"
+#~ msgstr "向原始发件人发送快速回复"
+
+#~ msgid "Regarding (Subject)"
+#~ msgstr "事由（主题）"
+
+#~ msgid "Comments"
+#~ msgstr "注释"
+
+#~ msgid "Destination"
+#~ msgstr "传真号码"
+
+#~ msgid "Queued"
+#~ msgstr "已排队"
+
+#~ msgid "Reason"
+#~ msgstr "原因"
+
+#~ msgid "To send to multiple recipients at once, separate numbers with a comma."
+#~ msgstr "若要同时发送给多个收件人，请用逗号分隔号码。"
+
+#~ msgid "Save Modem"
+#~ msgstr "Fax Modems"
+
+#~ msgid "Configure User:"
+#~ msgstr "配置用户:"
+
+#~ msgid "recipient@example.com (comma separated)"
+#~ msgstr ""
+
+#~ msgid "NamiFAX Transmission Document"
+#~ msgstr ""
+
+#~ msgid "Please find the attached facsimile document."
+#~ msgstr ""
+
+#~ msgid "results"
+#~ msgstr "Reset"
+
+#~ msgid "result"
+#~ msgstr "Reset"
+
+#~ msgid "Keyword"
+#~ msgstr "Keyword"
+
+#~ msgid "Invoices / Orders"
+#~ msgstr "发票 / 订单"
+
+#~ msgid "Legal / Contracts"
+#~ msgstr "联系人"
+
+#~ msgid "From Date"
+#~ msgstr "旋转传真"
+
+#~ msgid "To Date"
+#~ msgstr "旋转传真"
+
+#~ msgid "Sent & Received"
+#~ msgstr "发送与接收"
+
+#~ msgid "Received only"
+#~ msgstr "仅接收"
+
+#~ msgid "Sent only"
+#~ msgstr "仅发送"
+
+#~ msgid "Results"
+#~ msgstr "Reset"
+
+#~ msgid "records"
+#~ msgstr "条记录"
+
+#~ msgid "record"
+#~ msgstr "条记录"
+
+#~ msgid "No results found"
+#~ msgstr "未找到结果"
+
+#~ msgid "Try adjusting your search terms or date range."
+#~ msgstr "请尝试调整搜索词或日期范围。"
+
+#~ msgid "Search the Archive"
+#~ msgstr "搜索归档"
+
+#~ msgid "Enter a keyword or filter above and click Search to find fax records."
+#~ msgstr "在上方输入关键词或筛选条件，然后点击“搜索”以查找传真记录。"
+
+#~ msgid "Showing"
+#~ msgstr "显示"
+
+#~ msgid "of"
+#~ msgstr "/"
+
+#~ msgid "Fax Viewer"
+#~ msgstr "传真查看器"
+
+#~ msgid "Page 1 of"
+#~ msgstr "第 1 页，共"
+
+#~ msgid "FROM:"
+#~ msgstr "发件人:"
+
+#~ msgid "DATE:"
+#~ msgstr "日期:"
+
+#~ msgid "DEVICE:"
+#~ msgstr "设备:"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "TIFF"
+#~ msgstr "TIFF"
+
+#~ msgid "Total"
+#~ msgstr "总计"
+
+#~ msgid "Incoming Transmission"
+#~ msgstr "传入传输"
+
+#~ msgid "FACSIMILE TRANSMISSION"
+#~ msgstr "传真传输"
+
+#~ msgid "Date Received:"
+#~ msgstr "接收日期:"
+
+#~ msgid "Originating Station:"
+#~ msgstr "发起台站:"
+
+#~ msgid "PORT"
+#~ msgstr "Priority"
+
+#~ msgid "High-Resolution Raster Preview"
+#~ msgstr "高分辨率光栅预览"
+
+#~ msgid "Device Line:"
+#~ msgstr "设备线路:"
+
+#~ msgid "Download Original Document"
+#~ msgstr "下载原始文档"
+
+#~ msgid "NamiFAX Enterprise Facsimile Engine"
+#~ msgstr "NamiFAX 企业级传真引擎"
+
+#~ msgid "Archive ID:"
+#~ msgstr "档案柜"
+
+#~ msgid "Add contact name or fax number..."
+#~ msgstr ""
+
+#~ msgid "Delete List"
+#~ msgstr "删除列表"
+
+#~ msgid "Save Changes"
+#~ msgstr "Cover Pages"
+
+#~ msgid "Supported: PDF, TIFF, PostScript, TXT · Max 10 MB"
+#~ msgstr "支持格式: PDF, TIFF, PostScript, TXT · 最大 10 MB"
+
+#~ msgid "Auto-select recommended"
+#~ msgstr "建议自动选择"
+
+#~ msgid "Status:"
+#~ msgstr "状态:"
+
+#~ msgid "Transmitted Successfully (OK)"
+#~ msgstr "传输成功 (OK)"
+

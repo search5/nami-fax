@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}NamiFAX{% endblock %}</title>
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/static/css/main.css?v=3.6.0" type="text/css" />
+  <style>
+    .strorange { color: #c2410c; font-weight: 600; }
+    /* Tooltip */
+    .has-tooltip { position: relative; }
+    .has-tooltip .tooltip-text {
+      visibility: hidden; opacity: 0; transition: opacity .15s;
+      position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
+      background: #1e293b; color: #f1f5f9; font-size: 11px; white-space: nowrap;
+      padding: 4px 8px; border-radius: 6px; pointer-events: none; z-index: 50;
+    }
+    .has-tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
+  </style>
+  {% block extra_head %}{% endblock %}
+  <link rel="search" type="application/opensearchdescription+xml" href="/search" title="{{ _('Archive search') }}" />
+  <style media="print">
+    header, nav, footer, .print-hide, form button, .servername { display: none !important; }
+    body { background: #fff !important; }
+  </style>
+</head>
+<body data-page="{{ active_tab or '' }}" data-inbox-poll="30" data-modem-poll="20" data-new-fax="{{ _('new fax') }}"{% if focus_on_new_fax %} data-focus-new-fax="1"{% endif %}{% if popup_on_new_fax %} data-popup-new-fax="1"{% endif %} class="min-h-full flex flex-col text-slate-900 font-sans antialiased bg-slate-50">
+
+  {% if current_user %}
+  <!-- ───────────── Header ───────────── -->
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200 shadow-sm">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 gap-4">
+
+        <!-- Brand -->
+        <a href="/inbox" class="flex items-center gap-2.5 shrink-0 group">
+          <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white group-hover:bg-blue-700 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <span class="font-bold text-slate-900 text-sm hidden sm:inline">NamiFAX</span>
+        </a>
+
+        <!-- Main Navigation -->
+        <nav class="hidden md:flex items-center gap-0.5 flex-1 justify-center">
+          {% set nav_items = [
+            ('inbox',    '/inbox',       _('Inbox'),    'View received faxes',      num_inbox),
+            ('sendfax',  '/sendfax',     _('Send Fax'), 'Send a document via fax',  none),
+            ('outbox',   '/outbox',      _('Outbox'),   'Pending outbound faxes',   num_outbox),
+            ('archive',  '/archive',     _('Archive'),  'Search all fax records',   none),
+            ('contacts', '/addressbook', _('Contacts'), 'Manage your address book', none),
+          ] %}
+          {% set keys = {'inbox': 'i', 'sendfax': 's', 'outbox': 'o', 'archive': 'a', 'contacts': 'c'} %}
+          {% for tab, href, label, desc, badge in nav_items %}
+          <a href="{{ href }}" accesskey="{{ keys[tab] }}"
+             class="has-tooltip relative flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-colors
+                    {% if active_tab == tab %}text-blue-700 bg-blue-50{% else %}text-slate-600 hover:text-slate-900 hover:bg-slate-100{% endif %}">
+            <span>{{ label }}</span>
+            {% if badge %}
+              <span {% if tab == 'inbox' %}data-inbox-count{% endif %} class="px-1.5 py-0.5 rounded-full text-xs font-bold
+                    {% if tab == 'outbox' %}bg-amber-500 text-white{% else %}bg-blue-600 text-white{% endif %}">
+                {{ badge }}
+              </span>
+            {% endif %}
+            <span class="tooltip-text">{{ desc }}</span>
+            {% if active_tab == tab %}
+              <span class="absolute bottom-0 left-3 right-3 h-0.5 bg-blue-600 rounded-full"></span>
+            {% endif %}
+          </a>
+          {% endfor %}
+        </nav>
+
+        <!-- Right: Send CTA + status + user -->
+        <div class="flex items-center gap-2 shrink-0">
+          <!-- Primary CTA -->
+          <a href="/sendfax"
+             class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-sm transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+            </svg>
+            {{ _('Send Fax') }}
+          </a>
+
+          <!-- Fax line status -->
+          <div class="has-tooltip hidden lg:flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-medium
+               {% if modem_list or modem_devices %}bg-emerald-50 border border-emerald-200 text-emerald-700{% else %}bg-slate-100 border border-slate-200 text-slate-500{% endif %}"
+               data-modems="{{ (modem_devices or [])|join(',') }}" data-lines="{{ _('lines') }}">
+            <span class="w-2 h-2 rounded-full {% if modem_list or modem_devices %}bg-emerald-500 animate-pulse{% else %}bg-slate-400{% endif %}"></span>
+            <span data-modem-summary>{% if modem_list %}{{ modem_list|length }} Line{{ 's' if modem_list|length > 1 else '' }} Ready{% elif modem_devices %}{{ modem_devices|length }} Line{{ 's' if modem_devices|length > 1 else '' }}{% else %}Standby{% endif %}</span>
+            <span class="tooltip-text">Fax line status</span>
+          </div>
+
+          <!-- Admin link -->
+          {% if current_user.is_admin %}
+          <a href="/admin" class="has-tooltip p-2 text-slate-500 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span class="tooltip-text">Admin panel</span>
+          </a>
+          {% endif %}
+
+          <!-- User avatar -->
+          <div class="flex items-center gap-2 pl-2 border-l border-slate-200">
+            <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-sm font-bold uppercase shrink-0">
+              {{ current_user.username[0] }}
+            </div>
+            <div class="hidden sm:block">
+              <div class="text-sm font-semibold text-slate-900 leading-tight" title="{{ current_user.username }}">{{ user_full_name or current_user.username }}{% if current_user.superuser %} <span data-superuser class="ml-1 px-1.5 py-0.5 rounded bg-amber-100 text-amber-800 text-[10px] font-bold uppercase">{{ _('Superuser') }}</span>{% endif %}</div>
+              <div class="flex items-center gap-2 text-xs text-slate-400">
+                <a href="/settings" accesskey="p" class="hover:text-blue-600 transition-colors">{{ _('Settings') }}</a>
+                <span>·</span>
+                <form method="post" action="/logout" class="inline">
+                  <input type="hidden" name="csrf_token" value="{{ request.session.get_csrf_token() }}" />
+                  <button type="submit" accesskey="l" class="hover:text-red-500 transition-colors">{{ _('Logout') }}</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  {% endif %}
+
+  <!-- Main Content -->
+  <main class="flex-grow max-w-screen-xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    {% if error %}
+    <div class="mb-5 flex items-start gap-3 p-4 bg-red-50 border border-red-200 text-red-800 rounded-xl text-sm">
+      <svg class="w-5 h-5 text-red-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+      <div>
+        <p class="font-semibold">Error</p>
+        <p class="mt-0.5 text-red-700">{{ error }}</p>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if flash_message %}
+    <div class="mb-5 flex items-center gap-3 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-sm">
+      <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+      </svg>
+      <span>{{ flash_message }}</span>
+    </div>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white py-4">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between text-xs text-slate-400">
+      <span>NamiFAX Enterprise Edition 3.3.5</span>
+      <span>Contact your system administrator for support</span>
+    </div>
+  </footer>
+
+  {% if show_server_name %}<div class="text-center text-[11px] text-slate-400 pb-3 servername">{{ server_name }}</div>{% endif %}
+  <script src="/static/js/notify.js" defer></script>
+  <script src="/static/js/livefilter.js" defer></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

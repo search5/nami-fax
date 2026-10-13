@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-m3-dark-surface-container-lowest">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>- NamiFAX - Lost Password</title>
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/static/css/main.css?v=3.6.0" type="text/css" />
+</head>
+<body class="min-h-full flex items-center justify-center p-4 sm:p-6 bg-m3-dark-surface font-sans antialiased text-m3-dark-on-surface selection:bg-m3-dark-primary-container selection:text-m3-dark-on-primary-container">
+
+  <div class="w-full max-w-md bg-m3-dark-surface-container border border-m3-dark-outline-variant/50 rounded-m3-xl shadow-m3-3 p-6 sm:p-8 relative overflow-hidden">
+    
+    <!-- Ambient Glow -->
+    <div class="absolute -top-24 -left-24 w-60 h-60 bg-m3-dark-primary/10 rounded-m3-full blur-3xl pointer-events-none"></div>
+
+    <!-- Header Console -->
+    <div class="flex justify-between items-center border-b border-m3-dark-outline-variant/40 pb-4 mb-6">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-m3-lg bg-m3-dark-primary flex items-center justify-center text-m3-dark-on-primary shadow-m3-1">
+          <svg class="w-5 h-5 text-m3-dark-on-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+          </svg>
+        </div>
+        <div>
+          <h1 class="text-sm font-bold text-m3-dark-on-surface tracking-wide">:: NamiFAX :: {{ _('Lost Password') }}</h1>
+          <p class="text-[11px] font-mono text-m3-dark-on-surface-variant">{{ _('Account Recovery Assistance') }}</p>
+        </div>
+      </div>
+      <a href="/login" class="text-xs text-m3-dark-primary hover:brightness-125 font-semibold transition">&larr; {{ _('Back to Login') }}</a>
+    </div>
+
+    {% if message %}
+      <div class="mb-4 p-3.5 bg-emerald-950/80 border border-emerald-700/80 text-emerald-200 rounded-m3-lg text-xs flex items-center space-x-2.5 shadow-m3-1">
+        <span class="w-2 h-2 rounded-m3-full bg-emerald-400"></span>
+        <span>{{ message }}</span>
+      </div>
+    {% endif %}
+
+    {% if error %}
+      <div class="mb-4 p-3.5 bg-m3-dark-error-container text-m3-dark-on-error-container border border-m3-dark-error/30 rounded-m3-lg text-xs flex items-center space-x-2.5 shadow-m3-1">
+        <span class="w-2 h-2 rounded-m3-full bg-m3-dark-error"></span>
+        <span>{{ error }}</span>
+      </div>
+    {% endif %}
+
+    {% if done %}
+    <div class="mb-6 p-3.5 bg-emerald-950/80 border border-emerald-700/80 text-emerald-200 rounded-m3-lg text-xs leading-relaxed">
+      {{ _('Your password will be sent to the given e-mail address.') }}<br /><br />
+      {{ _('Once you have received your new password you can login in and change it.') }}
+    </div>
+    <a href="/login" class="inline-block px-6 py-2.5 bg-m3-dark-primary hover:brightness-110 text-m3-dark-on-primary rounded-m3-full font-bold text-xs shadow-m3-1 transition">{{ _('Login') }}</a>
+    {% else %}
+    <p class="text-xs text-m3-dark-on-surface-variant mb-6 leading-relaxed">
+      {{ _('Please enter your e-mail address then click on the Send Password button. You will receive a new password shortly. Use this new password to access the site.') }}
+    </p>
+
+    <form action="/forgot" method="post" class="space-y-5 text-xs">
+      <div>
+        <label for="email" class="block text-xs font-semibold text-m3-dark-on-surface mb-1.5">
+          {{ _('E-mail address') }} *
+        </label>
+        <input type="text" name="email" id="email" required maxlength="100" autofocus class="w-full bg-m3-dark-surface-container-low border border-m3-dark-outline-variant rounded-m3-sm px-3.5 py-2 text-xs text-m3-dark-on-surface focus:outline-none focus:ring-2 focus:ring-m3-dark-primary focus:border-m3-dark-primary transition shadow-inner font-mono" placeholder="username@example.com" />
+      </div>
+
+      <input type="hidden" name="_submit_check" value="1" />
+
+      <div class="pt-2 flex items-center justify-between">
+        <a href="/login" class="text-xs text-m3-dark-on-surface-variant hover:text-m3-dark-on-surface transition">{{ _('Cancel') }}</a>
+        <button type="submit" class="px-6 py-2.5 bg-m3-dark-primary hover:brightness-110 text-m3-dark-on-primary rounded-m3-full font-bold text-xs shadow-m3-1 transition">
+          {{ _('Send Password') }}
+        </button>
+      </div>
+    </form>
+    {% endif %}
+
+  </div>
+
+</body>
+</html>

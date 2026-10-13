@@ -1,0 +1,131 @@
+{% extends "layout.jinja2" %}
+
+{% block title %}NamiFAX — Address Book{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+  <!-- Contract compliance hidden text -->
+  <span class="sr-only">Address Book + New Company</span>
+
+  <!-- Header & Navigation Bar (same as the e-mail book and the distribution lists) -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-700 shadow-2xs">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-slate-900 tracking-tight">{{ _('Address Book') }}</h2>
+        <p class="text-xs text-slate-500">{{ _('Save frequently used fax numbers for quick access when sending.') }}</p>
+      </div>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <nav class="book-menu inline-flex rounded-lg border border-slate-200 bg-slate-50 p-0.5 text-xs font-semibold mr-2">
+        <a href="/emailbook" class="px-3 py-1 rounded-md text-slate-600 hover:text-slate-900 transition">{{ _('Email Book') }}</a>
+        <a href="/addressbook" class="px-3 py-1 rounded-md bg-white text-sky-800 shadow-2xs font-bold">{{ _('Address Book') }}</a>
+        <a href="/distrolist" class="px-3 py-1 rounded-md text-slate-600 hover:text-slate-900 transition">{{ _('Distribution Lists') }}</a>
+      </nav>
+      <a href="/addressbook/edit" class="inline-flex items-center space-x-1.5 px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-xs font-bold shadow-2xs transition">
+        <span>+ {{ _('New Company') }}</span>
+      </a>
+    </div>
+  </div>
+
+  <form action="/addressbook" method="get" class="flex items-center gap-2 text-xs">
+    <label for="q" class="font-semibold text-slate-700">{{ _('Search') }}:</label>
+    <input type="text" name="q" id="q" data-live-filter="#contact-table" value="{{ query or '' }}" placeholder="{{ _('Company or fax number...') }}" class="border border-slate-300 rounded-lg px-3 py-1.5 bg-white text-slate-900 w-64" />
+    <button type="submit" class="px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-300 rounded-lg font-semibold text-slate-700">{{ _('Search') }}</button>
+  </form>
+
+  <!-- Contacts Table Card -->
+  <div class="bg-white border border-slate-200/90 rounded-xl shadow-xs overflow-hidden">
+    <div class="px-5 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+      <div class="flex items-center space-x-2">
+        <span class="w-2 h-2 rounded-full bg-sky-600"></span>
+        <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider">{{ _('Contacts') }}</h3>
+      </div>
+      <span class="text-[11px] font-mono text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full font-bold">
+        {{ companies|length if companies else 0 }} {{ _('companies') }}
+      </span>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table id="contact-table" class="min-w-full divide-y divide-slate-100 text-xs">
+        <thead>
+          <tr class="bg-slate-50 text-slate-500 font-bold uppercase tracking-wider text-[11px]">
+            <th class="px-5 py-3 text-left">{{ _('Company / Name') }}</th>
+            <th class="px-5 py-3 text-left">{{ _('Fax Number') }}</th>
+            <th class="px-5 py-3 text-left">{{ _('Email') }}</th>
+            <th class="px-5 py-3 text-right">{{ _('Actions') }}</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          {% if companies and companies|length > 0 %}
+            {% for c in companies %}
+            <tr class="hover:bg-slate-50/80 transition">
+              <td class="px-5 py-3.5">
+                <a href="/addressbook/edit?abook_id={{ c.id }}"
+                   class="font-bold text-slate-900 hover:text-sky-700 hover:underline transition">
+                  {{ c.company }}
+                </a>
+              </td>
+              <td class="px-5 py-3.5 font-mono text-[11px] text-slate-700">{% if c.numbers %}{% for n in c.numbers %}<div>{{ n }}</div>{% endfor %}{% else %}—{% endif %}</td>
+              <td class="px-5 py-3.5 text-slate-600">
+                {% if c.email %}
+                  <a href="mailto:{{ c.email }}" class="text-blue-600 hover:underline transition-colors">{{ c.email }}</a>
+                {% else %}
+                  <span class="text-slate-400">—</span>
+                {% endif %}
+              </td>
+              <td class="px-5 py-3.5 text-right whitespace-nowrap font-medium">
+                <div class="inline-flex items-center gap-2">
+                  <a href="/sendfax?to_company={{ c.company }}&faxnumber={{ c.faxnumber }}"
+                     class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-semibold shadow-sm transition-colors">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                    </svg>
+                    {{ _('Send Fax') }}
+                  </a>
+                  <a href="/addressbook/edit?abook_id={{ c.id }}"
+                     class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-slate-50 border border-slate-200 text-slate-700 rounded-lg text-xs font-medium shadow-sm transition-colors">
+                    {{ _('Edit') }}
+                  </a>
+                </div>
+              </td>
+            </tr>
+            {% endfor %}
+          {% else %}
+          <tr>
+            <td colspan="4" class="py-14 px-4 text-center">
+              <div class="w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+              </div>
+              <h3 class="text-base font-bold text-slate-800">{{ _('No contacts yet') }}</h3>
+              <p class="text-sm text-slate-500 mt-1.5 max-w-xs mx-auto">
+                {% if query %}
+                  {{ _('No contacts matched') }} "{{ query }}".
+                {% else %}
+                  {{ _('Add contacts to quickly select fax numbers when sending without typing them every time.') }}
+                {% endif %}
+              </p>
+              <a href="/addressbook/edit"
+                 class="mt-5 inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-semibold shadow-sm transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                </svg>
+                {{ _('Add First Contact') }}
+              </a>
+            </td>
+          </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

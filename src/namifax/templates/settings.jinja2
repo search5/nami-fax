@@ -1,0 +1,388 @@
+{% extends "layout.jinja2" %}
+
+{% block title %}- NamiFAX - Settings{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto space-y-6">
+  
+  <!-- Header & Breadcrumbs -->
+  <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-700 shadow-2xs">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-slate-900 tracking-tight">{{ _('User Settings') }}</h2>
+        <p class="text-xs text-slate-500">{{ _('Configure your personal profile, fax station identity, and portal preferences.') }}</p>
+      </div>
+    </div>
+    
+    <div class="flex items-center space-x-2">
+      <a href="/inbox" class="px-3.5 py-1.5 bg-white hover:bg-slate-50 text-slate-700 rounded-lg text-xs font-semibold border border-slate-300 shadow-2xs transition">
+        &larr; {{ _('Return to Inbox') }}
+      </a>
+    </div>
+  </div>
+
+  {% if message %}
+    <div class="p-3.5 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs rounded-lg flex items-center space-x-2 shadow-2xs">
+      <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <span class="font-medium">{{ message }}</span>
+    </div>
+  {% endif %}
+
+  {% if error %}
+    <div class="p-3.5 bg-rose-50 border border-rose-200 text-rose-800 text-xs rounded-lg flex items-center space-x-2 shadow-2xs">
+      <svg class="w-4 h-4 text-rose-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <span class="font-medium">{{ error }}</span>
+    </div>
+  {% endif %}
+
+  <!-- Strict Form Contract -->
+  <form action="/settings" method="post" class="space-y-6 text-xs">
+    
+    <!-- Section 1: Personal & Contact Information -->
+    <div class="bg-white border border-slate-200/90 rounded-xl p-5 shadow-xs space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-100 pb-3">
+        <span class="w-2 h-2 rounded-full bg-sky-600"></span>
+        <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider">{{ _('Personal & Organization Details') }}</h3>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="name" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Full Name') }} *</label>
+          <input type="text" name="name" id="name" value="{{ user_profile.name or '' }}" required class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+
+        <div>
+          <label for="email" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Email Address') }} *</label>
+          <input type="email" name="email" id="email" value="{{ user_profile.email or '' }}" required class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+
+        <div>
+          <label for="from_company" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Company Name') }}</label>
+          <input type="text" name="from_company" id="from_company" value="{{ user_profile.from_company or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+
+        <div>
+          <label for="from_location" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Office / Location') }}</label>
+          <input type="text" name="from_location" id="from_location" value="{{ user_profile.from_location or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+
+        <div>
+          <label for="from_voicenumber" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Direct Voice Number') }}</label>
+          <input type="text" name="from_voicenumber" id="from_voicenumber" value="{{ user_profile.from_voicenumber or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+
+        <div>
+          <label for="from_faxnumber" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Direct Fax Number') }}</label>
+          <input type="text" name="from_faxnumber" id="from_faxnumber" value="{{ user_profile.from_faxnumber or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" />
+        </div>
+
+        {% if is_superuser %}
+        <div class="md:col-span-2">
+          <label for="user_tsi" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Transmitting Station ID (TSI)') }}</label>
+          <input type="text" name="user_tsi" id="user_tsi" value="{{ user_profile.user_tsi or '' }}" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 font-mono bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" placeholder="{{ _('e.g. +1 555 123 4567') }}" />
+          <p class="text-[11px] text-slate-400 mt-1">{{ _('Header identifier imprinted on top of transmitted fax pages.') }}</p>
+        </div>
+        {% endif %}
+      </div>
+
+      <div>
+        <label for="email_sig" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Email & Fax Notification Signature') }}</label>
+        <textarea name="email_sig" id="email_sig" rows="3" class="w-full border border-slate-300 rounded-lg p-3 bg-slate-50/50 text-slate-900 font-mono text-[11px] focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition">{{ user_profile.email_sig or '' }}</textarea>
+      </div>
+    </div>
+
+    <!-- Section 2: Application Preferences -->
+    <div class="bg-white border border-slate-200/90 rounded-xl p-5 shadow-xs space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-100 pb-3">
+        <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+        <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider">{{ _('Portal & Delivery Preferences') }}</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label for="language" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Display Language') }}</label>
+          <select name="language" id="language" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition">
+            <option value="en" {% if user_profile.language == 'en' %}selected{% endif %}>English (US)</option>
+            <option value="ko" {% if user_profile.language == 'ko' %}selected{% endif %}>한국어 (Korean)</option>
+            <option value="ja" {% if user_profile.language == 'ja' %}selected{% endif %}>日本語 (Japanese)</option>
+            <option value="zh_CN" {% if user_profile.language in ('zh_CN', 'zh') %}selected{% endif %}>简体中文 (Simplified Chinese)</option>
+            <option value="zh_TW" {% if user_profile.language in ('zh_TW', 'zh-tw') %}selected{% endif %}>繁體中文 (Traditional Chinese)</option>
+            <option value="de" {% if user_profile.language == 'de' %}selected{% endif %}>Deutsch (German)</option>
+            <option value="fr" {% if user_profile.language == 'fr' %}selected{% endif %}>Français (French)</option>
+            <option value="es" {% if user_profile.language == 'es' %}selected{% endif %}>Español (Spanish)</option>
+            <option value="it" {% if user_profile.language == 'it' %}selected{% endif %}>Italiano (Italian)</option>
+            <option value="ru" {% if user_profile.language == 'ru' %}selected{% endif %}>Русский (Russian)</option>
+            <option value="nl" {% if user_profile.language == 'nl' %}selected{% endif %}>Nederlands (Dutch)</option>
+            <option value="pt_BR" {% if user_profile.language in ('pt_BR', 'pt-br') %}selected{% endif %}>Português do Brasil</option>
+            <option value="pt_PT" {% if user_profile.language in ('pt_PT', 'pt-pt') %}selected{% endif %}>Português Europeu</option>
+            <option value="pl" {% if user_profile.language == 'pl' %}selected{% endif %}>Polski (Polish)</option>
+            <option value="ar" {% if user_profile.language == 'ar' %}selected{% endif %}>العربية (Arabic)</option>
+            <option value="tr" {% if user_profile.language == 'tr' %}selected{% endif %}>Türkçe (Turkish)</option>
+            <option value="sv" {% if user_profile.language == 'sv' %}selected{% endif %}>Svenska (Swedish)</option>
+            <option value="no" {% if user_profile.language == 'no' %}selected{% endif %}>Norsk (Norwegian)</option>
+            <option value="hu" {% if user_profile.language == 'hu' %}selected{% endif %}>Magyar (Hungarian)</option>
+            <option value="el" {% if user_profile.language == 'el' %}selected{% endif %}>Ελληνικά (Greek)</option>
+            <option value="cs" {% if user_profile.language in ('cs', 'cz') %}selected{% endif %}>Čeština (Czech)</option>
+            <option value="ro" {% if user_profile.language == 'ro' %}selected{% endif %}>Română (Romanian)</option>
+            <option value="bg" {% if user_profile.language == 'bg' %}selected{% endif %}>Български (Bulgarian)</option>
+            <option value="sr" {% if user_profile.language in ('sr', 'rs') %}selected{% endif %}>Srpski (Serbian)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="coverpage_id" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Default Cover Page') }}</label>
+          <select name="coverpage_id" id="coverpage_id" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition">
+            <option value=""></option>
+            {% for cid, title in covers %}<option value="{{ cid }}" {% if user_profile.coverpage_id == cid %}selected{% endif %}>{{ title }}</option>{% endfor %}
+          </select>
+        </div>
+
+        <div>
+          <label for="faxperpageinbox" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Faxes Per Page') }}</label>
+          <select name="faxperpageinbox" id="faxperpageinbox" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition">
+            {% for n in per_page %}<option value="{{ n }}" {% if user_profile.faxperpageinbox == n %}selected{% endif %}>{{ n }} {{ _('faxes') }}</option>{% endfor %}
+          </select>
+        </div>
+
+        <div>
+          <label for="faxperpagearchive" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Archive Faxes Per Page') }}</label>
+          <select name="faxperpagearchive" id="faxperpagearchive" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition">
+            {% for n in per_page %}<option value="{{ n }}" {% if user_profile.faxperpagearchive == n %}selected{% endif %}>{{ n }} {{ _('faxes') }}</option>{% endfor %}
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 3: Change Password -->
+    <div class="bg-white border border-slate-200/90 rounded-xl p-5 shadow-xs space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-100 pb-3">
+        <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+        <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider">{{ _('Change Password') }}</h3>
+      </div>
+      
+      <div>
+        <label for="old_password" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Current Password') }}</label>
+        <input type="password" name="old_password" id="old_password" class="w-full md:w-80 border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" placeholder="{{ _('Enter current password to verify') }}" />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="new_password" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('New Password') }}</label>
+          <input type="password" name="new_password" id="new_password" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" placeholder="{{ _('Enter secure new password') }}" />
+        </div>
+        <div>
+          <label for="confirm_password" class="block font-semibold text-slate-700 text-xs mb-1.5">{{ _('Confirm New Password') }}</label>
+          <input type="password" name="confirm_password" id="confirm_password" class="w-full border border-slate-300 rounded-lg px-3.5 py-2 bg-slate-50/50 text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-600 transition" placeholder="{{ _('Re-type new password') }}" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden Submit Check -->
+    <input type="hidden" name="_submit_check" value="1" />
+
+    <!-- Form Footer Actions -->
+    <div class="pt-4 border-t border-slate-200 flex items-center justify-end space-x-3">
+      <a href="/inbox" class="px-5 py-2.5 bg-slate-100 text-slate-700 rounded-lg font-semibold hover:bg-slate-200 transition">{{ _('Cancel') }}</a>
+      <button type="submit" class="px-6 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold shadow-2xs transition">
+        {{ _('Update Settings') }}
+      </button>
+    </div>
+
+  </form>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- Enterprise Security: Two-Factor Authentication (TOTP)        -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-2xs space-y-4">
+    <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-slate-900">{{ _('Two-Factor Authentication (TOTP)') }}</h3>
+          <p class="text-xs text-slate-500">{{ _('Protect your account with Google Authenticator, Authy, or compatible RFC 6238 apps.') }}</p>
+        </div>
+      </div>
+      <div>
+        {% if totp_enabled %}
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300">
+            {{ _('Active / Enabled') }}
+          </span>
+        {% else %}
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+            {{ _('Disabled') }}
+          </span>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="space-y-4 pt-2">
+      <p class="text-xs text-slate-600">
+        {{ _('When enabled, signing in requires your password and a 6-digit one-time token from your mobile device.') }}
+      </p>
+      {% if totp_enabled %}
+        <p class="text-xs text-slate-600">{{ recovery_codes_left }} {{ _('recovery codes left') }}</p>
+        <form method="POST" action="/settings/2fa/recovery" class="flex items-end gap-2">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+          <div class="flex-1">
+            <label class="block font-semibold text-slate-700 text-xs mb-1">{{ _('Code from your app (to get new recovery codes)') }}</label>
+            <input type="text" name="code" inputmode="numeric" autocomplete="one-time-code" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-slate-900" />
+          </div>
+          <button type="submit" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 rounded-lg text-xs font-semibold transition">{{ _('New recovery codes') }}</button>
+        </form>
+        <form method="POST" action="/settings/2fa/disable" class="grid grid-cols-1 md:grid-cols-3 gap-2 items-end" onsubmit="return confirm('{{ _('Turn off 2FA for your account?') }}');">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}" />
+          <div>
+            <label class="block font-semibold text-slate-700 text-xs mb-1">{{ _('Password') }}</label>
+            <input type="password" name="password" autocomplete="current-password" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-slate-900" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 text-xs mb-1">{{ _('Code or recovery code') }}</label>
+            <input type="text" name="code" autocomplete="one-time-code" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-slate-900" />
+          </div>
+          <button type="submit" class="px-4 py-2 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 rounded-lg text-xs font-semibold transition">{{ _('Disable 2FA') }}</button>
+        </form>
+      {% else %}
+        <a href="/settings/2fa/setup" class="inline-block px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-semibold shadow-2xs transition">
+          {{ _('Enable 2FA (Setup Authenticator)') }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- Enterprise Security: FIDO2 Passkeys (WebAuthn)               -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-2xs space-y-4">
+    <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-slate-900">{{ _('FIDO2 Passkeys & Biometric Security Keys') }}</h3>
+          <p class="text-xs text-slate-500">{{ _('Sign in securely without passwords using Touch ID, Face ID, Windows Hello, or YubiKey.') }}</p>
+        </div>
+      </div>
+      <button type="button" id="btn-register-passkey" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-xs font-semibold shadow-2xs transition flex items-center gap-1.5">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+        {{ _('Register New Passkey') }}
+      </button>
+    </div>
+
+    <!-- Active Registered Passkeys List Container -->
+    <div id="passkeys-container" class="space-y-2">
+      <p class="text-xs text-slate-400 py-2 italic">{{ _('Loading registered security keys...') }}</p>
+    </div>
+  </div>
+
+  <script>
+  async function loadRegisteredPasskeys() {
+    const container = document.getElementById('passkeys-container');
+    try {
+      const res = await fetch('/api/webauthn/credentials');
+      if (!res.ok) {
+        container.innerHTML = '<p class="text-xs text-slate-400 py-2">{{ _("No Passkeys registered yet.") }}</p>';
+        return;
+      }
+      const list = await res.json();
+      if (!list || list.length === 0) {
+        container.innerHTML = '<p class="text-xs text-slate-400 py-2">{{ _("No Passkeys registered yet. Click Register to add Touch ID or a security key.") }}</p>';
+        return;
+      }
+      container.innerHTML = list.map(item => `
+        <div class="flex items-center justify-between p-3 rounded-lg border border-slate-200 bg-slate-50/60">
+          <div class="flex items-center gap-3">
+            <svg class="w-5 h-5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />
+            </svg>
+            <div>
+              <div class="text-xs font-bold text-slate-800">${item.device_name || 'Security Key'}</div>
+              <div class="text-[11px] text-slate-400">Registered: ${item.created_at || 'Recently'}</div>
+            </div>
+          </div>
+          <button type="button" onclick="deletePasskey(${item.id})" class="text-xs font-semibold text-rose-600 hover:text-rose-800 px-2.5 py-1 rounded hover:bg-rose-50 transition">
+            {{ _("Remove") }}
+          </button>
+        </div>
+      `).join('');
+    } catch (e) {
+      container.innerHTML = '<p class="text-xs text-rose-500 py-2">Error loading passkeys</p>';
+    }
+  }
+
+  async function deletePasskey(id) {
+    if (!confirm('Remove this security key?')) return;
+    const fd = new FormData();
+    fd.append('credential_db_id', id);
+    const res = await fetch('/api/webauthn/credentials/delete', { method: 'POST', body: fd });
+    loadRegisteredPasskeys();
+  }
+
+  document.getElementById('btn-register-passkey')?.addEventListener('click', async () => {
+    try {
+      if (!window.PublicKeyCredential) {
+        alert('WebAuthn Passkeys are not supported on this browser.');
+        return;
+      }
+      const deviceName = prompt('Enter a name for this security key (e.g. MacBook Touch ID, YubiKey):', 'My Security Key');
+      if (!deviceName) return;
+
+      const optRes = await fetch('/api/webauthn/register/options', { method: 'POST' });
+      if (!optRes.ok) throw new Error('Failed to generate registration challenge');
+      const opts = await optRes.json();
+
+      opts.challenge = Uint8Array.from(atob(opts.challenge.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+      opts.user.id = Uint8Array.from(atob(opts.user.id.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+
+      const cred = await navigator.credentials.create({ publicKey: opts });
+      const credData = {
+        id: cred.id,
+        rawId: btoa(String.fromCharCode(...new Uint8Array(cred.rawId))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''),
+        type: cred.type,
+        response: {
+          clientDataJSON: btoa(String.fromCharCode(...new Uint8Array(cred.response.clientDataJSON))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''),
+          attestationObject: btoa(String.fromCharCode(...new Uint8Array(cred.response.attestationObject))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''),
+        },
+        device_name: deviceName,
+      };
+
+      const verifyRes = await fetch('/api/webauthn/register/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(credData),
+      });
+      const result = await verifyRes.json();
+      if (result.success) {
+        alert('Passkey successfully registered!');
+        loadRegisteredPasskeys();
+      } else {
+        alert('Passkey registration failed: ' + (result.error || 'Unknown error'));
+      }
+    } catch (err) {
+      if (err.name !== 'NotAllowedError') {
+        alert('Registration error: ' + err.message);
+      }
+    }
+  });
+
+  loadRegisteredPasskeys();
+  </script>
+
+</div>
+{% endblock %}
+

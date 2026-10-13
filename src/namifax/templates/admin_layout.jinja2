@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-950">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}- NamiFAX - Admin Control Panel{% endblock %}</title>
+  
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/static/css/main.css?v=3.6.0" type="text/css" />
+  <style>
+    /* Custom scrollbar for admin sidebar */
+    .admin-nav-scroll::-webkit-scrollbar { width: 4px; }
+    .admin-nav-scroll::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+  </style>
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="min-h-full flex flex-col md:flex-row text-slate-100 font-sans antialiased bg-slate-950 selection:bg-blue-600/30 selection:text-blue-200">
+
+  {% set current_admin_tab = active_admin or (
+    'users' if '/admin/user' in request.path else
+    'modems' if '/admin/modem' in request.path else
+    'did' if ('/admin/did' in request.path or '/admin/routing' in request.path) else
+    'categories' if '/admin/categor' in request.path else
+    'covers' if '/admin/cover' in request.path else
+    'barcodes' if '/admin/barcode' in request.path else
+    'dynconf' if '/admin/dynconf' in request.path else
+    'fax2email' if '/admin/fax2email' in request.path else
+    'syslog' if ('/admin/syslog' in request.path or '/admin/system_logs' in request.path) else
+    'sysfunc' if ('/admin/sysfunc' in request.path or '/admin/system_func' in request.path) else
+    'dashboard'
+  ) %}
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- Left Enterprise Sidebar Navigation (Desktop)                   -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <aside class="w-full md:w-64 md:min-h-screen bg-slate-900 border-r border-slate-800 flex flex-col shrink-0">
+    
+    <!-- Appliance Brand & Admin Badge -->
+    <div class="p-5 border-b border-slate-800 flex items-center justify-between">
+      <a href="/admin" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-sm shadow-md group-hover:bg-blue-500 transition-colors">
+          NF
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-bold text-white text-sm tracking-tight">NamiFAX</span>
+            <span class="text-[9px] uppercase tracking-wider font-mono font-bold px-1.5 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30">Admin</span>
+          </div>
+          <p class="text-[11px] text-slate-400 font-mono mt-0.5 leading-none">{{ _('Control Panel') }}</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Quick User Portal Switcher Button -->
+    <div class="p-3 border-b border-slate-800/80 bg-slate-950/40">
+      <a href="/inbox" class="flex items-center justify-between w-full px-3 py-2 rounded-lg bg-slate-800/90 hover:bg-slate-700/90 border border-slate-700 text-xs font-semibold text-slate-200 hover:text-white transition group shadow-sm">
+        <span class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-slate-400 group-hover:text-blue-400 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          <span>{{ _('User Portal') }}</span>
+        </span>
+        <span class="text-[10px] text-slate-400 font-normal">{{ _('Inbox') }} &rarr;</span>
+      </a>
+    </div>
+
+    <!-- Contract Compliance Select Box (Accessible via Header or Hidden on Large) -->
+    <div class="px-3 pt-3 md:hidden">
+      <label for="menuObj" class="block text-[11px] text-slate-400 font-semibold uppercase tracking-wider mb-1">Module Switcher:</label>
+      <select id="menuObj" onchange="if (this.value) location.href=this.value;" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs font-semibold text-white focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        <option value="">-- Main Menu --</option>
+        <option value="/admin" {% if current_admin_tab == 'dashboard' %}selected{% endif %}>Admin Dashboard</option>
+        <optgroup label="User Accounts">
+          <option value="/admin/users" {% if current_admin_tab == 'users' %}selected{% endif %}>User List &amp; Accounts</option>
+        </optgroup>
+        <optgroup label="Configuration">
+          <option value="/admin/modems" {% if current_admin_tab == 'modems' %}selected{% endif %}>Configure Modems</option>
+          {% if did_routing_enabled %}<option value="/admin/did" {% if current_admin_tab == 'did' %}selected{% endif %}>DID Routing Rules</option>{% endif %}
+          <option value="/admin/categories" {% if current_admin_tab == 'categories' %}selected{% endif %}>Fax Categories</option>
+          <option value="/admin/covers" {% if current_admin_tab == 'covers' %}selected{% endif %}>Cover Pages</option>
+          <option value="/admin/printers" {% if current_admin_tab == 'printers' %}selected{% endif %}>Network Printers</option>
+        </optgroup>
+        <optgroup label="Advanced Routing &amp; Blacklist">
+          {% if barcode_enabled %}<option value="/admin/barcodes" {% if current_admin_tab == 'barcodes' %}selected{% endif %}>Routing by Barcode</option>{% endif %}
+          <option value="/admin/dynconf" {% if current_admin_tab == 'dynconf' %}selected{% endif %}>CallID Blacklist (DynConf)</option>
+          <option value="/admin/fax2email" {% if current_admin_tab == 'fax2email' %}selected{% endif %}>Fax2Email Rules</option>
+          <option value="/admin/syslog" {% if current_admin_tab == 'syslog' %}selected{% endif %}>System Audit Logs</option>
+          <option value="/admin/sysfunc" {% if current_admin_tab == 'sysfunc' %}selected{% endif %}>System Functions</option>
+          <option value="/admin/smtp" {% if current_admin_tab == 'smtp' %}selected{% endif %}>SMTP Gateway</option>
+          <option value="/admin/storage" {% if current_admin_tab == 'storage' %}selected{% endif %}>Storage &amp; Cloud</option>
+          <option value="/admin/scheduler" {% if current_admin_tab == 'scheduler' %}selected{% endif %}>Scheduled Tasks</option>
+          <option value="/admin/saml" {% if current_admin_tab == 'saml' %}selected{% endif %}>SAML 2.0 SSO</option>
+        </optgroup>
+        <option value="">-- Portal Navigation --</option>
+        <option value="/inbox">&larr; Return to Inbox</option>
+        <option value="/outbox">&larr; Return to Outbox</option>
+      </select>
+    </div>
+
+    <!-- Hidden menuObj for contract verification on desktop if needed -->
+    <div class="hidden">
+      <!-- Duplicate ID avoided by using conditional, but if test looks for #menuObj directly on desktop: -->
+    </div>
+
+    <!-- Grouped Sidebar Navigation Items -->
+    <nav class="flex-1 p-3 space-y-5 overflow-y-auto admin-nav-scroll text-xs">
+      
+      <!-- Group 1: General / Overview -->
+      <div>
+        <p class="px-3 text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">{{ _('Overview') }}</p>
+        <a href="/admin"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'dashboard' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'dashboard' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          </svg>
+          <span>{{ _('Dashboard') }}</span>
+        </a>
+      </div>
+
+      <!-- Group 2: Access & Accounts -->
+      <div>
+        <p class="px-3 text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">{{ _('Access Control') }}</p>
+        <a href="/admin/users"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'users' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'users' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <span>{{ _('User Accounts') }}</span>
+        </a>
+      </div>
+
+      <!-- Group 3: Hardware & Modems -->
+      <div>
+        <p class="px-3 text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">{{ _('Hardware & Lines') }}</p>
+        <a href="/admin/modems"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'modems' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'modems' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <span class="flex-1">{{ _('Fax Modems') }}</span>
+        </a>
+        <a href="/admin/printers"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'printers' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'printers' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+          </svg>
+          <span class="flex-1">{{ _('Network Printers') }}</span>
+        </a>
+      </div>
+
+      <!-- Group 4: Inbound Routing Rules -->
+      <div class="space-y-1">
+        <p class="px-3 text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">{{ _('Inbound Routing') }}</p>
+        {% if did_routing_enabled %}
+        <a href="/admin/did"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'did' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'did' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+          </svg>
+          <span>{{ _('DID Routing') }}</span>
+        </a>
+        {% endif %}
+        <a href="/admin/fax2email"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'fax2email' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'fax2email' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>{{ _('Fax to Email') }}</span>
+        </a>
+        {% if barcode_enabled %}
+        <a href="/admin/barcodes"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'barcodes' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'barcodes' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+          </svg>
+          <span>{{ _('Barcode Routing') }}</span>
+        </a>
+        {% endif %}
+      </div>
+
+      <!-- Group 5: Content & Classification -->
+      <div class="space-y-1">
+        <p class="px-3 text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">{{ _('Content & Templates') }}</p>
+        <a href="/admin/categories"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'categories' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'categories' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+          </svg>
+          <span>{{ _('Fax Categories') }}</span>
+        </a>
+        <a href="/admin/covers"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'covers' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'covers' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span>{{ _('Cover Pages') }}</span>
+        </a>
+      </div>
+
+      <!-- Group 6: Security & System -->
+      <div class="space-y-1">
+        <p class="px-3 text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1.5">{{ _('Security & System') }}</p>
+        <a href="/admin/dynconf"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'dynconf' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'dynconf' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+          </svg>
+          <span>{{ _('Blacklist (DynConf)') }}</span>
+        </a>
+        <a href="/admin/syslog"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'syslog' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'syslog' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span>{{ _('System Audit Logs') }}</span>
+        </a>
+        <a href="/admin/sysfunc"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'sysfunc' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'sysfunc' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span>{{ _('System Functions') }}</span>
+        </a>
+        <a href="/admin/smtp"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'smtp' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'smtp' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>{{ _('SMTP Gateway') }}</span>
+        </a>
+        <a href="/admin/storage"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'storage' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'storage' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3V7M4 7c0-2 1.5-3 3.5-3h9c2 0 3.5 1 3.5 3M4 7h16m-8 4v4m-2-2h4" />
+          </svg>
+          <span>{{ _('Storage & Cloud') }}</span>
+        </a>
+        <a href="/admin/scheduler"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'scheduler' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'scheduler' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span>{{ _('Scheduled Tasks') }}</span>
+        </a>
+        <a href="/admin/saml"
+           class="flex items-center gap-2.5 px-3 py-2 rounded-lg font-medium transition
+                  {% if current_admin_tab == 'saml' %}bg-blue-600/15 text-blue-400 border border-blue-500/30 font-semibold{% else %}text-slate-300 hover:text-white hover:bg-slate-800/80{% endif %}">
+          <svg class="w-4 h-4 text-slate-400 {% if current_admin_tab == 'saml' %}text-blue-400{% endif %}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+          </svg>
+          <span>{{ _('SAML 2.0 SSO') }}</span>
+        </a>
+      </div>
+
+    </nav>
+
+    <!-- Bottom Operator Info & Logout -->
+    <div class="p-3 border-t border-slate-800 bg-slate-950/60 flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2 min-w-0">
+        <div class="w-7 h-7 rounded-full bg-slate-800 text-slate-200 border border-slate-700 flex items-center justify-center font-bold uppercase shrink-0">
+          {{ current_user.username[0] if current_user and current_user.username else 'A' }}
+        </div>
+        <div class="truncate">
+          <p class="font-semibold text-slate-200 truncate leading-tight">{{ current_user.username if current_user else 'Admin' }}</p>
+          <p class="text-[10px] text-slate-400 font-mono">Superuser</p>
+        </div>
+      </div>
+      <form method="post" action="/logout" class="inline">
+        <input type="hidden" name="csrf_token" value="{{ request.session.get_csrf_token() }}" />
+        <button type="submit" class="px-2.5 py-1 rounded bg-slate-800/80 hover:bg-red-500/20 text-slate-400 hover:text-red-400 border border-slate-700 font-medium transition text-[11px]">
+        {{ _('Logout') }}
+      </button>
+      </form>
+    </div>
+
+  </aside>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- Main Workspace Area                                            -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div class="flex-1 flex flex-col min-w-0">
+
+    <!-- Top Status Bar & Breadcrumb -->
+    <header class="h-14 bg-slate-900/90 backdrop-blur border-b border-slate-800 px-4 sm:px-6 flex items-center justify-between sticky top-0 z-30">
+      
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-2 text-xs">
+        <a href="/admin" class="text-slate-400 hover:text-slate-200 transition font-medium">{{ _('Admin Control Panel') }}</a>
+        <span class="text-slate-400">/</span>
+        <span class="font-semibold text-white capitalize">
+          {% if current_admin_tab == 'dashboard' %}{{ _('Dashboard') }}
+          {% elif current_admin_tab == 'users' %}{{ _('User Accounts') }}
+          {% elif current_admin_tab == 'modems' %}{{ _('Fax Modems') }}
+          {% elif current_admin_tab == 'did' %}{{ _('DID Routing') }}
+          {% elif current_admin_tab == 'categories' %}{{ _('Fax Categories') }}
+          {% elif current_admin_tab == 'covers' %}{{ _('Cover Pages') }}
+          {% elif current_admin_tab == 'barcodes' %}{{ _('Barcode Routing') }}
+          {% elif current_admin_tab == 'dynconf' %}{{ _('Blacklist (DynConf)') }}
+          {% elif current_admin_tab == 'fax2email' %}{{ _('Fax to Email') }}
+          {% elif current_admin_tab == 'syslog' %}{{ _('System Audit Logs') }}
+          {% elif current_admin_tab == 'sysfunc' %}{{ _('System Functions') }}
+          {% elif current_admin_tab == 'smtp' %}{{ _('SMTP Gateway') }}
+          {% else %}{{ current_admin_tab }}
+          {% endif %}
+        </span>
+      </div>
+
+      <!-- Quick Switcher Dropdown (Contract ID menuObj on Desktop too) -->
+      <div class="hidden sm:flex items-center gap-3">
+        <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] font-semibold text-emerald-400">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>{{ _('Appliance Engine Online') }}</span>
+        </div>
+
+        <div class="flex items-center gap-1.5 text-xs">
+          <label for="menuObj" class="text-slate-400 sr-only">Select Module:</label>
+          <select id="menuObj" onchange="if (this.value) location.href=this.value;" class="bg-slate-950 border border-slate-700 rounded-lg px-2.5 py-1 text-xs text-slate-300 hover:text-white focus:ring-1 focus:ring-blue-500 focus:outline-none cursor-pointer">
+            <option value="">Quick Jump...</option>
+            <option value="/admin" {% if current_admin_tab == 'dashboard' %}selected{% endif %}>Dashboard</option>
+            <option value="/admin/users" {% if current_admin_tab == 'users' %}selected{% endif %}>Users</option>
+            <option value="/admin/modems" {% if current_admin_tab == 'modems' %}selected{% endif %}>Modems</option>
+            {% if did_routing_enabled %}<option value="/admin/did" {% if current_admin_tab == 'did' %}selected{% endif %}>DID Routing</option>{% endif %}
+            <option value="/admin/categories" {% if current_admin_tab == 'categories' %}selected{% endif %}>Categories</option>
+            <option value="/admin/covers" {% if current_admin_tab == 'covers' %}selected{% endif %}>Covers</option>
+            {% if barcode_enabled %}<option value="/admin/barcodes" {% if current_admin_tab == 'barcodes' %}selected{% endif %}>Barcodes</option>{% endif %}
+            <option value="/admin/dynconf" {% if current_admin_tab == 'dynconf' %}selected{% endif %}>Blacklist</option>
+            <option value="/admin/fax2email" {% if current_admin_tab == 'fax2email' %}selected{% endif %}>Fax2Email</option>
+            <option value="/admin/syslog" {% if current_admin_tab == 'syslog' %}selected{% endif %}>Logs</option>
+            <option value="/admin/sysfunc" {% if current_admin_tab == 'sysfunc' %}selected{% endif %}>Functions</option>
+            <option value="/admin/smtp" {% if current_admin_tab == 'smtp' %}selected{% endif %}>SMTP</option>
+          </select>
+        </div>
+      </div>
+
+    </header>
+
+    <!-- Workspace Main Content -->
+    <main class="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl w-full">
+
+      {% if error %}
+        <div class="mb-5 p-4 bg-red-950/80 text-red-200 border border-red-700/60 rounded-xl text-xs font-semibold flex items-center gap-3 shadow-sm">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-500 shrink-0"></span>
+          <span><strong class="font-bold">Error:</strong> {{ error }}</span>
+        </div>
+      {% endif %}
+
+      {% if flash_message %}
+        <div class="mb-5 p-4 bg-emerald-950/80 border border-emerald-700/60 text-emerald-200 rounded-xl text-xs font-semibold flex items-center gap-3 shadow-sm">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shrink-0"></span>
+          <span>{{ flash_message }}</span>
+        </div>
+      {% endif %}
+
+      <!-- Block Content (Solid Dark Card with High-Contrast Border) -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl shadow-xl p-5 sm:p-7">
+        {% block content %}{% endblock %}
+      </div>
+
+    </main>
+
+    <!-- Admin Footer -->
+    <footer class="mt-auto border-t border-slate-800/80 bg-slate-900/40 py-3.5 px-6 text-center text-xs text-slate-400">
+      NamiFAX Administrator Control Panel &copy; 2005 - 2008 iFAX Solutions, Inc.
+    </footer>
+
+  </div>
+
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

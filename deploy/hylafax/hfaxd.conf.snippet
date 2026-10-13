@@ -1,0 +1,4 @@
+# $SPOOL/etc/config (HylaFAX server configuration; /var/spool/hylafax/etc/config)
+# NamiFAX reads the queue with `faxstat -s` / `faxstat -d` and expects exactly these ten columns,
+# in this order (job id, priority, state, owner, mail address, number, pages, dials, send time, status):
+JobFmt: "%-3j %3i %1a %15o %40M %-12.12e %5P %5D %7z %.25s"

@@ -1,0 +1,2605 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: NamiFAX 4.0.Language: kMIME-Version: 1.Content-Type: text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-02 17:17+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "Address Book"
+msgstr "주소록"
+
+msgid "Save frequently used fax numbers for quick access when sending."
+msgstr "자주 사용하는 팩스 번호를 저장하여 전송 시 빠르게 선택하세요."
+
+msgid "Email Book"
+msgstr "이메일 주소록"
+
+msgid "Distribution Lists"
+msgstr "배포 그룹"
+
+msgid "New Company"
+msgstr "새 회사 추가"
+
+msgid "Search"
+msgstr "검색"
+
+msgid "Company or fax number..."
+msgstr "회사 또는 팩스 번호..."
+
+msgid "Contacts"
+msgstr "연락처"
+
+msgid "companies"
+msgstr "개 업체"
+
+msgid "Company / Name"
+msgstr "회사명 / 수신자"
+
+msgid "Fax Number"
+msgstr "팩스 번호"
+
+msgid "Email"
+msgstr "이메일"
+
+msgid "Actions"
+msgstr "작업"
+
+msgid "Send Fax"
+msgstr "팩스 보내기"
+
+msgid "Edit"
+msgstr "편집"
+
+msgid "No contacts yet"
+msgstr "등록된 연락처가 없습니다"
+
+msgid "No contacts matched"
+msgstr "일치하는 연락처가 없습니다"
+
+msgid "Add contacts to quickly select fax numbers when sending without typing them every time."
+msgstr "연락처를 등록하면 매번 입력할 필요 없이 빠르게 팩스를 보낼 수 있습니다."
+
+msgid "Add First Contact"
+msgstr "첫 번째 연락처 추가"
+
+msgid "Edit Company"
+msgstr "회사 정보 편집"
+
+msgid "Add New Company"
+msgstr "새 회사 추가"
+
+msgid "Configure the company and every fax number it uses."
+msgstr "회사와 그 회사가 쓰는 모든 팩스 번호를 설정합니다."
+
+msgid "Back to Contacts"
+msgstr "연락처 목록으로 돌아가기"
+
+msgid "Upload contacts file (vCard)"
+msgstr "연락처 파일(vCard) 올리기"
+
+msgid "Upload"
+msgstr "올리기"
+
+msgid "Company"
+msgstr "회사"
+
+msgid "Company Name"
+msgstr "회사명"
+
+msgid "e.g. Acme Corporation"
+msgstr "예: ㈜에이스상사"
+
+msgid "Clear the number to remove it."
+msgstr "번호를 지우면 삭제됩니다."
+
+msgid "Description"
+msgstr "설명"
+
+msgid "Category"
+msgstr "카테고리"
+
+msgid "To person"
+msgstr "담당자"
+
+msgid "Location"
+msgstr "위치"
+
+msgid "Voice Telephone"
+msgstr "전화번호"
+
+msgid "Street Address"
+msgstr "상세 주소"
+
+msgid "Zip / Postal Code"
+msgstr "우편번호"
+
+msgid "City"
+msgstr "도시"
+
+msgid "Add a Fax Number"
+msgstr "팩스 번호 추가"
+
+msgid "First Fax Number"
+msgstr "첫 번째 팩스 번호"
+
+msgid "Delete"
+msgstr "삭제"
+
+msgid "Cancel"
+msgstr "취소"
+
+msgid "Save"
+msgstr "저장"
+
+msgid "Dashboard Overview"
+msgstr "대시보드 개요"
+
+msgid "SYSTEM OPERATIONAL"
+msgstr "시스템 정상 운영 중"
+
+msgid "Real-time status of fax spools, hardware serial modems, and registered users"
+msgstr "팩스 스풀, 하드웨어 시리얼 모뎀 및 등록된 사용자의 실시간 상태"
+
+msgid "Users"
+msgstr "사용자"
+
+msgid "Modems"
+msgstr "모뎀"
+
+msgid "DID Routes"
+msgstr "DID 라우팅"
+
+msgid "Logs"
+msgstr "로그"
+
+msgid "Fax Lines"
+msgstr "팩스 회선"
+
+msgid "Hardware Ready"
+msgstr "하드웨어 준비 완료"
+
+msgid "Active accounts"
+msgstr "활성 계정"
+
+msgid "Backend Core"
+msgstr "백엔드 코어"
+
+msgid "unknown"
+msgstr "알 수 없음"
+
+msgid "Scheduler"
+msgstr "스케줄러"
+
+msgid "Running"
+msgstr "실행 중"
+
+msgid "Registered User Accounts"
+msgstr "등록된 사용자 계정"
+
+msgid "Manage Users"
+msgstr "사용자 관리"
+
+msgid "Name"
+msgstr "이름"
+
+msgid "Username"
+msgstr "사용자 이름"
+
+msgid "Last Login"
+msgstr "마지막 로그인"
+
+msgid "Server Status"
+msgstr "서버 상태"
+
+msgid "Core"
+msgstr "코어"
+
+msgid "Database Engine"
+msgstr "데이터베이스 엔진"
+
+msgid "System Scheduler"
+msgstr "시스템 스케줄러"
+
+msgid "Configured Modems"
+msgstr "구성된 모뎀"
+
+msgid "Administrator Workflow Guide"
+msgstr "관리자 워크플로우 가이드"
+
+msgid "Configure Barcode Routing"
+msgstr "바코드 라우팅 설정"
+
+msgid "Route incoming faxes automatically based on recognized Code39 / QR barcodes"
+msgstr "인식된 Code39 / QR 바코드를 기준으로 수신 팩스를 자동 라우팅합니다."
+
+msgid "New Barcode Route"
+msgstr "새 바코드 라우트"
+
+msgid "Barcode Routing Rules"
+msgstr "바코드 라우팅 규칙"
+
+msgid "Barcode:"
+msgstr "바코드:"
+
+msgid "Contact:"
+msgstr "연락처:"
+
+msgid "None"
+msgstr "없음"
+
+msgid "Printer:"
+msgstr "프린터:"
+
+msgid "Edit Barcode Route"
+msgstr "바코드 라우트 편집"
+
+msgid "Add Barcode Route"
+msgstr "바코드 라우트 추가"
+
+msgid "EDIT MODE"
+msgstr "편집 모드"
+
+msgid "NEW"
+msgstr "신규"
+
+msgid "Barcode"
+msgstr "바코드"
+
+msgid "Alias"
+msgstr "별칭"
+
+msgid "Contact Email"
+msgstr "연락처 이메일"
+
+msgid "Printer"
+msgstr "프린터"
+
+msgid "Fax Categories"
+msgstr "팩스 카테고리 관리"
+
+msgid "Manage classification tags and archival categories for organizing transmissions"
+msgstr "팩스 전송 내역 정리를 위한 분류 태그 및 보관 카테고리를 관리합니다."
+
+msgid "New Category"
+msgstr "새 카테고리"
+
+msgid "Existing Categories"
+msgstr "등록된 카테고리"
+
+msgid "Edit Category"
+msgstr "카테고리 편집"
+
+msgid "Add Category"
+msgstr "카테고리 추가"
+
+msgid "Category Name"
+msgstr "카테고리명"
+
+msgid "e.g. Invoices, Contracts"
+msgstr "예: 청구서, 계약서"
+
+msgid "Configure Cover Pages"
+msgstr "표지 템플릿 설정"
+
+msgid "Manage facsimile PostScript cover page templates and layouts"
+msgstr "팩스 PostScript 표지 템플릿 및 레이아웃을 관리합니다."
+
+msgid "New Cover Page"
+msgstr "새 표지 템플릿"
+
+msgid "Available Cover Pages"
+msgstr "사용 가능한 표지 목록"
+
+msgid "Edit Cover Page"
+msgstr "표지 템플릿 편집"
+
+msgid "Add Cover Page"
+msgstr "표지 템플릿 추가"
+
+msgid "Title"
+msgstr "제목"
+
+msgid "File"
+msgstr "파일"
+
+msgid "e.g. custom.ps"
+msgstr "예: custom.ps"
+
+msgid "Cover Template Studio: Dynamic Tag References"
+msgstr "표지 템플릿 스튜디오: 동적 태그 레퍼런스"
+
+msgid "Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF templates. The Cover Studio engine automatically substitutes them during fax rendering."
+msgstr "PostScript(.ps), HTML(.html) 또는 PDF 템플릿에서 이 치환 태그들을 사용하십시오. Cover Studio 엔진이 팩스 렌더링 시 자동으로 값을 대입합니다."
+
+msgid "Dynamic Configuration"
+msgstr "동적 구성(DynConf)"
+
+msgid "Manage Caller ID blacklists and transmission rejection rules for modem devices"
+msgstr "모뎀 장치의 발신자 번호 차단 목록 및 수신 거부 규칙을 관리합니다."
+
+msgid "New Rule"
+msgstr "새 규칙"
+
+msgid "Blocked Caller IDs"
+msgstr "차단된 발신자 번호"
+
+msgid "Caller ID:"
+msgstr "발신자 번호:"
+
+msgid "All Devices"
+msgstr "모든 장치"
+
+msgid "Edit Caller ID Rule"
+msgstr "발신자 차단 규칙 편집"
+
+msgid "Add Caller ID Rule"
+msgstr "발신자 차단 규칙 추가"
+
+msgid "Caller ID"
+msgstr "발신자 번호"
+
+msgid "e.g. 5550199 or pattern"
+msgstr "예: 5550199 또는 패턴"
+
+msgid "Modem Device"
+msgstr "모뎀 장치"
+
+msgid "Fax to Email"
+msgstr "팩스-이메일 라우팅"
+
+msgid "Configure automated inbound fax forwarding and PDF dispatch rules mapped by company"
+msgstr "회사별 수신 팩스 자동 전달 및 PDF 발송 규칙을 구성합니다."
+
+msgid "Add companies in the Address Book"
+msgstr "주소록에서 회사 추가하기"
+
+msgid "Company Forwarding Rules"
+msgstr "회사별 전달 규칙"
+
+msgid "fax numbers"
+msgstr "팩스 번호"
+
+msgid "Email:"
+msgstr "이메일:"
+
+msgid "Edit Forwarding Rules"
+msgstr "전달 규칙 편집"
+
+msgid "Forwarding Rules"
+msgstr "전달 규칙"
+
+msgid "This company has no fax numbers yet. Add them in the Address Book."
+msgstr "이 회사에는 아직 팩스 번호가 없습니다. 주소록에서 추가하십시오."
+
+msgid "Select a company on the left to set where the faxes received on each of its numbers are sent."
+msgstr "왼쪽에서 회사를 고르면 각 번호로 받은 팩스를 어디로 보낼지 설정할 수 있습니다."
+
+msgid "Control Panel"
+msgstr "제어판"
+
+msgid "User Portal"
+msgstr "사용자 포털"
+
+msgid "Inbox"
+msgstr "받은 팩스함"
+
+msgid "Overview"
+msgstr "개요"
+
+msgid "Dashboard"
+msgstr "대시보드"
+
+msgid "Access Control"
+msgstr "접근 제어"
+
+msgid "User Accounts"
+msgstr "사용자 계정 관리"
+
+msgid "Hardware & Lines"
+msgstr "하드웨어 및 회선"
+
+msgid "Fax Modems"
+msgstr "팩스 모뎀 장치"
+
+msgid "Network Printers"
+msgstr "네트워크 프린터"
+
+msgid "Inbound Routing"
+msgstr "수신 라우팅"
+
+msgid "DID Routing"
+msgstr "DID 수신 라우팅"
+
+msgid "Barcode Routing"
+msgstr "바코드 라우팅"
+
+msgid "Content & Templates"
+msgstr "콘텐츠 및 템플릿"
+
+msgid "Cover Pages"
+msgstr "표지 템플릿 관리"
+
+msgid "Security & System"
+msgstr "보안 및 시스템"
+
+msgid "Blacklist (DynConf)"
+msgstr "동적 차단 목록(DynConf)"
+
+msgid "System Audit Logs"
+msgstr "시스템 감사 로그"
+
+msgid "System Functions"
+msgstr "시스템 기능"
+
+msgid "SMTP Gateway"
+msgstr "SMTP 게이트웨이"
+
+msgid "Storage & Cloud"
+msgstr "스토리지 및 클라우드"
+
+msgid "Scheduled Tasks"
+msgstr "예약 작업"
+
+msgid "SAML 2.0 SSO"
+msgstr "SAML 2.0 SSO"
+
+msgid "Logout"
+msgstr "로그아웃"
+
+msgid "Admin Control Panel"
+msgstr "관리자 제어판"
+
+msgid "Appliance Engine Online"
+msgstr "어플라이언스 엔진 정상 가동 중"
+
+msgid "Configure Modems hardware devices, physical serial ports, and print-forwarding rules"
+msgstr "모뎀 하드웨어 장치, 물리 시리얼 포트 및 인쇄 전달 규칙을 설정합니다."
+
+msgid "Configure Modems"
+msgstr "모뎀 설정"
+
+msgid "Active Modem Lines"
+msgstr "활성 모뎀 회선"
+
+msgid "Device"
+msgstr "장치"
+
+msgid "Contact"
+msgstr "연락처"
+
+msgid "Status"
+msgstr "상태"
+
+msgid "Edit Modem"
+msgstr "모뎀 편집"
+
+msgid "Configure Modems Device"
+msgstr "모뎀 장치 설정"
+
+msgid "e.g. ttyS0"
+msgstr "예: ttyS0"
+
+msgid "e.g. Main Inbound Line"
+msgstr "예: 대표 수신 회선"
+
+msgid "Are you sure you want to delete this modem?"
+msgstr "이 모뎀을 삭제하시겠습니까?"
+
+msgid "Create"
+msgstr "만들기"
+
+msgid "Appliance Note:"
+msgstr "어플라이언스 안내:"
+
+msgid "Modems configured here must correspond to physical RS-232 serial devices, USB modems, or virtual IAX modems recognized by the underlying HylaFAX server."
+msgstr "여기서 구성하는 모뎀은 HylaFAX 서버가 인식하는 물리 RS-232 시리얼 장치, USB 모뎀 또는 가상 IAX 모뎀과 일치해야 합니다."
+
+msgid "Direct RAW socket & IPP network printing dispatch for received faxes"
+msgstr "받은 팩스를 RAW 소켓과 IPP로 네트워크 프린터에 바로 출력"
+
+msgid "Add Network Printer"
+msgstr "네트워크 프린터 추가"
+
+msgid "Printer Name"
+msgstr "프린터 이름"
+
+msgid "e.g. Office HP LaserJet"
+msgstr "예: 사무실 HP 레이저젯"
+
+msgid "Protocol"
+msgstr "프로토콜"
+
+msgid "Host / IP"
+msgstr "호스트 / IP"
+
+msgid "Port"
+msgstr "포트"
+
+msgid "Queue Name (Optional)"
+msgstr "큐 이름 (선택)"
+
+msgid "2nd Floor Accounting Printer"
+msgstr "2층 경리팀 프린터"
+
+msgid "Register Printer"
+msgstr "프린터 등록"
+
+msgid "Configured Printers"
+msgstr "등록된 프린터"
+
+msgid "No network printers configured yet. Add one using the form on the left."
+msgstr "등록된 네트워크 프린터가 없습니다. 왼쪽 양식으로 추가하십시오."
+
+msgid "Endpoint"
+msgstr "접속 주소"
+
+msgid "Test Print"
+msgstr "테스트 출력"
+
+msgid "Are you sure you want to delete this printer?"
+msgstr "이 프린터를 삭제하시겠습니까?"
+
+msgid "Configure DID Routing"
+msgstr "DID 라우팅 설정"
+
+msgid "Route incoming faxes by Direct Inward Dialing (DID) extension to specific email boxes or printers"
+msgstr "수신 다이얼(DID) 내선 번호를 기준으로 특정 이메일 수신함이나 프린터로 팩스를 라우팅합니다."
+
+msgid "New DID Route"
+msgstr "새 DID 라우트"
+
+msgid "Active DID Routing Rules"
+msgstr "활성 DID 라우팅 규칙"
+
+msgid "Route Code"
+msgstr "라우트 코드"
+
+msgid "Action"
+msgstr "작업"
+
+msgid "Configure Routing Rule"
+msgstr "라우팅 규칙 설정"
+
+msgid "e.g. 1000"
+msgstr "예: 1000"
+
+msgid "e.g. Sales Direct Line"
+msgstr "예: 영업 직통 회선"
+
+msgid "-- None --"
+msgstr "-- 없음 --"
+
+msgid "Reset"
+msgstr "초기화"
+
+msgid "DID (Direct Inward Dialing) routing automatically redirects incoming transmissions matching extension patterns directly to mapped operator inboxes or physical printers."
+msgstr "DID(Direct Inward Dialing) 라우팅은 내선 번호 패턴과 일치하는 수신 팩스를 매핑된 담당자 수신함이나 프린터로 직접 자동 전달합니다."
+
+msgid "SAML 2.0 Enterprise SSO"
+msgstr "SAML 2.0 기업 SSO"
+
+msgid "Single Sign-On integration with Okta, Microsoft Entra ID (Azure AD), Google Workspace & Keycloak"
+msgstr "Okta, Microsoft Entra ID(Azure AD), Google Workspace, Keycloak과의 싱글 사인온 연동"
+
+msgid "Download SP Metadata XML"
+msgstr "SP 메타데이터 XML 내려받기"
+
+msgid "Identity Provider (IdP) Settings"
+msgstr "IdP(인증 제공자) 설정"
+
+msgid "Enable SAML 2.0 Single Sign-On"
+msgstr "SAML 2.0 싱글 사인온 사용"
+
+msgid "Shows \"SAML 2.0 Enterprise SSO\" login option on login page"
+msgstr "로그인 화면에 \"SAML 2.0 기업 SSO\" 로그인 항목을 표시합니다"
+
+msgid "IdP Entity ID / Issuer"
+msgstr "IdP 엔터티 ID / 발급자"
+
+msgid "IdP Single Sign-On Service URL (HTTP-Redirect / POST)"
+msgstr "IdP 싱글 사인온 서비스 URL (HTTP-Redirect / POST)"
+
+msgid "IdP Public X.509 Certificate (PEM)"
+msgstr "IdP 공개 X.509 인증서 (PEM)"
+
+msgid "Just-in-Time (JIT) Provisioning"
+msgstr "JIT(첫 로그인 시) 계정 생성"
+
+msgid "Auto-create account on first login"
+msgstr "첫 로그인 때 계정 자동 생성"
+
+msgid "Default Role for JIT Users"
+msgstr "JIT 사용자의 기본 권한"
+
+msgid "Take rights from the identity provider"
+msgstr "권한을 ID 공급자(IdP)에서 가져오기"
+
+msgid "At every sign-in the account's administrator, superuser, delete and line rights follow the roles below (a role that is gone takes the right away). Settings changed here by hand are overwritten at the next SSO sign-in."
+msgstr "SSO로 로그인할 때마다 계정의 관리자·슈퍼유저·삭제·회선 권한이 아래 역할을 따릅니다(역할이 없어지면 권한도 사라집니다). 이 화면에서 손으로 바꾼 값은 다음 SSO 로그인 때 덮어써집니다."
+
+msgid "Attribute that holds the roles"
+msgstr "역할이 들어 있는 속성"
+
+msgid "Role: administrator"
+msgstr "역할: 관리자"
+
+msgid "Role: superuser"
+msgstr "역할: 슈퍼유저"
+
+msgid "Role: may delete faxes"
+msgstr "역할: 팩스 삭제 가능"
+
+msgid "Role: send on any line"
+msgstr "역할: 아무 회선으로 전송"
+
+msgid "Attribute with the lines (blank: not managed)"
+msgstr "회선이 들어 있는 속성(비우면 관리하지 않음)"
+
+msgid "modems"
+msgstr "modems"
+
+msgid "Attribute with the categories (blank: not managed)"
+msgstr "카테고리가 들어 있는 속성(비우면 관리하지 않음)"
+
+msgid "faxcats"
+msgstr "faxcats"
+
+msgid "Attribute with the DID routes (blank: not managed)"
+msgstr "DID 경로가 들어 있는 속성(비우면 관리하지 않음)"
+
+msgid "Save SAML Configuration"
+msgstr "SAML 설정 저장"
+
+msgid "NamiFAX SP Endpoints"
+msgstr "NamiFAX SP 접속 주소"
+
+msgid "Copy these endpoints into your Identity Provider (Azure AD, Okta, Google) console:"
+msgstr "아래 주소를 인증 제공자(Azure AD, Okta, Google) 콘솔에 복사해 넣으십시오:"
+
+msgid "Assertion Consumer Service (ACS) URL"
+msgstr "ACS(Assertion Consumer Service) URL"
+
+msgid "SP Entity ID / Metadata URL"
+msgstr "SP 엔터티 ID / 메타데이터 URL"
+
+msgid "NameID Format"
+msgstr "NameID 형식"
+
+msgid "Housekeeping that runs by itself: temporary files, moving old faxes to the archive, the retention policy and the phonebook export."
+msgstr "저절로 도는 정리 작업입니다: 임시 파일, 오래된 팩스의 보관함 이동, 보존 기간 정책, 전화번호부 내보내기."
+
+msgid "Clean the temporary folder"
+msgstr "임시 폴더 정리"
+
+msgid "Delete temporary files older than the days given, every day at the time given."
+msgstr "지정한 시각에 매일, 지정한 일수보다 오래된 임시 파일을 지웁니다."
+
+msgid "Time (HH:MM)"
+msgstr "시각 (HH:MM)"
+
+msgid "Older than (days)"
+msgstr "기준 일수(일)"
+
+msgid "Move old faxes to the archive"
+msgstr "오래된 팩스를 보관함으로 이동"
+
+msgid "Faxes in the inbox older than the days given go to the archive (nothing is deleted)."
+msgstr "받은 팩스함에서 지정한 일수보다 오래된 팩스를 보관함으로 옮깁니다(삭제하지 않습니다)."
+
+msgid "Apply the retention policy"
+msgstr "보존 기간 정책 적용"
+
+msgid "Runs the TIFF purge and the retention period saved on the Storage page. Nothing is removed until a policy has been saved there."
+msgstr "Storage 화면에 저장한 TIFF 정리와 보존 기간을 적용합니다. 그곳에 정책을 저장하기 전에는 아무것도 지우지 않습니다."
+
+msgid "Saved policy"
+msgstr "저장된 정책"
+
+msgid "keep"
+msgstr "보존"
+
+msgid "days"
+msgstr "일"
+
+msgid "No policy saved yet"
+msgstr "저장된 정책이 없습니다"
+
+msgid "Export the address book to HylaFAX"
+msgstr "주소록을 HylaFAX로 내보내기"
+
+msgid "Writes the address book as a HylaFAX phonebook, repeatedly."
+msgstr "주소록을 HylaFAX 전화번호부로 주기적으로 내보냅니다."
+
+msgid "Every (minutes)"
+msgstr "주기(분)"
+
+msgid "Stopping"
+msgstr "중지하는 중"
+
+msgid "started"
+msgstr "시작"
+
+msgid "Last run"
+msgstr "마지막 실행"
+
+msgid "Has not run yet."
+msgstr "아직 실행된 적이 없습니다."
+
+msgid "Stop"
+msgstr "중지"
+
+msgid "Run now"
+msgstr "지금 실행"
+
+msgid "A scheduler is running"
+msgstr "스케줄러가 실행 중입니다"
+
+msgid "last seen"
+msgstr "마지막 확인"
+
+msgid "seconds ago"
+msgstr "초 전"
+
+msgid "The scheduler is starting"
+msgstr "스케줄러를 시작하는 중입니다"
+
+msgid "The change is applied within a few seconds."
+msgstr "몇 초 안에 반영됩니다."
+
+msgid "The scheduler is stopping"
+msgstr "스케줄러를 정지하는 중입니다"
+
+msgid "The scheduler is stopped"
+msgstr "스케줄러가 정지되어 있습니다"
+
+msgid "Nothing runs by itself until it is started."
+msgstr "시작하기 전에는 아무 작업도 저절로 실행되지 않습니다."
+
+msgid "No scheduler is running"
+msgstr "실행 중인 스케줄러가 없습니다"
+
+msgid "Start the web service with NAMIFAX_ENABLE_SCHEDULER=1 (the default); until then the tasks below only run when you press Run now."
+msgstr "웹 서비스를 NAMIFAX_ENABLE_SCHEDULER=1(기본값)로 시작하십시오. 그때까지 아래 작업은 '지금 실행'을 눌러야만 돕니다."
+
+msgid "Start the scheduler"
+msgstr "스케줄러 시작"
+
+msgid "Stop the scheduler"
+msgstr "스케줄러 정지"
+
+msgid "External SMTP Gateway"
+msgstr "외부 SMTP 게이트웨이"
+
+msgid "Configure external mail delivery server for inbound fax notifications and user alerts"
+msgstr "수신 팩스 알림 및 사용자 경보를 위한 외부 메일 발송 서버를 설정합니다."
+
+msgid "Diagnostics Result"
+msgstr "진단 결과"
+
+msgid "Server Connection & Security"
+msgstr "서버 연결 및 보안"
+
+msgid "SMTP Host / Server"
+msgstr "SMTP 호스트 / 서버"
+
+msgid "Encryption Protocol"
+msgstr "암호화 프로토콜"
+
+msgid "None (Plain)"
+msgstr "없음 (일반)"
+
+msgid "STARTTLS (587)"
+msgstr "STARTTLS (587)"
+
+msgid "SSL / TLS (465)"
+msgstr "SSL / TLS (465)"
+
+msgid "Requires SMTP Authentication"
+msgstr "SMTP 인증 필요"
+
+msgid "Username / Login"
+msgstr "사용자 이름 / 로그인"
+
+msgid "Password / App Key"
+msgstr "비밀번호 / 앱 키"
+
+msgid "Default Sender Profile & Signatures"
+msgstr "기본 발신자 프로필 및 서명"
+
+msgid "From Email Address"
+msgstr "발신자 이메일 주소"
+
+msgid "From Display Name"
+msgstr "발신자 표시 이름"
+
+msgid "NamiFAX Corporate Dispatcher"
+msgstr "NamiFAX 팩스 발송 담당"
+
+msgid "Email Signature (Plaintext)"
+msgstr "이메일 서명 (일반 텍스트)"
+
+msgid "Sent automatically by NamiFAX Gateway."
+msgstr "NamiFAX 게이트웨이에서 자동으로 보낸 메일입니다."
+
+msgid "Last updated"
+msgstr "최근 업데이트"
+
+msgid "Save Gateway Settings"
+msgstr "게이트웨이 설정 저장"
+
+msgid "Diagnostic Self-Test"
+msgstr "자가 진단 테스트"
+
+msgid "Verify server reachability, TLS handshake, credentials and message dispatch in real time."
+msgstr "서버 연결성, TLS 핸드셰이크, 인증 자격증명 및 메시지 발송을 실시간으로 검증합니다."
+
+msgid "Target Recipient Email"
+msgstr "테스트 수신자 이메일"
+
+msgid "Send Diagnostic Email"
+msgstr "진단 이메일 전송"
+
+msgid "Enterprise storage lifecycle policies and S3 / MinIO cloud backends"
+msgstr "기업용 보관 수명주기 정책과 S3 / MinIO 클라우드 저장소"
+
+msgid "Storage Lifecycle Policies"
+msgstr "보관 수명주기 정책"
+
+msgid "Purge Local TIFFs After (Days)"
+msgstr "로컬 TIFF 삭제 시점 (일)"
+
+msgid "Frees local disk space if a PDF version exists. 0 = immediate after conversion."
+msgstr "PDF 버전이 있으면 로컬 디스크 공간을 비웁니다. 0 = 변환 직후."
+
+msgid "Full Fax Retention (Days)"
+msgstr "팩스 전체 보관 기간 (일)"
+
+msgid "Purge entire fax record and archival files after specified days. 0 = keep forever."
+msgstr "지정한 일수가 지나면 팩스 기록과 보관 파일을 모두 삭제합니다. 0 = 영구 보관."
+
+msgid "Synchronize remote cloud object deletion on fax purge"
+msgstr "팩스를 삭제할 때 클라우드의 객체도 함께 삭제"
+
+msgid "Save Lifecycle Policy"
+msgstr "수명주기 정책 저장"
+
+msgid "Cloud Storage Backend"
+msgstr "클라우드 저장소"
+
+msgid "Storage Provider"
+msgstr "저장소 종류"
+
+msgid "Local Filesystem (Default)"
+msgstr "로컬 파일 시스템 (기본)"
+
+msgid "Faxes stay in the archive folder on this server. There is nothing to connect."
+msgstr "팩스는 이 서버의 보관 폴더에 그대로 저장됩니다. 연결할 설정이 없습니다."
+
+msgid "Endpoint URL (MinIO / S3 Compatible)"
+msgstr "엔드포인트 URL (MinIO / S3 호환)"
+
+msgid "Region"
+msgstr "리전"
+
+msgid "Bucket Name"
+msgstr "버킷 이름"
+
+msgid "Access Key ID"
+msgstr "액세스 키 ID"
+
+msgid "Secret Access Key"
+msgstr "시크릿 액세스 키"
+
+msgid "Key Prefix"
+msgstr "키 접두어"
+
+msgid "Save Storage Config"
+msgstr "저장소 설정 저장"
+
+msgid "Test Connection"
+msgstr "연결 테스트"
+
+msgid "Perform maintenance operations, service control, and backups."
+msgstr "유지보수 작업, 서비스 제어 및 백업을 수행합니다."
+
+msgid "HylaFAX Engine Active"
+msgstr "HylaFAX 엔진 가동 중"
+
+msgid "Admin Dashboard"
+msgstr "관리자 대시보드"
+
+msgid "Caution: Appliance Maintenance Operations"
+msgstr "주의: 어플라이언스 유지보수 작업"
+
+msgid "Restarting or shutting down services will interrupt active fax modem spooling and disconnect client sessions. Ensure all outbound transmissions in the modem queue are completed before initiating maintenance tasks."
+msgstr "서비스를 재시작하거나 종료하면 진행 중인 팩스 모뎀 스풀링이 중단되고 클라이언트 세션 연결이 끊어집니다. 유지보수 작업을 시작하기 전에 모뎀 대기열의 모든 발신 전송이 완료되었는지 확인하십시오."
+
+msgid "Daemon Service Control"
+msgstr "데몬 서비스 제어"
+
+msgid "Restart HylaFAX and NamiFAX web services, or halt background workers."
+msgstr "HylaFAX 및 NamiFAX 웹 서비스를 재시작하거나 백그라운드 워커를 중지합니다."
+
+msgid "RUNNING"
+msgstr "실행 중"
+
+msgid "NOT RUNNING"
+msgstr "실행 중 아님"
+
+msgid "Reboot Services"
+msgstr "서비스 재시작"
+
+msgid "Shutdown Services"
+msgstr "서비스 종료"
+
+msgid "Database & Archive Backup"
+msgstr "데이터베이스 및 보관함 백업"
+
+msgid "Download system archives and database snapshots for offsite retention."
+msgstr "외부 보관을 위해 시스템 보관함 및 데이터베이스 스냅샷을 다운로드합니다."
+
+msgid "Download Archive"
+msgstr "보관함 다운로드"
+
+msgid "Download Database"
+msgstr "데이터베이스 다운로드"
+
+msgid "System Logs"
+msgstr "시스템 로그"
+
+msgid "Audit logs and HylaFAX server operational event traces"
+msgstr "감사 로그 및 HylaFAX 서버 운영 이벤트 추적 내역"
+
+msgid "Keywords:"
+msgstr "키워드:"
+
+msgid "Search text..."
+msgstr "검색어..."
+
+msgid "Date:"
+msgstr "날짜:"
+
+msgid "Date"
+msgstr "날짜"
+
+msgid "Log Text"
+msgstr "로그 내용"
+
+msgid "No system logs found matching criteria."
+msgstr "조건과 일치하는 시스템 로그가 없습니다."
+
+msgid "Transmissions and server events will be streamed here in real time."
+msgstr "전송 내역 및 서버 이벤트가 여기에 실시간으로 스트리밍됩니다."
+
+msgid "Previous"
+msgstr "이전"
+
+msgid "Page"
+msgstr "페이지"
+
+msgid "Next"
+msgstr "다음"
+
+msgid "Delete User"
+msgstr "사용자 삭제"
+
+msgid "Are you sure you want to delete the user"
+msgstr "다음 사용자를 삭제하시겠습니까:"
+
+msgid "Manage system operator credentials, access permissions, and route mapping"
+msgstr "시스템 운영자 자격 증명, 접근 권한 및 라우트 매핑을 관리합니다."
+
+msgid "Create New User"
+msgstr "새 사용자 생성"
+
+msgid "Last IP"
+msgstr "마지막 IP"
+
+msgid "Superuser"
+msgstr "최고 관리자"
+
+msgid "Admin"
+msgstr "관리자"
+
+msgid "YES"
+msgstr "예"
+
+msgid "NO"
+msgstr "아니오"
+
+msgid "users"
+msgstr "명"
+
+msgid "user"
+msgstr "명"
+
+msgid "Modify User"
+msgstr "사용자 수정"
+
+msgid "New User"
+msgstr "새 사용자"
+
+msgid "User settings have been saved."
+msgstr "사용자 정보를 저장했습니다"
+
+msgid "Account active"
+msgstr "계정 사용"
+
+msgid "Full Name"
+msgstr "전체 이름"
+
+msgid "Password"
+msgstr "비밀번호"
+
+msgid "Leave empty to keep the current password (a new user is sent a random one)"
+msgstr "비워 두면 현재 비밀번호를 유지합니다(새 사용자는 무작위 비밀번호가 메일로 발송됩니다)"
+
+msgid "Email Address"
+msgstr "이메일 주소"
+
+msgid "Password expiration cycle"
+msgstr "비밀번호 만료 주기"
+
+msgid "Language"
+msgstr "언어"
+
+msgid "Password can be reused"
+msgstr "비밀번호 재사용 허용"
+
+msgid "My Company"
+msgstr "회사"
+
+msgid "My Location"
+msgstr "위치"
+
+msgid "My Voice Number"
+msgstr "음성 전화번호"
+
+msgid "My Fax Number"
+msgstr "팩스 번호"
+
+msgid "TSI ID"
+msgstr "TSI ID"
+
+msgid "Select Cover Page"
+msgstr "표지 선택"
+
+msgid "New fax sound"
+msgstr "새 팩스 알림음"
+
+msgid "Inbox - show"
+msgstr "받은 팩스함 쪽당 개수"
+
+msgid "Archive - show"
+msgstr "보관함 쪽당 개수"
+
+msgid "Permissions & Capabilities"
+msgstr "권한 및 기능"
+
+msgid "Administrator Console"
+msgstr "관리자 콘솔"
+
+msgid "Superuser Rights"
+msgstr "최고 관리자 권한"
+
+msgid "User can delete faxes"
+msgstr "팩스 삭제 권한"
+
+msgid "Send on Any Modem"
+msgstr "모든 모뎀 발신 권한"
+
+msgid "You must first create a DID/DTMF group"
+msgstr "먼저 DID/DTMF 그룹을 만들어야 합니다"
+
+msgid "You must first create a modem"
+msgstr "먼저 모뎀을 만들어야 합니다"
+
+msgid "Categories"
+msgstr "카테고리"
+
+msgid "You must first create a category"
+msgstr "먼저 카테고리를 만들어야 합니다"
+
+msgid "Archive Search"
+msgstr "보관함 검색"
+
+msgid "Search all sent and received fax records by date, company, or fax number."
+msgstr "날짜, 회사 또는 팩스 번호별로 수발신 팩스 기록을 검색합니다."
+
+msgid "Search Filters"
+msgstr "검색 필터"
+
+msgid "Leave filters empty to search all records. Narrow results by adding more criteria."
+msgstr "필터를 비워두면 전체 기록을 검색합니다. 조건을 추가하여 검색 결과를 좁힐 수 있습니다."
+
+msgid "Company search"
+msgstr "업체 검색"
+
+msgid "Company list"
+msgstr "업체 목록"
+
+msgid "Fax ID"
+msgstr "팩스 ID"
+
+msgid "e.g. 104"
+msgstr "예: 104"
+
+msgid "Keywords"
+msgstr "검색어"
+
+msgid "Company, number, notes..."
+msgstr "회사, 번호, 메모..."
+
+msgid "All Categories"
+msgstr "모든 카테고리"
+
+msgid "User"
+msgstr "사용자"
+
+msgid "Start Date"
+msgstr "시작 날짜"
+
+msgid "End Date"
+msgstr "종료 날짜"
+
+msgid "Direction"
+msgstr "구분"
+
+#, python-format
+msgid "Total %(n)d results found."
+msgstr "총 %(n)d건을 찾았습니다."
+
+msgid "Pages"
+msgstr "페이지 수"
+
+msgid "Download PDF"
+msgstr "PDF 내려받기"
+
+msgid "Reply to fax"
+msgstr "팩스 회신"
+
+msgid "Re-send"
+msgstr "재전송"
+
+msgid "Email PDF"
+msgstr "PDF 메일 보내기"
+
+msgid "Add note to fax"
+msgstr "팩스에 메모 추가"
+
+msgid "Note"
+msgstr "메모"
+
+msgid "Delete fax"
+msgstr "팩스 삭제"
+
+msgid "Select"
+msgstr "선택"
+
+msgid "Assign a company name"
+msgstr "업체 이름 지정"
+
+msgid "Unknown"
+msgstr "알 수 없음"
+
+msgid "Received"
+msgstr "수신일시"
+
+msgid "Sent"
+msgstr "보냄"
+
+msgid "No results were found"
+msgstr "검색 결과가 없습니다"
+
+msgid "Reset filters"
+msgstr "필터 초기화"
+
+msgid "Name the sender"
+msgstr "발신자 지정"
+
+msgid "Select Contact Record"
+msgstr "연락처 선택"
+
+msgid "Or type a new company name"
+msgstr "또는 새 회사 이름을 입력하십시오"
+
+msgid "Delete selected faxes?"
+msgstr "선택한 팩스를 삭제하시겠습니까?"
+
+msgid "faxes"
+msgstr "개의 팩스"
+
+msgid "No contacts found"
+msgstr "연락처가 없습니다"
+
+msgid "Add"
+msgstr "추가"
+
+msgid "Close"
+msgstr "닫기"
+
+msgid "Organize recipient groups for mass fax broadcasting and notifications."
+msgstr "대량 팩스 동보 발송 및 알림을 위한 수신자 그룹을 구성합니다."
+
+msgid "Create List"
+msgstr "그룹 생성"
+
+msgid "Saved Distribution Lists"
+msgstr "저장된 배포 그룹"
+
+msgid "members"
+msgstr "명의 구성원"
+
+msgid "Group Members & Settings"
+msgstr "그룹 구성원 및 설정"
+
+msgid "Create New Distribution List"
+msgstr "새 배포 그룹 생성"
+
+msgid "List Name"
+msgstr "그룹명"
+
+msgid "e.g. Executive Sales Team"
+msgstr "예: 영업 임원 그룹"
+
+msgid "Save list name"
+msgstr "이름 저장"
+
+msgid "Group Members (Contacts & Fax Numbers)"
+msgstr "그룹 구성원 (연락처 및 팩스 번호)"
+
+msgid "contacts assigned"
+msgstr "개의 연락처 지정됨"
+
+msgid "No contacts assigned to this list yet."
+msgstr "아직 이 그룹에 지정된 연락처가 없습니다."
+
+msgid "Add Member"
+msgstr "구성원 추가"
+
+msgid "Remove entries"
+msgstr "선택 항목 제거"
+
+msgid "Delete this distribution list?"
+msgstr "이 배포 그룹을 삭제하시겠습니까?"
+
+msgid "Edit Distribution List"
+msgstr "배포 그룹 편집"
+
+msgid "Create Distribution List"
+msgstr "배포 그룹 생성"
+
+msgid "Configure broadcast list parameters and recipient group members."
+msgstr "동보 발송 그룹 파라미터 및 수신자 그룹 구성원을 설정합니다."
+
+msgid "Back to Lists"
+msgstr "그룹 목록으로 돌아가기"
+
+msgid "Distribution List Profile"
+msgstr "배포 그룹 프로필"
+
+msgid "e.g. Finance Operations"
+msgstr "예: 재무 운영팀"
+
+msgid "Enrolled Members"
+msgstr "등록된 구성원"
+
+msgid "List ID:"
+msgstr "그룹 ID:"
+
+msgid "No contacts in this list."
+msgstr "이 그룹에 연락처가 없습니다."
+
+msgid "Add contacts to the list"
+msgstr "그룹에 연락처 추가"
+
+msgid "Changes saved"
+msgstr "변경 사항을 저장했습니다"
+
+msgid "Back"
+msgstr "뒤로"
+
+msgid "Email Address Book"
+msgstr "이메일 주소록"
+
+msgid "Manage email recipients, transmission routing, and contacts directory."
+msgstr "이메일 수신자, 전송 라우팅 및 연락처 디렉터리를 관리합니다."
+
+msgid "New Contact"
+msgstr "새 연락처"
+
+msgid "recipients"
+msgstr "명의 수신자"
+
+msgid "Contact Name"
+msgstr "담당자명"
+
+msgid "Company Affiliation"
+msgstr "소속 회사"
+
+msgid "No email contacts found in the directory. Click \"+ New Contact\" to register one."
+msgstr "디렉터리에 이메일 연락처가 없습니다. \"+ 새 연락처\"를 클릭하여 등록하세요."
+
+msgid "Email Book - Edit Email Contact"
+msgstr "이메일 주소록 - 이메일 연락처 편집"
+
+msgid "Manage contact information and company affiliation in Email Book."
+msgstr "이메일 주소록에서 연락처 정보 및 소속 회사를 관리합니다."
+
+msgid "Back to Email Book"
+msgstr "이메일 주소록으로 돌아가기"
+
+msgid "Contact Profile Details"
+msgstr "연락처 프로필 세부정보"
+
+msgid "John Doe"
+msgstr "홍길동"
+
+msgid "Modify Job"
+msgstr "팩스 작업 수정"
+
+msgid "New Destination"
+msgstr "새 수신처"
+
+msgid "Priority"
+msgstr "우선순위"
+
+msgid "Modem / Device"
+msgstr "모뎀 / 장치"
+
+msgid "Number of tries"
+msgstr "시도 횟수"
+
+msgid "Expire after"
+msgstr "만료 시간"
+
+msgid "Now"
+msgstr "지금"
+
+msgid "Minutes"
+msgstr "분"
+
+msgid "Hours"
+msgstr "시간"
+
+msgid "Days"
+msgstr "일"
+
+msgid "Schedule Send Time"
+msgstr "전송 시각 예약"
+
+msgid "Lost Password"
+msgstr "비밀번호 찾기"
+
+msgid "Account Recovery Assistance"
+msgstr "계정 복구 지원"
+
+msgid "Back to Login"
+msgstr "로그인으로 돌아가기"
+
+msgid "Your password will be sent to the given e-mail address."
+msgstr "입력하신 이메일 주소로 비밀번호를 보내 드립니다."
+
+msgid "Once you have received your new password you can login in and change it."
+msgstr "새 비밀번호를 받으면 로그인한 뒤 원하는 비밀번호로 바꿀 수 있습니다."
+
+msgid "Login"
+msgstr "로그인"
+
+msgid "Please enter your e-mail address then click on the Send Password button. You will receive a new password shortly. Use this new password to access the site."
+msgstr "이메일 주소를 입력하고 비밀번호 보내기를 누르십시오. 새 비밀번호를 곧 받게 되며, 그 비밀번호로 접속하십시오."
+
+msgid "E-mail address"
+msgstr "이메일 주소"
+
+msgid "Send Password"
+msgstr "비밀번호 보내기"
+
+msgid "Received faxes appear here automatically in real time."
+msgstr "수신된 팩스가 여기에 실시간으로 자동 표시됩니다."
+
+msgid "Faxes"
+msgstr "팩스"
+
+msgid "Fax"
+msgstr "팩스"
+
+msgid "Select All Faxes"
+msgstr "전체 선택"
+
+msgid "Archive Selected"
+msgstr "선택 항목 보관"
+
+msgid "Delete Selected"
+msgstr "선택 항목 삭제"
+
+msgid "fax"
+msgstr "건"
+
+msgid "Preview"
+msgstr "미리보기"
+
+msgid "Sender"
+msgstr "발신자"
+
+msgid "of"
+msgstr "/"
+
+msgid "This number belongs to several companies. Which one is it?"
+msgstr "이 번호는 여러 회사에 등록되어 있습니다. 어느 회사입니까?"
+
+msgid "Unknown Sender"
+msgstr "알 수 없는 발신자"
+
+msgid "View"
+msgstr "보기"
+
+msgid "Reply"
+msgstr "회신"
+
+msgid "Archive"
+msgstr "보관함"
+
+msgid "Email Fax"
+msgstr "이메일로 팩스 전송"
+
+msgid "Add a note"
+msgstr "메모 추가"
+
+msgid "Rotate"
+msgstr "회전"
+
+msgid "Download TIFF"
+msgstr "TIFF 내려받기"
+
+msgid "0 FAXES"
+msgstr "0건의 팩스"
+
+msgid "There are no incoming faxes waiting in your inbox. Incoming transmissions will automatically appear here in real time."
+msgstr "받은 팩스함에 대기 중인 수신 팩스가 없습니다. 새로 수신되는 팩스는 실시간으로 자동 표시됩니다."
+
+msgid "Send Your First Fax"
+msgstr "첫 번째 팩스 보내기"
+
+msgid "Search Archive"
+msgstr "보관함 검색"
+
+msgid "Getting Started with NamiFAX"
+msgstr "NamiFAX 시작하기"
+
+msgid "Receive Faxes"
+msgstr "팩스 수신"
+
+msgid "When someone sends a fax to this system's number, it will appear here automatically."
+msgstr "팩스 번호로 팩스가 전송되면 여기에 자동으로 표시됩니다."
+
+msgid "Send Faxes"
+msgstr "팩스 발신"
+
+msgid "Click Send Fax to transmit a PDF or image document to any fax number."
+msgstr "팩스 보내기를 클릭하여 PDF나 이미지 문서를 원하는 팩스 번호로 전송하세요."
+
+msgid "Manage Records"
+msgstr "기록 관리"
+
+msgid "Download faxes as PDF, archive them for later, or search all records in the Archive."
+msgstr "팩스를 PDF로 다운로드하거나 나중에 볼 수 있도록 보관하고, 보관함에서 모든 기록을 검색할 수 있습니다."
+
+msgid "Archive search"
+msgstr "보관함 검색"
+
+msgid "new fax"
+msgstr "새 팩스"
+
+msgid "Outbox"
+msgstr "보낸 팩스함"
+
+msgid "lines"
+msgstr "회선"
+
+msgid "Settings"
+msgstr "환경설정"
+
+msgid "Sign in"
+msgstr "로그인"
+
+msgid "Enter your credentials to continue."
+msgstr "계속하려면 자격 증명을 입력하세요."
+
+msgid "System Online"
+msgstr "시스템 온라인"
+
+msgid "Enter your username"
+msgstr "사용자 이름을 입력하십시오"
+
+msgid "Forgot password?"
+msgstr "비밀번호를 잊으셨습니까?"
+
+msgid "Enter your password"
+msgstr "비밀번호를 입력하십시오"
+
+msgid "Contact your system administrator if you need an account."
+msgstr "계정이 필요하시면 시스템 관리자에게 문의하세요."
+
+msgid "Or continue with"
+msgstr "또는 다음으로 계속"
+
+msgid "Sign in with Passkey (Touch ID / Security Key)"
+msgstr "패스키로 로그인 (Touch ID / 보안 키)"
+
+msgid "SAML 2.0 Enterprise SSO (Okta / Entra ID)"
+msgstr "SAML 2.0 기업 SSO (Okta / Entra ID)"
+
+msgid "Two-Factor Authentication"
+msgstr "2단계 인증 (2FA)"
+
+msgid "Enter the 6-digit code from your authenticator app or an emergency recovery code."
+msgstr "인증 앱의 6자리 인증 코드 또는 비상 복구 코드를 입력하십시오."
+
+msgid "Authentication Code"
+msgstr "인증 코드"
+
+msgid "123456 or 8-char backup code"
+msgstr "6자리 코드 또는 8자리 백업 코드"
+
+msgid "Verify & Log In"
+msgstr "확인 및 로그인"
+
+msgid "Sign out?"
+msgstr "로그아웃하시겠습니까?"
+
+msgid "Assign Company Name"
+msgstr "회사명 지정"
+
+msgid "Associate document with registered enterprise contact"
+msgstr "문서를 등록된 기업 연락처와 연결합니다."
+
+msgid "Search Company Name"
+msgstr "회사명 검색"
+
+msgid "Type company name to filter..."
+msgstr "회사 이름을 입력해 찾으십시오..."
+
+msgid "Search the White Pages"
+msgstr "화이트 페이지에서 찾기"
+
+msgid "Delete Fax"
+msgstr "팩스 삭제"
+
+msgid "Are you sure you want to delete this fax?"
+msgstr "이 팩스를 삭제하시겠습니까?"
+
+msgid "This operation will permanently purge the fax document archive."
+msgstr "이 작업은 팩스 문서 보관 파일을 영구적으로 삭제합니다."
+
+msgid "Forward fax via email"
+msgstr "이메일로 팩스 전송"
+
+msgid "Dispatch PDF document attachment to email recipients"
+msgstr "PDF 문서 첨부 파일을 이메일 수신자에게 발송합니다."
+
+msgid "From"
+msgstr "보낸 사람"
+
+msgid "Recipients"
+msgstr "수신자"
+
+msgid "Choose from contacts"
+msgstr "연락처에서 선택"
+
+msgid "CC"
+msgstr "참조"
+
+msgid "BCC"
+msgstr "숨은 참조"
+
+msgid "Subject"
+msgstr "제목"
+
+msgid "PDF file name"
+msgstr "PDF 파일 이름"
+
+msgid "Message"
+msgstr "내용"
+
+msgid "Archive fax"
+msgstr "팩스 보관"
+
+msgid "Send"
+msgstr "전송"
+
+msgid "Append internal administrative note or comments"
+msgstr "내부 관리 메모 또는 코멘트를 추가합니다."
+
+msgid "Note / Description"
+msgstr "메모 / 설명"
+
+msgid "Enter transaction note or dispatch comments..."
+msgstr "처리 메모나 발송 의견을 입력하십시오..."
+
+msgid "Transmission Report"
+msgstr "전송 보고서"
+
+msgid "Official facsimile delivery confirmation receipt"
+msgstr "공식 팩스 전송 확인증"
+
+msgid "Print"
+msgstr "인쇄"
+
+msgid "Company:"
+msgstr "회사:"
+
+msgid "Pages:"
+msgstr "페이지 수:"
+
+msgid "Fax Number:"
+msgstr "팩스 번호:"
+
+msgid "Database unavailable"
+msgstr "데이터베이스에 연결할 수 없습니다"
+
+msgid "The database cannot be reached right now. This page tries again every 10 seconds."
+msgstr "지금은 데이터베이스에 연결할 수 없습니다. 이 페이지는 10초마다 다시 시도합니다."
+
+msgid "Faxes currently queued or being transmitted."
+msgstr "현재 대기 중이거나 전송 중인 팩스입니다."
+
+msgid "This page shows only faxes that are queued or in progress. Once delivered, they are removed from this list. Find completed records in the"
+msgstr "이 페이지에는 대기 중이거나 진행 중인 팩스만 표시됩니다. 전송이 완료되면 목록에서 제거되며 보관함에서 확인할 수 있습니다:"
+
+msgid "jobs in progress"
+msgstr "건의 작업 진행 중"
+
+msgid "job in progress"
+msgstr "건의 작업 진행 중"
+
+msgid "Job ID"
+msgstr "작업 ID"
+
+msgid "Dials"
+msgstr "시도 횟수"
+
+msgid "TTS"
+msgstr "전송 예정"
+
+msgid "Modify"
+msgstr "수정"
+
+msgid "Kill job"
+msgstr "작업 삭제"
+
+msgid "Kill"
+msgstr "삭제"
+
+msgid "Failed Transmissions"
+msgstr "전송 실패 내역"
+
+msgid "Review the number or retry below."
+msgstr "번호를 확인하거나 아래에서 재시도하세요."
+
+msgid "Retry"
+msgstr "재시도"
+
+msgid "No jobs in queue"
+msgstr "대기 중인 작업 없음"
+
+msgid "There are no faxes waiting to be sent. Send a fax to see its progress here."
+msgstr "전송 대기 중인 팩스가 없습니다. 팩스를 보내면 진행 상황이 여기에 표시됩니다."
+
+msgid "Send a Fax"
+msgstr "팩스 보내기"
+
+msgid "Password Expired"
+msgstr "비밀번호 만료"
+
+msgid "Security Credentials Renewal"
+msgstr "보안 자격 증명 갱신"
+
+msgid "Action Required"
+msgstr "필수 조치 사항"
+
+msgid "Your password has expired or needs to be changed before proceeding. Please enter your old password and choose a new password."
+msgstr "비밀번호가 만료되었거나 계속 진행하기 전에 변경해야 합니다. 기존 비밀번호를 입력하고 새 비밀번호를 설정하세요."
+
+msgid "Old Password"
+msgstr "기존 비밀번호"
+
+msgid "Current credentials"
+msgstr "현재 비밀번호"
+
+msgid "New Password"
+msgstr "새 비밀번호"
+
+msgid "New secure passphrase"
+msgstr "새 비밀번호"
+
+msgid "Confirm New Password"
+msgstr "새 비밀번호 확인"
+
+msgid "Re-type new passphrase"
+msgstr "새 비밀번호 확인"
+
+msgid "Update Password"
+msgstr "비밀번호 변경"
+
+msgid "Fill in the details below and click Send."
+msgstr "아래 세부 정보를 입력하고 전송 버튼을 누르세요."
+
+msgid "Destination & Recipients"
+msgstr "수신처 및 수신자 정보"
+
+msgid "Enter the fax number and recipient details."
+msgstr "팩스 번호 및 수신자 정보를 입력하세요."
+
+msgid "Destination fax numbers"
+msgstr "수신 팩스 번호"
+
+msgid "e.g. +1-555-0199  —  separate multiple numbers with semicolons"
+msgstr "예: +82-2-555-0199  —  여러 번호는 세미콜론(;)으로 구분"
+
+msgid "Choose a distribution list"
+msgstr "배포 그룹 선택"
+
+msgid "To send to multiple recipients at once, separate numbers with a semicolon."
+msgstr "여러 수신자에게 동시에 보내려면 번호를 세미콜론(;)으로 구분하십시오."
+
+msgid "Saved contacts are available in the"
+msgstr "저장된 연락처는 다음에서 선택할 수 있습니다:"
+
+msgid "Attention To"
+msgstr "수신자명"
+
+msgid "optional"
+msgstr "선택 사항"
+
+msgid "e.g. Jane Doe"
+msgstr "예: 김영희"
+
+msgid "Voice Number"
+msgstr "전화번호"
+
+msgid "Address"
+msgstr "주소"
+
+msgid "Zip"
+msgstr "우편번호"
+
+msgid "Subject / Regarding"
+msgstr "제목 / 용건"
+
+msgid "e.g. Purchase Order #4921"
+msgstr "예: 발주서 #4921"
+
+msgid "Document Attachment"
+msgstr "문서 첨부"
+
+msgid "Attach the file you want to transmit."
+msgstr "전송할 파일을 첨부하세요."
+
+msgid "Click to select a file"
+msgstr "클릭하여 파일 선택"
+
+msgid "Supported: PDF, TIFF, PostScript, TXT"
+msgstr "지원 형식: PDF, TIFF, PostScript, TXT"
+
+msgid "Max"
+msgstr "최대"
+
+msgid "PDF is the most commonly used format. Convert Word or Excel files to PDF before attaching."
+msgstr "PDF가 가장 권장되는 형식입니다. Word나 Excel 파일은 PDF로 변환 후 첨부하세요."
+
+msgid "Cover Page"
+msgstr "표지(Cover Page)"
+
+msgid "Add a cover sheet with sender and recipient info."
+msgstr "발신자 및 수신자 정보가 포함된 표지를 추가합니다."
+
+msgid "Include Cover Page"
+msgstr "표지 포함"
+
+msgid "Cover Template"
+msgstr "표지 템플릿"
+
+msgid "No cover pages are set up"
+msgstr "설정된 표지가 없습니다"
+
+msgid "Send via Line"
+msgstr "발신 회선 선택"
+
+msgid "No modems configured"
+msgstr "설정된 모뎀이 없습니다"
+
+msgid "Cover Comments"
+msgstr "표지 전달 내용"
+
+msgid "Notes or message to print on the cover sheet..."
+msgstr "표지에 인쇄할 메모나 전달 내용..."
+
+msgid "Advanced Options"
+msgstr "고급 옵션"
+
+msgid "Priority, retries, notifications"
+msgstr "우선순위, 재시도 횟수, 알림 설정"
+
+msgid "Max Retries"
+msgstr "최대 재시도 횟수"
+
+msgid "Retries automatically on busy signal."
+msgstr "통화 중일 경우 자동으로 재시도합니다."
+
+msgid "Notify on requeue"
+msgstr "재시도 시 알림"
+
+msgid "The original fax is sent along."
+msgstr "원본 팩스를 함께 보냅니다."
+
+msgid "Cancel & return to Inbox"
+msgstr "취소하고 받은 팩스함으로 이동"
+
+msgid "User Settings"
+msgstr "사용자 환경설정"
+
+msgid "Configure your personal profile, fax station identity, and portal preferences."
+msgstr "개인 프로필, 팩스 국선 식별 정보 및 포털 환경설정을 구성합니다."
+
+msgid "Return to Inbox"
+msgstr "받은 팩스함으로 돌아가기"
+
+msgid "Personal & Organization Details"
+msgstr "개인 및 조직 세부 정보"
+
+msgid "Office / Location"
+msgstr "사무실 / 위치"
+
+msgid "Direct Voice Number"
+msgstr "직통 전화번호"
+
+msgid "Direct Fax Number"
+msgstr "직통 팩스 번호"
+
+msgid "Transmitting Station ID (TSI)"
+msgstr "발신 팩스 식별자 (TSI)"
+
+msgid "e.g. +1 555 123 4567"
+msgstr "예: +82 2 555 4567"
+
+msgid "Header identifier imprinted on top of transmitted fax pages."
+msgstr "전송되는 팩스 페이지 상단에 인쇄되는 헤더 식별자입니다."
+
+msgid "Email & Fax Notification Signature"
+msgstr "이메일 및 팩스 알림 서명"
+
+msgid "Portal & Delivery Preferences"
+msgstr "포털 및 수신 기본 설정"
+
+msgid "Display Language"
+msgstr "표시 언어"
+
+msgid "Default Cover Page"
+msgstr "기본 표지 템플릿"
+
+msgid "Faxes Per Page"
+msgstr "페이지당 팩스 수"
+
+msgid "Archive Faxes Per Page"
+msgstr "보관함 쪽당 팩스 수"
+
+msgid "Change Password"
+msgstr "비밀번호 변경"
+
+msgid "Current Password"
+msgstr "현재 비밀번호"
+
+msgid "Enter current password to verify"
+msgstr "확인을 위해 현재 비밀번호를 입력하십시오"
+
+msgid "Enter secure new password"
+msgstr "새 비밀번호를 입력하십시오"
+
+msgid "Re-type new password"
+msgstr "새 비밀번호를 다시 입력하십시오"
+
+msgid "Update Settings"
+msgstr "설정 업데이트"
+
+msgid "Two-Factor Authentication (TOTP)"
+msgstr "2단계 인증 (TOTP)"
+
+msgid "Protect your account with Google Authenticator, Authy, or compatible RFC 6238 apps."
+msgstr "Google Authenticator, Authy 등 RFC 6238 호환 앱으로 계정을 보호하십시오."
+
+msgid "Active / Enabled"
+msgstr "사용 중"
+
+msgid "Disabled"
+msgstr "사용 안 함"
+
+msgid "When enabled, signing in requires your password and a 6-digit one-time token from your mobile device."
+msgstr "사용하면 로그인할 때 비밀번호와 휴대폰의 6자리 일회용 코드가 필요합니다."
+
+msgid "recovery codes left"
+msgstr "개의 복구 코드가 남았습니다"
+
+msgid "Code from your app (to get new recovery codes)"
+msgstr "앱의 코드 (새 복구 코드를 받으려면)"
+
+msgid "New recovery codes"
+msgstr "새 복구 코드"
+
+msgid "Turn off 2FA for your account?"
+msgstr "내 계정의 2단계 인증을 끄시겠습니까?"
+
+msgid "Code or recovery code"
+msgstr "코드 또는 복구 코드"
+
+msgid "Disable 2FA"
+msgstr "2단계 인증 끄기"
+
+msgid "Enable 2FA (Setup Authenticator)"
+msgstr "2단계 인증 켜기 (인증 앱 설정)"
+
+msgid "FIDO2 Passkeys & Biometric Security Keys"
+msgstr "FIDO2 패스키 및 생체 보안 키"
+
+msgid "Sign in securely without passwords using Touch ID, Face ID, Windows Hello, or YubiKey."
+msgstr "Touch ID, Face ID, Windows Hello, YubiKey로 비밀번호 없이 안전하게 로그인합니다."
+
+msgid "Register New Passkey"
+msgstr "새 패스키 등록"
+
+msgid "Loading registered security keys..."
+msgstr "등록된 보안 키를 불러오는 중..."
+
+msgid "No Passkeys registered yet."
+msgstr "등록된 패스키가 없습니다."
+
+msgid "No Passkeys registered yet. Click Register to add Touch ID or a security key."
+msgstr "등록된 패스키가 없습니다. 등록을 눌러 Touch ID나 보안 키를 추가하십시오."
+
+msgid "Remove"
+msgstr "삭제"
+
+msgid "1. Scan this code with Google Authenticator, Authy or another RFC 6238 app, or type the key by hand."
+msgstr "1. Google Authenticator, Authy 등 RFC 6238 앱으로 이 코드를 스캔하거나 키를 직접 입력하십시오."
+
+msgid "Key"
+msgstr "키"
+
+msgid "Copied"
+msgstr "복사했습니다"
+
+msgid "Copy key"
+msgstr "키 복사"
+
+msgid "2. Enter the 6-digit code the app shows"
+msgstr "2. 앱에 표시된 6자리 코드를 입력하십시오"
+
+msgid "Turn on 2FA"
+msgstr "2단계 인증 켜기"
+
+msgid "Save your recovery codes"
+msgstr "복구 코드를 저장하십시오"
+
+msgid "Each code works once if you lose your phone. They are shown only now; store them somewhere safe."
+msgstr "휴대폰을 잃어버렸을 때 각 코드는 한 번씩 쓸 수 있습니다. 지금만 표시되니 안전한 곳에 보관하십시오."
+
+msgid "Copy codes"
+msgstr "코드 복사"
+
+msgid "Download as a file"
+msgstr "파일로 내려받기"
+
+msgid "The file is made in your browser from what is shown here and is not stored on the server. Codes are kept on the server only as hashes."
+msgstr "파일은 이 화면에 표시된 내용으로 브라우저에서 만들어지며 서버에는 저장되지 않습니다. 서버에는 복구 코드가 해시로만 보관됩니다."
+
+msgid "Done"
+msgstr "완료"
+
+msgid "Back to settings"
+msgstr "환경설정으로 돌아가기"
+
+msgid "Previous fax"
+msgstr "이전 팩스"
+
+msgid "Prev"
+msgstr "이전"
+
+msgid "Next fax"
+msgstr "다음 팩스"
+
+msgid "Rotate fax"
+msgstr "팩스 회전"
+
+#, python-format
+msgid "Invalid fax number: %(number)s"
+msgstr "잘못된 팩스 번호: %(number)s"
+
+msgid "Address book entry saved."
+msgstr "주소록 항목을 저장했습니다."
+
+msgid "You must enter a company name"
+msgstr "회사 이름을 입력하십시오"
+
+msgid "Please enter a valid fax number"
+msgstr "올바른 팩스 번호를 입력하십시오"
+
+msgid "You are not allowed to delete address book entries."
+msgstr "주소록 항목을 삭제할 권한이 없습니다."
+
+msgid "Contact details saved"
+msgstr "연락처를 저장했습니다."
+
+msgid "You are not allowed to delete contacts."
+msgstr "연락처를 삭제할 권한이 없습니다."
+
+msgid "The modem was deleted"
+msgstr "모뎀을 삭제했습니다"
+
+msgid "You must enter an alias"
+msgstr "별칭을 입력하세요"
+
+msgid "The modem was updated"
+msgstr "모뎀을 수정했습니다"
+
+msgid "You must enter a device name"
+msgstr "장치 이름을 입력하세요"
+
+msgid "This modem already exists"
+msgstr "이미 있는 모뎀입니다"
+
+msgid "The modem was created"
+msgstr "모뎀을 만들었습니다"
+
+msgid "January"
+msgstr "1월"
+
+msgid "February"
+msgstr "2월"
+
+msgid "March"
+msgstr "3월"
+
+msgid "April"
+msgstr "4월"
+
+msgid "May"
+msgstr "5월"
+
+msgid "June"
+msgstr "6월"
+
+msgid "July"
+msgstr "7월"
+
+msgid "August"
+msgstr "8월"
+
+msgid "September"
+msgstr "9월"
+
+msgid "October"
+msgstr "10월"
+
+msgid "November"
+msgstr "11월"
+
+msgid "December"
+msgstr "12월"
+
+msgid "Cover page template removed successfully"
+msgstr "표지 템플릿이 성공적으로 삭제되었습니다."
+
+msgid "Failed to remove cover page template"
+msgstr "표지 템플릿 삭제에 실패했습니다."
+
+msgid "The cover page was updated"
+msgstr "표지 템플릿이 성공적으로 업데이트되었습니다."
+
+msgid "Failed to update cover page template"
+msgstr "표지 템플릿 업데이트에 실패했습니다."
+
+msgid "Cover page template registered successfully"
+msgstr "표지 템플릿이 성공적으로 등록되었습니다."
+
+msgid "Title and File are required"
+msgstr "제목과 파일은 필수 항목입니다."
+
+msgid "The company does not exist."
+msgstr "해당 회사가 없습니다."
+
+msgid "The company and its fax numbers were deleted."
+msgstr "회사와 그 팩스 번호를 삭제했습니다."
+
+msgid "Please enter a valid e-mail address."
+msgstr "올바른 이메일 주소를 입력하십시오."
+
+msgid "Fax to Email settings saved"
+msgstr "팩스 이메일 전달 설정을 저장했습니다"
+
+msgid "The system is rebooting. Please wait..."
+msgstr "시스템을 다시 시작하는 중입니다. 잠시 기다려 주세요..."
+
+msgid "The system is shutting down. Please wait..."
+msgstr "시스템을 종료하는 중입니다. 잠시 기다려 주세요..."
+
+msgid "The command could not be run"
+msgstr "명령을 실행할 수 없습니다"
+
+msgid "There is no fax archive folder to download."
+msgstr "내려받을 팩스 보관 폴더가 없습니다."
+
+msgid "The database dump could not be made"
+msgstr "데이터베이스 덤프를 만들 수 없습니다"
+
+msgid "Access denied. Superadmin permission required."
+msgstr "접근이 거부되었습니다. 최고 관리자 권한이 필요합니다."
+
+msgid "SMTP Gateway settings saved successfully."
+msgstr "SMTP 게이트웨이 설정이 성공적으로 저장되었습니다."
+
+msgid "Printer name and host are required."
+msgstr "프린터 이름과 호스트를 입력해야 합니다."
+
+msgid "Network printer registered successfully."
+msgstr "네트워크 프린터를 등록했습니다."
+
+msgid "Printer deleted successfully."
+msgstr "프린터를 삭제했습니다."
+
+msgid "Lifecycle policy saved successfully."
+msgstr "수명주기 정책을 저장했습니다."
+
+msgid "Cloud storage configuration saved successfully."
+msgstr "클라우드 저장소 설정을 저장했습니다."
+
+msgid "SAML 2.0 configuration saved successfully."
+msgstr "SAML 2.0 설정을 저장했습니다."
+
+msgid "The scheduler was stopped. Nothing runs by itself until it is started again; Run now still works."
+msgstr "스케줄러를 정지했습니다. 다시 시작하기 전에는 아무 작업도 저절로 실행되지 않으며, '지금 실행'은 계속 쓸 수 있습니다."
+
+msgid "The scheduler was started."
+msgstr "스케줄러를 시작했습니다."
+
+msgid "Unknown task."
+msgstr "알 수 없는 작업입니다."
+
+msgid "This task is already running."
+msgstr "이 작업은 이미 실행 중입니다."
+
+msgid "The task was asked to stop; it stops at the next safe point."
+msgstr "작업에 중지를 요청했습니다. 다음으로 안전하게 멈출 수 있는 지점에서 멈춥니다."
+
+msgid "A time must be written HH:MM (24 hours); the old time was kept."
+msgstr "시각은 HH:MM(24시간) 형식이어야 합니다. 이전 시각을 유지했습니다."
+
+msgid "Scheduled tasks saved. A running scheduler picks the change up within a minute."
+msgstr "예약 작업을 저장했습니다. 실행 중인 스케줄러는 1분 안에 변경을 반영합니다."
+
+msgid "Catch All"
+msgstr "모두 받기"
+
+msgid "Never"
+msgstr "안 함"
+
+msgid "Every 3 Months"
+msgstr "3개월마다"
+
+msgid "Every 6 Months"
+msgstr "6개월마다"
+
+msgid "You must enter a name."
+msgstr "이름을 입력하세요"
+
+msgid "You must enter a username"
+msgstr "사용자 이름을 입력해야 합니다"
+
+msgid "Non-alphanumeric characters are not allowed in username."
+msgstr "사용자 이름에는 영문자·숫자·밑줄·점만 쓸 수 있습니다."
+
+#, python-format
+msgid ""
+"Hello %(name)s,\n"
+"\n"
+"This email contains your username and password to log into NamiFAX (%(url)s)\n"
+"\n"
+"Username - %(username)s\n"
+"Password - %(password)s\n"
+"\n"
+"Please do not respond to this message as it is automatically generated and is for information purposes only"
+msgstr ""
+"%(name)s님, 안녕하세요.\n"
+"\n"
+"이 메일에는 NamiFAX(%(url)s)에 로그인할 사용자 이름과 비밀번호가 들어 있습니다.\n"
+"\n"
+"사용자 이름 - %(username)s\n"
+"비밀번호 - %(password)s\n"
+"\n"
+"이 메일은 자동으로 발송된 안내이므로 회신하지 마세요."
+
+msgid "New User Details"
+msgstr "새 사용자 정보"
+
+msgid "The user does not exist."
+msgstr "사용자가 없습니다."
+
+msgid "You cannot delete your own account."
+msgstr "자신의 계정은 삭제할 수 없습니다."
+
+msgid "You cannot delete the last superuser."
+msgstr "마지막 슈퍼유저는 삭제할 수 없습니다."
+
+msgid "Please enter a valid number."
+msgstr "올바른 숫자를 입력하십시오."
+
+msgid "Both sent and received faxes"
+msgstr "보낸 팩스와 받은 팩스 모두"
+
+msgid "Only sent faxes"
+msgstr "보낸 팩스만"
+
+msgid "Only received faxes"
+msgstr "받은 팩스만"
+
+msgid "SAML sign-in is not set up on this server."
+msgstr "이 서버에는 SAML 로그인이 설정되어 있지 않습니다."
+
+msgid "The identity provider sent no answer."
+msgstr "ID 공급자(IdP)가 응답을 보내지 않았습니다."
+
+msgid "The identity provider's answer could not be accepted. Start the sign-in again."
+msgstr "ID 공급자의 응답을 받아들일 수 없었습니다. 로그인을 처음부터 다시 시작하십시오."
+
+msgid "No account here matches the identity provider's answer."
+msgstr "ID 공급자가 알려 준 사용자와 일치하는 계정이 없습니다."
+
+msgid "Account is disabled"
+msgstr "사용이 중지된 계정입니다"
+
+msgid "Too many failed sign-in attempts. Please try again later."
+msgstr "로그인 실패가 너무 많습니다. 잠시 후 다시 시도하십시오."
+
+#, python-format
+msgid "Too many failed attempts. Try again in %(minutes)d minutes."
+msgstr "실패 횟수가 너무 많습니다. %(minutes)d분 뒤에 다시 시도하십시오."
+
+msgid "Invalid or expired verification code."
+msgstr "유효하지 않거나 만료된 인증 코드입니다."
+
+#, python-format
+msgid ""
+"The user account %(user)s has this email associated with it.  A web user from %(ip)s has just requested that a new password be sent.\n"
+"\n"
+"Your New Password is: %(password)s\n"
+"\n"
+"If this was an error just login with your new password and then change your password to what you would like it to be."
+msgstr ""
+"사용자 계정 %(user)s에 이 이메일 주소가 등록되어 있습니다.  %(ip)s의 웹 사용자가 방금 새 비밀번호를 보내 달라고 요청했습니다.\n"
+"\n"
+"새 비밀번호: %(password)s\n"
+"\n"
+"요청하신 적이 없다면 새 비밀번호로 로그인한 뒤 원하는 비밀번호로 바꾸십시오."
+
+msgid "Email failed to send"
+msgstr "이메일을 보내지 못했습니다"
+
+msgid "Fax Contacts"
+msgstr "팩스 연락처"
+
+msgid "Email Contacts"
+msgstr "이메일 연락처"
+
+msgid "The fax document was not found."
+msgstr "팩스 문서를 찾을 수 없습니다."
+
+msgid "The email failed to send."
+msgstr "메일을 보내지 못했습니다"
+
+msgid "The email was sent successfully."
+msgstr "메일을 보냈습니다"
+
+msgid "Your session has expired. Reload the page and try again."
+msgstr "세션이 만료되었습니다. 페이지를 새로 고친 뒤 다시 시도하십시오."
+
+msgid "Invalid job number."
+msgstr "작업 번호가 올바르지 않습니다."
+
+msgid "Select a file to send, or ask for a cover page."
+msgstr "보낼 파일을 선택하거나 표지를 요청하십시오."
+
+msgid "The fax could not be sent: HylaFAX (the sendfax program) is not installed or not reachable on this server. Ask the administrator."
+msgstr "팩스를 보낼 수 없습니다. 이 서버에 HylaFAX(sendfax 프로그램)가 설치되어 있지 않거나 연결할 수 없습니다. 관리자에게 문의하십시오."
+
+msgid "The fax could not be queued:"
+msgstr "팩스를 대기열에 넣을 수 없습니다:"
+
+msgid "Any Available Line (Auto)"
+msgstr "사용 가능한 모든 회선 (자동)"
+
+msgid "You may not use this line."
+msgstr "이 회선은 사용할 수 없습니다."
+
+msgid "Your fax has been successfully queued to be faxed."
+msgstr "팩스를 전송 대기열에 넣었습니다."
+
+msgid "Job"
+msgstr "작업"
+
+msgid "The code is not valid."
+msgstr "코드가 올바르지 않습니다."
+
+msgid "The code did not match. Check the time on your phone and try again."
+msgstr "코드가 일치하지 않습니다. 휴대폰의 시간을 확인하고 다시 시도하십시오."
+
+msgid "The password is not correct."
+msgstr "비밀번호가 올바르지 않습니다."
+
+#~ msgid "High"
+#~ msgstr "높음"
+
+#~ msgid "Configure corporate contact identity and transmission routing defaults."
+#~ msgstr "회사 연락처 정보 및 팩스 수신 라우팅 기본값을 구성합니다."
+
+#~ msgid "Primary Company Profile"
+#~ msgstr "기본 회사 프로필"
+
+#~ msgid "Recipient Contact & Physical Address"
+#~ msgstr "수신자 담당자 및 주소 정보"
+
+#~ msgid "City / Postal Region"
+#~ msgstr "도시 / 우편번호"
+
+#~ msgid "Category Tag"
+#~ msgstr "카테고리 태그"
+
+#~ msgid "General"
+#~ msgstr "일반"
+
+#~ msgid "Invoices & Billing"
+#~ msgstr "청구서 및 정산"
+
+#~ msgid "Legal"
+#~ msgstr "법무"
+
+#~ msgid "Description / Internal Notes"
+#~ msgstr "설명 / 내부 메모"
+
+#~ msgid "Edit Forwarding Rule"
+#~ msgstr "전달 규칙 편집"
+
+#~ msgid "Add Forwarding Rule"
+#~ msgstr "전달 규칙 추가"
+
+#~ msgid "Please enter your registered username or email address below. Password reset instructions will be dispatched to your account email address."
+#~ msgstr "등록된 사용자 이름 또는 이메일 주소를 입력하세요. 비밀번호 재설정 안내가 등록된 이메일로 발송됩니다."
+
+#~ msgid "Username or Email Address"
+#~ msgstr "사용자 이름 또는 이메일 주소"
+
+#~ msgid "Reset Password"
+#~ msgstr "비밀번호 재설정"
+
+#~ msgid "Standard (Default)"
+#~ msgstr "표준 (기본값)"
+
+#~ msgid "Urgent"
+#~ msgstr "긴급"
+
+#~ msgid "Confidential"
+#~ msgstr "기밀"
+
+#~ msgid "Normal"
+#~ msgstr "보통"
+
+#~ msgid "Low"
+#~ msgstr "낮음"
+
+#~ msgid "High (Urgent)"
+#~ msgstr "높음 (긴급)"
+
+#~ msgid "Reply to Fax"
+#~ msgstr "팩스에 회신"
+
+#~ msgid "Dispatch quick reply transmission to originating sender"
+#~ msgstr "발신자에게 빠른 회신 팩스를 발송합니다."
+
+#~ msgid "Regarding (Subject)"
+#~ msgstr "용건 (제목)"
+
+#~ msgid "Comments"
+#~ msgstr "전달 내용"
+
+#~ msgid "Destination"
+#~ msgstr "수신처"
+
+#~ msgid "Queued"
+#~ msgstr "대기 등록 일시"
+
+#~ msgid "Reason"
+#~ msgstr "사유"
+
+#~ msgid "To send to multiple recipients at once, separate numbers with a comma."
+#~ msgstr "여러 수신자에게 동시에 보내려면 번호를 쉼표로 구분하세요."
+
+#~ msgid "Save Modem"
+#~ msgstr "모뎀 설정 저장"
+
+#~ msgid "Configure User:"
+#~ msgstr "사용자 설정:"
+
+#~ msgid "recipient@example.com (comma separated)"
+#~ msgstr "recipient@example.com (쉼표로 구분)"
+
+#~ msgid "NamiFAX Transmission Document"
+#~ msgstr "NamiFAX 전송 문서"
+
+#~ msgid "Please find the attached facsimile document."
+#~ msgstr "첨부된 팩스 문서를 확인해 주십시오."
+
+#~ msgid "results"
+#~ msgstr "건의 결과"
+
+#~ msgid "result"
+#~ msgstr "건의 결과"
+
+#~ msgid "Keyword"
+#~ msgstr "키워드"
+
+#~ msgid "Invoices / Orders"
+#~ msgstr "청구서 / 발주서"
+
+#~ msgid "Legal / Contracts"
+#~ msgstr "법무 / 계약서"
+
+#~ msgid "From Date"
+#~ msgstr "시작 날짜"
+
+#~ msgid "To Date"
+#~ msgstr "종료 날짜"
+
+#~ msgid "Sent & Received"
+#~ msgstr "수신 및 발신 전체"
+
+#~ msgid "Received only"
+#~ msgstr "수신 팩스만"
+
+#~ msgid "Sent only"
+#~ msgstr "발신 팩스만"
+
+#~ msgid "Results"
+#~ msgstr "검색 결과"
+
+#~ msgid "records"
+#~ msgstr "건의 기록"
+
+#~ msgid "record"
+#~ msgstr "건의 기록"
+
+#~ msgid "No results found"
+#~ msgstr "검색 결과가 없습니다"
+
+#~ msgid "Try adjusting your search terms or date range."
+#~ msgstr "검색어나 날짜 범위를 조정해 보세요."
+
+#~ msgid "Search the Archive"
+#~ msgstr "보관함 검색"
+
+#~ msgid "Enter a keyword or filter above and click Search to find fax records."
+#~ msgstr "키워드나 필터를 입력하고 검색 버튼을 누르면 팩스 기록을 찾을 수 있습니다."
+
+#~ msgid "Showing"
+#~ msgstr "표시 중:"
+
+#~ msgid "of"
+#~ msgstr "/"
+
+#~ msgid "Fax Viewer"
+#~ msgstr "팩스 뷰어"
+
+#~ msgid "Page 1 of"
+#~ msgstr "페이지: 1 /"
+
+#~ msgid "FROM:"
+#~ msgstr "발신:"
+
+#~ msgid "DATE:"
+#~ msgstr "수신일시:"
+
+#~ msgid "DEVICE:"
+#~ msgstr "장치:"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "TIFF"
+#~ msgstr "TIFF"
+
+#~ msgid "Total"
+#~ msgstr "전체"
+
+#~ msgid "Incoming Transmission"
+#~ msgstr "수신 팩스 전송"
+
+#~ msgid "FACSIMILE TRANSMISSION"
+#~ msgstr "팩스 전송 내역"
+
+#~ msgid "Date Received:"
+#~ msgstr "수신 일시:"
+
+#~ msgid "Originating Station:"
+#~ msgstr "발신 국선 ID:"
+
+#~ msgid "PORT"
+#~ msgstr "포트"
+
+#~ msgid "High-Resolution Raster Preview"
+#~ msgstr "고해상도 래스터 미리보기"
+
+#~ msgid "Device Line:"
+#~ msgstr "장치 회선:"
+
+#~ msgid "Download Original Document"
+#~ msgstr "원본 문서 다운로드"
+
+#~ msgid "NamiFAX Enterprise Facsimile Engine"
+#~ msgstr "NamiFAX 엔터프라이즈 팩스 엔진"
+
+#~ msgid "Archive ID:"
+#~ msgstr "보관 ID:"
+
+#~ msgid "Add contact name or fax number..."
+#~ msgstr "연락처 이름이나 팩스 번호를 추가..."
+
+#~ msgid "Delete List"
+#~ msgstr "그룹 삭제"
+
+#~ msgid "Save Changes"
+#~ msgstr "변경사항 저장"
+
+#~ msgid "Supported: PDF, TIFF, PostScript, TXT · Max 10 MB"
+#~ msgstr "지원 형식: PDF, TIFF, PostScript, TXT · 최대 10 MB"
+
+#~ msgid "Auto-select recommended"
+#~ msgstr "자동 선택 권장"
+
+#~ msgid "Status:"
+#~ msgstr "상태:"
+
+#~ msgid "Transmitted Successfully (OK)"
+#~ msgstr "정상 전송 완료 (OK)"
+
+#~ msgid "key and codes"
+#~ msgstr "키와 코드"
+
+#~ msgid "Enterprise storage lifecycle policies and S3 / MinIO / GCS cloud backends"
+#~ msgstr "기업용 보관 수명주기 정책과 S3 / MinIO / GCS 클라우드 저장소"
+
+#~ msgid "Endpoint URL"
+#~ msgstr "엔드포인트 URL"
+
+#~ msgid "Google Cloud Storage is reached through its S3-compatible interface: use the endpoint https://storage.googleapis.com and an HMAC key (Cloud Storage > Settings > Interoperability)."
+#~ msgstr "Google Cloud Storage는 S3 호환 인터페이스로 연결합니다. 엔드포인트는 https://storage.googleapis.com, 인증은 HMAC 키(Cloud Storage > 설정 > 상호 운용성)를 사용하십시오."
+
+#~ msgid "HMAC Access Key"
+#~ msgstr "HMAC 액세스 키"
+
+#~ msgid "HMAC Secret"
+#~ msgstr "HMAC 시크릿"
+
+msgid "Too many failed sign-in attempts. This account is locked until an administrator unlocks it."
+msgstr "로그인 실패가 너무 많아 이 계정이 잠겼습니다. 관리자가 잠금을 해제할 때까지 로그인할 수 없습니다."
+
+msgid "Locked"
+msgstr "잠김"
+
+msgid "Unlock"
+msgstr "잠금 해제"

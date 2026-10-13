@@ -1,0 +1,19 @@
+<div data-job-status="{{ job }}" class="space-y-2">
+  {% if running %}
+  <p class="text-xs text-sky-300 flex items-center gap-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+    {% if stopping %}{{ _('Stopping') }}&hellip;{% else %}{{ _('Running') }}{% endif %}
+    {% if started %}&mdash; {{ _('started') }} {{ started }}{% endif %}
+  </p>
+  {% elif last %}
+  <p class="text-xs {% if last.stopped %}text-amber-400{% elif last.ok %}text-emerald-400{% else %}text-rose-400{% endif %}">
+    {{ _('Last run') }}: {{ last.at }} &mdash; {{ last.summary }}</p>
+  {% else %}<p class="text-xs text-slate-500">{{ _('Has not run yet.') }}</p>{% endif %}
+  <form method="post" action="/admin/scheduler" class="inline" data-job-action>
+    <input type="hidden" name="job" value="{{ job }}">
+    {% if running %}<input type="hidden" name="action" value="stop_job">
+    <button type="submit" {% if stopping %}disabled{% endif %} class="px-3 py-1.5 rounded-lg bg-rose-800 hover:bg-rose-700 disabled:opacity-50 text-white text-xs font-semibold">{{ _('Stop') }}</button>
+    {% else %}<input type="hidden" name="action" value="run">
+    <button type="submit" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold border border-slate-700">{{ _('Run now') }}</button>{% endif %}
+  </form>
+</div>

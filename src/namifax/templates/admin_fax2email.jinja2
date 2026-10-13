@@ -1,0 +1,120 @@
+{% extends "admin_layout.jinja2" %}
+
+{% block title %}- NamiFAX - Admin - Fax to Email{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+  
+  <!-- Header & Actions -->
+  <div class="border-b border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-sky-950 border border-sky-800 flex items-center justify-center text-sky-400 shadow-inner">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-white tracking-tight">{{ _('Fax to Email') }}</h2>
+        <p class="text-xs text-slate-400">{{ _('Configure automated inbound fax forwarding and PDF dispatch rules mapped by company') }}</p>
+      </div>
+    </div>
+
+    <a href="/addressbook/edit" class="inline-flex items-center space-x-1.5 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-bold border border-slate-700 transition">
+      <span>{{ _('Add companies in the Address Book') }}</span>
+    </a>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    
+    <!-- Left: List -->
+    <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-5 space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-800 pb-3">
+        <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+        <h3 class="text-xs font-bold text-white uppercase tracking-wider">{{ _('Company Forwarding Rules') }}</h3>
+      </div>
+
+      <div class="divide-y divide-slate-800/60 border border-slate-800/80 rounded-xl overflow-hidden text-xs">
+        {% for r in fax2emails %}
+          <div class="p-3 flex justify-between items-center hover:bg-slate-900/60 transition {% if selected_company and selected_company.c_id == r.c_id %}bg-slate-800/60 border-l-2 border-l-sky-500{% endif %}">
+            <div class="space-y-0.5">
+              <span class="font-bold text-white">{{ r.company }}</span>
+              <p class="text-slate-400 font-mono text-[11px]">{{ r.numbers }} {{ _('fax numbers') }}{% if r.email %} | {{ _('Email:') }} {{ r.email }}{% endif %}{% if r.printer %} | {{ _('Printer:') }} {{ r.printer }}{% endif %}</p>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-[10px] font-mono bg-slate-900 text-slate-400 border border-slate-800 px-2 py-0.5 rounded">ID: {{ r.c_id }}</span>
+              <a href="/admin/fax2email?abook_id={{ r.c_id }}" class="inline-flex items-center px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-sky-400 text-[11px] font-semibold border border-slate-700 transition">{{ _('Edit') }}</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Right: Form (Strict 4 Inputs, 1 Button Contract) -->
+    <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-5 space-y-4" id="fax2email-form">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div class="flex items-center space-x-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">
+            {% if selected_company %}{{ _('Edit Forwarding Rules') }} #{{ selected_company.c_id }}{% else %}{{ _('Forwarding Rules') }}{% endif %}
+          </h3>
+        </div>
+      </div>
+
+      {% if error %}<div class="p-3 bg-rose-950/60 border border-rose-500/40 rounded-lg text-rose-300 text-xs">{{ error }}</div>{% endif %}
+      {% if message %}<div class="p-3 bg-emerald-950/60 border border-emerald-500/40 rounded-lg text-emerald-300 text-xs">{{ message }}</div>{% endif %}
+      {% if selected_company %}
+      <form action="/admin/fax2email" method="post" class="space-y-4 text-xs">
+        <input type="hidden" name="_submit_check" value="1" />
+        <input type="hidden" name="abook_id" value="{{ selected_company.abook_id }}" />
+
+        <div>
+          <label for="company" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Company') }} *</label>
+          <input type="text" name="company" id="company" required value="{{ selected_company.company or '' }}" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition" />
+        </div>
+
+        {% for n in selected_company.numbers %}
+        <div class="space-y-3 border border-slate-800 rounded-lg p-3">
+          <input type="hidden" name="abookfax_id" value="{{ n.abookfax_id }}" />
+          <div>
+            <label class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Fax Number') }}</label>
+            <input type="text" disabled value="{{ n.faxnumber }}" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition font-mono opacity-70" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Email') }}</label>
+            <input type="text" name="email" value="{{ n.email or '' }}" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition font-mono" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Printer') }}</label>
+            <input type="text" name="printer" value="{{ n.printer or '' }}" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition font-mono" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Category') }}</label>
+            <select name="faxcatid" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition">
+              <option value=""></option>
+              {% for c in categories %}<option value="{{ c.catid }}" {% if n.faxcatid == c.catid %}selected{% endif %}>{{ c.name }}</option>{% endfor %}
+            </select>
+          </div>
+        </div>
+        {% else %}
+        <p class="text-slate-400">{{ _('This company has no fax numbers yet. Add them in the Address Book.') }}</p>
+        {% endfor %}
+
+        <div class="pt-3 border-t border-slate-800">
+          <div class="flex items-center justify-between">
+            <button type="submit" name="delete" value="1" class="px-4 py-2 bg-rose-900 hover:bg-rose-800 text-white rounded-lg font-bold text-xs transition" onclick="return confirm('Are you sure you want to delete this company and its fax numbers?');">{{ _('Delete') }}</button>
+            <div class="space-x-2">
+              <a href="/admin/fax2email" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg font-semibold text-xs transition">{{ _('Cancel') }}</a>
+              <button type="submit" name="save" value="1" class="px-6 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-xs shadow-2xs transition">{{ _('Save') }}</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      {% else %}
+      <p class="text-xs text-slate-400">{{ _('Select a company on the left to set where the faxes received on each of its numbers are sent.') }}</p>
+      {% endif %}
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

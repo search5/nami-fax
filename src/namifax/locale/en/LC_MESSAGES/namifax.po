@@ -1,0 +1,2500 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: NamiFAX 4.0.Language: eMIME-Version: 1.Content-Type: "
+"text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-02 00:54+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "Address Book"
+msgstr "Address Book"
+
+msgid "Save frequently used fax numbers for quick access when sending."
+msgstr "Save frequently used fax numbers for quick access when sending."
+
+msgid "Company or fax number..."
+msgstr ""
+
+msgid "Search"
+msgstr "Search"
+
+msgid "New Company"
+msgstr "New Company"
+
+msgid "Email Book"
+msgstr "Email Book"
+
+msgid "Distribution Lists"
+msgstr "Distribution Lists"
+
+msgid "Company / Name"
+msgstr "Company / Name"
+
+msgid "Fax Number"
+msgstr "Fax Number"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Send Fax"
+msgstr "Send Fax"
+
+msgid "Edit"
+msgstr "Edit"
+
+msgid "No contacts yet"
+msgstr "No contacts yet"
+
+msgid "No contacts matched"
+msgstr "No contacts matched"
+
+msgid ""
+"Add contacts to quickly select fax numbers when sending without typing "
+"them every time."
+msgstr ""
+"Add contacts to quickly select fax numbers when sending without typing "
+"them every time."
+
+msgid "Add First Contact"
+msgstr "Add First Contact"
+
+msgid "Edit Company"
+msgstr "Edit Company"
+
+msgid "Add New Company"
+msgstr "Add New Company"
+
+msgid "Configure the company and every fax number it uses."
+msgstr ""
+
+msgid "Back to Contacts"
+msgstr "Back to Contacts"
+
+msgid "Upload contacts file (vCard)"
+msgstr ""
+
+msgid "Upload"
+msgstr ""
+
+msgid "Company"
+msgstr "Company"
+
+msgid "Company Name"
+msgstr "Company Name"
+
+msgid "e.g. Acme Corporation"
+msgstr ""
+
+msgid "Clear the number to remove it."
+msgstr ""
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Category"
+msgstr "Category"
+
+msgid "Attention Person"
+msgstr "Attention Person"
+
+msgid "Location"
+msgstr ""
+
+msgid "Voice Telephone"
+msgstr "Voice Telephone"
+
+msgid "Street Address"
+msgstr "Street Address"
+
+msgid "Zip / Postal Code"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Add a Fax Number"
+msgstr ""
+
+msgid "First Fax Number"
+msgstr ""
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Save"
+msgstr "Save"
+
+msgid "Dashboard Overview"
+msgstr "Dashboard Overview"
+
+msgid "SYSTEM OPERATIONAL"
+msgstr "SYSTEM OPERATIONAL"
+
+msgid ""
+"Real-time status of fax spools, hardware serial modems, and registered "
+"users"
+msgstr ""
+"Real-time status of fax spools, hardware serial modems, and registered "
+"users"
+
+msgid "Users"
+msgstr "Users"
+
+msgid "Modems"
+msgstr "Modems"
+
+msgid "DID Routes"
+msgstr "DID Routes"
+
+msgid "Logs"
+msgstr "Logs"
+
+msgid "Fax Lines"
+msgstr "Fax Lines"
+
+msgid "Hardware Ready"
+msgstr "Hardware Ready"
+
+msgid "Active accounts"
+msgstr "Active accounts"
+
+msgid "Backend Core"
+msgstr "Backend Core"
+
+msgid "unknown"
+msgstr ""
+
+msgid "Scheduler"
+msgstr "Scheduler"
+
+msgid "Running"
+msgstr "Running"
+
+msgid "Registered User Accounts"
+msgstr "Registered User Accounts"
+
+msgid "Manage Users"
+msgstr "Manage Users"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Username"
+msgstr "Username"
+
+msgid "Last Login"
+msgstr "Last Login"
+
+msgid "Server Status"
+msgstr "Server Status"
+
+msgid "Core"
+msgstr "Core"
+
+msgid "Database Engine"
+msgstr "Database Engine"
+
+msgid "System Scheduler"
+msgstr "System Scheduler"
+
+msgid "Configured Modems"
+msgstr "Configured Modems"
+
+msgid "Administrator Workflow Guide"
+msgstr "Administrator Workflow Guide"
+
+msgid "Configure Barcode Routing"
+msgstr "Configure Barcode Routing"
+
+msgid ""
+"Route incoming faxes automatically based on recognized Code39 / QR "
+"barcodes"
+msgstr ""
+"Route incoming faxes automatically based on recognized Code39 / QR "
+"barcodes"
+
+msgid "New Barcode Route"
+msgstr "New Barcode Route"
+
+msgid "Barcode Routing Rules"
+msgstr "Barcode Routing Rules"
+
+msgid "Barcode:"
+msgstr "Barcode:"
+
+msgid "Contact:"
+msgstr "Contact:"
+
+msgid "None"
+msgstr "None"
+
+msgid "Printer:"
+msgstr "Printer:"
+
+msgid "Edit Barcode Route"
+msgstr "Edit Barcode Route"
+
+msgid "Add Barcode Route"
+msgstr "Add Barcode Route"
+
+msgid "EDIT MODE"
+msgstr "EDIT MODE"
+
+msgid "NEW"
+msgstr "NEW"
+
+msgid "Barcode"
+msgstr "Barcode"
+
+msgid "Alias"
+msgstr "Alias"
+
+msgid "Contact Email"
+msgstr "Contact Email"
+
+msgid "Printer"
+msgstr "Printer"
+
+msgid "Fax Categories"
+msgstr "Fax Categories"
+
+msgid ""
+"Manage classification tags and archival categories for organizing "
+"transmissions"
+msgstr ""
+"Manage classification tags and archival categories for organizing "
+"transmissions"
+
+msgid "New Category"
+msgstr "New Category"
+
+msgid "Existing Categories"
+msgstr "Existing Categories"
+
+msgid "Edit Category"
+msgstr "Edit Category"
+
+msgid "Add Category"
+msgstr "Add Category"
+
+msgid "Category Name"
+msgstr "Category Name"
+
+msgid "e.g. Invoices, Contracts"
+msgstr ""
+
+msgid "Configure Cover Pages"
+msgstr "Configure Cover Pages"
+
+msgid "Manage facsimile PostScript cover page templates and layouts"
+msgstr "Manage facsimile PostScript cover page templates and layouts"
+
+msgid "New Cover Page"
+msgstr "New Cover Page"
+
+msgid "Available Cover Pages"
+msgstr "Available Cover Pages"
+
+msgid "Edit Cover Page"
+msgstr "Edit Cover Page"
+
+msgid "Add Cover Page"
+msgstr "Add Cover Page"
+
+msgid "Title"
+msgstr "Title"
+
+msgid "File"
+msgstr "File"
+
+msgid "e.g. custom.ps"
+msgstr ""
+
+msgid "Cover Template Studio: Dynamic Tag References"
+msgstr "Cover Template Studio: Dynamic Tag References"
+
+msgid ""
+"Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF"
+" templates. The Cover Studio engine automatically substitutes them during"
+" fax rendering."
+msgstr ""
+"Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF"
+" templates. The Cover Studio engine automatically substitutes them during"
+" fax rendering."
+
+msgid "Dynamic Configuration"
+msgstr "Dynamic Configuration"
+
+msgid ""
+"Manage Caller ID blacklists and transmission rejection rules for modem "
+"devices"
+msgstr ""
+"Manage Caller ID blacklists and transmission rejection rules for modem "
+"devices"
+
+msgid "New Rule"
+msgstr "New Rule"
+
+msgid "Blocked Caller IDs"
+msgstr "Blocked Caller IDs"
+
+msgid "Caller ID:"
+msgstr "Caller ID:"
+
+msgid "All Devices"
+msgstr "All Devices"
+
+msgid "Edit Caller ID Rule"
+msgstr "Edit Caller ID Rule"
+
+msgid "Add Caller ID Rule"
+msgstr "Add Caller ID Rule"
+
+msgid "Caller ID"
+msgstr "Caller ID"
+
+msgid "e.g. 5550199 or pattern"
+msgstr ""
+
+msgid "Modem Device"
+msgstr "Modem Device"
+
+msgid "Fax to Email"
+msgstr "Fax to Email"
+
+msgid ""
+"Configure automated inbound fax forwarding and PDF dispatch rules mapped "
+"by company"
+msgstr ""
+"Configure automated inbound fax forwarding and PDF dispatch rules mapped "
+"by company"
+
+msgid "Add companies in the Address Book"
+msgstr ""
+
+msgid "Company Forwarding Rules"
+msgstr "Company Forwarding Rules"
+
+msgid "fax numbers"
+msgstr ""
+
+msgid "Email:"
+msgstr "Email:"
+
+msgid "Edit Forwarding Rules"
+msgstr ""
+
+msgid "Forwarding Rules"
+msgstr ""
+
+msgid "This company has no fax numbers yet. Add them in the Address Book."
+msgstr ""
+
+msgid ""
+"Select a company on the left to set where the faxes received on each of "
+"its numbers are sent."
+msgstr ""
+
+msgid "Control Panel"
+msgstr "Control Panel"
+
+msgid "User Portal"
+msgstr "User Portal"
+
+msgid "Inbox"
+msgstr "Inbox"
+
+msgid "Overview"
+msgstr "Overview"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Access Control"
+msgstr "Access Control"
+
+msgid "User Accounts"
+msgstr "User Accounts"
+
+msgid "Hardware & Lines"
+msgstr "Hardware & Lines"
+
+msgid "Fax Modems"
+msgstr "Fax Modems"
+
+msgid "Network Printers"
+msgstr ""
+
+msgid "Inbound Routing"
+msgstr "Inbound Routing"
+
+msgid "DID Routing"
+msgstr "DID Routing"
+
+msgid "Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid "Content & Templates"
+msgstr "Content & Templates"
+
+msgid "Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Security & System"
+msgstr "Security & System"
+
+msgid "Blacklist (DynConf)"
+msgstr "Blacklist (DynConf)"
+
+msgid "System Audit Logs"
+msgstr "System Audit Logs"
+
+msgid "System Functions"
+msgstr "System Functions"
+
+msgid "SMTP Gateway"
+msgstr "SMTP Gateway"
+
+msgid "Storage & Cloud"
+msgstr ""
+
+msgid "SAML 2.0 SSO"
+msgstr ""
+
+msgid "Logout"
+msgstr "Logout"
+
+msgid "Admin Control Panel"
+msgstr "Admin Control Panel"
+
+msgid "Appliance Engine Online"
+msgstr "Appliance Engine Online"
+
+msgid ""
+"Configure Modems hardware devices, physical serial ports, and print-"
+"forwarding rules"
+msgstr ""
+"Configure Modems hardware devices, physical serial ports, and print-"
+"forwarding rules"
+
+msgid "Configure Modems"
+msgstr "Configure Modems"
+
+msgid "Active Modem Lines"
+msgstr "Active Modem Lines"
+
+msgid "Device"
+msgstr "Device"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Edit Modem"
+msgstr "Edit Modem"
+
+msgid "Configure Modems Device"
+msgstr "Configure Modems Device"
+
+msgid "e.g. ttyS0"
+msgstr ""
+
+msgid "e.g. Main Inbound Line"
+msgstr ""
+
+msgid "Are you sure you want to delete this modem?"
+msgstr ""
+
+msgid "Create"
+msgstr ""
+
+msgid "Appliance Note:"
+msgstr "Appliance Note:"
+
+msgid ""
+"Modems configured here must correspond to physical RS-232 serial devices,"
+" USB modems, or virtual IAX modems recognized by the underlying HylaFAX "
+"server."
+msgstr ""
+"Modems configured here must correspond to physical RS-232 serial devices,"
+" USB modems, or virtual IAX modems recognized by the underlying HylaFAX "
+"server."
+
+msgid "Direct RAW socket & IPP network printing dispatch for received faxes"
+msgstr ""
+
+msgid "Add Network Printer"
+msgstr ""
+
+msgid "Printer Name"
+msgstr ""
+
+msgid "e.g. Office HP LaserJet"
+msgstr ""
+
+msgid "Protocol"
+msgstr ""
+
+msgid "Host / IP"
+msgstr ""
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Queue Name (Optional)"
+msgstr ""
+
+msgid "2nd Floor Accounting Printer"
+msgstr ""
+
+msgid "Register Printer"
+msgstr ""
+
+msgid "Configured Printers"
+msgstr ""
+
+msgid "No network printers configured yet. Add one using the form on the left."
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+msgid "Test Print"
+msgstr ""
+
+msgid "Are you sure you want to delete this printer?"
+msgstr ""
+
+msgid "Configure DID Routing"
+msgstr "Configure DID Routing"
+
+msgid ""
+"Route incoming faxes by Direct Inward Dialing (DID) extension to specific"
+" email boxes or printers"
+msgstr ""
+"Route incoming faxes by Direct Inward Dialing (DID) extension to specific"
+" email boxes or printers"
+
+msgid "New DID Route"
+msgstr "New DID Route"
+
+msgid "Active DID Routing Rules"
+msgstr "Active DID Routing Rules"
+
+msgid "Route Code"
+msgstr "Route Code"
+
+msgid "Action"
+msgstr "Action"
+
+msgid "Configure Routing Rule"
+msgstr "Configure Routing Rule"
+
+msgid "e.g. 1000"
+msgstr ""
+
+msgid "e.g. Sales Direct Line"
+msgstr ""
+
+msgid "-- None --"
+msgstr "-- None --"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid ""
+"DID (Direct Inward Dialing) routing automatically redirects incoming "
+"transmissions matching extension patterns directly to mapped operator "
+"inboxes or physical printers."
+msgstr ""
+"DID (Direct Inward Dialing) routing automatically redirects incoming "
+"transmissions matching extension patterns directly to mapped operator "
+"inboxes or physical printers."
+
+msgid "SAML 2.0 Enterprise SSO"
+msgstr ""
+
+msgid ""
+"Single Sign-On integration with Okta, Microsoft Entra ID (Azure AD), "
+"Google Workspace & Keycloak"
+msgstr ""
+
+msgid "Download SP Metadata XML"
+msgstr ""
+
+msgid "Identity Provider (IdP) Settings"
+msgstr ""
+
+msgid "Enable SAML 2.0 Single Sign-On"
+msgstr ""
+
+msgid "Shows \"SAML 2.0 Enterprise SSO\" login option on login page"
+msgstr ""
+
+msgid "IdP Entity ID / Issuer"
+msgstr ""
+
+msgid "IdP Single Sign-On Service URL (HTTP-Redirect / POST)"
+msgstr ""
+
+msgid "IdP Public X.509 Certificate (PEM)"
+msgstr ""
+
+msgid "Just-in-Time (JIT) Provisioning"
+msgstr ""
+
+msgid "Auto-create account on first login"
+msgstr ""
+
+msgid "Default Role for JIT Users"
+msgstr ""
+
+msgid "Save SAML Configuration"
+msgstr ""
+
+msgid "NamiFAX SP Endpoints"
+msgstr ""
+
+msgid ""
+"Copy these endpoints into your Identity Provider (Azure AD, Okta, Google)"
+" console:"
+msgstr ""
+
+msgid "Assertion Consumer Service (ACS) URL"
+msgstr ""
+
+msgid "SP Entity ID / Metadata URL"
+msgstr ""
+
+msgid "NameID Format"
+msgstr ""
+
+msgid "External SMTP Gateway"
+msgstr "External SMTP Gateway"
+
+msgid ""
+"Configure external mail delivery server for inbound fax notifications and"
+" user alerts"
+msgstr ""
+"Configure external mail delivery server for inbound fax notifications and"
+" user alerts"
+
+msgid "Diagnostics Result"
+msgstr "Diagnostics Result"
+
+msgid "Server Connection & Security"
+msgstr "Server Connection & Security"
+
+msgid "SMTP Host / Server"
+msgstr "SMTP Host / Server"
+
+msgid "Encryption Protocol"
+msgstr "Encryption Protocol"
+
+msgid "None (Plain)"
+msgstr "None (Plain)"
+
+msgid "STARTTLS (587)"
+msgstr "STARTTLS (587)"
+
+msgid "SSL / TLS (465)"
+msgstr "SSL / TLS (465)"
+
+msgid "Requires SMTP Authentication"
+msgstr "Requires SMTP Authentication"
+
+msgid "Username / Login"
+msgstr "Username / Login"
+
+msgid "Password / App Key"
+msgstr "Password / App Key"
+
+msgid "Default Sender Profile & Signatures"
+msgstr "Default Sender Profile & Signatures"
+
+msgid "From Email Address"
+msgstr "From Email Address"
+
+msgid "From Display Name"
+msgstr "From Display Name"
+
+msgid "NamiFAX Corporate Dispatcher"
+msgstr ""
+
+msgid "Email Signature (Plaintext)"
+msgstr "Email Signature (Plaintext)"
+
+msgid "Sent automatically by NamiFAX Gateway."
+msgstr ""
+
+msgid "Last updated"
+msgstr "Last updated"
+
+msgid "Save Gateway Settings"
+msgstr "Save Gateway Settings"
+
+msgid "Diagnostic Self-Test"
+msgstr "Diagnostic Self-Test"
+
+msgid ""
+"Verify server reachability, TLS handshake, credentials and message "
+"dispatch in real time."
+msgstr ""
+"Verify server reachability, TLS handshake, credentials and message "
+"dispatch in real time."
+
+msgid "Target Recipient Email"
+msgstr "Target Recipient Email"
+
+msgid "Send Diagnostic Email"
+msgstr "Send Diagnostic Email"
+
+msgid "Enterprise storage lifecycle policies and S3 / MinIO / GCS cloud backends"
+msgstr ""
+
+msgid "Storage Lifecycle Policies"
+msgstr ""
+
+msgid "Purge Local TIFFs After (Days)"
+msgstr ""
+
+msgid ""
+"Frees local disk space if a PDF version exists. 0 = immediate after "
+"conversion."
+msgstr ""
+
+msgid "Full Fax Retention (Days)"
+msgstr ""
+
+msgid ""
+"Purge entire fax record and archival files after specified days. 0 = keep"
+" forever."
+msgstr ""
+
+msgid "Synchronize remote cloud object deletion on fax purge"
+msgstr ""
+
+msgid "Save Lifecycle Policy"
+msgstr ""
+
+msgid "Cloud Storage Backend"
+msgstr ""
+
+msgid "Storage Provider"
+msgstr ""
+
+msgid "Local Filesystem (Default)"
+msgstr ""
+
+msgid "Endpoint URL (MinIO / S3 Compatible)"
+msgstr ""
+
+msgid "Region"
+msgstr ""
+
+msgid "Bucket Name"
+msgstr ""
+
+msgid "Access Key ID"
+msgstr ""
+
+msgid "Secret Access Key"
+msgstr ""
+
+msgid "Key Prefix"
+msgstr ""
+
+msgid "Save Storage Config"
+msgstr ""
+
+msgid "Test Connection"
+msgstr ""
+
+msgid "Perform maintenance operations, service control, and backups."
+msgstr "Perform maintenance operations, service control, and backups."
+
+msgid "HylaFAX Engine Active"
+msgstr "HylaFAX Engine Active"
+
+msgid "Admin Dashboard"
+msgstr "Admin Dashboard"
+
+msgid "Caution: Appliance Maintenance Operations"
+msgstr "Caution: Appliance Maintenance Operations"
+
+msgid ""
+"Restarting or shutting down services will interrupt active fax modem "
+"spooling and disconnect client sessions. Ensure all outbound "
+"transmissions in the modem queue are completed before initiating "
+"maintenance tasks."
+msgstr ""
+"Restarting or shutting down services will interrupt active fax modem "
+"spooling and disconnect client sessions. Ensure all outbound "
+"transmissions in the modem queue are completed before initiating "
+"maintenance tasks."
+
+msgid "Daemon Service Control"
+msgstr "Daemon Service Control"
+
+msgid "Restart HylaFAX and NamiFAX web services, or halt background workers."
+msgstr "Restart HylaFAX and NamiFAX web services, or halt background workers."
+
+msgid "Reboot Services"
+msgstr "Reboot Services"
+
+msgid "Shutdown Services"
+msgstr "Shutdown Services"
+
+msgid "Database & Archive Backup"
+msgstr "Database & Archive Backup"
+
+msgid "Download system archives and database snapshots for offsite retention."
+msgstr "Download system archives and database snapshots for offsite retention."
+
+msgid "Download Archive"
+msgstr "Download Archive"
+
+msgid "Download Database"
+msgstr "Download Database"
+
+msgid "System Logs"
+msgstr "System Logs"
+
+msgid "Audit logs and HylaFAX server operational event traces"
+msgstr "Audit logs and HylaFAX server operational event traces"
+
+msgid "Keywords:"
+msgstr "Keywords:"
+
+msgid "Search text..."
+msgstr ""
+
+msgid "Date:"
+msgstr "Date:"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Log Text"
+msgstr "Log Text"
+
+msgid "No system logs found matching criteria."
+msgstr "No system logs found matching criteria."
+
+msgid "Transmissions and server events will be streamed here in real time."
+msgstr "Transmissions and server events will be streamed here in real time."
+
+msgid "Delete User"
+msgstr ""
+
+msgid "Are you sure you want to delete the user"
+msgstr ""
+
+msgid "Manage system operator credentials, access permissions, and route mapping"
+msgstr "Manage system operator credentials, access permissions, and route mapping"
+
+msgid "Create New User"
+msgstr "Create New User"
+
+msgid "Last IP"
+msgstr ""
+
+msgid "Superuser"
+msgstr "Superuser"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "YES"
+msgstr "YES"
+
+msgid "NO"
+msgstr "NO"
+
+msgid "users"
+msgstr ""
+
+msgid "user"
+msgstr ""
+
+msgid "Modify User"
+msgstr ""
+
+msgid "New User"
+msgstr ""
+
+msgid "User details saved"
+msgstr ""
+
+msgid "Account enabled"
+msgstr ""
+
+msgid "Full Name"
+msgstr "Full Name"
+
+msgid "Password"
+msgstr "Password"
+
+msgid "Leave empty to keep the current password (a new user is sent a random one)"
+msgstr ""
+
+msgid "Email Address"
+msgstr "Email Address"
+
+msgid "Password expiration cycle"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Password can be reused"
+msgstr ""
+
+msgid "My Company"
+msgstr ""
+
+msgid "My Location"
+msgstr ""
+
+msgid "My Voice Number"
+msgstr ""
+
+msgid "My Fax Number"
+msgstr ""
+
+msgid "TSI ID"
+msgstr ""
+
+msgid "Select Cover Page"
+msgstr ""
+
+msgid "New fax sound"
+msgstr ""
+
+msgid "Inbox shows"
+msgstr ""
+
+msgid "Archive shows"
+msgstr ""
+
+msgid "Permissions & Capabilities"
+msgstr "Permissions & Capabilities"
+
+msgid "Administrator Console"
+msgstr "Administrator Console"
+
+msgid "Superuser Rights"
+msgstr "Superuser Rights"
+
+msgid "Can Delete Faxes"
+msgstr "Can Delete Faxes"
+
+msgid "Send on Any Modem"
+msgstr "Send on Any Modem"
+
+msgid "You must first create a DID/DTMF group"
+msgstr ""
+
+msgid "You must first create a modem"
+msgstr ""
+
+msgid "Categories"
+msgstr "Categories"
+
+msgid "You must first create a category"
+msgstr ""
+
+msgid "Archive Search"
+msgstr "Archive Search"
+
+msgid "Search all sent and received fax records by date, company, or fax number."
+msgstr "Search all sent and received fax records by date, company, or fax number."
+
+msgid "Search Filters"
+msgstr "Search Filters"
+
+msgid ""
+"Leave filters empty to search all records. Narrow results by adding more "
+"criteria."
+msgstr ""
+"Leave filters empty to search all records. Narrow results by adding more "
+"criteria."
+
+msgid "Company search"
+msgstr ""
+
+msgid "Company list"
+msgstr ""
+
+msgid "Fax ID"
+msgstr "Fax ID"
+
+msgid "e.g. 104"
+msgstr ""
+
+msgid "Keywords"
+msgstr ""
+
+msgid "Company, number, notes..."
+msgstr ""
+
+msgid "All Categories"
+msgstr "All Categories"
+
+msgid "User"
+msgstr ""
+
+msgid "Start Date"
+msgstr ""
+
+msgid "End Date"
+msgstr ""
+
+msgid "Direction"
+msgstr "Direction"
+
+#, python-format
+msgid "Total %(n)d results found."
+msgstr ""
+
+msgid "Pages"
+msgstr "Pages"
+
+msgid "Download PDF"
+msgstr ""
+
+msgid "Reply to fax"
+msgstr ""
+
+msgid "Re-send"
+msgstr "Re-send"
+
+msgid "Email PDF"
+msgstr ""
+
+msgid "Add note to fax"
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid "Delete fax"
+msgstr ""
+
+msgid "Select"
+msgstr "Select"
+
+msgid "Assign company name"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Received"
+msgstr "Received"
+
+msgid "Sent"
+msgstr ""
+
+msgid "No results were found"
+msgstr ""
+
+msgid "Reset filters"
+msgstr "Reset filters"
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr "Next"
+
+msgid "Name the sender"
+msgstr ""
+
+msgid "Select Contact Record"
+msgstr "Select Contact Record"
+
+msgid "Or type a new company name"
+msgstr ""
+
+msgid "Delete selected faxes?"
+msgstr ""
+
+msgid "faxes"
+msgstr "faxes"
+
+msgid "No contacts found"
+msgstr ""
+
+msgid "Add"
+msgstr ""
+
+msgid "Close"
+msgstr "Close"
+
+msgid "Organize recipient groups for mass fax broadcasting and notifications."
+msgstr "Organize recipient groups for mass fax broadcasting and notifications."
+
+msgid "Create List"
+msgstr "Create List"
+
+msgid "Saved Distribution Lists"
+msgstr "Saved Distribution Lists"
+
+msgid "members"
+msgstr "members"
+
+msgid "Group Members & Settings"
+msgstr "Group Members & Settings"
+
+msgid "Create New Distribution List"
+msgstr "Create New Distribution List"
+
+msgid "List Name"
+msgstr "List Name"
+
+msgid "e.g. Executive Sales Team"
+msgstr ""
+
+msgid "Save name"
+msgstr ""
+
+msgid "Group Members (Contacts & Fax Numbers)"
+msgstr "Group Members (Contacts & Fax Numbers)"
+
+msgid "contacts assigned"
+msgstr "contacts assigned"
+
+msgid "No contacts assigned to this list yet."
+msgstr "No contacts assigned to this list yet."
+
+msgid "Add Member"
+msgstr "Add Member"
+
+msgid "Remove selected"
+msgstr ""
+
+msgid "Delete this distribution list?"
+msgstr ""
+
+msgid "Edit Distribution List"
+msgstr "Edit Distribution List"
+
+msgid "Create Distribution List"
+msgstr "Create Distribution List"
+
+msgid "Configure broadcast list parameters and recipient group members."
+msgstr "Configure broadcast list parameters and recipient group members."
+
+msgid "Back to Lists"
+msgstr "Back to Lists"
+
+msgid "Distribution List Profile"
+msgstr "Distribution List Profile"
+
+msgid "e.g. Finance Operations"
+msgstr ""
+
+msgid "Enrolled Members"
+msgstr "Enrolled Members"
+
+msgid "List ID:"
+msgstr "List ID:"
+
+msgid "No contacts in this list."
+msgstr "No contacts in this list."
+
+msgid "Add contacts to the list"
+msgstr ""
+
+msgid "Changes saved"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Email Address Book"
+msgstr "Email Address Book"
+
+msgid "Manage email recipients, transmission routing, and contacts directory."
+msgstr "Manage email recipients, transmission routing, and contacts directory."
+
+msgid "New Contact"
+msgstr "New Contact"
+
+msgid "Contacts"
+msgstr "Contacts"
+
+msgid "recipients"
+msgstr "recipients"
+
+msgid "Contact Name"
+msgstr "Contact Name"
+
+msgid "Company Affiliation"
+msgstr "Company Affiliation"
+
+msgid ""
+"No email contacts found in the directory. Click \"+ New Contact\" to "
+"register one."
+msgstr ""
+"No email contacts found in the directory. Click \"+ New Contact\" to "
+"register one."
+
+msgid "Email Book - Edit Email Contact"
+msgstr "Email Book - Edit Email Contact"
+
+msgid "Manage contact information and company affiliation in Email Book."
+msgstr "Manage contact information and company affiliation in Email Book."
+
+msgid "Back to Email Book"
+msgstr "Back to Email Book"
+
+msgid "Contact Profile Details"
+msgstr "Contact Profile Details"
+
+msgid "John Doe"
+msgstr ""
+
+msgid "Modify Fax Job"
+msgstr ""
+
+msgid "New Destination"
+msgstr ""
+
+msgid "Priority"
+msgstr "Priority"
+
+msgid "Modem / Device"
+msgstr ""
+
+msgid "Number of tries"
+msgstr ""
+
+msgid "Expire after"
+msgstr ""
+
+msgid "Now"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Hours"
+msgstr ""
+
+msgid "Days"
+msgstr ""
+
+msgid "Schedule Send Time"
+msgstr ""
+
+msgid "Lost Password"
+msgstr "Lost Password"
+
+msgid "Account Recovery Assistance"
+msgstr "Account Recovery Assistance"
+
+msgid "Back to Login"
+msgstr "Back to Login"
+
+msgid "Your password will be sent to the given e-mail address."
+msgstr ""
+
+msgid "Once you have received your new password you can login in and change it."
+msgstr ""
+
+msgid "Login"
+msgstr "Login"
+
+msgid ""
+"Please enter your e-mail address then click on the Send Password button. "
+"You will receive a new password shortly. Use this new password to access "
+"the site."
+msgstr ""
+
+msgid "E-mail address"
+msgstr ""
+
+msgid "Send Password"
+msgstr ""
+
+msgid "Received faxes appear here automatically in real time."
+msgstr "Received faxes appear here automatically in real time."
+
+msgid "Faxes"
+msgstr "Faxes"
+
+msgid "Fax"
+msgstr "Fax"
+
+msgid "Select All"
+msgstr "Select All"
+
+msgid "Archive Selected"
+msgstr "Archive Selected"
+
+msgid "Delete Selected"
+msgstr "Delete Selected"
+
+msgid "fax"
+msgstr ""
+
+msgid "Preview"
+msgstr "Preview"
+
+msgid "Sender"
+msgstr "Sender"
+
+msgid "Page"
+msgstr "Page"
+
+msgid "of"
+msgstr ""
+
+msgid "This number belongs to several companies. Which one is it?"
+msgstr ""
+
+msgid "Unknown Sender"
+msgstr ""
+
+msgid "View"
+msgstr "View"
+
+msgid "Reply"
+msgstr "Reply"
+
+msgid "Archive"
+msgstr "Archive"
+
+msgid "Email Fax"
+msgstr "Email Fax"
+
+msgid "Add Note"
+msgstr "Add Note"
+
+msgid "Rotate"
+msgstr "Rotate"
+
+msgid "Download TIFF"
+msgstr "Download TIFF"
+
+msgid "0 FAXES"
+msgstr "0 FAXES"
+
+msgid ""
+"There are no incoming faxes waiting in your inbox. Incoming transmissions"
+" will automatically appear here in real time."
+msgstr ""
+"There are no incoming faxes waiting in your inbox. Incoming transmissions"
+" will automatically appear here in real time."
+
+msgid "Send Your First Fax"
+msgstr "Send Your First Fax"
+
+msgid "Search Archive"
+msgstr "Search Archive"
+
+msgid "Getting Started with NamiFAX"
+msgstr "Getting Started with NamiFAX"
+
+msgid "Receive Faxes"
+msgstr "Receive Faxes"
+
+msgid ""
+"When someone sends a fax to this system's number, it will appear here "
+"automatically."
+msgstr ""
+"When someone sends a fax to this system's number, it will appear here "
+"automatically."
+
+msgid "Send Faxes"
+msgstr "Send Faxes"
+
+msgid "Click Send Fax to transmit a PDF or image document to any fax number."
+msgstr "Click Send Fax to transmit a PDF or image document to any fax number."
+
+msgid "Manage Records"
+msgstr "Manage Records"
+
+msgid ""
+"Download faxes as PDF, archive them for later, or search all records in "
+"the Archive."
+msgstr ""
+"Download faxes as PDF, archive them for later, or search all records in "
+"the Archive."
+
+msgid "Archive search"
+msgstr ""
+
+msgid "new fax"
+msgstr ""
+
+msgid "Outbox"
+msgstr "Outbox"
+
+msgid "lines"
+msgstr ""
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "Sign in"
+msgstr "Sign in"
+
+msgid "Enter your credentials to continue."
+msgstr "Enter your credentials to continue."
+
+msgid "System Online"
+msgstr "System Online"
+
+msgid "Enter your username"
+msgstr ""
+
+msgid "Forgot password?"
+msgstr "Forgot password?"
+
+msgid "Enter your password"
+msgstr ""
+
+msgid "Contact your system administrator if you need an account."
+msgstr "Contact your system administrator if you need an account."
+
+msgid "Or continue with"
+msgstr ""
+
+msgid "Sign in with Passkey (Touch ID / Security Key)"
+msgstr ""
+
+msgid "SAML 2.0 Enterprise SSO (Okta / Entra ID)"
+msgstr ""
+
+msgid "Two-Factor Authentication"
+msgstr "Two-Factor Authentication"
+
+msgid ""
+"Enter the 6-digit code from your authenticator app or an emergency "
+"recovery code."
+msgstr ""
+"Enter the 6-digit code from your authenticator app or an emergency "
+"recovery code."
+
+msgid "Authentication Code"
+msgstr "Authentication Code"
+
+msgid "123456 or 8-char backup code"
+msgstr ""
+
+msgid "Verify & Log In"
+msgstr "Verify & Log In"
+
+msgid "Sign out?"
+msgstr ""
+
+msgid "Assign Company Name"
+msgstr "Assign Company Name"
+
+msgid "Associate document with registered enterprise contact"
+msgstr "Associate document with registered enterprise contact"
+
+msgid "Search Company Name"
+msgstr "Search Company Name"
+
+msgid "Type company name to filter..."
+msgstr ""
+
+msgid "Delete Fax"
+msgstr "Delete Fax"
+
+msgid "Are you sure you want to delete this fax?"
+msgstr "Are you sure you want to delete this fax?"
+
+msgid "This operation will permanently purge the fax document archive."
+msgstr "This operation will permanently purge the fax document archive."
+
+msgid "Send Fax via Email"
+msgstr "Send Fax via Email"
+
+msgid "Dispatch PDF document attachment to email recipients"
+msgstr "Dispatch PDF document attachment to email recipients"
+
+msgid "From"
+msgstr ""
+
+msgid "Recipients"
+msgstr "Recipients"
+
+msgid "Choose from contacts"
+msgstr ""
+
+msgid "CC"
+msgstr ""
+
+msgid "BCC"
+msgstr ""
+
+msgid "Subject"
+msgstr "Subject"
+
+msgid "PDF file name"
+msgstr ""
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Archive fax"
+msgstr ""
+
+msgid "Send"
+msgstr "Send"
+
+msgid "Append internal administrative note or comments"
+msgstr "Append internal administrative note or comments"
+
+msgid "Note / Description"
+msgstr "Note / Description"
+
+msgid "Enter transaction note or dispatch comments..."
+msgstr ""
+
+msgid "Transmission Report"
+msgstr "Transmission Report"
+
+msgid "Official facsimile delivery confirmation receipt"
+msgstr "Official facsimile delivery confirmation receipt"
+
+msgid "Print"
+msgstr "Print"
+
+msgid "Company:"
+msgstr "Company:"
+
+msgid "Pages:"
+msgstr "Pages:"
+
+msgid "Fax Number:"
+msgstr ""
+
+msgid "Database unavailable"
+msgstr ""
+
+msgid ""
+"The database cannot be reached right now. This page tries again every 10 "
+"seconds."
+msgstr ""
+
+msgid "Faxes currently queued or being transmitted."
+msgstr "Faxes currently queued or being transmitted."
+
+msgid ""
+"This page shows only faxes that are queued or in progress. Once "
+"delivered, they are removed from this list. Find completed records in the"
+msgstr ""
+"This page shows only faxes that are queued or in progress. Once "
+"delivered, they are removed from this list. Find completed records in the"
+
+msgid "jobs in progress"
+msgstr "jobs in progress"
+
+msgid "job in progress"
+msgstr "job in progress"
+
+msgid "Job ID"
+msgstr "Job ID"
+
+msgid "Dials"
+msgstr ""
+
+msgid "TTS"
+msgstr ""
+
+msgid "Modify"
+msgstr ""
+
+msgid "Kill job"
+msgstr ""
+
+msgid "Kill"
+msgstr ""
+
+msgid "Failed Transmissions"
+msgstr "Failed Transmissions"
+
+msgid "Review the number or retry below."
+msgstr "Review the number or retry below."
+
+msgid "Retry"
+msgstr "Retry"
+
+msgid "No jobs in queue"
+msgstr "No jobs in queue"
+
+msgid ""
+"There are no faxes waiting to be sent. Send a fax to see its progress "
+"here."
+msgstr ""
+"There are no faxes waiting to be sent. Send a fax to see its progress "
+"here."
+
+msgid "Send a Fax"
+msgstr "Send a Fax"
+
+msgid "Password Expired"
+msgstr "Password Expired"
+
+msgid "Security Credentials Renewal"
+msgstr "Security Credentials Renewal"
+
+msgid "Action Required"
+msgstr "Action Required"
+
+msgid ""
+"Your password has expired or needs to be changed before proceeding. "
+"Please enter your old password and choose a new password."
+msgstr ""
+"Your password has expired or needs to be changed before proceeding. "
+"Please enter your old password and choose a new password."
+
+msgid "Old Password"
+msgstr "Old Password"
+
+msgid "Current credentials"
+msgstr ""
+
+msgid "New Password"
+msgstr "New Password"
+
+msgid "New secure passphrase"
+msgstr ""
+
+msgid "Confirm New Password"
+msgstr "Confirm New Password"
+
+msgid "Re-type new passphrase"
+msgstr ""
+
+msgid "Update Password"
+msgstr "Update Password"
+
+msgid "Fill in the details below and click Send."
+msgstr "Fill in the details below and click Send."
+
+msgid "Destination & Recipients"
+msgstr "Destination & Recipients"
+
+msgid "Enter the fax number and recipient details."
+msgstr "Enter the fax number and recipient details."
+
+msgid "Destination Number"
+msgstr "Destination Number"
+
+msgid "e.g. +1-555-0199  —  separate multiple numbers with semicolons"
+msgstr ""
+
+msgid "Choose a distribution list"
+msgstr ""
+
+msgid "To send to multiple recipients at once, separate numbers with a semicolon."
+msgstr ""
+
+msgid "Saved contacts are available in the"
+msgstr "Saved contacts are available in the"
+
+msgid "Attention To"
+msgstr "Attention To"
+
+msgid "optional"
+msgstr "optional"
+
+msgid "e.g. Jane Doe"
+msgstr ""
+
+msgid "Voice Number"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Zip"
+msgstr ""
+
+msgid "Subject / Regarding"
+msgstr "Subject / Regarding"
+
+msgid "e.g. Purchase Order #4921"
+msgstr ""
+
+msgid "Document Attachment"
+msgstr "Document Attachment"
+
+msgid "Attach the file you want to transmit."
+msgstr "Attach the file you want to transmit."
+
+msgid "Click to select a file"
+msgstr "Click to select a file"
+
+msgid "Supported: PDF, TIFF, PostScript, TXT"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid ""
+"PDF is the most commonly used format. Convert Word or Excel files to PDF "
+"before attaching."
+msgstr ""
+"PDF is the most commonly used format. Convert Word or Excel files to PDF "
+"before attaching."
+
+msgid "Cover Page"
+msgstr "Cover Page"
+
+msgid "Add a cover sheet with sender and recipient info."
+msgstr "Add a cover sheet with sender and recipient info."
+
+msgid "Include Cover Page"
+msgstr "Include Cover Page"
+
+msgid "Cover Template"
+msgstr "Cover Template"
+
+msgid "No cover pages are set up"
+msgstr ""
+
+msgid "Send via Line"
+msgstr "Send via Line"
+
+msgid "No modems configured"
+msgstr ""
+
+msgid "Cover Comments"
+msgstr "Cover Comments"
+
+msgid "Notes or message to print on the cover sheet..."
+msgstr ""
+
+msgid "Advanced Options"
+msgstr "Advanced Options"
+
+msgid "Priority, retries, notifications"
+msgstr "Priority, retries, notifications"
+
+msgid "Max Retries"
+msgstr "Max Retries"
+
+msgid "Retries automatically on busy signal."
+msgstr "Retries automatically on busy signal."
+
+msgid "Notify on retry"
+msgstr "Notify on retry"
+
+msgid "The original fax is sent along."
+msgstr ""
+
+msgid "Cancel & return to Inbox"
+msgstr "Cancel & return to Inbox"
+
+msgid "User Settings"
+msgstr "User Settings"
+
+msgid ""
+"Configure your personal profile, fax station identity, and portal "
+"preferences."
+msgstr ""
+"Configure your personal profile, fax station identity, and portal "
+"preferences."
+
+msgid "Return to Inbox"
+msgstr "Return to Inbox"
+
+msgid "Personal & Organization Details"
+msgstr "Personal & Organization Details"
+
+msgid "Office / Location"
+msgstr "Office / Location"
+
+msgid "Direct Voice Number"
+msgstr "Direct Voice Number"
+
+msgid "Direct Fax Number"
+msgstr "Direct Fax Number"
+
+msgid "Transmitting Station ID (TSI)"
+msgstr "Transmitting Station ID (TSI)"
+
+msgid "e.g. +1 555 123 4567"
+msgstr ""
+
+msgid "Header identifier imprinted on top of transmitted fax pages."
+msgstr "Header identifier imprinted on top of transmitted fax pages."
+
+msgid "Email & Fax Notification Signature"
+msgstr "Email & Fax Notification Signature"
+
+msgid "Portal & Delivery Preferences"
+msgstr "Portal & Delivery Preferences"
+
+msgid "Display Language"
+msgstr "Display Language"
+
+msgid "Default Cover Page"
+msgstr "Default Cover Page"
+
+msgid "Faxes Per Page"
+msgstr "Faxes Per Page"
+
+msgid "Archive Faxes Per Page"
+msgstr ""
+
+msgid "Change Password"
+msgstr "Change Password"
+
+msgid "Current Password"
+msgstr "Current Password"
+
+msgid "Enter current password to verify"
+msgstr ""
+
+msgid "Enter secure new password"
+msgstr ""
+
+msgid "Re-type new password"
+msgstr ""
+
+msgid "Update Settings"
+msgstr "Update Settings"
+
+msgid "Two-Factor Authentication (TOTP)"
+msgstr ""
+
+msgid ""
+"Protect your account with Google Authenticator, Authy, or compatible RFC "
+"6238 apps."
+msgstr ""
+
+msgid "Active / Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid ""
+"When enabled, signing in requires your password and a 6-digit one-time "
+"token from your mobile device."
+msgstr ""
+
+msgid "recovery codes left"
+msgstr ""
+
+msgid "Code from your app (to get new recovery codes)"
+msgstr ""
+
+msgid "New recovery codes"
+msgstr ""
+
+msgid "Turn off 2FA for your account?"
+msgstr ""
+
+msgid "Code or recovery code"
+msgstr ""
+
+msgid "Disable 2FA"
+msgstr ""
+
+msgid "Enable 2FA (Setup Authenticator)"
+msgstr ""
+
+msgid "FIDO2 Passkeys & Biometric Security Keys"
+msgstr ""
+
+msgid ""
+"Sign in securely without passwords using Touch ID, Face ID, Windows "
+"Hello, or YubiKey."
+msgstr ""
+
+msgid "Register New Passkey"
+msgstr ""
+
+msgid "Loading registered security keys..."
+msgstr ""
+
+msgid "No Passkeys registered yet."
+msgstr ""
+
+msgid ""
+"No Passkeys registered yet. Click Register to add Touch ID or a security "
+"key."
+msgstr ""
+
+msgid "Remove"
+msgstr "Remove"
+
+msgid ""
+"1. Scan this code with Google Authenticator, Authy or another RFC 6238 "
+"app, or type the key by hand."
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "2. Enter the 6-digit code the app shows"
+msgstr ""
+
+msgid "Turn on 2FA"
+msgstr ""
+
+msgid "Save your recovery codes"
+msgstr ""
+
+msgid ""
+"Each code works once if you lose your phone. They are shown only now; "
+"store them somewhere safe."
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Back to settings"
+msgstr ""
+
+msgid "Previous fax"
+msgstr ""
+
+msgid "Prev"
+msgstr "Prev"
+
+msgid "Next fax"
+msgstr ""
+
+msgid "Rotate fax"
+msgstr ""
+
+#, python-format
+msgid "Invalid fax number: %(number)s"
+msgstr ""
+
+msgid "Address book entry saved."
+msgstr ""
+
+msgid "Please enter a company name"
+msgstr ""
+
+msgid "Please enter a valid fax number"
+msgstr ""
+
+msgid "You are not allowed to delete address book entries."
+msgstr ""
+
+msgid "Contact saved."
+msgstr ""
+
+msgid "You are not allowed to delete contacts."
+msgstr ""
+
+msgid "Modem deleted"
+msgstr ""
+
+msgid "Please enter an alias"
+msgstr ""
+
+msgid "Modem updated"
+msgstr ""
+
+msgid "Please enter a device name"
+msgstr ""
+
+msgid "This modem already exists"
+msgstr ""
+
+msgid "Modem created"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Cover page template removed successfully"
+msgstr "Cover page template removed successfully"
+
+msgid "Failed to remove cover page template"
+msgstr "Failed to remove cover page template"
+
+msgid "Cover page template updated successfully"
+msgstr "Cover page template updated successfully"
+
+msgid "Failed to update cover page template"
+msgstr "Failed to update cover page template"
+
+msgid "Cover page template registered successfully"
+msgstr "Cover page template registered successfully"
+
+msgid "Title and File are required"
+msgstr "Title and File are required"
+
+msgid "The company does not exist."
+msgstr ""
+
+msgid "The company and its fax numbers were deleted."
+msgstr ""
+
+msgid "Please enter a valid e-mail address."
+msgstr ""
+
+msgid "Fax to Email settings saved"
+msgstr ""
+
+msgid "The system is rebooting. Please wait..."
+msgstr ""
+
+msgid "The system is shutting down. Please wait..."
+msgstr ""
+
+msgid "The command could not be run"
+msgstr ""
+
+msgid "There is no fax archive folder to download."
+msgstr ""
+
+msgid "The database dump could not be made"
+msgstr ""
+
+msgid "Access denied. Superadmin permission required."
+msgstr "Access denied. Superadmin permission required."
+
+msgid "SMTP Gateway settings saved successfully."
+msgstr "SMTP Gateway settings saved successfully."
+
+msgid "Printer name and host are required."
+msgstr ""
+
+msgid "Network printer registered successfully."
+msgstr ""
+
+msgid "Printer deleted successfully."
+msgstr ""
+
+msgid "Lifecycle policy saved successfully."
+msgstr ""
+
+msgid "Cloud storage configuration saved successfully."
+msgstr ""
+
+msgid "SAML 2.0 configuration saved successfully."
+msgstr ""
+
+msgid "Catch All"
+msgstr ""
+
+msgid "Never"
+msgstr ""
+
+msgid "Every 3 Months"
+msgstr ""
+
+msgid "Every 6 Months"
+msgstr ""
+
+msgid "Please enter a name"
+msgstr ""
+
+msgid "You must enter a username"
+msgstr ""
+
+msgid "Non-alphanumeric characters are not allowed in username."
+msgstr ""
+
+#, python-format
+msgid ""
+"Hello %(name)s,\n"
+"\n"
+"This email contains your username and password to log into NamiFAX "
+"(%(url)s)\n"
+"\n"
+"Username - %(username)s\n"
+"Password - %(password)s\n"
+"\n"
+"Please do not respond to this message as it is automatically generated "
+"and is for information purposes only"
+msgstr ""
+
+msgid "New User Details"
+msgstr ""
+
+msgid "The user does not exist."
+msgstr ""
+
+msgid "You cannot delete your own account."
+msgstr ""
+
+msgid "You cannot delete the last superuser."
+msgstr ""
+
+msgid "Please enter a valid number."
+msgstr ""
+
+msgid "Both sent and received faxes"
+msgstr ""
+
+msgid "Only sent faxes"
+msgstr ""
+
+msgid "Only received faxes"
+msgstr ""
+
+msgid "Account is disabled"
+msgstr ""
+
+#, python-format
+msgid "Too many failed attempts. Try again in %(minutes)d minutes."
+msgstr ""
+
+msgid "Invalid or expired verification code."
+msgstr "Invalid or expired verification code."
+
+#, python-format
+msgid ""
+"The user account %(user)s has this email associated with it.  A web user "
+"from %(ip)s has just requested that a new password be sent.\n"
+"\n"
+"Your New Password is: %(password)s\n"
+"\n"
+"If this was an error just login with your new password and then change "
+"your password to what you would like it to be."
+msgstr ""
+
+msgid "Email failed to send"
+msgstr ""
+
+msgid "Fax Contacts"
+msgstr ""
+
+msgid "Email Contacts"
+msgstr ""
+
+msgid "The fax document was not found."
+msgstr ""
+
+msgid "Failed to send email"
+msgstr ""
+
+msgid "Email sent successfully"
+msgstr ""
+
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+msgid "Invalid job number."
+msgstr ""
+
+msgid "Any Available Line (Auto)"
+msgstr "Any Available Line (Auto)"
+
+msgid "You may not use this line."
+msgstr ""
+
+msgid "Your fax has been successfully queued to be faxed."
+msgstr ""
+
+msgid "Job"
+msgstr ""
+
+msgid "The code is not valid."
+msgstr ""
+
+msgid "The code did not match. Check the time on your phone and try again."
+msgstr ""
+
+msgid "The password is not correct."
+msgstr ""
+
+#~ msgid "High"
+#~ msgstr "High"
+
+#~ msgid "Configure corporate contact identity and transmission routing defaults."
+#~ msgstr "Configure corporate contact identity and transmission routing defaults."
+
+#~ msgid "Primary Company Profile"
+#~ msgstr "Primary Company Profile"
+
+#~ msgid "Recipient Contact & Physical Address"
+#~ msgstr "Recipient Contact & Physical Address"
+
+#~ msgid "City / Postal Region"
+#~ msgstr "City / Postal Region"
+
+#~ msgid "Category Tag"
+#~ msgstr "Category Tag"
+
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid "Invoices & Billing"
+#~ msgstr "Invoices & Billing"
+
+#~ msgid "Legal"
+#~ msgstr "Legal"
+
+#~ msgid "Description / Internal Notes"
+#~ msgstr "Description / Internal Notes"
+
+#~ msgid "Edit Forwarding Rule"
+#~ msgstr "Edit Forwarding Rule"
+
+#~ msgid "Add Forwarding Rule"
+#~ msgstr "Add Forwarding Rule"
+
+#~ msgid ""
+#~ "Please enter your registered username or"
+#~ " email address below. Password reset "
+#~ "instructions will be dispatched to your"
+#~ " account email address."
+#~ msgstr ""
+#~ "Please enter your registered username or"
+#~ " email address below. Password reset "
+#~ "instructions will be dispatched to your"
+#~ " account email address."
+
+#~ msgid "Username or Email Address"
+#~ msgstr "Username or Email Address"
+
+#~ msgid "Reset Password"
+#~ msgstr "Reset Password"
+
+#~ msgid "Standard (Default)"
+#~ msgstr "Standard (Default)"
+
+#~ msgid "Urgent"
+#~ msgstr "Urgent"
+
+#~ msgid "Confidential"
+#~ msgstr "Confidential"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Low"
+#~ msgstr "Low"
+
+#~ msgid "High (Urgent)"
+#~ msgstr "High (Urgent)"
+
+#~ msgid "Reply to Fax"
+#~ msgstr "Reply to Fax"
+
+#~ msgid "Dispatch quick reply transmission to originating sender"
+#~ msgstr "Dispatch quick reply transmission to originating sender"
+
+#~ msgid "Regarding (Subject)"
+#~ msgstr "Regarding (Subject)"
+
+#~ msgid "Comments"
+#~ msgstr "Comments"
+
+#~ msgid "Destination"
+#~ msgstr "Destination"
+
+#~ msgid "Queued"
+#~ msgstr "Queued"
+
+#~ msgid "Reason"
+#~ msgstr "Reason"
+
+#~ msgid "To send to multiple recipients at once, separate numbers with a comma."
+#~ msgstr "To send to multiple recipients at once, separate numbers with a comma."
+
+#~ msgid "Save Modem"
+#~ msgstr "Save Modem"
+
+#~ msgid "Configure User:"
+#~ msgstr "Configure User:"
+
+#~ msgid "recipient@example.com (comma separated)"
+#~ msgstr ""
+
+#~ msgid "NamiFAX Transmission Document"
+#~ msgstr ""
+
+#~ msgid "Please find the attached facsimile document."
+#~ msgstr ""
+
+#~ msgid "results"
+#~ msgstr "results"
+
+#~ msgid "result"
+#~ msgstr "result"
+
+#~ msgid "Keyword"
+#~ msgstr "Keyword"
+
+#~ msgid "Invoices / Orders"
+#~ msgstr "Invoices / Orders"
+
+#~ msgid "Legal / Contracts"
+#~ msgstr "Legal / Contracts"
+
+#~ msgid "From Date"
+#~ msgstr "From Date"
+
+#~ msgid "To Date"
+#~ msgstr "To Date"
+
+#~ msgid "Sent & Received"
+#~ msgstr "Sent & Received"
+
+#~ msgid "Received only"
+#~ msgstr "Received only"
+
+#~ msgid "Sent only"
+#~ msgstr "Sent only"
+
+#~ msgid "Results"
+#~ msgstr "Results"
+
+#~ msgid "records"
+#~ msgstr "records"
+
+#~ msgid "record"
+#~ msgstr "record"
+
+#~ msgid "No results found"
+#~ msgstr "No results found"
+
+#~ msgid "Try adjusting your search terms or date range."
+#~ msgstr "Try adjusting your search terms or date range."
+
+#~ msgid "Search the Archive"
+#~ msgstr "Search the Archive"
+
+#~ msgid "Enter a keyword or filter above and click Search to find fax records."
+#~ msgstr "Enter a keyword or filter above and click Search to find fax records."
+
+#~ msgid "Showing"
+#~ msgstr "Showing"
+
+#~ msgid "of"
+#~ msgstr "of"
+
+#~ msgid "Fax Viewer"
+#~ msgstr "Fax Viewer"
+
+#~ msgid "Page 1 of"
+#~ msgstr "Page 1 of"
+
+#~ msgid "FROM:"
+#~ msgstr "FROM:"
+
+#~ msgid "DATE:"
+#~ msgstr "DATE:"
+
+#~ msgid "DEVICE:"
+#~ msgstr "DEVICE:"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "TIFF"
+#~ msgstr "TIFF"
+
+#~ msgid "Total"
+#~ msgstr "Total"
+
+#~ msgid "Incoming Transmission"
+#~ msgstr "Incoming Transmission"
+
+#~ msgid "FACSIMILE TRANSMISSION"
+#~ msgstr "FACSIMILE TRANSMISSION"
+
+#~ msgid "Date Received:"
+#~ msgstr "Date Received:"
+
+#~ msgid "Originating Station:"
+#~ msgstr "Originating Station:"
+
+#~ msgid "PORT"
+#~ msgstr "PORT"
+
+#~ msgid "High-Resolution Raster Preview"
+#~ msgstr "High-Resolution Raster Preview"
+
+#~ msgid "Device Line:"
+#~ msgstr "Device Line:"
+
+#~ msgid "Download Original Document"
+#~ msgstr "Download Original Document"
+
+#~ msgid "NamiFAX Enterprise Facsimile Engine"
+#~ msgstr "NamiFAX Enterprise Facsimile Engine"
+
+#~ msgid "Archive ID:"
+#~ msgstr "Archive ID:"
+
+#~ msgid "Add contact name or fax number..."
+#~ msgstr ""
+
+#~ msgid "Delete List"
+#~ msgstr "Delete List"
+
+#~ msgid "Save Changes"
+#~ msgstr "Save Changes"
+
+#~ msgid "Supported: PDF, TIFF, PostScript, TXT · Max 10 MB"
+#~ msgstr "Supported: PDF, TIFF, PostScript, TXT · Max 10 MB"
+
+#~ msgid "Auto-select recommended"
+#~ msgstr "Auto-select recommended"
+
+#~ msgid "Status:"
+#~ msgstr "Status:"
+
+#~ msgid "Transmitted Successfully (OK)"
+#~ msgstr "Transmitted Successfully (OK)"
+

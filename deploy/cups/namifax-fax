@@ -1,0 +1,10 @@
+#!/bin/sh
+# CUPS backend for "print to fax": copy to /usr/lib/cups/backend/namifax-fax (owner root, mode 0700), then add a printer with the device URI
+# "namifax-fax:/".  The printed text must contain a tag like [[FAX: 02-123-4567]]; NamiFAX then queues the job for that number as the CUPS user.
+# NAMIFAX_HOME is where NamiFAX is installed; DATABASE_URL etc. come from /etc/namifax.env.
+if [ "$#" -eq 0 ]; then
+    echo 'direct namifax-fax "NamiFAX Print-to-Fax" "NamiFAX Print-to-Fax" "MFG:NamiFAX;MDL:Print-to-Fax;"'
+    exit 0
+fi
+set -a; [ -r /etc/namifax.env ] && . /etc/namifax.env; set +a
+exec "${NAMIFAX_HOME:-/opt/namifax}/.venv/bin/namifax" print-in "$@"

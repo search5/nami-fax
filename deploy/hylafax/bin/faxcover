@@ -1,0 +1,6 @@
+#!/bin/sh
+# HylaFAX CoverCmd: makes the cover page for sendfax (used by Send Fax with a cover page).  Copy to $SPOOL/bin/ (usually /var/spool/hylafax/bin).
+# NAMIFAX_HOME is where NamiFAX is installed; DATABASE_URL etc. come from /etc/namifax.env.
+# set -a exports every KEY=value of the file (it has no 'export'), so the variables reach the exec'd program.
+set -a; [ -r /etc/namifax.env ] && . /etc/namifax.env; set +a
+exec "${NAMIFAX_HOME:-/opt/namifax}/.venv/bin/namifax-faxcover" "$@"

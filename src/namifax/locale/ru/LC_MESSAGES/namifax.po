@@ -1,0 +1,2614 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: NamiFAX 4.0.Language: rMIME-Version: 1.Content-Type: "
+"text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-02 00:54+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "Address Book"
+msgstr "Адреса эл. почты"
+
+msgid "Save frequently used fax numbers for quick access when sending."
+msgstr ""
+"Сохраняйте часто используемые номера факсов для быстрого доступа при "
+"отправке."
+
+msgid "Company or fax number..."
+msgstr ""
+
+msgid "Search"
+msgstr "Поиск"
+
+#, fuzzy
+msgid "New Company"
+msgstr "Организация"
+
+msgid "Email Book"
+msgstr "Адресная книга эл. почты"
+
+msgid "Distribution Lists"
+msgstr "Списки рассылки"
+
+#, fuzzy
+msgid "Company / Name"
+msgstr "Организация"
+
+msgid "Fax Number"
+msgstr "Номер факса"
+
+msgid "Email"
+msgstr "Эл. почта"
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "Send Fax"
+msgstr "Отправить"
+
+msgid "Edit"
+msgstr "Изменить"
+
+#, fuzzy
+msgid "No contacts yet"
+msgstr "Контакты"
+
+msgid "No contacts matched"
+msgstr "Контакты не найдены"
+
+msgid ""
+"Add contacts to quickly select fax numbers when sending without typing "
+"them every time."
+msgstr ""
+"Добавьте контакты, чтобы быстро выбирать номера факсов при отправке, не "
+"вводя их каждый раз."
+
+msgid "Add First Contact"
+msgstr "Добавить первый контакт"
+
+#, fuzzy
+msgid "Edit Company"
+msgstr "Организация"
+
+#, fuzzy
+msgid "Add New Company"
+msgstr "Организация"
+
+msgid "Configure the company and every fax number it uses."
+msgstr ""
+
+#, fuzzy
+msgid "Back to Contacts"
+msgstr "Контакты"
+
+msgid "Upload contacts file (vCard)"
+msgstr ""
+
+msgid "Upload"
+msgstr "Загрузить"
+
+msgid "Company"
+msgstr "Организация"
+
+#, fuzzy
+msgid "Company Name"
+msgstr "Организация"
+
+msgid "e.g. Acme Corporation"
+msgstr ""
+
+msgid "Clear the number to remove it."
+msgstr ""
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Category"
+msgstr "Категория"
+
+msgid "Location"
+msgstr "Адрес"
+
+msgid "Voice Telephone"
+msgstr "Телефон"
+
+msgid "Street Address"
+msgstr "Улица, дом"
+
+msgid "Zip / Postal Code"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Add a Fax Number"
+msgstr ""
+
+msgid "First Fax Number"
+msgstr ""
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Save"
+msgstr "Сохранить"
+
+#, fuzzy
+msgid "Dashboard Overview"
+msgstr "Информационный щит"
+
+#, fuzzy
+msgid "SYSTEM OPERATIONAL"
+msgstr "Системные функции"
+
+msgid ""
+"Real-time status of fax spools, hardware serial modems, and registered "
+"users"
+msgstr ""
+"Состояние очереди факсов, аппаратных последовательных модемов и "
+"зарегистрированных пользователей в реальном времени"
+
+msgid "Users"
+msgstr "Участники"
+
+msgid "Modems"
+msgstr "Параметры модемов"
+
+#, fuzzy
+msgid "DID Routes"
+msgstr "DID/DTMF группы маршрутов"
+
+#, fuzzy
+msgid "Logs"
+msgstr "Выход"
+
+#, fuzzy
+msgid "Fax Lines"
+msgstr "Fax Modems"
+
+msgid "Hardware Ready"
+msgstr "Оборудование готово"
+
+#, fuzzy
+msgid "Active accounts"
+msgstr "Участники"
+
+msgid "Backend Core"
+msgstr "Ядро бэкенда"
+
+msgid "unknown"
+msgstr ""
+
+msgid "Scheduler"
+msgstr "Планировщик"
+
+msgid "Running"
+msgstr "Работает"
+
+#, fuzzy
+msgid "Registered User Accounts"
+msgstr "Участники"
+
+msgid "Manage Users"
+msgstr "Управление пользователями"
+
+msgid "Name"
+msgstr "ФИО"
+
+msgid "Username"
+msgstr "Имя для входа"
+
+msgid "Last Login"
+msgstr "Последняя регистрация"
+
+msgid "Server Status"
+msgstr "Статус сервера"
+
+msgid "Core"
+msgstr "Ядро"
+
+msgid "Database Engine"
+msgstr "СУБД"
+
+msgid "System Scheduler"
+msgstr "Системный планировщик"
+
+msgid "Configured Modems"
+msgstr "Настроенные модемы"
+
+msgid "Administrator Workflow Guide"
+msgstr "Руководство администратора"
+
+#, fuzzy
+msgid "Configure Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid ""
+"Route incoming faxes automatically based on recognized Code39 / QR "
+"barcodes"
+msgstr ""
+"Автоматическая маршрутизация входящих факсов на основе распознанных "
+"штрихкодов Code39 / QR"
+
+#, fuzzy
+msgid "New Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode Routing Rules"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode:"
+msgstr "Barcode Routing"
+
+msgid "Contact:"
+msgstr "Контакт"
+
+msgid "None"
+msgstr "Нет"
+
+msgid "Printer:"
+msgstr "Принтер:"
+
+#, fuzzy
+msgid "Edit Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Add Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "EDIT MODE"
+msgstr "Изменить"
+
+msgid "NEW"
+msgstr "НОВЫЙ"
+
+msgid "Barcode"
+msgstr "Штрих-код"
+
+msgid "Alias"
+msgstr "Псевдоним"
+
+#, fuzzy
+msgid "Contact Email"
+msgstr "Контакты"
+
+msgid "Printer"
+msgstr "Принтер"
+
+msgid "Fax Categories"
+msgstr "Просматриваемая категория факсов"
+
+msgid ""
+"Manage classification tags and archival categories for organizing "
+"transmissions"
+msgstr ""
+"Управление тегами классификации и архивными категориями для "
+"упорядочивания передач"
+
+#, fuzzy
+msgid "New Category"
+msgstr "Просматриваемая категория факсов"
+
+#, fuzzy
+msgid "Existing Categories"
+msgstr "Просматриваемая категория факсов"
+
+msgid "Edit Category"
+msgstr "Редактировать категорию"
+
+#, fuzzy
+msgid "Add Category"
+msgstr "Просматриваемая категория факсов"
+
+msgid "Category Name"
+msgstr "Имя категории"
+
+msgid "e.g. Invoices, Contracts"
+msgstr ""
+
+#, fuzzy
+msgid "Configure Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Manage facsimile PostScript cover page templates and layouts"
+msgstr "Управление шаблонами и макетами титульных листов PostScript для факсов"
+
+#, fuzzy
+msgid "New Cover Page"
+msgstr "Титульная страница"
+
+#, fuzzy
+msgid "Available Cover Pages"
+msgstr "Cover Pages"
+
+#, fuzzy
+msgid "Edit Cover Page"
+msgstr "Титульная страница"
+
+#, fuzzy
+msgid "Add Cover Page"
+msgstr "Титульная страница"
+
+msgid "Title"
+msgstr "Заголовок"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "e.g. custom.ps"
+msgstr ""
+
+msgid "Cover Template Studio: Dynamic Tag References"
+msgstr ""
+
+msgid ""
+"Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF"
+" templates. The Cover Studio engine automatically substitutes them during"
+" fax rendering."
+msgstr ""
+
+msgid "Dynamic Configuration"
+msgstr "Динамическая конфигурация"
+
+msgid ""
+"Manage Caller ID blacklists and transmission rejection rules for modem "
+"devices"
+msgstr ""
+"Управление черными списками Caller ID и правилами отклонения передачи для"
+" модемов"
+
+msgid "New Rule"
+msgstr "Новое правило"
+
+msgid "Blocked Caller IDs"
+msgstr "Заблокированные номера Caller ID"
+
+msgid "Caller ID:"
+msgstr "Caller ID:"
+
+msgid "All Devices"
+msgstr "Все устройства"
+
+msgid "Edit Caller ID Rule"
+msgstr "Редактировать правило Caller ID"
+
+msgid "Add Caller ID Rule"
+msgstr "Добавить правило Caller ID"
+
+msgid "Caller ID"
+msgstr "Caller ID"
+
+msgid "e.g. 5550199 or pattern"
+msgstr ""
+
+msgid "Modem Device"
+msgstr "Устройство модема"
+
+#, fuzzy
+msgid "Fax to Email"
+msgstr "Fax Modems"
+
+msgid ""
+"Configure automated inbound fax forwarding and PDF dispatch rules mapped "
+"by company"
+msgstr ""
+"Настройка правил автоматической пересылки входящих факсов и отправки PDF "
+"по компаниям"
+
+msgid "Add companies in the Address Book"
+msgstr ""
+
+msgid "Company Forwarding Rules"
+msgstr "Правила пересылки компании"
+
+msgid "fax numbers"
+msgstr "Номера факсов"
+
+msgid "Email:"
+msgstr "Эл. почта:"
+
+msgid "Edit Forwarding Rules"
+msgstr ""
+
+msgid "Forwarding Rules"
+msgstr ""
+
+msgid "This company has no fax numbers yet. Add them in the Address Book."
+msgstr ""
+
+msgid ""
+"Select a company on the left to set where the faxes received on each of "
+"its numbers are sent."
+msgstr ""
+
+#, fuzzy
+msgid "Control Panel"
+msgstr "Титульная страница"
+
+msgid "User Portal"
+msgstr "User Portal"
+
+msgid "Inbox"
+msgstr "Входящие"
+
+#, fuzzy
+msgid "Overview"
+msgstr "Посмотреть факс"
+
+msgid "Dashboard"
+msgstr "Информационный щит"
+
+msgid "Access Control"
+msgstr "Управление доступом"
+
+msgid "User Accounts"
+msgstr "Участники"
+
+msgid "Hardware & Lines"
+msgstr "Оборудование и линии"
+
+msgid "Fax Modems"
+msgstr "Fax Modems"
+
+msgid "Network Printers"
+msgstr ""
+
+#, fuzzy
+msgid "Inbound Routing"
+msgstr "DID/DTMF группы маршрутов"
+
+msgid "DID Routing"
+msgstr "DID/DTMF группы маршрутов"
+
+msgid "Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid "Content & Templates"
+msgstr "Содержимое и шаблоны"
+
+msgid "Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Security & System"
+msgstr "Безопасность и система"
+
+msgid "Blacklist (DynConf)"
+msgstr "Blacklist (DynConf)"
+
+msgid "System Audit Logs"
+msgstr "System Audit Logs"
+
+msgid "System Functions"
+msgstr "Системные функции"
+
+msgid "SMTP Gateway"
+msgstr ""
+
+msgid "Storage & Cloud"
+msgstr ""
+
+msgid "SAML 2.0 SSO"
+msgstr ""
+
+msgid "Logout"
+msgstr "Выход"
+
+msgid "Admin Control Panel"
+msgstr "Панель управления администратора"
+
+msgid "Appliance Engine Online"
+msgstr "Служба устройства в сети"
+
+msgid ""
+"Configure Modems hardware devices, physical serial ports, and print-"
+"forwarding rules"
+msgstr ""
+"Настройка аппаратных модемов, физических последовательных портов и правил"
+" пересылки на печать"
+
+#, fuzzy
+msgid "Configure Modems"
+msgstr "Fax Modems"
+
+msgid "Active Modem Lines"
+msgstr "Активные модемные линии"
+
+msgid "Device"
+msgstr "Устройство"
+
+msgid "Contact"
+msgstr "Контакт"
+
+msgid "Status"
+msgstr "Статус"
+
+#, fuzzy
+msgid "Edit Modem"
+msgstr "Fax Modems"
+
+msgid "Configure Modems Device"
+msgstr "Настроить модемное устройство"
+
+msgid "e.g. ttyS0"
+msgstr ""
+
+msgid "e.g. Main Inbound Line"
+msgstr ""
+
+msgid "Are you sure you want to delete this modem?"
+msgstr ""
+
+msgid "Create"
+msgstr "Создать"
+
+msgid "Appliance Note:"
+msgstr "Примечание устройства:"
+
+msgid ""
+"Modems configured here must correspond to physical RS-232 serial devices,"
+" USB modems, or virtual IAX modems recognized by the underlying HylaFAX "
+"server."
+msgstr ""
+"Настраиваемые здесь модемы должны соответствовать физическим "
+"последовательным устройствам RS-232, USB-модемам или виртуальным "
+"IAX-модемам, распознаваемым сервером HylaFAX."
+
+msgid "Direct RAW socket & IPP network printing dispatch for received faxes"
+msgstr ""
+
+msgid "Add Network Printer"
+msgstr ""
+
+msgid "Printer Name"
+msgstr ""
+
+msgid "e.g. Office HP LaserJet"
+msgstr ""
+
+msgid "Protocol"
+msgstr ""
+
+msgid "Host / IP"
+msgstr ""
+
+#, fuzzy
+msgid "Port"
+msgstr "Важность"
+
+msgid "Queue Name (Optional)"
+msgstr ""
+
+msgid "2nd Floor Accounting Printer"
+msgstr ""
+
+msgid "Register Printer"
+msgstr ""
+
+msgid "Configured Printers"
+msgstr ""
+
+msgid "No network printers configured yet. Add one using the form on the left."
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+msgid "Test Print"
+msgstr ""
+
+msgid "Are you sure you want to delete this printer?"
+msgstr ""
+
+#, fuzzy
+msgid "Configure DID Routing"
+msgstr "DID/DTMF группы маршрутов"
+
+msgid ""
+"Route incoming faxes by Direct Inward Dialing (DID) extension to specific"
+" email boxes or printers"
+msgstr ""
+"Маршрутизация входящих факсов по добавочному номеру DID на определенные "
+"почтовые ящики или принтеры"
+
+#, fuzzy
+msgid "New DID Route"
+msgstr "DID/DTMF группы маршрутов"
+
+#, fuzzy
+msgid "Active DID Routing Rules"
+msgstr "DID/DTMF группы маршрутов"
+
+msgid "Route Code"
+msgstr "Код маршрутизации"
+
+msgid "Action"
+msgstr "Действие"
+
+msgid "Configure Routing Rule"
+msgstr "Настроить правило маршрутизации"
+
+msgid "e.g. 1000"
+msgstr ""
+
+msgid "e.g. Sales Direct Line"
+msgstr ""
+
+msgid "-- None --"
+msgstr "-- Нет --"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid ""
+"DID (Direct Inward Dialing) routing automatically redirects incoming "
+"transmissions matching extension patterns directly to mapped operator "
+"inboxes or physical printers."
+msgstr ""
+"Маршрутизация DID (Direct Inward Dialing) автоматически перенаправляет "
+"входящие передачи по шаблону добавочного номера во входящие ящики "
+"операторов или на физические принтеры."
+
+msgid "SAML 2.0 Enterprise SSO"
+msgstr ""
+
+msgid ""
+"Single Sign-On integration with Okta, Microsoft Entra ID (Azure AD), "
+"Google Workspace & Keycloak"
+msgstr ""
+
+msgid "Download SP Metadata XML"
+msgstr ""
+
+msgid "Identity Provider (IdP) Settings"
+msgstr ""
+
+msgid "Enable SAML 2.0 Single Sign-On"
+msgstr ""
+
+msgid "Shows \"SAML 2.0 Enterprise SSO\" login option on login page"
+msgstr ""
+
+msgid "IdP Entity ID / Issuer"
+msgstr ""
+
+msgid "IdP Single Sign-On Service URL (HTTP-Redirect / POST)"
+msgstr ""
+
+msgid "IdP Public X.509 Certificate (PEM)"
+msgstr ""
+
+msgid "Just-in-Time (JIT) Provisioning"
+msgstr ""
+
+msgid "Auto-create account on first login"
+msgstr ""
+
+msgid "Default Role for JIT Users"
+msgstr ""
+
+msgid "Save SAML Configuration"
+msgstr ""
+
+msgid "NamiFAX SP Endpoints"
+msgstr ""
+
+msgid ""
+"Copy these endpoints into your Identity Provider (Azure AD, Okta, Google)"
+" console:"
+msgstr ""
+
+msgid "Assertion Consumer Service (ACS) URL"
+msgstr ""
+
+msgid "SP Entity ID / Metadata URL"
+msgstr ""
+
+msgid "NameID Format"
+msgstr ""
+
+msgid "External SMTP Gateway"
+msgstr ""
+
+msgid ""
+"Configure external mail delivery server for inbound fax notifications and"
+" user alerts"
+msgstr ""
+
+msgid "Diagnostics Result"
+msgstr ""
+
+msgid "Server Connection & Security"
+msgstr ""
+
+msgid "SMTP Host / Server"
+msgstr ""
+
+msgid "Encryption Protocol"
+msgstr ""
+
+msgid "None (Plain)"
+msgstr ""
+
+msgid "STARTTLS (587)"
+msgstr ""
+
+msgid "SSL / TLS (465)"
+msgstr ""
+
+msgid "Requires SMTP Authentication"
+msgstr ""
+
+#, fuzzy
+msgid "Username / Login"
+msgstr "Имя для входа"
+
+#, fuzzy
+msgid "Password / App Key"
+msgstr "Пароль"
+
+msgid "Default Sender Profile & Signatures"
+msgstr ""
+
+#, fuzzy
+msgid "From Email Address"
+msgstr "Адрес эл. почты"
+
+#, fuzzy
+msgid "From Display Name"
+msgstr "Организация"
+
+msgid "NamiFAX Corporate Dispatcher"
+msgstr ""
+
+msgid "Email Signature (Plaintext)"
+msgstr ""
+
+msgid "Sent automatically by NamiFAX Gateway."
+msgstr ""
+
+msgid "Last updated"
+msgstr "Последнее обновление"
+
+#, fuzzy
+msgid "Save Gateway Settings"
+msgstr "Настройки"
+
+msgid "Diagnostic Self-Test"
+msgstr ""
+
+msgid ""
+"Verify server reachability, TLS handshake, credentials and message "
+"dispatch in real time."
+msgstr ""
+
+msgid "Target Recipient Email"
+msgstr ""
+
+#, fuzzy
+msgid "Send Diagnostic Email"
+msgstr "Отправить"
+
+msgid "Enterprise storage lifecycle policies and S3 / MinIO / GCS cloud backends"
+msgstr ""
+
+msgid "Storage Lifecycle Policies"
+msgstr ""
+
+msgid "Purge Local TIFFs After (Days)"
+msgstr ""
+
+msgid ""
+"Frees local disk space if a PDF version exists. 0 = immediate after "
+"conversion."
+msgstr ""
+
+msgid "Full Fax Retention (Days)"
+msgstr ""
+
+msgid ""
+"Purge entire fax record and archival files after specified days. 0 = keep"
+" forever."
+msgstr ""
+
+msgid "Synchronize remote cloud object deletion on fax purge"
+msgstr ""
+
+msgid "Save Lifecycle Policy"
+msgstr ""
+
+msgid "Cloud Storage Backend"
+msgstr ""
+
+msgid "Storage Provider"
+msgstr ""
+
+msgid "Local Filesystem (Default)"
+msgstr ""
+
+msgid "Endpoint URL (MinIO / S3 Compatible)"
+msgstr ""
+
+msgid "Region"
+msgstr ""
+
+msgid "Bucket Name"
+msgstr ""
+
+msgid "Access Key ID"
+msgstr ""
+
+msgid "Secret Access Key"
+msgstr ""
+
+msgid "Key Prefix"
+msgstr ""
+
+msgid "Save Storage Config"
+msgstr ""
+
+msgid "Test Connection"
+msgstr ""
+
+msgid "Perform maintenance operations, service control, and backups."
+msgstr ""
+"Выполнение операций обслуживания, управления службами и резервного "
+"копирования."
+
+msgid "HylaFAX Engine Active"
+msgstr "Ядро HylaFAX активно"
+
+#, fuzzy
+msgid "Admin Dashboard"
+msgstr "Информационный щит"
+
+msgid "Caution: Appliance Maintenance Operations"
+msgstr "Внимание: операции обслуживания устройства"
+
+msgid ""
+"Restarting or shutting down services will interrupt active fax modem "
+"spooling and disconnect client sessions. Ensure all outbound "
+"transmissions in the modem queue are completed before initiating "
+"maintenance tasks."
+msgstr ""
+"Перезапуск или выключение служб прервет активную обработку очередей "
+"факс-модемов и отключит сеансы клиентов. Перед началом обслуживания "
+"убедитесь, что все исходящие передачи в очереди завершены."
+
+msgid "Daemon Service Control"
+msgstr "Управление фоновыми службами (демонами)"
+
+msgid "Restart HylaFAX and NamiFAX web services, or halt background workers."
+msgstr ""
+"Перезапуск веб-служб HylaFAX и NamiFAX или остановка фоновых рабочих "
+"процессов."
+
+msgid "Reboot Services"
+msgstr "Перезапустить службы"
+
+msgid "Shutdown Services"
+msgstr "Остановить службы"
+
+msgid "Database & Archive Backup"
+msgstr "Резервное копирование БД и архива"
+
+msgid "Download system archives and database snapshots for offsite retention."
+msgstr "Загрузка системных архивов и снимков базы данных для внешнего хранения."
+
+msgid "Download Archive"
+msgstr "Выгрузить архив"
+
+msgid "Download Database"
+msgstr "Выгрузить базу данных"
+
+msgid "System Logs"
+msgstr "Журнал событий"
+
+msgid "Audit logs and HylaFAX server operational event traces"
+msgstr "Журналы аудита и операционные события сервера HylaFAX"
+
+msgid "Keywords:"
+msgstr "Ключевые слова:"
+
+msgid "Search text..."
+msgstr ""
+
+msgid "Date:"
+msgstr "Дата:"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Log Text"
+msgstr "Текст журнала"
+
+msgid "No system logs found matching criteria."
+msgstr "Системные журналы по заданным критериям не найдены."
+
+msgid "Transmissions and server events will be streamed here in real time."
+msgstr "События передач и сервера будут отображаться здесь в реальном времени."
+
+msgid "Delete User"
+msgstr "Удаление пользователя"
+
+msgid "Are you sure you want to delete the user"
+msgstr ""
+
+msgid "Manage system operator credentials, access permissions, and route mapping"
+msgstr ""
+"Управление учетными записями операторов, правами доступа и привязкой "
+"маршрутов"
+
+msgid "Create New User"
+msgstr "Создать нового пользователя"
+
+msgid "Last IP"
+msgstr "Последний IP"
+
+msgid "Superuser"
+msgstr "Суперпользователь"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "YES"
+msgstr "Да"
+
+msgid "NO"
+msgstr "Нет"
+
+msgid "users"
+msgstr "Участники"
+
+msgid "user"
+msgstr "Пользователь"
+
+msgid "Modify User"
+msgstr "Редактирование пользователя"
+
+msgid "New User"
+msgstr "Новый пользователь"
+
+msgid "Full Name"
+msgstr "Полное имя"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Leave empty to keep the current password (a new user is sent a random one)"
+msgstr ""
+
+msgid "Email Address"
+msgstr "Адрес эл. почты"
+
+msgid "Password expiration cycle"
+msgstr ""
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Password can be reused"
+msgstr ""
+
+msgid "My Company"
+msgstr ""
+
+msgid "My Location"
+msgstr ""
+
+msgid "My Voice Number"
+msgstr ""
+
+msgid "My Fax Number"
+msgstr ""
+
+msgid "TSI ID"
+msgstr "Персональный ID абонента"
+
+msgid "Select Cover Page"
+msgstr ""
+
+msgid "New fax sound"
+msgstr ""
+
+msgid "Permissions & Capabilities"
+msgstr "Права и возможности"
+
+msgid "Administrator Console"
+msgstr "Консоль администратора"
+
+msgid "Superuser Rights"
+msgstr "Права суперпользователя"
+
+msgid "Send on Any Modem"
+msgstr "Отправка через любой модем"
+
+msgid "You must first create a DID/DTMF group"
+msgstr ""
+
+msgid "You must first create a modem"
+msgstr ""
+
+#, fuzzy
+msgid "Categories"
+msgstr "Просматриваемая категория факсов"
+
+msgid "You must first create a category"
+msgstr ""
+
+#, fuzzy
+msgid "Archive Search"
+msgstr "Архив"
+
+msgid "Search all sent and received fax records by date, company, or fax number."
+msgstr ""
+"Поиск среди всех отправленных и принятых факсов по дате, компании или "
+"номеру факса."
+
+#, fuzzy
+msgid "Search Filters"
+msgstr "Поиск"
+
+msgid ""
+"Leave filters empty to search all records. Narrow results by adding more "
+"criteria."
+msgstr ""
+"Оставьте фильтры пустыми для поиска по всем записям. Уточните результаты,"
+" добавив критерии."
+
+msgid "Company search"
+msgstr "Поиск компании"
+
+msgid "Company list"
+msgstr "Список компаний"
+
+#, fuzzy
+msgid "Fax ID"
+msgstr "Fax Modems"
+
+msgid "e.g. 104"
+msgstr ""
+
+msgid "Keywords"
+msgstr "Критерий поиска"
+
+msgid "Company, number, notes..."
+msgstr ""
+
+#, fuzzy
+msgid "All Categories"
+msgstr "Просматриваемая категория факсов"
+
+msgid "User"
+msgstr "Пользователь"
+
+msgid "Start Date"
+msgstr "с"
+
+msgid "End Date"
+msgstr "по"
+
+#, fuzzy
+msgid "Direction"
+msgstr "DID/DTMF группы маршрутов"
+
+#, python-format
+msgid "Total %(n)d results found."
+msgstr "Всего %(n)d результатов найдено."
+
+msgid "Pages"
+msgstr "Страниц"
+
+msgid "Download PDF"
+msgstr "Загрузить в формате PDF"
+
+msgid "Reply to fax"
+msgstr "Ответить на факс"
+
+#, fuzzy
+msgid "Re-send"
+msgstr "Отправить"
+
+msgid "Email PDF"
+msgstr "Отправить по почте с вложенным PDF"
+
+msgid "Add note to fax"
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid "Delete fax"
+msgstr ""
+
+msgid "Select"
+msgstr "Выбрать"
+
+msgid "Unknown"
+msgstr ""
+
+#, fuzzy
+msgid "Received"
+msgstr "Архив"
+
+msgid "Sent"
+msgstr ""
+
+msgid "No results were found"
+msgstr "Ничего не найдено"
+
+msgid "Reset filters"
+msgstr "Сбросить фильтры"
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr "След."
+
+msgid "Name the sender"
+msgstr ""
+
+msgid "Select Contact Record"
+msgstr "Выбрать запись контакта"
+
+msgid "Or type a new company name"
+msgstr ""
+
+msgid "Delete selected faxes?"
+msgstr ""
+
+msgid "faxes"
+msgstr "факсов в списке"
+
+msgid "No contacts found"
+msgstr ""
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Organize recipient groups for mass fax broadcasting and notifications."
+msgstr "Организация групп получателей для массовой рассылки факсов и уведомлений."
+
+msgid "Create List"
+msgstr "Создать список"
+
+msgid "Saved Distribution Lists"
+msgstr "Сохраненные списки рассылки"
+
+msgid "members"
+msgstr "участников"
+
+msgid "Group Members & Settings"
+msgstr "Участники группы и параметры"
+
+msgid "Create New Distribution List"
+msgstr "Создать новый список рассылки"
+
+msgid "List Name"
+msgstr "Название списка"
+
+msgid "e.g. Executive Sales Team"
+msgstr ""
+
+msgid "Group Members (Contacts & Fax Numbers)"
+msgstr "Участники группы (контакты и номера факсов)"
+
+#, fuzzy
+msgid "contacts assigned"
+msgstr "Контакты"
+
+msgid "No contacts assigned to this list yet."
+msgstr "В этот список еще не добавлены контакты."
+
+msgid "Add Member"
+msgstr "Добавить участника"
+
+msgid "Delete this distribution list?"
+msgstr "Удалить этот список рассылки?"
+
+msgid "Edit Distribution List"
+msgstr "Редактировать список рассылки"
+
+msgid "Create Distribution List"
+msgstr "Создать список рассылки"
+
+msgid "Configure broadcast list parameters and recipient group members."
+msgstr "Настройка параметров списка рассылки и участников группы получателей."
+
+msgid "Back to Lists"
+msgstr "Назад к спискам"
+
+msgid "Distribution List Profile"
+msgstr "Профиль списка рассылки"
+
+msgid "e.g. Finance Operations"
+msgstr ""
+
+msgid "Enrolled Members"
+msgstr "Зарегистрированные участники"
+
+msgid "List ID:"
+msgstr "ID списка:"
+
+msgid "No contacts in this list."
+msgstr "В этом списке нет контактов."
+
+msgid "Add contacts to the list"
+msgstr ""
+
+msgid "Changes saved"
+msgstr "Изменения сохранены"
+
+msgid "Back"
+msgstr "Назад"
+
+#, fuzzy
+msgid "Email Address Book"
+msgstr "Адреса эл. почты"
+
+msgid "Manage email recipients, transmission routing, and contacts directory."
+msgstr ""
+"Управление получателями электронной почты, маршрутизацией передач и "
+"адресной книгой."
+
+#, fuzzy
+msgid "New Contact"
+msgstr "Контакты"
+
+msgid "Contacts"
+msgstr "Контакты"
+
+msgid "recipients"
+msgstr "получателей"
+
+#, fuzzy
+msgid "Contact Name"
+msgstr "Контакты"
+
+msgid "Company Affiliation"
+msgstr "Принадлежность к компании"
+
+msgid ""
+"No email contacts found in the directory. Click \"+ New Contact\" to "
+"register one."
+msgstr ""
+"В каталоге не найдены контакты эл. почты. Нажмите «+ New Contact», чтобы "
+"зарегистрировать контакт."
+
+msgid "Email Book - Edit Email Contact"
+msgstr "Адресная книга эл. почты - Редактировать контакт"
+
+msgid "Manage contact information and company affiliation in Email Book."
+msgstr ""
+"Управление контактными данными и принадлежностью к компании в адресной "
+"книге эл. почты."
+
+msgid "Back to Email Book"
+msgstr "Назад к адресной книге эл. почты"
+
+msgid "Contact Profile Details"
+msgstr "Сведения о контакте"
+
+msgid "John Doe"
+msgstr ""
+
+msgid "New Destination"
+msgstr "Получатель"
+
+msgid "Priority"
+msgstr "Важность"
+
+msgid "Modem / Device"
+msgstr ""
+
+msgid "Number of tries"
+msgstr "Кол-во попыток"
+
+msgid "Expire after"
+msgstr ""
+
+msgid "Now"
+msgstr "текущее время"
+
+msgid "Minutes"
+msgstr "минут"
+
+msgid "Hours"
+msgstr "часов"
+
+msgid "Days"
+msgstr "дней"
+
+msgid "Schedule Send Time"
+msgstr ""
+
+#, fuzzy
+msgid "Lost Password"
+msgstr "Пароль"
+
+msgid "Account Recovery Assistance"
+msgstr "Помощь в восстановлении учетной записи"
+
+msgid "Back to Login"
+msgstr "Назад к входу"
+
+msgid "Your password will be sent to the given e-mail address."
+msgstr ""
+
+msgid "Once you have received your new password you can login in and change it."
+msgstr ""
+
+msgid "Login"
+msgstr "Вход"
+
+msgid ""
+"Please enter your e-mail address then click on the Send Password button. "
+"You will receive a new password shortly. Use this new password to access "
+"the site."
+msgstr ""
+
+msgid "E-mail address"
+msgstr "Адрес эл. почты"
+
+msgid "Send Password"
+msgstr "Выслать пароль"
+
+msgid "Received faxes appear here automatically in real time."
+msgstr "Полученные факсы автоматически появляются здесь в реальном времени."
+
+msgid "Faxes"
+msgstr "факсов в списке"
+
+msgid "Fax"
+msgstr "Факс"
+
+#, fuzzy
+msgid "Archive Selected"
+msgstr "Архив"
+
+msgid "Delete Selected"
+msgstr "Удалить выбранные"
+
+msgid "fax"
+msgstr "Факс"
+
+#, fuzzy
+msgid "Preview"
+msgstr "Посмотреть факс"
+
+msgid "Sender"
+msgstr "Отправителю"
+
+msgid "Page"
+msgstr "Страница"
+
+msgid "of"
+msgstr "из"
+
+msgid "This number belongs to several companies. Which one is it?"
+msgstr ""
+
+msgid "Unknown Sender"
+msgstr ""
+
+msgid "View"
+msgstr "Посмотреть факс"
+
+msgid "Reply"
+msgstr "Ответить на факс"
+
+msgid "Archive"
+msgstr "Архив"
+
+msgid "Email Fax"
+msgstr "Отправить факс по эл. почте"
+
+msgid "Rotate"
+msgstr "Повернуть"
+
+msgid "Download TIFF"
+msgstr "Загрузить в формате TIFF"
+
+msgid "0 FAXES"
+msgstr "0 ФАКСОВ"
+
+msgid ""
+"There are no incoming faxes waiting in your inbox. Incoming transmissions"
+" will automatically appear here in real time."
+msgstr ""
+"В папке «Входящие» нет факсов. Входящие передачи автоматически появятся "
+"здесь в реальном времени."
+
+msgid "Send Your First Fax"
+msgstr "Отправить первый факс"
+
+#, fuzzy
+msgid "Search Archive"
+msgstr "Архив"
+
+msgid "Getting Started with NamiFAX"
+msgstr "Начало работы с NamiFAX"
+
+msgid "Receive Faxes"
+msgstr "Прием факсов"
+
+msgid ""
+"When someone sends a fax to this system's number, it will appear here "
+"automatically."
+msgstr ""
+"Когда кто-то отправляет факс на номер этой системы, он автоматически "
+"появляется здесь."
+
+#, fuzzy
+msgid "Send Faxes"
+msgstr "Отправить"
+
+msgid "Click Send Fax to transmit a PDF or image document to any fax number."
+msgstr ""
+"Нажмите «Отправить факс», чтобы передать документ PDF или изображение на "
+"любой номер факса."
+
+msgid "Manage Records"
+msgstr "Управление записями"
+
+msgid ""
+"Download faxes as PDF, archive them for later, or search all records in "
+"the Archive."
+msgstr ""
+"Скачивайте факсы в формате PDF, архивируйте их или ищите среди всех "
+"записей в Архиве."
+
+msgid "Archive search"
+msgstr ""
+
+msgid "new fax"
+msgstr ""
+
+msgid "Outbox"
+msgstr "Исходящие"
+
+msgid "lines"
+msgstr ""
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Sign in"
+msgstr "Вход"
+
+msgid "Enter your credentials to continue."
+msgstr "Введите учетные данные для продолжения."
+
+#, fuzzy
+msgid "System Online"
+msgstr "Системные функции"
+
+msgid "Enter your username"
+msgstr ""
+
+msgid "Forgot password?"
+msgstr ""
+"Пожалуйста введите Ваш почтовый адрес и нажмите кнопку Выслать "
+"парольНовый пароль будет выслан немедленно. Используйте его для доступа."
+
+msgid "Enter your password"
+msgstr ""
+
+msgid "Contact your system administrator if you need an account."
+msgstr "Если вам требуется учетная запись, обратитесь к системному администратору."
+
+msgid "Or continue with"
+msgstr ""
+
+msgid "Sign in with Passkey (Touch ID / Security Key)"
+msgstr ""
+
+msgid "SAML 2.0 Enterprise SSO (Okta / Entra ID)"
+msgstr ""
+
+msgid "Two-Factor Authentication"
+msgstr ""
+
+msgid ""
+"Enter the 6-digit code from your authenticator app or an emergency "
+"recovery code."
+msgstr ""
+
+#, fuzzy
+msgid "Authentication Code"
+msgstr "Контактное лицо"
+
+msgid "123456 or 8-char backup code"
+msgstr ""
+
+msgid "Verify & Log In"
+msgstr ""
+
+msgid "Sign out?"
+msgstr ""
+
+msgid "Assign Company Name"
+msgstr "Назначить название компании"
+
+msgid "Associate document with registered enterprise contact"
+msgstr "Связать документ с зарегистрированным корпоративным контактом"
+
+msgid "Search Company Name"
+msgstr "Поиск названия компании"
+
+msgid "Type company name to filter..."
+msgstr ""
+
+#, fuzzy
+msgid "Delete Fax"
+msgstr "Удалить"
+
+msgid "Are you sure you want to delete this fax?"
+msgstr "Вы уверены, что хотите удалить этот факс?"
+
+msgid "This operation will permanently purge the fax document archive."
+msgstr "Эта операция безвозвратно удалит документ из архива факсов."
+
+msgid "Dispatch PDF document attachment to email recipients"
+msgstr "Отправка вложенного PDF-документа получателям по эл. почте"
+
+msgid "From"
+msgstr "С номера"
+
+msgid "Recipients"
+msgstr "Получатели"
+
+msgid "Choose from contacts"
+msgstr ""
+
+msgid "CC"
+msgstr ""
+
+msgid "BCC"
+msgstr ""
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "PDF file name"
+msgstr "Имя файла PDF"
+
+msgid "Message"
+msgstr "Сообщение"
+
+msgid "Archive fax"
+msgstr ""
+
+msgid "Send"
+msgstr "Отправить"
+
+msgid "Append internal administrative note or comments"
+msgstr "Добавить внутреннюю административную заметку или комментарий"
+
+msgid "Note / Description"
+msgstr "Примечание / Описание"
+
+msgid "Enter transaction note or dispatch comments..."
+msgstr ""
+
+msgid "Transmission Report"
+msgstr "Отчет о передаче"
+
+msgid "Official facsimile delivery confirmation receipt"
+msgstr "Официальное подтверждение доставки факса"
+
+msgid "Print"
+msgstr "Печать"
+
+msgid "Company:"
+msgstr "Организация"
+
+msgid "Pages:"
+msgstr "Страниц:"
+
+msgid "Fax Number:"
+msgstr "Номер факса"
+
+msgid "Database unavailable"
+msgstr ""
+
+msgid ""
+"The database cannot be reached right now. This page tries again every 10 "
+"seconds."
+msgstr ""
+
+msgid "Faxes currently queued or being transmitted."
+msgstr "Факсы в очереди или в процессе передачи."
+
+msgid ""
+"This page shows only faxes that are queued or in progress. Once "
+"delivered, they are removed from this list. Find completed records in the"
+msgstr ""
+"На этой странице показаны только факсы, находящиеся в очереди или в "
+"процессе отправки. После доставки они удаляются из этого списка. "
+"Завершенные записи находятся в"
+
+msgid "jobs in progress"
+msgstr "заданий выполняется"
+
+msgid "job in progress"
+msgstr "задание выполняется"
+
+msgid "Job ID"
+msgstr "ID задания"
+
+msgid "Dials"
+msgstr "Попытки"
+
+msgid "TTS"
+msgstr ""
+
+msgid "Modify"
+msgstr ""
+
+msgid "Kill job"
+msgstr "Удалить задание №"
+
+msgid "Kill"
+msgstr ""
+
+msgid "Failed Transmissions"
+msgstr "Неудачные передачи"
+
+msgid "Review the number or retry below."
+msgstr "Проверьте номер или повторите попытку ниже."
+
+msgid "Retry"
+msgstr "Retry"
+
+msgid "No jobs in queue"
+msgstr "В очереди нет заданий"
+
+msgid ""
+"There are no faxes waiting to be sent. Send a fax to see its progress "
+"here."
+msgstr ""
+"Нет факсов, ожидающих отправки. Отправьте факс, чтобы увидеть процесс "
+"здесь."
+
+#, fuzzy
+msgid "Send a Fax"
+msgstr "Отправить"
+
+#, fuzzy
+msgid "Password Expired"
+msgstr "Пароль"
+
+msgid "Security Credentials Renewal"
+msgstr "Обновление учетных данных безопасности"
+
+msgid "Action Required"
+msgstr "Требуется действие"
+
+msgid ""
+"Your password has expired or needs to be changed before proceeding. "
+"Please enter your old password and choose a new password."
+msgstr ""
+"Срок действия вашего пароля истек или его необходимо сменить перед "
+"продолжением. Пожалуйста, введите старый пароль и выберите новый пароль."
+
+msgid "Old Password"
+msgstr "Старый пароль"
+
+msgid "Current credentials"
+msgstr ""
+
+msgid "New Password"
+msgstr "Новый пароль"
+
+msgid "New secure passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Confirm New Password"
+msgstr ""
+"Пожалуйста введите Ваш почтовый адрес и нажмите кнопку Выслать "
+"парольНовый пароль будет выслан немедленно. Используйте его для доступа."
+
+msgid "Re-type new passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Update Password"
+msgstr "Пароль"
+
+msgid "Fill in the details below and click Send."
+msgstr "Заполните данные ниже и нажмите «Отправить»."
+
+#, fuzzy
+msgid "Destination & Recipients"
+msgstr "Номер факса"
+
+msgid "Enter the fax number and recipient details."
+msgstr "Введите номер факса и сведения о получателе."
+
+msgid "e.g. +1-555-0199  —  separate multiple numbers with semicolons"
+msgstr ""
+
+msgid "Choose a distribution list"
+msgstr ""
+
+msgid "To send to multiple recipients at once, separate numbers with a semicolon."
+msgstr ""
+
+msgid "Saved contacts are available in the"
+msgstr "Сохраненные контакты доступны в"
+
+msgid "Attention To"
+msgstr "Контактное лицо"
+
+msgid "optional"
+msgstr "необязательно"
+
+msgid "e.g. Jane Doe"
+msgstr ""
+
+msgid "Voice Number"
+msgstr "Контактный тел."
+
+msgid "Address"
+msgstr ""
+
+msgid "Zip"
+msgstr ""
+
+msgid "Subject / Regarding"
+msgstr "Тема"
+
+msgid "e.g. Purchase Order #4921"
+msgstr ""
+
+msgid "Document Attachment"
+msgstr "Вложение документа"
+
+msgid "Attach the file you want to transmit."
+msgstr "Прикрепите файл, который хотите отправить."
+
+msgid "Click to select a file"
+msgstr "Нажмите для выбора файла"
+
+msgid "Supported: PDF, TIFF, PostScript, TXT"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid ""
+"PDF is the most commonly used format. Convert Word or Excel files to PDF "
+"before attaching."
+msgstr ""
+"PDF — наиболее распространенный формат. Преобразуйте файлы Word или Excel"
+" в PDF перед прикреплением."
+
+msgid "Cover Page"
+msgstr "Титульная страница"
+
+msgid "Add a cover sheet with sender and recipient info."
+msgstr "Добавить титульный лист с информацией об отправителе и получателе."
+
+#, fuzzy
+msgid "Include Cover Page"
+msgstr "Титульная страница"
+
+#, fuzzy
+msgid "Cover Template"
+msgstr "Титульная страница"
+
+msgid "No cover pages are set up"
+msgstr ""
+
+msgid "Send via Line"
+msgstr "Отправить через линию"
+
+msgid "No modems configured"
+msgstr "Нет сконфигурированных модемов"
+
+#, fuzzy
+msgid "Cover Comments"
+msgstr "Cover Pages"
+
+msgid "Notes or message to print on the cover sheet..."
+msgstr ""
+
+msgid "Advanced Options"
+msgstr "Дополнительные параметры"
+
+msgid "Priority, retries, notifications"
+msgstr "Приоритет, повторные попытки, уведомления"
+
+#, fuzzy
+msgid "Max Retries"
+msgstr "Просматриваемая категория факсов"
+
+msgid "Retries automatically on busy signal."
+msgstr "Автоматический повтор при сигнале «занято»."
+
+msgid "The original fax is sent along."
+msgstr ""
+
+msgid "Cancel & return to Inbox"
+msgstr "Отмена и возврат во Входящие"
+
+#, fuzzy
+msgid "User Settings"
+msgstr "Настройки"
+
+msgid ""
+"Configure your personal profile, fax station identity, and portal "
+"preferences."
+msgstr ""
+"Настройте ваш личный профиль, идентификатор факсимильной станции и "
+"параметры портала."
+
+msgid "Return to Inbox"
+msgstr "Вернуться во Входящие"
+
+msgid "Personal & Organization Details"
+msgstr "Личные данные и сведения об организации"
+
+msgid "Office / Location"
+msgstr "Офис / Местоположение"
+
+msgid "Direct Voice Number"
+msgstr "Прямой телефонный номер"
+
+#, fuzzy
+msgid "Direct Fax Number"
+msgstr "Номер факса"
+
+msgid "Transmitting Station ID (TSI)"
+msgstr "Идентификатор передающей станции (TSI)"
+
+msgid "e.g. +1 555 123 4567"
+msgstr ""
+
+msgid "Header identifier imprinted on top of transmitted fax pages."
+msgstr ""
+"Заголовок-идентификатор, печатаемый в верхней части передаваемых страниц "
+"факса."
+
+msgid "Email & Fax Notification Signature"
+msgstr "Подпись для уведомлений по эл. почте и факсу"
+
+msgid "Portal & Delivery Preferences"
+msgstr "Параметры портала и доставки"
+
+msgid "Display Language"
+msgstr "Язык интерфейса"
+
+#, fuzzy
+msgid "Default Cover Page"
+msgstr "Титульная страница"
+
+msgid "Faxes Per Page"
+msgstr "faxes per page"
+
+msgid "Archive Faxes Per Page"
+msgstr ""
+
+#, fuzzy
+msgid "Change Password"
+msgstr "Пароль"
+
+#, fuzzy
+msgid "Current Password"
+msgstr ""
+"Пожалуйста введите Ваш почтовый адрес и нажмите кнопку Выслать "
+"парольНовый пароль будет выслан немедленно. Используйте его для доступа."
+
+msgid "Enter current password to verify"
+msgstr ""
+
+msgid "Enter secure new password"
+msgstr ""
+
+msgid "Re-type new password"
+msgstr ""
+
+#, fuzzy
+msgid "Update Settings"
+msgstr "Настройки"
+
+msgid "Two-Factor Authentication (TOTP)"
+msgstr ""
+
+msgid ""
+"Protect your account with Google Authenticator, Authy, or compatible RFC "
+"6238 apps."
+msgstr ""
+
+msgid "Active / Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid ""
+"When enabled, signing in requires your password and a 6-digit one-time "
+"token from your mobile device."
+msgstr ""
+
+msgid "recovery codes left"
+msgstr ""
+
+msgid "Code from your app (to get new recovery codes)"
+msgstr ""
+
+msgid "New recovery codes"
+msgstr ""
+
+msgid "Turn off 2FA for your account?"
+msgstr ""
+
+msgid "Code or recovery code"
+msgstr ""
+
+msgid "Disable 2FA"
+msgstr ""
+
+msgid "Enable 2FA (Setup Authenticator)"
+msgstr ""
+
+msgid "FIDO2 Passkeys & Biometric Security Keys"
+msgstr ""
+
+msgid ""
+"Sign in securely without passwords using Touch ID, Face ID, Windows "
+"Hello, or YubiKey."
+msgstr ""
+
+msgid "Register New Passkey"
+msgstr ""
+
+msgid "Loading registered security keys..."
+msgstr ""
+
+msgid "No Passkeys registered yet."
+msgstr ""
+
+msgid ""
+"No Passkeys registered yet. Click Register to add Touch ID or a security "
+"key."
+msgstr ""
+
+msgid "Remove"
+msgstr "Удалить"
+
+msgid ""
+"1. Scan this code with Google Authenticator, Authy or another RFC 6238 "
+"app, or type the key by hand."
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "2. Enter the 6-digit code the app shows"
+msgstr ""
+
+msgid "Turn on 2FA"
+msgstr ""
+
+msgid "Save your recovery codes"
+msgstr ""
+
+msgid ""
+"Each code works once if you lose your phone. They are shown only now; "
+"store them somewhere safe."
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Back to settings"
+msgstr ""
+
+msgid "Previous fax"
+msgstr "Предыдущий факс"
+
+msgid "Prev"
+msgstr "Пред."
+
+msgid "Next fax"
+msgstr "Следующий факс"
+
+msgid "Rotate fax"
+msgstr "Повернуть"
+
+#, python-format
+msgid "Invalid fax number: %(number)s"
+msgstr ""
+
+msgid "Address book entry saved."
+msgstr ""
+
+msgid "Please enter a valid fax number"
+msgstr ""
+
+msgid "You are not allowed to delete address book entries."
+msgstr ""
+
+msgid "You are not allowed to delete contacts."
+msgstr ""
+
+msgid "This modem already exists"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Cover page template removed successfully"
+msgstr ""
+
+msgid "Failed to remove cover page template"
+msgstr ""
+
+msgid "Failed to update cover page template"
+msgstr ""
+
+msgid "Cover page template registered successfully"
+msgstr ""
+
+msgid "Title and File are required"
+msgstr ""
+
+msgid "The company does not exist."
+msgstr ""
+
+msgid "The company and its fax numbers were deleted."
+msgstr ""
+
+msgid "Please enter a valid e-mail address."
+msgstr "Пожалуйста, введите правильный адрес эл. почты."
+
+msgid "Fax to Email settings saved"
+msgstr ""
+
+msgid "The system is rebooting. Please wait..."
+msgstr ""
+
+msgid "The system is shutting down. Please wait..."
+msgstr ""
+
+msgid "The command could not be run"
+msgstr ""
+
+msgid "There is no fax archive folder to download."
+msgstr ""
+
+msgid "The database dump could not be made"
+msgstr ""
+
+msgid "Access denied. Superadmin permission required."
+msgstr ""
+
+msgid "SMTP Gateway settings saved successfully."
+msgstr ""
+
+msgid "Printer name and host are required."
+msgstr ""
+
+msgid "Network printer registered successfully."
+msgstr ""
+
+msgid "Printer deleted successfully."
+msgstr ""
+
+msgid "Lifecycle policy saved successfully."
+msgstr ""
+
+msgid "Cloud storage configuration saved successfully."
+msgstr ""
+
+msgid "SAML 2.0 configuration saved successfully."
+msgstr ""
+
+msgid "Catch All"
+msgstr "Перехватить все"
+
+msgid "Never"
+msgstr ""
+
+msgid "Every 3 Months"
+msgstr ""
+
+msgid "Every 6 Months"
+msgstr ""
+
+msgid "You must enter a username"
+msgstr "Необходимо ввести имя пользователя"
+
+msgid "Non-alphanumeric characters are not allowed in username."
+msgstr "Использование непечатных символов в имени запрещено."
+
+#, python-format
+msgid ""
+"Hello %(name)s,\n"
+"\n"
+"This email contains your username and password to log into NamiFAX "
+"(%(url)s)\n"
+"\n"
+"Username - %(username)s\n"
+"Password - %(password)s\n"
+"\n"
+"Please do not respond to this message as it is automatically generated "
+"and is for information purposes only"
+msgstr ""
+
+msgid "New User Details"
+msgstr ""
+
+msgid "The user does not exist."
+msgstr ""
+
+msgid "You cannot delete your own account."
+msgstr ""
+
+msgid "You cannot delete the last superuser."
+msgstr ""
+
+msgid "Please enter a valid number."
+msgstr ""
+
+msgid "Both sent and received faxes"
+msgstr "Отправленные и принятые"
+
+msgid "Only sent faxes"
+msgstr "Только мною посланные"
+
+msgid "Only received faxes"
+msgstr "Только принятые"
+
+msgid "Account is disabled"
+msgstr ""
+
+#, python-format
+msgid "Too many failed attempts. Try again in %(minutes)d minutes."
+msgstr ""
+
+msgid "Invalid or expired verification code."
+msgstr ""
+
+#, python-format
+msgid ""
+"The user account %(user)s has this email associated with it.  A web user "
+"from %(ip)s has just requested that a new password be sent.\n"
+"\n"
+"Your New Password is: %(password)s\n"
+"\n"
+"If this was an error just login with your new password and then change "
+"your password to what you would like it to be."
+msgstr ""
+"Регистрационные данные %(user)s были отправлены на указанный адрес. "
+"Пользователь с адреса %(ip)s запросил выслать новый пароль. Ваш новый "
+"пароль: %(password)s Если это ошибочно, зарегистрируйтесь с помощью "
+"нового пароля и измените его на тот, который желаете."
+
+msgid "Email failed to send"
+msgstr "Ошибка отправки почты"
+
+msgid "Fax Contacts"
+msgstr ""
+
+msgid "Email Contacts"
+msgstr ""
+
+msgid "The fax document was not found."
+msgstr ""
+
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+msgid "Invalid job number."
+msgstr ""
+
+msgid "Any Available Line (Auto)"
+msgstr "Любая доступная линия (Авто)"
+
+msgid "You may not use this line."
+msgstr ""
+
+msgid "Your fax has been successfully queued to be faxed."
+msgstr ""
+
+msgid "Job"
+msgstr ""
+
+msgid "The code is not valid."
+msgstr ""
+
+msgid "The code did not match. Check the time on your phone and try again."
+msgstr ""
+
+msgid "The password is not correct."
+msgstr ""
+
+msgid "Add a note"
+msgstr "Добавить примечание"
+
+msgid "Account active"
+msgstr "Учетная запись активна"
+
+msgid "The cover page was updated"
+msgstr ""
+
+msgid "The modem was created"
+msgstr "Модем создан"
+
+msgid "The modem was deleted"
+msgstr "Модем удален"
+
+msgid "The modem was updated"
+msgstr "Модем обновлен"
+
+msgid "Archive - show"
+msgstr ""
+
+msgid "Inbox - show"
+msgstr ""
+
+msgid "Assign a company name"
+msgstr "Назначить имя компании"
+
+msgid "You must enter a company name"
+msgstr "Необходимо ввести имя компании"
+
+msgid "Contact details saved"
+msgstr "Контакт сохранен"
+
+msgid "Remove entries"
+msgstr "Удалить запись"
+
+msgid "Save list name"
+msgstr "Сохранить имя списка"
+
+msgid "The email failed to send."
+msgstr "Ошибка при отправке почты."
+
+msgid "The email was sent successfully."
+msgstr "Сообщение успешно отправлено."
+
+msgid "Destination fax numbers"
+msgstr "Номер(а) получателя(ей)"
+
+msgid "You must enter an alias"
+msgstr "Необходимо указать псевдоним"
+
+msgid "You must enter a device name"
+msgstr "Необходимо указать имя устройства"
+
+msgid "Modify Job"
+msgstr "Редактирование задания"
+
+msgid "You must enter a name."
+msgstr "Необходимо ввести имя."
+
+msgid "Notify on requeue"
+msgstr "Уведомлять при повторной попытке"
+
+msgid "Forward fax via email"
+msgstr "Переслать факс по электронной почте"
+
+msgid "To person"
+msgstr "Контактное лицо"
+
+msgid "User can delete faxes"
+msgstr "Разрешено удалять факсы"
+
+msgid "User settings have been saved."
+msgstr "Настройки пользователя сохранены."
+
+msgid "Select All Faxes"
+msgstr "Выбрать все"
+
+#~ msgid "High"
+#~ msgstr "High"
+
+#~ msgid "Configure corporate contact identity and transmission routing defaults."
+#~ msgstr ""
+#~ "Настройка профиля корпоративного контакта и"
+#~ " маршрутизации передачи по умолчанию."
+
+#~ msgid "Primary Company Profile"
+#~ msgstr "Основной профиль компании"
+
+#~ msgid "Recipient Contact & Physical Address"
+#~ msgstr "Контакт получателя и фактический адрес"
+
+#~ msgid "City / Postal Region"
+#~ msgstr "Город / Регион"
+
+#~ msgid "Category Tag"
+#~ msgstr "Тег категории"
+
+#~ msgid "General"
+#~ msgstr "Normal"
+
+#~ msgid "Invoices & Billing"
+#~ msgstr "Счета и оплата"
+
+#~ msgid "Legal"
+#~ msgstr "Юридический"
+
+#~ msgid "Description / Internal Notes"
+#~ msgstr "Описание / Внутренние примечания"
+
+#~ msgid "Edit Forwarding Rule"
+#~ msgstr "Редактировать правило пересылки"
+
+#~ msgid "Add Forwarding Rule"
+#~ msgstr "Добавить правило пересылки"
+
+#~ msgid ""
+#~ "Please enter your registered username or"
+#~ " email address below. Password reset "
+#~ "instructions will be dispatched to your"
+#~ " account email address."
+#~ msgstr ""
+#~ "Пожалуйста, введите зарегистрированное имя "
+#~ "пользователя или адрес электронной почты "
+#~ "ниже. Инструкции по сбросу пароля будут"
+#~ " отправлены на ваш адрес электронной "
+#~ "почты."
+
+#~ msgid "Username or Email Address"
+#~ msgstr "Имя пользователя или адрес эл. почты"
+
+#~ msgid "Reset Password"
+#~ msgstr ""
+#~ "Пожалуйста введите Ваш почтовый адрес и"
+#~ " нажмите кнопку Выслать парольНовый пароль"
+#~ " будет выслан немедленно. Используйте его"
+#~ " для доступа."
+
+#~ msgid "Standard (Default)"
+#~ msgstr "Стандартный (по умолчанию)"
+
+#~ msgid "Urgent"
+#~ msgstr "Срочно"
+
+#~ msgid "Confidential"
+#~ msgstr "Конфиденциально"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Low"
+#~ msgstr "Low"
+
+#~ msgid "High (Urgent)"
+#~ msgstr "Высокий (Срочно)"
+
+#~ msgid "Reply to Fax"
+#~ msgstr "Ответить на факс"
+
+#~ msgid "Dispatch quick reply transmission to originating sender"
+#~ msgstr "Отправить быстрый ответ отправителю"
+
+#~ msgid "Regarding (Subject)"
+#~ msgstr "Тема"
+
+#~ msgid "Comments"
+#~ msgstr "Комментарий"
+
+#~ msgid "Destination"
+#~ msgstr "Номер факса"
+
+#~ msgid "Queued"
+#~ msgstr "В очереди"
+
+#~ msgid "Reason"
+#~ msgstr "Причина"
+
+#~ msgid "To send to multiple recipients at once, separate numbers with a comma."
+#~ msgstr ""
+#~ "Для одновременной отправки нескольким "
+#~ "получателям разделяйте номера запятыми."
+
+#~ msgid "Save Modem"
+#~ msgstr "Fax Modems"
+
+#~ msgid "Configure User:"
+#~ msgstr "Настройка пользователя:"
+
+#~ msgid "recipient@example.com (comma separated)"
+#~ msgstr ""
+
+#~ msgid "NamiFAX Transmission Document"
+#~ msgstr ""
+
+#~ msgid "Please find the attached facsimile document."
+#~ msgstr ""
+
+#~ msgid "results"
+#~ msgstr "Reset"
+
+#~ msgid "result"
+#~ msgstr "Reset"
+
+#~ msgid "Keyword"
+#~ msgstr "Ключевому слову"
+
+#~ msgid "Invoices / Orders"
+#~ msgstr "Счета / Заказы"
+
+#~ msgid "Legal / Contracts"
+#~ msgstr "Контакты"
+
+#~ msgid "From Date"
+#~ msgstr "Повернуть"
+
+#~ msgid "To Date"
+#~ msgstr "Повернуть"
+
+#~ msgid "Sent & Received"
+#~ msgstr "Отправленные и принятые"
+
+#~ msgid "Received only"
+#~ msgstr "Только принятые"
+
+#~ msgid "Sent only"
+#~ msgstr "Только отправленные"
+
+#~ msgid "Results"
+#~ msgstr "Reset"
+
+#~ msgid "records"
+#~ msgstr "записей"
+
+#~ msgid "record"
+#~ msgstr "запись"
+
+#~ msgid "No results found"
+#~ msgstr "Результаты не найдены"
+
+#~ msgid "Try adjusting your search terms or date range."
+#~ msgstr "Попробуйте изменить поисковый запрос или диапазон дат."
+
+#~ msgid "Search the Archive"
+#~ msgstr "Поиск в архиве"
+
+#~ msgid "Enter a keyword or filter above and click Search to find fax records."
+#~ msgstr ""
+#~ "Введите ключевое слово или фильтр выше"
+#~ " и нажмите «Поиск» для поиска записей"
+#~ " факсов."
+
+#~ msgid "Showing"
+#~ msgstr "Показано"
+
+#~ msgid "of"
+#~ msgstr "из"
+
+#~ msgid "Fax Viewer"
+#~ msgstr "Просмотр факса"
+
+#~ msgid "Page 1 of"
+#~ msgstr "Страница 1 из"
+
+#~ msgid "FROM:"
+#~ msgstr "ОТ:"
+
+#~ msgid "DATE:"
+#~ msgstr "ДАТА:"
+
+#~ msgid "DEVICE:"
+#~ msgstr "УСТРОЙСТВО:"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "TIFF"
+#~ msgstr "TIFF"
+
+#~ msgid "Total"
+#~ msgstr "Всего"
+
+#~ msgid "Incoming Transmission"
+#~ msgstr "Входящая передача"
+
+#~ msgid "FACSIMILE TRANSMISSION"
+#~ msgstr "ФАКСИМИЛЬНАЯ ПЕРЕДАЧА"
+
+#~ msgid "Date Received:"
+#~ msgstr "Дата приема:"
+
+#~ msgid "Originating Station:"
+#~ msgstr "Станция отправителя:"
+
+#~ msgid "PORT"
+#~ msgstr "Важность"
+
+#~ msgid "High-Resolution Raster Preview"
+#~ msgstr "Растровый предпросмотр высокого разрешения"
+
+#~ msgid "Device Line:"
+#~ msgstr "Линия устройства:"
+
+#~ msgid "Download Original Document"
+#~ msgstr "Скачать исходный документ"
+
+#~ msgid "NamiFAX Enterprise Facsimile Engine"
+#~ msgstr "Корпоративная факсимильная система NamiFAX"
+
+#~ msgid "Archive ID:"
+#~ msgstr "Архив"
+
+#~ msgid "Add contact name or fax number..."
+#~ msgstr ""
+
+#~ msgid "Delete List"
+#~ msgstr "Удалить список"
+
+#~ msgid "Save Changes"
+#~ msgstr "Cover Pages"
+
+#~ msgid "Supported: PDF, TIFF, PostScript, TXT · Max 10 MB"
+#~ msgstr "Поддерживаются: PDF, TIFF, PostScript, TXT · Макс. 10 МБ"
+
+#~ msgid "Auto-select recommended"
+#~ msgstr "Рекомендуется автовыбор"
+
+#~ msgid "Status:"
+#~ msgstr "Статус:"
+
+#~ msgid "Transmitted Successfully (OK)"
+#~ msgstr "Успешно передано (OK)"
+

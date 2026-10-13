@@ -1,0 +1,17 @@
+{% extends "admin_layout.jinja2" %}
+
+{% block title %}- NamiFAX - Admin - Delete User{% endblock %}
+
+{% block content %}
+<div class="max-w-md mx-auto bg-slate-950/60 border border-slate-800/90 rounded-xl p-6 shadow-xs space-y-5 text-xs">
+  <h2 class="text-base font-bold text-white">{{ _('Delete User') }}</h2>
+  {% if error %}<div class="p-3 bg-rose-950/60 border border-rose-500/40 rounded-lg text-rose-300">{{ error }}</div>{% endif %}
+  <p class="text-slate-300">{{ _('Are you sure you want to delete the user') }} <strong class="text-white">{{ user_name }}</strong>?</p>
+  <form action="/admin/users/delete" method="post" class="flex items-center justify-end gap-2">
+    <input type="hidden" name="uid" value="{{ uid }}" />
+    <input type="hidden" name="_submit_check" value="1" />
+    <a href="/admin/users?uid={{ uid }}" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg font-semibold transition">{{ _('Cancel') }}</a>
+    <button type="submit" class="px-5 py-2 bg-rose-700 hover:bg-rose-600 text-white rounded-lg font-bold transition">{{ _('Delete User') }}</button>
+  </form>
+</div>
+{% endblock %}

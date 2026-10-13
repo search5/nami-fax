@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Google Material Design 3 - Button Components */
+  .m3-btn-filled, .inputsubmit {
+    @apply px-5 py-2 bg-m3-primary text-m3-on-primary rounded-m3-full text-xs font-semibold hover:shadow-m3-1 hover:brightness-105 active:scale-95 active:brightness-95 transition-all inline-flex items-center justify-center cursor-pointer border-0 shadow-sm select-none;
+  }
+
+  .m3-btn-tonal, .inputbutton {
+    @apply px-4 py-2 bg-m3-secondary-container text-m3-on-secondary-container rounded-m3-full text-xs font-medium hover:brightness-95 active:scale-95 transition-all inline-flex items-center justify-center cursor-pointer border-0 shadow-2xs select-none;
+  }
+
+  .m3-btn-outlined {
+    @apply px-4 py-2 bg-transparent text-m3-primary rounded-m3-full text-xs font-medium border border-m3-outline/80 hover:bg-m3-primary/10 active:scale-95 transition-all inline-flex items-center justify-center cursor-pointer select-none;
+  }
+
+  /* Google Material Design 3 - Form Control Styling (Outlined TextField) */
+  .m3-textfield, .inputtext, input[type="text"], input[type="password"], select, textarea {
+    @apply border border-m3-outline-variant rounded-m3-sm px-3 py-2 text-sm bg-white text-m3-on-surface placeholder:text-m3-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-m3-primary focus:border-m3-primary transition-all shadow-2xs;
+  }
+
+  /* Google Material Design 3 - Card & Surface Containers */
+  .m3-card, .af-box {
+    @apply rounded-m3-xl border border-m3-outline-variant/60 bg-m3-surface-container-lowest shadow-m3-1 p-6 transition-all;
+  }
+
+  .m3-card-filled {
+    @apply rounded-m3-xl bg-m3-surface-container-highest/60 border border-m3-outline-variant/40 p-6;
+  }
+
+  /* Google Material Design 3 - Chip / Pill Badges */
+  .m3-chip {
+    @apply inline-flex items-center px-3 py-1 rounded-m3-sm text-xs font-medium border border-m3-outline-variant bg-m3-surface-container text-m3-on-surface;
+  }
+
+  .m3-chip-selected {
+    @apply inline-flex items-center px-3.5 py-1.5 rounded-m3-full text-xs font-semibold bg-m3-secondary-container text-m3-on-secondary-container shadow-2xs;
+  }
+
+  /* Google Material Design 3 Dark Theme Components (Admin Appliance Console) */
+  .m3-dark-card {
+    @apply rounded-m3-xl border border-m3-dark-outline-variant/50 bg-m3-dark-surface-container shadow-m3-1 p-6 text-m3-dark-on-surface;
+  }
+
+  .m3-dark-btn-filled {
+    @apply px-5 py-2 bg-m3-dark-primary text-m3-dark-on-primary rounded-m3-full text-xs font-semibold hover:brightness-110 active:scale-95 transition-all inline-flex items-center justify-center cursor-pointer border-0 shadow-sm select-none;
+  }
+
+  .m3-dark-btn-tonal {
+    @apply px-4 py-2 bg-m3-dark-secondary-container text-m3-dark-on-secondary-container rounded-m3-full text-xs font-medium hover:brightness-110 active:scale-95 transition-all inline-flex items-center justify-center cursor-pointer border-0 select-none;
+  }
+
+  .m3-dark-textfield {
+    @apply border border-m3-dark-outline-variant rounded-m3-sm px-3 py-2 text-sm bg-m3-dark-surface-container-low text-m3-dark-on-surface placeholder:text-m3-dark-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-m3-dark-primary focus:border-m3-dark-primary transition-all shadow-inner;
+  }
+}

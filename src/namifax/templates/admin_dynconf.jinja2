@@ -1,0 +1,110 @@
+{% extends "admin_layout.jinja2" %}
+
+{% block title %}- NamiFAX - Admin - Dynamic Configuration{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+  
+  <!-- Header & Actions -->
+  <div class="border-b border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-sky-950 border border-sky-800 flex items-center justify-center text-sky-400 shadow-inner">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-white tracking-tight">{{ _('Dynamic Configuration') }}</h2>
+        <p class="text-xs text-slate-400">{{ _('Manage Caller ID blacklists and transmission rejection rules for modem devices') }}</p>
+      </div>
+    </div>
+
+    <a href="/admin/dynconf" class="inline-flex items-center space-x-1.5 px-4 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg text-xs font-bold shadow-2xs transition">
+      <span>+ {{ _('New Rule') }}</span>
+    </a>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    
+    <!-- Left: Dynconf List -->
+    <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-5 space-y-4">
+      <div class="flex items-center space-x-2 border-b border-slate-800 pb-3">
+        <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+        <h3 class="text-xs font-bold text-white uppercase tracking-wider">{{ _('Blocked Caller IDs') }}</h3>
+      </div>
+
+      <div class="divide-y divide-slate-800/60 border border-slate-800/80 rounded-xl overflow-hidden text-xs">
+        {% for rule in dynconf_rules %}
+          <div class="p-3 flex justify-between items-center hover:bg-slate-900/60 transition {% if selected_rule and selected_rule.dynconf_id == rule.dynconf_id %}bg-slate-800/60 border-l-2 border-l-sky-500{% endif %}">
+            <div>
+              <span class="font-mono font-bold text-rose-400">{{ _('Caller ID:') }} {{ rule.callid }}</span>
+              <span class="text-slate-400 font-mono text-[11px] ml-2">({{ rule.device or _('All Devices') }})</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-[10px] font-mono bg-slate-900 text-slate-400 border border-slate-800 px-2 py-0.5 rounded">ID: {{ rule.dynconf_id }}</span>
+              <a href="/admin/dynconf?dynconf_id={{ rule.dynconf_id }}" class="inline-flex items-center px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-sky-400 text-[11px] font-semibold border border-slate-700 transition">{{ _('Edit') }}</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Right: Dynconf Form (Strict Inputs Sequence & Contract) -->
+    <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-5 space-y-4" id="dynconf-form">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <div class="flex items-center space-x-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <h3 class="text-xs font-bold text-white uppercase tracking-wider">
+            {% if selected_rule %}{{ _('Edit Caller ID Rule') }} #{{ selected_rule.dynconf_id }}{% else %}{{ _('Add Caller ID Rule') }}{% endif %}
+          </h3>
+        </div>
+        {% if selected_rule %}
+          <span class="px-2 py-0.5 bg-amber-950 text-amber-300 border border-amber-800 text-[10px] font-bold rounded">{{ _('EDIT MODE') }}</span>
+        {% else %}
+          <span class="px-2 py-0.5 bg-emerald-950 text-emerald-300 border border-emerald-800 text-[10px] font-bold rounded">{{ _('NEW') }}</span>
+        {% endif %}
+      </div>
+
+      <form action="/admin/dynconf" method="post" class="space-y-4 text-xs">
+        <input type="hidden" name="_submit_check" value="1" />
+        {% if selected_rule %}
+          <input type="hidden" name="dynconf_id" value="{{ selected_rule.dynconf_id }}" />
+        {% endif %}
+
+        <div>
+          <label for="callid" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Caller ID') }} *</label>
+          <input type="text" name="callid" id="callid" required value="{{ selected_rule.callid if selected_rule else '' }}" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white font-mono focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition" placeholder="{{ _('e.g. 5550199 or pattern') }}" />
+        </div>
+
+        <div>
+          <label for="device" class="block font-semibold text-slate-300 text-xs mb-1.5">{{ _('Modem Device') }}</label>
+          <select name="device" id="device" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2 text-xs text-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition">
+            <option value="" {% if not selected_rule or not selected_rule.device %}selected{% endif %}>{{ _('All Devices') }}</option>
+            {% for dev, label in modems %}
+              <option value="{{ dev }}" {% if selected_rule and selected_rule.device == dev %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div class="pt-3 border-t border-slate-800">
+          {% if selected_rule %}
+            <div class="flex items-center justify-between">
+              <button type="submit" name="delete" value="1" class="px-4 py-2 bg-rose-900 hover:bg-rose-800 text-white rounded-lg font-bold text-xs transition" onclick="return confirm('Are you sure you want to delete this rule?');">{{ _('Delete') }}</button>
+              <div class="space-x-2">
+                <a href="/admin/dynconf" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg font-semibold text-xs transition">{{ _('Cancel') }}</a>
+                <button type="submit" name="save" value="1" class="px-6 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-xs shadow-2xs transition">{{ _('Save') }}</button>
+              </div>
+            </div>
+          {% else %}
+            <div class="text-right">
+              <button type="submit" name="create" value="1" class="px-6 py-2 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-xs shadow-2xs transition">{{ _('Save') }}</button>
+            </div>
+          {% endif %}
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

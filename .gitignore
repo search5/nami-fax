@@ -1,4 +1,56 @@
-__pycache__
-/dist
-*.egg-info
-_build
+avantfax/includes/local_config.php
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# uv
+.python-version
+
+# Node / Tailwind
+node_modules/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+._*
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.serena
+node_modules
+.venv
+faxes/
+*.zip
+
+
+# Claude Code agent worktrees
+.claude/worktrees/
+
+# mkdocs build output
+/site/

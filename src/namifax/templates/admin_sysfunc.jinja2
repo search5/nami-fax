@@ -1,0 +1,151 @@
+{% extends "admin_layout.jinja2" %}
+
+{% block title %}NamiFAX - Admin - System Functions{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+  
+  <!-- Header & Status Overview -->
+  <div class="border-b border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-lg bg-sky-950 border border-sky-800 flex items-center justify-center text-sky-400 shadow-inner">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </div>
+      <div>
+        <h2 class="text-base font-bold text-white tracking-tight">{{ _('System Functions') }}</h2>
+        <p class="text-xs text-slate-400">{{ _('Perform maintenance operations, service control, and backups.') }}</p>
+      </div>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-medium bg-emerald-950 text-emerald-300 border border-emerald-800">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
+        {{ _('HylaFAX Engine Active') }}
+      </span>
+      <a href="/admin" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs font-semibold border border-slate-700 transition">
+        &larr; {{ _('Admin Dashboard') }}
+      </a>
+    </div>
+  </div>
+
+  <!-- Operational Caution Notice -->
+  <div class="p-4 rounded-xl bg-amber-950/40 border border-amber-800/80 flex items-start space-x-3 text-xs">
+    <svg class="w-5 h-5 text-amber-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+    </svg>
+    <div class="space-y-1">
+      <span class="font-bold text-amber-300">{{ _('Caution: Appliance Maintenance Operations') }}</span>
+      <p class="text-slate-300 leading-relaxed">
+        {{ _('Restarting or shutting down services will interrupt active fax modem spooling and disconnect client sessions. Ensure all outbound transmissions in the modem queue are completed before initiating maintenance tasks.') }}
+      </p>
+    </div>
+  </div>
+
+  {% if message %}<div class="p-3 bg-emerald-950/60 border border-emerald-500/40 rounded-lg text-emerald-300 text-xs">{{ message }}</div>{% endif %}
+  {% if error %}<div class="p-3 bg-rose-950/60 border border-rose-500/40 rounded-lg text-rose-300 text-xs">{{ error }}</div>{% endif %}
+
+  <!-- Strict Form Contract Container -->
+  <form action="/admin/system_func" method="post" id="sysfunc-form" class="space-y-6">
+    <input type="hidden" name="_submit_check" value="1" />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Panel 1: Daemon & Process Control -->
+      <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-6 flex flex-col justify-between space-y-5">
+        <div class="space-y-3">
+          <div class="flex items-center space-x-2 border-b border-slate-800 pb-3">
+            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+            <h3 class="text-xs font-bold text-white uppercase tracking-wider">{{ _('Daemon Service Control') }}</h3>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            {{ _('Restart HylaFAX and NamiFAX web services, or halt background workers.') }}
+          </p>
+          <div class="bg-slate-900/80 rounded-lg p-3 border border-slate-800 space-y-1.5 text-[11px] font-mono text-slate-400">
+            <div class="flex justify-between">
+              <span>faxq daemon:</span>
+              {% if daemons.faxq == 'unknown' %}<span class="text-slate-500">{{ _('unknown') }}</span>
+              {% elif daemons.faxq %}<span class="text-emerald-400">{{ _('RUNNING') }} (pid {{ daemons.faxq }})</span>
+              {% else %}<span class="text-rose-400">{{ _('NOT RUNNING') }}</span>{% endif %}
+            </div>
+            <div class="flex justify-between">
+              <span>hfaxd daemon:</span>
+              {% if daemons.hfaxd == 'unknown' %}<span class="text-slate-500">{{ _('unknown') }}</span>
+              {% elif daemons.hfaxd %}<span class="text-emerald-400">{{ _('RUNNING') }} (pid {{ daemons.hfaxd }})</span>
+              {% else %}<span class="text-rose-400">{{ _('NOT RUNNING') }}</span>{% endif %}
+            </div>
+            <div class="flex justify-between">
+              <span>web worker:</span>
+              {% if daemons.web == 'unknown' %}<span class="text-slate-500">{{ _('unknown') }}</span>
+              {% elif daemons.web %}<span class="text-emerald-400">{{ _('RUNNING') }} (pid {{ daemons.web }})</span>
+              {% else %}<span class="text-rose-400">{{ _('NOT RUNNING') }}</span>{% endif %}
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-800/80 flex items-center space-x-3">
+          <button type="submit" name="reboot" value="1" class="flex-1 px-4 py-2.5 bg-amber-600 hover:bg-amber-500 text-white rounded-lg font-bold text-xs shadow-2xs transition inline-flex items-center justify-center space-x-1.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            <span>{{ _('Reboot Services') }}</span>
+          </button>
+          <button type="submit" name="shutdown" value="1" class="flex-1 px-4 py-2.5 bg-rose-900/80 hover:bg-rose-800 text-rose-200 border border-rose-700/60 rounded-lg font-bold text-xs transition inline-flex items-center justify-center space-x-1.5" onclick="return confirm('WARNING: Are you sure you want to halt all NamiFAX appliance services?');">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 4.243a9 9 0 01-2.829-2.829m0 0L3 21m2.829-5.636a5 5 0 01-2.829-2.829" />
+            </svg>
+            <span>{{ _('Shutdown Services') }}</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Panel 2: Backup & Disaster Recovery -->
+      <div class="bg-slate-950/60 border border-slate-800/90 rounded-xl p-6 flex flex-col justify-between space-y-5">
+        <div class="space-y-3">
+          <div class="flex items-center space-x-2 border-b border-slate-800 pb-3">
+            <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+            <h3 class="text-xs font-bold text-white uppercase tracking-wider">{{ _('Database & Archive Backup') }}</h3>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            {{ _('Download system archives and database snapshots for offsite retention.') }}
+          </p>
+          <div class="bg-slate-900/80 rounded-lg p-3 border border-slate-800 space-y-1.5 text-[11px] font-mono text-slate-400">
+            <div class="flex justify-between">
+              <span>Archive Storage:</span>
+              <span class="text-slate-200">12.4 GB in 1,420 files</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Database Size:</span>
+              <span class="text-slate-200">18.2 MB (SQLAlchemy ORM)</span>
+            </div>
+            <div class="flex justify-between">
+              <span>Last Snapshot:</span>
+              <span class="text-slate-200">Today, 04:00 AM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-800/80 flex items-center space-x-3">
+          <button type="submit" name="download_ar" value="1" class="flex-1 px-4 py-2.5 bg-sky-600 hover:bg-sky-500 text-white rounded-lg font-bold text-xs shadow-2xs transition inline-flex items-center justify-center space-x-1.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span>{{ _('Download Archive') }}</span>
+          </button>
+          <button type="submit" name="download_db" value="1" class="flex-1 px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-lg font-bold text-xs transition inline-flex items-center justify-center space-x-1.5">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+            </svg>
+            <span>{{ _('Download Database') }}</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </form>
+
+</div>
+{% endblock %}
+

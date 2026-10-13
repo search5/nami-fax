@@ -1,0 +1,2535 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: NamiFAX 4.0.Language: jMIME-Version: 1.Content-Type: "
+"text/plain; charset=utf-Content-Transfer-Encoding: 8bi\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-02 00:54+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+msgid "Address Book"
+msgstr "電子メールアドレス"
+
+msgid "Save frequently used fax numbers for quick access when sending."
+msgstr "送信時にすばやくアクセスできるよう、頻繁に使用するFAX番号を保存します。"
+
+msgid "Company or fax number..."
+msgstr ""
+
+msgid "Search"
+msgstr "検索"
+
+#, fuzzy
+msgid "New Company"
+msgstr "会社名"
+
+msgid "Email Book"
+msgstr "メールアドレス帳"
+
+msgid "Distribution Lists"
+msgstr "宛先リスト"
+
+#, fuzzy
+msgid "Company / Name"
+msgstr "会社名"
+
+msgid "Fax Number"
+msgstr "FAX番号"
+
+msgid "Email"
+msgstr "電子メール"
+
+msgid "Actions"
+msgstr "操作"
+
+msgid "Send Fax"
+msgstr "FAXの送信"
+
+msgid "Edit"
+msgstr "編集"
+
+#, fuzzy
+msgid "No contacts yet"
+msgstr "アドレス帳"
+
+msgid "No contacts matched"
+msgstr "一致する連絡先がありません"
+
+msgid ""
+"Add contacts to quickly select fax numbers when sending without typing "
+"them every time."
+msgstr "連絡先を登録すると、毎回入力することなく送信時にFAX番号をすばやく選択できます。"
+
+msgid "Add First Contact"
+msgstr "最初の連絡先を追加"
+
+#, fuzzy
+msgid "Edit Company"
+msgstr "会社名"
+
+#, fuzzy
+msgid "Add New Company"
+msgstr "会社名"
+
+msgid "Configure the company and every fax number it uses."
+msgstr ""
+
+#, fuzzy
+msgid "Back to Contacts"
+msgstr "アドレス帳"
+
+msgid "Upload contacts file (vCard)"
+msgstr ""
+
+msgid "Upload"
+msgstr "アップロード"
+
+msgid "Company"
+msgstr "会社名"
+
+#, fuzzy
+msgid "Company Name"
+msgstr "会社名"
+
+msgid "e.g. Acme Corporation"
+msgstr ""
+
+msgid "Clear the number to remove it."
+msgstr ""
+
+msgid "Description"
+msgstr "詳細"
+
+msgid "Category"
+msgstr "カテゴリ"
+
+msgid "Location"
+msgstr "部署名"
+
+msgid "Voice Telephone"
+msgstr "電話番号"
+
+msgid "Street Address"
+msgstr "町名・番地"
+
+msgid "Zip / Postal Code"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "Add a Fax Number"
+msgstr ""
+
+msgid "First Fax Number"
+msgstr ""
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Save"
+msgstr "保存"
+
+#, fuzzy
+msgid "Dashboard Overview"
+msgstr "ダッシュボード"
+
+#, fuzzy
+msgid "SYSTEM OPERATIONAL"
+msgstr "システム機能"
+
+msgid ""
+"Real-time status of fax spools, hardware serial modems, and registered "
+"users"
+msgstr "FAXスプール、ハードウェアシリアルモデム、および登録ユーザーのリアルタイムステータス"
+
+msgid "Users"
+msgstr "ユーザー"
+
+msgid "Modems"
+msgstr "モデム"
+
+#, fuzzy
+msgid "DID Routes"
+msgstr "DID/DTMF ルートグループ"
+
+#, fuzzy
+msgid "Logs"
+msgstr "ログアウト"
+
+#, fuzzy
+msgid "Fax Lines"
+msgstr "Fax Modems"
+
+msgid "Hardware Ready"
+msgstr "ハードウェア準備完了"
+
+#, fuzzy
+msgid "Active accounts"
+msgstr "ユーザー"
+
+msgid "Backend Core"
+msgstr "バックエンドコア"
+
+msgid "unknown"
+msgstr ""
+
+msgid "Scheduler"
+msgstr "スケジューラ"
+
+msgid "Running"
+msgstr "実行中"
+
+#, fuzzy
+msgid "Registered User Accounts"
+msgstr "ユーザー"
+
+msgid "Manage Users"
+msgstr "ユーザー管理"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Username"
+msgstr "ユーザー名"
+
+msgid "Last Login"
+msgstr "最終ログイン"
+
+msgid "Server Status"
+msgstr "サーバーステータス"
+
+msgid "Core"
+msgstr "コア"
+
+msgid "Database Engine"
+msgstr "データベースエンジン"
+
+msgid "System Scheduler"
+msgstr "システムスケジューラ"
+
+msgid "Configured Modems"
+msgstr "設定済みモデム"
+
+msgid "Administrator Workflow Guide"
+msgstr "管理者ワークフローガイド"
+
+#, fuzzy
+msgid "Configure Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid ""
+"Route incoming faxes automatically based on recognized Code39 / QR "
+"barcodes"
+msgstr "認識されたCode39 / QRバーコードに基づいて受信FAXを自動的にルーティングします"
+
+#, fuzzy
+msgid "New Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Barcode Routing Rules"
+msgstr "Barcode Routing"
+
+msgid "Barcode:"
+msgstr "バーコード"
+
+msgid "Contact:"
+msgstr "コンタクト"
+
+msgid "None"
+msgstr "なし"
+
+msgid "Printer:"
+msgstr "プリンター:"
+
+#, fuzzy
+msgid "Edit Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "Add Barcode Route"
+msgstr "Barcode Routing"
+
+#, fuzzy
+msgid "EDIT MODE"
+msgstr "編集"
+
+msgid "NEW"
+msgstr "新規"
+
+msgid "Barcode"
+msgstr "バーコード"
+
+msgid "Alias"
+msgstr "エリアス"
+
+#, fuzzy
+msgid "Contact Email"
+msgstr "アドレス帳"
+
+msgid "Printer"
+msgstr "プリンター"
+
+msgid "Fax Categories"
+msgstr "FAXカテゴリを閲覧"
+
+msgid ""
+"Manage classification tags and archival categories for organizing "
+"transmissions"
+msgstr "送信履歴を整理するための分類タグおよびアーカイブカテゴリを管理します"
+
+#, fuzzy
+msgid "New Category"
+msgstr "FAXカテゴリを閲覧"
+
+#, fuzzy
+msgid "Existing Categories"
+msgstr "FAXカテゴリを閲覧"
+
+msgid "Edit Category"
+msgstr "カテゴリを編集"
+
+#, fuzzy
+msgid "Add Category"
+msgstr "FAXカテゴリを閲覧"
+
+msgid "Category Name"
+msgstr "カテゴリ名"
+
+msgid "e.g. Invoices, Contracts"
+msgstr ""
+
+#, fuzzy
+msgid "Configure Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Manage facsimile PostScript cover page templates and layouts"
+msgstr "FAX PostScript送信用紙テンプレートおよびレイアウトを管理します"
+
+#, fuzzy
+msgid "New Cover Page"
+msgstr "送信状を使う"
+
+#, fuzzy
+msgid "Available Cover Pages"
+msgstr "Cover Pages"
+
+#, fuzzy
+msgid "Edit Cover Page"
+msgstr "送信状を使う"
+
+#, fuzzy
+msgid "Add Cover Page"
+msgstr "送信状を使う"
+
+msgid "Title"
+msgstr "タイトル"
+
+msgid "File"
+msgstr "ファイル"
+
+msgid "e.g. custom.ps"
+msgstr ""
+
+msgid "Cover Template Studio: Dynamic Tag References"
+msgstr ""
+
+msgid ""
+"Use these placeholder tags in your PostScript (.ps), HTML (.html), or PDF"
+" templates. The Cover Studio engine automatically substitutes them during"
+" fax rendering."
+msgstr ""
+
+msgid "Dynamic Configuration"
+msgstr "動的構成(DynConf)"
+
+msgid ""
+"Manage Caller ID blacklists and transmission rejection rules for modem "
+"devices"
+msgstr "モデムデバイスの発信者番号(Caller ID)ブラックリストおよび着信拒否ルールを管理します"
+
+msgid "New Rule"
+msgstr "新規ルール"
+
+msgid "Blocked Caller IDs"
+msgstr "着信拒否された発信者番号"
+
+msgid "Caller ID:"
+msgstr "発信者番号:"
+
+msgid "All Devices"
+msgstr "すべてのデバイス"
+
+msgid "Edit Caller ID Rule"
+msgstr "発信者番号ルールを編集"
+
+msgid "Add Caller ID Rule"
+msgstr "発信者番号ルールを追加"
+
+msgid "Caller ID"
+msgstr "発信者番号"
+
+msgid "e.g. 5550199 or pattern"
+msgstr ""
+
+msgid "Modem Device"
+msgstr "モデムデバイス"
+
+#, fuzzy
+msgid "Fax to Email"
+msgstr "Fax Modems"
+
+msgid ""
+"Configure automated inbound fax forwarding and PDF dispatch rules mapped "
+"by company"
+msgstr "企業ごとにマッピングされた受信FAX自動転送およびPDF配信ルールを設定します"
+
+msgid "Add companies in the Address Book"
+msgstr ""
+
+msgid "Company Forwarding Rules"
+msgstr "企業転送ルール"
+
+msgid "fax numbers"
+msgstr "FAX 番号"
+
+msgid "Email:"
+msgstr "メール:"
+
+msgid "Edit Forwarding Rules"
+msgstr ""
+
+msgid "Forwarding Rules"
+msgstr ""
+
+msgid "This company has no fax numbers yet. Add them in the Address Book."
+msgstr ""
+
+msgid ""
+"Select a company on the left to set where the faxes received on each of "
+"its numbers are sent."
+msgstr ""
+
+#, fuzzy
+msgid "Control Panel"
+msgstr "送信状を使う"
+
+msgid "User Portal"
+msgstr "User Portal"
+
+msgid "Inbox"
+msgstr "受信"
+
+#, fuzzy
+msgid "Overview"
+msgstr "FAXの閲覧"
+
+msgid "Dashboard"
+msgstr "ダッシュボード"
+
+msgid "Access Control"
+msgstr "アクセス制御"
+
+msgid "User Accounts"
+msgstr "ユーザー"
+
+msgid "Hardware & Lines"
+msgstr "ハードウェアおよび回線"
+
+msgid "Fax Modems"
+msgstr "Fax Modems"
+
+msgid "Network Printers"
+msgstr ""
+
+#, fuzzy
+msgid "Inbound Routing"
+msgstr "DID/DTMF ルートグループ"
+
+msgid "DID Routing"
+msgstr "DID/DTMF ルートグループ"
+
+msgid "Barcode Routing"
+msgstr "Barcode Routing"
+
+msgid "Content & Templates"
+msgstr "コンテンツおよびテンプレート"
+
+msgid "Cover Pages"
+msgstr "Cover Pages"
+
+msgid "Security & System"
+msgstr "セキュリティおよびシステム"
+
+msgid "Blacklist (DynConf)"
+msgstr "Blacklist (DynConf)"
+
+msgid "System Audit Logs"
+msgstr "System Audit Logs"
+
+msgid "System Functions"
+msgstr "システム機能"
+
+msgid "SMTP Gateway"
+msgstr ""
+
+msgid "Storage & Cloud"
+msgstr ""
+
+msgid "SAML 2.0 SSO"
+msgstr ""
+
+msgid "Logout"
+msgstr "ログアウト"
+
+msgid "Admin Control Panel"
+msgstr "管理者コントロールパネル"
+
+msgid "Appliance Engine Online"
+msgstr "アプライアンスエンジン稼働中"
+
+msgid ""
+"Configure Modems hardware devices, physical serial ports, and print-"
+"forwarding rules"
+msgstr "モデムハードウェアデバイス、物理シリアルポート、および印刷転送ルールを設定します"
+
+#, fuzzy
+msgid "Configure Modems"
+msgstr "Fax Modems"
+
+msgid "Active Modem Lines"
+msgstr "アクティブなモデム回線"
+
+msgid "Device"
+msgstr "デバイス"
+
+msgid "Contact"
+msgstr "コンタクト"
+
+msgid "Status"
+msgstr "ステータス"
+
+#, fuzzy
+msgid "Edit Modem"
+msgstr "Fax Modems"
+
+msgid "Configure Modems Device"
+msgstr "モデムデバイスを設定"
+
+msgid "e.g. ttyS0"
+msgstr ""
+
+msgid "e.g. Main Inbound Line"
+msgstr ""
+
+msgid "Are you sure you want to delete this modem?"
+msgstr ""
+
+msgid "Create"
+msgstr "新規作成"
+
+msgid "Appliance Note:"
+msgstr "アプライアンスの注記:"
+
+msgid ""
+"Modems configured here must correspond to physical RS-232 serial devices,"
+" USB modems, or virtual IAX modems recognized by the underlying HylaFAX "
+"server."
+msgstr "ここで設定するモデムは、ベースとなるHylaFAXサーバーによって認識される物理RS-232シリアルデバイス、USBモデム、または仮想IAXモデムに対応している必要があります。"
+
+msgid "Direct RAW socket & IPP network printing dispatch for received faxes"
+msgstr ""
+
+msgid "Add Network Printer"
+msgstr ""
+
+msgid "Printer Name"
+msgstr ""
+
+msgid "e.g. Office HP LaserJet"
+msgstr ""
+
+msgid "Protocol"
+msgstr ""
+
+msgid "Host / IP"
+msgstr ""
+
+#, fuzzy
+msgid "Port"
+msgstr "優先度"
+
+msgid "Queue Name (Optional)"
+msgstr ""
+
+msgid "2nd Floor Accounting Printer"
+msgstr ""
+
+msgid "Register Printer"
+msgstr ""
+
+msgid "Configured Printers"
+msgstr ""
+
+msgid "No network printers configured yet. Add one using the form on the left."
+msgstr ""
+
+msgid "Endpoint"
+msgstr ""
+
+msgid "Test Print"
+msgstr ""
+
+msgid "Are you sure you want to delete this printer?"
+msgstr ""
+
+#, fuzzy
+msgid "Configure DID Routing"
+msgstr "DID/DTMF ルートグループ"
+
+msgid ""
+"Route incoming faxes by Direct Inward Dialing (DID) extension to specific"
+" email boxes or printers"
+msgstr "ダイヤルイン(DID)内線番号に基づいて受信FAXを特定のメールボックスまたはプリンターにルーティングします"
+
+#, fuzzy
+msgid "New DID Route"
+msgstr "DID/DTMF ルートグループ"
+
+#, fuzzy
+msgid "Active DID Routing Rules"
+msgstr "DID/DTMF ルートグループ"
+
+msgid "Route Code"
+msgstr "ルーティングコード"
+
+msgid "Action"
+msgstr "操作"
+
+msgid "Configure Routing Rule"
+msgstr "ルーティングルールを設定"
+
+msgid "e.g. 1000"
+msgstr ""
+
+msgid "e.g. Sales Direct Line"
+msgstr ""
+
+msgid "-- None --"
+msgstr "-- なし --"
+
+msgid "Reset"
+msgstr "Reset"
+
+msgid ""
+"DID (Direct Inward Dialing) routing automatically redirects incoming "
+"transmissions matching extension patterns directly to mapped operator "
+"inboxes or physical printers."
+msgstr ""
+"DID (Direct Inward Dialing) "
+"ルーティングは、内線番号パターンに一致する受信FAXを、マッピングされた担当者の受信トレイまたは物理プリンターに直接自動転送します。"
+
+msgid "SAML 2.0 Enterprise SSO"
+msgstr ""
+
+msgid ""
+"Single Sign-On integration with Okta, Microsoft Entra ID (Azure AD), "
+"Google Workspace & Keycloak"
+msgstr ""
+
+msgid "Download SP Metadata XML"
+msgstr ""
+
+msgid "Identity Provider (IdP) Settings"
+msgstr ""
+
+msgid "Enable SAML 2.0 Single Sign-On"
+msgstr ""
+
+msgid "Shows \"SAML 2.0 Enterprise SSO\" login option on login page"
+msgstr ""
+
+msgid "IdP Entity ID / Issuer"
+msgstr ""
+
+msgid "IdP Single Sign-On Service URL (HTTP-Redirect / POST)"
+msgstr ""
+
+msgid "IdP Public X.509 Certificate (PEM)"
+msgstr ""
+
+msgid "Just-in-Time (JIT) Provisioning"
+msgstr ""
+
+msgid "Auto-create account on first login"
+msgstr ""
+
+msgid "Default Role for JIT Users"
+msgstr ""
+
+msgid "Save SAML Configuration"
+msgstr ""
+
+msgid "NamiFAX SP Endpoints"
+msgstr ""
+
+msgid ""
+"Copy these endpoints into your Identity Provider (Azure AD, Okta, Google)"
+" console:"
+msgstr ""
+
+msgid "Assertion Consumer Service (ACS) URL"
+msgstr ""
+
+msgid "SP Entity ID / Metadata URL"
+msgstr ""
+
+msgid "NameID Format"
+msgstr ""
+
+msgid "External SMTP Gateway"
+msgstr ""
+
+msgid ""
+"Configure external mail delivery server for inbound fax notifications and"
+" user alerts"
+msgstr ""
+
+msgid "Diagnostics Result"
+msgstr ""
+
+msgid "Server Connection & Security"
+msgstr ""
+
+msgid "SMTP Host / Server"
+msgstr ""
+
+msgid "Encryption Protocol"
+msgstr ""
+
+msgid "None (Plain)"
+msgstr ""
+
+msgid "STARTTLS (587)"
+msgstr ""
+
+msgid "SSL / TLS (465)"
+msgstr ""
+
+msgid "Requires SMTP Authentication"
+msgstr ""
+
+#, fuzzy
+msgid "Username / Login"
+msgstr "ユーザー名"
+
+#, fuzzy
+msgid "Password / App Key"
+msgstr "パスワード"
+
+msgid "Default Sender Profile & Signatures"
+msgstr ""
+
+#, fuzzy
+msgid "From Email Address"
+msgstr "メールアドレス"
+
+#, fuzzy
+msgid "From Display Name"
+msgstr "会社名"
+
+msgid "NamiFAX Corporate Dispatcher"
+msgstr ""
+
+msgid "Email Signature (Plaintext)"
+msgstr ""
+
+msgid "Sent automatically by NamiFAX Gateway."
+msgstr ""
+
+msgid "Last updated"
+msgstr "最終更新"
+
+#, fuzzy
+msgid "Save Gateway Settings"
+msgstr "設定"
+
+msgid "Diagnostic Self-Test"
+msgstr ""
+
+msgid ""
+"Verify server reachability, TLS handshake, credentials and message "
+"dispatch in real time."
+msgstr ""
+
+msgid "Target Recipient Email"
+msgstr ""
+
+#, fuzzy
+msgid "Send Diagnostic Email"
+msgstr "FAXの送信"
+
+msgid "Enterprise storage lifecycle policies and S3 / MinIO / GCS cloud backends"
+msgstr ""
+
+msgid "Storage Lifecycle Policies"
+msgstr ""
+
+msgid "Purge Local TIFFs After (Days)"
+msgstr ""
+
+msgid ""
+"Frees local disk space if a PDF version exists. 0 = immediate after "
+"conversion."
+msgstr ""
+
+msgid "Full Fax Retention (Days)"
+msgstr ""
+
+msgid ""
+"Purge entire fax record and archival files after specified days. 0 = keep"
+" forever."
+msgstr ""
+
+msgid "Synchronize remote cloud object deletion on fax purge"
+msgstr ""
+
+msgid "Save Lifecycle Policy"
+msgstr ""
+
+msgid "Cloud Storage Backend"
+msgstr ""
+
+msgid "Storage Provider"
+msgstr ""
+
+msgid "Local Filesystem (Default)"
+msgstr ""
+
+msgid "Endpoint URL (MinIO / S3 Compatible)"
+msgstr ""
+
+msgid "Region"
+msgstr ""
+
+msgid "Bucket Name"
+msgstr ""
+
+msgid "Access Key ID"
+msgstr ""
+
+msgid "Secret Access Key"
+msgstr ""
+
+msgid "Key Prefix"
+msgstr ""
+
+msgid "Save Storage Config"
+msgstr ""
+
+msgid "Test Connection"
+msgstr ""
+
+msgid "Perform maintenance operations, service control, and backups."
+msgstr "メンテナンス操作、サービスの制御、およびバックアップを実行します。"
+
+msgid "HylaFAX Engine Active"
+msgstr "HylaFAXエンジン稼働中"
+
+#, fuzzy
+msgid "Admin Dashboard"
+msgstr "ダッシュボード"
+
+msgid "Caution: Appliance Maintenance Operations"
+msgstr "注意: アプライアンスのメンテナンス操作"
+
+msgid ""
+"Restarting or shutting down services will interrupt active fax modem "
+"spooling and disconnect client sessions. Ensure all outbound "
+"transmissions in the modem queue are completed before initiating "
+"maintenance tasks."
+msgstr "サービスを再起動またはシャットダウンすると、アクティブなFAXモデムのスプール処理が中断され、クライアントセッションが切断されます。メンテナンス作業を開始する前に、モデムキュー内のすべての送信が完了していることを確認してください。"
+
+msgid "Daemon Service Control"
+msgstr "デーモンサービス制御"
+
+msgid "Restart HylaFAX and NamiFAX web services, or halt background workers."
+msgstr "HylaFAXおよびNamiFAX Webサービスを再起動するか、バックグラウンドワーカーを停止します。"
+
+msgid "Reboot Services"
+msgstr "サービスを再起動"
+
+msgid "Shutdown Services"
+msgstr "サービスをシャットダウン"
+
+msgid "Database & Archive Backup"
+msgstr "データベースおよびアーカイブのバックアップ"
+
+msgid "Download system archives and database snapshots for offsite retention."
+msgstr "オフサイト保存用にシステムアーカイブとデータベーススナップショットをダウンロードします。"
+
+msgid "Download Archive"
+msgstr "アーカーブのダウンロード"
+
+msgid "Download Database"
+msgstr "データベースのダウンロード"
+
+msgid "System Logs"
+msgstr "システムログ"
+
+msgid "Audit logs and HylaFAX server operational event traces"
+msgstr "監査ログおよびHylaFAXサーバーの運用イベントトレース"
+
+msgid "Keywords:"
+msgstr "キーワード:"
+
+msgid "Search text..."
+msgstr ""
+
+msgid "Date:"
+msgstr "日付:"
+
+msgid "Date"
+msgstr "日付"
+
+msgid "Log Text"
+msgstr "ログ本文"
+
+msgid "No system logs found matching criteria."
+msgstr "条件に一致するシステムログが見つかりませんでした。"
+
+msgid "Transmissions and server events will be streamed here in real time."
+msgstr "送信履歴およびサーバーイベントがここにリアルタイムで配信されます。"
+
+msgid "Delete User"
+msgstr "ユーザーの削除"
+
+msgid "Are you sure you want to delete the user"
+msgstr ""
+
+msgid "Manage system operator credentials, access permissions, and route mapping"
+msgstr "システムオペレーターの認証情報、アクセス権限、およびルーティングマッピングを管理します"
+
+msgid "Create New User"
+msgstr "新規ユーザーを作成"
+
+msgid "Last IP"
+msgstr "最終IPアドレス"
+
+msgid "Superuser"
+msgstr "スーパーユーザー"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "YES"
+msgstr "はい"
+
+msgid "NO"
+msgstr "いいえ"
+
+msgid "users"
+msgstr "ユーザー"
+
+msgid "user"
+msgstr "ユーザー"
+
+msgid "Modify User"
+msgstr "ユーザーの更新"
+
+msgid "New User"
+msgstr "新しいユーザー"
+
+msgid "Full Name"
+msgstr "氏名"
+
+msgid "Password"
+msgstr "パスワード"
+
+msgid "Leave empty to keep the current password (a new user is sent a random one)"
+msgstr ""
+
+msgid "Email Address"
+msgstr "メールアドレス"
+
+msgid "Password expiration cycle"
+msgstr ""
+
+msgid "Language"
+msgstr "言語"
+
+msgid "Password can be reused"
+msgstr ""
+
+msgid "My Company"
+msgstr ""
+
+msgid "My Location"
+msgstr ""
+
+msgid "My Voice Number"
+msgstr ""
+
+msgid "My Fax Number"
+msgstr ""
+
+msgid "TSI ID"
+msgstr "発信元情報(TSI信号)"
+
+msgid "Select Cover Page"
+msgstr ""
+
+msgid "New fax sound"
+msgstr ""
+
+msgid "Permissions & Capabilities"
+msgstr "権限と機能"
+
+msgid "Administrator Console"
+msgstr "管理者コンソール"
+
+msgid "Superuser Rights"
+msgstr "スーパーユーザー権限"
+
+msgid "Send on Any Modem"
+msgstr "すべてのモデムから送信可能"
+
+msgid "You must first create a DID/DTMF group"
+msgstr ""
+
+msgid "You must first create a modem"
+msgstr ""
+
+#, fuzzy
+msgid "Categories"
+msgstr "FAXカテゴリを閲覧"
+
+msgid "You must first create a category"
+msgstr ""
+
+#, fuzzy
+msgid "Archive Search"
+msgstr "送信履歴"
+
+msgid "Search all sent and received fax records by date, company, or fax number."
+msgstr "日付、会社名、またはFAX番号別にすべての送受信FAXレコードを検索します。"
+
+#, fuzzy
+msgid "Search Filters"
+msgstr "検索"
+
+msgid ""
+"Leave filters empty to search all records. Narrow results by adding more "
+"criteria."
+msgstr "すべてのレコードを検索するにはフィルターを空のままにします。条件を追加して結果を絞り込むことができます。"
+
+msgid "Company search"
+msgstr "会社検索"
+
+msgid "Company list"
+msgstr "会社リスト"
+
+#, fuzzy
+msgid "Fax ID"
+msgstr "Fax Modems"
+
+msgid "e.g. 104"
+msgstr ""
+
+msgid "Keywords"
+msgstr "キーワード"
+
+msgid "Company, number, notes..."
+msgstr ""
+
+#, fuzzy
+msgid "All Categories"
+msgstr "FAXカテゴリを閲覧"
+
+msgid "User"
+msgstr "ユーザー"
+
+msgid "Start Date"
+msgstr "開始日時"
+
+msgid "End Date"
+msgstr "終了日時"
+
+#, fuzzy
+msgid "Direction"
+msgstr "DID/DTMF ルートグループ"
+
+#, python-format
+msgid "Total %(n)d results found."
+msgstr "合計 %(n)d 件見つかりました。"
+
+msgid "Pages"
+msgstr "ページ"
+
+msgid "Download PDF"
+msgstr "PDFをダウンロード"
+
+msgid "Reply to fax"
+msgstr "FAXの返信"
+
+#, fuzzy
+msgid "Re-send"
+msgstr "送信"
+
+msgid "Email PDF"
+msgstr "PDFを電子メールで送信"
+
+msgid "Add note to fax"
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid "Delete fax"
+msgstr ""
+
+msgid "Select"
+msgstr "タイトル"
+
+msgid "Unknown"
+msgstr ""
+
+#, fuzzy
+msgid "Received"
+msgstr "送信履歴"
+
+msgid "Sent"
+msgstr ""
+
+msgid "No results were found"
+msgstr "見つかりませんでした。"
+
+msgid "Reset filters"
+msgstr "フィルターをリセット"
+
+msgid "Previous"
+msgstr ""
+
+msgid "Next"
+msgstr "次へ"
+
+msgid "Name the sender"
+msgstr ""
+
+msgid "Select Contact Record"
+msgstr "連絡先レコードを選択"
+
+msgid "Or type a new company name"
+msgstr ""
+
+msgid "Delete selected faxes?"
+msgstr ""
+
+msgid "faxes"
+msgstr "FAX"
+
+msgid "No contacts found"
+msgstr ""
+
+msgid "Add"
+msgstr "追加"
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "Organize recipient groups for mass fax broadcasting and notifications."
+msgstr "FAX一斉同報送信および通知用の宛先グループを整理します。"
+
+msgid "Create List"
+msgstr "リストを作成"
+
+msgid "Saved Distribution Lists"
+msgstr "保存された配信リスト"
+
+msgid "members"
+msgstr "人のメンバー"
+
+msgid "Group Members & Settings"
+msgstr "グループメンバーと設定"
+
+msgid "Create New Distribution List"
+msgstr "新規配信リストを作成"
+
+msgid "List Name"
+msgstr "リスト名"
+
+msgid "e.g. Executive Sales Team"
+msgstr ""
+
+msgid "Group Members (Contacts & Fax Numbers)"
+msgstr "グループメンバー (連絡先およびFAX番号)"
+
+#, fuzzy
+msgid "contacts assigned"
+msgstr "アドレス帳"
+
+msgid "No contacts assigned to this list yet."
+msgstr "このリストに割り当てられた連絡先はまだありません。"
+
+msgid "Add Member"
+msgstr "メンバーを追加"
+
+msgid "Delete this distribution list?"
+msgstr "この宛先リストを削除しますか?"
+
+msgid "Edit Distribution List"
+msgstr "配信リストを編集"
+
+msgid "Create Distribution List"
+msgstr "配信リストを作成"
+
+msgid "Configure broadcast list parameters and recipient group members."
+msgstr "同報送信リストのパラメータと宛先グループメンバーを設定します。"
+
+msgid "Back to Lists"
+msgstr "リスト一覧に戻る"
+
+msgid "Distribution List Profile"
+msgstr "配信リストのプロファイル"
+
+msgid "e.g. Finance Operations"
+msgstr ""
+
+msgid "Enrolled Members"
+msgstr "登録済みメンバー"
+
+msgid "List ID:"
+msgstr "リストID:"
+
+msgid "No contacts in this list."
+msgstr "このリストに連絡先はありません。"
+
+msgid "Add contacts to the list"
+msgstr ""
+
+msgid "Changes saved"
+msgstr "更新しました。"
+
+msgid "Back"
+msgstr "戻る"
+
+#, fuzzy
+msgid "Email Address Book"
+msgstr "電子メールアドレス"
+
+msgid "Manage email recipients, transmission routing, and contacts directory."
+msgstr "メールの宛先、送信ルーティング、および連絡先ディレクトリを管理します。"
+
+#, fuzzy
+msgid "New Contact"
+msgstr "アドレス帳"
+
+msgid "Contacts"
+msgstr "アドレス帳"
+
+msgid "recipients"
+msgstr "人の受信者"
+
+#, fuzzy
+msgid "Contact Name"
+msgstr "アドレス帳"
+
+msgid "Company Affiliation"
+msgstr "所属会社"
+
+msgid ""
+"No email contacts found in the directory. Click \"+ New Contact\" to "
+"register one."
+msgstr "ディレクトリにメール連絡先が見つかりません。「+ 新規連絡先」をクリックして登録してください。"
+
+msgid "Email Book - Edit Email Contact"
+msgstr "メールアドレス帳 - メール連絡先の編集"
+
+msgid "Manage contact information and company affiliation in Email Book."
+msgstr "メールアドレス帳で連絡先情報と所属会社を管理します。"
+
+msgid "Back to Email Book"
+msgstr "メールアドレス帳に戻る"
+
+msgid "Contact Profile Details"
+msgstr "連絡先プロファイル詳細"
+
+msgid "John Doe"
+msgstr ""
+
+msgid "New Destination"
+msgstr "新しい宛先"
+
+msgid "Priority"
+msgstr "優先度"
+
+msgid "Modem / Device"
+msgstr ""
+
+msgid "Number of tries"
+msgstr "リトライ回数"
+
+msgid "Expire after"
+msgstr ""
+
+msgid "Now"
+msgstr "現在"
+
+msgid "Minutes"
+msgstr "分"
+
+msgid "Hours"
+msgstr "時"
+
+msgid "Days"
+msgstr "日"
+
+msgid "Schedule Send Time"
+msgstr ""
+
+#, fuzzy
+msgid "Lost Password"
+msgstr "パスワード"
+
+msgid "Account Recovery Assistance"
+msgstr "アカウント復旧サポート"
+
+msgid "Back to Login"
+msgstr "ログインに戻る"
+
+msgid "Your password will be sent to the given e-mail address."
+msgstr ""
+
+msgid "Once you have received your new password you can login in and change it."
+msgstr ""
+
+msgid "Login"
+msgstr "ログイン"
+
+msgid ""
+"Please enter your e-mail address then click on the Send Password button. "
+"You will receive a new password shortly. Use this new password to access "
+"the site."
+msgstr ""
+
+msgid "E-mail address"
+msgstr "電子メールアドレス"
+
+msgid "Send Password"
+msgstr "パスワードの送信"
+
+msgid "Received faxes appear here automatically in real time."
+msgstr "受信したFAXはここにリアルタイムで自動的に表示されます。"
+
+msgid "Faxes"
+msgstr "FAX"
+
+msgid "Fax"
+msgstr "FAX"
+
+#, fuzzy
+msgid "Archive Selected"
+msgstr "送信履歴"
+
+msgid "Delete Selected"
+msgstr "選択項目を削除"
+
+msgid "fax"
+msgstr "FAX"
+
+#, fuzzy
+msgid "Preview"
+msgstr "FAXの閲覧"
+
+msgid "Sender"
+msgstr "送信先"
+
+msgid "Page"
+msgstr "ページ"
+
+msgid "of"
+msgstr "/"
+
+msgid "This number belongs to several companies. Which one is it?"
+msgstr ""
+
+msgid "Unknown Sender"
+msgstr ""
+
+msgid "View"
+msgstr "FAXの閲覧"
+
+msgid "Reply"
+msgstr "FAXの返信"
+
+msgid "Archive"
+msgstr "送信履歴"
+
+msgid "Email Fax"
+msgstr "FAXをメール送信"
+
+msgid "Rotate"
+msgstr "FAXの回転"
+
+msgid "Download TIFF"
+msgstr "TIFFをダウンロード"
+
+msgid "0 FAXES"
+msgstr "FAX 0件"
+
+msgid ""
+"There are no incoming faxes waiting in your inbox. Incoming transmissions"
+" will automatically appear here in real time."
+msgstr "受信トレイに待機中のFAXはありません。新しく受信したFAXはここにリアルタイムで自動的に表示されます。"
+
+msgid "Send Your First Fax"
+msgstr "最初のFAXを送信"
+
+#, fuzzy
+msgid "Search Archive"
+msgstr "送信履歴"
+
+msgid "Getting Started with NamiFAX"
+msgstr "NamiFAXの利用開始"
+
+msgid "Receive Faxes"
+msgstr "FAXを受信"
+
+msgid ""
+"When someone sends a fax to this system's number, it will appear here "
+"automatically."
+msgstr "このシステムの番号にFAXが送信されると、ここに自動的に表示されます。"
+
+#, fuzzy
+msgid "Send Faxes"
+msgstr "FAXの送信"
+
+msgid "Click Send Fax to transmit a PDF or image document to any fax number."
+msgstr "「FAX送信」をクリックして、PDFまたは画像ドキュメントを任意のFAX番号に送信します。"
+
+msgid "Manage Records"
+msgstr "レコード管理"
+
+msgid ""
+"Download faxes as PDF, archive them for later, or search all records in "
+"the Archive."
+msgstr "FAXをPDFとしてダウンロードしたり、後で参照できるようにアーカイブしたり、アーカイブ内のすべてのレコードを検索できます。"
+
+msgid "Archive search"
+msgstr ""
+
+msgid "new fax"
+msgstr ""
+
+msgid "Outbox"
+msgstr "送信"
+
+msgid "lines"
+msgstr ""
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Sign in"
+msgstr "ログイン"
+
+msgid "Enter your credentials to continue."
+msgstr "続行するには認証情報を入力してください。"
+
+#, fuzzy
+msgid "System Online"
+msgstr "システム機能"
+
+msgid "Enter your username"
+msgstr ""
+
+msgid "Forgot password?"
+msgstr ""
+"電子メールアドレスを入力して、パスワードの送信 "
+"ボタンをクリックしてください。入力の電子メールアドレスに、新しいパスワードが送信されます。そして、新しいパスワードでログインしてください。"
+
+msgid "Enter your password"
+msgstr ""
+
+msgid "Contact your system administrator if you need an account."
+msgstr "アカウントが必要な場合は、システム管理者にお問い合わせください。"
+
+msgid "Or continue with"
+msgstr ""
+
+msgid "Sign in with Passkey (Touch ID / Security Key)"
+msgstr ""
+
+msgid "SAML 2.0 Enterprise SSO (Okta / Entra ID)"
+msgstr ""
+
+msgid "Two-Factor Authentication"
+msgstr ""
+
+msgid ""
+"Enter the 6-digit code from your authenticator app or an emergency "
+"recovery code."
+msgstr ""
+
+#, fuzzy
+msgid "Authentication Code"
+msgstr "氏名"
+
+msgid "123456 or 8-char backup code"
+msgstr ""
+
+msgid "Verify & Log In"
+msgstr ""
+
+msgid "Sign out?"
+msgstr ""
+
+msgid "Assign Company Name"
+msgstr "会社名を割り当て"
+
+msgid "Associate document with registered enterprise contact"
+msgstr "ドキュメントを登録済みの企業連絡先に関連付けます"
+
+msgid "Search Company Name"
+msgstr "会社名を検索"
+
+msgid "Type company name to filter..."
+msgstr ""
+
+#, fuzzy
+msgid "Delete Fax"
+msgstr "削除"
+
+msgid "Are you sure you want to delete this fax?"
+msgstr "このFAXを削除してもよろしいですか？"
+
+msgid "This operation will permanently purge the fax document archive."
+msgstr "この操作により、FAXドキュメントのアーカイブが完全に削除されます。"
+
+msgid "Dispatch PDF document attachment to email recipients"
+msgstr "PDFドキュメント添付ファイルをメール受信者に配信します"
+
+msgid "From"
+msgstr "発信元"
+
+msgid "Recipients"
+msgstr "宛先"
+
+msgid "Choose from contacts"
+msgstr ""
+
+msgid "CC"
+msgstr ""
+
+msgid "BCC"
+msgstr ""
+
+msgid "Subject"
+msgstr "タイトル"
+
+msgid "PDF file name"
+msgstr "PDF ファイル名"
+
+msgid "Message"
+msgstr "メッセージ"
+
+msgid "Archive fax"
+msgstr ""
+
+msgid "Send"
+msgstr "送信"
+
+msgid "Append internal administrative note or comments"
+msgstr "内部管理用メモまたはコメントを追加します"
+
+msgid "Note / Description"
+msgstr "メモ / 説明"
+
+msgid "Enter transaction note or dispatch comments..."
+msgstr ""
+
+msgid "Transmission Report"
+msgstr "送信レポート"
+
+msgid "Official facsimile delivery confirmation receipt"
+msgstr "公式FAX送信確認証"
+
+msgid "Print"
+msgstr "印刷"
+
+msgid "Company:"
+msgstr "会社名"
+
+msgid "Pages:"
+msgstr "ページ数:"
+
+msgid "Fax Number:"
+msgstr ""
+
+msgid "Database unavailable"
+msgstr ""
+
+msgid ""
+"The database cannot be reached right now. This page tries again every 10 "
+"seconds."
+msgstr ""
+
+msgid "Faxes currently queued or being transmitted."
+msgstr "現在キューにあるか送信中のFAXです。"
+
+msgid ""
+"This page shows only faxes that are queued or in progress. Once "
+"delivered, they are removed from this list. Find completed records in the"
+msgstr "このページには、キューにあるか送信中のFAXのみが表示されます。配信が完了すると、このリストから削除されます。完了したレコードは次で確認できます:"
+
+msgid "jobs in progress"
+msgstr "件のジョブが進行中"
+
+msgid "job in progress"
+msgstr "件のジョブが進行中"
+
+msgid "Job ID"
+msgstr "ジョブID"
+
+msgid "Dials"
+msgstr "番号"
+
+msgid "TTS"
+msgstr ""
+
+msgid "Modify"
+msgstr ""
+
+msgid "Kill job"
+msgstr "削除ジョブ番号："
+
+msgid "Kill"
+msgstr ""
+
+msgid "Failed Transmissions"
+msgstr "送信失敗一覧"
+
+msgid "Review the number or retry below."
+msgstr "番号を確認するか、以下で再試行してください。"
+
+msgid "Retry"
+msgstr "Retry"
+
+msgid "No jobs in queue"
+msgstr "キュー内のジョブはありません"
+
+msgid ""
+"There are no faxes waiting to be sent. Send a fax to see its progress "
+"here."
+msgstr "送信待ちのFAXはありません。FAXを送信すると、ここに進行状況が表示されます。"
+
+#, fuzzy
+msgid "Send a Fax"
+msgstr "FAXの送信"
+
+#, fuzzy
+msgid "Password Expired"
+msgstr "パスワード"
+
+msgid "Security Credentials Renewal"
+msgstr "セキュリティ認証情報の更新"
+
+msgid "Action Required"
+msgstr "必要な操作"
+
+msgid ""
+"Your password has expired or needs to be changed before proceeding. "
+"Please enter your old password and choose a new password."
+msgstr "パスワードの有効期限が切れているか、続行する前に変更する必要があります。古いパスワードを入力し、新しいパスワードを設定してください。"
+
+msgid "Old Password"
+msgstr "今までのパスワード"
+
+msgid "Current credentials"
+msgstr ""
+
+msgid "New Password"
+msgstr "新しいパスワード"
+
+msgid "New secure passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Confirm New Password"
+msgstr ""
+"電子メールアドレスを入力して、パスワードの送信 "
+"ボタンをクリックしてください。入力の電子メールアドレスに、新しいパスワードが送信されます。そして、新しいパスワードでログインしてください。"
+
+msgid "Re-type new passphrase"
+msgstr ""
+
+#, fuzzy
+msgid "Update Password"
+msgstr "パスワード"
+
+msgid "Fill in the details below and click Send."
+msgstr "以下の詳細を入力し、「送信」をクリックしてください。"
+
+#, fuzzy
+msgid "Destination & Recipients"
+msgstr "FAX番号"
+
+msgid "Enter the fax number and recipient details."
+msgstr "FAX番号と宛先の詳細を入力してください。"
+
+msgid "e.g. +1-555-0199  —  separate multiple numbers with semicolons"
+msgstr ""
+
+msgid "Choose a distribution list"
+msgstr ""
+
+msgid "To send to multiple recipients at once, separate numbers with a semicolon."
+msgstr ""
+
+msgid "Saved contacts are available in the"
+msgstr "保存された連絡先は次から選択できます:"
+
+msgid "Attention To"
+msgstr "氏名"
+
+msgid "optional"
+msgstr "任意"
+
+msgid "e.g. Jane Doe"
+msgstr ""
+
+msgid "Voice Number"
+msgstr "電話番号"
+
+msgid "Address"
+msgstr ""
+
+msgid "Zip"
+msgstr ""
+
+msgid "Subject / Regarding"
+msgstr "タイトル"
+
+msgid "e.g. Purchase Order #4921"
+msgstr ""
+
+msgid "Document Attachment"
+msgstr "添付ドキュメント"
+
+msgid "Attach the file you want to transmit."
+msgstr "送信するファイルを添付してください。"
+
+msgid "Click to select a file"
+msgstr "クリックしてファイルを選択"
+
+msgid "Supported: PDF, TIFF, PostScript, TXT"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid ""
+"PDF is the most commonly used format. Convert Word or Excel files to PDF "
+"before attaching."
+msgstr "PDFが最も一般的に使用される形式です。WordまたはExcelファイルはPDFに変換してから添付してください。"
+
+msgid "Cover Page"
+msgstr "送信状を使う"
+
+msgid "Add a cover sheet with sender and recipient info."
+msgstr "送信者と受信者の情報を含めた送信用紙(カバーシート)を追加します。"
+
+#, fuzzy
+msgid "Include Cover Page"
+msgstr "送信状を使う"
+
+#, fuzzy
+msgid "Cover Template"
+msgstr "送信状を使う"
+
+msgid "No cover pages are set up"
+msgstr ""
+
+msgid "Send via Line"
+msgstr "送信回線"
+
+msgid "No modems configured"
+msgstr "モデムは設定されていません。"
+
+#, fuzzy
+msgid "Cover Comments"
+msgstr "Cover Pages"
+
+msgid "Notes or message to print on the cover sheet..."
+msgstr ""
+
+msgid "Advanced Options"
+msgstr "詳細オプション"
+
+msgid "Priority, retries, notifications"
+msgstr "優先度、再試行回数、通知設定"
+
+#, fuzzy
+msgid "Max Retries"
+msgstr "FAXカテゴリを閲覧"
+
+msgid "Retries automatically on busy signal."
+msgstr "話し中の場合は自動的に再試行します。"
+
+msgid "The original fax is sent along."
+msgstr ""
+
+msgid "Cancel & return to Inbox"
+msgstr "キャンセルして受信トレイに戻る"
+
+#, fuzzy
+msgid "User Settings"
+msgstr "設定"
+
+msgid ""
+"Configure your personal profile, fax station identity, and portal "
+"preferences."
+msgstr "個人プロファイル、FAX局識別情報、およびポータルの環境設定を行います。"
+
+msgid "Return to Inbox"
+msgstr "受信トレイに戻る"
+
+msgid "Personal & Organization Details"
+msgstr "個人および組織の詳細"
+
+msgid "Office / Location"
+msgstr "事業所 / 所在地"
+
+msgid "Direct Voice Number"
+msgstr "直通電話番号"
+
+#, fuzzy
+msgid "Direct Fax Number"
+msgstr "FAX番号"
+
+msgid "Transmitting Station ID (TSI)"
+msgstr "発信局識別ID (TSI)"
+
+msgid "e.g. +1 555 123 4567"
+msgstr ""
+
+msgid "Header identifier imprinted on top of transmitted fax pages."
+msgstr "送信されたFAXページの上部に印字されるヘッダー識別子です。"
+
+msgid "Email & Fax Notification Signature"
+msgstr "メールおよびFAX通知の署名"
+
+msgid "Portal & Delivery Preferences"
+msgstr "ポータルおよび受信の環境設定"
+
+msgid "Display Language"
+msgstr "表示言語"
+
+#, fuzzy
+msgid "Default Cover Page"
+msgstr "送信状を使う"
+
+msgid "Faxes Per Page"
+msgstr "faxes per page"
+
+msgid "Archive Faxes Per Page"
+msgstr ""
+
+#, fuzzy
+msgid "Change Password"
+msgstr "パスワード"
+
+#, fuzzy
+msgid "Current Password"
+msgstr ""
+"電子メールアドレスを入力して、パスワードの送信 "
+"ボタンをクリックしてください。入力の電子メールアドレスに、新しいパスワードが送信されます。そして、新しいパスワードでログインしてください。"
+
+msgid "Enter current password to verify"
+msgstr ""
+
+msgid "Enter secure new password"
+msgstr ""
+
+msgid "Re-type new password"
+msgstr ""
+
+#, fuzzy
+msgid "Update Settings"
+msgstr "設定"
+
+msgid "Two-Factor Authentication (TOTP)"
+msgstr ""
+
+msgid ""
+"Protect your account with Google Authenticator, Authy, or compatible RFC "
+"6238 apps."
+msgstr ""
+
+msgid "Active / Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid ""
+"When enabled, signing in requires your password and a 6-digit one-time "
+"token from your mobile device."
+msgstr ""
+
+msgid "recovery codes left"
+msgstr ""
+
+msgid "Code from your app (to get new recovery codes)"
+msgstr ""
+
+msgid "New recovery codes"
+msgstr ""
+
+msgid "Turn off 2FA for your account?"
+msgstr ""
+
+msgid "Code or recovery code"
+msgstr ""
+
+msgid "Disable 2FA"
+msgstr ""
+
+msgid "Enable 2FA (Setup Authenticator)"
+msgstr ""
+
+msgid "FIDO2 Passkeys & Biometric Security Keys"
+msgstr ""
+
+msgid ""
+"Sign in securely without passwords using Touch ID, Face ID, Windows "
+"Hello, or YubiKey."
+msgstr ""
+
+msgid "Register New Passkey"
+msgstr ""
+
+msgid "Loading registered security keys..."
+msgstr ""
+
+msgid "No Passkeys registered yet."
+msgstr ""
+
+msgid ""
+"No Passkeys registered yet. Click Register to add Touch ID or a security "
+"key."
+msgstr ""
+
+msgid "Remove"
+msgstr "削除"
+
+msgid ""
+"1. Scan this code with Google Authenticator, Authy or another RFC 6238 "
+"app, or type the key by hand."
+msgstr ""
+
+msgid "Key"
+msgstr ""
+
+msgid "2. Enter the 6-digit code the app shows"
+msgstr ""
+
+msgid "Turn on 2FA"
+msgstr ""
+
+msgid "Save your recovery codes"
+msgstr ""
+
+msgid ""
+"Each code works once if you lose your phone. They are shown only now; "
+"store them somewhere safe."
+msgstr ""
+
+msgid "Done"
+msgstr ""
+
+msgid "Back to settings"
+msgstr ""
+
+msgid "Previous fax"
+msgstr "前の FAX"
+
+msgid "Prev"
+msgstr "前へ"
+
+msgid "Next fax"
+msgstr "次の FAX"
+
+msgid "Rotate fax"
+msgstr "FAXの回転"
+
+#, python-format
+msgid "Invalid fax number: %(number)s"
+msgstr ""
+
+msgid "Address book entry saved."
+msgstr ""
+
+msgid "Please enter a valid fax number"
+msgstr ""
+
+msgid "You are not allowed to delete address book entries."
+msgstr ""
+
+msgid "You are not allowed to delete contacts."
+msgstr ""
+
+msgid "This modem already exists"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Cover page template removed successfully"
+msgstr ""
+
+msgid "Failed to remove cover page template"
+msgstr ""
+
+msgid "Failed to update cover page template"
+msgstr ""
+
+msgid "Cover page template registered successfully"
+msgstr ""
+
+msgid "Title and File are required"
+msgstr ""
+
+msgid "The company does not exist."
+msgstr ""
+
+msgid "The company and its fax numbers were deleted."
+msgstr ""
+
+msgid "Please enter a valid e-mail address."
+msgstr "有効な電子メールアドレスを入力してください。"
+
+msgid "Fax to Email settings saved"
+msgstr ""
+
+msgid "The system is rebooting. Please wait..."
+msgstr ""
+
+msgid "The system is shutting down. Please wait..."
+msgstr ""
+
+msgid "The command could not be run"
+msgstr ""
+
+msgid "There is no fax archive folder to download."
+msgstr ""
+
+msgid "The database dump could not be made"
+msgstr ""
+
+msgid "Access denied. Superadmin permission required."
+msgstr ""
+
+msgid "SMTP Gateway settings saved successfully."
+msgstr ""
+
+msgid "Printer name and host are required."
+msgstr ""
+
+msgid "Network printer registered successfully."
+msgstr ""
+
+msgid "Printer deleted successfully."
+msgstr ""
+
+msgid "Lifecycle policy saved successfully."
+msgstr ""
+
+msgid "Cloud storage configuration saved successfully."
+msgstr ""
+
+msgid "SAML 2.0 configuration saved successfully."
+msgstr ""
+
+msgid "Catch All"
+msgstr "DID/DTMF ルートキャッチオール"
+
+msgid "Never"
+msgstr ""
+
+msgid "Every 3 Months"
+msgstr ""
+
+msgid "Every 6 Months"
+msgstr ""
+
+msgid "You must enter a username"
+msgstr "ユーザー名を入力してください。"
+
+msgid "Non-alphanumeric characters are not allowed in username."
+msgstr "ユーザー名には、英数字以外の文字は許可されません。"
+
+#, python-format
+msgid ""
+"Hello %(name)s,\n"
+"\n"
+"This email contains your username and password to log into NamiFAX "
+"(%(url)s)\n"
+"\n"
+"Username - %(username)s\n"
+"Password - %(password)s\n"
+"\n"
+"Please do not respond to this message as it is automatically generated "
+"and is for information purposes only"
+msgstr ""
+
+msgid "New User Details"
+msgstr "新規ユーザーの詳細"
+
+msgid "The user does not exist."
+msgstr ""
+
+msgid "You cannot delete your own account."
+msgstr ""
+
+msgid "You cannot delete the last superuser."
+msgstr ""
+
+msgid "Please enter a valid number."
+msgstr ""
+
+msgid "Both sent and received faxes"
+msgstr "送信と受信の両方"
+
+msgid "Only sent faxes"
+msgstr "送信のみ"
+
+msgid "Only received faxes"
+msgstr "受信のみ"
+
+msgid "Account is disabled"
+msgstr ""
+
+#, python-format
+msgid "Too many failed attempts. Try again in %(minutes)d minutes."
+msgstr ""
+
+msgid "Invalid or expired verification code."
+msgstr ""
+
+#, python-format
+msgid ""
+"The user account %(user)s has this email associated with it.  A web user "
+"from %(ip)s has just requested that a new password be sent.\n"
+"\n"
+"Your New Password is: %(password)s\n"
+"\n"
+"If this was an error just login with your new password and then change "
+"your password to what you would like it to be."
+msgstr ""
+"ユーザアカウント:%(user)s にはこのメールアドレスが登録されています。 ユーザー:%(ip)s は、新しいパスワードを要求しました。 "
+"あなたの新しいパスワード: %(password)s "
+"これが間違いであったならば、新しいパスワードでログインしてください。そして、次にパスワードを以前のものに変更してください。"
+
+msgid "Email failed to send"
+msgstr "電子メールの送信は失敗しました。"
+
+msgid "Fax Contacts"
+msgstr ""
+
+msgid "Email Contacts"
+msgstr ""
+
+msgid "The fax document was not found."
+msgstr ""
+
+msgid "Your session has expired. Reload the page and try again."
+msgstr ""
+
+msgid "Invalid job number."
+msgstr ""
+
+msgid "Any Available Line (Auto)"
+msgstr "利用可能な任意の回線 (自動)"
+
+msgid "You may not use this line."
+msgstr ""
+
+msgid "Your fax has been successfully queued to be faxed."
+msgstr ""
+
+msgid "Job"
+msgstr ""
+
+msgid "The code is not valid."
+msgstr ""
+
+msgid "The code did not match. Check the time on your phone and try again."
+msgstr ""
+
+msgid "The password is not correct."
+msgstr ""
+
+msgid "Add a note"
+msgstr "コメントの追加"
+
+msgid "Account active"
+msgstr "アカウントの有効"
+
+msgid "The cover page was updated"
+msgstr ""
+
+msgid "The modem was created"
+msgstr ""
+
+msgid "The modem was deleted"
+msgstr ""
+
+msgid "The modem was updated"
+msgstr "モデムは更新されました。"
+
+msgid "Archive - show"
+msgstr ""
+
+msgid "Inbox - show"
+msgstr ""
+
+msgid "Assign a company name"
+msgstr "会社名の設定"
+
+msgid "You must enter a company name"
+msgstr "会社名を入力してください"
+
+msgid "Contact details saved"
+msgstr "コンタクトの詳細を保存しました。"
+
+msgid "Remove entries"
+msgstr "リストの削除"
+
+msgid "Save list name"
+msgstr "リスト名の保存"
+
+msgid "The email failed to send."
+msgstr "電子メールの送信は失敗しました。"
+
+msgid "The email was sent successfully."
+msgstr "電子メールを送信しました。"
+
+msgid "Destination fax numbers"
+msgstr "宛先 FAX 番号"
+
+msgid "You must enter an alias"
+msgstr "エリアスを入力してください。"
+
+msgid "You must enter a device name"
+msgstr "デバイス名を入力してください。"
+
+msgid "Modify Job"
+msgstr "ジョブの更新"
+
+msgid "You must enter a name."
+msgstr "名前が入力されていません。"
+
+msgid "Notify on requeue"
+msgstr "再びキューに入れる"
+
+msgid "Forward fax via email"
+msgstr "FAXを電子メールで転送"
+
+msgid "To person"
+msgstr "氏名"
+
+msgid "User can delete faxes"
+msgstr "ユーザーはFAXを削除できる"
+
+msgid "User settings have been saved."
+msgstr "ユーザー設定は更新されました。"
+
+msgid "Select All Faxes"
+msgstr "すべて選択"
+
+#~ msgid "High"
+#~ msgstr "High"
+
+#~ msgid "Configure corporate contact identity and transmission routing defaults."
+#~ msgstr "企業の連絡先情報および送信ルーティングのデフォルトを設定します。"
+
+#~ msgid "Primary Company Profile"
+#~ msgstr "メイン企業プロファイル"
+
+#~ msgid "Recipient Contact & Physical Address"
+#~ msgstr "受信者の連絡先および住所"
+
+#~ msgid "City / Postal Region"
+#~ msgstr "市区町村 / 郵便地域"
+
+#~ msgid "Category Tag"
+#~ msgstr "カテゴリタグ"
+
+#~ msgid "General"
+#~ msgstr "Normal"
+
+#~ msgid "Invoices & Billing"
+#~ msgstr "請求書および請求"
+
+#~ msgid "Legal"
+#~ msgstr "法務"
+
+#~ msgid "Description / Internal Notes"
+#~ msgstr "説明 / 社内メモ"
+
+#~ msgid "Edit Forwarding Rule"
+#~ msgstr "転送ルールを編集"
+
+#~ msgid "Add Forwarding Rule"
+#~ msgstr "転送ルールを追加"
+
+#~ msgid ""
+#~ "Please enter your registered username or"
+#~ " email address below. Password reset "
+#~ "instructions will be dispatched to your"
+#~ " account email address."
+#~ msgstr "以下に登録済みのユーザー名またはメールアドレスを入力してください。パスワード再設定手順がアカウントのメールアドレスに送信されます。"
+
+#~ msgid "Username or Email Address"
+#~ msgstr "ユーザー名またはメールアドレス"
+
+#~ msgid "Reset Password"
+#~ msgstr ""
+#~ "電子メールアドレスを入力して、パスワードの送信 "
+#~ "ボタンをクリックしてください。入力の電子メールアドレスに、新しいパスワードが送信されます。そして、新しいパスワードでログインしてください。"
+
+#~ msgid "Standard (Default)"
+#~ msgstr "標準 (デフォルト)"
+
+#~ msgid "Urgent"
+#~ msgstr "緊急"
+
+#~ msgid "Confidential"
+#~ msgstr "親展・機密"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Low"
+#~ msgstr "Low"
+
+#~ msgid "High (Urgent)"
+#~ msgstr "高 (至急)"
+
+#~ msgid "Reply to Fax"
+#~ msgstr "FAXの返信"
+
+#~ msgid "Dispatch quick reply transmission to originating sender"
+#~ msgstr "元の発信者にクイック返信を送信します"
+
+#~ msgid "Regarding (Subject)"
+#~ msgstr "件名 (Subject)"
+
+#~ msgid "Comments"
+#~ msgstr "コメント"
+
+#~ msgid "Destination"
+#~ msgstr "FAX番号"
+
+#~ msgid "Queued"
+#~ msgstr "キュー登録日時"
+
+#~ msgid "Reason"
+#~ msgstr "理由"
+
+#~ msgid "To send to multiple recipients at once, separate numbers with a comma."
+#~ msgstr "複数の宛先に一度に送信する場合は、番号をカンマで区切ります。"
+
+#~ msgid "Save Modem"
+#~ msgstr "Fax Modems"
+
+#~ msgid "Configure User:"
+#~ msgstr "ユーザー設定:"
+
+#~ msgid "recipient@example.com (comma separated)"
+#~ msgstr ""
+
+#~ msgid "NamiFAX Transmission Document"
+#~ msgstr ""
+
+#~ msgid "Please find the attached facsimile document."
+#~ msgstr ""
+
+#~ msgid "results"
+#~ msgstr "Reset"
+
+#~ msgid "result"
+#~ msgstr "Reset"
+
+#~ msgid "Keyword"
+#~ msgstr "キーワード"
+
+#~ msgid "Invoices / Orders"
+#~ msgstr "請求書 / 発注書"
+
+#~ msgid "Legal / Contracts"
+#~ msgstr "アドレス帳"
+
+#~ msgid "From Date"
+#~ msgstr "FAXの回転"
+
+#~ msgid "To Date"
+#~ msgstr "FAXの回転"
+
+#~ msgid "Sent & Received"
+#~ msgstr "送受信すべて"
+
+#~ msgid "Received only"
+#~ msgstr "受信のみ"
+
+#~ msgid "Sent only"
+#~ msgstr "送信のみ"
+
+#~ msgid "Results"
+#~ msgstr "Reset"
+
+#~ msgid "records"
+#~ msgstr "件のレコード"
+
+#~ msgid "record"
+#~ msgstr "件のレコード"
+
+#~ msgid "No results found"
+#~ msgstr "検索結果が見つかりません"
+
+#~ msgid "Try adjusting your search terms or date range."
+#~ msgstr "検索キーワードまたは日付範囲を調整してみてください。"
+
+#~ msgid "Search the Archive"
+#~ msgstr "アーカイブを検索"
+
+#~ msgid "Enter a keyword or filter above and click Search to find fax records."
+#~ msgstr "上記のキーワードまたはフィルターを入力し、「検索」をクリックしてFAXレコードを検索します。"
+
+#~ msgid "Showing"
+#~ msgstr "表示中:"
+
+#~ msgid "of"
+#~ msgstr "/"
+
+#~ msgid "Fax Viewer"
+#~ msgstr "FAXビューア"
+
+#~ msgid "Page 1 of"
+#~ msgstr "ページ 1 /"
+
+#~ msgid "FROM:"
+#~ msgstr "発信元:"
+
+#~ msgid "DATE:"
+#~ msgstr "日時:"
+
+#~ msgid "DEVICE:"
+#~ msgstr "デバイス:"
+
+#~ msgid "PDF"
+#~ msgstr "PDF"
+
+#~ msgid "TIFF"
+#~ msgstr "TIFF"
+
+#~ msgid "Total"
+#~ msgstr "合計"
+
+#~ msgid "Incoming Transmission"
+#~ msgstr "受信FAX"
+
+#~ msgid "FACSIMILE TRANSMISSION"
+#~ msgstr "ファクシミリ送信"
+
+#~ msgid "Date Received:"
+#~ msgstr "受信日時:"
+
+#~ msgid "Originating Station:"
+#~ msgstr "発信局:"
+
+#~ msgid "PORT"
+#~ msgstr "優先度"
+
+#~ msgid "High-Resolution Raster Preview"
+#~ msgstr "高解像度ラスタープレビュー"
+
+#~ msgid "Device Line:"
+#~ msgstr "デバイス回線:"
+
+#~ msgid "Download Original Document"
+#~ msgstr "オリジナルドキュメントをダウンロード"
+
+#~ msgid "NamiFAX Enterprise Facsimile Engine"
+#~ msgstr "NamiFAX エンタープライズFAXエンジン"
+
+#~ msgid "Archive ID:"
+#~ msgstr "送信履歴"
+
+#~ msgid "Add contact name or fax number..."
+#~ msgstr ""
+
+#~ msgid "Delete List"
+#~ msgstr "削除リスト"
+
+#~ msgid "Save Changes"
+#~ msgstr "Cover Pages"
+
+#~ msgid "Supported: PDF, TIFF, PostScript, TXT · Max 10 MB"
+#~ msgstr "サポート形式: PDF, TIFF, PostScript, TXT · 最大 10 MB"
+
+#~ msgid "Auto-select recommended"
+#~ msgstr "自動選択を推奨"
+
+#~ msgid "Status:"
+#~ msgstr "ステータス:"
+
+#~ msgid "Transmitted Successfully (OK)"
+#~ msgstr "送信完了 (OK)"
+

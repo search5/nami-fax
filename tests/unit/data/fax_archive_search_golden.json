@@ -1,0 +1,1323 @@
+{
+ "inbox": [
+  {
+   "args": {
+    "devices": [
+     "ttyS0"
+    ]
+   },
+   "count": 2,
+   "list": [
+    2,
+    1
+   ],
+   "list_modem": [
+    2,
+    1
+   ]
+  },
+  {
+   "args": {
+    "devices": [
+     "ttyS0",
+     "ttyS1"
+    ],
+    "faxcats": [
+     1
+    ]
+   },
+   "count": 3,
+   "list": [
+    4,
+    2,
+    1
+   ],
+   "list_modem": [
+    2,
+    1,
+    4
+   ]
+  },
+  {
+   "args": {
+    "devices": null,
+    "faxcats": [
+     2
+    ]
+   },
+   "count": 3,
+   "list": [
+    4,
+    3,
+    1
+   ],
+   "list_modem": [
+    1,
+    4,
+    3
+   ]
+  },
+  {
+   "args": {
+    "devices": null
+   },
+   "count": 4,
+   "list": [
+    4,
+    3,
+    2,
+    1
+   ],
+   "list_modem": [
+    2,
+    1,
+    4,
+    3
+   ]
+  },
+  {
+   "args": {
+    "devices": [],
+    "faxcats": null
+   },
+   "count": 0,
+   "list": [],
+   "list_modem": []
+  },
+  {
+   "args": {
+    "devices": [
+     1
+    ],
+    "enable_did_routing": true
+   },
+   "count": 2,
+   "list": [
+    2,
+    1
+   ],
+   "list_modem": [
+    2,
+    1
+   ]
+  },
+  {
+   "args": {
+    "devices": [
+     "ttyS1"
+    ],
+    "faxcats": []
+   },
+   "count": 1,
+   "list": [
+    4
+   ],
+   "list_modem": [
+    4
+   ]
+  }
+ ],
+ "paging": [
+  {
+   "case": {
+    "pageindex": 1,
+    "pagelimit": 3,
+    "sentrecvd": "*",
+    "superuser": true
+   },
+   "fids": [
+    9,
+    8,
+    7
+   ],
+   "numrows": 8
+  },
+  {
+   "case": {
+    "pageindex": 9,
+    "pagelimit": 3,
+    "sentrecvd": "*",
+    "superuser": true
+   },
+   "fids": [
+    6,
+    5
+   ],
+   "numrows": 8
+  }
+ ],
+ "search": [
+  {
+   "case": {
+    "categories": [
+     1
+    ],
+    "didroutes": [
+     1
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "s",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": null,
+    "didroutes": null,
+    "modemdevs": [
+     "ttyS0",
+     "ttyS1"
+    ],
+    "sentrecvd": "s",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     2
+    ],
+    "modemdevs": [
+     "ttyS2"
+    ],
+    "sentrecvd": "s",
+    "superuser": true,
+    "userid": 6
+   },
+   "fids": [
+    9
+   ],
+   "numrows": 1
+  },
+  {
+   "case": {
+    "categories": [
+     1,
+     2
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "restricted_user_mode": true,
+    "sentrecvd": "s",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     1,
+     2
+    ],
+    "enable_did_routing": true,
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "s",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "category": 1,
+    "modemdevs": [
+     "ttyS1"
+    ],
+    "sentrecvd": "s",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     1
+    ],
+    "didroutes": [
+     1
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "s",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": null,
+    "didroutes": null,
+    "modemdevs": [
+     "ttyS0",
+     "ttyS1"
+    ],
+    "sentrecvd": "s",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     2
+    ],
+    "modemdevs": [
+     "ttyS2"
+    ],
+    "sentrecvd": "s",
+    "superuser": false,
+    "userid": 6
+   },
+   "fids": [
+    9
+   ],
+   "numrows": 1
+  },
+  {
+   "case": {
+    "categories": [
+     1,
+     2
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "restricted_user_mode": true,
+    "sentrecvd": "s",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     1,
+     2
+    ],
+    "enable_did_routing": true,
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "s",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "category": 1,
+    "modemdevs": [
+     "ttyS1"
+    ],
+    "sentrecvd": "s",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     1
+    ],
+    "didroutes": [
+     1
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "r",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    10,
+    7,
+    6,
+    5
+   ],
+   "numrows": 5
+  },
+  {
+   "case": {
+    "categories": null,
+    "didroutes": null,
+    "modemdevs": [
+     "ttyS0",
+     "ttyS1"
+    ],
+    "sentrecvd": "r",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    10,
+    7,
+    6,
+    5
+   ],
+   "numrows": 5
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     2
+    ],
+    "modemdevs": [
+     "ttyS2"
+    ],
+    "sentrecvd": "r",
+    "superuser": true,
+    "userid": 6
+   },
+   "fids": [
+    12,
+    10,
+    7,
+    6,
+    5
+   ],
+   "numrows": 5
+  },
+  {
+   "case": {
+    "categories": [
+     1,
+     2
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "restricted_user_mode": true,
+    "sentrecvd": "r",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    10,
+    7,
+    6,
+    5
+   ],
+   "numrows": 5
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     1,
+     2
+    ],
+    "enable_did_routing": true,
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "r",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    10,
+    7,
+    6,
+    5
+   ],
+   "numrows": 5
+  },
+  {
+   "case": {
+    "category": 1,
+    "modemdevs": [
+     "ttyS1"
+    ],
+    "sentrecvd": "r",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    10,
+    6
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     1
+    ],
+    "didroutes": [
+     1
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "r",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    10,
+    7,
+    6,
+    5
+   ],
+   "numrows": 5
+  },
+  {
+   "case": {
+    "categories": null,
+    "didroutes": null,
+    "modemdevs": [
+     "ttyS0",
+     "ttyS1"
+    ],
+    "sentrecvd": "r",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    7,
+    6,
+    5
+   ],
+   "numrows": 4
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     2
+    ],
+    "modemdevs": [
+     "ttyS2"
+    ],
+    "sentrecvd": "r",
+    "superuser": false,
+    "userid": 6
+   },
+   "fids": [
+    10,
+    7
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     1,
+     2
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "restricted_user_mode": true,
+    "sentrecvd": "r",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    7,
+    5
+   ],
+   "numrows": 3
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     1,
+     2
+    ],
+    "enable_did_routing": true,
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "r",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    10,
+    7
+   ],
+   "numrows": 3
+  },
+  {
+   "case": {
+    "category": 1,
+    "modemdevs": [
+     "ttyS1"
+    ],
+    "sentrecvd": "r",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    6
+   ],
+   "numrows": 1
+  },
+  {
+   "case": {
+    "categories": [
+     1
+    ],
+    "didroutes": [
+     1
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "*",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": null,
+    "didroutes": null,
+    "modemdevs": [
+     "ttyS0",
+     "ttyS1"
+    ],
+    "sentrecvd": "*",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     2
+    ],
+    "modemdevs": [
+     "ttyS2"
+    ],
+    "sentrecvd": "*",
+    "superuser": true,
+    "userid": 6
+   },
+   "fids": [
+    9
+   ],
+   "numrows": 1
+  },
+  {
+   "case": {
+    "categories": [
+     1,
+     2
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "restricted_user_mode": true,
+    "sentrecvd": "*",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     1,
+     2
+    ],
+    "enable_did_routing": true,
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "*",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "category": 1,
+    "modemdevs": [
+     "ttyS1"
+    ],
+    "sentrecvd": "*",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [],
+   "numrows": 0
+  },
+  {
+   "case": {
+    "categories": [
+     1
+    ],
+    "didroutes": [
+     1
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "*",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    11,
+    10,
+    8,
+    7,
+    6,
+    5
+   ],
+   "numrows": 7
+  },
+  {
+   "case": {
+    "categories": null,
+    "didroutes": null,
+    "modemdevs": [
+     "ttyS0",
+     "ttyS1"
+    ],
+    "sentrecvd": "*",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    11,
+    8,
+    7,
+    6,
+    5
+   ],
+   "numrows": 6
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     2
+    ],
+    "modemdevs": [
+     "ttyS2"
+    ],
+    "sentrecvd": "*",
+    "superuser": false,
+    "userid": 6
+   },
+   "fids": [
+    11,
+    10,
+    9,
+    7
+   ],
+   "numrows": 4
+  },
+  {
+   "case": {
+    "categories": [
+     1,
+     2
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "restricted_user_mode": true,
+    "sentrecvd": "*",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    11,
+    8,
+    7,
+    5
+   ],
+   "numrows": 5
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     1,
+     2
+    ],
+    "enable_did_routing": true,
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "*",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    11,
+    10,
+    8,
+    7
+   ],
+   "numrows": 5
+  },
+  {
+   "case": {
+    "category": 1,
+    "modemdevs": [
+     "ttyS1"
+    ],
+    "sentrecvd": "*",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    6
+   ],
+   "numrows": 1
+  },
+  {
+   "case": {
+    "categories": [
+     1
+    ],
+    "didroutes": [
+     1
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "b",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": null,
+    "didroutes": null,
+    "modemdevs": [
+     "ttyS0",
+     "ttyS1"
+    ],
+    "sentrecvd": "b",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     2
+    ],
+    "modemdevs": [
+     "ttyS2"
+    ],
+    "sentrecvd": "b",
+    "superuser": true,
+    "userid": 6
+   },
+   "fids": [
+    9
+   ],
+   "numrows": 1
+  },
+  {
+   "case": {
+    "categories": [
+     1,
+     2
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "restricted_user_mode": true,
+    "sentrecvd": "b",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     1,
+     2
+    ],
+    "enable_did_routing": true,
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "b",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "category": 1,
+    "modemdevs": [
+     "ttyS1"
+    ],
+    "sentrecvd": "b",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     1
+    ],
+    "didroutes": [
+     1
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "b",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    11,
+    8,
+    7,
+    5
+   ],
+   "numrows": 5
+  },
+  {
+   "case": {
+    "categories": null,
+    "didroutes": null,
+    "modemdevs": [
+     "ttyS0",
+     "ttyS1"
+    ],
+    "sentrecvd": "b",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    11,
+    8,
+    7,
+    6,
+    5
+   ],
+   "numrows": 6
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     2
+    ],
+    "modemdevs": [
+     "ttyS2"
+    ],
+    "sentrecvd": "b",
+    "superuser": false,
+    "userid": 6
+   },
+   "fids": [
+    10,
+    9
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "categories": [
+     1,
+     2
+    ],
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "restricted_user_mode": true,
+    "sentrecvd": "b",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    11,
+    8,
+    7,
+    5
+   ],
+   "numrows": 5
+  },
+  {
+   "case": {
+    "categories": [
+     2
+    ],
+    "didroutes": [
+     1,
+     2
+    ],
+    "enable_did_routing": true,
+    "modemdevs": [
+     "ttyS0"
+    ],
+    "sentrecvd": "b",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    12,
+    11,
+    10,
+    8
+   ],
+   "numrows": 4
+  },
+  {
+   "case": {
+    "category": 1,
+    "modemdevs": [
+     "ttyS1"
+    ],
+    "sentrecvd": "b",
+    "superuser": false,
+    "userid": 5
+   },
+   "fids": [
+    11,
+    8,
+    6
+   ],
+   "numrows": 3
+  },
+  {
+   "case": {
+    "end_date": "2026-02-05",
+    "sentrecvd": "r",
+    "start_date": "2026-01-01",
+    "superuser": true
+   },
+   "fids": [
+    7,
+    6,
+    5
+   ],
+   "numrows": 3
+  },
+  {
+   "case": {
+    "sentrecvd": "r",
+    "start_date": "2026-03",
+    "superuser": true
+   },
+   "fids": [
+    12,
+    10
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "keywords": "invoice",
+    "sentrecvd": "r",
+    "superuser": true
+   },
+   "fids": [
+    12,
+    5
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "keywords": "INVOICE",
+    "sentrecvd": "*",
+    "superuser": true
+   },
+   "fids": [
+    12,
+    8,
+    5
+   ],
+   "numrows": 3
+  },
+  {
+   "case": {
+    "keywords": "signed acme",
+    "sentrecvd": "*",
+    "superuser": true
+   },
+   "fids": [
+    6
+   ],
+   "numrows": 1
+  },
+  {
+   "case": {
+    "keywords": "due",
+    "sentrecvd": "*",
+    "superuser": true
+   },
+   "fids": [
+    5
+   ],
+   "numrows": 1
+  },
+  {
+   "case": {
+    "faxid": 7,
+    "sentrecvd": "*",
+    "superuser": true
+   },
+   "fids": [
+    7
+   ],
+   "numrows": 1
+  },
+  {
+   "case": {
+    "companyid": 10,
+    "sentrecvd": "*",
+    "superuser": true
+   },
+   "fids": [
+    12,
+    5
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "companyid": 7,
+    "sentrecvd": "*",
+    "superuser": true
+   },
+   "fids": [
+    7
+   ],
+   "numrows": 1
+  },
+  {
+   "case": {
+    "companyid": 11,
+    "sentrecvd": "*",
+    "superuser": true
+   },
+   "fids": [
+    6
+   ],
+   "numrows": 1
+  },
+  {
+   "case": {
+    "companyid": 99,
+    "sentrecvd": "*",
+    "superuser": true
+   },
+   "fids": [],
+   "numrows": 0
+  },
+  {
+   "case": {
+    "companyid": 10,
+    "keywords": "invoice",
+    "sentrecvd": "*",
+    "superuser": true
+   },
+   "fids": [
+    12,
+    5
+   ],
+   "numrows": 2
+  },
+  {
+   "case": {
+    "sentrecvd": "s",
+    "start_date": "2026-03",
+    "superuser": true,
+    "userid": 5
+   },
+   "fids": [
+    11
+   ],
+   "numrows": 1
+  },
+  {
+   "case": {
+    "categories": null,
+    "modemdevs": [
+     ""
+    ],
+    "sentrecvd": "r",
+    "superuser": false
+   },
+   "fids": [],
+   "numrows": 0
+  },
+  {
+   "case": {
+    "categories": null,
+    "didroutes": [
+     ""
+    ],
+    "enable_did_routing": true,
+    "sentrecvd": "r",
+    "superuser": false
+   },
+   "fids": [],
+   "numrows": 0
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{% set tone = {'running': 'ok', 'starting': 'wait', 'stopping': 'wait', 'stopped': 'off', 'none': 'off'}[st.phase] %}
+<div class="p-4 rounded-lg border text-sm flex flex-wrap items-center justify-between gap-3
+            {% if tone == 'ok' %}bg-emerald-950/30 border-emerald-500/30 text-emerald-300{% else %}bg-amber-950/30 border-amber-500/30 text-amber-300{% endif %}">
+  <div>
+    {% if st.phase == 'running' %}{{ _('A scheduler is running') }} ({{ _('last seen') }} {{ st.seen_ago }} {{ _('seconds ago') }}).
+    {% elif st.phase == 'starting' %}{{ _('The scheduler is starting') }}&hellip; {{ _('The change is applied within a few seconds.') }}
+    {% elif st.phase == 'stopping' %}{{ _('The scheduler is stopping') }}&hellip; {{ _('The change is applied within a few seconds.') }}
+    {% elif st.phase == 'stopped' %}{{ _('The scheduler is stopped') }} ({{ _('last seen') }} {{ st.seen_ago }} {{ _('seconds ago') }}). {{ _('Nothing runs by itself until it is started.') }}
+    {% else %}{{ _('No scheduler is running') }}. {{ _('Start the web service with NAMIFAX_ENABLE_SCHEDULER=1 (the default); until then the tasks below only run when you press Run now.') }}{% endif %}
+  </div>
+  <form method="post" action="/admin/scheduler" data-scheduler-action>
+    {% if st.asked_stop %}<input type="hidden" name="action" value="start">
+    <button type="submit" class="px-4 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white text-xs font-semibold">{{ _('Start the scheduler') }}</button>
+    {% else %}<input type="hidden" name="action" value="stop">
+    <button type="submit" class="px-4 py-1.5 rounded-lg bg-rose-800 hover:bg-rose-700 text-white text-xs font-semibold">{{ _('Stop the scheduler') }}</button>{% endif %}
+  </form>
+</div>
