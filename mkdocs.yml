@@ -1,0 +1,106 @@
+site_name: NamiFAX
+site_description: NamiFAX - web front end for HylaFAX / HylaFAX 팩스 서버 웹 프런트엔드
+repo_url: https://github.com/search5/numfax
+repo_name: search5/numfax
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: ko
+          default: true
+          name: 한국어
+          build: true
+          site_name: NamiFAX 매뉴얼
+          nav_translations:
+            Home: 홈
+            Guide: 가이드
+            Installation: 설치
+            User manual: 사용 매뉴얼
+            Administrator manual: 관리자 매뉴얼
+            Developer notes: 개발 메모
+        - locale: en
+          name: English
+          build: true
+          site_name: NamiFAX Manual
+
+nav:
+  - Home: index.md
+  - Guide:
+      - guide/overview.md
+  - Installation:
+      - install/index.md
+      - install/hylafax-server.md
+      - install/hylafax.md
+      - install/email-to-fax.md
+      - install/hylafax-operations.md
+      - install/migration.md
+      - install/operations-checklist.md
+  - User manual:
+      - manual/index.md
+      - manual/getting-started.md
+      - manual/inbox.md
+      - manual/send-fax.md
+      - manual/outbox.md
+      - manual/archive.md
+      - manual/contacts.md
+      - manual/account.md
+  - Administrator manual:
+      - manual/admin/index.md
+      - manual/admin/users.md
+      - manual/admin/fax-lines.md
+      - manual/admin/covers.md
+      - manual/admin/system.md
+      - manual/admin/storage-scheduler.md
+      - manual/admin/authentication.md
+  - Developer notes:
+      - dev/cover-upload-plan.md
+      - dev/gcs-on-hold.md

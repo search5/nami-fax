@@ -51,3 +51,6 @@ faxes/
 
 # Claude Code agent worktrees
 .claude/worktrees/
+
+# mkdocs build output
+/site/

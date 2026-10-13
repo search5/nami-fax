@@ -5,7 +5,7 @@
 
 ## 1. 배경
 
-신규 기능 계획서(`docs/llm-wiki/sources/new-features-plan.md` §3.5)는 표지 스튜디오에서 "드래그앤드롭 업로드, 실시간 썸네일 미리보기, 동적 치환 변수 안내, PostScript·HTML·PDF 지원"을 약속했습니다.
+신규 기능 계획서(`llm-wiki/sources/new-features-plan.md` §3.5)는 표지 스튜디오에서 "드래그앤드롭 업로드, 실시간 썸네일 미리보기, 동적 치환 변수 안내, PostScript·HTML·PDF 지원"을 약속했습니다.
 그러나 현재는 서비스 코드만 있고 화면에 연결되어 있지 않습니다. 위키 `known-gaps-and-decisions.md` §3의 "표지 스튜디오" 줄이 이 상태를 "코드 존재"로만 적어 구현이 끝난 것처럼 읽히는 점도 함께 바로잡습니다.
 
 ## 2. 확인된 현재 상태

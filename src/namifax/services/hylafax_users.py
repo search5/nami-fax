@@ -1,6 +1,6 @@
 """Keep the HylaFAX users (hosts.hfaxd) in step with the AvantFAX accounts, like the original's faxadduser/faxdeluser calls.
 
-Switched on with ``HYLAFAX_USER_SYNC=1`` (the web user needs sudo rights for exactly these two programs; see docs/INSTALL_HYLAFAX.md).
+Switched on with ``HYLAFAX_USER_SYNC=1`` (the web user needs sudo rights for exactly these two programs; see docs/ko/install/hylafax.md).
 The programs run without a shell, and a failure is logged but never stops the account change.
 """
 

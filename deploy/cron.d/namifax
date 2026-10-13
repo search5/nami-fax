@@ -5,8 +5,8 @@
 # Clean the temporary folder every night:
 0 0 * * *   uucp  sh -c 'set -a; [ -r /etc/namifax.env ] && . /etc/namifax.env; set +a; exec /opt/namifax/.venv/bin/namifax cron -t 2'
 # Move faxes older than 30 days out of the inbox into the archive (-i), and delete archived faxes older than 365 days (-d):
-# 30 1 * * *  uucp  sh -c 'set -a; [ -r /etc/namifax.env ] && . /etc/namifax.env; set +a; exec /opt/namifax/.venv/bin/namifax cron -i 30 -d 365'
+# 30 1 * * *  uucp  sh -c 'set -a; [ -r /etc/namifax.env ] && . /etc/namifax.env; set +a; exec /opt/namifax/.venv/bin/namifax cron -t 2 -i 30 -d 365'
 # Remove the TIFF of faxes older than 90 days when a PDF exists (-p):
-# 45 1 * * *  uucp  sh -c 'set -a; [ -r /etc/namifax.env ] && . /etc/namifax.env; set +a; exec /opt/namifax/.venv/bin/namifax cron -p 90'
+# 45 1 * * *  uucp  sh -c 'set -a; [ -r /etc/namifax.env ] && . /etc/namifax.env; set +a; exec /opt/namifax/.venv/bin/namifax cron -t 2 -p 90'
 # Run the storage policy saved on the Admin > Storage page (-s):
-# 0 2 * * *   uucp  sh -c 'set -a; [ -r /etc/namifax.env ] && . /etc/namifax.env; set +a; exec /opt/namifax/.venv/bin/namifax cron -s'
+# 0 2 * * *   uucp  sh -c 'set -a; [ -r /etc/namifax.env ] && . /etc/namifax.env; set +a; exec /opt/namifax/.venv/bin/namifax cron -t 2 -s'

@@ -15,7 +15,7 @@ NamiFAX를 운영 환경에 올리기 전에 한 번, 그리고 운영 중 주�
 | SMTP 게이트웨이 | 관리자 화면에서 설정 | **비밀번호 찾기**, 수신 팩스 메일 전달, 알림 메일이 모두 이 설정을 씁니다. 메일을 보낼 수 없으면 비밀번호 찾기는 "Email failed to send"를 보여 주고 기존 비밀번호는 그대로 둡니다. |
 | 데모 데이터 끄기 | `NAMIFAX_DEMO_DATA`를 켜지 않기 | SQLite에서만 동작하는 옵트인입니다. SQLite는 운영 DB가 아닙니다. |
 | 주기 작업 | 내장 스케줄러(`/admin/scheduler`)가 임시 폴더 정리(`tmp`), 받은 팩스함 보관 이동(`inbox`, 기본 꺼짐), 저장 정책 실행(`lifecycle`), 전화번호부 내보내기(`phonebook`) 4종을 돌립니다. | 보관함의 오래된 팩스를 날짜로 지우는 `cron -d` 에 정확히 대응하는 작업은 없으므로 필요하면 `deploy/cron.d/namifax` 에 적습니다. |
-| 비밀번호 해시 | 기본 Argon2id. 원본 PHP와 한 DB를 함께 쓰는 동안은 `NAMIFAX_PASSWORD_HASH=md5` | 원본은 Argon2id를 읽지 못합니다(`docs/MIGRATING_FROM_AVANTFAX3.md` 4.5). |
+| 비밀번호 해시 | 기본 Argon2id. 원본 PHP와 한 DB를 함께 쓰는 동안은 `NAMIFAX_PASSWORD_HASH=md5` | 원본은 Argon2id를 읽지 못합니다([migration.md](migration.md) 4.5). |
 
 ### SAML 로그인과 권한
 
@@ -36,7 +36,7 @@ NamiFAX를 운영 환경에 올리기 전에 한 번, 그리고 운영 중 주�
 
 ## 3. 기존 AvantFAX에서 옮길 때
 
-절차 전체, 설정 대응표, 웹 서버의 옛 주소 리다이렉트, 예행연습 결과는 `docs/MIGRATING_FROM_AVANTFAX3.md`에 있습니다. 아래는 요점만 남긴 것입니다.
+절차 전체, 설정 대응표, 웹 서버의 옛 주소 리다이렉트, 예행연습 결과는 [migration.md](migration.md)에 있습니다. 아래는 요점만 남긴 것입니다.
 
 - 원본 MySQL/MariaDB DB에 그대로 붙습니다(`ARCHITECTURE.md`(삭제됨, 커밋 01f2f64 에서 복원) 17.5a). 큰 `FaxArchive` 테이블은 **첫 기동에서 검색용 인덱스를 만드느라 오래 걸릴 수 있습니다.** 소요 시간은 측정하지 않았으니 점검 시간대에 첫 기동을 하십시오.
 - **PHP 세션과 로그인 쿠키는 이어지지 않습니다.** 이전 직후 모든 사용자가 다시 로그인해야 합니다.
@@ -68,5 +68,4 @@ NamiFAX를 운영 환경에 올리기 전에 한 번, 그리고 운영 중 주�
 
 ## 6. 아직 하지 않은 일
 
-- 번역은 한국어만 새 문구까지 채웠습니다(빠진 번역 0개, 테스트로 보장). 나머지 23개 언어에서는 이번에 추가된 화면 문구(SAML, 프린터, 스토리지, 패스키, 2FA, 보내기 폼의 새 항목, vCard 업로드, 비밀번호 찾기, 작업 수정, 입력창 예시 등 약 190개)가 영어로 보입니다. 번역은 한국어 이후로 미뤄 둔 상태입니다. 언어는 `?lang=코드` 또는 `_LOCALE_` 쿠키로 고릅니다.
 - 출력함은 원본과 같은 열·버튼으로 맞췄지만 **가짜 `faxstat` 출력으로만** 확인했습니다. 실제 HylaFAX의 작업 목록 형식(`JobFmt`에 `Mailaddr` 열이 있어야 합니다)과 `faxrm`·`faxalter`의 소유자 권한 동작은 HylaFAX가 있는 서버에서 확인해야 합니다. 웹 서버 사용자와 faxmail 사용자 이름은 환경변수 `WWWUSER`(기본 `www-data`; 원본 기본은 `apache`)와 `FAXMAILUSER`(기본 `faxmail`)로 지정합니다. HylaFAX 작업 소유자가 이 이름이면 메일 주소로 사용자를 찾습니다.

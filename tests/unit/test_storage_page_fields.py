@@ -1,5 +1,5 @@
 """Admin > Storage: the connection fields belong to the chosen provider. Local storage needs none, and S3 / MinIO / Ceph need them;
-(Google Cloud Storage is on hold: docs/FUTURE_GCS_STORAGE.md) the page shows the fields that apply and follows the drop-down without reloading."""
+(Google Cloud Storage is on hold: docs/ko/dev/gcs-on-hold.md) the page shows the fields that apply and follows the drop-down without reloading."""
 
 from __future__ import annotations
 

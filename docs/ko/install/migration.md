@@ -42,10 +42,10 @@ AvantFAX 2.x는 지원하지 않습니다(3.x 이후 DB만 대상).
    - `DATABASE_URL` = `mysql+pymysql://사용자:비밀번호@호스트/avantfax` (원본의 `AFDB_*` 값)
    - `AVANTFAX_INSTALLDIR` = 원본 설치 디렉터리(예: `/var/www/avantfax`). DB에 상대 경로로 저장된 팩스 경로를 찾는 기준입니다.
    - `AVANTFAX_ARCHIVE` = 받은 팩스 보관 폴더(원본의 `$ARCHIVE`, 기본 `<설치 디렉터리>/faxes/recvd`)
-   - `NAMIFAX_SESSION_SECRET`, `NAMIFAX_SECRET_KEY` (`docs/OPERATIONS_CHECKLIST.md` 1장)
+   - `NAMIFAX_SESSION_SECRET`, `NAMIFAX_SECRET_KEY` ([operations-checklist.md](operations-checklist.md) 1장)
 3. **기동.** 첫 기동에서 NamiFAX가 새 테이블과 인덱스를 만듭니다. 큰 `FaxArchive`는 인덱스를 만드느라 오래 걸릴 수 있습니다.
 4. **로그인.** 모든 사용자가 다시 로그인해야 합니다(PHP 세션은 이어지지 않습니다). `wasreset` 상태인 계정은 첫 로그인에서 비밀번호를 바꿉니다.
-5. **HylaFAX와 cron.** 원본의 PHP 훅과 cron을 NamiFAX 명령으로 바꿉니다. `docs/INSTALL_HYLAFAX.md`, `deploy/hylafax/`(훅 스크립트와 설정 조각), `deploy/cron.d/namifax`를 보십시오.
+5. **HylaFAX와 cron.** 원본의 PHP 훅과 cron을 NamiFAX 명령으로 바꿉니다. [hylafax.md](hylafax.md), `deploy/hylafax/`(훅 스크립트와 설정 조각), `deploy/cron.d/namifax`를 보십시오.
 6. **웹 서버.** 옛 주소를 새 주소로 보내는 규칙을 넣습니다(6장).
 7. **SMTP.** 관리자 화면의 SMTP 설정에서 다시 입력합니다(원본의 `SMTP_*` 변수는 읽지 않습니다).
 

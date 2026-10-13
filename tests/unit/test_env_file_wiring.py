@@ -98,7 +98,7 @@ def test_cron_command_passes_env_file_variables_to_namifax(tmp_path, idx):
 
 def test_install_guide_sample_uses_the_plain_key_value_format():
     """The sample must be readable by both systemd (EnvironmentFile) and `sh` (set -a; .)."""
-    doc = (ROOT / "docs" / "INSTALL_HYLAFAX.md").read_text()
+    doc = (ROOT / "docs" / "ko" / "install" / "hylafax.md").read_text()
     block = re.search(r"## 0\. .*?```\n(.*?)```", doc, re.S).group(1)
     lines = [ln.split("#", 1)[0].strip() for ln in block.splitlines()]
     lines = [ln for ln in lines if ln]
