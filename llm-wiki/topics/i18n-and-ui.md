@@ -43,7 +43,7 @@ verified: true
 - 테마: 색 `m3.*`(Material Design 3 밝은 테마, `m3.dark.*` 어두운 테마), 레거시 색 `af.*`, 반지름 `m3-*`, 그림자 `m3-1..5`. [코드] `tailwind.config.js`
 - `input.css` 의 `@layer components` 는 `.m3-btn-filled` 와 `.inputsubmit`, `.m3-btn-tonal` 과 `.inputbutton`, `.m3-card` 와 `.af-box`, `input[type="text"]`, `select`, `textarea` 등 원본 클래스 이름에 같은 스타일을 입힌다. [코드] `src/namifax/static/css/input.css`
 - CSS 캐시 버전 쿼리: 템플릿이 `/static/css/main.css?v=3.6.0` 처럼 고정 문자열로 링크한다. `layout.jinja2`, `admin_layout.jinja2` 와 단독 페이지 15개(총 17개 파일)가 각각 직접 적고 있어 값이 한곳에 모여 있지 않다. 정적 뷰 `cache_max_age=3600`. CSS 를 바꾸고 브라우저에 확실히 반영하려면 모든 `?v=` 를 함께 올려야 한다. [코드] `grep -rn "main.css" src/namifax/templates`, `src/namifax/routes.py`
-- `static/theme.css` 는 존재하지만 `src/`, `tests/` 어디에서도 `theme.css` 문자열 참조를 `grep` 으로 찾지 못했다(2026-10-02). [코드] 저장소 전체(`docs/llm-wiki` 제외)에서도 참조가 없고 첫 커밋(`82aa2d2 init`)부터 있던 파일이다(`git log --follow`, 2026-10-03). 저장소 안에서는 쓰이지 않았고 2026-10-03 에 사용자 결정으로 삭제했다([[known-gaps-and-decisions]] §2).
+- `static/theme.css` 는 존재하지만 `src/`, `tests/` 어디에서도 `theme.css` 문자열 참조를 `grep` 으로 찾지 못했다(2026-10-02). [코드] 저장소 전체(`llm-wiki` 제외)에서도 참조가 없고 첫 커밋(`82aa2d2 init`)부터 있던 파일이다(`git log --follow`, 2026-10-03). 저장소 안에서는 쓰이지 않았고 2026-10-03 에 사용자 결정으로 삭제했다([[known-gaps-and-decisions]] §2).
 
 ## 레이아웃과 템플릿 규칙
 - 상속: `layout.jinja2`(사용자 화면, 흰 헤더 + 가운데 내비게이션 `Inbox/Send Fax/Outbox/Archive/Contacts`, 접근 키 `i s o a c`) 를 16개 템플릿이(15개는 `{% extends "layout.jinja2" %}`, `home.jinja2` 는 `"namifax:templates/layout.jinja2"`), `admin_layout.jinja2`(어두운 `slate-950` 배경의 관리자 콘솔) 를 17개 템플릿이 확장한다. [코드] `grep extends src/namifax/templates`

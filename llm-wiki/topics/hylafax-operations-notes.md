@@ -2,7 +2,7 @@
 title: HylaFAX 운영 메모 (스풀 이동, 수신 파일, 첨부 형식, print-to-fax)
 type: topic
 updated: 2026-10-03
-sources: [src/namifax/common/settings.py, src/namifax/cli/faxrcvd.py, src/namifax/services/fax_images.py, src/namifax/services/archive_base.py, src/namifax/services/cloud_storage.py, src/namifax/common/helpers.py, src/namifax/services/upload_check.py, src/namifax/services/sendfax_command.py, src/namifax/views/sendfax.py, src/namifax/templates/sendfax.jinja2, src/namifax/cli/print_in.py, src/namifax/services/printer.py, src/namifax/main.py, deploy/cups/namifax-fax, docs/INSTALL_HYLAFAX.md, "git show 로 읽을 수 있는 원본: docs/hylafax_avantfax_integration_architecture.md (삭제됨; git show 614f7b0:docs/hylafax_avantfax_integration_architecture.md)", [[hylafax-integration]], [[scheduler-and-storage]]]
+sources: [src/namifax/common/settings.py, src/namifax/cli/faxrcvd.py, src/namifax/services/fax_images.py, src/namifax/services/archive_base.py, src/namifax/services/cloud_storage.py, src/namifax/common/helpers.py, src/namifax/services/upload_check.py, src/namifax/services/sendfax_command.py, src/namifax/views/sendfax.py, src/namifax/templates/sendfax.jinja2, src/namifax/cli/print_in.py, src/namifax/services/printer.py, src/namifax/main.py, deploy/cups/namifax-fax, docs/ko/install/hylafax.md, "git show 로 읽을 수 있는 원본: docs/hylafax_avantfax_integration_architecture.md (삭제됨; git show 614f7b0:docs/hylafax_avantfax_integration_architecture.md)", [[hylafax-integration]], [[scheduler-and-storage]]]
 verified: true
 ---
 
@@ -35,7 +35,7 @@ verified: true
 - [코드] `faxrcvd` 는 수신 TIFF 를 **복사**해(`shutil.copy2`, `common/helpers.py::copy_tiff`) 보관 폴더에 둔다. 원본을 지우는 코드는 `cli/faxrcvd.py` 에 없다. 사용자가 보는 팩스는 모두 보관 폴더의 사본이다.
 - [코드] 보관 폴더는 환경변수 **`AVANTFAX_ARCHIVE`** 로 정하고 기본값은 `<HYLASPOOL>/archive` 다(`common/settings.py::archive_dir`). 보낸 팩스 폴더는 `ARCHIVE_SENT`(기본 `<HYLASPOOL>/sent`)다. 값은 `/etc/namifax.env` 에 넣는다([[install-hylafax]]).
 - [코드] 클라우드 보존 정책과 `LocalStorageProvider` 는 이와 별개로 **`NAMIFAX_ARCHIVE_DIR`**(기본 `/var/spool/hylafax/archive`)를 읽는다(`services/cloud_storage.py`). 수신 폴더를 옮기면 **두 변수를 같은 값으로** 맞춰야 한다. 자세한 영향은 [[operations-and-deployment]] 2.1.
-- [코드] 폴더는 훅을 실행하는 사용자(`uucp`)와 웹 서비스 사용자가 모두 쓸 수 있어야 한다(`docs/INSTALL_HYLAFAX.md` 6절).
+- [코드] 폴더는 훅을 실행하는 사용자(`uucp`)와 웹 서비스 사용자가 모두 쓸 수 있어야 한다(`docs/ko/install/hylafax.md` 6절).
 
 > 모순: 원문 3.2 는 `local_config.php` 의 `$ARCHIVE` 에 대응하는 NamiFAX 설정이 `production.ini` 의 `namifax.archive_dir` 라고 적는다. 코드에서 이 ini 키를 읽는 곳은 없다(`src/`, `deploy/` 검색 결과 없음). 설정 이름은 환경변수 `AVANTFAX_ARCHIVE` 다(위). 원문은 `faxes/` 라는 상위 폴더도 가정하지만 코드에는 없다(2절).
 
@@ -114,13 +114,13 @@ verified: true
 ### 4.2 현재 구현 [코드]
 구현된 것은 **2번 방식의 서버 쪽 일부**뿐이다. 흐름: CUPS 백엔드 스크립트 → `namifax print-in` → `process_inbound_print_job` → `dispatch_sendfax`(발송 화면과 같은 경로) → `sendfax`. 개요와 커밋 이력은 [[hylafax-integration]] 8절에 있고, 여기서는 원문과의 차이를 위주로 쓴다.
 
-- CUPS 백엔드 `deploy/cups/namifax-fax`(POSIX sh): 인자가 없으면 CUPS 가 요구하는 장치 목록 한 줄(`direct namifax-fax "NamiFAX Print-to-Fax" ...`)만 출력하고 끝낸다. 인자가 있으면 `/etc/namifax.env` 를 `set -a` 로 읽고 `${NAMIFAX_HOME:-/opt/namifax}/.venv/bin/namifax print-in "$@"` 를 `exec` 한다. 설치는 스크립트 머리 주석과 `docs/INSTALL_HYLAFAX.md` 5-1 에 있다: `/usr/lib/cups/backend/namifax-fax` 로 복사(소유자 root, 권한 0700), 장치 주소 `namifax-fax:/` 로 프린터 추가.
+- CUPS 백엔드 `deploy/cups/namifax-fax`(POSIX sh): 인자가 없으면 CUPS 가 요구하는 장치 목록 한 줄(`direct namifax-fax "NamiFAX Print-to-Fax" ...`)만 출력하고 끝낸다. 인자가 있으면 `/etc/namifax.env` 를 `set -a` 로 읽고 `${NAMIFAX_HOME:-/opt/namifax}/.venv/bin/namifax print-in "$@"` 를 `exec` 한다. 설치는 스크립트 머리 주석과 `docs/ko/install/hylafax.md` 5-1 에 있다: `/usr/lib/cups/backend/namifax-fax` 로 복사(소유자 root, 권한 0700), 장치 주소 `namifax-fax:/` 로 프린터 추가.
 - 명령 연결: `namifax print-in`(`main.py`, 하이픈·밑줄 둘 다)이 `cli/print_in.py::main` 을 부른다. CUPS 인자는 `job-id user title copies options [파일]` 이며 `args[1]` 이 사용자, `args[5]` 가 파일이다. 파일이 없으면 표준 입력을 읽는다. 데이터가 비면 메시지만 내고 종료 코드 0. DB 는 `cli_session()` 으로 연다.
 - 태그 인식(`services/printer.py::extract_fax_tags`): 정규식 `\[\[FAX:\s*([\d\-\+\(\)\s]+)\]\]`, 대소문자 무시. 번호 자리에는 **숫자, `-`, `+`, 괄호, 공백**만 온다. 여러 개 있으면 **첫 번째만** 쓴다. 인쇄 데이터는 `utf-8`(오류 무시)로 디코드해 그 텍스트에서 찾는다. 텍스트 레이어 추출이나 OCR 은 없다.
 - 태그가 있을 때: 데이터를 `<NAMIFAX_TMPDIR 또는 시스템 임시 폴더>/namifax_spool/printjob_<토큰>_<사용자>.ps|.pdf|.prn` 으로 저장한다(확장자는 머리가 `%!PS`/`%PDF` 인지로 정함). 사용자가 DB 에 있으면(`NFUserAccount.load_username`) 그 이름·메일·회사·장소·전화·팩스를 발신자로 채우고, 없으면 사용자 이름만 쓴다. `dispatch_sendfax` 가 성공하면 `status: QUEUED` 와 sendfax 작업 번호를 돌려주고 스풀 파일을 지운다. 실패하면 `status: FAILED` 와 메시지를 돌려주고 파일은 남기며 CLI 종료 코드는 1 이다. 예외는 삼켜서 결과로 돌려준다.
 - 태그가 없을 때: `<임시 폴더>/namifax_drafts/draft_<토큰>_<사용자>.<확장자>` 로 저장만 하고 `status: DRAFT`, 종료 코드 0.
 - 같은 모듈의 `NetworkPrinterService` 는 **받은 팩스를 출력하는 쪽**의 물리 네트워크 프린터 목록과 RAW 9100 소켓 전송·시험 인쇄이며, 위 print-in 과는 방향이 반대다(`send_raw_print`, `test_print`). 두 가지를 혼동하지 않는다.
-- 이 저장소에서는 실제 CUPS 와 HylaFAX 에 붙여 시험하지 못했다. 스크립트의 인자 전달과 `print-in` 동작만 시험으로 본다([[hylafax-integration]] 8절, `docs/INSTALL_HYLAFAX.md` 5-1).
+- 이 저장소에서는 실제 CUPS 와 HylaFAX 에 붙여 시험하지 못했다. 스크립트의 인자 전달과 `print-in` 동작만 시험으로 본다([[hylafax-integration]] 8절, `docs/ko/install/hylafax.md` 5-1).
 
 ### 4.3 설계만 있고 코드에 없는 것 [문서]
 - Windows 가상 포트(RedMon/WPHFX)와 번호 입력 팝업, macOS `osascript` 백엔드, Linux `fax4CUPS`+`zenity`/`kdialog`: `src/`·`deploy/` 에서 `osascript`, `zenity`, `kdialog`, `RedMon`, `fax4CUPS` 검색 결과 없음.

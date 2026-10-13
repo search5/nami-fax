@@ -1,8 +1,8 @@
 ---
 title: 시험
 type: topic
-updated: 2026-10-03
-sources: [pyproject.toml, tests/conftest.py, tests/sqlsession.py, tests/request_identity.py, tests/unit/test_ko_catalog_complete.py, tests/unit/test_legacy_trees_removed.py, tests/unit/test_fax_archive_orm.py, tests/unit/test_migrations_match_models.py, tests/test_i18n.py, tests/fixtures/, tests/unit/test_login_throttle.py, tests/unit/test_session_secure_flag.py, tests/unit/test_remote_upload.py, tests/unit/test_env_file_wiring.py, tests/unit/test_serve_main_db.py, tests/unit/test_global_engine_removed.py, tests/unit/test_db_injection.py, tests/unit/test_multi_dialect_safety.py, tests/unit/test_state_changing_posts.py, tests/unit/test_logout_post.py, tests/unit/test_origin_guard.py, tests/unit/test_legacy_redirects.py, tests/unit/test_db_isolation_fixture.py, tests/unit/test_alembic_wiring.py, tests/unit/test_demo_data_optin.py, tests/unit/test_sso_and_2fa_login.py, tests/unit/test_active_mailer.py, tests/unit/test_pyramid_modals_action.py, tests/unit/test_user_account.py, tests/unit/test_webauthn_orm.py, tests/unit/test_ocr_orm.py, tests/unit/test_totp_orm.py, src/namifax/views/modals.py, src/namifax/common/helpers.py, src/namifax/db/bootstrap.py, tools/migration_rehearsal/, "[[architecture-md-part2]]", "[[agents-md-legacy-instructions]]", "[[db-layer-refactor-log]]"]
+updated: 2026-10-13
+sources: [pyproject.toml, tests/conftest.py, tests/sqlsession.py, tests/request_identity.py, tests/unit/test_ko_catalog_complete.py, tests/unit/test_legacy_trees_removed.py, tests/unit/test_fax_archive_orm.py, tests/unit/test_migrations_match_models.py, tests/test_i18n.py, tests/fixtures/, tests/unit/test_login_throttle.py, tests/unit/test_session_secure_flag.py, tests/unit/test_remote_upload.py, tests/unit/test_env_file_wiring.py, tests/unit/test_serve_main_db.py, tests/unit/test_global_engine_removed.py, tests/unit/test_db_injection.py, tests/unit/test_multi_dialect_safety.py, tests/unit/test_state_changing_posts.py, tests/unit/test_logout_post.py, tests/unit/test_origin_guard.py, tests/unit/test_legacy_redirects.py, tests/unit/test_db_isolation_fixture.py, tests/unit/test_alembic_wiring.py, tests/unit/test_demo_data_optin.py, tests/unit/test_sso_and_2fa_login.py, tests/unit/test_active_mailer.py, tests/unit/test_pyramid_modals_action.py, tests/unit/test_user_account.py, tests/unit/test_webauthn_orm.py, tests/unit/test_totp_orm.py, src/namifax/views/modals.py, src/namifax/common/helpers.py, src/namifax/db/bootstrap.py, tools/migration_rehearsal/, "[[architecture-md-part2]]", "[[agents-md-legacy-instructions]]", "[[db-layer-refactor-log]]"]
 verified: true
 ---
 
@@ -12,7 +12,7 @@ verified: true
 - 도구: `pytest`, `pytest-cov`, `webtest`(dev 의존성 그룹). 설정은 `pyproject.toml` 의 `[tool.pytest.ini_options]`: `--strict-markers`, `testpaths = ["tests"]`, `pythonpath = [".", "src"]`, `faulthandler_timeout = 20`(20초 넘게 끝나지 않는 시험은 모든 스레드 스택을 stderr 에 덤프하고 계속 진행). [코드] `pyproject.toml`
 - 디렉터리: `tests/conftest.py`(공용 픽스처), `tests/sqlsession.py`, `tests/request_identity.py`, `tests/test_i18n.py`, `tests/test_helpers_media.py`, `tests/web/`(`test_web_addressbook.py`, `test_web_inbox_views.py`), `tests/unit/`(나머지 전부: `test_*.py` 213개, 2026-10-02 `git ls-files tests/unit` 로 셈), `tests/unit/linked_db.py`, `tests/unit/data/fax_archive_search_golden.json`, `tests/fixtures/`(`legacy_sendfax_commands.json`, `legacy_sql/create_tables.sql`, `legacy_sql/db-update-334.sql`). [코드] `git ls-files tests`
 - 시험 개수: `uv run pytest --collect-only -q` 로 2026-10-02 에 **2390개 수집**됨(수집만 했고 실행하지 않음. 이전 판의 2314개에서 늘었다). 이 수치는 곧 낡는다. [코드] 같은 명령
-- 이번 코드 변경(커밋 `ad5dc09..HEAD`)으로 새로 생긴 시험 파일과 수집된 개수(`uv run pytest --collect-only -q <파일>`, 2026-10-02): `test_login_throttle.py` 9(비밀번호 로그인 시도 제한: 기본 10회·15분, 사용자 이름별 잠금, 주소별 더 높은 한도, 상태는 DB 에 저장), `test_session_secure_flag.py` 5(`session.secure` ini 가 `NAMIFAX_SESSION_SECURE` 보다 우선), `test_remote_upload.py` 8(S3 선택 시 수신 팩스 TIFF+PDF 를 `fax<fid>` 키로 업로드, 실패해도 수신은 성공, 원격 TIFF 만 남기는 정책, `delete_fax` 접두사 버그), `test_env_file_wiring.py` 17(`/etc/namifax.env` 가 systemd 단위·cron 4줄·훅 4종에 전달됨), `test_serve_main_db.py` 6(`serve_main` 의 스키마 보장과 `--config`/`NAMIFAX_INI`). 파일 이름과 첫 시험 이름·docstring 으로 확인했고 각 시험 본문을 모두 읽지는 않았다. [코드]
+- 이번 코드 변경(커밋 `ad5dc09..HEAD`)으로 새로 생긴 시험 파일과 수집된 개수(`uv run pytest --collect-only -q <파일>`, 2026-10-02): `test_login_throttle.py` 9(비밀번호 로그인 시도 제한: 계정은 기본 5회 실패로 잠기고 관리자만 해제, 주소는 그 10배(50회)·15분 잠금, 상태는 DB 에 저장; 아래 수치 중 "10회"는 2026-10-03 이전 값, 상태는 DB 에 저장), `test_session_secure_flag.py` 5(`session.secure` ini 가 `NAMIFAX_SESSION_SECURE` 보다 우선), `test_remote_upload.py` 8(S3 선택 시 수신 팩스 TIFF+PDF 를 `fax<fid>` 키로 업로드, 실패해도 수신은 성공, 원격 TIFF 만 남기는 정책, `delete_fax` 접두사 버그), `test_env_file_wiring.py` 17(`/etc/namifax.env` 가 systemd 단위·cron 4줄·훅 4종에 전달됨), `test_serve_main_db.py` 6(`serve_main` 의 스키마 보장과 `--config`/`NAMIFAX_INI`). 파일 이름과 첫 시험 이름·docstring 으로 확인했고 각 시험 본문을 모두 읽지는 않았다. [코드]
 - 시험 이름이 `*_request_db.py`, `*_db.py`, `*_orm.py` 인 파일은 요청 세션 주입, 서비스 DB 주입, ORM 구현을 각각 확인하는 묶음이다. [코드] `ls tests/unit`
 - 영역별 파일 예(실제로 있는 이름만): CLI 훅(`test_cli_faxrcvd*`, `test_cli_notify*`, `test_cli_cron*`, `test_cli_dynconf`, `test_cli_faxcover`), 보관함(`test_archive_*`), 인증(`test_auth_*`, `test_totp*`, `test_webauthn*`, `test_saml*`, `test_security_*`), 스케줄러(`test_scheduler*`), 저장소(`test_storage_*`, `test_cloud_storage`), 마이그레이션(`test_alembic_wiring`, `test_migrations_match_models`, `test_sqlite_upgrade`, `test_legacy_database_compat`), i18n(`test_ko_*`, `tests/test_i18n.py`). [코드] `git ls-files tests`
 
@@ -65,7 +65,7 @@ verified: true
 | 상태 변경은 세션 CSRF 토큰이 든 POST(회전, 회사 지정, 로그아웃) | `test_state_changing_posts.py`, `test_logout_post.py` | 출처(`Origin`/`Referer`) 검사는 `test_origin_guard.py` |
 | 구형 트리 제거 유지 | `test_legacy_trees_removed.py` | |
 | 옛 `*.php` 주소 리다이렉트 규칙이 앱 주소와 어긋나지 않음 | `test_legacy_redirects.py` | 규칙 자체는 실제 웹 서버로 시험 |
-| 로그인 시도 제한 | `test_login_throttle.py` | 기본 10회·15분 |
+| 로그인 시도 제한 | `test_login_throttle.py` | 계정 5회(관리자만 해제)·주소 50회/15분 |
 | 겹치는 요청에서 설정 키·로그인 실패 횟수 | `test_system_config_atomic.py` | 일부는 서버 DB 필요(`serverdb`) |
 | 비밀번호 확인 전에 시도를 센다(한 번에 몰려도 한도만큼만 확인) | `test_login_throttle_reserve.py` | 일부는 서버 DB 필요(`serverdb`) |
 | 세션 쿠키 Secure 플래그 | `test_session_secure_flag.py` | ini 우선 |
@@ -86,7 +86,7 @@ verified: true
   | MariaDB 10.11.16 | 2443 passed, 3 skipped | 약 24분 56초 |
 - [코드] 새 시험 `test_system_config_atomic.py`(서버 DB 시험 21개 포함)와 `test_login_throttle_reserve.py`(서버 DB 시험 6개 포함)는 서버 3종 + SQLite 에서 25번 연달아 돌려 실패 0건이었다(2026-10-02, 두 파일과 `test_login_throttle.py` 합계 48건).
 - 앞선 실행(커밋 `0c77622`)에서는 MySQL·MariaDB 가 각각 2 failed 였다: `test_scheduler_admin.py` 의 시험 2건이 `SystemConfig` 의 `sched_heartbeat` 를 INSERT 하다 `Duplicate entry`(1062). 원인 확인 [코드]: MySQL 전역 격리 수준을 `READ-COMMITTED` 로 바꾸면 통과하고 `REPEATABLE-READ` 에서는 실패(두 수준으로 각각 실행). `SystemConfigService.set` 이 `merge`(읽은 뒤 INSERT) 라서 낡은 스냅샷에서 이미 있는 키를 INSERT 하려던 것이다. 이 원인이 로그인 제한에도 있어 병렬 로그인 실패가 덜 세어지는 것을 웹 요청으로 측정했고(아래), 둘 다 `c353db5` 에서 고쳤다. 방법과 실패한 시도는 [[database-and-migrations]] 7장.
-- [코드] 로그인 실패 병렬 측정(2026-10-02, 로그인 화면에 틀린 비밀번호를 동시에 N개, 새 사용자·새 IP, 한도 10): 고치기 전 MySQL 은 N=3~40 에서 기록 1~3회, 요청의 70~90% 가 "database unavailable" 화면; PostgreSQL 은 N=10 에서 기록 3~5회. 고친 뒤 두 DB 모두 오류 화면 0건, 기록 횟수가 한도(10)까지 정확하고 한도에 닿으면 잠긴다(N=3 은 3회, N=10·40 은 10회에서 잠금). 동시에 출발시킨 최악의 경우이고, 같은 프로세스 안의 스레드로 보낸 요청이라 네트워크 지연은 없다. 그 뒤 비밀번호 확인 전에 시도를 먼저 세도록 바꿨고(`baf16ca`), 로그인 화면에 틀린 비밀번호를 동시에 30개 보내는 시험에서 비밀번호 확인은 한도(시험은 3)만큼만 일어나고 나머지는 "too many attempts" 화면을 받는다(세 서버).
+- [코드] 로그인 실패 병렬 측정(2026-10-02, 로그인 화면에 틀린 비밀번호를 동시에 N개, 새 사용자·새 IP, 당시 한도 10, 지금은 계정 5·주소 50): 고치기 전 MySQL 은 N=3~40 에서 기록 1~3회, 요청의 70~90% 가 "database unavailable" 화면; PostgreSQL 은 N=10 에서 기록 3~5회. 고친 뒤 두 DB 모두 오류 화면 0건, 기록 횟수가 한도(10)까지 정확하고 한도에 닿으면 잠긴다(N=3 은 3회, N=10·40 은 10회에서 잠금). 동시에 출발시킨 최악의 경우이고, 같은 프로세스 안의 스레드로 보낸 요청이라 네트워크 지연은 없다. 그 뒤 비밀번호 확인 전에 시도를 먼저 세도록 바꿨고(`baf16ca`), 로그인 화면에 틀린 비밀번호를 동시에 30개 보내는 시험에서 비밀번호 확인은 한도(시험은 3)만큼만 일어나고 나머지는 "too many attempts" 화면을 받는다(세 서버).
 - 같은 날 선생님이 4개 DB 통합 시험을 직접 실행했다고 알려 주셨다(구두 보고, 결과 세부는 기록 없음). 위 실행은 그와 별개로 AI 가 같은 방법으로 다시 돌린 것이다.
 - 골든 마스터는 기본 실행 대상에서 빠졌고 원본 트리도 삭제되어 실행하지 않았다.
 
@@ -98,7 +98,7 @@ verified: true
 |---|---|---|
 | `NFUserAccount`·서비스·세션을 가짜로 대체한 로그인 시험 | 앱에 HTTP 세션 팩토리가 없어 2FA 사용자 로그인이 500, 패스키 챌린지 미저장, SAML·패스키 뷰가 없는 메서드를 호출, 로그인이 인증 토큰이 아니라 세션만 기록(14.19) | 실제 앱·DB·WebTest 로 로그인까지 가는 `test_sso_and_2fa_login.py`. 파일 docstring 이 위 이유를 적고 있다 |
 | 웹 "팩스 이메일 전송" 시험이 `Mailer` 를 가짜로 대체 | 뷰가 없는 `mailer.send_mail(...)` 을 불러 `AttributeError`(14.6) | 뷰가 `send_mail` 헬퍼를 호출하고, 발송 자체는 시험 안의 가짜 SMTP 서버(실제 소켓)로 끝까지 확인(`test_active_mailer.py`) |
-| `db.query()` 가 리스트를 반환한다고 가정한 mock | 서비스도 같은 잘못된 가정을 해서 패스키 목록·OCR 색인이 한 번도 동작하지 않음(14.14) | 실제 세션 시험(`test_webauthn_orm.py`, `test_ocr_orm.py`, `test_totp_orm.py`) |
+| `db.query()` 가 리스트를 반환한다고 가정한 mock | 서비스도 같은 잘못된 가정을 해서 패스키 목록·OCR 색인이 한 번도 동작하지 않음(14.14; OCR 색인 `FaxOCR` 은 2026-10-13 에 제거) | 실제 세션 시험(`test_webauthn_orm.py`, `test_totp_orm.py`) |
 | 결함 있는 동작을 기대값으로 고정한 시험 | 계정 삭제가 `username IS NULL` 갱신을 기대(NOT NULL 열이라 실제 DB 에서는 실패)(14.13) | 기대값을 새 동작(`deleted.<uid>` 등)으로 수정. 현재 `test_user_account.py::test_remove_account` 가 그렇다 |
 
 교훈

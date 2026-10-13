@@ -11,13 +11,13 @@ verified: true
 
 ## 0. 먼저 알아둘 것
 - [코드] 원본 PHP 소스(`legacy/`)는 현재 저장소에 없다. 원본 설치 SQL 두 개(`create_tables.sql`, `db-update-334.sql`)만 시험 자료로 `tests/fixtures/legacy_sql/` 에 남아 있다. 원본 전체는 `git show 9408385:legacy/...` 또는 `git checkout 9408385 -- legacy` 로 복원한다. `9408385` 는 `git cat-file -t` 로 커밋임을 확인했고 그 트리에 `legacy/avantfax`, `legacy/create_tables.sql` 등이 있다. 삭제 커밋은 `083920e`(부모가 `9408385`, `git rev-parse 083920e^` 로 확인).
-- [문서] AvantFAX 2.x 는 지원하지 않는다(3.x 이후 DB 만 대상. `docs/MIGRATING_FROM_AVANTFAX3.md` 에 있고 코드에서 버전을 검사하는 곳은 확인하지 못했다). 시험은 3.3.5 와 3.2.0 설치 스키마만 다룬다(`tests/conftest.py` `LEGACY_VERSIONS`) [코드].
+- [문서] AvantFAX 2.x 는 지원하지 않는다(3.x 이후 DB 만 대상. `docs/ko/install/migration.md` 에 있고 코드에서 버전을 검사하는 곳은 확인하지 못했다). 시험은 3.3.5 와 3.2.0 설치 스키마만 다룬다(`tests/conftest.py` `LEGACY_VERSIONS`) [코드].
 - [문서] 실제 HylaFAX 와 수년치 대용량 보관소의 첫 기동 시간은 확인하지 못했다.
 
 ### 0.1 이전 연습 도구 `tools/migration_rehearsal/` 의 현재 상태
 > 모순: [[install-hylafax]] 와 [[migrating-from-avantfax3]] 요약 페이지는 이 디렉터리가 "삭제됨(커밋 72a7324)"이라고 쓴다. 실제로는 **삭제되지 않았다**. `git ls-files tools` 가 `Dockerfile`, `check_text.py`, `make_faxes.py`, `parity.py`, `php-quiet.ini`, `populate_legacy.py`, `register_faxes.php`, `run.sh`, `two_way.py` 9개를 보여 주고 작업 트리에도 있다 [코드]. 72a7324 는 `golden_master`, `specs`, `prompts` 를 `dev/` 로 옮긴 커밋이고 `dev/` 는 01f2f64 에서 지워졌다. `tools/migration_rehearsal/` 은 마지막으로 `aa17252` 에서 바뀌었고 `083920e` 는 같은 `tools/` 아래 `tools/i18n_import_legacy.py` 만 지웠다(`git log -- tools/migration_rehearsal`, `git show --stat 083920e -- tools`).
 
-- [코드] 그러나 **그대로는 실행되지 않는다.** `tools/migration_rehearsal/run.sh` 는 `$ROOT/legacy/avantfax/.` 를 복사하고 `$ROOT/legacy/create_tables.sql`, `db-update-330/334/335.sql` 을 읽는다. 지금은 `legacy/` 가 없다. 실행하려면 먼저 `git checkout 9408385 -- legacy` 로 원본을 되살려야 한다(이 안내는 `docs/MIGRATING_FROM_AVANTFAX3.md`, `docs/OPERATIONS_CHECKLIST.md` 에 있고 스크립트 주석에는 없다). 또 `db-update-330/335.sql` 은 `tests/fixtures/legacy_sql/` 에 없다(`db-update-334.sql` 만 있음). 이 파일들은 `legacy/` 에서 와야 한다. 실행하지는 않았다(Docker와 네트워크가 필요하고, 이 세션은 상태를 바꾸는 실행을 하지 않음).
+- [코드] 그러나 **그대로는 실행되지 않는다.** `tools/migration_rehearsal/run.sh` 는 `$ROOT/legacy/avantfax/.` 를 복사하고 `$ROOT/legacy/create_tables.sql`, `db-update-330/334/335.sql` 을 읽는다. 지금은 `legacy/` 가 없다. 실행하려면 먼저 `git checkout 9408385 -- legacy` 로 원본을 되살려야 한다(이 안내는 `docs/ko/install/migration.md`, `docs/ko/install/operations-checklist.md` 에 있고 스크립트 주석에는 없다). 또 `db-update-330/335.sql` 은 `tests/fixtures/legacy_sql/` 에 없다(`db-update-334.sql` 만 있음). 이 파일들은 `legacy/` 에서 와야 한다. 실행하지는 않았다(Docker와 네트워크가 필요하고, 이 세션은 상태를 바꾸는 실행을 하지 않음).
 - [코드] 이 도구는 PHP 5.6 + MDB2 + MariaDB 10.3(`--sql-mode=` 비엄격)에서 원본을 띄워 데이터를 채우고, NamiFAX 를 같은 DB·폴더에 붙여 `parity.py`(수신함·PDF 열람 비교), `two_way.py`(양방향 읽기·쓰기), `check_text.py`(HTML 엔티티 이름 점검)로 비교한다. 결과는 [[migrating-from-avantfax3]] 2장에 있으며, 이 세션에서 다시 돌려 검증하지 않았다 [문서].
 
 ## 1. 같은 DB·폴더를 이어 쓰는 규칙

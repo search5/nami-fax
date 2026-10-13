@@ -75,3 +75,12 @@ MySQL·MariaDB 의 스케줄러 시험 2건 실패를 따라가다 `SystemConfig
 
 ## [2026-10-13] topic | 결정 반영: FaxOCR 제거, OCR 텍스트는 faxcontent 한 곳
 원본 AvantFAX(`9408385:legacy/`)는 OCR 텍스트를 `FaxArchive.faxcontent` 에만 저장하고 `FaxOCR` 테이블이 없다. 이식본의 `FaxOCR` 는 검색 화면이 쓰지 않았고 수신 때 Tesseract 를 두 번 돌리는 원인이었다. 사용자 수락에 따라 모델·`OcrService` 의 저장/검색 메서드를 지우고 리비전 `0027` 로 테이블을 지운다. `faxrcvd` 는 OCR 을 한 번만 돌려 `faxcontent` 에 넣는다.
+
+## [2026-10-13] schema | 위키를 `docs/llm-wiki/` 에서 저장소 루트 `llm-wiki/` 로 이동
+사용자 요청. `README.md`, `docs/COVER_UPLOAD_PLAN.md`, `topics/i18n-and-ui.md`, `topics/hylafax-integration.md` 안의 경로를 바꿨다. 위키 안의 `[[링크]]` 는 이름만 쓰므로 영향이 없다.
+
+## [2026-10-13] ingest | docs/ 5개 요약 갱신
+문서가 `docs/ko/`·`docs/en/` MkDocs 구조로 옮겨져(`docs/ko/install/{hylafax,migration,operations-checklist}.md`, `docs/ko/dev/{cover-upload-plan,gcs-on-hold}.md`) 다섯 요약(`install-hylafax`, `migrating-from-avantfax3`, `operations-checklist`, `cover-upload-plan`, `future-gcs-storage`)을 한국어 원문 기준으로 다시 썼다. 새 테이블 5개·`FaxOCR` 제거(리비전 `0027`), 환경 파일 서식과 `NAMIFAX_INI`, CUPS 가상 프린터, 스케줄러 4종 등 편집된 내용을 반영했고 frontmatter 의 `sources` 를 새 경로와 영문판으로 바꿨다. `install-hylafax` 는 문서가 아직 "`namifax scheduler` 별도 서비스"를 말하는 점을 `> 모순:` 으로 남겼다(코드에서는 제거됨).
+
+## [2026-10-13] lint | 위키 점검: 링크·고아·경로·수치
+`[[링크]]` 끊김 없음(`[[FAX: 번호]]` 는 팩스 태그 예시 문자열), 고아 페이지 없음, index 누락 없음, frontmatter 5항목 모두 있음. 고친 것: ① 옛 `docs/*.md` 경로를 `docs/ko/...` 로(topics 5편), ② `database-and-migrations` 의 head `0026`→`0027`과 `FaxOCR` 삭제 반영, ③ `testing` 의 로그인 제한 "기본 10회"를 계정 5회(관리자만 해제)·주소 50회로, 삭제된 `test_ocr_orm.py` 언급 제거, ④ 삭제된 `NEW_FEATURES_PLAN.md` 를 `git show 61c3663:` 로 표기, ⑤ `operations-and-deployment` 에 MkDocs 매뉴얼 절 추가. topics 전체 [코드] 주장을 코드와 한 줄씩 다시 대조하지는 않았다(경로 존재, 수치 몇 건만 확인).
