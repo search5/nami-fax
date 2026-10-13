@@ -1,7 +1,7 @@
 site_name: NamiFAX
 site_description: NamiFAX - web front end for HylaFAX / HylaFAX 팩스 서버 웹 프런트엔드
-repo_url: https://github.com/search5/numfax
-repo_name: search5/numfax
+repo_url: https://github.com/search5/nami-fax
+repo_name: search5/nami-fax
 docs_dir: docs
 site_dir: site
 use_directory_urls: true

@@ -42,7 +42,7 @@ uv run namifax serve --host 127.0.0.1 --port 8000
 
 ## SUPPORT
 
-이 저장소의 이슈로 문의하십시오(https://github.com/search5/numfax). 원본 AvantFAX 3의 상용 지원처로 안내되던 YetOpen S.r.l.(www.yetopen.it)과 iFAX Solutions, Inc(www.ifax.com)는 원본에 대한 안내이며, NamiFAX를 지원한다는 뜻은 아닙니다.
+이 저장소의 이슈로 문의하십시오(https://github.com/search5/nami-fax). 원본 AvantFAX 3의 상용 지원처로 안내되던 YetOpen S.r.l.(www.yetopen.it)과 iFAX Solutions, Inc(www.ifax.com)는 원본에 대한 안내이며, NamiFAX를 지원한다는 뜻은 아닙니다.
 
 ## LANGUAGES
 
