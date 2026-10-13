@@ -19,7 +19,6 @@ SERVICES = [
     CoverStudioService,
     TotpService,
     SAMLService,
-    OcrService,
     WebAuthnService,
 ]
 

@@ -40,3 +40,12 @@ def test_extract_text_from_tiff(tmp_path):
         assert "Second Page Invoice" in result["text"]
 
 # indexing and searching run against a real session in test_ocr_orm.py
+
+
+def test_ocr_is_kept_only_in_faxcontent_not_in_a_second_table():
+    """Like the original: no FaxOCR table, no model, no second copy of the recognised text."""
+    import namifax.models as models
+    from namifax.models.meta import Base
+
+    assert not hasattr(models, "FaxOCR") and "FaxOCR" not in Base.metadata.tables
+    assert not hasattr(OcrService, "index_fax") and not hasattr(OcrService, "search_faxes")

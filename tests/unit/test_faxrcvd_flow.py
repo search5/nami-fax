@@ -19,8 +19,7 @@ def _receive(tmp_path, session, sender="Newco Ltd", number="5557777", received="
     with patch.object(mod, "ARCHIVE", str(tmp_path / "archive")), \
             patch.object(mod, "faxinfo", return_value=finfo), \
             patch.object(mod, "tiff2pdf"), patch.object(mod, "static_preview"), patch.object(mod, "send_mail"), \
-            patch.object(mod, "bardecode", return_value=None), patch.object(mod, "ocr_faxcontent", return_value=""), \
-            patch("namifax.services.ocr.OcrService.index_fax"):
+            patch.object(mod, "bardecode", return_value=None), patch.object(mod, "ocr_faxcontent", return_value=""):
         return mod.run_faxrcvd(["faxrcvd.py", str(tiff), "ttyS0", "comm01", "none"], session=session)
 
 

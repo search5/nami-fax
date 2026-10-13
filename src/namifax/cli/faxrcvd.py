@@ -195,17 +195,9 @@ def _process_faxrcvd(args: list[str], session: Any) -> int:
         avantfaxlog(f"faxrcvd> Inserted {faxpath} from {company_name} to Inbox", echo=False)
         if ENABLE_FAX_ANNOTATION:                                       # the fax id on every page of the PDF
             annotate_fax(faxfile, f"FaxID: {faxid}", pdffile, gravity=ANN_GRAVITY)
-        ocr_txt = ocr_faxcontent(faxfile)                               # read the fax once; the text goes to both places
+        ocr_txt = ocr_faxcontent(faxfile)                               # searched through FaxArchive.faxcontent, as the original does
         if ocr_txt:
             inbox.set_faxcontent(ocr_txt)
-            try:
-                from namifax.services.ocr import OcrService
-
-                ocr_index = OcrService(db=session)
-                with session.begin_nested():                            # a failed index must not undo the inbox row
-                    ocr_index.store_text(os.path.basename(faxfile), ocr_txt, int(pages or 1), faxid)
-            except Exception as e:
-                avantfaxlog(f"faxrcvd> OCR indexing failed for {faxfile}: {e}", echo=False)
         upload_received_fax(session, faxid, faxpath)                    # S3 only; a failure is just logged
 
     # Routing Priorities: DID/Modem -> Fax2Email -> Barcode

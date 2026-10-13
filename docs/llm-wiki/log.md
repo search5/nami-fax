@@ -72,3 +72,6 @@ MySQL·MariaDB 의 스케줄러 시험 2건 실패를 따라가다 `SystemConfig
 
 ## [2026-10-03] topic | 결정 반영: TOTP 생략은 의도, theme.css 삭제
 사용자 결정: 패스키와 SAML 은 TOTP 를 쓰지 않는 것이 의도이고(TOTP 는 비밀번호 로그인에만 적용), `static/theme.css` 는 삭제한다. `theme.css` 를 지우고 시험 `test_dead_static_files_removed.py` 를 더했다. TOTP 동작을 고정하는 시험은 만들었다가 필요 없다는 지적에 따라 지웠다. 이 결정을 처음에 "이 서비스는 TOTP 를 쓰지 않는다"로 잘못 적었다가 같은 날 바로잡았다. 반영: [[authentication-and-security]], [[known-gaps-and-decisions]], [[i18n-and-ui]].
+
+## [2026-10-13] topic | 결정 반영: FaxOCR 제거, OCR 텍스트는 faxcontent 한 곳
+원본 AvantFAX(`9408385:legacy/`)는 OCR 텍스트를 `FaxArchive.faxcontent` 에만 저장하고 `FaxOCR` 테이블이 없다. 이식본의 `FaxOCR` 는 검색 화면이 쓰지 않았고 수신 때 Tesseract 를 두 번 돌리는 원인이었다. 사용자 수락에 따라 모델·`OcrService` 의 저장/검색 메서드를 지우고 리비전 `0027` 로 테이블을 지운다. `faxrcvd` 는 OCR 을 한 번만 돌려 `faxcontent` 에 넣는다.

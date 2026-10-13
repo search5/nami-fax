@@ -33,7 +33,7 @@ verified: true
 | 백업 | 첫 기동 전에 `mysqldump` 와 보관 폴더 백업. 스키마 보정이 일어난다 | [문서] [[operations-checklist]] |
 
 - [코드] `tests/unit/test_legacy_database_compat.py` 는 실제 MySQL·MariaDB 서버에서 3.3.5 와 3.2.0 설치 스키마로 호환을 시험하도록 작성돼 있다(`pytest.mark.serverdb`). 서버 URL 이 없으면 건너뛴다(`pyproject.toml` 의 마커 설명). 이 세션에서 실행하지 않았다.
-- [코드] 새로 생기는 테이블: `SystemConfig`, `SystemSettings`, `NetworkPrinters`, `UserTOTP`, `UserWebAuthnCredentials`, `FaxOCR`(모델 `__tablename__` 에서 확인) + `alembic_version`. 문서가 말한 "6개"와 일치한다. 인덱스 12개, `AddressBook` 열 10개 추가는 개수를 직접 세지 않았다 [문서].
+- [코드] 새로 생기는 테이블: `SystemConfig`, `SystemSettings`, `NetworkPrinters`, `UserTOTP`, `UserWebAuthnCredentials` + `alembic_version` (`FaxOCR` 은 `0027` 이 지웠다). 문서가 말한 "6개"와 일치한다. 인덱스 12개, `AddressBook` 열 10개 추가는 개수를 직접 세지 않았다 [문서].
 - [코드] 기존 보관 폴더를 DB 없이 들여오는 명령은 `namifax import-archive <폴더> <카테고리ID> [--user-id N] [--modem 장치] [--callid CallID1]` 이다(기본값 `--user-id 1`, `--modem ttyS0`, `--callid CallID1`; 실행 때 스키마를 먼저 맞춤. `src/namifax/cli/import_archive.py`). 같은 DB 를 이어 쓰면 이미 들어 있으므로 필요 없다. 사용자 목록 가져오기는 `namifax import-users`(탭 구분 텍스트), 블랙리스트는 `import-blacklist` 다 [코드: `main.py`].
 
 > 모순(경미): [[migrating-from-avantfax3]] 는 비밀번호 열 원본이 `VARCHAR(32)` 라 0026 이 255자로 늘린다고 쓴다. 마이그레이션 코드는 `String(64)` 에서 `String(255)` 로 바꾼다(`alembic/versions/20261002_0026_password_hash_width.py`). 결론(Argon2id 가 들어갈 만큼 넓어짐)은 같다.

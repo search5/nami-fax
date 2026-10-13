@@ -90,7 +90,7 @@ NamiFAX가 새로 쓰는 값은 순수 UTF-8이고 원본 앱에서도 정상으
 
 ### 4.3 NamiFAX가 DB에 추가하는 것 (원본 PHP 앱에 영향 없음)
 
-- 새 테이블 6개: `SystemConfig`, `SystemSettings`, `NetworkPrinters`, `UserTOTP`, `UserWebAuthnCredentials`, `FaxOCR`(과 `alembic_version`)
+- 새 테이블 5개: `SystemConfig`, `SystemSettings`, `NetworkPrinters`, `UserTOTP`, `UserWebAuthnCredentials`(과 `alembic_version`). OCR 텍스트는 원본처럼 `FaxArchive.faxcontent` 에만 저장합니다(리비전 `0019` 가 만들던 `FaxOCR` 는 `0027` 이 지웁니다)
 - 검색용 인덱스 12개
 - `AddressBook`에 컬럼 10개 추가, `UserAccount.last_ip`의 길이를 15자에서 45자로 확장(IPv6)
 - 기존 행은 지우거나 바꾸지 않습니다. 기본 카테고리와 표지는 기존 DB에 추가하지 않습니다.

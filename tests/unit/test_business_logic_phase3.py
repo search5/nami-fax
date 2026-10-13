@@ -253,8 +253,7 @@ def test_faxrcvd_ocr_index_logic(tmp_path, monkeypatch):
          patch("namifax.cli.faxrcvd.tiff2pdf"), patch("namifax.cli.faxrcvd.copy_tiff", return_value=True), \
          patch("namifax.cli.faxrcvd.static_preview"), \
          patch("namifax.cli.faxrcvd.send_mail"), \
-         patch("namifax.cli.faxrcvd.ocr_faxcontent", return_value="recognised") as mock_ocr, \
-         patch("namifax.services.ocr.OcrService.store_text") as mock_store:
+         patch("namifax.cli.faxrcvd.ocr_faxcontent", return_value="recognised") as mock_ocr:
 
         mock_finfo.return_value = {"Sender": "123456", "Pages": "1", "Received": "2026:10:01 10:00:00"}
         mock_book.return_value.find_or_create_number.return_value = (1, 1, "found")
@@ -267,10 +266,9 @@ def test_faxrcvd_ocr_index_logic(tmp_path, monkeypatch):
         code = run_faxrcvd(["faxrcvd.py", tiff_path, "ttyS0", "comm01", "none"], session=MagicMock())
         assert code == 0
 
-        # The fax is read once; that text goes to the inbox row and to the FaxOCR index.
+        # The fax is read once and its text goes to the inbox row (FaxArchive.faxcontent), as in the original.
         mock_ocr.assert_called_once()
         inbox_inst.set_faxcontent.assert_called_once_with("recognised")
-        mock_store.assert_called_once_with("fax.tif", "recognised", 1, 99)
 
 
 # ---------------------------------------------------------------------------

@@ -91,7 +91,7 @@ sources:
 - 모든 모델은 `namifax.models.meta.Base`(SQLAlchemy 2 `DeclarativeBase`, 이름 규칙 `NAMING_CONVENTION`)를 상속한다. `models/__init__.py` 가 모든 모델을 import 하고 `configure_mappers()` 를 부른다. [코드]
 - 테이블은 현재 `models/*.py` 의 `__tablename__` 을 세어 **20개**다(2026-10-02, `grep -c __tablename__`). 그룹별:
   - 원본 AvantFAX 에서 온 14개: `AddressBook`, `AddressBookFAX`, `AddressBookEmail`, `BarcodeRoute`, `CoverPages`, `DIDRoute`, `DistroList`, `DynConf`, `FaxArchive`, `FaxCategory`, `Modems`, `SysLog`, `UserAccount`, `UserPasswords`. (시험 `tests/unit/test_legacy_database_compat.py` 의 `LEGACY_TABLES` 목록과 같다.)
-  - 이식본이 추가한 6개: `SystemConfig`(키-값), `SystemSettings`(SMTP, 한 행), `NetworkPrinters`, `FaxOCR`, `UserTOTP`, `UserWebAuthnCredentials`.
+  - 이식본이 추가한 5개: `SystemConfig`(키-값), `SystemSettings`(SMTP, 한 행), `NetworkPrinters`, `UserTOTP`, `UserWebAuthnCredentials`. (`FaxOCR` 은 `0019` 가 만들었으나 쓰는 곳이 없어 `0027` 이 지웠다 — OCR 텍스트는 원본처럼 `FaxArchive.faxcontent` 에만 둔다. 2026-10-13)
 - 테이블·열 이름은 레거시 SQL 의 철자 그대로(대소문자 포함)다. MySQL/MariaDB 가 리눅스에서 대소문자를 구분하므로 원시 SQL 이 계속 맞도록 하기 위해서다. [코드] `models/systemconfig.py`, `models/useraccount.py` 주석
 - 공통 컬럼 타입 [코드] `src/namifax/models/types.py`:
   - `LegacyBoolean`: 옛 코드가 문자열 `'False'` 로 쓴 값도 거짓으로 읽는다(`Boolean` 은 비어 있지 않은 문자열을 참으로 읽어 권한 상승이 됨). 시험 `tests/unit/test_boolean_flags.py`

@@ -53,7 +53,6 @@ def _receive(tmp_path, session, provider, storage="S3"):
             patch.object(mod, "tiff2pdf", side_effect=fake_pdf), patch.object(mod, "static_preview"), \
             patch.object(mod, "send_mail"), patch.object(mod, "bardecode", return_value=None), \
             patch.object(mod, "ocr_faxcontent", return_value=""), \
-            patch("namifax.services.ocr.OcrService.index_fax"), \
             patch("namifax.services.cloud_storage.CloudStorageManager.get_provider", return_value=provider):
         return mod.run_faxrcvd(["faxrcvd.py", str(tiff), "ttyS0", "c1", "none"], session=session)
 
