@@ -22,7 +22,7 @@ pyramid_jinja2==2.10.1
 pyramid-retry==2.1.1
 pyramid-tm==2.6
 pytest==9.1.1
-setuptools==81.0.0
+setuptools==84.1.0
 soupsieve==2.10
 SQLAlchemy==2.1.1
 transaction==5.1
